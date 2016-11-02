@@ -491,10 +491,10 @@ function init_BookingOne() {
                   showOtherMonths: true,
                   selectOtherMonths: true,
                   showAnim:"fade",
-                  minDate: '-0d',
-                  yearSuffix: '년',
-                  monthNames: ['1월', '2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
-                  monthNamesShort: ['1월', '2월', '3월', '4월','5월','6월','7월','8월','9월','10월','11월','12월']
+//                  minDate: '-0d',
+//                  yearSuffix: '년',
+//                  monthNames: ['1월', '2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
+//                  monthNamesShort: ['1월', '2월', '3월', '4월','5월','6월','7월','8월','9월','10월','11월','12월']
                 });
 
                 $(document).click(function(e) { 

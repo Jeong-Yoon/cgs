@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class BookController {
 	@RequestMapping("/book1")
 	public String book1(Model model) {
-	System.out.println("index()");
+	System.out.println("book1()");
 	return "book/book1";
 	}
 

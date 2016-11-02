@@ -8,7 +8,7 @@ import org.springframework.ui.Model;
 
 import kr.co.cgs4.dto.FilmDTO;
 
-public class BContentCommand implements BCommand {
+public class FilmCommand implements Command {
 
 	@Override
 	public void execute(Model model) {

@@ -238,23 +238,25 @@
                             </ul>
                     </div>
                 </div>
-
+ 
+                    <form action="movie" method="get">
+                    <input type="hidden" name="film_ID" value="${test.film_ID }">
                     <div class="cinema-wrap">
                         <div class="row">
                             <div class="col-xs-6 col-sm-3 cinema-item">
                                 <div class="cinema">
-                                    <a href='single-cinema.html' class="cinema__images">
+                                    <a href='movie?id=${test.film_ID }' class="cinema__images">
                                         <img alt='' src="http://placehold.it/525x525">
-                                        <span class="cinema-rating">5.0</span>
+<!--                                         <span class="cinema-rating">5.0</span> -->
                                     </a>
-                                    <a href="single-cinema.html" class="cinema-title">Marble Arch Odeon</a>
+                                    <a href="movie?id=${test.film_ID }" class="cinema-title">${test.film_name }</a>
                                 </div>
                             </div>
                             <div class="col-xs-6 col-sm-3 cinema-item name">
                                 <div class="cinema">
                                     <a href='single-cinema.html' class="cinema__images">
                                         <img alt='' src="http://placehold.it/525x525">
-                                        <span class="cinema-rating">5.0</span>
+<!--                                         <span class="cinema-rating">5.0</span> -->
                                     </a>
                                     <a href="single-cinema.html" class="cinema-title">Camden Town Odeon</a>
                                 </div>
@@ -263,7 +265,7 @@
                                 <div class="cinema">
                                     <a href='single-cinema.html' class="cinema__images">
                                         <img alt='' src="http://placehold.it/525x525">
-                                        <span class="cinema-rating">5.0</span>
+<!--                                         <span class="cinema-rating">5.0</span> -->
                                     </a>
                                     <a href="single-cinema.html" class="cinema-title">Camden Town Odeon</a>
                                 </div>
@@ -272,7 +274,7 @@
                                 <div class="cinema">
                                     <a href='single-cinema.html' class="cinema__images">
                                         <img alt='' src="http://placehold.it/525x525">
-                                        <span class="cinema-rating">5.0</span>
+<!--                                         <span class="cinema-rating">5.0</span> -->
                                     </a>
                                     <a href="single-cinema.html" class="cinema-title">Camden Town Odeon</a>
                                 </div>
@@ -285,7 +287,7 @@
                                 <div class="cinema">
                                     <a href='single-cinema.html' class="cinema__images">
                                         <img alt='' src="http://placehold.it/525x525">
-                                        <span class="cinema-rating">5.0</span>
+<!--                                         <span class="cinema-rating">5.0</span> -->
                                     </a>
                                     <a href="single-cinema.html" class="cinema-title">Marble Arch Odeon</a>
                                 </div>
@@ -294,7 +296,7 @@
                                 <div class="cinema">
                                     <a href='single-cinema.html' class="cinema__images">
                                         <img alt='' src="http://placehold.it/525x525">
-                                        <span class="cinema-rating">5.0</span>
+<!--                                         <span class="cinema-rating">5.0</span> -->
                                     </a>
                                     <a href="single-cinema.html" class="cinema-title">Camden Town Odeon</a>
                                 </div>
@@ -303,7 +305,7 @@
                                 <div class="cinema">
                                     <a href='single-cinema.html' class="cinema__images">
                                         <img alt='' src="http://placehold.it/525x525">
-                                        <span class="cinema-rating">5.0</span>
+<!--                                         <span class="cinema-rating">5.0</span> -->
                                     </a>
                                     <a href="single-cinema.html" class="cinema-title">Camden Town Odeon</a>
                                 </div>
@@ -312,7 +314,7 @@
                                 <div class="cinema">
                                     <a href='single-cinema.html' class="cinema__images">
                                         <img alt='' src="http://placehold.it/525x525">
-                                        <span class="cinema-rating">5.0</span>
+<!--                                         <span class="cinema-rating">5.0</span> -->
                                     </a>
                                     <a href="single-cinema.html" class="cinema-title">Camden Town Odeon</a>
                                 </div>
@@ -324,7 +326,7 @@
                                 <div class="cinema">
                                     <a href='single-cinema.html' class="cinema__images">
                                         <img alt='' src="http://placehold.it/525x525">
-                                        <span class="cinema-rating">5.0</span>
+<!--                                         <span class="cinema-rating">5.0</span> -->
                                     </a>
                                     <a href="single-cinema.html" class="cinema-title">Marble Arch Odeon</a>
                                 </div>
@@ -333,7 +335,7 @@
                                 <div class="cinema">
                                     <a href='single-cinema.html' class="cinema__images">
                                         <img alt='' src="http://placehold.it/525x525">
-                                        <span class="cinema-rating">5.0</span>
+<!--                                         <span class="cinema-rating">5.0</span> -->
                                     </a>
                                     <a href="single-cinema.html" class="cinema-title">Camden Town Odeon</a>
                                 </div>
@@ -342,7 +344,7 @@
                                 <div class="cinema">
                                     <a href='single-cinema.html' class="cinema__images">
                                         <img alt='' src="http://placehold.it/525x525">
-                                        <span class="cinema-rating">5.0</span>
+<!--                                         <span class="cinema-rating">5.0</span> -->
                                     </a>
                                     <a href="single-cinema.html" class="cinema-title">Camden Town Odeon</a>
                                 </div>
@@ -351,7 +353,7 @@
                                 <div class="cinema">
                                     <a href='single-cinema.html' class="cinema__images">
                                         <img alt='' src="http://placehold.it/525x525">
-                                        <span class="cinema-rating">5.0</span>
+<!--                                         <span class="cinema-rating">5.0</span> -->
                                     </a>
                                     <a href="single-cinema.html" class="cinema-title">Camden Town Odeon</a>
                                 </div>
@@ -359,6 +361,7 @@
                         </div>
 
                     </div>
+                    </form>
 
 
                     <div class="pagination paginatioon--full">

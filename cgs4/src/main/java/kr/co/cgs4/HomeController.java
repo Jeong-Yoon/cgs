@@ -4,6 +4,8 @@ import java.text.DateFormat;
 import java.util.Date;
 import java.util.Locale;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
@@ -12,7 +14,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import kr.co.cgs4.dao.TestDAO;
+import kr.co.cgs4.dto.FilmDTO;
 import kr.co.cgs4.dto.ScreenDTO;
+
 
 /**
  * Handles requests for the application home page.
@@ -46,14 +50,20 @@ public class HomeController {
 	}
 	
 	@RequestMapping("/movie")
-	public String movie(Model model){
+	public String movie(HttpServletRequest request, Model model){
 		System.out.println("movie()");
+		TestDAO dao = new TestDAO();
+		FilmDTO fdto = dao.film();
+		model.addAttribute("test", fdto);
 		return "movie";
 	}
 	
 	@RequestMapping("/movie_list")
 	public String movie_list(Model model){
 		System.out.println("movie_list()");
+		TestDAO dao = new TestDAO();
+		FilmDTO fdto = dao.film();
+		model.addAttribute("test", fdto);
 		return "movie_list";
 	}
 	
@@ -63,5 +73,5 @@ public class HomeController {
 		System.out.println("contact()");
 		return "contact";
 	}
-
+	
 }

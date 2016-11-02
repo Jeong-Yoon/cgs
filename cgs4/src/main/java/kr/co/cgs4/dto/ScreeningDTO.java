@@ -9,7 +9,7 @@ public class ScreeningDTO {
 	private String screening_cnt;
 	private String start_time;
 	private String end_time;
-	private int schedule_open;
+	private String schedule_open;
 	private String film_ID;
 	private String site_ID;
 	private String screen_num;
@@ -46,10 +46,10 @@ public class ScreeningDTO {
 	public void setEnd_time(String end_time) {
 		this.end_time = end_time;
 	}
-	public int getSchedule_open() {
+	public String getSchedule_open() {
 		return schedule_open;
 	}
-	public void setSchedule_open(int schedule_open) {
+	public void setSchedule_open(String schedule_open) {
 		this.schedule_open = schedule_open;
 	}
 	public String getFilm_ID() {

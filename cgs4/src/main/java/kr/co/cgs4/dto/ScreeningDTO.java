@@ -1,26 +1,31 @@
 package kr.co.cgs4.dto;
 
+import java.sql.Date;
+
 public class ScreeningDTO {
 
 	private String screening_ID;
-	private String screening_date;
+	private Date screening_date;
 	private String screening_cnt;
 	private String start_time;
 	private String end_time;
 	private int schedule_open;
-	private String film_id;
-	private String site_id;
+	private String film_ID;
+	private String site_ID;
 	private String screen_num;
+	private String film_name;
+	
+
 	public String getScreening_ID() {
 		return screening_ID;
 	}
 	public void setScreening_ID(String screening_ID) {
 		this.screening_ID = screening_ID;
 	}
-	public String getScreening_date() {
+	public Date getScreening_date() {
 		return screening_date;
 	}
-	public void setScreening_date(String screening_date) {
+	public void setScreening_date(Date screening_date) {
 		this.screening_date = screening_date;
 	}
 	public String getScreening_cnt() {
@@ -47,17 +52,17 @@ public class ScreeningDTO {
 	public void setSchedule_open(int schedule_open) {
 		this.schedule_open = schedule_open;
 	}
-	public String getFilm_id() {
-		return film_id;
+	public String getFilm_ID() {
+		return film_ID;
 	}
-	public void setFilm_id(String film_id) {
-		this.film_id = film_id;
+	public void setFilm_ID(String film_ID) {
+		this.film_ID = film_ID;
 	}
-	public String getSite_id() {
-		return site_id;
+	public String getSite_ID() {
+		return site_ID;
 	}
-	public void setSite_id(String site_id) {
-		this.site_id = site_id;
+	public void setSite_ID(String site_ID) {
+		this.site_ID = site_ID;
 	}
 	public String getScreen_num() {
 		return screen_num;
@@ -66,6 +71,12 @@ public class ScreeningDTO {
 		this.screen_num = screen_num;
 	}
 	
+	public String getFilm_name() {
+		return film_name;
+	}
+	public void setFilm_name(String film_name) {
+		this.film_name = film_name;
+	}
 	
 	
 }

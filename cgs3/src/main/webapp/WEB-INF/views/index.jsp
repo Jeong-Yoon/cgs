@@ -112,11 +112,11 @@
                             <span class="sub-nav-toggle plus"></span>
                             <a href="page-elements.html">Booking steps</a>
                             <ul>
-                                <li class="menu__nav-item"><a href="book1.html">Booking step 1</a></li>
-                                <li class="menu__nav-item"><a href="book2.html">Booking step 2</a></li>
-                                <li class="menu__nav-item"><a href="book3-buy.html">Booking step 3 (buy)</a></li>
-                                <li class="menu__nav-item"><a href="book3-reserve.html">Booking step 3 (reserve)</a></li>
-                                <li class="menu__nav-item"><a href="book-final.html">Final ticket view</a></li>
+                                <li class="menu__nav-item"><a href="book1">Booking step 1</a></li>
+                                <li class="menu__nav-item"><a href="book2">Booking step 2</a></li>
+                                <li class="menu__nav-item"><a href="book3">Booking step 3 (buy)</a></li>
+                                <li class="menu__nav-item"><a href="book3-reserve">Booking step 3 (reserve)</a></li>
+                                <li class="menu__nav-item"><a href="book-final">Final ticket view</a></li>
                             </ul>
                         </li>
                         <li>

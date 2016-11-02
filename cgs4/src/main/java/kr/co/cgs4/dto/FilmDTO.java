@@ -1,12 +1,14 @@
 package kr.co.cgs4.dto;
 
+import java.sql.Date;
+
 public class FilmDTO {
 	
 	private String film_ID;
 	private String film_name;
 	private int running_time;
 	private int film_type;
-	private String release_date;
+	private Date release_date;
 	private String director;
 	private String genre;
 	private String country;
@@ -38,10 +40,10 @@ public class FilmDTO {
 	public void setFilm_type(int film_type) {
 		this.film_type = film_type;
 	}
-	public String getRelease_date() {
+	public Date getRelease_date() {
 		return release_date;
 	}
-	public void setRelease_date(String release_date) {
+	public void setRelease_date(Date release_date) {
 		this.release_date = release_date;
 	}
 	public String getDirector() {

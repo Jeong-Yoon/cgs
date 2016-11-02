@@ -1,11 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
+<%String ctx = request.getContextPath(); %>
+<html> 
 <head>
 	<!-- Basic Page Needs -->
         <meta charset="utf-8">
-        <title>AMovie - Booking step 1</title>
+        <title>AMovie - Movie page</title>
         <meta name="description" content="A Template by Gozha.net">
         <meta name="keywords" content="HTML, CSS, JavaScript">
         <meta name="author" content="Gozha.net">
@@ -21,21 +22,24 @@
         <link href='http://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
     
     <!-- Stylesheets -->
-    <!-- jQuery UI --> 
+        <!-- jQuery UI --> 
         <link href="http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css" rel="stylesheet">
 
         <!-- Mobile menu -->
-        <link href="css/gozha-nav.css" rel="stylesheet" />
+        <link href="<%=ctx %>/resources/css/gozha-nav.css" rel="stylesheet" />
         <!-- Select -->
-        <link href="css/external/jquery.selectbox.css" rel="stylesheet" />
+        <link href="<%=ctx %>/resources/css/external/jquery.selectbox.css" rel="stylesheet" /> 
         <!-- Swiper slider -->
-        <link href="css/external/idangerous.swiper.css" rel="stylesheet" />
+        <link href="<%=ctx %>/resources/css/external/idangerous.swiper.css" rel="stylesheet" />
+        <!-- Magnific-popup -->
+        <link href="<%=ctx %>/resources/css/external/magnific-popup.css" rel="stylesheet" />
+
     
         <!-- Custom -->
-        <link href="css/style.css?v=1" rel="stylesheet" />
+        <link href="<%=ctx %>/resources/css/style.css?v=1" rel="stylesheet" />
 
         <!-- Modernizr --> 
-        <script src="js/external/modernizr.custom.js"></script>
+        <script src="<%=ctx %>/resources/js/external/modernizr.custom.js"></script>
     
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries --> 
     <!--[if lt IE 9]> 
@@ -46,17 +50,17 @@
 
 <body>
     <div class="wrapper">
-        <!-- Banner -->
-        <div class="banner-top">
-            <img alt='top banner' src="http://placehold.it/1600x90">
-        </div>
+<!--         Banner -->
+<!--         <div class="banner-top"> -->
+<!--             <img alt='top banner' src="http://placehold.it/1600x90"> -->
+<!--         </div> -->
 
         <!-- Header section -->
         <header class="header-wrapper">
             <div class="container">
                 <!-- Logo link-->
                 <a href='index.html' class="logo">
-                    <img alt='logo' src="images/logo.png">
+                    <img alt='logo' src="<%=ctx %>/resources/images/logo.png">
                 </a>
                 
                 <!-- Main website navigation-->
@@ -211,120 +215,146 @@
         </div>
         
         <!-- Main content -->
-
-        <section class="container">
-            <div class="order-container">
-                <div class="order">
-                    <img class="order__images" alt='' src="images/tickets.png">
-                    <p class="order__title">Book a ticket <br><span class="order__descript">and have fun movie time</span></p>
-                    <div class="order__control">
-                        <a href="#" class="order__control-btn active">Purchase</a>
-                        <a href="#" class="order__control-btn">Reserve</a>
-                    </div>
-                </div>
-            </div>
-                <div class="order-step-area">
-                    <div class="order-step first--step">1. What &amp; Where &amp; When</div>
-                </div>
-
-            <h2 class="page-heading heading--outcontainer">Choose a movie</h2>
-        </section>
-        
-        <div class="choose-film">
-            <div class="swiper-container">
-              <div class="swiper-wrapper">
-                  <!--First Slide-->
-                  <div class="swiper-slide" data-film='The Fifth Estate'> 
-                        <div class="film-images">
-                            <img alt='' src="http://placehold.it/380x600">
-                        </div>
-                        <p class="choose-film__title">The Fifth Estate</p>
-                  </div>
-                  
-                  <!--Second Slide-->
-                  <div class="swiper-slide" data-film='Ender’s Game'>
-                        <div class="film-images">
-                            <img alt='' src="http://placehold.it/380x600">
-                        </div>
-                        <p class="choose-film__title">Ender’s Game</p>
-                  </div>
-                  
-                  <!--Third Slide-->
-                  <div class="swiper-slide" data-film='About Time'> 
-                        <div class="film-images">
-                            <img alt='' src="http://placehold.it/380x600">
-                        </div>
-                        <p class="choose-film__title">About Time</p>
-                  </div>
-                  
-                  <!--Four Slide-->
-                  <div class="swiper-slide" data-film='Last Vegas'> 
-                        <div class="film-images">
-                            <img alt='' src="http://placehold.it/380x600">
-                        </div>
-                        <p class="choose-film__title">Last Vegas</p>
-                  </div>
-
-                  <!--Five Slide-->
-                  <div class="swiper-slide" data-film='The Hunger Games: Cathing Fire'> 
-                        <div class="film-images">
-                            <img alt='' src="http://placehold.it/380x600">
-                        </div>
-                        <p class="choose-film__title">The Hunger Games: Cathing Fire</p>
-                  </div>
-
-                  <!--Six Slide-->
-                  <div class="swiper-slide" data-film='The Counselor'> 
-                        <div class="film-images">
-                            <img alt='' src="http://placehold.it/380x600">
-                        </div>
-                        <p class="choose-film__title">The Counselor</p>
-                  </div>
-
-                  <!--Seven Slide-->
-                  <div class="swiper-slide" data-film='Free Birds'> 
-                        <div class="film-images">
-                            <img alt='' src="http://placehold.it/380x600">
-                        </div>
-                        <p class="choose-film__title">Free Birds</p>
-                  </div>
-
-                  <!--Eight Slide-->
-                  <div class="swiper-slide" data-film='Thor: The Dark World'> 
-                        <div class="film-images">
-                            <img alt='' src="http://placehold.it/380x600">
-                        </div>
-                        <p class="choose-film__title">Thor: The Dark World</p>
-                  </div>
-
-                  <!--Nine Slide-->
-                  <div class="swiper-slide" data-film='The Book Thief'> 
-                        <div class="film-images">
-                            <img alt='' src="http://placehold.it/380x600">
-                        </div>
-                        <p class="choose-film__title">The Book Thief</p>
-                  </div>
-
-                  <!--Ten Slide-->
-                  <div class="swiper-slide" data-film='The Wolf of Wall Stree'> 
-                        <div class="film-images">
-                            <img alt='' src="http://placehold.it/380x600">
-                        </div>
-                        <p class="choose-film__title">The Wolf of Wall Stree</p>
-                  </div>
-              </div>
-            </div>
-        </div>
-
         <section class="container">
             <div class="col-sm-12">
-                <div class="choose-indector choose-indector--film">
-                    <strong>Choosen: </strong><span class="choosen-area"></span>
+                <div class="movie">
+                    <h2 class="page-heading">The Hobbit: An Unexpected Journey</h2>
+                    
+                    <div class="movie__info">
+                        <div class="col-sm-4 col-md-3 movie-mobile">
+                            <div class="movie__images">
+                                <span class="movie__rating">5.0</span>
+                                <img alt='' src="http://placehold.it/526x773">
+                            </div>
+						<div class="movie__rate">Your vote: <div id="score" class="score"></div>
+						</div>
+					</div>
+
+                        <div class="col-sm-8 col-md-9">
+                            <p class="movie__time">169 min</p>
+
+                            <p class="movie__option"><strong>Country: </strong><a href="#">New Zeland</a>, <a href="#">USA</a></p>
+                            <p class="movie__option"><strong>Year: </strong><a href="#">2012</a></p>
+                            <p class="movie__option"><strong>Category: </strong><a href="#">Adventure</a>, <a href="#">Fantazy</a></p>
+                            <p class="movie__option"><strong>Release date: </strong>December 12, 2012</p>
+                            <p class="movie__option"><strong>Director: </strong><a href="#">Peter Jackson</a></p>
+                            <p class="movie__option"><strong>Actors: </strong><a href="#">Martin Freeman</a>, <a href="#">Ian McKellen</a>, <a href="#">Richard Armitage</a>, <a href="#">Ken Stott</a>, <a href="#">Graham McTavish</a>, <a href="#">Cate Blanchett</a>, <a href="#">Hugo Weaving</a>, <a href="#">Ian Holm</a>, <a href="#">Elijah Wood</a> <a href="#">...</a></p>
+                            <p class="movie__option"><strong>Age restriction: </strong><a href="#">13</a></p>
+                            <p class="movie__option"><strong>Box office: </strong><a href="#">$1 017 003 568</a></p>
+
+                            <a href="#" class="comment-link">Comments:  15</a>
+
+                            <div class="movie__btns movie__btns--full">
+                                <a href="#" class="btn btn-md btn--warning">book a ticket for this movie</a>
+                                <a href="#" class="watchlist">Add to watchlist</a>
+                            </div>
+
+                            <div class="share">
+                                <span class="share__marker">Share: </span>
+                                <div class="addthis_toolbox addthis_default_style ">
+                                    <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+                                    <a class="addthis_button_tweet"></a>
+                                    <a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="clearfix"></div>
+                    
+                    <h2 class="page-heading">The plot</h2>
+
+                    <p class="movie__describe">Bilbo Baggins is swept into a quest to reclaim the lost Dwarf Kingdom of Erebor from the fearsome dragon Smaug. Approached out of the blue by the wizard Gandalf the Grey, Bilbo finds himself joining a company of thirteen dwarves led by the legendary warrior, Thorin Oakenshield. Their journey will take them into the Wild; through treacherous lands swarming with Goblins and Orcs, deadly Wargs and Giant Spiders, Shapeshifters and Sorcerers. Although their goal lies to the East and the wastelands of the Lonely Mountain first they must escape the goblin tunnels, where Bilbo meets the creature that will change his life forever ... Gollum. Here, alone with Gollum, on the shores of an underground lake, the unassuming Bilbo Baggins not only discovers depths of guile and courage that surprise even him, he also gains possession of Gollum's "precious" ring that holds unexpected and useful qualities ... A simple, gold ring that is tied to the fate of all Middle-earth in ways Bilbo cannot begin to ... </p>
+
+                    <h2 class="page-heading">photos &amp; videos</h2>
+                    
+                    <div class="movie__media">
+                        <div class="movie__media-switch">
+                            <a href="#" class="watchlist list--photo" data-filter='media-photo'>234 photos</a>
+                            <a href="#" class="watchlist list--video" data-filter='media-video'>10 videos</a>
+                        </div>
+
+                        <div class="swiper-container">
+                          <div class="swiper-wrapper">
+                              <!--First Slide-->
+                              <div class="swiper-slide media-video">
+                                <a href='https://www.youtube.com/watch?v=Y5AehBA3IsE' class="movie__media-item ">
+                                     <img alt='' src="http://placehold.it/400x240">
+                                </a>
+                              </div>
+                              
+                              <!--Second Slide-->
+                              <div class="swiper-slide media-video">
+                                <a href='https://www.youtube.com/watch?v=Kb3ykVYvT4U' class="movie__media-item">
+                                    <img alt='' src="http://placehold.it/400x240">
+                                </a>
+                              </div>
+                              
+                              <!--Third Slide-->
+                              <div class="swiper-slide media-photo"> 
+                                    <a href='http://placehold.it/2100x1250' class="movie__media-item">
+                                        <img alt='' src="http://placehold.it/400x240">
+                                     </a>
+                              </div>
+
+                              <!--Four Slide-->
+                              <div class="swiper-slide media-photo"> 
+                                    <a href='http://placehold.it/2100x1250' class="movie__media-item">
+                                        <img alt='' src="http://placehold.it/400x240">
+                                     </a>
+                              </div>
+
+                              <!--Slide-->
+                              <div class="swiper-slide media-photo"> 
+                                    <a href='http://placehold.it/2100x1250' class="movie__media-item">
+                                        <img alt='' src="http://placehold.it/400x240">
+                                     </a>
+                              </div>
+
+                              <!--Slide-->
+                              <div class="swiper-slide media-photo"> 
+                                    <a href='http://placehold.it/2100x1250' class="movie__media-item">
+                                        <img alt='' src="http://placehold.it/400x240">
+                                     </a>
+                              </div>
+
+                              <!--First Slide-->
+                              <div class="swiper-slide media-video">
+                                <a href='https://www.youtube.com/watch?v=Y5AehBA3IsE' class="movie__media-item ">
+                                     <img alt='' src="http://placehold.it/400x240">
+                                </a>
+                              </div>
+                              
+                              <!--Second Slide-->
+                              <div class="swiper-slide media-video">
+                                <a href='https://www.youtube.com/watch?v=Kb3ykVYvT4U' class="movie__media-item">
+                                    <img alt='' src="http://placehold.it/400x240">
+                                </a>
+                              </div>
+
+                              <!--Slide-->
+                              <div class="swiper-slide media-photo"> 
+                                    <a href='http://placehold.it/2100x1250' class="movie__media-item">
+                                        <img alt='' src="http://placehold.it/400x240">
+                                     </a>
+                              </div>
+
+                              <!--Slide-->
+                              <div class="swiper-slide media-photo"> 
+                                    <a href='http://placehold.it/2100x1250' class="movie__media-item">
+                                        <img alt='' src="http://placehold.it/400x240">
+                                     </a>
+                              </div>
+                        
+                          </div>
+                        </div>
+
+                    </div>
+
                 </div>
 
-                <h2 class="page-heading">City &amp; Date</h2>
-
-                <div class="choose-container choose-container--short">
+                <h2 class="page-heading">showtime &amp; tickets</h2>
+                <div class="choose-container">
                     <form id='select' class="select" method='get'>
                           <select name="select_item" id="select-sort" class="select__sort" tabindex="0">
                             <option value="1" selected='selected'>London</option>
@@ -342,29 +372,30 @@
                       <span class="datepicker__marker"><i class="fa fa-calendar"></i>Date</span>
                       <input type="text" id="datepicker" value='03/10/2014' class="datepicker__input">
                     </div>
-                </div>
 
-                <h2 class="page-heading">Pick time</h2>
+                    <a href="#" id="map-switch" class="watchlist watchlist--map watchlist--map-full"><span class="show-map">Show cinemas on map</span><span  class="show-time">Show cinema time table</span></a>
+                    
+                    <div class="clearfix"></div>
 
-                <div class="time-select time-select--wide">
+                    <div class="time-select">
                         <div class="time-select__group group--first">
-                            <div class="col-sm-3">
+                            <div class="col-sm-4">
                                 <p class="time-select__place">Cineworld</p>
                             </div>
-                            <ul class="col-sm-6 items-wrap">
+                            <ul class="col-sm-8 items-wrap">
                                 <li class="time-select__item" data-time='09:40'>09:40</li>
                                 <li class="time-select__item" data-time='13:45'>13:45</li>
-                                <li class="time-select__item" data-time='15:45'>15:45</li>
+                                <li class="time-select__item active" data-time='15:45'>15:45</li>
                                 <li class="time-select__item" data-time='19:50'>19:50</li>
                                 <li class="time-select__item" data-time='21:50'>21:50</li>
                             </ul>
                         </div>
 
                         <div class="time-select__group">
-                            <div class="col-sm-3">
+                            <div class="col-sm-4">
                                 <p class="time-select__place">Empire</p>
                             </div>
-                            <ul class="col-sm-6 items-wrap">
+                            <ul class="col-sm-8 items-wrap">
                                 <li class="time-select__item" data-time='10:45'>10:45</li>
                                 <li class="time-select__item" data-time='16:00'>16:00</li>
                                 <li class="time-select__item" data-time='19:00'>19:00</li>
@@ -374,27 +405,27 @@
                         </div>
 
                         <div class="time-select__group">
-                            <div class="col-sm-3">
+                            <div class="col-sm-4">
                                 <p class="time-select__place">Curzon</p>
                             </div>
-                            <ul class="col-sm-6 items-wrap">
+                            <ul class="col-sm-8 items-wrap">
                                 <li class="time-select__item" data-time='09:00'>09:00</li>
                                 <li class="time-select__item" data-time='11:00'>11:00</li>
                                 <li class="time-select__item" data-time='13:00'>13:00</li>
                                 <li class="time-select__item" data-time='15:00'>15:00</li>
                                 <li class="time-select__item" data-time='17:00'>17:00</li>
-                                <li class="time-select__item" data-time='19:00'>19:00</li>
-                                <li class="time-select__item" data-time='21:00'>21:00</li>
-                                <li class="time-select__item" data-time='23:00'>23:00</li>
-                                <li class="time-select__item" data-time='01:00'>01:00</li>
+                                <li class="time-select__item" data-time='19:0'>19:00</li>
+                                <li class="time-select__item" data-time='21:0'>21:00</li>
+                                <li class="time-select__item" data-time='23:0'>23:00</li>
+                                <li class="time-select__item" data-time='01:0'>01:00</li>
                             </ul>
                         </div>
 
                         <div class="time-select__group">
-                            <div class="col-sm-3">
+                            <div class="col-sm-4">
                                 <p class="time-select__place">Odeon</p>
                             </div>
-                            <ul class="col-sm-6 items-wrap">
+                            <ul class="col-sm-8 items-wrap">
                                 <li class="time-select__item" data-time='10:45'>10:45</li>
                                 <li class="time-select__item" data-time='16:00'>16:00</li>
                                 <li class="time-select__item" data-time='19:00'>19:00</li>
@@ -404,48 +435,111 @@
                         </div>
 
                         <div class="time-select__group group--last">
-                            <div class="col-sm-3">
+                            <div class="col-sm-4">
                                 <p class="time-select__place">Picturehouse</p>
                             </div>
-                            <ul class="col-sm-6 items-wrap">
+                            <ul class="col-sm-8 items-wrap">
                                 <li class="time-select__item" data-time='17:45'>17:45</li>
                                 <li class="time-select__item" data-time='21:30'>21:30</li>
                                 <li class="time-select__item" data-time='02:20'>02:20</li>
                             </ul>
                         </div>
                     </div>
+                    
+                    <!-- hiden maps with multiple locator-->
+                    <div  class="map">
+                        <div id='cimenas-map'></div> 
+                    </div>
 
-                <div class="choose-indector choose-indector--time">
-                    <strong>Choosen: </strong><span class="choosen-area"></span>
+                    <h2 class="page-heading">comments (15)</h2>
+
+                    <div class="comment-wrapper">
+                        <form id="comment-form" class="comment-form" method='post'>
+                            <textarea class="comment-form__text" placeholder='Add you comment here'></textarea>
+                            <label class="comment-form__info">250 characters left</label>
+                            <button type='submit' class="btn btn-md btn--danger comment-form__btn">add comment</button>
+                        </form>
+
+                        <div class="comment-sets">
+
+                        <div class="comment">
+                            <div class="comment__images">
+                                <img alt='' src="http://placehold.it/50x50">
+                            </div>
+
+                            <a href='#' class="comment__author"><span class="social-used fa fa-facebook"></span>Roberta Inetti</a>
+                            <p class="comment__date">today | 03:04</p>
+                            <p class="comment__message">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vitae enim sollicitudin, euismod erat id, fringilla lacus. Cras ut rutrum lectus. Etiam ante justo, volutpat at viverra a, mattis in velit. Morbi molestie rhoncus enim, vitae sagittis dolor tristique et.</p>
+                            <a href='#' class="comment__reply">Reply</a>
+                        </div>
+
+                        <div class="comment">
+                            <div class="comment__images">
+                                <img alt='' src="http://placehold.it/50x50">
+                            </div>
+
+                            <a href='#' class="comment__author"><span class="social-used fa fa-vk"></span>Olia Gozha</a>
+                            <p class="comment__date">22.10.2013 | 14:40</p>
+                            <p class="comment__message">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vitae enim sollicitudin, euismod erat id, fringilla lacus. Cras ut rutrum lectus. Etiam ante justo, volutpat at viverra a, mattis in velit. Morbi molestie rhoncus enim, vitae sagittis dolor tristique et.</p>
+                            <a href='#' class="comment__reply">Reply</a>
+                        </div>
+
+                        <div class="comment comment--answer">
+                            <div class="comment__images">
+                                <img alt='' src="http://placehold.it/50x50">
+                            </div>
+
+                            <a href='#' class="comment__author"><span class="social-used fa fa-vk"></span>Dmitriy Pustovalov</a>
+                            <p class="comment__date">today | 10:19</p>
+                            <p class="comment__message">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vitae enim sollicitudin, euismod erat id, fringilla lacus. Cras ut rutrum lectus. Etiam ante justo, volutpat at viverra a, mattis in velit. Morbi molestie rhoncus enim, vitae sagittis dolor tristique et.</p>
+                            <a href='#' class="comment__reply">Reply</a>
+                        </div>
+
+                        <div class="comment comment--last">
+                            <div class="comment__images">
+                                <img alt='' src="http://placehold.it/50x50">
+                            </div>
+
+                            <a href='#' class="comment__author"><span class="social-used fa fa-facebook"></span>Sia Andrews</a>
+                            <p class="comment__date"> 22.10.2013 | 12:31 </p>
+                            <p class="comment__message">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vitae enim sollicitudin, euismod erat id, fringilla lacus. Cras ut rutrum lectus. Etiam ante justo, volutpat at viverra a, mattis in velit. Morbi molestie rhoncus enim, vitae sagittis dolor tristique et.</p>
+                            <a href='#' class="comment__reply">Reply</a>
+                        </div>
+
+                        <div id='hide-comments' class="hide-comments">
+                            <div class="comment">
+                                <div class="comment__images">
+                                    <img alt='' src="http://placehold.it/50x50">
+                                </div>
+
+                                <a href='#' class="comment__author"><span class="social-used fa fa-facebook"></span>Roberta Inetti</a>
+                                <p class="comment__date">today | 03:04</p>
+                                <p class="comment__message">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vitae enim sollicitudin, euismod erat id, fringilla lacus. Cras ut rutrum lectus. Etiam ante justo, volutpat at viverra a, mattis in velit. Morbi molestie rhoncus enim, vitae sagittis dolor tristique et.</p>
+                                <a href='#' class="comment__reply">Reply</a>
+                            </div>
+
+                            <div class="comment">
+                                <div class="comment__images">
+                                    <img alt='' src="http://placehold.it/50x50">
+                                </div>
+
+                                <a href='#' class="comment__author"><span class="social-used fa fa-vk"></span>Olia Gozha</a>
+                                <p class="comment__date">22.10.2013 | 14:40</p>
+                                <p class="comment__message">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vitae enim sollicitudin, euismod erat id, fringilla lacus. Cras ut rutrum lectus. Etiam ante justo, volutpat at viverra a, mattis in velit. Morbi molestie rhoncus enim, vitae sagittis dolor tristique et.</p>
+                                <a href='#' class="comment__reply">Reply</a>
+                            </div>
+                        </div>
+
+                        <div class="comment-more">
+                            <a href="#" class="watchlist">Show more comments</a>
+                        </div>
+
+                    </div>
+                    </div>
                 </div>
             </div>
 
         </section>
-
-        <div class="clearfix"></div>
-
-        <form id='film-and-time' class="booking-form" method='get' action='book2.html'>
-            <input type='text' name='choosen-movie' class="choosen-movie">
-
-            <input type='text' name='choosen-city' class="choosen-city">
-            <input type='text' name='choosen-date' class="choosen-date">
-            
-            <input type='text' name='choosen-cinema' class="choosen-cinema">
-            <input type='text' name='choosen-time' class="choosen-time">
-        
-
-            <div class="booking-pagination">
-                    <a href="#" class="booking-pagination__prev hide--arrow">
-                        <span class="arrow__text arrow--prev"></span>
-                        <span class="arrow__info"></span>
-                    </a>
-                    <a href="book2.html" class="booking-pagination__next">
-                        <span class="arrow__text arrow--next">next step</span>
-                        <span class="arrow__info">choose a sit</span>
-                    </a>
-            </div>
-
-        </form>
         
         <div class="clearfix"></div>
 
@@ -537,30 +631,45 @@
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/external/jquery-1.10.1.min.js"><\/script>')</script>
         <!-- Migrate --> 
-        <script src="js/external/jquery-migrate-1.2.1.min.js"></script>
+        <script src="<%=ctx %>/resources/js/external/jquery-migrate-1.2.1.min.js"></script>
         <!-- jQuery UI -->
         <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
         <!-- Bootstrap 3--> 
         <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
 
         <!-- Mobile menu -->
-        <script src="js/jquery.mobile.menu.js"></script>
+        <script src="<%=ctx %>/resources/js/jquery.mobile.menu.js"></script>
          <!-- Select -->
-        <script src="js/external/jquery.selectbox-0.2.min.js"></script>
+        <script src="<%=ctx %>/resources/js/external/jquery.selectbox-0.2.min.js"></script>
+
+        <!-- Stars rate -->
+        <script src="<%=ctx %>/resources/js/external/jquery.raty.js"></script>
         <!-- Swiper slider -->
-        <script src="js/external/idangerous.swiper.min.js"></script>
+        <script src="<%=ctx %>/resources/js/external/idangerous.swiper.min.js"></script>
+        <!-- Magnific-popup -->
+        <script src="<%=ctx %>/resources/js/external/jquery.magnific-popup.min.js"></script> 
+
+        <!--*** Google map  ***-->
+        <script src="https://maps.google.com/maps/api/js?sensor=true"></script> 
+        <!--*** Google map infobox  ***-->
+        <script src="<%=ctx %>/resources/js/external/infobox.js"></script> 
+
+        <!-- Share buttons -->
+        <script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+        <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-525fd5e9061e7ef0"></script>
 
         <!-- Form element -->
-        <script src="js/external/form-element.js"></script>
+        <script src="<%=ctx %>/resources/js/external/form-element.js"></script>
         <!-- Form validation -->
-        <script src="js/form.js"></script>
+        <script src="<%=ctx %>/resources/js/form.js"></script>
 
         <!-- Custom -->
-        <script src="js/custom.js"></script>
+        <script src="<%=ctx %>/resources/js/custom.js"></script>
 		
 		<script type="text/javascript">
             $(document).ready(function() {
-                init_BookingOne();
+                init_MoviePage();
+                 init_MoviePageFull();
             });
 		</script>
 

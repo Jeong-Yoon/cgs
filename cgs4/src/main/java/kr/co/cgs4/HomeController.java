@@ -57,4 +57,10 @@ public class HomeController {
 		return "movie_list";
 	}
 	
+	@RequestMapping("/contact")
+	public String contact(Model model){
+		System.out.println("contact()");
+		return "contact";
+	}
+	
 }

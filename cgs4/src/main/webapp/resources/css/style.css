@@ -4610,16 +4610,6 @@ ul#navigation li.mega-menu__nav-item:hover:before {
   -o-animation: anime 500ms;
   animation: anime 500ms;
 }
-.cinemapicker {
-	  position: relative;
-  display: inline-block;
-  z-index: 15;
-    font-weight: bold;
-  padding-right: 10px;
-  font-size: 14px;
-    line-height: 1.428571429;
-    color: #333333;
-}
 .datepicker {
   position: relative;
   display: inline-block;
@@ -4644,7 +4634,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
   font-family: "FontAwesome";
   font-size: 10px;
   position: absolute;
-  top: 3px;
+  top: 25px;
   right: -2px;
   z-index: -1;
   -webkit-transition: 0.3s;
@@ -4827,6 +4817,17 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 .select {
   margin-left: 50px;
   padding-bottom: 5px;
+  width: 100px;
+}
+.select .cinemapicker {
+	position: relative;
+  display: inline-block;
+  z-index: 15;
+    font-weight: bold;
+  padding-right: 10px;
+  font-size: 14px;
+    line-height: 1.428571429;
+    color: #333333;
 }
 .select .sbHolder {
   background-color: transparent;
@@ -4886,19 +4887,20 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 .select .sbToggle:hover {
   color: #222A35;
 }
-.select .sbToggle:before {
-  content: "\f14e";
-  font: 16px "FontAwesome";
-  color: #222A35;
-  position: absolute;
-  top: 1px;
-  left: -17px;
-}
-.select .sbToggle:after {
-  content: 'City';
-  font: 13px 'Roboto', sans-serif;
-  font-weight: bold;
-}
+/* .select .sbToggle:before { */
+/*   content: "\f14e"; */
+/*   font: 16px "FontAwesome"; */
+/*   color: #222A35; */
+/*   position: absolute; */
+/*   top: 1px; */
+/*   left: -17px; */
+/* } */
+/* .select .sbToggle:after { */
+/*   content: '¿µÈ­°ü'; */
+/*   font: 13px 'Roboto', sans-serif; */
+/*   font-weight: bold; */
+/*   width: 50px; */
+/* } */
 .select .sbOptions {
   margin-top: 11px;
   margin-left: -120px;
@@ -6298,11 +6300,11 @@ ul#navigation li.mega-menu__nav-item:hover:before {
   text-align: center;
   width: 100px;
   height: 100px;
-  -webkit-border-radius: 50px;
-  -moz-border-radius: 50px;
-  border-radius: 50px;
+/*   -webkit-border-radius: 50px; */
+/*   -moz-border-radius: 50px; */
+/*   border-radius: 50px; */
   padding-top: 40px;
-  background-color: #ffd564;
+/*   background-color: #ffd564; */
   position: absolute;
   top: 50%;
   left: 50%;
@@ -6310,7 +6312,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
   margin-left: -50px;
 }
 .choose-film .swiper-slide:hover {
-  cursor: url(../images/components/cursor.png), auto;
+/*   cursor: url(../images/components/cursor.png), auto; */
 }
 .choose-indector {
   position: relative;
@@ -8623,7 +8625,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
   transition: 0.3s;
 }
 .cinema--full .cinema__gallery .swiper-slide:hover {
-  cursor: url(../images/components/cursor.png), auto;
+/*   cursor: url(../images/components/cursor.png), auto; */
 }
 .cinema--full .cinema__gallery .swiper-slide:hover:before {
   opacity: 0;
@@ -9998,4 +10000,8 @@ ul#navigation li.mega-menu__nav-item:hover:before {
   .post--preview .post__image {
     width: 100%;
   }
+}
+
+.choosed_film{
+	color: white;
 }

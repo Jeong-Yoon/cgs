@@ -1,8 +1,16 @@
+<%@page import="java.util.Date"%>
+<%@page import="java.util.Locale"%>
+<%@page import="java.text.SimpleDateFormat"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <%
 	String ctx = request.getContextPath();
+%>
+<%
+    SimpleDateFormat mSimpleDateFormat = new SimpleDateFormat("dd/MM/yyyy", Locale.KOREA);
+    Date date = new Date();
+    String mTime = mSimpleDateFormat.format(date);
 %>
 <html>
 <head>
@@ -52,10 +60,21 @@
     	<script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.js"></script> 
 		<script src="http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.3.0/respond.js"></script>		
     <![endif]-->
+<script>
+function movieChk(id,name){
+	alert(name)
+	document.getElementById("choosed_film").innerHTML = name+'<input type="hidden" id="film_ID" value="'+id+'"'>;
+	;
+}
+</script>
+
+
 </head>
 
 <body>
+
 	<div class="wrapper">
+	
 		<!-- Banner -->
 		<div class="banner-top">
 			<img alt='top banner' src="http://placehold.it/1600x90">
@@ -65,8 +84,8 @@
 		<header class="header-wrapper">
 		<div class="container">
 			<!-- Logo link-->
-			<a href='index.html' class="logo"> <img alt='logo'
-				src="images/logo.png">
+			<a href='index.html' class="logo"> <img style="max-width: 100px"
+				alt='logo' src="<%=ctx%>/resources/images/logo.png">
 			</a>
 
 			<!-- Main website navigation-->
@@ -80,16 +99,12 @@
 			<ul id="navigation">
 				<li><span class="sub-nav-toggle plus"></span> <a href="#">Pages</a>
 					<ul>
-						<li class="menu__nav-item"><a href="movie-page-left.html">Single
-								movie (rigth sidebar)</a></li>
-						<li class="menu__nav-item"><a href="movie-page-right.html">Single
-								movie (left sidebar)</a></li>
+						<!--                                 <li class="menu__nav-item"><a href="movie-page-left.html">Single movie (rigth sidebar)</a></li> -->
+						<!--                                 <li class="menu__nav-item"><a href="movie-page-right.html">Single movie (left sidebar)</a></li> -->
 						<li class="menu__nav-item"><a href="movie-page-full.html">Single
 								movie (full widht)</a></li>
-						<li class="menu__nav-item"><a href="movie-list-left.html">Movies
-								list (rigth sidebar)</a></li>
-						<li class="menu__nav-item"><a href="movie-list-right.html">Movies
-								list (left sidebar)</a></li>
+						<!--                                 <li class="menu__nav-item"><a href="movie-list-left.html">Movies list (rigth sidebar)</a></li> -->
+						<!--                                 <li class="menu__nav-item"><a href="movie-list-right.html">Movies list (left sidebar)</a></li> -->
 						<li class="menu__nav-item"><a href="movie-list-full.html">Movies
 								list (full widht)</a></li>
 						<li class="menu__nav-item"><a href="single-cinema.html">Single
@@ -97,16 +112,14 @@
 						<li class="menu__nav-item"><a href="cinema-list.html">Cinemas
 								list</a></li>
 						<li class="menu__nav-item"><a href="trailer.html">Trailers</a></li>
-						<li class="menu__nav-item"><a href="rates-left.html">Rates
-								(rigth sidebar)</a></li>
-						<li class="menu__nav-item"><a href="rates-right.html">Rates
-								(left sidebar)</a></li>
+						<!--                                 <li class="menu__nav-item"><a href="rates-left.html">Rates (rigth sidebar)</a></li> -->
+						<!--                                 <li class="menu__nav-item"><a href="rates-right.html">Rates (left sidebar)</a></li> -->
 						<li class="menu__nav-item"><a href="rates-full.html">Rates
 								(full widht)</a></li>
 						<li class="menu__nav-item"><a href="offers.html">Offers</a></li>
 						<li class="menu__nav-item"><a href="contact.html">Contact
 								us</a></li>
-						<li class="menu__nav-item"><a href="404.html">404 error</a></li>
+						<!--                                 <li class="menu__nav-item"><a href="404.html">404 error</a></li> -->
 						<li class="menu__nav-item"><a href="coming-soon.html">Coming
 								soon</a></li>
 						<li class="menu__nav-item"><a href="login.html">Login/Registration</a></li>
@@ -122,15 +135,13 @@
 				<li><span class="sub-nav-toggle plus"></span> <a
 					href="page-elements.html">Booking steps</a>
 					<ul>
-						<li class="menu__nav-item"><a href="book1.html">Booking
-								step 1</a></li>
-						<li class="menu__nav-item"><a href="book2.html">Booking
-								step 2</a></li>
-						<li class="menu__nav-item"><a href="book3-buy.html">Booking
-								step 3 (buy)</a></li>
-						<li class="menu__nav-item"><a href="book3-reserve.html">Booking
+						<li class="menu__nav-item"><a href="book1">Booking step 1</a></li>
+						<li class="menu__nav-item"><a href="book2">Booking step 2</a></li>
+						<li class="menu__nav-item"><a href="book3">Booking step 3
+								(buy)</a></li>
+						<li class="menu__nav-item"><a href="book3-reserve">Booking
 								step 3 (reserve)</a></li>
-						<li class="menu__nav-item"><a href="book-final.html">Final
+						<li class="menu__nav-item"><a href="book-final">Final
 								ticket view</a></li>
 					</ul></li>
 				<li><span class="sub-nav-toggle plus"></span> <a
@@ -144,73 +155,42 @@
 								col gallery</a></li>
 					</ul></li>
 				<li><span class="sub-nav-toggle plus"></span> <a
-					href="news-left.html">News</a>
-					<ul>
-						<li class="menu__nav-item"><a href="news-left.html">News
-								(rigth sidebar)</a></li>
-						<li class="menu__nav-item"><a href="news-right.html">News
-								(left sidebar)</a></li>
-						<li class="menu__nav-item"><a href="news-full.html">News
-								(full widht)</a></li>
-						<li class="menu__nav-item"><a href="single-page-left.html">Single
-								post (rigth sidebar)</a></li>
-						<li class="menu__nav-item"><a href="single-page-right.html">Single
-								post (left sidebar)</a></li>
-						<li class="menu__nav-item"><a href="single-page-full.html">Single
-								post (full widht)</a></li>
-					</ul></li>
-				<li><span class="sub-nav-toggle plus"></span> <a href="#">Mega
-						menu</a>
-					<ul class="mega-menu container">
-						<li class="col-md-3 mega-menu__coloum">
-							<h4 class="mega-menu__heading">Now in the cinema</h4>
-							<ul class="mega-menu__list">
-								<li class="mega-menu__nav-item"><a href="#">The
-										Counselor</a></li>
-								<li class="mega-menu__nav-item"><a href="#">Bad Grandpa</a></li>
-								<li class="mega-menu__nav-item"><a href="#">Blue Is the
-										Warmest Color</a></li>
-								<li class="mega-menu__nav-item"><a href="#">Capital</a></li>
-								<li class="mega-menu__nav-item"><a href="#">Spinning
-										Plates</a></li>
-								<li class="mega-menu__nav-item"><a href="#">Bastards</a></li>
-							</ul>
-						</li>
+					href="contact.html">Contact us</a> <!--                                <ul class="mega-menu container"> -->
+					<!--                                     <li class="col-md-3 mega-menu__coloum"> -->
+					<!--                                         <h4 class="mega-menu__heading">Now in the cinema</h4> -->
+					<!--                                          <ul class="mega-menu__list"> -->
+					<!--                                             <li class="mega-menu__nav-item"><a href="#">The Counselor</a></li> -->
+					<!--                                             <li class="mega-menu__nav-item"><a href="#">Bad Grandpa</a></li> -->
+					<!--                                             <li class="mega-menu__nav-item"><a href="#">Blue Is the Warmest Color</a></li> -->
+					<!--                                             <li class="mega-menu__nav-item"><a href="#">Capital</a></li> -->
+					<!--                                             <li class="mega-menu__nav-item"><a href="#">Spinning Plates</a></li> -->
+					<!--                                             <li class="mega-menu__nav-item"><a href="#">Bastards</a></li> -->
+					<!--                                           </ul> --> <!--                                       </li> -->
 
-						<li
-							class="col-md-3 mega-menu__coloum mega-menu__coloum--outheading">
-							<ul class="mega-menu__list">
-								<li class="mega-menu__nav-item"><a href="#">Gravity</a></li>
-								<li class="mega-menu__nav-item"><a href="#">Captain
-										Phillips</a></li>
-								<li class="mega-menu__nav-item"><a href="#">Carrie</a></li>
-								<li class="mega-menu__nav-item"><a href="#">Cloudy with
-										a Chance of Meatballs 2</a></li>
-							</ul>
-						</li>
+					<!--                                       <li class="col-md-3 mega-menu__coloum mega-menu__coloum--outheading"> -->
+					<!--                                           <ul class="mega-menu__list"> -->
+					<!--                                             <li class="mega-menu__nav-item"><a href="#">Gravity</a></li> -->
+					<!--                                             <li class="mega-menu__nav-item"><a href="#">Captain Phillips</a></li> -->
+					<!--                                             <li class="mega-menu__nav-item"><a href="#">Carrie</a></li> -->
+					<!--                                             <li class="mega-menu__nav-item"><a href="#">Cloudy with a Chance of Meatballs 2</a></li> -->
+					<!--                                           </ul> --> <!--                                       </li> -->
 
-						<li class="col-md-3 mega-menu__coloum">
-							<h4 class="mega-menu__heading">Ending soon</h4>
-							<ul class="mega-menu__list">
-								<li class="mega-menu__nav-item"><a href="#">Escape Plan</a></li>
-								<li class="mega-menu__nav-item"><a href="#">Rush</a></li>
-								<li class="mega-menu__nav-item"><a href="#">Prisoners</a></li>
-								<li class="mega-menu__nav-item"><a href="#">Enough Said</a></li>
-								<li class="mega-menu__nav-item"><a href="#">The Fifth
-										Estate</a></li>
-								<li class="mega-menu__nav-item"><a href="#">Runner
-										Runner</a></li>
-							</ul>
-						</li>
+					<!--                                       <li class="col-md-3 mega-menu__coloum"> -->
+					<!--                                         <h4 class="mega-menu__heading">Ending soon</h4> -->
+					<!--                                           <ul class="mega-menu__list"> -->
+					<!--                                             <li class="mega-menu__nav-item"><a href="#">Escape Plan</a></li> -->
+					<!--                                             <li class="mega-menu__nav-item"><a href="#">Rush</a></li> -->
+					<!--                                             <li class="mega-menu__nav-item"><a href="#">Prisoners</a></li> -->
+					<!--                                             <li class="mega-menu__nav-item"><a href="#">Enough Said</a></li> -->
+					<!--                                             <li class="mega-menu__nav-item"><a href="#">The Fifth Estate</a></li> -->
+					<!--                                             <li class="mega-menu__nav-item"><a href="#">Runner Runner</a></li> -->
+					<!--                                           </ul> --> <!--                                       </li> -->
 
-						<li
-							class="col-md-3 mega-menu__coloum mega-menu__coloum--outheading">
-							<ul class="mega-menu__list">
-								<li class="mega-menu__nav-item"><a href="#">Insidious:
-										Chapter 2</a></li>
-							</ul>
-						</li>
-					</ul></li>
+					<!--                                       <li class="col-md-3 mega-menu__coloum mega-menu__coloum--outheading"> -->
+					<!--                                           <ul class="mega-menu__list"> -->
+					<!--                                             <li class="mega-menu__nav-item"><a href="#">Insidious: Chapter 2</a></li> -->
+					<!--                                           </ul> --> <!--                                       </li> -->
+					<!--                                </ul> --></li>
 			</ul>
 			</nav>
 
@@ -269,15 +249,14 @@
 		<div class="choose-film">
 			<div class="col-sm-9">
 				<div class="rates-wrapper rates--full">
-
+<input type="button" value="고산자" onclick="movieChk(00001,고산자)">
 					<table>
-						<colgroup class="col-width-lg">
-						<colgroup class="col-width">
-						<colgroup class="col-width-sm">
-						<colgroup class="col-width">
+<!-- 						<colgroup class="col-width-lg"> -->
+<!-- 						<colgroup class="col-width"> -->
+<!-- 						<colgroup class="col-width-sm"> -->
+<!-- 						<colgroup class="col-width"> -->
 						<tr class="rates rates--top" data-film='Ender’s Game'>
-							<td class="rates__obj"><a class="film-images">1.
-									Thor: The Dark World</a></td>
+							<td class="rates__obj"><input type="button" value="고산자" onclick="movieChk(00001,고산자)"></td>
 							<td class="rates__vote">233 546 votes</td>
 							<td class="rates__result">5.0</td>
 							<td class="rates__stars"><div class="score"></div></td>
@@ -313,12 +292,10 @@
 
 			<div class="swiper-container">
 				<div class="swiper-wrapper">
-					Second Slide
 					<div class="swiper-slide" data-film='Ender’s Game'>
-						<div class="film-images">
-							<img alt='' src="http://placehold.it/380x600">
+						<div class="film-images"></a>
+						
 						</div>
-						<p class="choose-film__title">Ender’s Game</p>
 					</div>
 				</div>
 			</div>
@@ -327,28 +304,29 @@
 		<section class="container">
 		<div class="col-sm-12">
 			<div class="choose-indector choose-indector--film">
-				<strong>선택하신 영화: </strong><span class="choosen-area"></span>
+				<strong>선택하신 영화: </strong>
+<!-- 				<span class="choosen-area"></span> -->
+				 <span id="choosed_film" class="choosed_film"></span>
 			</div>
 
 			<h2 class="page-heading">영화관 &amp; 날짜 선택</h2>
 
 			<div class="choose-container choose-container--short">
 				<form id='select' class="select" method='get'>
-					<!-- 					<span class="cinemapicker"><i class="fa fa-rocket"></i>영화관 -->
-					<!-- 						선택</span> -->
-					<select name="select_item" id="select-sort" class="select__sort"
-						tabindex="0">
-						<option value="1" selected='selected'>서울강변점</option>
-						<option value="2">인천점</option>
-						<option value="3">야탑점</option>
-						<option value="4">강남점</option>
-						<option value="5">구로점</option>
+					<span class="cinemapicker"><i class="fa fa-rocket"></i>영화관
+						선택</span> <select name="select_item" id="select-sort"
+						class="select__sort" tabindex="0">
+						<option value="0001" selected='selected'>서울강변점</option>
+						<option value="0002">인천점</option>
+						<option value="0003">야탑점</option>
+						<option value="0004">강남점</option>
+						<option value="0005">구로점</option>
 					</select>
 				</form>
 
 				<div class="datepicker">
 					<span class="datepicker__marker"><i class="fa fa-calendar"></i>날짜
-						선택</span> <input type="text" id="datepicker" value='03/10/2014'
+						선택</span><br> <input type="text" id="datepicker" value=<%=mTime %>
 						class="datepicker__input">
 				</div>
 			</div>
@@ -385,62 +363,69 @@
 				</div>
 
 				<div class="time-select__group">
-					<div class="col-sm-3">
-						<p class="time-select__place">Empire</p>
+					<div class="col-sm-2">
+						<p class="time-select__place">2관</p>
 					</div>
-					<ul class="col-sm-6 items-wrap">
-						<li class="time-select__item" data-time='10:45'>10:45</li>
-						<li class="time-select__item" data-time='16:00'>16:00</li>
-						<li class="time-select__item" data-time='19:00'>19:00</li>
-						<li class="time-select__item" data-time='21:15'>21:15</li>
-						<li class="time-select__item" data-time='23:00'>23:00</li>
+					<ul class="col-sm-8 items-wrap">
+						<li class=time-select__set>
+							<div class="time-select__item" data-time='09:40'>09:40</div>
+							<div class="time-select__seat">100/100석</div>
+						</li>
+						<li class=time-select__set>
+							<div class="time-select__item" data-time='13:45'>13:45</div>
+							<div class="time-select__seat">100/100석</div>
+						</li>
+						<li class=time-select__set>
+							<div class="time-select__item" data-time='15:45'>15:45</div>
+							<div class="time-select__seat">100/100석</div>
+						</li>
+						<li class=time-select__set>
+							<div class="time-select__item" data-time='19:50'>19:50</div>
+							<div class="time-select__seat">100/100석</div>
+						</li>
 					</ul>
 				</div>
 
 				<div class="time-select__group">
-					<div class="col-sm-3">
-						<p class="time-select__place">Curzon</p>
+					<div class="col-sm-2">
+						<p class="time-select__place">3관</p>
 					</div>
-					<ul class="col-sm-6 items-wrap">
-						<li class="time-select__item" data-time='09:00'>09:00</li>
-						<li class="time-select__item" data-time='11:00'>11:00</li>
-						<li class="time-select__item" data-time='13:00'>13:00</li>
-						<li class="time-select__item" data-time='15:00'>15:00</li>
-						<li class="time-select__item" data-time='17:00'>17:00</li>
-						<li class="time-select__item" data-time='19:00'>19:00</li>
-						<li class="time-select__item" data-time='21:00'>21:00</li>
-						<li class="time-select__item" data-time='23:00'>23:00</li>
-						<li class="time-select__item" data-time='01:00'>01:00</li>
+					<ul class="col-sm-8 items-wrap">
+						<li class=time-select__set>
+							<div class="time-select__item" data-time='09:00'>09:00</div>
+							<div class="time-select__seat">100/100석</div>
+						</li>
+						<li class=time-select__set>
+							<div class="time-select__item" data-time='11:00'>11:00</div>
+							<div class="time-select__seat">100/100석</div>
+						</li>
+						<li class=time-select__set>
+							<div class="time-select__item" data-time='13:00'>13:00</div>
+							<div class="time-select__seat">100/100석</div>
+						</li>
+						<li class=time-select__set>
+							<div class="time-select__item" data-time='15:00'>15:00</div>
+							<div class="time-select__seat">100/100석</div>
+						</li>
+						<li class=time-select__set>
+							<div class="time-select__item" data-time='17:00'>17:00</div>
+							<div class="time-select__seat">100/100석</div>
+						</li>
+						<li class=time-select__set>
+							<div class="time-select__item" data-time='19:00'>19:00</div>
+							<div class="time-select__seat">100/100석</div>
+						</li>
+						<li class=time-select__set>
+							<div class="time-select__item" data-time='21:00'>21:00</div>
+							<div class="time-select__seat">100/100석</div>
+						</li>
 					</ul>
 				</div>
 
-				<div class="time-select__group">
-					<div class="col-sm-3">
-						<p class="time-select__place">Odeon</p>
-					</div>
-					<ul class="col-sm-6 items-wrap">
-						<li class="time-select__item" data-time='10:45'>10:45</li>
-						<li class="time-select__item" data-time='16:00'>16:00</li>
-						<li class="time-select__item" data-time='19:00'>19:00</li>
-						<li class="time-select__item" data-time='21:15'>21:15</li>
-						<li class="time-select__item" data-time='23:00'>23:00</li>
-					</ul>
-				</div>
-
-				<div class="time-select__group group--last">
-					<div class="col-sm-3">
-						<p class="time-select__place">Picturehouse</p>
-					</div>
-					<ul class="col-sm-6 items-wrap">
-						<li class="time-select__item" data-time='17:45'>17:45</li>
-						<li class="time-select__item" data-time='21:30'>21:30</li>
-						<li class="time-select__item" data-time='02:20'>02:20</li>
-					</ul>
-				</div>
 			</div>
 
 			<div class="choose-indector choose-indector--time">
-				<strong>Choosen: </strong><span class="choosen-area"></span>
+				<strong>선택하신 시간: </strong><span class="choosen-area"></span>
 			</div>
 		</div>
 
@@ -459,12 +444,12 @@
 			<input type='text' name='choosen-time' class="choosen-time">
 
 
-			<div class="booking-pagination">
+			<div class="booking-pagination" onclick="abc()">
 				<a href="#" class="booking-pagination__prev hide--arrow"> <span
 					class="arrow__text arrow--prev"></span> <span class="arrow__info"></span>
 				</a> <a href="book2.html" class="booking-pagination__next"> <span
-					class="arrow__text arrow--next">next step</span> <span
-					class="arrow__info">choose a sit</span>
+					class="arrow__text arrow--next">다음 페이지로</span> <span
+					class="arrow__info">좌석 고르기</span>
 				</a>
 			</div>
 

@@ -401,7 +401,7 @@ function init_BookingOne() {
     //init employee sliders
                 var mySwiper = new Swiper('.swiper-container',{
                     slidesPerView:10,
-                    loop:true
+                    loop:false
                   });
 
                 $('.swiper-slide-active').css({'marginLeft':'-2px'});
@@ -561,6 +561,7 @@ function init_BookingOne() {
                     var chooseDate = $('.datepicker__input').val();
                     //data element set change
                     date.val(chooseDate);
+
                 });
 
                 // --- Step for data - serialize and send to next page---//

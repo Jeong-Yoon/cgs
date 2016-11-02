@@ -15,6 +15,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import kr.co.cgs4.dao.TestDAO;
 import kr.co.cgs4.dto.FilmDTO;
+import kr.co.cgs4.dto.ScreenDTO;
+
 
 /**
  * Handles requests for the application home page.
@@ -63,6 +65,13 @@ public class HomeController {
 		FilmDTO fdto = dao.film();
 		model.addAttribute("test", fdto);
 		return "movie_list";
+	}
+	
+
+	@RequestMapping("/contact")
+	public String contact(Model model){
+		System.out.println("contact()");
+		return "contact";
 	}
 	
 }

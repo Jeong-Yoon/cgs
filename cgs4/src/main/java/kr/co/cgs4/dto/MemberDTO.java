@@ -1,34 +1,35 @@
 package kr.co.cgs4.dto;
 
+import java.sql.Date;
 import java.sql.Timestamp;
 
 
 public class MemberDTO {
-	//varchar2 15磊府
+	//varchar2 15锟节革拷
 	String member_ID;
-	//varchar2 15磊府
+	//varchar2 15锟节革拷
 	String password;
-	//varchar2 15磊府
+	//varchar2 15锟节革拷
 	String name;
-	//char 1磊府
+	//char 1锟节革拷
 	String gender;
-	//varchar2 100磊府
+	//varchar2 100锟节革拷
 	String address;
-	//date 鸥涝
-	Timestamp birth;
-	//varchar2 11磊府
+	//date 鸥锟斤拷
+	Date birth;
+	//varchar2 11锟节革拷
 	String phone_num;
-	//varchar2 30磊府
+	//varchar2 30锟节革拷
 	String email;
-	//date 鸥涝
+	//date 鸥锟斤拷
 	Timestamp join_date;
 	//number
 	int accum_point;
 	//number
 	int curr_point;
-	//char 1磊府
+	//char 1锟节革拷
 	String member_grade;
-	//char 16磊府 
+	//char 16锟节革拷 
 	String membership;
 	
 	//member_ID
@@ -72,10 +73,10 @@ public class MemberDTO {
 	}
 	
 	//birth
-	public Timestamp getBirth() {
+	public Date getBirth() {
 		return birth;
 	}
-	public void setBirth(Timestamp birth) {
+	public void setBirth(Date birth) {
 		this.birth = birth;
 	}
 	

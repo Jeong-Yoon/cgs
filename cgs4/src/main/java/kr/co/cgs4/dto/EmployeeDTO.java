@@ -1,16 +1,16 @@
 package kr.co.cgs4.dto;
 
-import java.sql.Timestamp;
+import java.sql.Date;
 
 public class EmployeeDTO {
 	String emp_ID;
 	String emp_name;
 	String emp_gender;
 	String emp_address;
-	Timestamp emp_birth;
+	Date emp_birth;
 	String emp_pnum;
 	String emp_email;
-	Timestamp hire_date;
+	Date hire_date;
 	String position;
 	int salary;
 	String site_ID;
@@ -40,10 +40,10 @@ public class EmployeeDTO {
 	public void setEmp_address(String emp_address) {
 		this.emp_address = emp_address;
 	}
-	public Timestamp getEmp_birth() {
+	public Date getEmp_birth() {
 		return emp_birth;
 	}
-	public void setEmp_birth(Timestamp emp_birth) {
+	public void setEmp_birth(Date emp_birth) {
 		this.emp_birth = emp_birth;
 	}
 	public String getEmp_pnum() {
@@ -58,10 +58,10 @@ public class EmployeeDTO {
 	public void setEmp_email(String emp_email) {
 		this.emp_email = emp_email;
 	}
-	public Timestamp getHire_date() {
+	public Date getHire_date() {
 		return hire_date;
 	}
-	public void setHire_date(Timestamp hire_date) {
+	public void setHire_date(Date hire_date) {
 		this.hire_date = hire_date;
 	}
 	public String getPosition() {

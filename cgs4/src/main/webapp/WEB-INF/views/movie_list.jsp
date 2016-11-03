@@ -1,5 +1,8 @@
+<%@page import="kr.co.cgs4.dto.FilmDTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ page import="java.util.*" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <%String ctx = request.getContextPath(); %>
 <html>
@@ -8,7 +11,7 @@
 <title>Insert title here</title>
 	<!-- Basic Page Needs -->
         <meta charset="utf-8">
-        <title>AMovie - Cinema list</title>
+        <title>AMovie - Movie list</title>
         <meta name="description" content="A Template by Gozha.net">
         <meta name="keywords" content="HTML, CSS, JavaScript">
         <meta name="author" content="Gozha.net">
@@ -238,21 +241,20 @@
                             </ul>
                     </div>
                 </div>
- 
-                    <form action="movie" method="get">
-                    <input type="hidden" name="film_ID" value="${test.film_ID }">
-                    <div class="cinema-wrap">
+			<form action="movie" method="get">
+                    <input type="hidden" name="film_ID" value="${sessionScope.afdto.film_ID}">
+                    <div class="cinema-wrap">	
                         <div class="row">
-                            <div class="col-xs-6 col-sm-3 cinema-item">
-                                <div class="cinema">
-                                    <a href='movie?id=${test.film_ID }' class="cinema__images">
-                                        <img alt='' src="http://placehold.it/525x525">
-<!--                                         <span class="cinema-rating">5.0</span> -->
-                                    </a>
-                                    <a href="movie?id=${test.film_ID }" class="cinema-title">${test.film_name }</a>
-                                </div>
-                            </div>
-                            <div class="col-xs-6 col-sm-3 cinema-item name">
+						<c:forEach var="fdto" items="${sessionScope.afdto}">
+							<div class="col-xs-6 col-sm-3 cinema-item">
+								<div class="cinema">
+									<a href='movie?id=${sessionScope.afdto.film_ID}' class="cinema__images">
+										<img alt='' src="http://placehold.it/525x525"> <!--                                         <span class="cinema-rating">5.0</span> -->
+									</a> <a href="movie?id=${sessionScope.afdto.film_ID}" class="cinema-title">${sessionScope.afdto.film_name}</a>
+								</div>
+							</div>
+						</c:forEach>
+						                            <div class="col-xs-6 col-sm-3 cinema-item name">
                                 <div class="cinema">
                                     <a href='single-cinema.html' class="cinema__images">
                                         <img alt='' src="http://placehold.it/525x525">

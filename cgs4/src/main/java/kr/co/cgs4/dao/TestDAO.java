@@ -1,6 +1,8 @@
 package kr.co.cgs4.dao;
 
 
+import java.util.ArrayList;
+
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 
@@ -21,9 +23,9 @@ public class TestDAO {
 		return (ScreenDTO) template.queryForObject(query, new BeanPropertyRowMapper<ScreenDTO>(ScreenDTO.class));
 	}
 
-	public FilmDTO film(){
+	public ArrayList<FilmDTO> film(){
 		String query = "select * from film";
-		return (FilmDTO) template.queryForObject(query, new BeanPropertyRowMapper<FilmDTO>(FilmDTO.class));
+		return (ArrayList<FilmDTO>)template.query(query, new BeanPropertyRowMapper<FilmDTO>(FilmDTO.class));
 	}
 
 //	public ArrayList<BDto> list() {

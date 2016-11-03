@@ -1,8 +1,16 @@
+<%@page import="java.util.Date"%>
+<%@page import="java.util.Locale"%>
+<%@page import="java.text.SimpleDateFormat"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <%
 	String ctx = request.getContextPath();
+%>
+<%
+   SimpleDateFormat mSimpleDateFormat = new SimpleDateFormat("MM/dd/yyyy", Locale.KOREA);
+   Date date = new Date();
+   String mTime = mSimpleDateFormat.format(date);
 %>
 <html>
 <head>
@@ -62,8 +70,19 @@
 		document.getElementById("choosed_city_name").setAttribute("value",name)
 	}
 	function dateChk(){
-		var name = document.getElementById("select-sort").getAttribute("value");
-		document.getElementById("choosed_city_name").setAttribute("value",name)
+		var date = document.getElementById("datepicker").getAttribute("value");
+		if(hasDate(date)!=1){
+			document.getElementById("choosed_date_name").setAttribute("value",name)
+		}else{
+			alert("해당 날짜에는 상영 계획이 없습니다.");
+		}
+	}
+	function hasDate(date){
+		if(date=="11/01/2016"){
+			return 1;
+		}else{
+			return 0;
+		}
 	}
 </script>
 
@@ -366,8 +385,8 @@
 
 					<div class="datepicker">
 						<span class="datepicker__marker"><i class="fa fa-calendar"></i>날짜
-							선택</span><br/><input type="text" id="datepicker" value='03/10/2014'
-							class="datepicker__input">
+							선택</span><br/><input type="text" id="datepicker" value="<%=mTime%>"
+							class="datepicker__input" onmousedown="dateChk();">
 					</div>
 				</div>
 
@@ -480,8 +499,7 @@
 			action='book2.html'>
 			<input type='hidden' name='choosen-movie' class="choosen-movie" id="choosed_film_name">
 			<input type='hidden' name='choosen-city' class="choosen-city" id="choosed_city_name">
-			<input type='text' name='choosen-date' class="choosen-date">
-
+			<input type='hidden' name='choosen-date' class="choosen-date" id="choosed_date_name">
 			<input type='text' name='choosen-cinema' class="choosen-cinema">
 			<input type='text' name='choosen-time' class="choosen-time">
 

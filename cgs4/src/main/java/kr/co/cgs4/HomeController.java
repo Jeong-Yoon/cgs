@@ -74,4 +74,10 @@ public class HomeController {
 		return "contact";
 	}
 	
+	@RequestMapping("/signup")
+	public String signup(Model model){
+		System.out.println("signup()");
+		return "signup";
+	}
+	
 }

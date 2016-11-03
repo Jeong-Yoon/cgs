@@ -18,10 +18,10 @@ public class FilmCommand implements Command {
 		HttpServletRequest request = (HttpServletRequest) map.get("request");
 		String film_ID = request.getParameter("film_ID");
 		
-		BDao dao = new BDao();
-		FilmDTO fdto = dao.film(film_ID);
+//		BDao dao = new BDao();
+//		FilmDTO fdto = dao.film(film_ID);
 		
-		model.addAttribute("film", fdto);
+//		model.addAttribute("film", fdto);
 		
 	}
 

@@ -464,10 +464,17 @@
         
         <!-- DB connect test -->
         
+        <table>
+<tr>
+<td>screen_num</td><td>${screening.start_time}</td>
+</tr>
+<tr>
+<td>site_name</td><td>${site.site_name}</td>
+</tr>
+</table>
         
         
-        
-        
+     
         
         
         

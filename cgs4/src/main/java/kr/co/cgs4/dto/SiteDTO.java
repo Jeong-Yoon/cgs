@@ -3,7 +3,7 @@
  */
 package kr.co.cgs4.dto;
 
-import java.sql.Timestamp;
+import java.sql.Date;
 
 /**
  * @author XNOTE
@@ -16,7 +16,7 @@ public class SiteDTO {
 	String site_pnum;
 	String manager_name;
 	String manager_ID;
-	Timestamp open_date;
+	Date open_date;
 	int total_screen;
 	int total_seat;
 	String site_img;
@@ -57,10 +57,10 @@ public class SiteDTO {
 	public void setManager_ID(String manager_ID) {
 		this.manager_ID = manager_ID;
 	}
-	public Timestamp getOpen_date() {
+	public Date getOpen_date() {
 		return open_date;
 	}
-	public void setOpen_date(Timestamp open_date) {
+	public void setOpen_date(Date open_date) {
 		this.open_date = open_date;
 	}
 	public int getTotal_screen() {

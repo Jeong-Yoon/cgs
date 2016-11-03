@@ -582,6 +582,16 @@ function init_BookingOne() {
                     $(this).toggleClass('hide-content');
                     $('.time-select').slideToggle(400);
                 })
+              //2. Sorting buy category
+                // sorting function
+                $('.tags__item').click(function (e) {
+                    //prevent the default behaviour of the link
+                    e.preventDefault();
+
+                        $('.tags__item').removeClass('item-active');
+                        $(this).addClass('item-active');
+
+                });
 }
 
 function init_BookingTwo () {

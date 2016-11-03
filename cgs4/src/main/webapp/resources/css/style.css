@@ -7212,6 +7212,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 	position: relative;
 	color: #969b9f;
 	font-size: 13px;
+    margin-right: 140px;
 }
 
 .sits-anchor:before {
@@ -7232,8 +7233,8 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 
 .sits .sits__indecator {
 	display: inline-block;
-	width: 30px;
-	height: 30px;
+	width: 25px;
+	height: 25px;
 	margin: 5px;
 	border: 1px solid #222A35;
 	font-size: 13px;
@@ -7248,13 +7249,14 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 }
 
 .sits .sits__number {
-	margin-top: 60px;
+	margin-top: 30px;
+    margin-right: 150px;
 	font-size: 0;
 }
 
 .sits .sits__checked {
 	position: relative;
-	width: 50px;
+	width: 170px;
 	height: 450px;
 	background-color: #222A35;
 	position: absolute;
@@ -7307,13 +7309,14 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 
 .sits .sits__row {
 	font-size: 0;
+	margin-right: 150px
 }
 
 .sits .sits__row .sits__place {
 	position: relative;
 	margin: 5px;
-	width: 30px;
-	height: 30px;
+	width: 25px;
+	height: 25px;
 	display: inline-block;
 	line-height: 30px;
 	font-size: 10px;
@@ -11237,5 +11240,11 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 	width:25px;
 	height:25px;
 	margin-right:10px;
-	
+}
+.sits-max {
+    text-align: center;
+    bottom: 40px;
+    position: relative;
+    font-size: 12px;
+    color: red;
 }

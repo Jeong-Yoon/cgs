@@ -1,7 +1,7 @@
 <%@page import="java.util.Date"%>
 <%@page import="java.util.Locale"%>
 <%@page import="java.text.SimpleDateFormat"%>
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
+<%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <%
@@ -63,18 +63,18 @@
 <script>
 	function movieChk(name) {
 		document.getElementById("choosed_film").innerHTML = name;
-		document.getElementById("choosed_film_name")
+		document.getElementById("film_name")
 				.setAttribute("value", name)
 	}
 	function cityChk() {
 		var name = document.getElementById("select-sort").getAttribute("value");
-		document.getElementById("choosed_city_name")
+		document.getElementById("site_name")
 				.setAttribute("value", name)
 	}
 	function dateChk() {
 		var date = document.getElementById("datepicker").getAttribute("value");
 		if (hasDate(date) != 1) {
-			document.getElementById("choosed_date_name").setAttribute("value",
+			document.getElementById("screening_date").setAttribute("value",
 					name)
 		} else {
 			alert("해당 날짜에는 상영 계획이 없습니다.");
@@ -462,12 +462,11 @@
 
 		<form id='film-and-time' class="booking-form" method='get'
 			action='book2'>
-			<input type='hidden' name='choosen-movie' class="choosen-movie" id="choosed_film_name">
-			<input type='hidden' name='choosen-city' class="choosen-city" id="choosed_city_name">
-			<input type='hidden' name='choosen-date' class="choosen-date" id="choosed_date_name">
-			<input type='hidden' name='choosen-cinema' class="choosen-cinema" id="choosed_cinema_name">
-			<input type='hidden' name='choosen-time' class="choosen-time" id="choosed_time_name">
-
+			<input type='hidden' name="film_name" class="choosen-movie" id="film_name">
+			<input type='hidden' name="site_name" class="choosen-city" id="site_name">
+			<input type='hidden' name="screening_date" class="choosen-date" id="screening_date">
+			<input type='hidden' name="screen_num" class="choosen-cinema" id="screen_num">
+			<input type='hidden' name="start_time" class="choosen-time" id="start_time">
 
 			<div class="booking-pagination">
 				<a href="#" class="booking-pagination__prev hide--arrow"> <span

@@ -614,11 +614,33 @@ function init_BookingTwo () {
     // var for booking;
                 var numberTicket = $('.choosen-number'),
                     sumTicket = $('.choosen-cost'),
-                    cheapTicket = $('.choosen-number--cheap'),
-                    middleTicket = $('.choosen-number--middle'),
-                    expansiveTicket = $('.choosen-number--expansive'),
+                    cheapTicket = 5000,
+                    middleTicket = 6000,
+                    expansiveTicket = 7000,
                     sits = $('.choosen-sits');
+    
+    // 좌석 4개로 제한하기
+    	$('.sits-price').click(function (e){
+    		e.preventDefault();
+    		var norm = parseInt($('.norm').val());
+    		var youg = parseInt($('.youg').val());
+    		var spec = parseInt($('.spec').val());
 
+    		var sum = norm+youg+spec;
+    		if(sum==4){
+    			$('.norm').attr("max",norm)
+    			$('.youg').attr("max",youg);
+    			$('.spec').attr("max",spec);
+    		}else{
+    			$('.norm').attr("max",4);
+    			$('.youg').attr("max",4);
+    			$('.spec').attr("max",4);
+    		}
+    		if(sum==4){
+    			$('.sits-max').text("최대 4자리까지만 예매 가능합니다.");
+    		}else{
+    			$('.sits-max').text("  ")}
+    	})
     //3. Choose sits (and count price for them)
     			//users choose sits
 

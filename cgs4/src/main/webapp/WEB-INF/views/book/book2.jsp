@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-	pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <%
 	String ctx = request.getContextPath();
@@ -76,7 +76,7 @@
 					aria-label="Toggle Navigation"> <span class="lines"></span>
 				</span>
 			</span>
-			</a> <!-- °¢ ¸Ş´ºº° ¼­ºê¸Ş´ºÃ¢-->
+			</a> <!-- ê° ë©”ë‰´ë³„ ì„œë¸Œë©”ë‰´ì°½-->
 			<ul id="navigation">
 				<li><span class="sub-nav-toggle plus"></span> <a href="#">Pages</a>
 					<ul>
@@ -103,7 +103,7 @@
 						<!--                                 <li class="menu__nav-item"><a href="404.html">404 error</a></li> -->
 						<li class="menu__nav-item"><a href="coming-soon.html">Coming
 								soon</a></li>
-						<li class="menu__nav-item"><a href="login.html">·Î±×ÀÎ/È¸¿ø°¡ÀÔ</a></li>
+						<li class="menu__nav-item"><a href="login.html">ë¡œê·¸ì¸/íšŒì›ê°€ì…</a></li>
 					</ul></li>
 				<li><span class="sub-nav-toggle plus"></span> <a
 					href="page-elements.html">Features</a>
@@ -223,29 +223,28 @@
 					What &amp; Where &amp; When</div>
 				<div class="order-step second--step">2. Choose a sit</div>
 			</div>
-			${bInfo.film_name},${bInfo.site_name},${bInfo.screening_date},${bInfo.screen_num},${bInfo.start_time}
-<!-- 				private String film_name; -->
-<!-- 	private String site_name; -->
-<!-- 	private String screening_date; -->
-<!-- 	private String screen_num; -->
-<!-- 	private String start_time; -->
+<%-- 			${bInfo.film_name},${bInfo.site_name},${bInfo.screening_date},${bInfo.screen_num},${bInfo.start_time} --%>
+			
+
 			<div class="choose-sits">
 				<div class="choose-sits__info choose-sits__info--first">
+				
 					<ul>
-						<li class="sits-price marker--none"><strong>Price</strong></li>
-						<li class="sits-price sits-price--cheap">$10</li>
-						<li class="sits-price sits-price--middle">$20</li>
-						<li class="sits-price sits-price--expensive">$30</li>
+						<li class="sits-price marker--none"><strong>ì¼ë°˜</strong></li>
+						<li class="sits-price"><input type="number" min="0" max="4" value="0" class="norm"></li>
+						<li class="sits-price marker--none"><strong>ì²­ì†Œë…„</strong></li>
+						<li class="sits-price"><input type="number" min="0" max="4" value="0" class="youg"></li>
+						<li class="sits-price marker--none"><strong>ìš°ëŒ€</strong></li>
+						<li class="sits-price"><input type="number" min="0" max="4" value="0" class="spec"></li>
 					</ul>
 				</div>
-
 				<div class="choose-sits__info">
 					<ul>
 						<li class="sits-state sits-state--not">Not available</li>
 						<li class="sits-state sits-state--your">Your choice</li>
 					</ul>
 				</div>
-
+			<div class="sits-max"></div>
 				<div class="col-sm-12 col-lg-10 col-lg-offset-1">
 					<div class="sits-area hidden-xs">
 						<div class="sits-anchor">screen</div>
@@ -859,7 +858,7 @@
 	<!-- Custom -->
 	<script src="<%=ctx%>/resources/js/custom.js"></script>
 
-	<script type="<%=ctx%>/resources/text/javascript">
+	<script type="text/javascript">
             $(document).ready(function() {
                 init_BookingTwo();
             });

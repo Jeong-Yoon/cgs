@@ -61,6 +61,13 @@
 </head>
 
 <body>
+
+
+
+	<!-- <video autoplay loop muted id="background"> -->
+	<%-- <source src = "<%=ctx%>/resources/video/mainvideo.mp4" type="video/mp4"> --%>
+	<!-- </video> -->
+
 	<div class="wrapper">
 
 		<!-- 메인(홈) 헤더 부분 -->
@@ -198,11 +205,13 @@
 				</div>
 				<!-- 예매하기 버튼 누르면 login 요청하는 창이 뜸 -->
 				<a href="#"
-					class="btn btn-md btn--warning btn--book btn-control--home login-window"><Strong>바로예매하기</Strong>></a>
+					class="btn btn-md btn--warning btn--book btn-control--home login-window"><Strong>빠른예매
+				</Strong>></a>
 			</div>
 
 		</div>
 		</header>
+
 
 		<!-- 메인 슬라이더화면 -->
 		<div class="bannercontainer">
@@ -218,16 +227,18 @@
 							<%-- 							<source src="<%=ctx%>/resources/video/HellorHighWater2016.mp4" --%>
 							<!-- 								type="video/mp4"></video> -->
 							<div style="text-align: center">
-								<br><br><br>
-<!-- 								<p style="color: #003366; font-size: 50px"> -->
-<!-- 									<strong>-</strong> -->
-<!-- 								</p> -->
+								<br> <br> <br>
+								<!-- 								<p style="color: #003366; font-size: 50px"> -->
+								<!-- 									<strong>-</strong> -->
+								<!-- 								</p> -->
 								<video id="video1" width="900" height="400"> <source
 									src="<%=ctx%>/resources/video/HellorHighWater2016.mp4"
 									type="video/mp4"></video>
 
-									<button onclick="playPause()">
-									<a href="#" class="btn btn-md btn--danger btn--wide slider--btn">Play</a></button>
+								<button onclick="playPause()">
+									<a href="#"
+										class="btn btn-md btn--danger btn--wide slider--btn">Play</a>
+								</button>
 								<script>
 									var myVideo = document
 											.getElementById("video1");
@@ -239,15 +250,15 @@
 									}
 								</script>
 
-								</div>
-
-
 							</div>
-							<div class="caption slide__name margin-slider" data-x="right"
-								data-y="80" data-splitin="chars" data-elementdelay="0.1"
-								data-speed="700" data-start="1400" data-easing="easeOutBack"
-								data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:0;transformOrigin:50% 50%;"
-								data-frames="{ typ :lines;
+
+
+						</div>
+						<div class="caption slide__name margin-slider" data-x="right"
+							data-y="80" data-splitin="chars" data-elementdelay="0.1"
+							data-speed="700" data-start="1400" data-easing="easeOutBack"
+							data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:0;transformOrigin:50% 50%;"
+							data-frames="{ typ :lines;
                                                  elementdelay :0.1;
                                                  start:1650;
                                                  speed:500;
@@ -262,43 +273,41 @@
                                                  animation:x:0;y:0;z:0;rotationX:00;rotationY:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:1;transformPerspective:600;transformOrigin:50% 50%;
                                                  }
                                                  "
-								data-splitout="lines" data-endelementdelay="0.1"
-								data-customout="x:-230;y:0;z:0;rotationX:0;rotationY:0;rotationZ:90;scaleX:0.2;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%"
-								data-endspeed="500" data-end="8400" data-endeasing="Back.easeIn">
-								로스트 인 더스트</div>
+							data-splitout="lines" data-endelementdelay="0.1"
+							data-customout="x:-230;y:0;z:0;rotationX:0;rotationY:0;rotationZ:90;scaleX:0.2;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%"
+							data-endspeed="500" data-end="8400" data-endeasing="Back.easeIn"
+							style="font-size: 48px">로스트 인 더스트</div>
 
-							<div class="caption slide__time margin-slider sfr str"
-								data-x="right" data-hoffset='-243' data-y="186" data-speed="300"
-								data-start="2100" data-easing="easeOutBack" data-endspeed="300"
-								data-end="8700" data-endeasing="Back.easeIn">Lost in dust</div>
+						<div class="caption slide__time margin-slider sfr str"
+							data-x="right" data-y="186" data-speed="300" data-start="2100"
+							data-easing="easeOutBack" data-endspeed="300" data-end="8700"
+							data-endeasing="Back.easeIn" style="font-size: 30px">Lost
+							in dust</div>
 
-							<div class="caption slide__date margin-slider lfb ltb"
-								data-x="right" data-y="186" data-speed="500" data-start="2800"
-								data-easing="Power4.easeOut" data-endspeed="400" data-end="8200"
-								data-endeasing="Back.easeIn">11월 3일 대 개 봉</div>
-							<div class="caption slide__text margin-slider customin customout"
-								data-x="right" data-y="250"
-								data-customin="x:0;y:100;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:1;scaleY:3;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:0% 0%;"
-								data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
-								data-speed="400" data-start="3000" data-endspeed="400"
-								data-end="8000" data-endeasing="Back.easeIn">
-								2016년 최고의 웰메이드 범죄드라마
-							</div>
-							<div class="caption margin-slider skewfromright customout "
-								data-x="right" data-y="324"
-								data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
-								data-speed="400" data-start="3300" data-easing="Power4.easeOut"
-								data-endspeed="300" data-end="7700"
-								data-endeasing="Power4.easeOut">
-								<a href="#" class="slide__link">상영시간표 &amp; 확인하기</a>
-							</div>
+						<div class="caption slide__text margin-slider customin customout"
+							data-x="right" data-y="250"
+							data-customin="x:0;y:100;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:1;scaleY:3;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:0% 0%;"
+							data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+							data-speed="400" data-start="3000" data-endspeed="400"
+							data-end="8000" data-endeasing="Back.easeIn"
+							style="font-size: 30px">2016년 최고의 웰메이드 범죄드라마</div>
+
+						<div class="caption margin-slider skewfromright customout "
+							data-x="right" data-y="324"
+							data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+							data-speed="400" data-start="3300" data-easing="Power4.easeOut"
+							data-endspeed="300" data-end="7700"
+							data-endeasing="Power4.easeOut">
+							<a href="book1" class="slide__link"><strong>상영시간표
+									확인하기</strong></a>
+						</div>
 					</li>
 
 					<li data-transition="fade" data-slotamount="7"
 						class="slide fading-slide"
 						data-slide='Travel worldwide.
 Create trip film.'><img alt=''
-						src="http://placehold.it/1920x616">
+						src="<%=ctx%>/resources/images/HellorHighWater2016main.jpg">
 						<div class="caption slide__video" data-x="0" data-y="0"
 							data-autoplay='true'>
 							<video class="media-element" autoplay="autoplay" preload='none'
@@ -330,36 +339,36 @@ Create trip film.'><img alt=''
                                                  "
 							data-splitout="lines" data-endelementdelay="0.1"
 							data-customout="x:-230;y:0;z:0;rotationX:0;rotationY:0;rotationZ:90;scaleX:0.2;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%"
-							data-endspeed="500" data-endeasing="Back.easeIn">Travel,
-							Admire, Remember.</div>
+							data-endspeed="500" data-endeasing="Back.easeIn">로스트 인 더스트
+							Lost in dust.</div>
 
 						<div
 							class="caption slide__time position-center postion-place--one sfr stl"
 							data-x="left" data-y="242" data-speed="300" data-start="2100"
 							data-easing="easeOutBack" data-endspeed="300"
-							data-endeasing="Back.easeIn">From</div>
+							data-endeasing="Back.easeIn"></div>
 						<div
 							class="caption slide__date position-center postion-place--two lfb ltb"
 							data-x="left" data-y="242" data-speed="500" data-start="2400"
 							data-easing="Power4.easeOut" data-endspeed="400"
-							data-endeasing="Back.easeIn">April 18</div>
+							data-endeasing="Back.easeIn">2016년 11월 3일</div>
 						<div
 							class="caption slide__time position-center postion-place--three sfr stl"
 							data-x="left" data-y="242" data-speed="300" data-start="2100"
 							data-easing="easeOutBack" data-endspeed="300"
-							data-endeasing="Back.easeIn">- till</div>
+							data-endeasing="Back.easeIn"></div>
 						<div
 							class="caption slide__date position-center postion-place--four lfb ltb"
 							data-x="left" data-y="242" data-speed="500" data-start="2800"
 							data-easing="Power4.easeOut" data-endspeed="400"
-							data-endeasing="Back.easeIn">May 01</div>
+							data-endeasing="Back.easeIn">대개봉</div>
 
 						<div class="caption lfb slider-wrap-btn ltb" data-x="left"
 							data-y="310" data-speed="400" data-start="3300"
 							data-easing="Power4.easeOut" data-endspeed="500"
 							data-endeasing="Power4.easeOut">
-							<a href="#" class="btn btn-md btn--danger btn--wide slider--btn">learn
-								more</a>
+							<a href="book1"
+								class="btn btn-md btn--danger btn--wide slider--btn">바로예매하기</a>
 						</div></li>
 
 					<li data-transition="fade" data-slotamount="7" class="slide"
@@ -399,14 +408,19 @@ Start doing.'><img alt=''
 			</div>
 		</div>
 		<!-- 슬라이더 종료 -->
-								<br><br>
-								<br><br>								<br><br>
-								<br><br>								<br><br>
-								<br><br>
+		<br> <br> <br> <br> <br> <br> <br>
+		<br> <br> <br> <br> <br>
 		<!-- Main content -->
-		<section class="container">
-		<div class="movie-best">
+				<!-- 배경화면 비디오 -->
+		<section class="content-section video-section">
+		<div class="pattern-overlay">
+			<a id="bgndVideo" class="player"
+				data-property="{videoURL: 'url(<%=ctx%>/resources/video/mainvideo.mp4"
+				type="video/mp4)'}">bg</a>
+
 		
+		<div class="movie-best">
+
 			<div class="col-sm-10 col-sm-offset-1 movie-best__rating">Today
 				Best choice</div>
 			<div class="col-sm-12 change--col">
@@ -978,6 +992,7 @@ Start doing.'><img alt=''
 		<!--                         <a href="single-page-left.html" class="post__title">Hollywood Film Awards 2013</a> -->
 		<!--                         <a href="single-page-left.html" class="btn read-more post--btn">read more</a> -->
 		<!--                     </div> --> <!--                 </div> --> <!--             </div> -->
+				</div>
 		</section>
 
 		<div class="clearfix"></div>
@@ -1119,6 +1134,13 @@ Start doing.'><img alt=''
 	<script type="text/javascript">
 		$(document).ready(function() {
 			init_Home();
+		});
+	</script>
+
+	<!-- 비디오 배경화면 -->
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$(".player").mb_YTPlayer();
 		});
 	</script>
 </body>

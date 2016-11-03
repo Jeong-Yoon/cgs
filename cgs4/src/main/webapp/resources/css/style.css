@@ -9,6 +9,13 @@ body {
 	margin: 0;
 }
 
+.video-section .pattern-overlay{
+	background-color: white;
+	padding: 110px 0 32px;
+	min-height: 1500px;
+}
+.player {font-size: 1px;}
+
 article, aside, details, figcaption, figure, footer, header, hgroup,
 	main, nav, section, summary {
 	display: block;

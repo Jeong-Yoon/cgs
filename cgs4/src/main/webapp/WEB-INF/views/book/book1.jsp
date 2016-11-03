@@ -77,6 +77,10 @@
 			alert("해당 날짜에는 상영 계획이 없습니다.");
 		}
 	}
+	function timeChk(){
+		var name = document.getElementById("select-sort").getAttribute("value");
+		document.getElementById("choosed_city_name").setAttribute("value",name)
+	}
 	function hasDate(date){
 		if(date=="11/01/2016"){
 			return 1;
@@ -260,23 +264,23 @@
 		</header>
 
 		<!-- Search bar -->
-		<div class="search-wrapper">
-			<div class="container container--add">
-				<form id='search-form' method='get' class="search">
-					<input type="text" class="search__field" placeholder="Search">
-					<select name="sorting_item" id="search-sort" class="search__sort"
-						tabindex="0">
-						<option value="1" selected='selected'>By title</option>
-						<option value="2">By year</option>
-						<option value="3">By producer</option>
-						<option value="4">By title</option>
-						<option value="5">By year</option>
-					</select>
-					<button type='submit' class="btn btn-md btn--danger search__button">search
-						a movie</button>
-				</form>
-			</div>
-		</div>
+<!-- 		<div class="search-wrapper"> -->
+<!-- 			<div class="container container--add"> -->
+<!-- 				<form id='search-form' method='get' class="search"> -->
+<!-- 					<input type="text" class="search__field" placeholder="Search"> -->
+<!-- 					<select name="sorting_item" id="search-sort" class="search__sort" -->
+<!-- 						tabindex="0"> -->
+<!-- 						<option value="1" selected='selected'>By title</option> -->
+<!-- 						<option value="2">By year</option> -->
+<!-- 						<option value="3">By producer</option> -->
+<!-- 						<option value="4">By title</option> -->
+<!-- 						<option value="5">By year</option> -->
+<!-- 					</select> -->
+<!-- 					<button type='submit' class="btn btn-md btn--danger search__button">search -->
+<!-- 						a movie</button> -->
+<!-- 				</form> -->
+<!-- 			</div> -->
+<!-- 		</div> -->
 
 		<!-- Main content -->
 
@@ -386,7 +390,7 @@
 					<div class="datepicker">
 						<span class="datepicker__marker"><i class="fa fa-calendar"></i>날짜
 							선택</span><br/><input type="text" id="datepicker" value="<%=mTime%>"
-							class="datepicker__input" onmousedown="dateChk();">
+							class="datepicker__input" onmousedown="dateChk()">
 					</div>
 				</div>
 
@@ -484,29 +488,28 @@
 							</li>
 						</ul>
 					</div>
-
-
+				</div>
+				
 					<div class="choose-indector choose-indector--time">
 						<strong>선택하신 좌석 </strong><span class="choosen-area" id="film_time"></span>
 					</div>
-				</div>
 			</section>
 <!-- 		</form> -->
 		<div class="clearfix"></div>
 
 		<form id='film-and-time' class="booking-form" method='get'
-			action='book2.html'>
+			action='book2'>
 			<input type='hidden' name='choosen-movie' class="choosen-movie" id="choosed_film_name">
 			<input type='hidden' name='choosen-city' class="choosen-city" id="choosed_city_name">
 			<input type='hidden' name='choosen-date' class="choosen-date" id="choosed_date_name">
-			<input type='text' name='choosen-cinema' class="choosen-cinema">
-			<input type='text' name='choosen-time' class="choosen-time">
+			<input type='hidden' name='choosen-cinema' class="choosen-cinema" id="choosed_cinema_name">
+			<input type='hidden' name='choosen-time' class="choosen-time" id="choosed_time_name">
 
 
 			<div class="booking-pagination">
 				<a href="#" class="booking-pagination__prev hide--arrow"> <span
 					class="arrow__text arrow--prev"></span> <span class="arrow__info"></span>
-				</a> <a href="book2.html" class="booking-pagination__next"> <span
+				</a> <a href="book2" class="booking-pagination__next"> <span
 					class="arrow__text arrow--next">다음 페이지로</span> <span
 					class="arrow__info">좌석 고르기</span>
 				</a>

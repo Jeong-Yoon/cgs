@@ -1,14 +1,23 @@
+<%@page import="java.util.Date"%>
+<%@page import="java.util.Locale"%>
+<%@page import="java.text.SimpleDateFormat"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <%
 	String ctx = request.getContextPath();
+%>
+<%
+	SimpleDateFormat mSimpleDateFormat = new SimpleDateFormat("dd/MM/yyyy", Locale.KOREA);
+	Date date = new Date();
+	String mTime = mSimpleDateFormat.format(date);
 %>
 <html>
 <head>
 <!-- Basic Page Needs -->
 <meta charset="utf-8">
-<title>CGS</title>
+<title>AMovie - Movie page</title>
 <meta name="description" content="A Template by Gozha.net">
 <meta name="keywords" content="HTML, CSS, JavaScript">
 <meta name="author" content="Gozha.net">
@@ -23,32 +32,30 @@
 	href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css"
 	rel="stylesheet">
 <!-- Roboto -->
-<link href='http://fonts.googleapis.com/css?family=Roboto:400,100,700'
-	rel='stylesheet' type='text/css'>
-<!-- Open Sans -->
-<link href='http://fonts.googleapis.com/css?family=Open+Sans:800italic'
-	rel='stylesheet' type='text/css'>
-
-<!--나눔고딕-->
-<link
-	href='http://fonts.googleapis.com/earlyaccess/nanumgothic.css?family=Nanum Gothic'
+<link href='http://fonts.googleapis.com/css?family=Roboto:400,700'
 	rel='stylesheet' type='text/css'>
 
 <!-- Stylesheets -->
+<!-- jQuery UI -->
+<link
+	href="http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css"
+	rel="stylesheet">
 
 <!-- Mobile menu -->
 <link href="<%=ctx%>/resources/css/gozha-nav.css" rel="stylesheet" />
 <!-- Select -->
 <link href="<%=ctx%>/resources/css/external/jquery.selectbox.css"
 	rel="stylesheet" />
+<!-- Swiper slider -->
+<link href="<%=ctx%>/resources/css/external/idangerous.swiper.css"
+	rel="stylesheet" />
+<!-- Magnific-popup -->
+<link href="<%=ctx%>/resources/css/external/magnific-popup.css"
+	rel="stylesheet" />
 
-<!-- REVOLUTION BANNER CSS SETTINGS -->
-<link rel="stylesheet" type="text/css"
-	href="<%=ctx%>/resources/rs-plugin/css/settings.css" media="screen" />
 
 <!-- Custom -->
 <link href="<%=ctx%>/resources/css/style.css?v=1" rel="stylesheet" />
-
 
 <!-- Modernizr -->
 <script src="<%=ctx%>/resources/js/external/modernizr.custom.js"></script>
@@ -62,32 +69,41 @@
 
 <body>
 	<div class="wrapper">
+		<!--         Banner -->
+		<!--         <div class="banner-top"> -->
+		<!--             <img alt='top banner' src="http://placehold.it/1600x90"> -->
+		<!--         </div> -->
 
-		<!-- 메인(홈) 헤더 부분 -->
-		<header class="header-wrapper header-wrapper--home">
+		<!-- Header section -->
+		<header class="header-wrapper">
 		<div class="container">
-			<!-- 헤더 로고-->
-			<a href='index.html' class="logo"> <img style="max-width: 100px"
-				alt='logo' src="<%=ctx%>/resources/images/logo.png">
+			<!-- Logo link-->
+			<a href='index' class="logo"> 
+			<img alt='logo' src="<%=ctx%>/resources/images/logo.png">
 			</a>
 
-			<!-- 메인페이지 메뉴바-->
+			<!-- Main website navigation-->
 			<nav id="navigation-box"> <!-- Toggle for mobile menu mode -->
-			<a href="#" id="navigation-toggle"> <span class="menu-icon">
-					<span class="icon-toggle" role="button"
-					aria-label="Toggle Navigation"> <span class="lines"></span>
+			<a href="#" id="navigation-toggle"> 
+			<span class="menu-icon">
+				<span class="icon-toggle" role="button" aria-label="Toggle Navigation"> 
+					<span class="lines"></span>
 				</span>
 			</span>
-			</a> <!-- 각 메뉴별 서브메뉴창-->
+			</a> <!-- Link navigation -->
 			<ul id="navigation">
 				<li><span class="sub-nav-toggle plus"></span> <a href="#">Pages</a>
 					<ul>
-						<!--                                 <li class="menu__nav-item"><a href="movie-page-left.html">Single movie (rigth sidebar)</a></li> -->
-						<!--                                 <li class="menu__nav-item"><a href="movie-page-right.html">Single movie (left sidebar)</a></li> -->
+						<li class="menu__nav-item"><a href="movie-page-left.html">Single
+								movie (rigth sidebar)</a></li>
+						<li class="menu__nav-item"><a href="movie-page-right.html">Single
+								movie (left sidebar)</a></li>
 						<li class="menu__nav-item"><a href="movie-page-full.html">Single
 								movie (full widht)</a></li>
-						<!--                                 <li class="menu__nav-item"><a href="movie-list-left.html">Movies list (rigth sidebar)</a></li> -->
-						<!--                                 <li class="menu__nav-item"><a href="movie-list-right.html">Movies list (left sidebar)</a></li> -->
+						<li class="menu__nav-item"><a href="movie-list-left.html">Movies
+								list (rigth sidebar)</a></li>
+						<li class="menu__nav-item"><a href="movie-list-right.html">Movies
+								list (left sidebar)</a></li>
 						<li class="menu__nav-item"><a href="movie-list-full.html">Movies
 								list (full widht)</a></li>
 						<li class="menu__nav-item"><a href="single-cinema.html">Single
@@ -95,17 +111,19 @@
 						<li class="menu__nav-item"><a href="cinema-list.html">Cinemas
 								list</a></li>
 						<li class="menu__nav-item"><a href="trailer.html">Trailers</a></li>
-						<!--                                 <li class="menu__nav-item"><a href="rates-left.html">Rates (rigth sidebar)</a></li> -->
-						<!--                                 <li class="menu__nav-item"><a href="rates-right.html">Rates (left sidebar)</a></li> -->
+						<li class="menu__nav-item"><a href="rates-left.html">Rates
+								(rigth sidebar)</a></li>
+						<li class="menu__nav-item"><a href="rates-right.html">Rates
+								(left sidebar)</a></li>
 						<li class="menu__nav-item"><a href="rates-full.html">Rates
 								(full widht)</a></li>
 						<li class="menu__nav-item"><a href="offers.html">Offers</a></li>
 						<li class="menu__nav-item"><a href="contact.html">Contact
 								us</a></li>
-						<!--                                 <li class="menu__nav-item"><a href="404.html">404 error</a></li> -->
+						<li class="menu__nav-item"><a href="404.html">404 error</a></li>
 						<li class="menu__nav-item"><a href="coming-soon.html">Coming
 								soon</a></li>
-						<li class="menu__nav-item"><a href="login.html">로그인/회원가입</a></li>
+						<li class="menu__nav-item"><a href="login.html">Login/Registration</a></li>
 					</ul></li>
 				<li><span class="sub-nav-toggle plus"></span> <a
 					href="page-elements.html">Features</a>
@@ -118,13 +136,15 @@
 				<li><span class="sub-nav-toggle plus"></span> <a
 					href="page-elements.html">Booking steps</a>
 					<ul>
-						<li class="menu__nav-item"><a href="book1">Booking step 1</a></li>
-						<li class="menu__nav-item"><a href="book2">Booking step 2</a></li>
-						<li class="menu__nav-item"><a href="book3">Booking step 3
-								(buy)</a></li>
-						<li class="menu__nav-item"><a href="book3-reserve">Booking
+						<li class="menu__nav-item"><a href="book1.html">Booking
+								step 1</a></li>
+						<li class="menu__nav-item"><a href="book2.html">Booking
+								step 2</a></li>
+						<li class="menu__nav-item"><a href="book3-buy.html">Booking
+								step 3 (buy)</a></li>
+						<li class="menu__nav-item"><a href="book3-reserve.html">Booking
 								step 3 (reserve)</a></li>
-						<li class="menu__nav-item"><a href="book-final">Final
+						<li class="menu__nav-item"><a href="book-final.html">Final
 								ticket view</a></li>
 					</ul></li>
 				<li><span class="sub-nav-toggle plus"></span> <a
@@ -137,42 +157,102 @@
 						<li class="menu__nav-item"><a href="gallery-two.html">2
 								col gallery</a></li>
 					</ul></li>
-				<li><span class="sub-nav-toggle plus"></span>
-				 <a	href="contact.html">Contact us</a> 
-					
-					</li>
+				<li><span class="sub-nav-toggle plus"></span> <a
+					href="news-left.html">News</a>
+					<ul>
+						<li class="menu__nav-item"><a href="news-left.html">News
+								(rigth sidebar)</a></li>
+						<li class="menu__nav-item"><a href="news-right.html">News
+								(left sidebar)</a></li>
+						<li class="menu__nav-item"><a href="news-full.html">News
+								(full widht)</a></li>
+						<li class="menu__nav-item"><a href="single-page-left.html">Single
+								post (rigth sidebar)</a></li>
+						<li class="menu__nav-item"><a href="single-page-right.html">Single
+								post (left sidebar)</a></li>
+						<li class="menu__nav-item"><a href="single-page-full.html">Single
+								post (full widht)</a></li>
+					</ul></li>
+				<li><span class="sub-nav-toggle plus"></span> <a href="#">Mega
+						menu</a>
+					<ul class="mega-menu container">
+						<li class="col-md-3 mega-menu__coloum">
+							<h4 class="mega-menu__heading">Now in the cinema</h4>
+							<ul class="mega-menu__list">
+								<li class="mega-menu__nav-item"><a href="#">The
+										Counselor</a></li>
+								<li class="mega-menu__nav-item"><a href="#">Bad Grandpa</a></li>
+								<li class="mega-menu__nav-item"><a href="#">Blue Is the
+										Warmest Color</a></li>
+								<li class="mega-menu__nav-item"><a href="#">Capital</a></li>
+								<li class="mega-menu__nav-item"><a href="#">Spinning
+										Plates</a></li>
+								<li class="mega-menu__nav-item"><a href="#">Bastards</a></li>
+							</ul>
+						</li>
+
+						<li
+							class="col-md-3 mega-menu__coloum mega-menu__coloum--outheading">
+							<ul class="mega-menu__list">
+								<li class="mega-menu__nav-item"><a href="#">Gravity</a></li>
+								<li class="mega-menu__nav-item"><a href="#">Captain
+										Phillips</a></li>
+								<li class="mega-menu__nav-item"><a href="#">Carrie</a></li>
+								<li class="mega-menu__nav-item"><a href="#">Cloudy with
+										a Chance of Meatballs 2</a></li>
+							</ul>
+						</li>
+
+						<li class="col-md-3 mega-menu__coloum">
+							<h4 class="mega-menu__heading">Ending soon</h4>
+							<ul class="mega-menu__list">
+								<li class="mega-menu__nav-item"><a href="#">Escape Plan</a></li>
+								<li class="mega-menu__nav-item"><a href="#">Rush</a></li>
+								<li class="mega-menu__nav-item"><a href="#">Prisoners</a></li>
+								<li class="mega-menu__nav-item"><a href="#">Enough Said</a></li>
+								<li class="mega-menu__nav-item"><a href="#">The Fifth
+										Estate</a></li>
+								<li class="mega-menu__nav-item"><a href="#">Runner
+										Runner</a></li>
+							</ul>
+						</li>
+
+						<li
+							class="col-md-3 mega-menu__coloum mega-menu__coloum--outheading">
+							<ul class="mega-menu__list">
+								<li class="mega-menu__nav-item"><a href="#">Insidious:
+										Chapter 2</a></li>
+							</ul>
+						</li>
+					</ul></li>
 			</ul>
 			</nav>
-			<!-- 메뉴바 끝 -->
 
-			<!-- 부가적인 버튼(메뉴바 오른쪽으로 위치):
-				로그인시 내 정보, 바로 예매 페이지로 가는 버튼-->
+			<!-- Additional header buttons / Auth and direct link to booking-->
 			<div class="control-panel">
-				<div class="auth auth--home">
-					<div class="auth__show">
-						<span class="auth__image"> <img alt=""
-							src="http://placehold.it/31x31">
-						</span>
-					</div>
-					<a href="#" class="btn btn--sign btn--singin"> 내정보 </a>
-					<ul class="auth__function">
-						<!-- 내정보 버튼 눌렀을 시 뜨는 서브창 -->
-						<li><a href="#" class="auth__function-item">내가본영화</a></li>
-						<li><a href="#" class="auth__function-item">예매 내역</a></li>
-						<li><a href="#" class="auth__function-item">내가쓴리뷰</a></li>
-						<li><a href="#" class="auth__function-item">환경설정</a></li>
-					</ul>
-				</div>
-				<!-- 예매하기 버튼 누르면 login 요청하는 창이 뜸 -->
-				<a href="#"
-					class="btn btn-md btn--warning btn--book btn-control--home login-window"><Strong>바로예매하기</Strong>></a>
+				<a href="#" class="btn btn--sign login-window">Sign in</a> 
+				<a href="#" class="btn btn-md btn--warning btn--book login-window">Book a ticket</a>
 			</div>
 
 		</div>
 		</header>
 
-   
-        
+		<!-- Search bar -->
+		<div class="search-wrapper">
+			<div class="container container--add">
+				<form id='search-form' method='get' class="search">
+					<input type="text" class="search__field" placeholder="Search">
+					<select name="sorting_item" id="search-sort" class="search__sort" tabindex="0">
+						<option value="1" selected='selected'>By title</option>
+						<option value="2">By year</option>
+						<option value="3">By producer</option>
+						<option value="4">By title</option>
+						<option value="5">By year</option>
+					</select>
+					<button type='submit' class="btn btn-md btn--danger search__button">search a movie</button>
+				</form>
+			</div>
+		</div>     
         
         
         <!-- Main content -->

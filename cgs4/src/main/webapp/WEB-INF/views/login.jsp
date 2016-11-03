@@ -229,10 +229,18 @@
                     <label for='#informed' class='login__check-info'>remember me</label>
                      </div>
                     
-                    <div class="login__control">
-                        <button type='submit' class="btn btn-md btn--warning btn--wider">LOGIN</button>
-                        <a href="#" class="login__tracker form__tracker">아이디 찾기</a>
+                    <div  class="login__control">
+                        <button type='submit' class="btn btn-md btn--warning btn--wider">LOGIN</button>        <button type="button" class="btn btn-md btn--warning btn--wider">회원가입</button>
+                        
+						<a href="#" class="login__tracker form__tracker">아이디 찾기</a>
                         <a href="#" class="login__tracker form__tracker">비밀번호 찾기</a>
+
+
+                </div>
+                        
+<!--                         <a href="#" class="login__tracker form__tracker">아이디 찾기</a> -->
+<!--                         <a href="#" class="login__tracker form__tracker">비밀번호 찾기</a> -->
+                        
                     </div>
                 </form>
         

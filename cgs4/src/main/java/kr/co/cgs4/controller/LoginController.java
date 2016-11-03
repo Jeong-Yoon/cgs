@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
+import kr.co.cgs4.dao.MemberDAO;
 import kr.co.cgs4.dto.MemberDTO;
 
 
@@ -43,4 +44,22 @@ public class LoginController {
 //	}
 //	return mav;
 //	    }
+    
+    @RequestMapping (value ="loginProcess")
+    public ModelAndView loginProcess(Model model){
+    	
+    	MemberDTO dto = new MemberDTO();
+    	MemberDAO dao = new MemberDAO();
+    	
+    	ModelAndView mv = new ModelAndView();
+    	mv.setViewName("redirect:login");
+    	
+
+    	
+    	
+    	
+    	return 0;
+	  
+  }
+    
 }

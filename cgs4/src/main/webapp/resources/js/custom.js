@@ -524,14 +524,18 @@ function init_BookingOne() {
                 $('.time-select__item').click(function (){
                 	//visual iteractive for choose
                     $('.time-select__item').removeClass('active');
+                    $('.time-select__item').removeAttr("value");
                     $(this).addClass('active');
+                    $(this).attr("value","time_id");
 
                     //data element init
                     var chooseTime = $(this).attr('data-time');
                      $('.choose-indector--time').find('.choosen-area').text(chooseTime);
+                     $('.booking-form').find('.choosen-time').attr("value",chooseTime);
 
                     //data element init
-                    var chooseCinema = $(this).parent().parent().find('.time-select__place').text(); 
+                    var chooseCinema = $(this).parent().parent().parent().find('.time-select__place').text(); 
+                    $('.booking-form').find('.choosen-cinema').attr("value",chooseCinema);
 
                     //data element set
                     time.val(chooseTime);

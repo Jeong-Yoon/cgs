@@ -245,6 +245,7 @@
                     <input type="hidden" name="film_ID" value="${sessionScope.afdto.film_ID}">
                     <div class="cinema-wrap">	
                         <div class="row">
+                        
 						<c:forEach var="fdto" items="${sessionScope.afdto}">
 							<div class="col-xs-6 col-sm-3 cinema-item">
 								<div class="cinema">

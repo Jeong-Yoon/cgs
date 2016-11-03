@@ -492,7 +492,6 @@
 				</div>
 			</section>
 <!-- 		</form> -->
-		<!-- 좌석선택을 위한 정보들이 있는 폼 종료 -->
 		<div class="clearfix"></div>
 
 		<form id='film-and-time' class="booking-form" method='get'

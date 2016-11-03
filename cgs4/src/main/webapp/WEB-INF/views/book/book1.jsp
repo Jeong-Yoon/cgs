@@ -52,21 +52,29 @@
     	<script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.js"></script> 
 		<script src="http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.3.0/respond.js"></script>		
     <![endif]-->
+<script>
+function movieChk(id,name){
+	document.getElementById("choosed_film").innerHTML = name+'<input type="hidden" id="film_ID" value="'+id+'">';
+	;
+}
+</script>
+
+
 </head>
 
 <body>
 	<div class="wrapper">
 		<!-- Banner -->
-		<div class="banner-top">
-			<img alt='top banner' src="http://placehold.it/1600x90">
-		</div>
+<!-- 		<div class="banner-top"> -->
+<!-- 			<img alt='top banner' src="http://placehold.it/1600x90"> -->
+<!-- 		</div> -->
 
 		<!-- Header section -->
 		<header class="header-wrapper">
 		<div class="container">
 			<!-- Logo link-->
 			<a href='index.html' class="logo"> <img alt='logo'
-				src="images/logo.png">
+				src="<%=ctx%>/resources/images/logo.png">
 			</a>
 
 			<!-- Main website navigation-->
@@ -265,9 +273,9 @@
 
 		<h2 class="page-heading heading--outcontainer">영화를 선택해주세요.</h2>
 		</section>
-
+		
 		<div class="choose-film">
-			<div class="col-sm-9">
+			<div class="col-sm-11">
 				<div class="rates-wrapper rates--full">
 
 					<table>
@@ -284,44 +292,32 @@
 						</tr>
 
 						<tr class="rates rates--top">
-							<td class="rates__obj"><a class="choose-film__title">2.
-									The Book Thief</a></td>
-							<td class="rates__vote">163 546 votes</td>
-							<td class="rates__result">5.0</td>
-							<td class="rates__stars"><div class="score"></div></td>
+							<td class="film_title"><button value="고산자" onclick="movieChk('00001','고산자')" class="film_button"><strong>고산자</strong></button></td>
 						</tr>
-
 						<tr class="rates rates--top">
-							<td class="rates__obj"><a href="#" class="rates__obj-name">3.
-									How I Live Now</a></td>
-							<td class="rates__vote">843 546 votes</td>
-							<td class="rates__result">4.9</td>
-							<td class="rates__stars"><div class="score"></div></td>
+							<td class="film_title"><button value="고산자" onclick="movieChk('00001','고산자')" class="film_button"><strong>고산자</strong></button></td>
+						</tr>
+						<tr class="rates rates--top">
+							<td class="film_title"><button value="고산자" onclick="movieChk('00001','고산자')" class="film_button"><strong>고산자</strong></button></td>
+						</tr>
+						<tr class="rates rates--top">
+							<td class="film_title"><button value="고산자" onclick="movieChk('00001','고산자')" class="film_button"><strong>고산자</strong></button></td>
 						</tr>
 
-						<tr class="rates">
-							<td class="rates__obj"><a href="#" class="rates__obj-name">4.
-									The Armstrong Lie</a></td>
-							<td class="rates__vote">3 598 votes</td>
-							<td class="rates__result">4.9</td>
-							<td class="rates__stars"><div class="score"></div></td>
-						</tr>
 					</table>
 				</div>
 
 			</div>
-
 			<div class="swiper-container">
 				<div class="swiper-wrapper">
 					Second Slide
 					<div class="swiper-slide" data-film='Ender’s Game'>
 						<div class="film-images">
-							<img alt='' src="http://placehold.it/380x600">
 						</div>
-						<p class="choose-film__title">Ender’s Game</p>
 					</div>
 				</div>
 			</div>
+
 		</div>
 
 		<section class="container">

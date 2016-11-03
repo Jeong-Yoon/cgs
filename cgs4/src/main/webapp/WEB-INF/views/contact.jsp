@@ -57,11 +57,7 @@
 
 <body>
 	<body>
-    <div class="wrapper">
-        <!-- Banner -->
-        <div class="banner-top">
-            <img alt='top banner' src="http://placehold.it/1600x90">
-        </div>
+   
 
         <!-- Header section -->
         <header class="header-wrapper">
@@ -205,22 +201,7 @@
             </div>
         </header>
         
-        <!-- Search bar -->
-<!--         <div class="search-wrapper"> -->
-<!--             <div class="container container--add"> -->
-<!--                 <form id='search-form' method='get' class="search"> -->
-<!--                     <input type="text" class="search__field" placeholder="Search"> -->
-<!--                     <select name="sorting_item" id="search-sort" class="search__sort" tabindex="0"> -->
-<!--                         <option value="1" selected='selected'>By title</option> -->
-<!--                         <option value="2">By year</option> -->
-<!--                         <option value="3">By producer</option> -->
-<!--                         <option value="4">By title</option> -->
-<!--                         <option value="5">By year</option> -->
-<!--                     </select> -->
-<!--                     <button type='submit' class="btn btn-md btn--danger search__button">search a movie</button> -->
-<!--                 </form> -->
-<!--             </div> -->
-<!--         </div> -->
+     
         
         <!-- Main content -->
         <section class="container">
@@ -252,62 +233,6 @@
             </div>
         </div>
 
-        <section class="container">
-            <div class="contact">
-                <p class="contact__title">Trying to find our location? <br> <span class="contact__describe">we are here</span></p>
-            </div>
-        </section>
-
-        <div id='location-map' class="map"></div>
-        
-        <div class="clearfix"></div>
-
-        <footer class="footer-wrapper">
-            <section class="container">
-                <div class="col-xs-4 col-md-2 footer-nav">
-                    <ul class="nav-link">
-                        <li><a href="#" class="nav-link__item">Cities</a></li>
-                        <li><a href="movie-list-left.html" class="nav-link__item">Movies</a></li>
-                        <li><a href="trailer.html" class="nav-link__item">Trailers</a></li>
-                        <li><a href="rates-left.html" class="nav-link__item">Rates</a></li>
-                    </ul>
-                </div>
-                <div class="col-xs-4 col-md-2 footer-nav">
-                    <ul class="nav-link">
-                        <li><a href="coming-soon.html" class="nav-link__item">Coming soon</a></li>
-                        <li><a href="cinema-list.html" class="nav-link__item">Cinemas</a></li>
-                        <li><a href="offers.html" class="nav-link__item">Best offers</a></li>
-                        <li><a href="news-left.html" class="nav-link__item">News</a></li>
-                    </ul>
-                </div>
-                <div class="col-xs-4 col-md-2 footer-nav">
-                    <ul class="nav-link">
-                        <li><a href="#" class="nav-link__item">Terms of use</a></li>
-                        <li><a href="gallery-four.html" class="nav-link__item">Gallery</a></li>
-                        <li><a href="contact.html" class="nav-link__item">Contacts</a></li>
-                        <li><a href="page-elements.html" class="nav-link__item">Shortcodes</a></li>
-                    </ul>
-                </div>
-                <div class="col-xs-12 col-md-6">
-                    <div class="footer-info">
-                        <p class="heading-special--small">A.Movie<br><span class="title-edition">in the social media</span></p>
-
-                        <div class="social">
-                            <a href='#' class="social__variant fa fa-facebook"></a>
-                            <a href='#' class="social__variant fa fa-twitter"></a>
-                            <a href='#' class="social__variant fa fa-vk"></a>
-                            <a href='#' class="social__variant fa fa-instagram"></a>
-                            <a href='#' class="social__variant fa fa-tumblr"></a>
-                            <a href='#' class="social__variant fa fa-pinterest"></a>
-                        </div>
-                        
-                        <div class="clearfix"></div>
-                        <p class="copy">&copy; A.Movie, 2013. All rights reserved. Done by Olia Gozha</p>
-                    </div>
-                </div>
-            </section>
-        </footer>
-    </div>
 
     <!-- open/close -->
         <div class="overlay overlay-hugeinc">

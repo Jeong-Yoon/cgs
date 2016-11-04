@@ -288,7 +288,7 @@
 </div>
 			<div class="login__control">
 				<button type='submit' class="btn btn-md btn--warning btn--wider">Sign Up</button>&nbsp&nbsp
-				<button type="button" class="btn btn-md btn--warning btn--wider">Cancle</button>
+				<a href='index'><button type="button" class="btn btn-md btn--warning btn--wider">Cancle</button></a>
 
 
 

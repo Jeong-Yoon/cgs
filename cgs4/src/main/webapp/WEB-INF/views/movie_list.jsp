@@ -251,7 +251,7 @@
 								<div class="cinema">
 									<a href="movie?film_ID=${dto.film_ID}" class="cinema__images">
 										<img alt='' src="http://placehold.it/525x525"> 
-										<!--  <span class="cinema-rating">5.0</span> -->
+										<!--  	<span class="cinema-rating">5.0</span> -->
 									</a> <a href="movie?film_ID=${dto.film_ID}" class="cinema-title">${dto.film_name}</a>
 								</div>
 							</div>

@@ -730,7 +730,7 @@ function init_BookingTwo () {
                     var action, 
                         control = $('.order__control-btn.active').text();
 
-                        if (control == "Purchase"){ action = 'book3-buy.html'; }
+                        if (control == "Purchase"){ action = 'book3'; }
                         else if (control == "Reserve"){ action = 'book3-reserve.html'; }
 
                     $.get( action, fullData, function(data){});

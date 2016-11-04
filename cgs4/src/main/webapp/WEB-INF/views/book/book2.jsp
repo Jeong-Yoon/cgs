@@ -136,43 +136,7 @@
 								col gallery</a></li>
 					</ul></li>
 				<li><span class="sub-nav-toggle plus"></span> <a
-					href="contact.html">Contact us</a> <!--                                <ul class="mega-menu container"> -->
-					<!--                                     <li class="col-md-3 mega-menu__coloum"> -->
-					<!--                                         <h4 class="mega-menu__heading">Now in the cinema</h4> -->
-					<!--                                          <ul class="mega-menu__list"> -->
-					<!--                                             <li class="mega-menu__nav-item"><a href="#">The Counselor</a></li> -->
-					<!--                                             <li class="mega-menu__nav-item"><a href="#">Bad Grandpa</a></li> -->
-					<!--                                             <li class="mega-menu__nav-item"><a href="#">Blue Is the Warmest Color</a></li> -->
-					<!--                                             <li class="mega-menu__nav-item"><a href="#">Capital</a></li> -->
-					<!--                                             <li class="mega-menu__nav-item"><a href="#">Spinning Plates</a></li> -->
-					<!--                                             <li class="mega-menu__nav-item"><a href="#">Bastards</a></li> -->
-					<!--                                           </ul> --> <!--                                       </li> -->
-
-					<!--                                       <li class="col-md-3 mega-menu__coloum mega-menu__coloum--outheading"> -->
-					<!--                                           <ul class="mega-menu__list"> -->
-					<!--                                             <li class="mega-menu__nav-item"><a href="#">Gravity</a></li> -->
-					<!--                                             <li class="mega-menu__nav-item"><a href="#">Captain Phillips</a></li> -->
-					<!--                                             <li class="mega-menu__nav-item"><a href="#">Carrie</a></li> -->
-					<!--                                             <li class="mega-menu__nav-item"><a href="#">Cloudy with a Chance of Meatballs 2</a></li> -->
-					<!--                                           </ul> --> <!--                                       </li> -->
-
-					<!--                                       <li class="col-md-3 mega-menu__coloum"> -->
-					<!--                                         <h4 class="mega-menu__heading">Ending soon</h4> -->
-					<!--                                           <ul class="mega-menu__list"> -->
-					<!--                                             <li class="mega-menu__nav-item"><a href="#">Escape Plan</a></li> -->
-					<!--                                             <li class="mega-menu__nav-item"><a href="#">Rush</a></li> -->
-					<!--                                             <li class="mega-menu__nav-item"><a href="#">Prisoners</a></li> -->
-					<!--                                             <li class="mega-menu__nav-item"><a href="#">Enough Said</a></li> -->
-					<!--                                             <li class="mega-menu__nav-item"><a href="#">The Fifth Estate</a></li> -->
-					<!--                                             <li class="mega-menu__nav-item"><a href="#">Runner Runner</a></li> -->
-					<!--                                           </ul> --> <!--                                       </li> -->
-
-					<!--                                       <li class="col-md-3 mega-menu__coloum mega-menu__coloum--outheading"> -->
-					<!--                                           <ul class="mega-menu__list"> -->
-					<!--                                             <li class="mega-menu__nav-item"><a href="#">Insidious: Chapter 2</a></li> -->
-					<!--                                           </ul> --> <!--                                       </li> -->
-					<!--                                </ul> --></li>
-			</ul>
+					href="contact.html">Contact us</a> </ul>
 			</nav>
 
 			<!-- Additional header buttons / Auth and direct link to booking-->
@@ -185,22 +149,6 @@
 		</div>
 		</header>
 
-		<!-- Search bar -->
-		<!--         <div class="search-wrapper"> -->
-		<!--             <div class="container container--add"> -->
-		<!--                 <form id='search-form' method='get' class="search"> -->
-		<!--                     <input type="text" class="search__field" placeholder="Search"> -->
-		<!--                     <select name="sorting_item" id="search-sort" class="search__sort" tabindex="0"> -->
-		<!--                         <option value="1" selected='selected'>By title</option> -->
-		<!--                         <option value="2">By year</option> -->
-		<!--                         <option value="3">By producer</option> -->
-		<!--                         <option value="4">By title</option> -->
-		<!--                         <option value="5">By year</option> -->
-		<!--                     </select> -->
-		<!--                     <button type='submit' class="btn btn-md btn--danger search__button">search a movie</button> -->
-		<!--                 </form> -->
-		<!--             </div> -->
-		<!--         </div> -->
 
 		<!-- Main content -->
 		<div class="place-form-area">
@@ -212,23 +160,26 @@
 						Book a ticket <br>
 						<span class="order__descript">and have fun movie time</span>
 					</p>
-					<div class="order__control">
-						<a href="#" class="order__control-btn active">Purchase</a> <a
-							href="#" class="order__control-btn">Reserve</a>
-					</div>
+<!-- 					<div class="order__control"> -->
+<!-- 						<a href="#" class="order__control-btn active">Purchase</a> <a -->
+<!-- 							href="#" class="order__control-btn">Reserve</a> -->
+<!-- 					</div> -->
 				</div>
 			</div>
 			<div class="order-step-area">
-				<div class="order-step first--step order-step--disable ">1.
-					What &amp; Where &amp; When</div>
-				<div class="order-step second--step">2. Choose a sit</div>
+<!-- 				<div class="order-step first--step order-step--disable ">1. -->
+<!-- 					What &amp; Where &amp; When</div> -->
+				<div class="order-step second--step">선택하신 영화: ${bInfo.film_name}<br>
+				 선택하신 영화관: ${bInfo.site_name}<br>
+				 상영 일자: ${bInfo.screening_date}<br>
+				 상영관 : ${bInfo.screen_num}<br>
+				 영화 시작시간${bInfo.start_time}</div>
 			</div>
 <%-- 			${bInfo.film_name},${bInfo.site_name},${bInfo.screening_date},${bInfo.screen_num},${bInfo.start_time} --%>
 			
 
 			<div class="choose-sits">
 				<div class="choose-sits__info choose-sits__info--first">
-				
 					<ul>
 						<li class="sits-price marker--none"><strong>일반</strong></li>
 						<li class="sits-price"><input type="number" min="0" max="4" value="0" class="norm"></li>
@@ -444,11 +395,7 @@
 									class="sits__place sits-price--middle" data-place='E15'
 									data-price='20'>E15</span> <span
 									class="sits__place sits-price--middle" data-place='E16'
-									data-price='20'>E16</span> <span
-									class="sits__place sits-price--middle" data-place='E17'
-									data-price='20'>E17</span> <span
-									class="sits__place sits-price--middle" data-place='E18'
-									data-price='20'>E18</span>
+									data-price='20'>E16</span>
 							</div>
 
 							<div class="sits__row">
@@ -477,17 +424,9 @@
 									class="sits__place sits-price--middle" data-place='F12'
 									data-price='20'>F12</span> <span
 									class="sits__place sits-price--middle" data-place='F13'
-									data-price='20'>F13</span> <span
+									data-price='20'>F13</span><span
 									class="sits__place sits-price--middle" data-place='F14'
-									data-price='20'>F14</span> <span
-									class="sits__place sits-price--middle" data-place='F15'
-									data-price='20'>F15</span> <span
-									class="sits__place sits-price--middle" data-place='F16'
-									data-price='20'>F16</span> <span
-									class="sits__place sits-price--middle" data-place='F17'
-									data-price='20'>F17</span> <span
-									class="sits__place sits-price--middle" data-place='F18'
-									data-price='20'>F18</span>
+									data-price='20'>F14</span>
 							</div>
 
 							<div class="sits__row">
@@ -518,15 +457,7 @@
 									class="sits__place sits-price--middle" data-place='G13'
 									data-price='20'>G13</span> <span
 									class="sits__place sits-price--middle" data-place='G14'
-									data-price='20'>G14</span> <span
-									class="sits__place sits-price--middle" data-place='G15'
-									data-price='20'>G15</span> <span
-									class="sits__place sits-price--middle" data-place='G16'
-									data-price='20'>G16</span> <span
-									class="sits__place sits-price--middle" data-place='G17'
-									data-price='20'>G17</span> <span
-									class="sits__place sits-price--middle" data-place='G18'
-									data-price='20'>G18</span>
+									data-price='20'>G14</span> 
 							</div>
 
 							<div class="sits__row">
@@ -551,13 +482,7 @@
 									class="sits__place sits-price--middle" data-place='I12'
 									data-price='20'>I12</span> <span
 									class="sits__place sits-price--middle" data-place='I13'
-									data-price='20'>I13</span> <span
-									class="sits__place sits-price--middle" data-place='I14'
-									data-price='20'>I14</span> <span
-									class="sits__place sits-price--middle" data-place='I15'
-									data-price='20'>I15</span> <span
-									class="sits__place sits-price--middle" data-place='I16'
-									data-price='20'>I16</span>
+									data-price='20'>I13</span> 
 							</div>
 
 							<div class="sits__row additional-margin">
@@ -576,11 +501,7 @@
 									class="sits__place sits-price--expensive" data-place='J11'
 									data-price='30'>J11</span> <span
 									class="sits__place sits-price--expensive" data-place='J12'
-									data-price='30'>J12</span> <span
-									class="sits__place sits-price--expensive" data-place='J13'
-									data-price='30'>J13</span> <span
-									class="sits__place sits-price--expensive" data-place='J14'
-									data-price='30'>J14</span>
+									data-price='30'>J12</span>
 							</div>
 
 							<div class="sits__row">
@@ -599,11 +520,7 @@
 									class="sits__place sits-price--expensive" data-place='K11'
 									data-price='30'>K11</span> <span
 									class="sits__place sits-price--expensive" data-place='K12'
-									data-price='30'>K12</span> <span
-									class="sits__place sits-price--expensive" data-place='K13'
-									data-price='30'>K13</span> <span
-									class="sits__place sits-price--expensive" data-place='K14'
-									data-price='30'>K14</span>
+									data-price='30'>K12</span>
 							</div>
 
 							<div class="sits__row">
@@ -618,11 +535,7 @@
 									class="sits__place sits-price--expensive" data-place='L10'
 									data-price='30'>L10</span> <span
 									class="sits__place sits-price--expensive" data-place='L11'
-									data-price='30'>L11</span> <span
-									class="sits__place sits-price--expensive" data-place='L12'
-									data-price='30'>L12</span> <span
-									class="sits__place sits-price--expensive" data-place='L13'
-									data-price='30'>L13</span>
+									data-price='30'>L11</span> 
 							</div>
 
 							<aside class="sits__checked">
@@ -729,12 +642,12 @@
 
 
 		<div class="booking-pagination booking-pagination--margin">
-			<a href="book1.html" class="booking-pagination__prev"> <span
-				class="arrow__text arrow--prev">prev step</span> <span
-				class="arrow__info">what&amp;where&amp;when</span>
-			</a> <a href="book3-buy.html" class="booking-pagination__next"> <span
-				class="arrow__text arrow--next">next step</span> <span
-				class="arrow__info">checkout</span>
+			<a href="book1" class="booking-pagination__prev"> <span
+				class="arrow__text arrow--prev">이전 화면으로</span> <span
+				class="arrow__info">영화/영화관/날짜 선택</span>
+			</a> <a href="book3" class="booking-pagination__next"> <span
+				class="arrow__text arrow--next">다음 화면으로</span> <span
+				class="arrow__info">결제하기</span>
 			</a>
 		</div>
 	</form>

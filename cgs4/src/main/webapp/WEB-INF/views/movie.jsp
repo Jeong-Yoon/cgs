@@ -65,6 +65,39 @@
     	<script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.js"></script> 
 		<script src="http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.3.0/respond.js"></script>		
     <![endif]-->
+
+<script>
+	function movieChk(name) {
+		document.getElementById("choosed_film").innerHTML = name;
+		document.getElementById("film_name")
+				.setAttribute("value", name)
+	}
+	function cityChk() {
+		var name = document.getElementById("select-sort").getAttribute("value");
+		document.getElementById("site_name")
+				.setAttribute("value", name)
+	}
+	function dateChk() {
+		var date = document.getElementById("datepicker").getAttribute("value");
+		if (hasDate(date) != 1) {
+			document.getElementById("screening_date").setAttribute("value",
+					name)
+		} else {
+			alert("해당 날짜에는 상영 계획이 없습니다.");
+		}
+	}
+	function hasDate(date) {
+		if (date == "11/01/2016") {
+			return 1;
+		} else {
+			return 0;
+		}
+	}
+	function submit(){
+		document.getElementById("film-and-time").submit();
+	}
+</script>
+
 </head>
 
 <body>
@@ -258,7 +291,7 @@
 		<section class="container">
 		<div class="col-sm-12">
 			<div class="movie">
-				<h2 class="page-heading">${test.film_name}</h2>
+				<h2 class="page-heading">${film.film_name}</h2>
 
 				<div class="movie__info">
 					<div class="col-sm-4 col-md-3 movie-mobile">
@@ -271,22 +304,22 @@
 					</div>
 
 					<div class="col-sm-8 col-md-9">
-						<p class="movie__time">${test.running_time} min</p>
+						<p class="movie__time">${film.running_time} min</p>
 
 						<p class="movie__option">
-							<strong>Country: </strong>${test.country}</p>
+							<strong>Country: </strong>${film.country}</p>
 						<!--                             <p class="movie__option"><strong>Year: </strong><a href="#">2012</a></p> -->
 						<p class="movie__option">
-							<strong>Category: </strong>${test.genre}</p>
+							<strong>Category: </strong>${film.genre}</p>
 						<p class="movie__option">
-							<strong>Release date: </strong>${test.release_date}</p>
+							<strong>Release date: </strong>${film.release_date}</p>
 						<p class="movie__option">
-							<strong>Director: </strong><a href="#">${test.director}</a>
+							<strong>Director: </strong><a href="#">${film.director}</a>
 						</p>
 						<p class="movie__option">
-							<strong>Actors: </strong>${test.actor}</p>
+							<strong>Actors: </strong>${film.actor}</p>
 						<p class="movie__option">
-							<strong>Age restriction: </strong>${test.film_grade}</p>
+							<strong>Age restriction: </strong>${film.film_grade}</p>
 						<p class="movie__option">
 							<strong>Box office: </strong><a href="#">$1 017 003 568</a>
 						</p>
@@ -295,7 +328,7 @@
 
 						<div class="movie__btns movie__btns--full">
 							<form action="watchlist" method="get">
-								<input type=hidden name="film_ID" value="${test.film_ID }">
+								<input type=hidden name="film_ID" value="${film.film_ID }">
 <!-- 								<a href="book1" class="btn btn-md btn--warning">book a ticket for this movie</a> -->
 								<a href="#" class="watchlist">Add to watchlist</a>
 							</form>
@@ -423,7 +456,7 @@
 			<h2 class="page-heading">showtime &amp; tickets</h2>
 			<div class="choose-container">
 				<form id='select' class="select" method='get'>
-					<select name="select_item" id="select-sort" class="select__sort" tabindex="0">
+					<select name="select_item" id="select-sort" class="select__sort" tabindex="0" onmousedown="cityChk()">
 						<option value="1" selected='selected'>서울강변</option>
 						<option value="2">인천</option>
 						<option value="3">야탑</option>
@@ -434,7 +467,7 @@
 
 				<div class="datepicker">
 					<span class="datepicker__marker"><i class="fa fa-calendar"></i>Date</span>
-					<input type="text" id="datepicker" value=<%=mTime %> class="datepicker__input">
+					<input type="text" id="datepicker" value=<%=mTime %> class="datepicker__input" onmousedown="dateChk()">
 				</div>
 
 <!-- 				<a href="#" id="map-switch" class="watchlist watchlist--map watchlist--map-full"> -->
@@ -451,7 +484,7 @@
 						<ul class="col-sm-8 items-wrap">
 							<li class="time-select__item" data-time='09:40'>09:40</li>
 							<li class="time-select__item" data-time='13:45'>13:45</li>
-							<li class="time-select__item active" data-time='15:45'>15:45</li>
+							<li class="time-select__item" data-time='15:45'>15:45</li>
 							<li class="time-select__item" data-time='19:50'>19:50</li>
 							<li class="time-select__item" data-time='21:50'>21:50</li>
 						</ul>
@@ -513,11 +546,14 @@
 				</div>
 				<br>
 				<div class="movie__btns movie__btns--full">
-					<form action="book1" method="get">
-						<input type=hidden name="film_ID" value="${test.film_ID }">
-						<input type=hidden name="sysdate" value=<%=mTime %> >
-<%-- 						<input type=hidden name="start_time" value="${test.start_time }"> --%>
-						<center><a href="book1" class="btn btn-md btn--warning">book a ticket for this movie</a></center>
+					<form id='film-and-time' class="booking-form" method='get'>
+						<input type='hidden' name="film_name" class="choosen-movie" id="film_name"> 
+						<input type='hidden' name="site_name" class="choosen-city" id="site_name"> 
+						<input type='hidden' name="screening_date" class="choosen-date" id="screening_date">
+						<input type='hidden' name="screen_num" class="choosen-cinema" id="screen_num"> 
+						<input type='hidden' name="start_time" class="choosen-time" id="start_time">
+						<%-- 						<input type=hidden name="start_time" value="${test.start_time }"> --%>
+						<center> <a href='book2' class="btn btn-md btn--warning">book a ticket for this movie</a> </center>
 					</form>
 				</div>
 
@@ -662,8 +698,7 @@
 				</div>
 
 				<div class="clearfix"></div>
-				<p class="copy">&copy; A.Movie, 2013. All rights reserved. Done
-					by Olia Gozha</p>
+				<p class="copy">&copy; A.Movie, 2013. All rights reserved. Done by Olia Gozha</p>
 			</div>
 		</div>
 		</section> </footer>
@@ -717,9 +752,7 @@
 	<script
 		src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 	<script>
-		window.jQuery
-				|| document
-						.write('<script src="js/external/jquery-1.10.1.min.js"><\/script>')
+		window.jQuery || document.write('<script src="js/external/jquery-1.10.1.min.js"><\/script>')
 	</script>
 	<!-- Migrate -->
 	<script
@@ -770,6 +803,7 @@
 		$(document).ready(function() {
 			init_MoviePage();
 			init_MoviePageFull();
+			init_BookingOne();
 		});
 	</script>
 

@@ -1,10 +1,8 @@
 <%@page import="kr.co.cgs4.dao.FilmDAO"%>
 <%@page import="kr.co.cgs4.dto.FilmDTO"%>
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ page import="java.util.*" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %> 
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <%String ctx = request.getContextPath(); %>
@@ -244,132 +242,22 @@
                             </ul>
                     </div>
                 </div>
-			<form action="movie" method="get">
-                    <input type="hidden" name="film_ID" value="${film_list.film_ID}">
+			<form action="movie" method="post">
                     <div class="cinema-wrap">	
                         <div class="row">
-<%--                         var ary  = ${fn:length(film_list)}; --%>
-                        <% FilmDAO dao = new FilmDAO();
-                          ArrayList<FilmDTO> list = dao.film_list(); %>
-						<% for(int i = 0; i< list.size();  i++){%>
-<%-- 						<c:forEach var="film_list" items="${film_list}"> --%>
+						<c:forEach var="dto" items="${film_list}">
+							<input type="hidden" name="film_ID" value="${dto.film_ID}">
 							<div class="col-xs-6 col-sm-3 cinema-item">
 								<div class="cinema">
-									<a href='movie?id=${list.film_ID}' class="cinema__images">
+									<a href="movie?film_ID=${dto.film_ID}" class="cinema__images">
 										<img alt='' src="http://placehold.it/525x525"> 
-										<!--                                         <span class="cinema-rating">5.0</span> -->
-									</a> <a href="movie?id=${list.film_ID}" class="cinema-title">${list.film_name}</a>
+										<!--  <span class="cinema-rating">5.0</span> -->
+									</a> <a href="movie?film_ID=${dto.film_ID}" class="cinema-title">${dto.film_name}</a>
 								</div>
 							</div>
-<%-- 						</c:forEach> --%>
-						<% } %>
-						                            <div class="col-xs-6 col-sm-3 cinema-item name">
-                                <div class="cinema">
-                                    <a href='single-cinema.html' class="cinema__images">
-                                        <img alt='' src="http://placehold.it/525x525">
-<!--                                         <span class="cinema-rating">5.0</span> -->
-                                    </a>
-                                    <a href="single-cinema.html" class="cinema-title">Camden Town Odeon</a>
-                                </div>
-                            </div>
-                            <div class="col-xs-6 col-sm-3 cinema-item name popularity">
-                                <div class="cinema">
-                                    <a href='single-cinema.html' class="cinema__images">
-                                        <img alt='' src="http://placehold.it/525x525">
-<!--                                         <span class="cinema-rating">5.0</span> -->
-                                    </a>
-                                    <a href="single-cinema.html" class="cinema-title">Camden Town Odeon</a>
-                                </div>
-                            </div>
-                            <div class="col-xs-6 col-sm-3 cinema-item popularity">
-                                <div class="cinema">
-                                    <a href='single-cinema.html' class="cinema__images">
-                                        <img alt='' src="http://placehold.it/525x525">
-<!--                                         <span class="cinema-rating">5.0</span> -->
-                                    </a>
-                                    <a href="single-cinema.html" class="cinema-title">Camden Town Odeon</a>
-                                </div>
-                            </div>
-                        </div>
+						</c:forEach>
 
-                        
-                        <div class="row">
-                            <div class="col-xs-6 col-sm-3 cinema-item name">
-                                <div class="cinema">
-                                    <a href='single-cinema.html' class="cinema__images">
-                                        <img alt='' src="http://placehold.it/525x525">
-<!--                                         <span class="cinema-rating">5.0</span> -->
-                                    </a>
-                                    <a href="single-cinema.html" class="cinema-title">Marble Arch Odeon</a>
-                                </div>
-                            </div>
-                            <div class="col-xs-6 col-sm-3 cinema-item popularity">
-                                <div class="cinema">
-                                    <a href='single-cinema.html' class="cinema__images">
-                                        <img alt='' src="http://placehold.it/525x525">
-<!--                                         <span class="cinema-rating">5.0</span> -->
-                                    </a>
-                                    <a href="single-cinema.html" class="cinema-title">Camden Town Odeon</a>
-                                </div>
-                            </div> 
-                            <div class="col-xs-6 col-sm-3 cinema-item name popularity">
-                                <div class="cinema">
-                                    <a href='single-cinema.html' class="cinema__images">
-                                        <img alt='' src="http://placehold.it/525x525">
-<!--                                         <span class="cinema-rating">5.0</span> -->
-                                    </a>
-                                    <a href="single-cinema.html" class="cinema-title">Camden Town Odeon</a>
-                                </div>
-                            </div>
-                            <div class="col-xs-6 col-sm-3 cinema-item popularity">
-                                <div class="cinema">
-                                    <a href='single-cinema.html' class="cinema__images">
-                                        <img alt='' src="http://placehold.it/525x525">
-<!--                                         <span class="cinema-rating">5.0</span> -->
-                                    </a>
-                                    <a href="single-cinema.html" class="cinema-title">Camden Town Odeon</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-xs-6 col-sm-3 cinema-item name">
-                                <div class="cinema">
-                                    <a href='single-cinema.html' class="cinema__images">
-                                        <img alt='' src="http://placehold.it/525x525">
-<!--                                         <span class="cinema-rating">5.0</span> -->
-                                    </a>
-                                    <a href="single-cinema.html" class="cinema-title">Marble Arch Odeon</a>
-                                </div>
-                            </div>
-                            <div class="col-xs-6 col-sm-3 cinema-item">
-                                <div class="cinema">
-                                    <a href='single-cinema.html' class="cinema__images">
-                                        <img alt='' src="http://placehold.it/525x525">
-<!--                                         <span class="cinema-rating">5.0</span> -->
-                                    </a>
-                                    <a href="single-cinema.html" class="cinema-title">Camden Town Odeon</a>
-                                </div>
-                            </div>
-                            <div class="col-xs-6 col-sm-3 cinema-item popularity">
-                                <div class="cinema">
-                                    <a href='single-cinema.html' class="cinema__images">
-                                        <img alt='' src="http://placehold.it/525x525">
-<!--                                         <span class="cinema-rating">5.0</span> -->
-                                    </a>
-                                    <a href="single-cinema.html" class="cinema-title">Camden Town Odeon</a>
-                                </div>
-                            </div>
-                            <div class="col-xs-6 col-sm-3 cinema-item popularity">
-                                <div class="cinema">
-                                    <a href='single-cinema.html' class="cinema__images">
-                                        <img alt='' src="http://placehold.it/525x525">
-<!--                                         <span class="cinema-rating">5.0</span> -->
-                                    </a>
-                                    <a href="single-cinema.html" class="cinema-title">Camden Town Odeon</a>
-                                </div>
-                            </div>
-                        </div>
+					</div>
 
                     </div>
                     </form>

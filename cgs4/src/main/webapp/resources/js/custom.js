@@ -638,7 +638,7 @@ function init_BookingTwo () {
     			$('.youg').attr("max",4);
     			$('.spec').attr("max",4);
     		}
-    		if(pSum==4){
+    		if(pSum==4){' '
     			$('.sits-max').text("최대 4자리까지만 예매 가능합니다.");
     		}else{
     			$('.sits-max').text("  ")}
@@ -646,11 +646,11 @@ function init_BookingTwo () {
     		var totprice = (norm*7000)+(youg*6000)+(spec*5000);
     		
     		if(norm!=0){$('.checked-people').find('.norm').text('일반 x '+norm)
-    		}else{$('.checked-people').find('.norm').text()}
+    		}else{$('.checked-people').find('.norm').text(' ')}
     		if(youg!=0){$('.checked-people').find('.youg').text('청소년 x '+youg)
-    		}else{$('.checked-people').find('.youg').text()}
+    		}else{$('.checked-people').find('.youg').text(' ')}
     		if(spec!=0){$('.checked-people').find('.spec').text('우대 x '+spec)
-    		}else{$('.checked-people').find('.spec').text()}
+    		}else{$('.checked-people').find('.spec').text(' ')}
     		
 
         $('.checked-result').text('$'+totprice);

@@ -17,13 +17,13 @@ public class FilmDAO {
 		this.template = Constant.template;
 	}
 	
-	public FilmDTO film(){
-		String query = "select * from film;";
+	public FilmDTO film(String film_ID){
+		String query = "select * from film where film_ID = " + film_ID;
 		return (FilmDTO) template.queryForObject(query, new BeanPropertyRowMapper<FilmDTO>(FilmDTO.class));
 	}
 	
 	public ArrayList<FilmDTO> film_list(){
-		String query = "select * from film order by film_ID asc;";
+		String query = "select * from film order by film_ID desc";
 		return (ArrayList<FilmDTO>)template.query(query, new BeanPropertyRowMapper<FilmDTO>(FilmDTO.class));
 	}
 		

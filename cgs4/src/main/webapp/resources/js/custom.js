@@ -617,7 +617,8 @@ function init_BookingTwo () {
                     cheapTicket = 5000,
                     middleTicket = 6000,
                     expansiveTicket = 7000,
-                    sits = $('.choosen-sits');
+                    sits = $('.choosen-sits'),
+                    pplNum = 0;
     
     // 좌석 4개로 제한하기
     	$('.sits-price').click(function (e){
@@ -626,8 +627,9 @@ function init_BookingTwo () {
     		var youg = parseInt($('.youg').val());
     		var spec = parseInt($('.spec').val());
 
-    		var sum = norm+youg+spec;
-    		if(sum==4){
+    		var pSum = norm+youg+spec;
+    		pplNum = pSum;
+    		if(pSum==4){
     			$('.norm').attr("max",norm)
     			$('.youg').attr("max",youg);
     			$('.spec').attr("max",spec);
@@ -636,10 +638,24 @@ function init_BookingTwo () {
     			$('.youg').attr("max",4);
     			$('.spec').attr("max",4);
     		}
-    		if(sum==4){
+    		if(pSum==4){
     			$('.sits-max').text("최대 4자리까지만 예매 가능합니다.");
     		}else{
     			$('.sits-max').text("  ")}
+    		
+    		var totprice = (norm*7000)+(youg*6000)+(spec*5000);
+    		
+    		if(norm!=0){$('.checked-people').find('.norm').text('일반 x '+norm)
+    		}else{$('.checked-people').find('.norm').text()}
+    		if(youg!=0){$('.checked-people').find('.youg').text('청소년 x '+youg)
+    		}else{$('.checked-people').find('.youg').text()}
+    		if(spec!=0){$('.checked-people').find('.spec').text('우대 x '+spec)
+    		}else{$('.checked-people').find('.spec').text()}
+    		
+
+        $('.checked-result').text('$'+totprice);
+    
+    		
     	})
     //3. Choose sits (and count price for them)
     			//users choose sits
@@ -649,6 +665,10 @@ function init_BookingTwo () {
                 var cheap = 0;
                 var middle = 0;
                 var expansive = 0;
+                var count = 0;
+//                cheapTicket = 5000,
+//                middleTicket = 6000,
+//                expansiveTicket = 7000;
 
                 $('.sits__place').click(function (e) {
                     e.preventDefault();
@@ -656,54 +676,23 @@ function init_BookingTwo () {
                     var ticketPrice = $(this).attr('data-price');
 
                     if(! $(e.target).hasClass('sits-state--your')){
+                    	if(count<pplNum){
 
                         if (! $(this).hasClass('sits-state--not') ) {
                             $(this).addClass('sits-state--your');
+                            count+=1;
 
                             $('.checked-place').prepend('<span class="choosen-place '+place+'">'+ place +'</span>');
 
-                            switch(ticketPrice)
-                                {
-                                case '10':
-                                  sum += 10;
-                                  cheap += 1;
-                                  break;
-                                case '20':
-                                  sum += 20;
-                                  middle += 1;
-                                  break;
-                                case '30':
-                                  sum += 30;
-                                  expansive += 1;
-                                  break;
-                            }
-
-                            $('.checked-result').text('$'+sum);
                         }
+                    }else{
+                    	alert('선택한 인원수만큼만 선택 가능합니다.')
                     }
-
-                    else{
+                    }else{
                         $(this).removeClass('sits-state--your');
-                        
+                        count-=1;
                         $('.'+place+'').remove();
 
-                        switch(ticketPrice)
-                                {
-                                case '10':
-                                  sum -= 10;
-                                  cheap -= 1;
-                                  break;
-                                case '20':
-                                  sum -= 20;
-                                  middle -= 1;
-                                  break;
-                                case '30':
-                                  sum -= 30;
-                                  expansive -= 1;
-                                  break;
-                            }
-
-                        $('.checked-result').text('$'+sum)
                     }
 
                     //data element init
@@ -712,9 +701,9 @@ function init_BookingTwo () {
                     //data element set 
                     numberTicket.val(number);
                     sumTicket.val(sum);
-                    cheapTicket.val(cheap);
-                    middleTicket.val(middle);
-                    expansiveTicket.val(expansive );
+//                    cheapTicket.val(cheap);
+//                    middleTicket.val(middle);
+//                    expansiveTicket.val(expansive );
 
 
                     //data element init

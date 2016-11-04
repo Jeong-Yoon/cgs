@@ -626,6 +626,12 @@
 							</div>
 
 							<aside class="sits__checked">
+							<div class="checked-people">
+							<span class="choosen-people norm"></span>
+							<span class="choosen-people youg"></span>
+							<span class="choosen-people spec"></span>
+							</div>
+							
 							<div class="checked-place"></div>
 							<div class="checked-result">$0</div>
 							</aside>

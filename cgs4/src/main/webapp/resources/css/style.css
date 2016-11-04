@@ -11248,3 +11248,9 @@ ul#navigation li.mega-menu__nav-item:hover:before {
     font-size: 12px;
     color: red;
 }
+.choosen-people{
+	display: block;
+    color: #ffffff;
+    font-size: 10px;
+    padding: 8px 0;
+}

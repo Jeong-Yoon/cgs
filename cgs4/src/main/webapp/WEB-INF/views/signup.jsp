@@ -8,7 +8,7 @@
 <head>
 <!-- Basic Page Needs -->
 <meta charset="utf-8">
-<title>AMovie - Login</title>
+<title>CGS</title>
 <meta name="description" content="A Template by Gozha.net">
 <meta name="keywords" content="HTML, CSS, JavaScript">
 <meta name="author" content="Gozha.net">
@@ -23,7 +23,10 @@
 	href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css"
 	rel="stylesheet">
 <!-- Roboto -->
-<link href='http://fonts.googleapis.com/css?family=Roboto:400,700'
+<link href='http://fonts.googleapis.com/css?family=Roboto:400,100,700'
+	rel='stylesheet' type='text/css'>
+<!-- Open Sans -->
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:800italic'
 	rel='stylesheet' type='text/css'>
 
 <!-- Stylesheets -->
@@ -34,8 +37,13 @@
 <link href="<%=ctx%>/resources/css/external/jquery.selectbox.css"
 	rel="stylesheet" />
 
+<!-- REVOLUTION BANNER CSS SETTINGS -->
+<link rel="stylesheet" type="text/css"
+	href="<%=ctx%>/resources/rs-plugin/css/settings.css" media="screen" />
+
 <!-- Custom -->
 <link href="<%=ctx%>/resources/css/style.css?v=1" rel="stylesheet" />
+
 
 <!-- Modernizr -->
 <script src="<%=ctx%>/resources/js/external/modernizr.custom.js"></script>
@@ -46,12 +54,9 @@
 		<script src="http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.3.0/respond.js"></script>		
     <![endif]-->
 </head>
+
 <body>
-	<div class="wrapper">
-		<!-- Banner -->
-		<div class="banner-top">
-			<img alt='top banner' src="http://placehold.it/1600x90">
-		</div>
+	
 
 		<!-- Header section -->
 		<header class="header-wrapper">
@@ -214,27 +219,64 @@
 
 		</div>
 		</header>
+
+		<!-- Search bar -->
+		<!--         <div class="search-wrapper"> -->
+		<!--             <div class="container container--add"> -->
+		<!--                 <form id='search-form' method='get' class="search"> -->
+		<!--                     <input type="text" class="search__field" placeholder="Search"> -->
+		<!--                     <select name="sorting_item" id="search-sort" class="search__sort" tabindex="0"> -->
+		<!--                         <option value="1" selected='selected'>By title</option> -->
+		<!--                         <option value="2">By year</option> -->
+		<!--                         <option value="3">By producer</option> -->
+		<!--                         <option value="4">By title</option> -->
+		<!--                         <option value="5">By year</option> -->
+		<!--                     </select> -->
+		<!--                     <button type='submit' class="btn btn-md btn--danger search__button">search a movie</button> -->
+		<!--                 </form> -->
+		<!--             </div> -->
+		<!--         </div> -->
+
+		<!-- Main content -->
 		<form id="login-form" class="login" method='get' action="loginProcess">
 			<p class="login__title">
-				sign in <br> <span class="login-edition">welcome to CGS</span>
+				sign in <br>
+				<span class="login-edition">welcome to CGS</span>
 			</p>
+
+			<!--                     <div class="social social--colored"> -->
+			<!--                             <a href='#' class="social__variant fa fa-facebook"></a> -->
+			<!--                             <a href='#' class="social__variant fa fa-twitter"></a> -->
+			<!--                             <a href='#' class="social__variant fa fa-tumblr"></a> -->
+			<!--                     </div> -->
+
+			<!--                     <p class="login__tracker">or</p> -->
+
 			<div class="field-wrap">
 				<input type='text' placeholder='Member ID' name='user-email'
 					class="login__input"> <input type='password'
 					placeholder='Password' name='user-password' class="login__input">
+
 				<input type='checkbox' id='#informed' class='login__check styled'>
 				<label for='#informed' class='login__check-info'>remember me</label>
 			</div>
+
 			<div class="login__control">
-				<button type='submit' class="btn btn-md btn--warning btn--wider">LOGIN</button>
-				<a href="signup"><button type="button" class="btn btn-md btn--warning btn--wider">회원가입</button></a>
-				<a	href="#" class="login__tracker form__tracker">아이디 / 비밀번호 찾기</a>
+				<button type='submit' class="btn btn-md btn--warning btn--wider">Sign Up</button>
+				<button type="button" class="btn btn-md btn--warning btn--wider">Cancle</button>
+
+				
+
+
 			</div>
+
+			<!--                         <a href="#" class="login__tracker form__tracker">아이디 찾기</a> -->
+			<!--                         <a href="#" class="login__tracker form__tracker">비밀번호 찾기</a> -->
 	</div>
 	</form>
 
 	<div class="clearfix"></div>
-
+	</div>
 
 	<!--     <footer class="footer-wrapper footer-wrapper--mod"> -->
 	<!--             <section class="container"> -->

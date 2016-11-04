@@ -1,6 +1,6 @@
 "use strict";
 
-//Plaeholder handler
+//Placeholder handler
 $(function() {
 	
 if(!Modernizr.input.placeholder){             //placeholder for old brousers and IE

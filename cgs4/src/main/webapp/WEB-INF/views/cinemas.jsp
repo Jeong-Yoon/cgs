@@ -273,16 +273,16 @@
                     <div class="order-step first--step">1. What &amp; Where &amp; When</div>
             </div> -->
                 
-         <!-- 영화관 선택 -->       
+         <!-- 영화관목록-->       
             <div class="tags-area">      
                     <div class="tags tags--unmarked">
-                        <span class="tags__label">영화관 선택:</span>
+                        <span class="tags__label">영화관 목록:</span>
                             <ul>
                                 <li class="item-wrap"><a href="#" class="tags__item item-active" data-filter='all'>강남</a></li>
-                                <li class="item-wrap"><a href="#" class="tags__item" data-filter='release'>동대문</a></li>
+                                <li class="item-wrap"><a href="#" class="tags__item" data-filter='release'>영등포</a></li>
                                 <li class="item-wrap"><a href="#" class="tags__item" data-filter='popularity'>목동</a></li>
-                                <li class="item-wrap"><a href="#" class="tags__item" data-filter='comments'>상봉</a></li>
-                                <li class="item-wrap"><a href="#" class="tags__item" data-filter='ending'>센트럴</a></li>
+                                <li class="item-wrap"><a href="#" class="tags__item" data-filter='comments'>강북</a></li>
+                                <li class="item-wrap"><a href="#" class="tags__item" data-filter='ending'>여의도</a></li>
                             </ul>
                     </div>
                 </div>
@@ -299,9 +299,9 @@
                          <div class="wave-devider"></div>
 
                         <p class="post__text">
-                        	영화관 주소: 서울특별시 강남구 역삼동 814-6 스타플렉스<br>
-                        	영화관 전화번호: 1544-1122 <br>
-                        	상영관 개수: 6관 / 874석<br>
+                        	주소: 강남구<br>
+                        	전화번호: 1544-1122 <br>
+                        	상영관 개수: 6개<br>
                         </p> 
                         
                         
@@ -465,12 +465,11 @@
         <!-- DB connect test -->
         
         <table>
+        <c:forEach items="${screening}" var="sc">
 <tr>
-<td>screen_num</td><td>${screening.start_time}</td>
+<td>screen_num</td><td>${sc.start_time}</td>
 </tr>
-<tr>
-<td>site_name</td><td>${site.site_name}</td>
-</tr>
+</c:forEach>
 </table>
         
         
@@ -480,7 +479,7 @@
         
         
         
-  <!--/////////////////메인 끝///////////////////////////-->      
+  <!--/////////////////메인 페이지 끝///////////////////////////-->      
 
         
 

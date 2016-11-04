@@ -216,7 +216,7 @@
 		</header>
 		<form id="login-form" class="login" method='get' action="loginProcess">
 			<p class="login__title">
-				sign in <br> <span class="login-edition">welcome to CGS</span>
+				sign in <br /> <span class="login-edition">welcome to CGS</span>
 			</p>
 			<div class="field-wrap">
 				<input type='text' placeholder='Member ID' name='user-email'
@@ -227,11 +227,13 @@
 			</div>
 			<div class="login__control">
 				<button type='submit' class="btn btn-md btn--warning btn--wider">LOGIN</button>
-				<a href="signup"><button type="button" class="btn btn-md btn--warning btn--wider">회원가입</button></a>
-				<a	href="#" class="login__tracker form__tracker">아이디 / 비밀번호 찾기</a>
+				<a href="signup"><button type="button"
+						class="btn btn-md btn--warning btn--wider">회원가입</button></a> <a
+					href="#" class="login__tracker form__tracker">아이디 / 비밀번호 찾기</a>
 			</div>
+		</form>
 	</div>
-	</form>
+
 
 	<div class="clearfix"></div>
 

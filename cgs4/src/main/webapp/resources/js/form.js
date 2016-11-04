@@ -76,44 +76,8 @@ $('#contact-form').submit(function(e) {
 		$.post(self.attr('action'),formInput, function(data){}); // end post
 }); // end submit
 
-$('.login').submit(function(e) {
-      
-		e.preventDefault();	
-		var error = 0;
-		var self = $(this);
-		
-	    var $email = self.find('[type=text]');
-	    var $pass = self.find('[type=password]');
-		
-				
-		var emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
-		
-  		if(!emailRegex.test($email.val())) {
-			createErrTult("존재하지 않는 아이디입니다. ", $email)
-			error++;	
-		}
-
-		if( $pass.val().length>1 &&  $pass.val()!= $pass.attr('placeholder')  ) {
-			$pass.removeClass('invalid_field');			
-		} 
-		else {
-			createErrTult('아이디나 비밀번호가 틀렸습니다.', $pass)
-			error++;
-		}
-		
-		
-		
-		if (error!=0)return;
-		self.find('[type=submit]').attr('disabled', 'disabled');
-
-		self.children().fadeOut(300,function(){ $(this).remove() })
-		$('<p class="login__title">sign in <br><span class="login-edition">welcome to A.Movie</span></p><p class="success">You have successfully<br> signed in!</p>').appendTo(self)
-		.hide().delay(300).fadeIn();
 
 
-		// var formInput = self.serialize();
-		// $.post(self.attr('action'),formInput, function(data){}); // end post
-}); // end submit
 		
 		
 
@@ -128,3 +92,4 @@ function createErrTult(text, $elem){
 			.delay(4000).animate({'opacity':0},300, function(){ $(this).slideUp(400,function(){ $(this).remove() }) });
 	}
 });
+

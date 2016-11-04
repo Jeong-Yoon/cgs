@@ -273,16 +273,16 @@
                     <div class="order-step first--step">1. What &amp; Where &amp; When</div>
             </div> -->
                 
-         <!-- ?��?���? ?��?�� -->       
+         <!-- 영화관목록-->       
             <div class="tags-area">      
                     <div class="tags tags--unmarked">
-                        <span class="tags__label">?��?���? ?��?��:</span>
+                        <span class="tags__label">영화관 목록:</span>
                             <ul>
                                 <li class="item-wrap"><a href="#" class="tags__item item-active" data-filter='all'>강남</a></li>
-                                <li class="item-wrap"><a href="#" class="tags__item" data-filter='release'>?��??�?</a></li>
+                                <li class="item-wrap"><a href="#" class="tags__item" data-filter='release'>영등포</a></li>
                                 <li class="item-wrap"><a href="#" class="tags__item" data-filter='popularity'>목동</a></li>
-                                <li class="item-wrap"><a href="#" class="tags__item" data-filter='comments'>?���?</a></li>
-                                <li class="item-wrap"><a href="#" class="tags__item" data-filter='ending'>?��?��?��</a></li>
+                                <li class="item-wrap"><a href="#" class="tags__item" data-filter='comments'>강북</a></li>
+                                <li class="item-wrap"><a href="#" class="tags__item" data-filter='ending'>여의도</a></li>
                             </ul>
                     </div>
                 </div>
@@ -299,9 +299,9 @@
                          <div class="wave-devider"></div>
 
                         <p class="post__text">
-                        	?��?���? 주소: ?��?��?��별시 강남�? ?��?��?�� 814-6 ?��???��?��?��<br>
-                        	?��?���? ?��?��번호: 1544-1122 <br>
-                        	?��?���? 개수: 6�? / 874?��<br>
+                        	주소: 강남구<br>
+                        	전화번호: 1544-1122 <br>
+                        	상영관 개수: 6개<br>
                         </p> 
                         
                         
@@ -339,10 +339,10 @@
                 
                         <div class="time-select__group group--first">
                             <div class="col-sm-2">
-                                <p class="time-select__place">?��?��</p>
+                                <p class="time-select__place">럭키</p>
                             </div>
                              <div class="col-sm-1">
-                                <p class="time-select__place">1�?</p>
+                                <p class="time-select__place">1관</p>
                             </div>
                             <ul class="col-sm-6 items-wrap">
                                 <li class="time-select__item" data-time='09:40'>09:40</li>
@@ -357,7 +357,7 @@
                                 <p class="time-select__place"></p>
                             </div>
                             <div class="col-sm-1">
-                                <p class="time-select__place">2�?</p>
+                                <p class="time-select__place">2관</p>
                             </div>
                             <ul class="col-sm-6 items-wrap">
                                 <li class="time-select__item" data-time='09:40'>09:40</li>
@@ -452,7 +452,7 @@
                         <span class="arrow__info"></span>
                     </a>
                     <a href="book2.html" class="booking-pagination__next">
-                        <span class="arrow__text arrow--next">?��매하�?</span>
+                        <span class="arrow__text arrow--next">예매하기</span>
                         <span class="arrow__info">make a reservation</span>
                     </a>
             </div>
@@ -479,7 +479,7 @@
         
         
         
-  <!--/////////////////메인 ?��///////////////////////////-->      
+  <!--/////////////////메인 페이지 끝///////////////////////////-->      
 
         
 

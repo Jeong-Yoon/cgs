@@ -910,7 +910,19 @@ table {
 	position: relative;
 	height:100%;
 	
+	
 }
+
+.signupcontainer {
+	margin-right: auto;
+	margin-left: auto;
+	padding-left: 15px;
+	padding-right: 15px;
+	position: relative;
+	height:100%;
+	text-align:center;
+	vertical-align:middle;
+}	
 
 @media ( min-width : 768px) {
 	.container {
@@ -5484,7 +5496,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 }
 
 .select .sbToggle:after {
-/* 	content: '영화관''; */
+/* 	content: '�쁺�솕愿�''; */
 	font: 13px 'Roboto', sans-serif;
 	font-weight: bold;
 }

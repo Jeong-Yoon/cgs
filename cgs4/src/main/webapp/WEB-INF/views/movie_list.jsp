@@ -1,8 +1,11 @@
+<%@page import="kr.co.cgs4.dao.FilmDAO"%>
 <%@page import="kr.co.cgs4.dto.FilmDTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ page import="java.util.*" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %> 
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <%String ctx = request.getContextPath(); %>
 <html>
@@ -242,19 +245,24 @@
                     </div>
                 </div>
 			<form action="movie" method="get">
-                    <input type="hidden" name="film_ID" value="${sessionScope.afdto.film_ID}">
+                    <input type="hidden" name="film_ID" value="${film_list.film_ID}">
                     <div class="cinema-wrap">	
                         <div class="row">
-                        
-						<c:forEach var="fdto" items="${sessionScope.afdto}">
+<%--                         var ary  = ${fn:length(film_list)}; --%>
+                        <% FilmDAO dao = new FilmDAO();
+                          ArrayList<FilmDTO> list = dao.film_list(); %>
+						<% for(int i = 0; i< list.size();  i++){%>
+<%-- 						<c:forEach var="film_list" items="${film_list}"> --%>
 							<div class="col-xs-6 col-sm-3 cinema-item">
 								<div class="cinema">
-									<a href='movie?id=${sessionScope.afdto.film_ID}' class="cinema__images">
-										<img alt='' src="http://placehold.it/525x525"> <!--                                         <span class="cinema-rating">5.0</span> -->
-									</a> <a href="movie?id=${sessionScope.afdto.film_ID}" class="cinema-title">${sessionScope.afdto.film_name}</a>
+									<a href='movie?id=${list.film_ID}' class="cinema__images">
+										<img alt='' src="http://placehold.it/525x525"> 
+										<!--                                         <span class="cinema-rating">5.0</span> -->
+									</a> <a href="movie?id=${list.film_ID}" class="cinema-title">${list.film_name}</a>
 								</div>
 							</div>
-						</c:forEach>
+<%-- 						</c:forEach> --%>
+						<% } %>
 						                            <div class="col-xs-6 col-sm-3 cinema-item name">
                                 <div class="cinema">
                                     <a href='single-cinema.html' class="cinema__images">

@@ -8,14 +8,17 @@ import javax.servlet.http.HttpSession;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
-import kr.co.cgs4.dao.FilmDAO;
-import kr.co.cgs4.dao.TestDAO;
+import kr.co.cgs4.command.Command;
+import kr.co.cgs4.command.FilmCommand;
 import kr.co.cgs4.dto.FilmDTO;
 
 @Controller
 public class MovieController {
-
+	
+	Command command = null;
+	
 	@RequestMapping("/movie")
 	public String movie(HttpServletRequest request, Model model){
 		System.out.println("movie()");
@@ -26,12 +29,11 @@ public class MovieController {
 	}
 	
 	@RequestMapping("/movie_list")
-	public String movie_list(Model model, HttpSession session){
+	public String movie_list(Model model){
 		System.out.println("movie_list()");
-		FilmDAO dao = new FilmDAO();
-		ArrayList<FilmDTO> afdto = dao.film_list();
-		model.addAttribute("test", afdto);
-		session.setAttribute("afdto", afdto);
+//		model.addAttribute("request", request);
+		command = new FilmCommand();
+		command.execute(model);
 		return "movie_list";
 	}
 }

@@ -46,20 +46,12 @@ public class LoginController {
 //	    }
     
     @RequestMapping (value ="loginProcess")
-    public ModelAndView loginProcess(Model model){
-    	
-    	MemberDTO dto = new MemberDTO();
+    public void loginProcess(Model model){
+    	System.out.println("controller_loginProcess()");
     	MemberDAO dao = new MemberDAO();
-    	
-    	ModelAndView mv = new ModelAndView();
-    	mv.setViewName("redirect:login");
-    	
-
-    	
-    	
-    	
-    	return mv;
-	  
+    	MemberDTO dto = dao.member();
+    	model.addAttribute("member",dto);
+    	 
   }
     
 }

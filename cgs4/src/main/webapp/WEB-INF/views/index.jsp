@@ -61,18 +61,35 @@
     	<script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.js"></script> 
 		<script src="http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.3.0/respond.js"></script>		
     <![endif]-->
+
+
+<style>
+html, body {
+	margin: 0;
+	width: 100%;
+	height: 100%;
+}
+</style>
 </head>
 
-<body>
+<body data-vide-bg="<%=ctx%>/resources/video/mainvideo">
+	<script
+		src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<!-- <script>window.jQuery || document.write('<script src="../libs/jquery/dist/jquery.min.js"><\/script>')</script> -->
+	<script src="<%=ctx%>/resources/js/jquery.vide.js"></script>
+	<script>
+		// $(document).ready(function () {
+		//   $(document.body).vide('video/mainvideo'); // Non declarative initialization
+		//
+		//   var instance = $(document.body).data('vide'); // Get the instance
+		//   var video = instance.getVideoObject(); // Get the video object
+		//   instance.destroy(); // Destroy instance
+		// });
+	</script>
 
 
-
-	<!-- <video autoplay loop muted id="background"> -->
-	<%-- <source src = "<%=ctx%>/resources/video/mainvideo.mp4" type="video/mp4"> --%>
-	<!-- </video> -->
 
 	<div class="wrapper">
-
 		<!-- 메인(홈) 헤더 부분 -->
 		<header class="header-wrapper header-wrapper--home">
 		<div class="container">
@@ -395,7 +412,7 @@ Start doing.'><img alt=''
 							data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
 							data-speed="700" data-start="2000" data-endspeed="500"
 							data-end="8400" data-endeasing="Back.easeIn">find your best
-							match movie with A.MOVIE</div>
+							match movie with CGS</div>
 
 						<div class="caption lfb customout slider-wrap-btn" data-x="left"
 							data-y="310" data-speed="500" data-start="2800"
@@ -411,547 +428,610 @@ Start doing.'><img alt=''
 			</div>
 		</div>
 		<!-- 슬라이더 종료 -->
-		<br> <br> <br> <br> <br> <br> <br>
-		<br> <br> <br> <br> <br>
+
 		<!-- Main content -->
-		<!-- 배경화면 비디오 -->
-		<section class="container">
-		<div class="pattern-overlay">
-			<div class="container">
-				<a id="bgndVideo" class="player"
-					data-property="{videoURL: 'https://youtu.be/N6DpyJxRZTY', containment:'body', quality:'hd720', autoplay:true, mute: true, startAt:6, opacity:1}">bg</a>
-				<div class="movie-best">
-					<div class="col-sm-10 col-sm-offset-1 movie-best__rating">Today
-						Best choice</div>
-					<div class="col-sm-12 change--col">
-						<div class="movie-beta__item ">
-							<img alt='' src="http://placehold.it/380x600"> <span
-								class="best-rate">5.0</span>
+		<section class="container" style="width: 100%; height: 1500px;"
+			data-vide-bg="mp4: <%=ctx%>/resources/video/mainvideo, webm: <%=ctx%>/resources/video/mainvideo, ogv: <%=ctx%>/resources/video/mainvideo">
+		<div class="movie-best">
+			<div class="col-sm-10 col-sm-offset-1 movie-best__rating">Today
+				Best choice</div>
+			<div class="col-sm-12 change--col">
+				<div class="movie-beta__item ">
+					<img alt='' src="http://placehold.it/380x600"> <span
+						class="best-rate">5.0</span>
 
-							<ul class="movie-beta__info">
-								<li><span class="best-voted">71 people voted today</span></li>
-								<li>
-									<p class="movie__time">169 min</p>
-									<p>Adventure | Drama | Fantasy</p>
-									<p>38 comments</p>
-								</li>
-								<li class="last-block"><a href="movie-page-left.html"
-									class="slide__link">more</a></li>
-							</ul>
-						</div>
-						<div class="movie-beta__item second--item">
-							<img alt='' src="http://placehold.it/380x600"> <span
-								class="best-rate">5.0</span>
-
-							<ul class="movie-beta__info">
-								<li><span class="best-voted">71 people voted today</span></li>
-								<li>
-									<p class="movie__time">169 min</p>
-									<p>Adventure | Drama | Fantasy</p>
-									<p>38 comments</p>
-								</li>
-								<li class="last-block"><a href="movie-page-left.html"
-									class="slide__link">more</a></li>
-							</ul>
-						</div>
-						<div class="movie-beta__item third--item">
-							<img alt='' src="http://placehold.it/380x600"> <span
-								class="best-rate">5.0</span>
-
-							<ul class="movie-beta__info">
-								<li><span class="best-voted">71 people voted today</span></li>
-								<li>
-									<p class="movie__time">169 min</p>
-									<p>Adventure | Drama | Fantasy</p>
-									<p>38 comments</p>
-								</li>
-								<li class="last-block"><a href="movie-page-left.html"
-									class="slide__link">more</a></li>
-							</ul>
-						</div>
-						<div class="movie-beta__item hidden-xs">
-							<img alt='' src="http://placehold.it/380x600"> <span
-								class="best-rate">5.0</span>
-
-							<ul class="movie-beta__info">
-								<li><span class="best-voted">71 people voted today</span></li>
-								<li>
-									<p class="movie__time">169 min</p>
-									<p>Adventure | Drama | Fantasy</p>
-									<p>38 comments</p>
-								</li>
-								<li class="last-block"><a href="movie-page-left.html"
-									class="slide__link">more</a></li>
-							</ul>
-						</div>
-						<div class="movie-beta__item hidden-xs hidden-sm">
-							<img alt='' src="http://placehold.it/380x600"> <span
-								class="best-rate">5.0</span>
-
-							<ul class="movie-beta__info">
-								<li><span class="best-voted">71 people voted today</span></li>
-								<li>
-									<p class="movie__time">169 min</p>
-									<p>Adventure | Drama | Fantasy</p>
-									<p>38 comments</p>
-								</li>
-								<li class="last-block"><a href="movie-page-left.html"
-									class="slide__link">more</a></li>
-							</ul>
-						</div>
-						<div class="movie-beta__item hidden-xs hidden-sm">
-							<img alt='' src="http://placehold.it/380x600"> <span
-								class="best-rate">5.0</span>
-
-							<ul class="movie-beta__info">
-								<li><span class="best-voted">71 people voted today</span></li>
-								<li>
-									<p class="movie__time">169 min</p>
-									<p>Adventure | Drama | Fantasy</p>
-									<p>38 comments</p>
-								</li>
-								<li class="last-block"><a href="movie-page-left.html"
-									class="slide__link">more</a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="col-sm-10 col-sm-offset-1 movie-best__check">check
-						all movies now playing</div>
+					<ul class="movie-beta__info">
+						<li><span class="best-voted">71 people voted today</span></li>
+						<li>
+							<p class="movie__time">169 min</p>
+							<p>Adventure | Drama | Fantasy</p>
+							<p>38 comments</p>
+						</li>
+						<li class="last-block"><a href="movie-page-left.html"
+							class="slide__link">more</a></li>
+					</ul>
 				</div>
+				<div class="movie-beta__item second--item">
+					<img alt='' src="http://placehold.it/380x600"> <span
+						class="best-rate">5.0</span>
 
-				<div class="col-sm-12">
-					<div class="mega-select-present mega-select-top mega-select--full">
-						<div class="mega-select-marker">
-							<div class="marker-indecator location">
-								<p class="select-marker">
-									<span>movie to watch now</span> <br>in your city
-								</p>
-							</div>
+					<ul class="movie-beta__info">
+						<li><span class="best-voted">71 people voted today</span></li>
+						<li>
+							<p class="movie__time">169 min</p>
+							<p>Adventure | Drama | Fantasy</p>
+							<p>38 comments</p>
+						</li>
+						<li class="last-block"><a href="movie-page-left.html"
+							class="slide__link">more</a></li>
+					</ul>
+				</div>
+				<div class="movie-beta__item third--item">
+					<img alt='' src="http://placehold.it/380x600"> <span
+						class="best-rate">5.0</span>
 
-							<div class="marker-indecator cinema">
-								<p class="select-marker">
-									<span>find your </span> <br>cinema
-								</p>
-							</div>
+					<ul class="movie-beta__info">
+						<li><span class="best-voted">71 people voted today</span></li>
+						<li>
+							<p class="movie__time">169 min</p>
+							<p>Adventure | Drama | Fantasy</p>
+							<p>38 comments</p>
+						</li>
+						<li class="last-block"><a href="movie-page-left.html"
+							class="slide__link">more</a></li>
+					</ul>
+				</div>
+				<div class="movie-beta__item hidden-xs">
+					<img alt='' src="http://placehold.it/380x600"> <span
+						class="best-rate">5.0</span>
 
-							<div class="marker-indecator film-category">
-								<p class="select-marker">
-									<span>find movie due to </span> <br> your mood
-								</p>
-							</div>
+					<ul class="movie-beta__info">
+						<li><span class="best-voted">71 people voted today</span></li>
+						<li>
+							<p class="movie__time">169 min</p>
+							<p>Adventure | Drama | Fantasy</p>
+							<p>38 comments</p>
+						</li>
+						<li class="last-block"><a href="movie-page-left.html"
+							class="slide__link">more</a></li>
+					</ul>
+				</div>
+				<div class="movie-beta__item hidden-xs hidden-sm">
+					<img alt='' src="http://placehold.it/380x600"> <span
+						class="best-rate">5.0</span>
 
-							<div class="marker-indecator actors">
-								<p class="select-marker">
-									<span> like particular stars</span> <br>find them
-								</p>
-							</div>
+					<ul class="movie-beta__info">
+						<li><span class="best-voted">71 people voted today</span></li>
+						<li>
+							<p class="movie__time">169 min</p>
+							<p>Adventure | Drama | Fantasy</p>
+							<p>38 comments</p>
+						</li>
+						<li class="last-block"><a href="movie-page-left.html"
+							class="slide__link">more</a></li>
+					</ul>
+				</div>
+				<div class="movie-beta__item hidden-xs hidden-sm">
+					<img alt='' src="http://placehold.it/380x600"> <span
+						class="best-rate">5.0</span>
 
-							<div class="marker-indecator director">
-								<p class="select-marker">
-									<span>admire personalities - find </span> <br>by director
-								</p>
-							</div>
+					<ul class="movie-beta__info">
+						<li><span class="best-voted">71 people voted today</span></li>
+						<li>
+							<p class="movie__time">169 min</p>
+							<p>Adventure | Drama | Fantasy</p>
+							<p>38 comments</p>
+						</li>
+						<li class="last-block"><a href="movie-page-left.html"
+							class="slide__link">more</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-sm-10 col-sm-offset-1 movie-best__check">check
+				all movies now playing</div>
+		</div>
 
-							<div class="marker-indecator country">
-								<p class="select-marker">
-									<span>search for movie from certain </span> <br>country?
-								</p>
-							</div>
-						</div>
+		<div class="col-sm-12">
+			<div class="mega-select-present mega-select-top mega-select--full">
+				<div class="mega-select-marker">
+					<div class="marker-indecator location">
+						<p class="select-marker">
+							<span>movie to watch now</span> <br>in your city
+						</p>
+					</div>
 
-						<div class="mega-select pull-right">
-							<span class="mega-select__point">Search by</span>
-							<ul class="mega-select__sort">
-								<li class="filter-wrap"><a href="#"
-									class="mega-select__filter filter--active"
-									data-filter='location'>Location</a></li>
-								<li class="filter-wrap"><a href="#"
-									class="mega-select__filter" data-filter='cinema'>Cinema</a></li>
-								<li class="filter-wrap"><a href="#"
-									class="mega-select__filter" data-filter='film-category'>Category</a></li>
-								<li class="filter-wrap"><a href="#"
-									class="mega-select__filter" data-filter='actors'>Actors</a></li>
-								<li class="filter-wrap"><a href="#"
-									class="mega-select__filter" data-filter='director'>Director</a></li>
-								<li class="filter-wrap"><a href="#"
-									class="mega-select__filter" data-filter='country'>Country</a></li>
-							</ul>
+					<div class="marker-indecator cinema">
+						<p class="select-marker">
+							<span>find your </span> <br>cinema
+						</p>
+					</div>
 
-							<input name="search-input" type='text' class="select__field">
+					<div class="marker-indecator film-category">
+						<p class="select-marker">
+							<span>find movie due to </span> <br> your mood
+						</p>
+					</div>
 
-							<div class="select__btn">
-								<a href="#" class="btn btn-md btn--danger location">find <span
-									class="hidden-exrtasm">your city</span></a> <a href="#"
-									class="btn btn-md btn--danger cinema">find <span
-									class="hidden-exrtasm">suitable cimema</span></a> <a href="#"
-									class="btn btn-md btn--danger film-category">find <span
-									class="hidden-exrtasm">best category</span></a> <a href="#"
-									class="btn btn-md btn--danger actors">find <span
-									class="hidden-exrtasm">talented actors</span></a> <a href="#"
-									class="btn btn-md btn--danger director">find <span
-									class="hidden-exrtasm">favorite director</span></a> <a href="#"
-									class="btn btn-md btn--danger country">find <span
-									class="hidden-exrtasm">produced country</span></a>
-							</div>
+					<div class="marker-indecator actors">
+						<p class="select-marker">
+							<span> like particular stars</span> <br>find them
+						</p>
+					</div>
 
-							<div class="select__dropdowns">
-								<ul class="select__group location">
-									<li class="select__variant" data-value='London'>London</li>
-									<li class="select__variant" data-value='New York'>New York</li>
-									<li class="select__variant" data-value='Paris'>Paris</li>
-									<li class="select__variant" data-value='Berlin'>Berlin</li>
-									<li class="select__variant" data-value='Moscow'>Moscow</li>
-									<li class="select__variant" data-value='Minsk'>Minsk</li>
-									<li class="select__variant" data-value='Warsawa'>Warsawa</li>
-								</ul>
+					<div class="marker-indecator director">
+						<p class="select-marker">
+							<span>admire personalities - find </span> <br>by director
+						</p>
+					</div>
 
-								<ul class="select__group cinema">
-									<li class="select__variant" data-value='Cineworld'>Cineworld</li>
-									<li class="select__variant" data-value='Empire'>Empire</li>
-									<li class="select__variant" data-value='Everyman'>Everyman</li>
-									<li class="select__variant" data-value='Odeon'>Odeon</li>
-									<li class="select__variant" data-value='Picturehouse'>Picturehouse</li>
-								</ul>
-
-								<ul class="select__group film-category">
-									<li class="select__variant" data-value="Children's">Children's</li>
-									<li class="select__variant" data-value='Comedy'>Comedy</li>
-									<li class="select__variant" data-value='Drama'>Drama</li>
-									<li class="select__variant" data-value='Fantasy'>Fantasy</li>
-									<li class="select__variant" data-value='Horror'>Horror</li>
-									<li class="select__variant" data-value='Thriller'>Thriller</li>
-								</ul>
-
-								<ul class="select__group actors">
-									<li class="select__variant" data-value='Leonardo DiCaprio'>Leonardo
-										DiCaprio</li>
-									<li class="select__variant" data-value='Johnny Depp'>Johnny
-										Depp</li>
-									<li class="select__variant" data-value='Jack Nicholson'>Jack
-										Nicholson</li>
-									<li class="select__variant" data-value='Robert De Niro'>Robert
-										De Niro</li>
-									<li class="select__variant" data-value='Morgan Freeman'>Morgan
-										Freeman</li>
-									<li class="select__variant" data-value='Jim Carrey'>Jim
-										Carrey</li>
-									<li class="select__variant" data-value='Adam Sandler'>Adam
-										Sandler</li>
-									<li class="select__variant" data-value='Ben Stiller'>Ben
-										Stiller</li>
-								</ul>
-
-								<ul class="select__group director">
-									<li class="select__variant" data-value='Steven Spielberg'>Steven
-										Spielberg</li>
-									<li class="select__variant" data-value='Martin Scorsese'>Martin
-										Scorsese</li>
-									<li class="select__variant" data-value='Guy Ritchie'>Guy
-										Ritchie</li>
-									<li class="select__variant" data-value='Christopher Nolan'>Christopher
-										Nolan</li>
-									<li class="select__variant" data-value='Tim Burton'>Tim
-										Burton</li>
-								</ul>
-
-								<ul class="select__group country">
-									<li class="select__variant" data-value='USA'>USA</li>
-									<li class="select__variant" data-value='Germany'>Germany</li>
-									<li class="select__variant" data-value='Australia'>Australia</li>
-									<li class="select__variant" data-value='UK'>UK</li>
-									<li class="select__variant" data-value='Japan'>Japan</li>
-									<li class="select__variant" data-value='Serbia'>Serbia</li>
-								</ul>
-							</div>
-						</div>
+					<div class="marker-indecator country">
+						<p class="select-marker">
+							<span>search for movie from certain </span> <br>country?
+						</p>
 					</div>
 				</div>
 
-				<div class="clearfix"></div>
+				<div class="mega-select pull-right">
+					<span class="mega-select__point">Search by</span>
+					<ul class="mega-select__sort">
+						<li class="filter-wrap"><a href="#"
+							class="mega-select__filter filter--active" data-filter='location'>Location</a></li>
+						<li class="filter-wrap"><a href="#"
+							class="mega-select__filter" data-filter='cinema'>Cinema</a></li>
+						<li class="filter-wrap"><a href="#"
+							class="mega-select__filter" data-filter='film-category'>Category</a></li>
+						<li class="filter-wrap"><a href="#"
+							class="mega-select__filter" data-filter='actors'>Actors</a></li>
+						<li class="filter-wrap"><a href="#"
+							class="mega-select__filter" data-filter='director'>Director</a></li>
+						<li class="filter-wrap"><a href="#"
+							class="mega-select__filter" data-filter='country'>Country</a></li>
+					</ul>
 
-				<h2 id='target' class="page-heading heading--outcontainer">Now
-					in the cinema</h2>
+					<input name="search-input" type='text' class="select__field">
 
-				<div class="col-sm-12">
-					<div class="row">
-						<div class="col-sm-8 col-md-9">
-							<!-- Movie variant with time -->
-							<div
-								class="movie movie--test movie--test--dark movie--test--left">
-								<div class="movie__images">
-									<a href="movie-page-left.html" class="movie-beta__link"> <img
-										alt='' src="http://placehold.it/424x424">
-									</a>
-								</div>
+					<div class="select__btn">
+						<a href="#" class="btn btn-md btn--danger location">find <span
+							class="hidden-exrtasm">your city</span></a> <a href="#"
+							class="btn btn-md btn--danger cinema">find <span
+							class="hidden-exrtasm">suitable cimema</span></a> <a href="#"
+							class="btn btn-md btn--danger film-category">find <span
+							class="hidden-exrtasm">best category</span></a> <a href="#"
+							class="btn btn-md btn--danger actors">find <span
+							class="hidden-exrtasm">talented actors</span></a> <a href="#"
+							class="btn btn-md btn--danger director">find <span
+							class="hidden-exrtasm">favorite director</span></a> <a href="#"
+							class="btn btn-md btn--danger country">find <span
+							class="hidden-exrtasm">produced country</span></a>
+					</div>
 
-								<div class="movie__info">
-									<a href='movie-page-left.html' class="movie__title">Gravity
-										(2013) </a>
+					<div class="select__dropdowns">
+						<ul class="select__group location">
+							<li class="select__variant" data-value='London'>London</li>
+							<li class="select__variant" data-value='New York'>New York</li>
+							<li class="select__variant" data-value='Paris'>Paris</li>
+							<li class="select__variant" data-value='Berlin'>Berlin</li>
+							<li class="select__variant" data-value='Moscow'>Moscow</li>
+							<li class="select__variant" data-value='Minsk'>Minsk</li>
+							<li class="select__variant" data-value='Warsawa'>Warsawa</li>
+						</ul>
 
-									<p class="movie__time">91 min</p>
+						<ul class="select__group cinema">
+							<li class="select__variant" data-value='Cineworld'>Cineworld</li>
+							<li class="select__variant" data-value='Empire'>Empire</li>
+							<li class="select__variant" data-value='Everyman'>Everyman</li>
+							<li class="select__variant" data-value='Odeon'>Odeon</li>
+							<li class="select__variant" data-value='Picturehouse'>Picturehouse</li>
+						</ul>
 
-									<p class="movie__option">
-										<a href="#">Sci-Fi</a> | <a href="#">Thriller</a> | <a
-											href="#">Drama</a>
-									</p>
+						<ul class="select__group film-category">
+							<li class="select__variant" data-value="Children's">Children's</li>
+							<li class="select__variant" data-value='Comedy'>Comedy</li>
+							<li class="select__variant" data-value='Drama'>Drama</li>
+							<li class="select__variant" data-value='Fantasy'>Fantasy</li>
+							<li class="select__variant" data-value='Horror'>Horror</li>
+							<li class="select__variant" data-value='Thriller'>Thriller</li>
+						</ul>
 
-									<div class="movie__rate">
-										<div class="score"></div>
-										<span class="movie__rating">4.1</span>
-									</div>
-								</div>
-							</div>
-							<!-- Movie variant with time -->
+						<ul class="select__group actors">
+							<li class="select__variant" data-value='Leonardo DiCaprio'>Leonardo
+								DiCaprio</li>
+							<li class="select__variant" data-value='Johnny Depp'>Johnny
+								Depp</li>
+							<li class="select__variant" data-value='Jack Nicholson'>Jack
+								Nicholson</li>
+							<li class="select__variant" data-value='Robert De Niro'>Robert
+								De Niro</li>
+							<li class="select__variant" data-value='Morgan Freeman'>Morgan
+								Freeman</li>
+							<li class="select__variant" data-value='Jim Carrey'>Jim
+								Carrey</li>
+							<li class="select__variant" data-value='Adam Sandler'>Adam
+								Sandler</li>
+							<li class="select__variant" data-value='Ben Stiller'>Ben
+								Stiller</li>
+						</ul>
 
-							<!-- Movie variant with time -->
-							<div
-								class="movie movie--test movie--test--light movie--test--left">
-								<div class="movie__images">
-									<a href="movie-page-left.html" class="movie-beta__link"> <img
-										alt='' src="http://placehold.it/424x424">
-									</a>
-								</div>
+						<ul class="select__group director">
+							<li class="select__variant" data-value='Steven Spielberg'>Steven
+								Spielberg</li>
+							<li class="select__variant" data-value='Martin Scorsese'>Martin
+								Scorsese</li>
+							<li class="select__variant" data-value='Guy Ritchie'>Guy
+								Ritchie</li>
+							<li class="select__variant" data-value='Christopher Nolan'>Christopher
+								Nolan</li>
+							<li class="select__variant" data-value='Tim Burton'>Tim
+								Burton</li>
+						</ul>
 
-								<div class="movie__info">
-									<a href='movie-page-left.html' class="movie__title">The
-										Hobbit: The Desolation of Smaug (2013) </a>
-
-									<p class="movie__time">169 min</p>
-
-									<p class="movie__option">
-										<a href="#">Adventure</a> | <a href="#">Fantasy</a> | <a
-											href="#">Drama</a>
-									</p>
-
-									<div class="movie__rate">
-										<div class="score"></div>
-										<span class="movie__rating">5.0</span>
-									</div>
-								</div>
-							</div>
-							<!-- Movie variant with time -->
-
-							<!-- Movie variant with time -->
-							<div
-								class="movie movie--test movie--test--light movie--test--right">
-								<div class="movie__images">
-									<a href="movie-page-left.html" class="movie-beta__link"> <img
-										alt='' src="http://placehold.it/424x424">
-									</a>
-								</div>
-
-								<div class="movie__info">
-									<a href='movie-page-left.html' class="movie__title">The
-										Hunger Games: Catching Fire (2013) </a>
-
-									<p class="movie__time">146 min</p>
-
-									<p class="movie__option">
-										<a href="#">Action</a> | <a href="#">Adventure</a> | <a
-											href="#">Sci-Fi</a>
-									</p>
-
-									<div class="movie__rate">
-										<div class="score"></div>
-										<span class="movie__rating">4.9</span>
-									</div>
-								</div>
-							</div>
-							<!-- Movie variant with time -->
-
-							<!-- Movie variant with time -->
-							<div
-								class="movie movie--test movie--test--dark movie--test--right">
-								<div class="movie__images">
-									<a href="movie-page-left.html" class="movie-beta__link"> <img
-										alt='' src="http://placehold.it/424x424">
-									</a>
-								</div>
-
-								<div class="movie__info">
-									<a href='movie-page-left.html' class="movie__title">Thor:
-										The Dark World (2013) </a>
-
-									<p class="movie__time">112 min</p>
-
-									<p class="movie__option">
-										<a href="#">Action</a> | <a href="#">Adventure</a> | <a
-											href="#">Fantasy</a>
-									</p>
-
-									<div class="movie__rate">
-										<div class="score"></div>
-										<span class="movie__rating">5.0</span>
-									</div>
-								</div>
-							</div>
-							<!-- Movie variant with time -->
-
-							<!-- Movie variant with time -->
-							<div
-								class="movie movie--test movie--test--dark movie--test--left">
-								<div class="movie__images">
-									<a href="movie-page-left.html" class="movie-beta__link"> <img
-										alt='' src="http://placehold.it/424x424">
-									</a>
-								</div>
-
-								<div class="movie__info">
-									<a href='movie-page-left.html' class="movie__title">World
-										War Z (2013) </a>
-
-									<p class="movie__time">116 min</p>
-
-									<p class="movie__option">
-										<a href="#">Action</a> | <a href="#">Adventure</a> | <a
-											href="#">Horror</a>
-									</p>
-
-									<div class="movie__rate">
-										<div class="score"></div>
-										<span class="movie__rating">4.1</span>
-									</div>
-								</div>
-							</div>
-							<!-- Movie variant with time -->
-
-							<!-- Movie variant with time -->
-							<div
-								class="movie movie--test movie--test--light movie--test--left">
-								<div class="movie__images">
-									<a href="movie-page-left.html" class="movie-beta__link"> <img
-										alt='' src="http://placehold.it/424x424">
-									</a>
-								</div>
-
-								<div class="movie__info">
-									<a href='movie-page-left.html' class="movie__title">Prisoners
-										(2013) </a>
-
-									<p class="movie__time">153 min</p>
-
-									<p class="movie__option">
-										<a href="#">Crime</a> | <a href="#">Thriller</a> | <a href="#">Drama</a>
-									</p>
-
-									<div class="movie__rate">
-										<div class="score"></div>
-										<span class="movie__rating">5.0</span>
-									</div>
-								</div>
-							</div>
-							<!-- Movie variant with time -->
-
-							<!-- Movie variant with time -->
-							<div
-								class="movie movie--test movie--test--light movie--test--right">
-								<div class="movie__images">
-									<a href="movie-page-left.html" class="movie-beta__link"> <img
-										alt='' src="http://placehold.it/424x424">
-									</a>
-								</div>
-
-								<div class="movie__info">
-									<a href='movie-page-left.html' class="movie__title">This Is
-										the End (2013) </a>
-
-									<p class="movie__time">107 min</p>
-
-									<p class="movie__option">
-										<a href="#">Comedy</a> | <a href="#">Fantasy</a>
-									</p>
-
-									<div class="movie__rate">
-										<div class="score"></div>
-										<span class="movie__rating">4.9</span>
-									</div>
-								</div>
-							</div>
-							<!-- Movie variant with time -->
-
-							<!-- Movie variant with time -->
-							<div
-								class="movie movie--test movie--test--dark movie--test--right">
-								<div class="movie__images">
-									<a href="movie-page-left.html" class="movie-beta__link"> <img
-										alt='' src="http://placehold.it/424x424">
-									</a>
-								</div>
-
-								<div class="movie__info">
-									<a href='movie-page-left.html' class="movie__title">The
-										Internship (2013) </a>
-
-									<p class="movie__time">112 min</p>
-
-									<p class="movie__option">
-										<a href="#">Comedy</a>
-									</p>
-
-									<div class="movie__rate">
-										<div class="score"></div>
-										<span class="movie__rating">5.0</span>
-									</div>
-								</div>
-							</div>
-							<!-- Movie variant with time -->
-
-							<div class="row">
-								<div class="social-group">
-									<div class="social-group__head">
-										Join <br>our social groups
-									</div>
-									<div class="social-group__content">
-										A lot of fun, discussions, queezes and contests among members.
-										<br class="hidden-xs"> <br>Always be first to know
-										about best offers from cinemas and our partners
-									</div>
-									<div class="clearfix visible-sm"></div>
-								</div>
-							</div>
-						</div>
-
-						<aside class="col-sm-4 col-md-3">
-						<div class="sitebar first-banner--left">
-							<div class="banner-wrap first-banner--left">
-								<img alt='banner' src="http://placehold.it/500x500">
-							</div>
-
-							<div class="banner-wrap">
-								<img alt='banner' src="http://placehold.it/500x500">
-							</div>
-
-							<div class="banner-wrap banner-wrap--last">
-								<img alt='banner' src="http://placehold.it/500x500">
-							</div>
-
-							<div class="promo marginb-sm">
-								<div class="promo__head">A.Movie app</div>
-								<div class="promo__describe">
-									for all smartphones<br> and tablets
-								</div>
-								<div class="promo__content">
-									<ul>
-										<li class="store-variant"><a href="#"><img alt=''
-												src="<%=ctx%>/resources/images/apple-store.svg"></a></li>
-										<li class="store-variant"><a href="#"><img alt=''
-												src="<%=ctx%>/resources/images/google-play.svg"></a></li>
-										<li class="store-variant"><a href="#"><img alt=''
-												src="<%=ctx%>/resources/images/windows-store.svg"></a></li>
-									</ul>
-								</div>
-							</div>
-						</div>
-						</aside>
+						<ul class="select__group country">
+							<li class="select__variant" data-value='USA'>USA</li>
+							<li class="select__variant" data-value='Germany'>Germany</li>
+							<li class="select__variant" data-value='Australia'>Australia</li>
+							<li class="select__variant" data-value='UK'>UK</li>
+							<li class="select__variant" data-value='Japan'>Japan</li>
+							<li class="select__variant" data-value='Serbia'>Serbia</li>
+						</ul>
 					</div>
 				</div>
 			</div>
 		</div>
-		</section>
 
 		<div class="clearfix"></div>
 
-		<footer class="footer-wrapper"> <section class="container">
+		<h2 id='target' class="page-heading heading--outcontainer">Now
+			in the cinema</h2>
+
+		<div class="col-sm-12"
+			data-vide-bg="mp4: <%=ctx%>/resources/video/mainvideo, webm: <%=ctx%>/resources/video/mainvideo, ogv: <%=ctx%>/resources/video/mainvideo">
+			<div class="row">
+				<div class="col-sm-8 col-md-9">
+					<!-- Movie variant with time -->
+					<div class="movie movie--test movie--test--dark movie--test--left">
+						<div class="movie__images">
+							<a href="movie-page-left.html" class="movie-beta__link"> <img
+								alt='' src="http://placehold.it/424x424">
+							</a>
+						</div>
+
+						<div class="movie__info">
+							<a href='movie-page-left.html' class="movie__title">Gravity
+								(2013) </a>
+
+							<p class="movie__time">91 min</p>
+
+							<p class="movie__option">
+								<a href="#">Sci-Fi</a> | <a href="#">Thriller</a> | <a href="#">Drama</a>
+							</p>
+
+							<div class="movie__rate">
+								<div class="score"></div>
+								<span class="movie__rating">4.1</span>
+							</div>
+						</div>
+					</div>
+					<!-- Movie variant with time -->
+
+					<!-- Movie variant with time -->
+					<div class="movie movie--test movie--test--light movie--test--left">
+						<div class="movie__images">
+							<a href="movie-page-left.html" class="movie-beta__link"> <img
+								alt='' src="http://placehold.it/424x424">
+							</a>
+						</div>
+
+						<div class="movie__info">
+							<a href='movie-page-left.html' class="movie__title">The
+								Hobbit: The Desolation of Smaug (2013) </a>
+
+							<p class="movie__time">169 min</p>
+
+							<p class="movie__option">
+								<a href="#">Adventure</a> | <a href="#">Fantasy</a> | <a
+									href="#">Drama</a>
+							</p>
+
+							<div class="movie__rate">
+								<div class="score"></div>
+								<span class="movie__rating">5.0</span>
+							</div>
+						</div>
+					</div>
+					<!-- Movie variant with time -->
+
+					<!-- Movie variant with time -->
+					<div
+						class="movie movie--test movie--test--light movie--test--right">
+						<div class="movie__images">
+							<a href="movie-page-left.html" class="movie-beta__link"> <img
+								alt='' src="http://placehold.it/424x424">
+							</a>
+						</div>
+
+						<div class="movie__info">
+							<a href='movie-page-left.html' class="movie__title">The
+								Hunger Games: Catching Fire (2013) </a>
+
+							<p class="movie__time">146 min</p>
+
+							<p class="movie__option">
+								<a href="#">Action</a> | <a href="#">Adventure</a> | <a href="#">Sci-Fi</a>
+							</p>
+
+							<div class="movie__rate">
+								<div class="score"></div>
+								<span class="movie__rating">4.9</span>
+							</div>
+						</div>
+					</div>
+					<!-- Movie variant with time -->
+
+					<!-- Movie variant with time -->
+					<div class="movie movie--test movie--test--dark movie--test--right">
+						<div class="movie__images">
+							<a href="movie-page-left.html" class="movie-beta__link"> <img
+								alt='' src="http://placehold.it/424x424">
+							</a>
+						</div>
+
+						<div class="movie__info">
+							<a href='movie-page-left.html' class="movie__title">Thor: The
+								Dark World (2013) </a>
+
+							<p class="movie__time">112 min</p>
+
+							<p class="movie__option">
+								<a href="#">Action</a> | <a href="#">Adventure</a> | <a href="#">Fantasy</a>
+							</p>
+
+							<div class="movie__rate">
+								<div class="score"></div>
+								<span class="movie__rating">5.0</span>
+							</div>
+						</div>
+					</div>
+					<!-- Movie variant with time -->
+
+					<!-- Movie variant with time -->
+					<div class="movie movie--test movie--test--dark movie--test--left">
+						<div class="movie__images">
+							<a href="movie-page-left.html" class="movie-beta__link"> <img
+								alt='' src="http://placehold.it/424x424">
+							</a>
+						</div>
+
+						<div class="movie__info">
+							<a href='movie-page-left.html' class="movie__title">World War
+								Z (2013) </a>
+
+							<p class="movie__time">116 min</p>
+
+							<p class="movie__option">
+								<a href="#">Action</a> | <a href="#">Adventure</a> | <a href="#">Horror</a>
+							</p>
+
+							<div class="movie__rate">
+								<div class="score"></div>
+								<span class="movie__rating">4.1</span>
+							</div>
+						</div>
+					</div>
+					<!-- Movie variant with time -->
+
+					<!-- Movie variant with time -->
+					<div class="movie movie--test movie--test--light movie--test--left">
+						<div class="movie__images">
+							<a href="movie-page-left.html" class="movie-beta__link"> <img
+								alt='' src="http://placehold.it/424x424">
+							</a>
+						</div>
+
+						<div class="movie__info">
+							<a href='movie-page-left.html' class="movie__title">Prisoners
+								(2013) </a>
+
+							<p class="movie__time">153 min</p>
+
+							<p class="movie__option">
+								<a href="#">Crime</a> | <a href="#">Thriller</a> | <a href="#">Drama</a>
+							</p>
+
+							<div class="movie__rate">
+								<div class="score"></div>
+								<span class="movie__rating">5.0</span>
+							</div>
+						</div>
+					</div>
+					<!-- Movie variant with time -->
+
+					<!-- Movie variant with time -->
+					<div
+						class="movie movie--test movie--test--light movie--test--right">
+						<div class="movie__images">
+							<a href="movie-page-left.html" class="movie-beta__link"> <img
+								alt='' src="http://placehold.it/424x424">
+							</a>
+						</div>
+
+						<div class="movie__info">
+							<a href='movie-page-left.html' class="movie__title">This Is
+								the End (2013) </a>
+
+							<p class="movie__time">107 min</p>
+
+							<p class="movie__option">
+								<a href="#">Comedy</a> | <a href="#">Fantasy</a>
+							</p>
+
+							<div class="movie__rate">
+								<div class="score"></div>
+								<span class="movie__rating">4.9</span>
+							</div>
+						</div>
+					</div>
+					<!-- Movie variant with time -->
+
+					<!-- Movie variant with time -->
+					<div class="movie movie--test movie--test--dark movie--test--right">
+						<div class="movie__images">
+							<a href="movie-page-left.html" class="movie-beta__link"> <img
+								alt='' src="http://placehold.it/424x424">
+							</a>
+						</div>
+
+						<div class="movie__info">
+							<a href='movie-page-left.html' class="movie__title">The
+								Internship (2013) </a>
+
+							<p class="movie__time">112 min</p>
+
+							<p class="movie__option">
+								<a href="#">Comedy</a>
+							</p>
+
+							<div class="movie__rate">
+								<div class="score"></div>
+								<span class="movie__rating">5.0</span>
+							</div>
+						</div>
+					</div>
+					<!-- Movie variant with time -->
+
+
+					<div class="row">
+						<div class="social-group">
+							<div class="col-sm-6 col-md-4 col-sm-push-6 col-md-push-4">
+								<div class="social-group__head">
+									Join <br>our social groups
+								</div>
+								<div class="social-group__content">
+									A lot of fun, discussions, queezes and contests among members.
+									<br class="hidden-xs"> <br>Always be first to know
+									about best offers from cinemas and our partners
+								</div>
+							</div>
+
+							<div class="col-sm-6 col-md-4 col-sm-pull-6 col-md-pull-4">
+								<div class="facebook-group">
+
+									<iframe class="fgroup"
+										src="http://www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fthemeforest&amp;width=240&amp;height=330&amp;colorscheme=light&amp;show_faces=true&amp;header=false&amp;stream=false&amp;show_border=false"
+										scrolling="no" frameborder="0"
+										style="border: none; overflow: hidden; width: 240px; height: 330px;"
+										allowTransparency="true"></iframe>
+								</div>
+							</div>
+
+							<div class="clearfix visible-sm"></div>
+							<div class="col-sm-6 col-md-4">
+								<div class="twitter-group">
+									<div id="twitter-feed"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<aside class="col-sm-4 col-md-3">
+				<div class="sitebar first-banner--left">
+					<div class="banner-wrap first-banner--left">
+						<img alt='banner' src="http://placehold.it/500x500">
+					</div>
+
+					<div class="banner-wrap">
+						<img alt='banner' src="http://placehold.it/500x500">
+					</div>
+
+					<div class="banner-wrap banner-wrap--last">
+						<img alt='banner' src="http://placehold.it/500x500">
+					</div>
+
+					<div class="promo marginb-sm">
+						<div class="promo__head">A.Movie app</div>
+						<div class="promo__describe">
+							for all smartphones<br> and tablets
+						</div>
+						<div class="promo__content">
+							<ul>
+								<li class="store-variant"><a href="#"><img alt=''
+										src="images/apple-store.svg"></a></li>
+								<li class="store-variant"><a href="#"><img alt=''
+										src="images/google-play.svg"></a></li>
+								<li class="store-variant"><a href="#"><img alt=''
+										src="images/windows-store.svg"></a></li>
+							</ul>
+						</div>
+					</div>
+
+				</div>
+				</aside>
+			</div>
+		</div>
+
+		<div class="col-sm-12"
+			data-vide-bg="mp4: <%=ctx%>/resources/video/mainvideo, webm: <%=ctx%>/resources/video/mainvideo, ogv: <%=ctx%>/resources/video/mainvideo">
+			<h2 class="page-heading">Latest news</h2>
+
+			<div class="col-sm-4 similar-wrap col--remove">
+				<div class="post post--preview post--preview--wide">
+					<div class="post__image">
+						<img alt='' src="http://placehold.it/270x330">
+						<div class="social social--position social--hide">
+							<span class="social__name">Share:</span> <a href='#'
+								class="social__variant social--first fa fa-facebook"></a> <a
+								href='#' class="social__variant social--second fa fa-twitter"></a>
+							<a href='#' class="social__variant social--third fa fa-vk"></a>
+						</div>
+					</div>
+					<p class="post__date">22 October 2013</p>
+					<a href="single-page-left.html" class="post__title">"Thor: The
+						Dark World" - World Premiere</a> <a href="single-page-left.html"
+						class="btn read-more post--btn">read more</a>
+				</div>
+			</div>
+			<div class="col-sm-4 similar-wrap col--remove">
+				<div class="post post--preview post--preview--wide">
+					<div class="post__image">
+						<img alt='' src="http://placehold.it/270x330">
+						<div class="social social--position social--hide">
+							<span class="social__name">Share:</span> <a href='#'
+								class="social__variant social--first fa fa-facebook"></a> <a
+								href='#' class="social__variant social--second fa fa-twitter"></a>
+							<a href='#' class="social__variant social--third fa fa-vk"></a>
+						</div>
+					</div>
+					<p class="post__date">22 October 2013</p>
+					<a href="single-page-left.html" class="post__title">30th Annual
+						Night Of Stars Presented By The Fashion Group International</a> <a
+						href="single-page-left.html" class="btn read-more post--btn">read
+						more</a>
+				</div>
+			</div>
+			<div class="col-sm-4 similar-wrap col--remove">
+				<div class="post post--preview post--preview--wide">
+					<div class="post__image">
+						<img alt='' src="http://placehold.it/270x330">
+						<div class="social social--position social--hide">
+							<span class="social__name">Share:</span> <a href='#'
+								class="social__variant social--first fa fa-facebook"></a> <a
+								href='#' class="social__variant social--second fa fa-twitter"></a>
+							<a href='#' class="social__variant social--third fa fa-vk"></a>
+						</div>
+					</div>
+					<p class="post__date">22 October 2013</p>
+					<a href="single-page-left.html" class="post__title">Hollywood
+						Film Awards 2013</a> <a href="single-page-left.html"
+						class="btn read-more post--btn">read more</a>
+				</div>
+			</div>
+		</div>
+		</section>
+		<div class="clearfix"></div>
+
+		<footer class="footer-wrapper"
+			data-vide-bg="mp4: <%=ctx%>/resources/video/mainvideo, webm: <%=ctx%>/resources/video/mainvideo, ogv: <%=ctx%>/resources/video/mainvideo">
+		<section class="container">
 		<div class="col-xs-4 col-md-2 footer-nav">
 			<ul class="nav-link">
 				<li><a href="#" class="nav-link__item">Cities</a></li>
@@ -984,14 +1064,7 @@ Start doing.'><img alt=''
 					CGS<br> <span class="title-edition">in the social media</span>
 				</p>
 
-				<div class="social">
-					<a href='#' class="social__variant fa fa-facebook"></a> <a href='#'
-						class="social__variant fa fa-twitter"></a> <a href='#'
-						class="social__variant fa fa-vk"></a> <a href='#'
-						class="social__variant fa fa-instagram"></a> <a href='#'
-						class="social__variant fa fa-tumblr"></a> <a href='#'
-						class="social__variant fa fa-pinterest"></a>
-				</div>
+
 
 				<div class="clearfix"></div>
 				<p class="copy">&copy; CGS, 2013. All rights reserved. Done by
@@ -1091,11 +1164,5 @@ Start doing.'><img alt=''
 		});
 	</script>
 
-	<!-- 비디오 배경화면 -->
-	<script>
-		$(document).ready(function() {
-			$(".player").mb_YTPlayer();
-		});
-	</script>
 </body>
 </html>

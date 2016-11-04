@@ -82,14 +82,14 @@ $('.login').submit(function(e) {
 		var error = 0;
 		var self = $(this);
 		
-	    var $email = self.find('[type=email]');
+	    var $email = self.find('[type=text]');
 	    var $pass = self.find('[type=password]');
 		
 				
 		var emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
 		
   		if(!emailRegex.test($email.val())) {
-			createErrTult("Error! Wrong email!", $email)
+			createErrTult("존재하지 않는 아이디입니다. ", $email)
 			error++;	
 		}
 
@@ -97,7 +97,7 @@ $('.login').submit(function(e) {
 			$pass.removeClass('invalid_field');			
 		} 
 		else {
-			createErrTult('Error! Wrong password!', $pass)
+			createErrTult('아이디나 비밀번호가 틀렸습니다.', $pass)
 			error++;
 		}
 		

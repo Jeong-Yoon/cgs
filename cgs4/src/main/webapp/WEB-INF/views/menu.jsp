@@ -1,5 +1,7 @@
+<%@page import="java.io.PrintWriter"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <%
 	String ctx = request.getContextPath();
@@ -50,19 +52,23 @@
 							src="http://placehold.it/31x31">
 						</span>
 					</div>
-					<a href="#" class="btn btn--sign btn--singin"> 내정보 </a>
+					<a href="#" class="btn btn--sign btn--singin">${member_list.name} </a>
 					<ul class="auth__function">
 						<!-- 내정보 버튼 눌렀을 시 뜨는 서브창 -->
 						<li><a href="#" class="auth__function-item">내가본영화</a></li>
 						<li><a href="#" class="auth__function-item">예매 내역</a></li>
 						<li><a href="#" class="auth__function-item">내가쓴리뷰</a></li>
 						<li><a href="#" class="auth__function-item">환경설정</a></li>
-					</ul>
+					</ul>	
 				</div>
 				<!-- 예매하기 버튼 누르면 login 요청하는 창이 뜸 -->
 				<a href="#"
 					class="btn btn-md btn--warning btn--book btn-control--home login-window"><Strong>빠른예매
-				</Strong>></a>
+				</Strong>></a>  <%if(request.getAttribute("id")==null){%>
+				 <a href="logout" class="btn btn-md btn--warning btn--wider">로그인</a>
+				<%}else{ %>
+				<a href="logout" class="btn btn-md btn--warning btn--wider">로그아웃</a>
+				<%} %>
 			</div>
 
 		</div>

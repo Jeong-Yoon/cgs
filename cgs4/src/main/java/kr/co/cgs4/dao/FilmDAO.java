@@ -1,12 +1,14 @@
 package kr.co.cgs4.dao;
 
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 import java.util.ArrayList;
 
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.PreparedStatementSetter;
 
 import kr.co.cgs4.util.Constant;
-
 import kr.co.cgs4.dto.FilmDTO;
 import kr.co.cgs4.dto.ScreenDTO;
 
@@ -23,8 +25,10 @@ public class FilmDAO {
 		return (FilmDTO) template.queryForObject(query, new BeanPropertyRowMapper<FilmDTO>(FilmDTO.class));
 	}
 	
-	public ArrayList<FilmDTO> film_list(){
-		String query = "select * from film order by film_ID desc";
+	public ArrayList<FilmDTO> film_list(final int page){
+		int statNum = page*12+1;
+		int endNum = (page+1)*12;
+		String query = "select rownum, a.* from (select * from film order by film_ID desc) a where rownum >= " + statNum + " and rownum <= " + endNum ;
 		return (ArrayList<FilmDTO>)template.query(query, new BeanPropertyRowMapper<FilmDTO>(FilmDTO.class));
 	}
 	

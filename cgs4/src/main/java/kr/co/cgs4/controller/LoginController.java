@@ -1,10 +1,14 @@
 package kr.co.cgs4.controller;
 
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -35,78 +39,39 @@ public class LoginController {
         return "redirect:index";
     }
 	
-	//로그인 처리
-//	@RequestMapping(value="loginProcess", method = RequestMethod.POST)
-//	public ModelAndView loginProcess(Model model, HttpSession session, HttpServletRequest request) {
-//		
-//	
-//	ModelAndView mav = new ModelAndView();
-//	mav.setViewName("redirect:login");
-//	MemberDTO loginUser = loginBO.findByUserIdAndPassword(user.getUserId(), user.getPassword());
-//	if (loginUser != null) {
-//	session.setAttribute("userLoginInfo", loginUser);
-//	}
-//	return mav;
-//	    }
-    
+    //로그인 프로세스
     @RequestMapping (value ="loginProcess")
-    public void loginProcess(Model model ,HttpServletRequest request){
-    	//입력받은 아이디와 비밀번호 받기!
-    	String id = request.getParameter("user-email");
-    	String pw = request.getParameter("user-password");
+    public String loginProcess(Model model ,HttpServletRequest request, HttpServletResponse response) {
+    	String getid = request.getParameter("user-email");
+    	String getpw = request.getParameter("user-password");
     	
     	
+    	//입력받은 아이디와 비밀번호 받기! //session으로
+
     	
+    	//데이터 가져오기
+    	MemberDAO dao = new MemberDAO();   	
+    	//id에 해당하는 사람의 정보 전부를 가져온다
+    	try{
+    	MemberDTO dtos = dao.member_list(getid, getpw);
+
+    	if(dtos!=null){
+//    	response.setContentType("text/html; charset=UTF-8");    	
+//    	PrintWriter out =response.getWriter();
+//    	out.println("<script>alert('로그인이 되었습니다.'); history.go(-1);</script>"); 
+    	request.setAttribute("id", getid);
+    	request.setAttribute("pw", getpw);
+    	System.out.println("데이터 있음");
+    	return "redirect:index";
+    	}else{
+    		System.out.println("데이터 없음");
+    	    return "redirect:login";
+    	}
+    	}catch (EmptyResultDataAccessException  e) {
+    		System.out.println("데이터 없음");
+    		return "redirect:login";
+		}
     	
-    	System.out.println("controller_loginProcess()");
-    	MemberDAO dao = new MemberDAO();
-    	ArrayList<MemberDTO> dtos = dao.member_list();
-    	model.addAttribute("member_list",dtos);
-    	
-    	
-    	
-//    	
-//    	$('.login').submit(function(e) {
-//    	      
-//    	      e.preventDefault();   
-//    	      var error = 0;
-//    	      var self = $(this);
-//    	      
-//    	       var $email = self.find('[type=text]');
-//    	       var $pass = self.find('[type=password]');
-//    	      
-//    	            
-//    	      var emailRegex = /^[a-zA-Z0-9._-]/;
-//    	      
-//    	        if(!emailRegex.test($email.val())) {
-//    	         createErrTult("존재하지 않는 아이디입니다. ", $email)
-//    	         error++;   
-//    	      }
-//
-//    	      if( $pass.val().length>1 &&  $pass.val()!= $pass.attr('placeholder')  ) {
-//    	         $pass.removeClass('invalid_field');         
-//    	      } 
-//    	      else {
-//    	         createErrTult('아이디나 비밀번호가 틀렸습니다.', $pass)
-//    	         error++;
-//    	      }
-//    	      
-//    	      
-//    	      
-//    	      if (error!=0)return;
-//    	      self.find('[type=submit]').attr('disabled', 'disabled');
-//
-//    	      self.children().fadeOut(300,function(){ $(this).remove() })
-//    	      $('<p class="login__title">sign in <br><span class="login-edition">welcome to A.Movie</span></p><p class="success">You have successfully<br> signed in!</p>').appendTo(self)
-//    	      .hide().delay(300).fadeIn();
-//
-//
-//    	      // var formInput = self.serialize();
-//    	      // $.post(self.attr('action'),formInput, function(data){}); // end post
-//    	}); // end submit
-//    	
-//    	
-    	 
-  }
-    
+
+  }   
 }

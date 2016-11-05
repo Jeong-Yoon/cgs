@@ -74,8 +74,8 @@
 	}
 	function cityChk() {
 		var name = document.getElementById("select-sort").getAttribute("value");
-		document.getElementById("site_name")
-				.setAttribute("value", name)
+		document.getElementById("site_name").setAttribute("value", name)
+		document.getElementById("site_name").setAttribute("screen", dtos)		
 	}
 	function dateChk() {
 		var date = document.getElementById("datepicker").getAttribute("value");
@@ -291,7 +291,7 @@
 		<section class="container">
 		<div class="col-sm-12">
 			<div class="movie">
-				<h2 class="page-heading">${film.film_name}</h2>
+				<h2 class="page-heading"><strong>${film.film_name}</strong></h2>
 
 				<div class="movie__info">
 					<div class="col-sm-4 col-md-3 movie-mobile">
@@ -456,6 +456,7 @@
 			<h2 class="page-heading">showtime &amp; tickets</h2>
 			<div class="choose-container">
 				<form id='select' class="select" method='get'>
+				
 					<select name="select_item" id="select-sort" class="select__sort" tabindex="0" onmousedown="cityChk()">
 						<option value="1" selected='selected'>서울강변</option>
 						<option value="2">인천</option>
@@ -479,7 +480,7 @@
 				<div class="time-select">
 					<div class="time-select__group group--first">
 						<div class="col-sm-4">
-							<p class="time-select__place">1관</p>
+							<p class="time-select__place">-</p>
 						</div>
 						<ul class="col-sm-8 items-wrap">
 							<li class="time-select__item" data-time='09:40'>09:40</li>

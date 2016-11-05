@@ -65,7 +65,7 @@
 				<a href="#"
 					class="btn btn-md btn--warning btn--book btn-control--home login-window"><Strong>빠른예매
 				</Strong>></a>  <%if(request.getAttribute("id")==null){%>
-				 <a href="logout" class="btn btn-md btn--warning btn--wider">로그인</a>
+				 <a href="login" class="btn btn-md btn--warning btn--wider">로그인</a>
 				<%}else{ %>
 				<a href="logout" class="btn btn-md btn--warning btn--wider">로그아웃</a>
 				<%} %>

@@ -41,7 +41,7 @@ public class LoginController {
 	
     //로그인 프로세스
     @RequestMapping (value ="loginProcess")
-    public String loginProcess(Model model ,HttpServletRequest request, HttpServletResponse response) {
+    public String loginProcess(Model model ,HttpServletRequest request, HttpServletResponse response) throws IOException {
     	String getid = request.getParameter("user-email");
     	String getpw = request.getParameter("user-password");
     	
@@ -54,23 +54,30 @@ public class LoginController {
     	//id에 해당하는 사람의 정보 전부를 가져온다
     	try{
     	MemberDTO dtos = dao.member_list(getid, getpw);
-    	
-    	
     	if(dtos!=null){
-//    	response.setContentType("text/html; charset=UTF-8");    	
-//    	PrintWriter out =response.getWriter();
-//    	out.println("<script>alert('로그인이 되었습니다.'); history.go(-1);</script>"); 
-    	request.setAttribute("id", getid);
-    	request.setAttribute("pw", getpw);
-    	model.addAttribute("member_list", dtos);
+    		request.setAttribute("id", getid);
+    		request.setAttribute("pw", getpw);
+    		model.addAttribute("member_list", dtos);
     	System.out.println("데이터 있음");
-    	return "login";
+    	return "contact";
     	}else{
-    		System.out.println("데이터 없음");
+    		//널값이면 어차피 catch로 가서 여기로 올경우는 없음
+    		System.out.println("데이터 없음1");
+        	//자바에서 경고창띄우는부분
+        	response.setContentType("text/html; charset=UTF-8");    	
+        	PrintWriter out =response.getWriter();
+        	out.println("<script>alert('로그인에 실패했습니다.'); history.go(-1);</script>");
+        	out.close();
     	    return "redirect:login";
     	}
     	}catch (EmptyResultDataAccessException  e) {
-    		System.out.println("데이터 없음");
+    		System.out.println("데이터 없음2");
+        	//자바에서 경고창띄우는부분
+        	response.setContentType("text/html; charset=UTF-8");    	
+        	PrintWriter out =response.getWriter();
+        	out.println("<script>alert('아이디나 비밀번호가 틀렸거나 존재하지 않는 아이디입니다.'); history.go(-1);</script>");
+        	out.close();
+        	//어차피 위에서 history.go(-1)때문에 return으로안감
     		return "redirect:login";
 		}
     	

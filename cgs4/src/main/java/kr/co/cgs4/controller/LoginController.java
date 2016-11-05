@@ -33,10 +33,10 @@ public class LoginController {
 	}
 	
     // 로그아웃
-    @RequestMapping("/logout")
+    @RequestMapping(value = "logout")
     public String logout(HttpServletRequest session) {
-        session.setAttribute("userLoginInfo", null);
-        return "redirect:index";
+        session.setAttribute("member_list", null);
+        return "redirect:login";
     }
 	
     //로그인 프로세스
@@ -54,15 +54,17 @@ public class LoginController {
     	//id에 해당하는 사람의 정보 전부를 가져온다
     	try{
     	MemberDTO dtos = dao.member_list(getid, getpw);
-
+    	
+    	
     	if(dtos!=null){
 //    	response.setContentType("text/html; charset=UTF-8");    	
 //    	PrintWriter out =response.getWriter();
 //    	out.println("<script>alert('로그인이 되었습니다.'); history.go(-1);</script>"); 
     	request.setAttribute("id", getid);
     	request.setAttribute("pw", getpw);
+    	model.addAttribute("member_list", dtos);
     	System.out.println("데이터 있음");
-    	return "redirect:index";
+    	return "login";
     	}else{
     		System.out.println("데이터 없음");
     	    return "redirect:login";

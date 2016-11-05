@@ -397,7 +397,7 @@ function init_BookingOne() {
                     cinema = $('.choosen-cinema'),
                     time = $('.choosen-time');
 
-    //3. Swiper slider
+    //3. Swiper slider(안씀)
     //init employee sliders
                 var mySwiper = new Swiper('.swiper-container',{
                     slidesPerView:10,
@@ -482,27 +482,27 @@ function init_BookingOne() {
                             })
                             $(inst.input[0]).find('[value="'+val+'"]').attr('selected','selected');
                         }
-
                     });
 
     
     //5. Datepicker init
                 $( ".datepicker__input" ).datepicker({
-                  showOtherMonths: true,
-                  selectOtherMonths: true,
-                  showAnim:"fade",
-//                  minDate: '-0d',
-//                  yearSuffix: '년',
-//                  monthNames: ['1월', '2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
-//                  monthNamesShort: ['1월', '2월', '3월', '4월','5월','6월','7월','8월','9월','10월','11월','12월']
-                });
+                    showOtherMonths: true,
+                    selectOtherMonths: true,
+                    showAnim:"fade",
+                    minDate: '-0d',
+                    yearSuffix: '년',
+                    monthNames: ['1월', '2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
+                    monthNamesShort: ['1월', '2월', '3월', '4월','5월','6월','7월','8월','9월','10월','11월','12월']
 
-                $(document).click(function(e) { 
-                    var ele = $(e.target); 
-                    if (!ele.hasClass("datepicker__input") && !ele.hasClass("ui-datepicker") && !ele.hasClass("ui-icon") && !$(ele).parent().parents(".ui-datepicker").length){
-                       $(".datepicker__input").datepicker("hide");
-                     }
-                });
+                  });
+
+                  $(document).click(function(e) { 
+                      var ele = $(e.target); 
+                      if (!ele.hasClass("datepicker__input") && !ele.hasClass("ui-datepicker") && !ele.hasClass("ui-icon") && !$(ele).parent().parents(".ui-datepicker").length){
+                         $(".datepicker__input").datepicker("hide");
+                       }
+                  });
 
 	//6. Choose variant proccess
 				//choose film
@@ -545,8 +545,8 @@ function init_BookingOne() {
                 // choose (change) city and date for film
 
                 //data element init (default)
-                var chooseCity = $('.select .sbSelector').text();
-                var chooseDate = $('.datepicker__input').val();
+                var chooseCity = $('.choosen-city').val();
+                var chooseDate = $('.choosen-date').val();
 
                 //data element set (default)
                 city.val(chooseCity);
@@ -596,6 +596,16 @@ function init_BookingOne() {
                         $(this).addClass('item-active');
 
                 });
+                //8 예매선택 
+                $('.checkk').click(function(e){
+                	e.preventDefault();
+                	
+                });
+//                var movie = $('.choosen-movie'),
+//                city = $('.choosen-city'),
+//                date = $('.choosen-date'),
+//                cinema = $('.choosen-cinema'),
+//                time = $('.choosen-time');
 }
 
 function init_BookingTwo () {

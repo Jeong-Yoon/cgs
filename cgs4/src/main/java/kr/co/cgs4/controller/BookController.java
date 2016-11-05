@@ -1,6 +1,7 @@
 package kr.co.cgs4.controller;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -12,20 +13,25 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import kr.co.cgs4.HomeController;
+import kr.co.cgs4.dao.BookDAO;
 import kr.co.cgs4.dao.FilmDAO;
 import kr.co.cgs4.dto.FilmDTO;
 import kr.co.cgs4.util.BookInfo;
+import kr.co.cgs4.util.ScreeningInfo;
 
 @Controller
 public class BookController {
-	private static final Logger logger = LoggerFactory.getLogger(BookController.class);
 	
 	@RequestMapping("/book1")
 	public String book1(Model model) {
-		logger.info("Welcome home! The client locale is {}.");
-		
 	System.out.println("book1()");
-	FilmDAO fDao = new FilmDAO();
+	FilmDAO fdao = new FilmDAO();
+	BookDAO bdao = new BookDAO();
+	ArrayList<FilmDTO> fdto = fdao.film_list();
+	ArrayList<ScreeningInfo> bdto = bdao.screening_date();
+	model.addAttribute("flist", fdto);
+	model.addAttribute("blist", bdto);
+	
 	return "book/book1";
 	}
 //	System.out.println("list()");

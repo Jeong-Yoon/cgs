@@ -11,7 +11,7 @@ import kr.co.cgs4.dto.MemberDTO;
 import kr.co.cgs4.util.Constant;
 
 public class MemberDAO {
-	JdbcTemplate template = null;
+	JdbcTemplate template ;
 
 	public MemberDAO() {
 		this.template = Constant.template;
@@ -27,4 +27,9 @@ public class MemberDAO {
 			return (MemberDTO) template.queryForObject(query, new BeanPropertyRowMapper<MemberDTO>(MemberDTO.class));
 		
 	}
+	
+//	public MemberDTO member_name(String id){
+//		String query = "select name from member where MEMBER_ID = " + id;
+//		return (MemberDTO) template.queryForObject(query, new BeanPropertyRowMapper<MemberDTO>(MemberDTO.class));
+//	}
 }

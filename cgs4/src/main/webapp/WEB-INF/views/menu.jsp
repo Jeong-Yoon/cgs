@@ -46,25 +46,29 @@
 			<!-- 부가적인 버튼(메뉴바 오른쪽으로 위치):
 				로그인시 내 정보, 바로 예매 페이지로 가는 버튼-->
 			<div class="control-panel">
+			<%if((String) session.getAttribute("id")!=null){%>
 				<div class="auth auth--home">
 					<div class="auth__show">
 						<span class="auth__image"> <img alt=""
 							src="http://placehold.it/31x31">
 						</span>
 					</div>
-					<a href="#" class="btn btn--sign btn--singin">${member_list.name} </a>
-					<ul class="auth__function">
-						<!-- 내정보 버튼 눌렀을 시 뜨는 서브창 -->
-						<li><a href="#" class="auth__function-item">내가본영화</a></li>
-						<li><a href="#" class="auth__function-item">예매 내역</a></li>
-						<li><a href="#" class="auth__function-item">내가쓴리뷰</a></li>
-						<li><a href="#" class="auth__function-item">환경설정</a></li>
-					</ul>	
+					<a href="contact" class="btn btn--sign btn--singin">${name} </a>
+<!-- 					<ul class="auth__function"> -->
+<!-- 						내정보 버튼 눌렀을 시 뜨는 서브창 -->
+<!-- 						<li><a href="#" class="auth__function-item">내가본영화</a></li> -->
+<!-- 						<li><a href="#" class="auth__function-item">예매 내역</a></li> -->
+<!-- 						<li><a href="#" class="auth__function-item">내가쓴리뷰</a></li> -->
+<!-- 						<li><a href="#" class="auth__function-item">환경설정</a></li> -->
+<!-- 					</ul>	 -->
 				</div>
+				<%}else{ %>
+				<%} %>
 				<!-- 예매하기 버튼 누르면 login 요청하는 창이 뜸 -->
 				<a href="#"
 					class="btn btn-md btn--warning btn--book btn-control--home login-window"><Strong>빠른예매
-				</Strong>></a>  <%if(request.getAttribute("id")==null){%>
+				</Strong>></a> 
+				 <%if((String) session.getAttribute("id")==null){%>
 				 <a href="login" class="btn btn-md btn--warning btn--wider">로그인</a>
 				<%}else{ %>
 				<a href="logout" class="btn btn-md btn--warning btn--wider">로그아웃</a>

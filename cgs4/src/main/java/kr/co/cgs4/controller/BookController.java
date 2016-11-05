@@ -22,15 +22,32 @@ import kr.co.cgs4.util.ScreeningInfo;
 @Controller
 public class BookController {
 	
+//	@RequestMapping("/book1")
+//	public String book1(Model model) {
+//	System.out.println("book1()");
+//	FilmDAO fdao = new FilmDAO();
+////	BookDAO bdao = new BookDAO();
+//	ArrayList<FilmDTO> fdto = fdao.film_list();
+////	ArrayList<ScreeningInfo> bdto = bdao.screening_date();
+//	model.addAttribute("flist", fdto);
+////	model.addAttribute("blist", bdto);
+//	
+//	return "book/book1";
+//	}
+	
 	@RequestMapping("/book1")
-	public String book1(Model model) {
-	System.out.println("book1()");
-	FilmDAO fdao = new FilmDAO();
+	public String book1(Model model, HttpServletRequest hsr) {
+	System.out.println("book11()");
 	BookDAO bdao = new BookDAO();
-	ArrayList<FilmDTO> fdto = fdao.film_list();
-	ArrayList<ScreeningInfo> bdto = bdao.screening_date();
+	if(hsr.getParameter("film_name")!=null){
+		String film_name = hsr.getParameter("film_name");
+		String site_name = hsr.getParameter("site_name");
+		String screening_date = hsr.getParameter("screening_date");
+		ArrayList<ScreeningInfo> bdto = bdao.screening_date(film_name, site_name, screening_date);
+		model.addAttribute("blist", bdto);
+	}
+	ArrayList<FilmDTO> fdto = bdao.film_list();
 	model.addAttribute("flist", fdto);
-	model.addAttribute("blist", bdto);
 	
 	return "book/book1";
 	}

@@ -12,7 +12,7 @@
 	String ctx = request.getContextPath();
 %>
 <%
-	SimpleDateFormat mSimpleDateFormat = new SimpleDateFormat("MM/dd/yyyy", Locale.KOREA);
+	SimpleDateFormat mSimpleDateFormat = new SimpleDateFormat("yyyy-MM-dd", Locale.KOREA);
 	Date date = new Date();
 	String mTime = mSimpleDateFormat.format(date);
 %>
@@ -91,16 +91,18 @@
 		document.getElementById("film-and-time").submit();
 	}
 	function bookChk() {
-<%film_name = request.getParameter("film_name");
-			site_name = request.getParameter("site_name");
-			sc_date = (request.getParameter("screening_date"));
-			// 		System.out.print(film_name);
-			// 		System.out.print(site_name);
-			// 		System.out.print(sc_date);
-			if (film_name != null && site_name != null && sc_date != null) {%>
-	alert("선택됨!");
-<%}%>
+// 		document.getElementById
 	}
+<%-- <%film_name = request.getParameter("film_name"); --%>
+// 			site_name = request.getParameter("site_name");
+// 			sc_date = request.getParameter("screening_date");
+// 					System.out.print(film_name);
+// 					System.out.print(site_name);
+// 					System.out.print(sc_date);
+<%-- 			if (film_name != null && site_name != null && sc_date != null) {%> --%>
+// 	alert("선택됨!");
+<%-- <%}%> --%>
+// 	}
 </script>
 
 
@@ -149,7 +151,7 @@
 						<c:forEach var="dto" items="${flist}">
 							<tr class="rates rates--top">
 								<td class="film_title"><button value="${dto.film_name}"
-										onclick="movieChk('${dto.film_name}')" class="film_button">
+										onclick="movieChk('${dto.film_name}')" class="film_button checkk" >
 										<img src="<%=ctx%>/resources/images/icons/age_all.png"
 											class="film_age">
 										<!-- age_${dto.film_grade}.png -->
@@ -181,10 +183,10 @@
 
 			<div class="choose-container choose-container--short">
 				<form id='select' class="select" method='get'>
-					<span class="cinemapicker"><i class="fa fa-rocket"></i>영화관
+					<span class="cinemapicker checkk"><i class="fa fa-rocket"></i>영화관
 						선택</span> <select name="select_item" id="select-sort"
-						class="select__sort" tabindex="0">
-						<option value="001" selected='selected' onmouseup="cityChk()">서울강변점</option>
+						class="select__sort checkk" tabindex="0">
+						<option value="001" selected='selected' onmouseup="cityChk()">강변점</option>
 						<option value="002">인천점</option>
 						<option value="003">야탑점</option>
 						<option value="004">강남점</option>
@@ -195,53 +197,51 @@
 				<div class="datepicker">
 					<span class="datepicker__marker"><i class="fa fa-calendar"></i>날짜
 						선택</span><br /> <input type="text" id="datepicker" value="<%=mTime%>"
-						class="datepicker__input" onmousedown="dateChk()">
+						class="datepicker__input checkk" onmousedown="dateChk()">
 				</div>
 			</div>
 
 			<h2 class="page-heading">시간 선택</h2>
 
-			<div>
-				<a href="#" class="checkk">체크하지</a>
-				<table>
-				<c:forEach var="j" items="${blist }">
-				<c:if test="${j.film_name eq '닥터 스트레인지' and i.screen_num eq '01'}">
-					<tr>
-						<c:forEach var="i" items="${blist}" varStatus="stat">
-							<c:if
-								test="${i.film_name eq '닥터 스트레인지' and i.screen_num eq '01'}">
-								<td>${i.start_time }</td>
-								<td>${stat.index }</td>
-							</c:if>
-						</c:forEach>
-					</tr>
-					</c:if>
-					</c:forEach>
-				</table>
-			</div>
+<!-- 			<div> -->
+<!-- 				<table> -->
+				
+<%-- 				<c:forEach var="j" items="${blist }"> --%>
+<%-- 				<c:if test="${j.film_name eq '닥터 스트레인지' and i.screen_num eq '01'}"> --%>
+<!-- 					<tr> -->
+<%-- 						<c:forEach var="i" items="${blist}" varStatus="stat"> --%>
+<%-- 							<c:if --%>
+<%-- 								test="${i.film_name eq '닥터 스트레인지' and i.screen_num eq '01'}"> --%>
+<%-- 								<td>${i.start_time }</td> --%>
+<%-- 								<td>${stat.index }</td> --%>
+<%-- 							</c:if> --%>
+<%-- 						</c:forEach> --%>
+<!-- 					</tr> -->
+<%-- 					</c:if> --%>
+<%-- 					</c:forEach> --%>
+<!-- 				</table> -->
+<!-- 			</div> -->
 
 
 
 			<div class="time-select time-select--wide">
+			<a name="booook"></a>
+			<form class="bookdata" action="book1#booook">
 				<input type='hidden' name="film_name" class="choosen-movie"
 					id="film_name"> <input type='hidden' name="site_name"
 					class="choosen-city" id="site_name"> <input type='hidden'
 					name="screening_date" class="choosen-date" id="screening_date">
-				<%
-					// 					if (film_name != null && site_name != null && sc_date != null) {
-					// 					Timestamp screening_date = Timestamp.valueOf(sc_date);
-
-					// 						BookDAO bdao = new BookDAO();
-					// 						bdao.screening_date();
-				%>
+					</form>
+					
+				<c:choose>
+				<c:when test="${blist ne null }">
 				<div class="time-select__group">
 					<div class="col-sm-2">
 						<p class="time-select__place">1관</p>
 					</div>
 					<ul class="col-sm-8 items-wrap">
 						<c:forEach var="i" items="${blist}" varStatus="stat">
-							<c:if
-								test="${i.film_name eq '닥터 스트레인지' and i.screen_num eq '01'}">
+							<c:if test="${i.screen_num eq '01'}">
 								<li class=time-select__set>
 									<div class="time-select__item" data-time='${i.start_time }'>${i.start_time }</div>
 									<div class="time-select__seat">100/100석</div>
@@ -250,86 +250,20 @@
 						</c:forEach>
 					</ul>
 				</div>
-
-				<%
-					// 					} else {
-				%>
+				</c:when>
+				<c:otherwise>
 				<div class="time-select__group">
 					<div class="col-sm-2">
 						<p class="time-select__place"></p>
 					</div>
 					<ul class="col-sm-8 items-wrap">
-						<li class=time-select__set>
-							<div class="time-select__seat">영화 정보를 선택해주세요</div>
-						</li>
+					<li>영화 정보를 선택해주세요</li>
 					</ul>
 				</div>
-				<%
-					// 					}
-				%>
-				<!-- 				<div class="time-select__group"> -->
-				<!-- 					<div class="col-sm-2"> -->
-				<!-- 						<p class="time-select__place">2관</p> -->
-				<!-- 					</div> -->
-				<!-- 					<ul class="col-sm-8 items-wrap"> -->
-				<!-- 						<li class=time-select__set> -->
-				<!-- 							<div class="time-select__item" data-time='09:40'>09:40</div> -->
-				<!-- 							<div class="time-select__seat">100/100석</div> -->
-				<!-- 						</li> -->
-				<!-- 						<li class=time-select__set> -->
-				<!-- 							<div class="time-select__item" data-time='13:45'>13:45</div> -->
-				<!-- 							<div class="time-select__seat">100/100석</div> -->
-				<!-- 						</li> -->
-				<!-- 						<li class=time-select__set> -->
-				<!-- 							<div class="time-select__item" data-time='15:45'>15:45</div> -->
-				<!-- 							<div class="time-select__seat">100/100석</div> -->
-				<!-- 						</li> -->
-				<!-- 						<li class=time-select__set> -->
-				<!-- 							<div class="time-select__item" data-time='19:50'>19:50</div> -->
-				<!-- 							<div class="time-select__seat">100/100석</div> -->
-				<!-- 						</li> -->
-				<!-- 						<li class=time-select__set> -->
-				<!-- 							<div class="time-select__item" data-time='21:50'>21:50</div> -->
-				<!-- 							<div class="time-select__seat">100/100석</div> -->
-				<!-- 						</li> -->
-				<!-- 					</ul> -->
-				<!-- 				</div> -->
+				</c:otherwise>
+				</c:choose>
+				
 
-				<!-- 				<div class="time-select__group"> -->
-				<!-- 					<div class="col-sm-2"> -->
-				<!-- 						<p class="time-select__place">2관</p> -->
-				<!-- 					</div> -->
-				<!-- 					<ul class="col-sm-8 items-wrap"> -->
-				<!-- 						<li class=time-select__set> -->
-				<!-- 							<div class="time-select__item" data-time='09:00'>09:00</div> -->
-				<!-- 							<div class="time-select__seat">100/100석</div> -->
-				<!-- 						</li> -->
-				<!-- 						<li class=time-select__set> -->
-				<!-- 							<div class="time-select__item" data-time='11:00'>11:00</div> -->
-				<!-- 							<div class="time-select__seat">100/100석</div> -->
-				<!-- 						</li> -->
-				<!-- 						<li class=time-select__set> -->
-				<!-- 							<div class="time-select__item" data-time='13:00'>13:00</div> -->
-				<!-- 							<div class="time-select__seat">100/100석</div> -->
-				<!-- 						</li> -->
-				<!-- 						<li class=time-select__set> -->
-				<!-- 							<div class="time-select__item" data-time='15:00'>15:00</div> -->
-				<!-- 							<div class="time-select__seat">100/100석</div> -->
-				<!-- 						</li> -->
-				<!-- 						<li class=time-select__set> -->
-				<!-- 							<div class="time-select__item" data-time='17:00'>17:00</div> -->
-				<!-- 							<div class="time-select__seat">100/100석</div> -->
-				<!-- 						</li> -->
-				<!-- 						<li class=time-select__set> -->
-				<!-- 							<div class="time-select__item" data-time='19:00'>19:00</div> -->
-				<!-- 							<div class="time-select__seat">100/100석</div> -->
-				<!-- 						</li> -->
-				<!-- 						<li class=time-select__set> -->
-				<!-- 							<div class="time-select__item" data-time='21:00'>21:00</div> -->
-				<!-- 							<div class="time-select__seat">100/100석</div> -->
-				<!-- 						</li> -->
-				<!-- 					</ul> -->
-				<!-- 				</div> -->
 			</div>
 
 			<div class="choose-indector choose-indector--time">
@@ -343,8 +277,8 @@
 			action='book2'>
 			<input type='hidden' name="film_name" class="choosen-movie"
 				id="film_name"> <input type='hidden' name="site_name"
-				class="choosen-city" id="site_name"> <input type='hidden'
-				name="screening_date" class="choosen-date" id="screening_date">
+				class="choosen-city" id="site_name" value="강변점"> <input type='hidden'
+				name="screening_date" class="choosen-date" id="screening_date" value="2016-11-06">
 			<input type='hidden' name="screen_num" class="choosen-cinema"
 				id="screen_num"> <input type='hidden' name="start_time"
 				class="choosen-time" id="start_time">

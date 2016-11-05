@@ -100,6 +100,7 @@ function init_Elements () {
     $( ".datepicker__input" ).datepicker({
         showOtherMonths: true,
         selectOtherMonths: true,
+        dateFormat: 'yy-mm-dd',
         showAnim:"fade",
         minDate: '-0d',
         yearSuffix: '년',
@@ -490,6 +491,7 @@ function init_BookingOne() {
                     showOtherMonths: true,
                     selectOtherMonths: true,
                     showAnim:"fade",
+                    dateFormat: 'yy-mm-dd',
                     minDate: '-0d',
                     yearSuffix: '년',
                     monthNames: ['1월', '2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
@@ -598,14 +600,22 @@ function init_BookingOne() {
                 });
                 //8 예매선택 
                 $('.checkk').click(function(e){
+                    var chooseCity = $('.choosen-city').val();
+                    var chooseDate = $('.choosen-date').val();
+                    var chooseFilm = $('.choosen-movie').val();
+                    //data element set (default)
+//                    city.val(chooseCity);
+//                    date.val(chooseDate);
+//                    f
+                    if(chooseCity!=""&&chooseFilm!=""&&chooseDate!=""){
+//                    	${.'items-wrap'}.replace
+                	alert(chooseCity);
+                	alert(chooseDate);
+                	alert(chooseFilm);
+                	$('.bookdata').submit();
                 	e.preventDefault();
-                	
+                    }
                 });
-//                var movie = $('.choosen-movie'),
-//                city = $('.choosen-city'),
-//                date = $('.choosen-date'),
-//                cinema = $('.choosen-cinema'),
-//                time = $('.choosen-time');
 }
 
 function init_BookingTwo () {
@@ -1093,6 +1103,7 @@ function init_MovieList () {
                   showOtherMonths: true,
                   selectOtherMonths: true,
                   showAnim:"fade",
+                  dateFormat: 'yy-mm-dd',
                   minDate: '-0d',
                   yearSuffix: '년',
                   monthNames: ['1월', '2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
@@ -1345,6 +1356,7 @@ function init_MoviePage () {
                   showOtherMonths: true,
                   selectOtherMonths: true,
                   showAnim:"fade",
+                  dateFormat: 'yy-mm-dd',
                   minDate: '-0d',
                   yearSuffix: '년',
                   monthNames: ['1월', '2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
@@ -1898,6 +1910,7 @@ function init_Cinema () {
                   showOtherMonths: true,
                   selectOtherMonths: true,
                   showAnim:"fade",
+                  dateFormat: 'yy-mm-dd',
                   minDate: '-0d',
                   yearSuffix: '년',
                   monthNames: ['1월', '2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],

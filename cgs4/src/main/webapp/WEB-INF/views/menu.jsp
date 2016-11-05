@@ -26,13 +26,13 @@
 			</span>
 			</a> <!-- 각 메뉴별 서브메뉴창-->
 			<ul id="navigation">
-				<li><span class="sub-nav-toggle plus"></span> <a href="movie-list">영화</a>
+				<li><span class="sub-nav-toggle plus"></span> <a href="	movie_list">영화</a>
 					</li>
 				<li><span class="sub-nav-toggle plus"></span> <a
-					href="book">예매</a>
+					href="book1">예매</a>
 					</li>
 				<li><span class="sub-nav-toggle plus"></span> <a
-					href="cinema">영화관</a>
+					href="cinemas">영화관</a>
 					</li>
 				<li><span class="sub-nav-toggle plus"></span> <a
 					href="contact">고객센터</a>

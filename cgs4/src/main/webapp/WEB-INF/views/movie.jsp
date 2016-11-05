@@ -394,7 +394,11 @@
 						<input type='hidden' name="screen_num" class="choosen-cinema" id="screen_num"> 
 						<input type='hidden' name="start_time" class="choosen-time" id="start_time">
 						<%-- 						<input type=hidden name="start_time" value="${test.start_time }"> --%>
+						<%if(request.getAttribute("id")!=null){%>
 						<center> <a href='book2' class="btn btn-md btn--warning">book a ticket for this movie</a> </center>
+						<%}else{ %>
+						<center> <a href='login' class="btn btn-md btn--warning">book a ticket for this movie</a> </center>
+						<% } %>
 					</form>
 				</div>
 

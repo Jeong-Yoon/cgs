@@ -68,7 +68,8 @@ public class LoginController {
     	if(dtos!=null){
     		session.setAttribute("id", getid);
     		session.setAttribute("pw", getpw);
-    		model.addAttribute("name", dtos.getName());
+    		String name=dtos.getName();
+    		session.setAttribute("name", name);
     		
     		System.out.println((String) session.getAttribute("id"));
     		System.out.println("데이터 있음");

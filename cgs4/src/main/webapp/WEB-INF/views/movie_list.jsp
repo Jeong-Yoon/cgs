@@ -8,7 +8,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <%String ctx = request.getContextPath(); %>
 <%!
-	int pagenum;
+	int pagenum;  
 %>
 <html>
 <head>
@@ -52,16 +52,20 @@
     <script type="text/javascript">
 	function prevChk(pagenum) {
 		if(pagenum!=0){
-			pagenum--;
+			--pagenum;
 		} else{
 			pagenum = 0;
 		}
 		location.href = "movie_list?page="+pagenum;
+		return pagenum;
+// 		out.print(pagenum);
 	}
 	
 	function nextChk(pagenum){
 		pagenum++;
 		location.href = "movie_list?page="+pagenum;
+		return pagenum;
+// 		out.print(pagenum);
 	}
 	</script>
 </head>
@@ -143,12 +147,13 @@
 
 
                     <div class="pagination paginatioon--full">
-                    <form action="movie_list?page=<%=pagenum %>" method="post">
-                    <input type='hidden' name="page" value=<%=pagenum %>> 
+<%--                     <form action="movie_list?page=<%=pagenum %>" method="get"> --%>
+<%--                     <input type='hidden' name="page" value=<%=pagenum %>>  --%>
+                    <%if(request.getAttribute("pagenum")!=null){
+                    	pagenum=Integer.parseInt(request.getAttribute("pagenum").toString());  }%>
                     <a href="javascript:prevChk(<%=pagenum %>)" class="pagination__prev" >prev</a>
-
 					<a href="javascript:nextChk(<%=pagenum %>)" class="pagination__next" >next</a>
-                    </form>
+<!--                     </form> -->
                     </div>
           
             </div>

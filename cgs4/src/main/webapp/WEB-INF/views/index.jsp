@@ -93,7 +93,7 @@ html, body {
 		<!-- 메인(홈) 헤더 부분 -->
 		<header class="header-wrapper header-wrapper--home">
 		<div class="container">
-			<!-- 헤더 로고-->
+			<!-- 헤더 로고--> <!-- 로고 크기가 자동으로 줄어들지 않음 ㅠㅠㅠㅠㅠ -->
 			<a href='index' class="logo"> <img style="max-width: 100px"
 				alt='logo' src="<%=ctx%>/resources/images/logo.png">
 			</a>
@@ -350,79 +350,79 @@ Start doing.'><img alt=''
 		<section class="container" style="width: 100%; height: 1500px;"
 			data-vide-bg="mp4: <%=ctx%>/resources/video/mainvideo, webm: <%=ctx%>/resources/video/mainvideo, ogv: <%=ctx%>/resources/video/mainvideo">
 		<div class="movie-best">
-			<div class="col-sm-10 col-sm-offset-1 movie-best__rating">Today
-				Best choice</div>
+			<div class="col-sm-10 col-sm-offset-1 movie-best__rating">MOVIE RANK</div>
 			<div class="col-sm-12 change--col">
 				<div class="movie-beta__item ">
-					<img alt='' src="http://placehold.it/380x600"> <span
-						class="best-rate">5.0</span>
-
+					<img alt='' src="<%=ctx%>/resources/images/movierank/doctorstrange.jpg"> <span
+						class="best-rate">4.8</span>
+						
 					<ul class="movie-beta__info">
-						<li><span class="best-voted">71 people voted today</span></li>
+						<li><span class="best-voted">389,121명의 평가</span></li>
 						<li>
-							<p class="movie__time">169 min</p>
-							<p>Adventure | Drama | Fantasy</p>
-							<p>38 comments</p>
+							<p class="movie__time">115분</p>
+							<p>액션, 모험, 판타지</p>
+							<p>15,132 comments</p>
 						</li>
 						<li class="last-block"><a href="movie-page-left.html"
 							class="slide__link">more</a></li>
 					</ul>
 				</div>
+				
 				<div class="movie-beta__item second--item">
-					<img alt='' src="http://placehold.it/380x600"> <span
-						class="best-rate">5.0</span>
+					<img alt='' src="<%=ctx%>/resources/images/movierank/lucky.jpg"> <span
+						class="best-rate">4.7</span>
 
 					<ul class="movie-beta__info">
-						<li><span class="best-voted">71 people voted today</span></li>
+						<li><span class="best-voted">89,121명의 평가</span></li>
 						<li>
-							<p class="movie__time">169 min</p>
-							<p>Adventure | Drama | Fantasy</p>
-							<p>38 comments</p>
+							<p class="movie__time">112분</p>
+							<p>코미디</p>
+							<p>10,138 comments</p>
 						</li>
 						<li class="last-block"><a href="movie-page-left.html"
 							class="slide__link">more</a></li>
 					</ul>
 				</div>
 				<div class="movie-beta__item third--item">
-					<img alt='' src="http://placehold.it/380x600"> <span
-						class="best-rate">5.0</span>
+					<img alt='' src="<%=ctx%>/resources/images/movierank/honsum.jpg"> <span
+						class="best-rate">4.5</span>
 
 					<ul class="movie-beta__info">
-						<li><span class="best-voted">71 people voted today</span></li>
+						<li><span class="best-voted">79,121명의 평가</span></li>
 						<li>
-							<p class="movie__time">169 min</p>
-							<p>Adventure | Drama | Fantasy</p>
-							<p>38 comments</p>
+							<p class="movie__time">90분</p>
+							<p>공포</p>
+							<p>3,441 comments</p>
 						</li>
 						<li class="last-block"><a href="movie-page-left.html"
 							class="slide__link">more</a></li>
 					</ul>
 				</div>
 				<div class="movie-beta__item hidden-xs">
-					<img alt='' src="http://placehold.it/380x600"> <span
-						class="best-rate">5.0</span>
+					<img alt='' src="<%=ctx%>/resources/images/movierank/powercinemaver.jpg"> <span
+						class="best-rate">3.8</span>
 
 					<ul class="movie-beta__info">
-						<li><span class="best-voted">71 people voted today</span></li>
+						<li><span class="best-voted">9,121명의 평가</span></li>
 						<li>
-							<p class="movie__time">169 min</p>
-							<p>Adventure | Drama | Fantasy</p>
-							<p>38 comments</p>
+							<p class="movie__time">60분</p>
+							<p>액션, 모험</p>
+							<p>238 comments</p>
 						</li>
 						<li class="last-block"><a href="movie-page-left.html"
 							class="slide__link">more</a></li>
 					</ul>
 				</div>
 				<div class="movie-beta__item hidden-xs hidden-sm">
-					<img alt='' src="http://placehold.it/380x600"> <span
-						class="best-rate">5.0</span>
+					<img alt='' src="<%=ctx%>/resources/images/movierank/lostindust.jpg"> <span
+						class="best-rate">3.5</span>
 
 					<ul class="movie-beta__info">
-						<li><span class="best-voted">71 people voted today</span></li>
+						<li><span class="best-voted">6,121명의 평가</span></li>
 						<li>
-							<p class="movie__time">169 min</p>
-							<p>Adventure | Drama | Fantasy</p>
-							<p>38 comments</p>
+							<p class="movie__time">103분</p>
+							<p>범죄, 드라마</p>
+							<p>738 comments</p>
 						</li>
 						<li class="last-block"><a href="movie-page-left.html"
 							class="slide__link">more</a></li>
@@ -444,8 +444,7 @@ Start doing.'><img alt=''
 					</ul>
 				</div>
 			</div>
-			<div class="col-sm-10 col-sm-offset-1 movie-best__check">check
-				all movies now playing</div>
+			<div class="col-sm-10 col-sm-offset-1 movie-best__check"><strong>현재 상영중인 영화 모두 보기</strong></div>
 		</div>
 
 		<div class="col-sm-12">

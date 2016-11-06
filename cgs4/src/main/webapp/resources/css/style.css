@@ -1,6 +1,6 @@
 /*! normalize.css v3.0.0 | MIT License | git.io/normalize */
 html {
-	font-family: sans-serif;
+	font-family: Nanum Gothic;
 	-ms-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
 }
@@ -234,7 +234,7 @@ html {
 }
 
 body {
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family: "Helvetica Neue", Helvetica, Arial, Nanum Gothic;
 	font-size: 14px;
 	line-height: 1.428571429;
 	color: #333333;
@@ -692,7 +692,7 @@ html, body {
 }
 
 body {
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Roboto', Nanum Gothic;
 }
 
 .wrapper {
@@ -713,7 +713,7 @@ body {
 h1 {
 	color: #222A35;
 	font-size: 30px;
-	font-family: 'aleoregular', sans-serif;
+	font-family: 'aleoregular', Nanum Gothic;
 	margin-top: 32px;
 	margin-bottom: 23px;
 }
@@ -721,7 +721,7 @@ h1 {
 h2 {
 	color: #222A35;
 	font-size: 27px;
-	font-family: 'aleoregular', sans-serif;
+	font-family: 'aleoregular', Nanum Gothic;
 	margin-top: 70px;
 	margin-bottom: 23px;
 }
@@ -729,7 +729,7 @@ h2 {
 h3 {
 	color: #222A35;
 	font-size: 24px;
-	font-family: 'aleoregular', sans-serif;
+	font-family: 'aleoregular', Nanum Gothic;
 	margin-top: 40px;
 	margin-bottom: 24px;
 }
@@ -737,7 +737,7 @@ h3 {
 h4 {
 	color: #222A35;
 	font-size: 21px;
-	font-family: 'aleoregular', sans-serif;
+	font-family: 'aleoregular', Nanum Gothic;
 	margin-top: 70px;
 	margin-bottom: 24px;
 }
@@ -745,14 +745,14 @@ h4 {
 h5 {
 	color: #222A35;
 	font-size: 18px;
-	font-family: 'aleoregular', sans-serif;
+	font-family: 'aleoregular', Nanum Gothic;
 	margin-top: 70px;
 	margin-bottom: 24px;
 }
 
 .unslyled {
 	font-weight: bold;
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Roboto', Nanum Gothic;
 }
 
 p {
@@ -776,7 +776,7 @@ a {
 }
 
 a:hover, a:focus {
-	color: #fe505a;
+	color: #ED2236;
 	text-decoration: none;
 }
 
@@ -836,7 +836,7 @@ input, textarea {
 }
 
 .list li {
-	font: 18px 'aleobolditalic', sans-serif;
+	font: 18px 'aleobolditalic', Nanum Gothic;
 	color: #222A35;
 	margin-bottom: 20px;
 }
@@ -894,12 +894,12 @@ table {
 }
 
 .invalid_field {
-	border-color: #fe505a !important;
+	border-color: #ED2236 !important;
 }
 
 .login .success {
-	background-color: #ffd564;
-	font: 18px 'aleobold', sans-serif;
+	background-color: #F0C419;
+	font: 18px 'aleobold', Nanum Gothic;
 	text-transform: uppercase;
 	color: #222A35;
 	text-align: center;
@@ -910,7 +910,7 @@ table {
 }
 
 .form .success {
-	font: 24px 'aleoitalic', sans-serif;
+	font: 24px 'aleoitalic', Nanum Gothic;
 	padding-top: 67px;
 	padding-bottom: 66px;
 }
@@ -2795,11 +2795,11 @@ input[type="submit"].btn-block, input[type="reset"].btn-block, input[type="butto
 }
 
 .color--red {
-	background-color: #fe505a;
+	background-color: #ED2236;
 }
 
 .color--yellow {
-	background-color: #ffd564;
+	background-color: #F0C419;
 }
 
 .color--grey {
@@ -2830,7 +2830,7 @@ input[type="submit"].btn-block, input[type="reset"].btn-block, input[type="butto
 }
 
 .header-wrapper--home {
-	background: rgba(46, 41, 46, 0.8);
+	background: rgba(0, 0, 0, 0.9);
 	position: absolute;
 	height: 55px;
 	width: 100%;
@@ -3061,7 +3061,7 @@ input[type="submit"].btn-block, input[type="reset"].btn-block, input[type="butto
 	top: 16px;
 	left: 15px;
 	z-index: 2;
-	margin-top: -15px;
+	margin-top: -10px;
 	z-index: 2;
 }
 
@@ -3083,7 +3083,7 @@ ul#navigation {
 }
 
 ul#navigation a {
-	font: 13px 'Roboto', sans-serif;
+	font: 13px 'Roboto', Nanum Gothic;
 	color: #b4b1b2;
 	-webkit-transition: 0.3s;
 	transition: 0.3s;
@@ -3094,7 +3094,7 @@ ul#navigation a:hover {
 }
 
 .heading {
-	font: 16px 'aleoregular', sans-serif;
+	font: 16px 'aleoregular', Nanum Gothic;
 	text-transform: uppercase;
 	color: #222A35;
 	margin: 0 0 16px;
@@ -3111,14 +3111,14 @@ ul#navigation a:hover {
 
 .heading--strong {
 	font-size: 21px;
-	font-family: 'aleobold', sans-serif;
+	font-family: 'aleobold', Nanum Gothic;
 }
 
 .page-heading {
 	padding-left: 30px;
 	margin-top: 56px;
 	margin-bottom: 27px;
-	font: 20px 'aleobold', sans-serif;
+	font: 20px 'aleobold', Nanum Gothic;
 	color: #222A35;
 	text-transform: uppercase;
 	background-image: url(../images/components/scarf.png);
@@ -3132,7 +3132,7 @@ ul#navigation a:hover {
 	font-size: 22px;
 	line-height: 20px;
 	color: #222A35;
-	font-family: 'aleobold', sans-serif;
+	font-family: 'aleobold', Nanum Gothic;
 	text-transform: uppercase;
 	text-align: center;
 	margin: 0;
@@ -3143,7 +3143,7 @@ ul#navigation a:hover {
 .heading-special .heading-edition {
 	font-size: 16px;
 	font-weight: normal;
-	font-family: 'aleoitalic', sans-serif;
+	font-family: 'aleoitalic', Nanum Gothic;
 	text-transform: lowercase;
 }
 
@@ -3162,7 +3162,7 @@ ul#navigation a:hover {
 }
 
 .heading-special--small {
-	font-family: 'aleoregular', sans-serif;
+	font-family: 'aleoregular', Nanum Gothic;
 	font-size: 16px;
 	line-height: 20px;
 	color: #222A35;
@@ -3170,14 +3170,14 @@ ul#navigation a:hover {
 }
 
 .heading-special--small .title-edition {
-	font-family: 'aleoitalic', sans-serif;
+	font-family: 'aleoitalic', Nanum Gothic;
 	text-transform: lowercase;
-	color: #fe505a;
+	color: #ED2236;
 }
 
 .text-helper {
 	color: #969b9f;
-	font-family: 'aleoitalic', sans-serif;
+	font-family: 'aleoitalic', Nanum Gothic;
 	font-size: 16px;
 }
 
@@ -3197,7 +3197,7 @@ ul#navigation a:hover {
 		rgba(255, 255, 255, 0.2);
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.16), inset 0 2px
 		rgba(255, 255, 255, 0.2);
-	font: 12px 'aleobold', sans-serif;
+	font: 12px 'aleobold', Nanum Gothic;
 	text-transform: uppercase;
 	-webkit-transition: 0.3s;
 	transition: 0.3s;
@@ -3209,8 +3209,8 @@ ul#navigation a:hover {
 
 .btn--warning {
 	color: #222A35;
-	background-color: #ffd564;
-	border: solid 1px #ffc936;
+	background-color: #F0C419;
+	border: solid 1px #F0C419;
 }
 
 .btn--warning:hover {
@@ -3220,8 +3220,8 @@ ul#navigation a:hover {
 }
 
 .btn--danger {
-	background-color: #fe505a;
-	border: solid 1px #f42a36;
+	background-color: #ED2236;
+	border: solid 1px #ED2236;
 }
 
 .btn--danger:hover {
@@ -3296,10 +3296,10 @@ ul#navigation a:hover {
 }
 
 .btn--sign {
-	font: 13px 'Roboto', sans-serif;
+	font: 13px 'Roboto', Nanum Gothic;
 	font-weight: bold;
 	text-transform: uppercase;
-	color: #ffd564;
+	color: #F0C419;
 	position: relative;
 	margin-right: 3px;
 	-webkit-transition: 0.3s;
@@ -3385,8 +3385,8 @@ ul#navigation a:hover {
 }
 
 .read-more {
-	font: 16px 'aleoregular', sans-serif;
-	color: #fe505a;
+	font: 16px 'aleoregular', Nanum Gothic;
+	color: #ED2236;
 	text-transform: uppercase;
 	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
@@ -3399,14 +3399,14 @@ ul#navigation a:hover {
 .read-more:after {
 	content: '\f054';
 	font-family: "FontAwesome";
-	color: #fe505a;
+	color: #ED2236;
 	padding-left: 12px;
 	-webkit-transition: 0.5s;
 	transition: 0.5s;
 }
 
 .read-more:hover, .read-more:focus {
-	background-color: #fe505a;
+	background-color: #ED2236;
 	color: #ffffff;
 	text-decoration: none;
 }
@@ -3472,7 +3472,7 @@ ul#navigation a:hover {
 }
 
 .panel-collapse .panel-body {
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Roboto', Nanum Gothic;
 	font-size: 13px;
 	line-height: 21px;
 	padding: 13px 15px 10px 35px;
@@ -3534,7 +3534,7 @@ ul#navigation a:hover {
 
 .accordion-light .panel-title {
 	font-weight: bold;
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Roboto', Nanum Gothic;
 }
 
 .accordion-light .marker {
@@ -3542,12 +3542,12 @@ ul#navigation a:hover {
 }
 
 .accordion-light .panel-heading:hover {
-	border-color: #fe505a;
-	color: #fe505a;
+	border-color: #ED2236;
+	color: #ED2236;
 }
 
 .accordion-light .panel-heading:hover .marker {
-	background-color: #fe505a;
+	background-color: #ED2236;
 	border-color: transparent;
 }
 
@@ -3577,7 +3577,7 @@ ul#navigation a:hover {
 	padding: 17px 15px 18px 55px;
 	background-color: #222A35;
 	color: #ffffff;
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Roboto', Nanum Gothic;
 }
 
 .accordion-dark .panel-title>a .marker, .accordion-dark .panel-title>a.collapsed:hover .marker
@@ -3752,7 +3752,7 @@ ul#navigation a:hover {
 }
 
 .price .price__package {
-	font: 16px 'aleoregular', sans-serif;
+	font: 16px 'aleoregular', Nanum Gothic;
 	color: #ffffff;
 	text-transform: capitalize;
 	padding-top: 16px;
@@ -3761,8 +3761,8 @@ ul#navigation a:hover {
 }
 
 .price .price__value {
-	font: 40px 'aleobold', sans-serif;
-	color: #fe505a;
+	font: 40px 'aleobold', Nanum Gothic;
+	color: #ED2236;
 	background-color: #fafafa;
 	background-image: url(../images/components/price-pattern.jpg);
 	background-repeat: repeat;
@@ -3772,7 +3772,7 @@ ul#navigation a:hover {
 }
 
 .price .price__feather {
-	font: 13px 'Roboto', sans-serif;
+	font: 13px 'Roboto', Nanum Gothic;
 	color: #b4b1b2;
 	padding-top: 16px;
 	padding-bottom: 15px;
@@ -3802,7 +3802,7 @@ ul#navigation a:hover {
 }
 
 .progress .progress__bar .progress__current {
-	background-color: #ffd564;
+	background-color: #F0C419;
 	height: 100%;
 	-webkit-border-radius: 2px 0 0 2px;
 	-moz-border-radius: 2px 0 0 2px;
@@ -3810,13 +3810,13 @@ ul#navigation a:hover {
 }
 
 .promo {
-	background-color: #fe505a;
+	background-color: #ED2236;
 	text-align: center;
 	padding: 48px 0px 10px;
 }
 
 .promo .promo__head {
-	font: 30px 'aleobold', sans-serif;
+	font: 30px 'aleobold', Nanum Gothic;
 	color: #ffffff;
 	text-transform: uppercase;
 	margin-bottom: 18px;
@@ -3824,7 +3824,7 @@ ul#navigation a:hover {
 }
 
 .promo .promo__describe {
-	font: 18px 'aleoitalic', sans-serif;
+	font: 18px 'aleoitalic', Nanum Gothic;
 	color: #222A35;
 	font-weight: 300;
 	padding-bottom: 45px;
@@ -3880,7 +3880,7 @@ ul#navigation a:hover {
 	-webkit-border-radius: 0;
 	-moz-border-radius: 0;
 	border-radius: 0;
-	font: 16px 'Roboto', sans-serif;
+	font: 16px 'Roboto', Nanum Gothic;
 	color: #222A35;
 	text-transform: uppercase;
 	font-weight: bold;
@@ -3889,7 +3889,7 @@ ul#navigation a:hover {
 }
 
 .nav-tabs>li>a:hover, .nav-tabs>li>a:focus {
-	color: #fe505a;
+	color: #ED2236;
 }
 
 .nav-tabs>li.active>a, .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus
@@ -3929,16 +3929,16 @@ ul#navigation a:hover {
 
 .tabs--vertical .nav-tabs>li.active>a, .tabs--vertical .nav-tabs>li.active>a:hover,
 	.tabs--vertical .nav-tabs>li.active>a:focus {
-	color: #fe505a;
+	color: #ED2236;
 	background-color: transparent;
-	border-left: 6px solid #fe505a;
+	border-left: 6px solid #ED2236;
 	padding-left: 10px;
 }
 
 .tabs--vertical .tab-content {
 	margin-left: 115px;
 	clear: none;
-	background-color: #fe505a;
+	background-color: #ED2236;
 	padding: 28px 40px 23px;
 	min-height: 258px;
 }
@@ -3970,7 +3970,7 @@ ul#navigation a:hover {
 }
 
 .testionaial .testionaial__text {
-	font: 13px 'Roboto', sans-serif;
+	font: 13px 'Roboto', Nanum Gothic;
 	color: #222A35;
 	font-style: italic;
 	margin-top: 30px;
@@ -4156,7 +4156,7 @@ ul#navigation a:hover {
 }
 
 .post .post__title-link {
-	font: 30px 'aleoregular', sans-serif;
+	font: 30px 'aleoregular', Nanum Gothic;
 }
 
 .post .post__date {
@@ -4226,16 +4226,16 @@ ul#navigation a:hover {
 
 .quote {
 	border: none;
-	background-color: #ffd564;
+	background-color: #F0C419;
 	color: #222A35;
-	font: 28px 'aleoitalic', sans-serif;
+	font: 28px 'aleoitalic', Nanum Gothic;
 	padding: 55px 50px 15px;
 }
 
 .quote .quote__author {
 	font-size: 16px;
 	font-style: normal;
-	font-family: 'aleobold', sans-serif;
+	font-family: 'aleobold', Nanum Gothic;
 	color: #ffffff;
 	text-align: right;
 	position: relative;
@@ -4254,7 +4254,7 @@ ul#navigation a:hover {
 }
 
 .quote .quote__author .quote__author-name {
-	background-color: #ffd564;
+	background-color: #F0C419;
 	position: relative;
 	padding-left: 10px;
 }
@@ -4368,11 +4368,11 @@ ul#navigation a:hover {
 
 .social .social__variant:hover {
 	color: #ffffff;
-	background-color: #fe505a;
+	background-color: #ED2236;
 }
 
 .social .social__variant:hover:after {
-	border-color: #fe505a;
+	border-color: #ED2236;
 }
 
 .social--hide {
@@ -4385,7 +4385,7 @@ ul#navigation a:hover {
 	border-radius: 15px;
 	cursor: pointer;
 	z-index: 20;
-	background-color: #ffd564;
+	background-color: #F0C419;
 	-webkit-transition: 0.5s;
 	transition: 0.5s;
 	-webkit-transition-delay: 0.2s;
@@ -4397,7 +4397,7 @@ ul#navigation a:hover {
 
 .social--hide:before {
 	content: '+';
-	font: 18px 'Roboto', sans-serif;
+	font: 18px 'Roboto', Nanum Gothic;
 	color: #222A35;
 	font-weight: bold;
 	position: absolute;
@@ -4438,7 +4438,7 @@ ul#navigation a:hover {
 
 .social--hide .social__variant:hover {
 	background-color: transparent;
-	color: #fe505a;
+	color: #ED2236;
 }
 
 .social--hide .social__variant.social--first {
@@ -4516,7 +4516,7 @@ ul#navigation a:hover {
 
 .comment-form .comment-form__info {
 	margin-top: 19px;
-	font: 13px 'Roboto', sans-serif;
+	font: 13px 'Roboto', Nanum Gothic;
 	color: #969b9f;
 	display: inline-block;
 }
@@ -4567,13 +4567,13 @@ ul#navigation a:hover {
 	top: 43px;
 	right: 0;
 	font-size: 14px;
-	color: #fe505a;
+	color: #ED2236;
 }
 
 .comment .comment__reply:before {
 	content: "\f112";
 	font-size: 14px;
-	color: #fe505a;
+	color: #ED2236;
 	font-family: "FontAwesome";
 	margin-right: 10px;
 }
@@ -4634,13 +4634,13 @@ ul#navigation a:hover {
 	text-align: center;
 	margin: 0;
 	margin-bottom: 28px;
-	font-family: 'aleobold', sans-serif;
+	font-family: 'aleobold', Nanum Gothic;
 }
 
 .category .category__title .title-edition {
 	font-size: 16px;
 	font-weight: normal;
-	font-family: 'aleoitalic', sans-serif;
+	font-family: 'aleoitalic', Nanum Gothic;
 	text-transform: lowercase;
 }
 
@@ -4687,7 +4687,7 @@ ul#navigation a:hover {
 }
 
 #twitter-feed p {
-	font-family: Arial, sans-serif;
+	font-family: Arial, Nanum Gothic;
 	font-size: 12px;
 	line-height: 16px;
 	margin-bottom: 14px;
@@ -4712,7 +4712,7 @@ ul#navigation a:hover {
 .tweetprofilelink a {
 	font-size: 12px;
 	color: #969b9f;
-	font-family: Arial, sans-serif;
+	font-family: Arial, Nanum Gothic;
 }
 
 .twitter-text {
@@ -4746,11 +4746,11 @@ ul#navigation a:hover {
 }
 
 .nav-link .nav-link__item:hover:before {
-	color: #fe505a;
+	color: #ED2236;
 }
 
 .copy {
-	font-family: 'aleoitalic', sans-serif;
+	font-family: 'aleoitalic', Nanum Gothic;
 	font-size: 13px;
 	padding-bottom: 45px;
 }
@@ -4811,7 +4811,7 @@ ul#navigation a:hover {
 	transition: 0.3s;
 	width: 130px;
 	display: none;
-	font: 13px 'aleoitalic', sans-serif;
+	font: 13px 'aleoitalic', Nanum Gothic;
 	color: #ffffff;
 	line-height: 21px;
 }
@@ -4871,7 +4871,7 @@ ul#navigation a:hover {
 	-webkit-transition: 0.3s;
 	transition: 0.3s;
 	width: 130px;
-	font: 13px 'aleoitalic', sans-serif;
+	font: 13px 'aleoitalic', Nanum Gothic;
 	color: #ffffff;
 	line-height: 21px;
 	position: absolute;
@@ -5211,7 +5211,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 	width: 90px;
 	border: none;
 	cursor: pointer;
-	color: #fe505a;
+	color: #ED2236;
 	background-color: transparent;
 	position: relative;
 	-webkit-transition: 0.3s;
@@ -5224,7 +5224,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 
 .datepicker:before {
 	content: "\f078";
-	color: #fe505a;
+	color: #ED2236;
 	font-family: "FontAwesome";
 	font-size: 10px;
 	position: absolute;
@@ -5306,7 +5306,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 
 .ui-datepicker .ui-datepicker-header .ui-datepicker-title {
 	color: #ffffff;
-	font: 14px 'aleoregular', sans-serif;
+	font: 14px 'aleoregular', Nanum Gothic;
 	margin-top: 11px;
 	margin-bottom: 13px;
 }
@@ -5432,7 +5432,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 
 .ui-datepicker .ui-datepicker-current-day .ui-state-default,
 	.ui-datepicker td:hover .ui-state-default {
-	color: #fe505a;
+	color: #ED2236;
 }
 
 .select {
@@ -5448,7 +5448,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 }
 
 .select .sbSelector {
-	color: #fe505a;
+	color: #ED2236;
 	position: relative;
 	text-align: right;
 	padding-right: 20px;
@@ -5465,7 +5465,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 
 .select .sbSelector:before {
 	content: "\f078";
-	color: #fe505a;
+	color: #ED2236;
 	font-family: "FontAwesome";
 	font-size: 10px;
 	position: absolute;
@@ -5518,7 +5518,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 
 .select .sbToggle:after {
 	/* 	content: '�쁺�솕愿�''; */
-	font: 13px 'Roboto', sans-serif;
+	font: 13px 'Roboto', Nanum Gothic;
 	font-weight: bold;
 }
 
@@ -5624,7 +5624,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 }
 
 .mega-select .filter--active {
-	color: #fe505a;
+	color: #ED2236;
 }
 
 .mega-select .filter--active:after, .mega-select .filter--active:hover:after
@@ -5707,7 +5707,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 }
 
 .pagination .pagination__prev {
-	font: 13px 'aleoregular', sans-serif;
+	font: 13px 'aleoregular', Nanum Gothic;
 	color: #222A35;
 	text-transform: uppercase;
 	display: inline-block;
@@ -5719,13 +5719,13 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 }
 
 .pagination .pagination__prev:hover {
-	color: #fe505a;
+	color: #ED2236;
 	background-image: url(../images/icons/left-arrow-danger.svg);
 	background-position: 0 50%;
 }
 
 .pagination .pagination__next {
-	font: 13px 'aleoregular', sans-serif;
+	font: 13px 'aleoregular', Nanum Gothic;
 	color: #222A35;
 	text-transform: uppercase;
 	float: right;
@@ -5738,7 +5738,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 }
 
 .pagination .pagination__next:hover {
-	color: #fe505a;
+	color: #ED2236;
 	background-image: url(../images/icons/right-arrow-danger.svg);
 }
 
@@ -5763,7 +5763,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 
 .booking-pagination .booking-pagination__prev:hover {
 	color: #ffffff;
-	background-color: #fe505a;
+	background-color: #ED2236;
 }
 
 .booking-pagination .booking-pagination__prev:hover .arrow__text {
@@ -5795,7 +5795,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 
 .booking-pagination .booking-pagination__next:hover {
 	color: #ffffff;
-	background-color: #fe505a;
+	background-color: #ED2236;
 }
 
 .booking-pagination .booking-pagination__next:hover .arrow__text {
@@ -5818,8 +5818,8 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 
 .booking-pagination .arrow__text {
 	position: relative;
-	font: 16px 'aleoregular', sans-serif;
-	color: #fe505a;
+	font: 16px 'aleoregular', Nanum Gothic;
+	color: #ED2236;
 	text-transform: uppercase;
 	border-bottom: 1px solid #dbdee1;
 	margin-bottom: 2px;
@@ -5832,7 +5832,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 .booking-pagination .arrow--prev:before {
 	content: "\f053";
 	font: 15px "FontAwesome";
-	color: #fe505a;
+	color: #ED2236;
 	position: absolute;
 	top: 18px;
 	left: -2px;
@@ -5843,7 +5843,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 .booking-pagination .arrow--next:before {
 	content: "\f054";
 	font: 15px "FontAwesome";
-	color: #fe505a;
+	color: #ED2236;
 	position: absolute;
 	top: 18px;
 	right: -2px;
@@ -5852,7 +5852,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 }
 
 .booking-pagination .arrow__info {
-	font: 14px 'aleoitalic', sans-serif;
+	font: 14px 'aleoitalic', Nanum Gothic;
 	color: #969b9f;
 	-webkit-transition: 0.4s;
 	transition: 0.4s;
@@ -5869,7 +5869,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 
 .movie .movie__images {
 	position: relative;
-	border: 3px solid #ffd564;
+	border: 3px solid #F0C419;
 }
 
 .movie .movie__images img {
@@ -5885,9 +5885,9 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 .movie .movie__rate {
 	position: relative;
 	padding: 20px 17px 19px;
-	border: 3px solid #ffd564;
+	border: 3px solid #F0C419;
 	border-top: none;
-	font: 16px 'aleoregular', sans-serif;
+	font: 16px 'aleoregular', Nanum Gothic;
 	color: #222A35;
 }
 
@@ -5897,7 +5897,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 }
 
 .movie .movie__rate .movie__rate-number {
-	font: 11px 'Roboto', sans-serif;
+	font: 11px 'Roboto', Nanum Gothic;
 	display: block;
 }
 
@@ -5908,9 +5908,9 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 	-webkit-border-radius: 24px;
 	-moz-border-radius: 24px;
 	border-radius: 24px;
-	background-color: #ffd564;
+	background-color: #F0C419;
 	border: solid 3px #fff;
-	font: 16px 'Roboto', sans-serif;
+	font: 16px 'Roboto', Nanum Gothic;
 	color: #222A35;
 	text-align: center;
 	font-weight: bold;
@@ -5922,7 +5922,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 .movie .movie__time {
 	position: relative;
 	font-size: 13px;
-	color: #fe505a;
+	color: #ED2236;
 	margin-bottom: 20px;
 	padding-left: 20px;
 }
@@ -5930,7 +5930,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 .movie .movie__time:before {
 	content: "\f017";
 	font: 16px "FontAwesome";
-	color: #fe505a;
+	color: #ED2236;
 	position: absolute;
 	top: 6px;
 	left: 0;
@@ -5944,8 +5944,8 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 .movie .comment-link {
 	position: relative;
 	display: inline-block;
-	font: 16px 'aleoregular', sans-serif;
-	color: #fe505a;
+	font: 16px 'aleoregular', Nanum Gothic;
+	color: #ED2236;
 	margin-top: 30px;
 	margin-bottom: 15px;
 	-webkit-transition: 0.3s;
@@ -6098,7 +6098,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 	z-index: 10;
 	display: inline-block;
 	font-size: 12px;
-	background-color: #ffd564;
+	background-color: #F0C419;
 	padding: 9px 15px 8px 14px;
 	margin: 5px 16px 5px 0;
 	cursor: pointer;
@@ -6120,7 +6120,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 }
 
 .time-select .time-select__item:hover {
-	background-color: #fe505a;
+	background-color: #ED2236;
 }
 
 .time-select .time-select__item:before {
@@ -6152,7 +6152,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 }
 
 .time-select .time-select__item.active {
-	background-color: #fe505a;
+	background-color: #ED2236;
 }
 
 .time-select .time-select__item.active:after {
@@ -6305,7 +6305,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 	-moz-border-radius: 50px;
 	border-radius: 50px;
 	padding-top: 38px;
-	font: 20px 'aleobold', sans-serif;
+	font: 20px 'aleobold', Nanum Gothic;
 	text-align: center;
 	color: #222A35;
 	position: absolute;
@@ -6383,7 +6383,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 }
 
 .trailer .trailer__name {
-	font: 13px 'aleoregular', sans-serif;
+	font: 13px 'aleoregular', Nanum Gothic;
 	color: #ffffff;
 	text-align: center;
 	padding-top: 28px;
@@ -6391,7 +6391,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 }
 
 .trailer .trailer__number {
-	font: 13px 'aleoitalic', sans-serif;
+	font: 13px 'aleoitalic', Nanum Gothic;
 	color: #ffffff;
 	text-align: center;
 	padding-bottom: 20px;
@@ -6476,7 +6476,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 
 .trailer-btn:hover .btn-circled, .trailer-btn:hover .btn-circled:before,
 	.trailer-btn:hover .btn-circled:after {
-	background-color: #fe505a;
+	background-color: #ED2236;
 }
 
 .trailer-block--short {
@@ -6529,8 +6529,8 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 
 .rates .rates__result {
 	text-align: center;
-	font: 20px 'aleobold', sans-serif;
-	background-color: #ffd564;
+	font: 20px 'aleobold', Nanum Gothic;
+	background-color: #F0C419;
 }
 
 .rates .rates__stars .score {
@@ -6597,7 +6597,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 
 .offer .offer__name {
 	color: #ffffff;
-	font: 30px 'aleobold', sans-serif;
+	font: 30px 'aleobold', Nanum Gothic;
 	text-transform: uppercase;
 	margin-top: 44px;
 	margin-bottom: 17px;
@@ -6607,7 +6607,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 
 .offer .offer__datail {
 	color: #ffffff;
-	font: 18px 'aleoitalic', sans-serif;
+	font: 18px 'aleoitalic', Nanum Gothic;
 	text-transform: none;
 	font-weight: 300;
 	line-height: 21px;
@@ -6623,7 +6623,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 }
 
 .offer:hover {
-	background-color: #ffd564;
+	background-color: #F0C419;
 }
 
 .offer:hover .offer__name, .offer:hover .offer__datail, .offer:hover .offer__full
@@ -6632,8 +6632,8 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 }
 
 .offer-place {
-	color: #fe505a;
-	font-family: 'aleoitalic', sans-serif;
+	color: #ED2236;
+	font-family: 'aleoitalic', Nanum Gothic;
 	font-size: 18px;
 	text-align: center;
 	margin-bottom: 23px;
@@ -6741,7 +6741,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 	content: '';
 	width: 40px;
 	height: 28px;
-	background-color: #ffd564;
+	background-color: #F0C419;
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -6758,7 +6758,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 }
 
 .contact .contact__title {
-	font: 30px 'aleobold', sans-serif;
+	font: 30px 'aleobold', Nanum Gothic;
 	line-height: 30px;
 	margin-top: 45px;
 	margin-bottom: 23px;
@@ -6767,7 +6767,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 .contact .contact__describe {
 	font-size: 22px;
 	font-weight: normal;
-	font-family: 'aleoitalic', sans-serif;
+	font-family: 'aleoitalic', Nanum Gothic;
 }
 
 .contact .contact__mail {
@@ -6809,7 +6809,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 }
 
 .form .form__title {
-	font: 30px 'aleobold', sans-serif;
+	font: 30px 'aleobold', Nanum Gothic;
 	line-height: 30px;
 	margin-bottom: 26px;
 }
@@ -6833,7 +6833,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 }
 
 .contact-form-wrapper {
-	background-color: #ffd564;
+	background-color: #F0C419;
 	overflow: hidden;
 	margin: 76px 0;
 	padding: 56px 0 60px;
@@ -6904,7 +6904,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 	text-transform: uppercase;
 	color: #ffffff;
 	font-size: 20px;
-	font-family: 'aleobold', sans-serif;
+	font-family: 'aleobold', Nanum Gothic;
 	margin-top: -3px;
 	margin-bottom: 46px;
 }
@@ -6936,7 +6936,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 }
 
 .couter .digits {
-	font: 50px 'Roboto', sans-serif;
+	font: 50px 'Roboto', Nanum Gothic;
 	color: #ffffff;
 	font-weight: bold;
 	display: block;
@@ -6948,7 +6948,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 }
 
 .couter .digits-label {
-	font: 20px 'aleoitalic', sans-serif;
+	font: 20px 'aleoitalic', Nanum Gothic;
 	color: #ffffff;
 	margin-top: -2px;
 	position: absolute;
@@ -6975,7 +6975,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 }
 
 .order .order__title {
-	font: 30px 'aleobold', sans-serif;
+	font: 30px 'aleobold', Nanum Gothic;
 	text-transform: uppercase;
 	line-height: 26px;
 	margin-top: 5px;
@@ -6985,7 +6985,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 	font-size: 16px;
 	text-transform: none;
 	font-weight: normal;
-	font-family: 'aleoitalic', sans-serif;
+	font-family: 'aleoitalic', Nanum Gothic;
 }
 
 .order .order__control {
@@ -7033,7 +7033,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 }
 
 .order-step-area .order-step {
-	font: 16px 'aleoregular', sans-serif;
+	font: 16px 'aleoregular', Nanum Gothic;
 	padding-left: 55px;
 	position: relative;
 	width: 33.2%;
@@ -7067,11 +7067,11 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 }
 
 .order-step-area .first--step:before {
-	border-color: transparent transparent #ffd564 transparent;
+	border-color: transparent transparent #F0C419 transparent;
 }
 
 .order-step-area .first--step:after {
-	background-color: #ffd564;
+	background-color: #F0C419;
 }
 
 .order-step-area .second--step {
@@ -7079,11 +7079,11 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 }
 
 .order-step-area .second--step:before {
-	border-color: transparent transparent #fe505a transparent;
+	border-color: transparent transparent #ED2236 transparent;
 }
 
 .order-step-area .second--step:after {
-	background-color: #fe505a;
+	background-color: #ED2236;
 }
 
 .order-step-area .third--step:before {
@@ -7151,7 +7151,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 	-moz-border-radius: 50px;
 	border-radius: 50px;
 	padding-top: 40px;
-	background-color: #ffd564;
+	background-color: #F0C419;
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -7568,7 +7568,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 }
 
 .book-result .booking-cost {
-	color: #fe505a;
+	color: #ED2236;
 }
 
 .reservation-message {
@@ -7595,7 +7595,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 
 .reservation-message:after {
 	content: 'i';
-	font: 18px 'aleobold', sans-serif;
+	font: 18px 'aleobold', Nanum Gothic;
 	color: #222A35;
 	position: absolute;
 	top: 2px;
@@ -7687,7 +7687,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 }
 
 .ticket .ticket__place {
-	color: #fe505a;
+	color: #ED2236;
 }
 
 .ticket .ticket__item {
@@ -7813,7 +7813,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 	transition: 0.3s;
 	width: 130px;
 	display: none;
-	font: 13px 'aleoitalic', sans-serif;
+	font: 13px 'aleoitalic', Nanum Gothic;
 	color: #ffffff;
 	line-height: 21px;
 	text-align: right;
@@ -7823,8 +7823,8 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 
 .tp-leftarrow.default .slider__info:before {
 	content: 'back';
-	font: 13px 'aleoitalic', sans-serif;
-	color: #ffd564;
+	font: 13px 'aleoitalic', Nanum Gothic;
+	color: #F0C419;
 	position: absolute;
 	bottom: 22px;
 	right: 19px;
@@ -7894,7 +7894,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 	-webkit-transition: 0.3s;
 	transition: 0.3s;
 	width: 130px;
-	font: 13px 'aleoitalic', sans-serif;
+	font: 13px 'aleoitalic', Nanum Gothic;
 	color: #ffffff;
 	line-height: 21px;
 	position: absolute;
@@ -7906,8 +7906,8 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 
 .tp-rightarrow.default .slider__info:before {
 	content: 'next';
-	font: 13px 'aleoitalic', sans-serif;
-	color: #ffd564;
+	font: 13px 'aleoitalic', Nanum Gothic;
+	color: #F0C419;
 	position: absolute;
 	top: 67px;
 	left: 19px;
@@ -7986,7 +7986,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 	transition: 0.3s;
 	width: 130px;
 	display: none;
-	font: 13px 'aleoitalic', sans-serif;
+	font: 13px 'aleoitalic', Nanum Gothic;
 	color: #ffffff;
 	line-height: 21px;
 }
@@ -8046,7 +8046,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 	-webkit-transition: 0.3s;
 	transition: 0.3s;
 	width: 130px;
-	font: 13px 'aleoitalic', sans-serif;
+	font: 13px 'aleoitalic', Nanum Gothic;
 	color: #ffffff;
 	line-height: 21px;
 	position: absolute;
@@ -8106,7 +8106,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 	font-weight: 800;
 	font-style: italic;
 	color: #ffffff;
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Open Sans', Nanum Gothic;
 }
 
 .slide .slide__name--smaller {
@@ -8123,7 +8123,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 }
 
 .slide .slide__name--specific {
-	font-family: 'aleoregular', sans-serif;
+	font-family: 'aleoregular', Nanum Gothic;
 }
 
 .slide .highlight {
@@ -8133,7 +8133,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 .slide .slide__descript {
 	color: #c1c1c1;
 	font-size: 22px;
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Roboto', Nanum Gothic;
 	font-weight: 100;
 	width: 100%;
 	text-align: center;
@@ -8142,13 +8142,13 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 }
 
 .slide .slide__time {
-	font: 18px 'Roboto', sans-serif;
+	font: 18px 'Roboto', Nanum Gothic;
 	color: #ffffff;
 	z-index: 40;
 }
 
 .slide .slide__date {
-	font: 18px 'Roboto', sans-serif;
+	font: 18px 'Roboto', Nanum Gothic;
 	color: #ffffff;
 	font-weight: bold;
 	z-index: 40;
@@ -8177,15 +8177,15 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 }
 
 .slide .slide__text {
-	font: 13px 'Roboto', sans-serif;
+	font: 13px 'Roboto', Nanum Gothic;
 	color: #ffffff;
 	text-align: right;
 	line-height: 21px;
 }
 
 .slide .slide__link {
-	font: 16px 'aleoregular', sans-serif;
-	color: #fe505a;
+	font: 16px 'aleoregular', Nanum Gothic;
+	color: #ED2236;
 	text-transform: uppercase;
 	padding-right: 20px;
 }
@@ -8193,7 +8193,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 .slide .slide__link:before {
 	content: "\f054";
 	font: 16px "FontAwesome";
-	color: #fe505a;
+	color: #ED2236;
 	position: absolute;
 	top: 2px;
 	right: 0;
@@ -8203,7 +8203,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 
 .slide .slide__link:hover {
 	opacity: 0.7;
-	color: #fe505a;
+	color: #ED2236;
 }
 
 .slide .slider-wrap-btn {
@@ -8252,9 +8252,9 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 }
 
 .movie-best .movie-best__rating {
-	background-color: #ffd564;
+	background-color: #F0C419;
 	text-align: center;
-	font: 20px 'aleobold', sans-serif;
+	font: 20px 'aleobold', Nanum Gothic;
 	color: #222A35;
 	text-transform: uppercase;
 	padding-bottom: 25px;
@@ -8289,7 +8289,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 .movie-best .movie-best__check {
 	cursor: pointer;
 	position: relative;
-	background-color: #ffd564;
+	background-color: #F0C419;
 	text-align: center;
 	-webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 	-moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -8351,8 +8351,8 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 }
 
 .movie-best .movie-beta__info .slide__link {
-	color: #fe505a;
-	font: 16px 'aleoregular', sans-serif;
+	color: #ED2236;
+	font: 16px 'aleoregular', Nanum Gothic;
 	padding-right: 20px;
 	text-transform: uppercase;
 	position: relative;
@@ -8369,7 +8369,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 }
 
 .movie-best .movie-beta__info .slide__link:before {
-	color: #fe505a;
+	color: #ED2236;
 	content: "\f054";
 	font: 16px "FontAwesome";
 	position: absolute;
@@ -8380,7 +8380,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 }
 
 .movie-best .movie-beta__info .slide__link:hover {
-	background-color: #fe505a;
+	background-color: #ED2236;
 	color: #ffffff;
 }
 
@@ -8420,7 +8420,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 	background-color: rgba(255, 255, 255, 0.6);
 	border-radius: 50px;
 	color: #222A35;
-	font: bold 20px 'Aleo', sans-serif;
+	font: bold 20px 'Aleo', Nanum Gothic;
 	height: 100px;
 	left: 50%;
 	margin-left: -50px;
@@ -8474,7 +8474,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 }
 
 .movie-best .movie-beta__item:hover .best-rate {
-	background-color: #ffd564;
+	background-color: #F0C419;
 }
 
 .mega-select-marker {
@@ -8484,7 +8484,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 
 .mega-select-marker .select-marker {
 	margin-bottom: 0;
-	font-family: 'aleobold', sans-serif;
+	font-family: 'aleobold', Nanum Gothic;
 	color: #222A35;
 	font-size: 50px;
 	text-transform: uppercase;
@@ -8561,7 +8561,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 	color: #222A35;
 	position: relative;
 	margin-bottom: 98px;
-	font: 30px 'aleobold', sans-serif;
+	font: 30px 'aleobold', Nanum Gothic;
 	line-height: 21px;
 	margin-top: 20px;
 }
@@ -8677,8 +8677,8 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 }
 
 .table--icons th {
-	background-color: #ffd564;
-	font: 18px 'Roboto', sans-serif;
+	background-color: #F0C419;
+	font: 18px 'Roboto', Nanum Gothic;
 	padding-top: 20px;
 	padding-bottom: 20px;
 	text-align: left;
@@ -8709,7 +8709,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 
 .login .login__title {
 	font-size: 22px;
-	font-family: 'aleobold', sans-serif;
+	font-family: 'aleobold', Nanum Gothic;
 	line-height: 20px;
 	color: #222A35;
 	text-transform: uppercase;
@@ -8721,13 +8721,13 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 .login .login__title .login-edition {
 	font-size: 16px;
 	font-weight: normal;
-	font-family: 'aleoitalic', sans-serif;
+	font-family: 'aleoitalic', Nanum Gothic;
 	text-transform: none;
 }
 
 .login .login__tracker {
 	text-align: center;
-	font: 16px 'aleoitalic', sans-serif;
+	font: 16px 'aleoitalic', Nanum Gothic;
 	color: #222A35;
 	margin: 33px 0 35px;
 }
@@ -8739,7 +8739,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 }
 
 .login .form__tracker:hover {
-	color: #fe505a;
+	color: #ED2236;
 }
 
 .login .login__input {
@@ -8758,7 +8758,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 }
 
 .login .login__check-info {
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Roboto', Nanum Gothic;
 	font-size: 13px;
 	color: #b4b1b2;
 	display: block;
@@ -8896,13 +8896,13 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 	font-size: 40px;
 	text-align: center;
 	color: #ffffff;
-	font-family: 'aleoitalic', sans-serif;
+	font-family: 'aleoitalic', Nanum Gothic;
 	margin-top: 18px;
 }
 
 .copy--light {
 	color: #ffffff;
-	font: 16px 'Roboto', sans-serif;
+	font: 16px 'Roboto', Nanum Gothic;
 	font-style: italic;
 }
 
@@ -8956,11 +8956,11 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 }
 
 .price--gold .price-inner {
-	background-color: #ffd564;
+	background-color: #F0C419;
 }
 
 .price--gold .price-inner:before {
-	border-color: #ffd564;
+	border-color: #F0C419;
 }
 
 .price--gold .price__package, .price--gold .price__value, .price--gold .price__feather
@@ -8977,7 +8977,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 }
 
 .progress--light .progress__bar .progress__current {
-	background-color: #fe505a;
+	background-color: #ED2236;
 }
 
 .progress--lines .progress__bar {
@@ -9150,7 +9150,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 }
 
 .testionaial--rect .testimonial-inner {
-	background-color: #fe505a;
+	background-color: #ED2236;
 	position: relative;
 	padding: 0px 40px 39px;
 }
@@ -9169,7 +9169,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 .testionaial--rect .testionaial__author {
 	text-align: right;
 	font-size: 16px;
-	font-family: 'aleoitalic', sans-serif;
+	font-family: 'aleoitalic', Nanum Gothic;
 	color: #ffffff;
 	font-weight: normal;
 }
@@ -9335,11 +9335,11 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 }
 
 .category--light .category__item:hover {
-	color: #fe505a;
+	color: #ED2236;
 }
 
 .category--light .category__item:hover:before {
-	color: #fe505a;
+	color: #ED2236;
 }
 
 .category--light .category__item--static {
@@ -9381,7 +9381,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 }
 
 .tags--dark .tags__item:hover {
-	background-color: #fe505a;
+	background-color: #ED2236;
 	color: #ffffff;
 }
 
@@ -9530,7 +9530,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 	position: absolute;
 	top: 18px;
 	right: 0;
-	color: #fe505a;
+	color: #ED2236;
 }
 
 .movie--preview .movie__show-btn:hover {
@@ -9538,7 +9538,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 }
 
 .movie--preview .movie__show-btn:before {
-	color: #fe505a;
+	color: #ED2236;
 	content: "\f078";
 	font-family: "FontAwesome";
 	font-size: 10px;
@@ -9793,15 +9793,15 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 }
 
 .cinema--full .cinema__title {
-	font: 24px 'aleobold', sans-serif;
+	font: 24px 'aleobold', Nanum Gothic;
 	text-transform: uppercase;
 }
 
 .cinema--full .cinema__rating {
-	background-color: #ffd564;
+	background-color: #F0C419;
 	width: 750px;
 	margin: 0 auto;
-	font: 16px 'aleobold', sans-serif;
+	font: 16px 'aleobold', Nanum Gothic;
 	padding-top: 28px;
 	padding-bottom: 27px;
 	display: block;
@@ -9833,7 +9833,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 }
 
 .cinema--full .cinema__info {
-	background-color: #ffd564;
+	background-color: #F0C419;
 	width: 750px;
 	margin: 0px auto;
 	padding-top: 20px;
@@ -9936,7 +9936,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 
 .gallery-item .gallery-item--video:before, .gallery-item .gallery-item--video-link:before
 	{
-	background-color: #fe505a;
+	background-color: #ED2236;
 }
 
 .choose-sits__info--first {
@@ -11100,7 +11100,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 		background: none;
 		padding-left: 7px;
 		padding-right: 7px;
-		color: #fe505a;
+		color: #ED2236;
 	}
 	.nav-tabs>li>a, .nav-tabs>li>a:hover, .nav-tabs>li>a:focus {
 		padding-left: 7px;
@@ -11255,7 +11255,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 
 .film_title {
 	font-weight: bold;
-	font: 20px 'aleobold', sans-serif;
+	font: 20px 'aleobold', Nanum Gothic;
 }
 
 .film_button {

@@ -555,18 +555,26 @@ function init_BookingOne() {
                 date.val(chooseDate);
 
 
-                $('.select .sbOptions').click(function (){
+                $('.select .sbOptions').click(function (e){
                 	//data element change
                     var chooseCity = $('.select .sbSelector').text();
                     //data element set change
                     city.val(chooseCity);
+                    //function에 e라는 arg 추가하고 check를 돌림. 
+                    //e가 왜 있는지는 모름 걍 따라씀....
+                    check(e);
+                    e.preventDefault();
                 });
 
-                $('.datepicker__input').change(function () {
+                $('.datepicker__input').change(function (e) {
                 	//data element change
                     var chooseDate = $('.datepicker__input').val();
                     //data element set change
                     date.val(chooseDate);
+                    //function에 e라는 arg 추가하고 check를 돌림. 
+                    //e가 왜 있는지는 모름 걍 따라씀....
+                    check(e);
+                    e.preventDefault();
                 });
 
                 // --- Step for data - serialize and send to next page---//
@@ -599,22 +607,26 @@ function init_BookingOne() {
 
                 });
                 //8 예매선택 
-                $('.checkk').click(function(e){
+                //check라는 펑션을 만들어서 필요 데이터가 있는지 체크
+                function check(e){
+                	//문서 내의 choosen 클래스가 있는 곳에서 자료 받아옴
                     var chooseCity = $('.choosen-city').val();
                     var chooseDate = $('.choosen-date').val();
                     var chooseFilm = $('.choosen-movie').val();
-                    //data element set (default)
-//                    city.val(chooseCity);
-//                    date.val(chooseDate);
-//                    f
+                    //셋 다 값이 있을때 데이터를 서밋 작업을 수행, 하나라도 비면 패스
                     if(chooseCity!=""&&chooseFilm!=""&&chooseDate!=""){
 //                    	${.'items-wrap'}.replace
                 	alert(chooseCity);
                 	alert(chooseDate);
                 	alert(chooseFilm);
                 	$('.bookdata').submit();
-                	e.preventDefault();
                     }
+                }
+                //영화 선택엔 checkk 클래스를 달아서 펑션 수행. 영화관, 날짜는 jquery에서 수행
+                $('.checkk').click(function(e){
+                	check(e);
+                	e.preventDefault();
+                    
                 });
 }
 
@@ -641,7 +653,7 @@ function init_BookingTwo () {
                     pplNum = 0;
     
     // 좌석 4개로 제한하기
-    	$('.sits-price').click(function (e){
+    	$('.sits-price').click(function check (e){
     		e.preventDefault();
     		var norm = parseInt($('.norm').val());
     		var youg = parseInt($('.youg').val());

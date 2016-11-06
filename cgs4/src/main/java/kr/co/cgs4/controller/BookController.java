@@ -1,23 +1,19 @@
 package kr.co.cgs4.controller;
 
 import java.util.ArrayList;
-import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import kr.co.cgs4.HomeController;
 import kr.co.cgs4.dao.BookDAO;
-import kr.co.cgs4.dao.FilmDAO;
+import kr.co.cgs4.dto.Book_BookInfo;
+import kr.co.cgs4.dto.Book_ScreenNum;
 import kr.co.cgs4.dto.FilmDTO;
-import kr.co.cgs4.util.BookInfo;
-import kr.co.cgs4.util.ScreeningInfo;
+import kr.co.cgs4.dto.Book_ScreeningInfo;
 
 @Controller
 public class BookController {
@@ -39,12 +35,15 @@ public class BookController {
 	public String book1(Model model, HttpServletRequest hsr) {
 	System.out.println("book11()");
 	BookDAO bdao = new BookDAO();
+	//리퀘스트 받아온 값이 null이 아닐때만 좌석정보 불러옴.
 	if(hsr.getParameter("film_name")!=null){
 		String film_name = hsr.getParameter("film_name");
 		String site_name = hsr.getParameter("site_name");
 		String screening_date = hsr.getParameter("screening_date");
-		ArrayList<ScreeningInfo> bdto = bdao.screening_date(film_name, site_name, screening_date);
+		ArrayList<Book_ScreeningInfo> bdto = bdao.screening_date(film_name, site_name, screening_date);
+		ArrayList<Book_ScreenNum> scdto = bdao.screening_num(film_name, site_name, screening_date);
 		model.addAttribute("blist", bdto);
+		model.addAttribute("scNum", scdto);
 	}
 	ArrayList<FilmDTO> fdto = bdao.film_list();
 	model.addAttribute("flist", fdto);
@@ -57,7 +56,7 @@ public class BookController {
 //	model.addAttribute("list", dtos);
 //	return "list";
 	@RequestMapping("/book2")
-	public String book2(@ModelAttribute("bInfo") BookInfo bookinfo){	
+	public String book2(@ModelAttribute("bInfo") Book_BookInfo bookinfo){	
 	return "book/book2";
 	}
 	//서블릿 리퀘스트 써서 하나하나 받는 법.

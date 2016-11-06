@@ -1,8 +1,8 @@
-package kr.co.cgs4.util;
+package kr.co.cgs4.dto;
 
 import java.sql.Timestamp;
 
-public class ScreeningInfo {
+public class Book_ScreeningInfo {
 	private String screening_ID;
 	private String film_name;
 	private String site_name;

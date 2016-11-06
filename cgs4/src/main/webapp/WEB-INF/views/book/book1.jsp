@@ -107,9 +107,6 @@
 
 
 </head>
-<%!String film_name;
-	String site_name;
-	String sc_date;%>
 
 <body>
 	<div class="wrapper">
@@ -152,9 +149,8 @@
 							<tr class="rates rates--top">
 								<td class="film_title"><button value="${dto.film_name}"
 										onclick="movieChk('${dto.film_name}')" class="film_button checkk" >
-										<img src="<%=ctx%>/resources/images/icons/age_all.png"
+										<img src="<%=ctx%>/resources/images/icons/age_${dto.film_grade}.png"
 											class="film_age">
-										<!-- age_${dto.film_grade}.png -->
 										<strong>${dto.film_name}</strong>
 									</button></td>
 							</tr>
@@ -185,8 +181,8 @@
 				<form id='select' class="select" method='get'>
 					<span class="cinemapicker checkk"><i class="fa fa-rocket"></i>영화관
 						선택</span> <select name="select_item" id="select-sort"
-						class="select__sort checkk" tabindex="0">
-						<option value="001" selected='selected' onmouseup="cityChk()">강변점</option>
+						class="select__sort checkk" tabindex="0" onmouseup="cityChk()">
+						<option value="001" selected='selected'>강변점</option>
 						<option value="002">인천점</option>
 						<option value="003">야탑점</option>
 						<option value="004">강남점</option>
@@ -234,14 +230,15 @@
 					</form>
 					
 				<c:choose>
-				<c:when test="${blist ne null }">
+				<c:when test="${scNum ne null }">
+				<c:forEach var="j" items="${scNum}">
 				<div class="time-select__group">
 					<div class="col-sm-2">
-						<p class="time-select__place">1관</p>
+						<p class="time-select__place">${j.screen_num} 관</p>
 					</div>
 					<ul class="col-sm-8 items-wrap">
-						<c:forEach var="i" items="${blist}" varStatus="stat">
-							<c:if test="${i.screen_num eq '01'}">
+						<c:forEach var="i" items="${blist}">
+							<c:if test="${i.screen_num == j.screen_num}">
 								<li class=time-select__set>
 									<div class="time-select__item" data-time='${i.start_time }'>${i.start_time }</div>
 									<div class="time-select__seat">100/100석</div>
@@ -250,6 +247,7 @@
 						</c:forEach>
 					</ul>
 				</div>
+				</c:forEach>
 				</c:when>
 				<c:otherwise>
 				<div class="time-select__group">

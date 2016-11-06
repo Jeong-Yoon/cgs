@@ -1,6 +1,6 @@
-package kr.co.cgs4.util;
+package kr.co.cgs4.dto;
 
-public class BookInfo {
+public class Book_BookInfo {
 	private String film_name;
 	private String site_name;
 	private String screening_date;

@@ -21,11 +21,12 @@ public class MovieCommand implements Command{
 		String film_ID = request.getParameter("film_ID");
 		String site_ID = request.getParameter("site_ID");
 		System.out.println(film_ID);
-		System.out.println(site_ID);
+//		System.out.println(site_ID);
 		FilmDAO dao = new FilmDAO();
 		FilmDTO dto = dao.film(film_ID);
 		ArrayList<ScreenDTO> sdto = dao.screen(site_ID);
 		model.addAttribute("film", dto);
+		System.out.println(dto);
 		model.addAttribute("screen", sdto);
 	}
 }

@@ -33,6 +33,7 @@ public class MovieController {
 	public String movie(HttpServletRequest request, Model model){
 		System.out.println("movie()");
 		model.addAttribute("request", request);
+		System.out.println(request);
 		command = new MovieCommand();
 		command.execute(model);
 		return "movie";

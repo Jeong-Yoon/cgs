@@ -20,12 +20,17 @@ public class FilmListCommand implements Command {
 		int page;
 		if (request.getParameter("page") != null) {
 			page = Integer.parseInt(request.getParameter("page"));
+			if(page < 0){
+				page=0;
+			}
+			System.out.println(page);
 		} else {
 			page = 0;
 		}
 		FilmDAO dao = new FilmDAO();
 		ArrayList<FilmDTO> dtos = dao.film_list(page);
 		model.addAttribute("film_list", dtos);
+		
 	}
 
 }

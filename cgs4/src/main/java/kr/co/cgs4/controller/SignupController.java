@@ -42,11 +42,9 @@ public class SignupController {
 		//주소
 		String getUserAddress = request.getParameter("user-address");
 		
-		//생일
-		String getUserBirthYear = request.getParameter("user-birthYear");
-		String getUserBirthMonth = request.getParameter("user-birthMonth");
-		String getUserBirthDay = request.getParameter("user-birthDay");
-		String getUserBirth = getUserBirthYear+"-"+getUserBirthMonth+"-"+getUserBirthDay;
+		//생년월일
+		String getUserBirth = request.getParameter("user-birth");
+
 		
 		
 		//핸드폰번호
@@ -57,12 +55,16 @@ public class SignupController {
 		
 		//이메일
 		String getUserEmail = request.getParameter("user-email");
+		
+		//성별
+		String getUserGender = request.getParameter("gender");
+		
 		try{
 		
 		//데이터 입력하기
 		MemberDAO dao = new MemberDAO();
 		
-		dao.signup(getID, getPW, getUserName, getUserAddress, getUserBirth, getUserPnum, getUserEmail);
+		dao.signup(getID, getPW, getUserName, getUserAddress, getUserBirth, getUserPnum, getUserEmail,getUserGender);
 		
     	response.setContentType("text/html; charset=UTF-8");    	
     	PrintWriter out =response.getWriter();

@@ -76,51 +76,49 @@
 				<tr>
 				<td width="80"><center><p>아이디</p></center></td>
 				<td width="150"><input type='text' placeholder='아이디를 입력해주세요' name='user-id'
-				class="login__input"></td>
+				class="login__input" required="required"></td>
 				<td></td>
-				<td width="90"><button type='submit' class="btn btn-md btn--warning btn--wider">중복확인</button></td>
+<!-- 				<td width="90"><button type='submit' class="btn btn-md btn--warning btn--wider">중복확인</button></td> -->
 				</tr>
 				
 				
 				<tr>
 				<td><center><p>비밀번호</p></center></td><td><input type='password'
-				placeholder='비밀번호를 입력해주세요.' name='user-password' class="login__input"></td>
+				placeholder='비밀번호를 입력해주세요.' name='user-password' class="login__input" required="required"></td>
 				<td></td>
 				<td><center><p>비밀번호확인</p></center></td>
 				<td></td>
-				<td width="150"><input type='password' placeholder='비밀번호를 한번 더 입력해주세요.' name='user-passwordok' class="login__input"></td>
+				<td width="150"><input type='password' placeholder='비밀번호를 한번 더 입력해주세요.' name='user-passwordok' class="login__input" required="required"></td>
 				</tr>
 				
 				<tr>
-				<td><center><p>이름</p></center></td><td><input type='text' placeholder='이름을 입력해주세요' name='user-name' class="login__input"></td>
+				<td><center><p>이름</p></center></td><td><input type='text' placeholder='이름을 입력해주세요' name='user-name' class="login__input" required="required"></td>
 				</tr>
 				
 				<tr>
-				<td><center><p>생년월일</p></center></td><td><input type='text' name='user-birthYear' class="login__input"></td>
-				<td width="20"><center>년</center></td>
-				<td><input type='text' name='user-birthMonth' class="login__input"></td>
-				<td width="20"><center>월</center></td>
-				<td><input type='text' name='user-birthDay' class="login__input"></td>
-				<td width="20"><center>일</center></td>
+				<td><center><p>주민번호</p></center></td><td><input type='text' name='user-birth' class="login__input" maxlength="6" required="required"></td>
+				<td width="20"><center>-</center></td>
+				<td><input type='text' name='gender' class="login__input" maxlength="1" required="required"></td>
+				<td width="20">******</td>
 				</tr>
 				
 				
 				<tr>
-				<td><center><p>핸드폰번호</p></center><td><input type='text' name='user-pnum' class="login__input"></td>
+				<td><center><p>핸드폰번호</p></center><td><input type='text' name='user-pnum' class="login__input" maxlength="3" required="required"></td>
 				<td><center>-</center></td>
-				<td><input type='text' name='user-pnum2' class="login__input"></td>
+				<td><input type='text' name='user-pnum2' class="login__input" maxlength="4" required="required"></td>
 				<td><center>-</center></td>
-				<td><input type='text' name='user-pnum3' class="login__input"></td>
+				<td><input type='text' name='user-pnum3' class="login__input" maxlength="4" required="required"></td>
 				</tr>
 				
 				<tr>
 				<td><center><p>이메일</p></center></td>
-				<td colspan="3"><input type='text' name='user-email' class="login__input"></td>
+				<td colspan="3"><input type='email' name='user-email' class="login__input" required="required"></td>
 				</tr>
 				
 				<tr>
 				<td><center><p>주소</p></center></td>
-				<td colspan="3"><input type='text' name='user-address' class="login__input"></td>
+				<td colspan="3"><input type='text' name='user-address' class="login__input" required="required"></td>
 				</tr>
 				
 				
@@ -129,7 +127,7 @@
 </div>
 			<div class="login__control">
 				<button type='submit' class="btn btn-md btn--warning btn--wider">Sign Up</button>&nbsp&nbsp
-				<a href='index'><button type="reset" class="btn btn-md btn--warning btn--wider">Cancle</button></a>
+				<a href='index'><button type="button" class="btn btn-md btn--warning btn--wider">Cancle</button></a>
 
 
 

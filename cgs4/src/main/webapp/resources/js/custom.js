@@ -975,13 +975,13 @@ function init_CinemaList () {
                 });
                 
                 //페이지 갯수 체크
-            	var pCnt=0;
-                $('.cinema').each( function(){
-                	pCnt++;
-                });
-                if(pCnt<12){
-                	$('.pagination__next').remove();
-                }
+//            	var pCnt=0;
+//                $('.cinema').each( function(){
+//                	pCnt++;
+//                });
+//                if(pCnt<12){
+//                	$('.pagination__next').remove();
+//                }
 }
 
 function init_Contact () {
@@ -1226,6 +1226,13 @@ function init_MoviePage () {
         starOff : 'star-off.svg',
         starOn  : 'star-on.svg' 
     });
+    
+    //2-1. Init vars for order data
+    // var for booking;
+                var city = $('.choosen-city'),
+                    date = $('.choosen-date'),
+                    cinema = $('.choosen-cinema'),
+                    time = $('.choosen-time');
 
     //2. Swiper slider
     //Media slider
@@ -1396,6 +1403,7 @@ function init_MoviePage () {
                     }
 
                 });
+                
 
     
     //5. Datepicker init
@@ -1417,7 +1425,112 @@ function init_MoviePage () {
                        $(".datepicker__input").datepicker("hide");
                      }
                 });
+                
+              //6. Choose variant proccess
+              //choose film
+                $('.film_button').click(function (e) {
+                     check(e)
+                })
+                
+              //choose time
+                $('.time-select__item').click(function (){
+                	//visual iteractive for choose
+                    $('.time-select__item').removeClass('active');
+                    $('.time-select__item').removeAttr("value");
+                    $(this).addClass('active');
+                    $(this).attr("value","time_id");
 
+                    //data element init
+                    var chooseTime = $(this).attr('data-time');
+                     $('.choose-indector--time').find('.choosen-area').text(chooseTime);
+                     $('.booking-form').find('.choosen-time').attr("value",chooseTime);
+
+                    //data element init
+                    var chooseCinema = $(this).parent().parent().parent().find('.time-select__place').text(); 
+                    $('.booking-form').find('.choosen-cinema').attr("value",chooseCinema);
+
+                    //data element set
+                    time.val(chooseTime);
+                    cinema.val(chooseCinema);
+                });
+
+
+
+                $('.select .sbOptions').click(function (e){
+                	//data element change
+                    var chooseCity = $('.select .sbSelector').text();
+                    //data element set change
+                    city.val(chooseCity);
+                    //function에 e라는 arg 추가하고 check를 돌림. 
+                    //e가 왜 있는지는 모름 걍 따라씀....
+                    check(e);
+                    e.preventDefault();
+                });
+
+                $('.datepicker__input').change(function (e) {
+                	//data element change
+                    var chooseDate = $('.datepicker__input').val();
+                    //data element set change
+                    date.val(chooseDate);
+                    //function에 e라는 arg 추가하고 check를 돌림. 
+                    //e가 왜 있는지는 모름 걍 따라씀....
+                    check(e);
+                    e.preventDefault();
+                });
+
+                // --- Step for data - serialize and send to next page---//
+                $('.booking-form').submit( function () {
+                    var bookData = $(this).serialize();
+                    $.get( $(this).attr('action'), bookData );
+                })
+                //7. Visibility block on page control
+    			//control block display on page
+                $('.choose-indector--film').click(function (e) {
+                    e.preventDefault();
+                    $(this).toggleClass('hide-content');
+                    $('.choose-film').slideToggle(400);
+                })
+
+                $('.choose-indector--time').click(function (e) {
+                    e.preventDefault();
+                    $(this).toggleClass('hide-content');
+                    $('.time-select').slideToggle(400);
+                })
+              //2. Sorting buy category
+                // sorting function
+                $('.tags__item').click(function (e) {
+                    //prevent the default behaviour of the link
+                    e.preventDefault();
+
+                        $('.tags__item').removeClass('item-active');
+                        $(this).addClass('item-active');
+
+                });
+                //8 예매선택 
+                //check라는 펑션을 만들어서 필요 데이터가 있는지 체크
+                function check(e){
+                	  
+                	//문서 내의 choosen 클래스가 있는 곳에서 자료 받아옴
+                    var chooseCity = $('.choosen-city').val();
+                    var chooseDate = $('.choosen-date').val();
+                    var chooseFilm = $('.choosen-movie').val();
+//                	alert(chooseFilm);
+//                	alert(chooseDate);
+                    //셋 다 값이 있을때 데이터를 서밋 작업을 수행, 하나라도 비면 패스
+                    if(chooseCity!='null'&&chooseFilm!='null'&&chooseDate!='null'&&chooseDate!=""){
+//                    	${.'items-wrap'}.replace
+//                	alert(chooseCity);
+                    	scroll=$(document).scrollTop();
+                    	$('.scrolls').attr('value',scroll);
+                	$('.bookdata').submit();
+                    }
+                }
+                //영화 선택엔 checkk 클래스를 달아서 펑션 수행. 영화관, 날짜는 jquery에서 수행
+                $('.checkk').click(function(e){
+                	check(e);
+                	e.preventDefault();
+                    
+                });
     //6. Reply comment form
     			// button more comments
                 $('#hide-comments').hide();

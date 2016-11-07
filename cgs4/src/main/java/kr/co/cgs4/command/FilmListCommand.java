@@ -23,7 +23,7 @@ public class FilmListCommand implements Command {
 		int page = Integer.parseInt(request.getParameter("page")); 
 		if (request.getParameter("page") != null) {
 			if(page < 0){
-				page=0;
+				page = 0;
 			}
 			System.out.println(page);
 		} else {
@@ -46,10 +46,11 @@ public class FilmListCommand implements Command {
 //			dtos = dao.film_list(page);
 //		}
 		if(dtos.size()==0){
-			page--;
+			--page;
+			System.out.println(page);
 			dtos = dao.film_list(page);
 		}
-		
+		request.setAttribute("size", dtos.size());
 		request.setAttribute("pagenum", page);
 		model.addAttribute("film_list", dtos);
 		

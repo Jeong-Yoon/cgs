@@ -48,7 +48,11 @@
 
 <!-- Modernizr -->
 <script src="<%=ctx%>/resources/js/external/modernizr.custom.js"></script>
-
+<script>
+function submit() {
+	document.getElementById("film-and-time").submit();
+}
+</script>
 <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!--[if lt IE 9]> 
     	<script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.js"></script> 
@@ -213,8 +217,7 @@
 
 
 	<div class="clearfix"></div>
-	<form id='film-and-time' class="booking-form" method='get'
-		action='book3'>
+	<form id='film-and-time' class="booking-form" method='get' action='book3'>
 		
 		<input type='hidden' name="film_name" class="film_name" value="${bInfo.film_name}">
 		<input type='hidden' name="site_name" class="site_name" value="${bInfo.site_name}">
@@ -227,14 +230,14 @@
 		<input type='hidden' name='young_cnt' class="choosen-number--middle">
 		<input type='hidden' name='common_cnt' class="choosen-number--expansive">
 		<input type='hidden' name='sale_price' class="choosen-cost">
-		<input type='hidden' name='choosen-sits' class="choosen-sits">
+		<input type='hidden' name='choosen_sits' class="choosen_sits">
 
 
 		<div class="booking-pagination booking-pagination--margin">
 			<a href="book1" class="booking-pagination__prev"> <span
 				class="arrow__text arrow--prev">이전 화면으로</span> <span
 				class="arrow__info">영화/영화관/날짜 선택</span>
-			</a> <a href="book3" class="booking-pagination__next"> <span
+			</a> <a href="#" class="booking-pagination__next" onclick="submit()"> <span
 				class="arrow__text arrow--next">다음 화면으로</span> <span
 				class="arrow__info">결제하기</span>
 			</a>

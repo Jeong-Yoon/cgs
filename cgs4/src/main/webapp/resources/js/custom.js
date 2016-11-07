@@ -656,7 +656,7 @@ function init_BookingTwo () {
                     cheapTicket = 5000,
                     middleTicket = 6000,
                     expansiveTicket = 7000,
-                    sits = $('.choosen-sits'),
+                    sits = $('.choosen_sits'),
                     pplNum = 0;
     
     // 좌석 4개로 제한하기
@@ -717,7 +717,7 @@ function init_BookingTwo () {
                 $('.sits__place').click(function (e) {
                     e.preventDefault();
                     var place = $(this).attr('data-place');
-                    var ticketPrice = $(this).attr('data-price');
+//                    var ticketPrice = $(this).attr('data-price');
                     
                     if(! $(e.target).hasClass('sits-state--your')){
                     	if(count<pplNum){
@@ -731,7 +731,7 @@ function init_BookingTwo () {
 //                            totSeat=totSeat+place;
 //                            alert(place);
 //                            alert(totSeat);
-//                            $('.choosen-sits').val(place);
+//                            $('.choosen_sits').val(place);
                             
 
                         }
@@ -747,7 +747,7 @@ function init_BookingTwo () {
 //                        totSeat=totSeat;
 //                        alert(place);
 //                        alert(totSeat);
-//                        $('.choosen-sits').val(place);
+//                        $('.choosen_sits').val(place);
 
                     }
 
@@ -755,13 +755,13 @@ function init_BookingTwo () {
                     var number = $('.checked-place').children().length;
 
                     //data element set 
-                    numberTicket.val(number);
-                    sumTicket.val(sum);
+//                    numberTicket.val(number);
+//                    sumTicket.val(sum);
 //                    cheapTicket.val(cheap);
 //                    middleTicket.val(middle);
 //                    expansiveTicket.val(expansive );
 
-//                    sits = $('.choosen-sits'),
+//                    sits = $('.choosen_sits'),
 
                     //data element init
                     var chooseSits = '';

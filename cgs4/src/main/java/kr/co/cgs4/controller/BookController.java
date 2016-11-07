@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import kr.co.cgs4.dao.BookDAO;
 import kr.co.cgs4.dto.Book_BookInfo;
+import kr.co.cgs4.dto.Book_BuyConfirm;
 import kr.co.cgs4.dto.Book_ScreenNum;
 import kr.co.cgs4.dto.FilmDTO;
 import kr.co.cgs4.dto.SeatDTO;
@@ -20,22 +21,10 @@ import kr.co.cgs4.dto.Book_SeatRow;
 @Controller
 public class BookController {
 	
-//	@RequestMapping("/book1")
-//	public String book1(Model model) {
-//	System.out.println("book1()");
-//	FilmDAO fdao = new FilmDAO();
-////	BookDAO bdao = new BookDAO();
-//	ArrayList<FilmDTO> fdto = fdao.film_list();
-////	ArrayList<ScreeningInfo> bdto = bdao.screening_date();
-//	model.addAttribute("flist", fdto);
-////	model.addAttribute("blist", bdto);
-//	
-//	return "book/book1";
-//	}
 	
 	@RequestMapping("/book1")
 	public String book1(Model model, HttpServletRequest hsr) {
-	System.out.println("book11()");
+	System.out.println("book1()");
 	BookDAO bdao = new BookDAO();
 	//리퀘스트 받아온 값이 null이 아닐때만 좌석정보 불러옴.
 	if(hsr.getParameter("film_name")!=null){
@@ -49,14 +38,9 @@ public class BookController {
 	}
 	ArrayList<FilmDTO> fdto = bdao.film_list();
 	model.addAttribute("flist", fdto);
-	
 	return "book/book1";
 	}
-//	System.out.println("list()");
-//	FilmDAO dao = new FilmDAO();
-//	ArrayList<FilmDTO> dtos = dao.film_list();
-//	model.addAttribute("list", dtos);
-//	return "list";
+	
 	@RequestMapping("/book2")
 	public String book2(@ModelAttribute("bInfo") Book_BookInfo bookinfo, Model model){
 		System.out.println("book2");
@@ -83,5 +67,9 @@ public class BookController {
 //	System.out.println(hsr.getParameter("site_name"));
 //	model.addAttribute("bInfo", bInfo);
 	
-	
+	@RequestMapping("/book3")
+	public String book3(@ModelAttribute("cInfo") Book_BuyConfirm buyConfirm,Model model){
+	System.out.println("book3");
+	return "book/book3";	
+	}
 }

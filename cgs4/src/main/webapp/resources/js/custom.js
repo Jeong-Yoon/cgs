@@ -973,6 +973,15 @@ function init_CinemaList () {
                             $('.row').css('clear','none');
                         }
                 });
+                
+                //페이지 갯수 체크
+            	var pCnt=0;
+                $('.cinema').each( function(){
+                	pCnt++;
+                });
+                if(pCnt<12){
+                	$('.pagination__next').remove();
+                }
 }
 
 function init_Contact () {

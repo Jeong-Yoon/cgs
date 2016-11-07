@@ -31,7 +31,7 @@
 			</span>
 			</a> <!-- 각 메뉴별 서브메뉴창-->
 			<ul id="navigation">
-				<li><span class="sub-nav-toggle plus"></span> <a href="	movie_list">영화</a>
+				<li><span class="sub-nav-toggle plus"></span> <a href="	movie_list?page=0">영화</a>
 					</li>
 				<li><span class="sub-nav-toggle plus"></span> <a
 					href="book1">예매</a>

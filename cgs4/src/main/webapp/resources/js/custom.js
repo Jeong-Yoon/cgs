@@ -378,6 +378,7 @@ function init_Home() {
     });
 }
 
+
 function init_BookingOne() {
     "use strict";
 
@@ -397,6 +398,8 @@ function init_BookingOne() {
                     date = $('.choosen-date'),
                     cinema = $('.choosen-cinema'),
                     time = $('.choosen-time');
+    var scroll = $('.scrolls').val();
+    			$(document).scrollTop(scroll);
 
     //3. Swiper slider(안씀)
     //init employee sliders
@@ -508,17 +511,18 @@ function init_BookingOne() {
 
 	//6. Choose variant proccess
 				//choose film
-                $('.film-images').click(function (e) {
+                $('.film_button').click(function (e) {
                 	 //visual iteractive for choose
-                     $('.film-images').removeClass('film--choosed');
-                     $(this).addClass('film--choosed');
+//                     $('.film-images').removeClass('film--choosed');
+//                     $(this).addClass('film--choosed');
 
                      //data element init
-                     var chooseFilm = $(this).parent().attr('data-film');
-                     $('.choose-indector--film').find('.choosen-area').text(chooseFilm);
+//                     var chooseFilm = $(this).parent().attr('data-film');
+//                     $('.choose-indector--film').find('.choosen-area').text(chooseFilm);
 
                      //data element set
-                     movie.val(chooseFilm);
+//                     movie.val(chooseFilm);
+                     check(e)
 
                 })
 
@@ -547,12 +551,12 @@ function init_BookingOne() {
                 // choose (change) city and date for film
 
                 //data element init (default)
-                var chooseCity = $('.choosen-city').val();
-                var chooseDate = $('.choosen-date').val();
-
-                //data element set (default)
-                city.val(chooseCity);
-                date.val(chooseDate);
+//                var chooseCity = $('.choosen-city').val();
+//                var chooseDate = $('.choosen-date').val();
+//
+//                //data element set (default)
+//                city.val(chooseCity);
+//                date.val(chooseDate);
 
 
                 $('.select .sbOptions').click(function (e){
@@ -609,16 +613,19 @@ function init_BookingOne() {
                 //8 예매선택 
                 //check라는 펑션을 만들어서 필요 데이터가 있는지 체크
                 function check(e){
+                	  
                 	//문서 내의 choosen 클래스가 있는 곳에서 자료 받아옴
                     var chooseCity = $('.choosen-city').val();
                     var chooseDate = $('.choosen-date').val();
                     var chooseFilm = $('.choosen-movie').val();
+//                	alert(chooseFilm);
+//                	alert(chooseDate);
                     //셋 다 값이 있을때 데이터를 서밋 작업을 수행, 하나라도 비면 패스
-                    if(chooseCity!=""&&chooseFilm!=""&&chooseDate!=""){
+                    if(chooseCity!='null'&&chooseFilm!='null'&&chooseDate!='null'&&chooseDate!=""){
 //                    	${.'items-wrap'}.replace
-                	alert(chooseCity);
-                	alert(chooseDate);
-                	alert(chooseFilm);
+//                	alert(chooseCity);
+                    	scroll=$(document).scrollTop();
+                    	$('.scrolls').attr('value',scroll);
                 	$('.bookdata').submit();
                     }
                 }

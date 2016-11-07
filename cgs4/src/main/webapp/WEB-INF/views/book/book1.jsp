@@ -213,7 +213,7 @@
 				<c:forEach var="j" items="${scNum}">
 				<div class="time-select__group">
 					<div class="col-sm-2">
-						<p class="time-select__place">${j.screen_num} 관</p>
+						<p class="time-select__place">${j.screen_num}</p>관
 					</div>
 					<ul class="col-sm-8 items-wrap">
 						<c:forEach var="i" items="${blist}">
@@ -256,9 +256,8 @@
 			<input type='hidden' name="film_name" class="choosen-movie" value="<%=fname%>">
 			<input type='hidden' name="site_name" class="choosen-city" value="<%=sname%>">
 			<input type='hidden' name="screening_date" class="choosen-date" value="<%=sdate%>">
-			<input type='hidden' name="screen_num" class="choosen-cinema"
-				id="screen_num"> <input type='hidden' name="start_time"
-				class="choosen-time" id="start_time">
+			<input type='hidden' name="screen_num" class="choosen-cinema" id="screen_num">
+			<input type='hidden' name="start_time" class="choosen-time" id="start_time">
 
 			<div class="booking-pagination">
 				<a href="#" class="booking-pagination__prev hide--arrow"> <span

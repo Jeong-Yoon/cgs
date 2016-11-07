@@ -13,7 +13,9 @@ import kr.co.cgs4.dao.BookDAO;
 import kr.co.cgs4.dto.Book_BookInfo;
 import kr.co.cgs4.dto.Book_ScreenNum;
 import kr.co.cgs4.dto.FilmDTO;
+import kr.co.cgs4.dto.SeatDTO;
 import kr.co.cgs4.dto.Book_ScreeningInfo;
+import kr.co.cgs4.dto.Book_SeatRow;
 
 @Controller
 public class BookController {
@@ -56,9 +58,18 @@ public class BookController {
 //	model.addAttribute("list", dtos);
 //	return "list";
 	@RequestMapping("/book2")
-	public String book2(@ModelAttribute("bInfo") Book_BookInfo bookinfo){	
+	public String book2(@ModelAttribute("bInfo") Book_BookInfo bookinfo, Model model){
+		System.out.println("book2");
+		BookDAO bdao = new BookDAO();
+		String site_name=bookinfo.getSite_name();
+		String screen_num=bookinfo.getScreen_num();
+		ArrayList<SeatDTO> sdto = bdao.seat(site_name, screen_num);
+		ArrayList<Book_SeatRow> srdto = bdao.sRow(site_name, screen_num);
+		model.addAttribute("seat", sdto);
+		model.addAttribute("sRow", srdto);
 	return "book/book2";
 	}
+	
 	//서블릿 리퀘스트 써서 하나하나 받는 법.
 //	public String book2(HttpServletRequest hsr, Model model) {
 //	System.out.println("book2()");

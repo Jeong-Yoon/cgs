@@ -690,10 +690,14 @@ function init_BookingTwo () {
     		}else{$('.checked-people').find('.youg').text(' ')}
     		if(spec!=0){$('.checked-people').find('.spec').text('우대 x '+spec)
     		}else{$('.checked-people').find('.spec').text(' ')}
+    		$('.choosen-number').val(pplNum);
+    		$('.choosen-number--cheap').val(spec);
+    		$('.choosen-number--middle').val(youg);
+    		$('.choosen-number--expansive').val(norm);
     		
 
-        $('.checked-result').text('$'+totprice);
-    
+        $('.checked-result').text(totprice+"원");
+        $('.choosen-cost').val(totprice);
     		
     	})
     //3. Choose sits (and count price for them)
@@ -705,6 +709,7 @@ function init_BookingTwo () {
                 var middle = 0;
                 var expansive = 0;
                 var count = 0;
+                var totSeat="";
 //                cheapTicket = 5000,
 //                middleTicket = 6000,
 //                expansiveTicket = 7000;
@@ -713,15 +718,21 @@ function init_BookingTwo () {
                     e.preventDefault();
                     var place = $(this).attr('data-place');
                     var ticketPrice = $(this).attr('data-price');
-
+                    
                     if(! $(e.target).hasClass('sits-state--your')){
                     	if(count<pplNum){
 
                         if (! $(this).hasClass('sits-state--not') ) {
                             $(this).addClass('sits-state--your');
                             count+=1;
-
-                            $('.checked-place').prepend('<span class="choosen-place '+place+'">'+ place +'</span>');
+                            
+                            $('.checked-place').append('<span class="choosen-place '+place+'">'+ place +'&nbsp</span>');
+                            
+//                            totSeat=totSeat+place;
+//                            alert(place);
+//                            alert(totSeat);
+//                            $('.choosen-sits').val(place);
+                            
 
                         }
                     }else{
@@ -731,6 +742,12 @@ function init_BookingTwo () {
                         $(this).removeClass('sits-state--your');
                         count-=1;
                         $('.'+place+'').remove();
+                        
+
+//                        totSeat=totSeat;
+//                        alert(place);
+//                        alert(totSeat);
+//                        $('.choosen-sits').val(place);
 
                     }
 
@@ -744,15 +761,17 @@ function init_BookingTwo () {
 //                    middleTicket.val(middle);
 //                    expansiveTicket.val(expansive );
 
+//                    sits = $('.choosen-sits'),
 
                     //data element init
                     var chooseSits = '';
-                    $('.choosen-place').each( function () {
-                        chooseSits += ', '+ $(this).text();
+                    $('.sits').find('.choosen-place').each( function () {
+//                        alert(chooseSits);
+                        chooseSits += $(this).text()
                     });
 
                     //data element set 
-                    sits.val(chooseSits.substr(2));
+                    sits.val(chooseSits);
                 });
 
 				//--- Step for data  ---//

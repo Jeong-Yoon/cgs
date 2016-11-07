@@ -16,6 +16,8 @@
 <!-- Mobile Specific Metas-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta content="telephone=no" name="format-detection">
+<!-- Always force latest IE rendering engine -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
 <!-- Fonts -->
 <!-- Font awesome - icon font -->
@@ -28,6 +30,12 @@
 <!-- Open Sans -->
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:800italic'
 	rel='stylesheet' type='text/css'>
+<!--Google Fonts
+        ============================================= -->
+<link
+	href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700"
+	rel="stylesheet" type="text/css">
+
 
 <!--나눔고딕-->
 <link
@@ -35,9 +43,6 @@
 	rel='stylesheet' type='text/css'>
 
 <!-- Stylesheets -->
-<!-- background mp4-->
-<script
-	src="http://pupunzi.com/mb.components/mb.YTPlayer/demo/inc/jquery.mb.YTPlayer.js"></script>
 
 <!-- Mobile menu -->
 <link href="<%=ctx%>/resources/css/gozha-nav.css" rel="stylesheet" />
@@ -52,6 +57,20 @@
 <!-- Custom -->
 <link href="<%=ctx%>/resources/css/style.css?v=1" rel="stylesheet" />
 
+<!-- Fontawesome -->
+<link rel="stylesheet" href="<%=ctx%>/resources/css/font-awesome.min.css">
+<!-- Bootstrap -->
+<link rel="stylesheet" href="<%=ctx%>/resources/css/bootstrap.min.css">
+<!-- Fancybox -->
+<link rel="stylesheet" href="<%=ctx%>/resources/css/jquery.fancybox.css">
+<!-- owl carousel -->
+<link rel="stylesheet" href="<%=ctx%>/resources/css/owl.carousel.css">
+<!-- Animate -->
+<link rel="stylesheet" href="<%=ctx%>/resources/css/animate.css">
+<!-- Main Stylesheet -->
+<link rel="stylesheet" href="<%=ctx%>/resources/css/main.css">
+<!-- Main Responsive -->
+<link rel="stylesheet" href="<%=ctx%>/resources/css/responsive.css">
 
 <!-- Modernizr -->
 <script src="<%=ctx%>/resources/js/external/modernizr.custom.js"></script>
@@ -62,92 +81,140 @@
 		<script src="http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.3.0/respond.js"></script>		
     <![endif]-->
 
+<!-- Modernizer Script for old Browsers -->
+<script src="<%=ctx%>/js/external/modernizr-2.6.2.min.js"></script>
 
-<style>
-html, body {
-	margin: 0;
-	width: 100%;
-	height: 100%;
-}
-</style>
+<!-- background mp4-->
+<script
+	src="http://pupunzi.com/mb.components/mb.YTPlayer/demo/inc/jquery.mb.YTPlayer.js"></script>
+<script
+	src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<!-- <script>window.jQuery || document.write('<script src="../libs/jquery/dist/jquery.min.js"><\/script>')</script> -->
+<script src="<%=ctx%>/resources/js/jquery.vide.js"></script>
+
 </head>
 
-<body data-vide-bg="<%=ctx%>/resources/video/mainvideo">
-	<script
-		src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-	<!-- <script>window.jQuery || document.write('<script src="../libs/jquery/dist/jquery.min.js"><\/script>')</script> -->
-	<script src="<%=ctx%>/resources/js/jquery.vide.js"></script>
-	<script>
-		// $(document).ready(function () {
-		//   $(document.body).vide('video/mainvideo'); // Non declarative initialization
-		//
-		//   var instance = $(document.body).data('vide'); // Get the instance
-		//   var video = instance.getVideoObject(); // Get the video object
-		//   instance.destroy(); // Destroy instance
-		// });
-	</script>
+<body>
+ <header id="navigation" class="navbar-fixed-top">
+            <div class="container">
 
+                <div class="navbar-header">
+                    <!-- responsive nav button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <!-- /responsive nav button -->
 
+                    <!-- logo -->
+                        <a href='#home' class="logo">
+                            <img src="<%=ctx%>/resources/images/logo.png" alt="LogoCGS">
+                        </a>
 
-	<div class="wrapper">
+                    <!-- /logo -->
+
+                    </div>
+
+                    <!-- main nav -->
+                    <nav class="collapse navigation navbar-collapse navbar-right" role="navigation">
+                        <ul id="nav" class="nav navbar-nav">
+                            <li class="current"><a href="#first-main">Home</a></li>
+                            <li><a href="movie_list">Movie</a></li>
+                            <li><a href="book1">Ticket</a></li>
+                            <li><a href="cinemas">Cinema</a></li>
+                            <li><a href="contact">Contact</a></li>
+						 <%if((String) session.getAttribute("id")==null){%>
+						 <li><a href="login">Login</a></li>
+						<%}else{ %>
+						<li><a href="logout">Logout</a></li>
+						<%} %>
+                            <li><span class="sub-nav-toggle plus"></span>
+                        </ul>
+                    </nav>
+                    <!-- /main nav -->
+                </div>
+        </header>
+        
+	<section id="first-main"
+		data-vide-bg="<%=ctx%>/resources/video/mainvideo">
+		        <!--
+        Fixed Navigation
+        ==================================== -->
+	<div id="home-carousel" class="carousel slide" data-interval="false">
+		<div class="carousel-inner">
+			<div class="item active">
+				<div class="carousel-caption">
+					<div class="animated bounceInRight">
+						<h2>
+							FANTASTIC CINEMA, <br>FANTASIC CGS!
+						</h2>
+						<p style="font-family: Nanum Gothic">Go on a trip to Wonderland with us.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	</section>
+
+	<div id="home" class="wrapper">
 		<!-- 메인(홈) 헤더 부분 -->
-		<header class="header-wrapper header-wrapper--home">
-		<div class="container">
-			<!-- 헤더 로고--> <!-- 로고 크기가 자동으로 줄어들지 않음 ㅠㅠㅠㅠㅠ -->
-			<a href='index' class="logo"> <img style="max-width: 100px"
-				alt='logo' src="<%=ctx%>/resources/images/logo.png">
-			</a>
+<!-- 		<header class="header-wrapper header-wrapper--home"> -->
+<!-- 		<div class="container"> -->
+<!-- 			<!-- 헤더 로고--> 
+<!-- 			<a href='#home' class="logo"> <img style="max-width: 100px" -->
+<%-- 				alt='logo' src="<%=ctx%>/resources/images/logo.png"> --%>
+<!-- 			</a> -->
 
-			<!-- 메인페이지 메뉴바-->
-			<nav id="navigation-box"> <!-- Toggle for mobile menu mode -->
-			<a href="#" id="navigation-toggle"> <span class="menu-icon">
-					<span class="icon-toggle" role="button"
-					aria-label="Toggle Navigation"> <span class="lines"></span>
-				</span>
-			</span>
-			</a> <!-- 각 메뉴별 서브메뉴창-->
-			<ul id="navigation">
-				<li><span class="sub-nav-toggle plus"></span> <a href="movie-list">영화</a>
-					</li>
-				<li><span class="sub-nav-toggle plus"></span> <a
-					href="book">예매</a>
-					</li>
-				<li><span class="sub-nav-toggle plus"></span> <a
-					href="cinema">영화관</a>
-					</li>
-				<li><span class="sub-nav-toggle plus"></span> <a
-					href="contact">고객센터</a>
-					</li>
-			</ul>
-			</nav>
+<!-- 			<!-- 메인페이지 메뉴바-->
+<!-- 			<nav id="navigation-box"> Toggle for mobile menu mode -->
+<!-- 			<a href="#" id="navigation-toggle"> <span class="menu-icon"> -->
+<!-- 					<span class="icon-toggle" role="button" -->
+<!-- 					aria-label="Toggle Navigation"> <span class="lines"></span> -->
+<!-- 				</span> -->
+<!-- 			</span> -->
+<!-- 			</a> 각 메뉴별 서브메뉴창 -->
+<!-- 			<ul id="navigation"> -->
+<!-- 				<li><span class="sub-nav-toggle plus"></span> <a -->
+<!-- 					href="movie-list">영화</a></li> -->
+<!-- 				<li><span class="sub-nav-toggle plus"></span> <a href="book">예매</a> -->
+<!-- 				</li> -->
+<!-- 				<li><span class="sub-nav-toggle plus"></span> <a href="cinema">영화관</a> -->
+<!-- 				</li> -->
+<!-- 				<li><span class="sub-nav-toggle plus"></span> <a href="contact">고객센터</a> -->
+<!-- 				</li> -->
+<!-- 			</ul> -->
+<!-- 			</nav> -->
 			<!-- 메뉴바 끝 -->
 
 			<!-- 부가적인 버튼(메뉴바 오른쪽으로 위치):
 				로그인시 내 정보, 바로 예매 페이지로 가는 버튼-->
-			<div class="control-panel">
-				<div class="auth auth--home">
-					<div class="auth__show">
-						<span class="auth__image"> <img alt=""
-							src="http://placehold.it/31x31">
-						</span>
-					</div>
-					<a href="#" class="btn btn--sign btn--singin"> 내정보 </a>
-					<ul class="auth__function">
-						<!-- 내정보 버튼 눌렀을 시 뜨는 서브창 -->
-						<li><a href="#" class="auth__function-item">내가본영화</a></li>
-						<li><a href="#" class="auth__function-item">예매 내역</a></li>
-						<li><a href="#" class="auth__function-item">내가쓴리뷰</a></li>
-						<li><a href="#" class="auth__function-item">환경설정</a></li>
-					</ul>
-				</div>
-				<!-- 예매하기 버튼 누르면 login 요청하는 창이 뜸 -->
-				<a href="#"
-					class="btn btn-md btn--warning btn--book btn-control--home login-window"><Strong>빠른예매
-				</Strong>></a>
-			</div>
+<!-- 			<div class="control-panel"> -->
+<!-- 				<div class="auth auth--home"> -->
+<!-- 					<div class="auth__show"> -->
+<!-- 						<span class="auth__image"> <img alt="" -->
+<!-- 							src="http://placehold.it/31x31"> -->
+<!-- 						</span> -->
+<!-- 					</div> -->
+<!-- 					<a href="#" class="btn btn--sign btn--singin"> 내정보 </a> -->
+<!-- 					<ul class="auth__function"> -->
+<!-- 						내정보 버튼 눌렀을 시 뜨는 서브창 -->
+<!-- 						<li><a href="#" class="auth__function-item">내가본영화</a></li> -->
+<!-- 						<li><a href="#" class="auth__function-item">예매 내역</a></li> -->
+<!-- 						<li><a href="#" class="auth__function-item">내가쓴리뷰</a></li> -->
+<!-- 						<li><a href="#" class="auth__function-item">환경설정</a></li> -->
+<!-- 					</ul> -->
+<!-- 				</div> -->
+<!-- 				예매하기 버튼 누르면 login 요청하는 창이 뜸 -->
+<!-- 				<a href="#" -->
+<!-- 					class="btn btn-md btn--warning btn--book btn-control--home login-window"><Strong>빠른예매 -->
+<!-- 				</Strong>></a> -->
+<!-- 			</div> -->
 
-		</div>
-		</header>
+<!-- 		</div> -->
+<!-- 		</header> -->
+
 
 
 		<!-- 메인 슬라이더화면 -->
@@ -350,12 +417,14 @@ Start doing.'><img alt=''
 		<section class="container" style="width: 100%; height: 1500px;"
 			data-vide-bg="mp4: <%=ctx%>/resources/video/mainvideo, webm: <%=ctx%>/resources/video/mainvideo, ogv: <%=ctx%>/resources/video/mainvideo">
 		<div class="movie-best">
-			<div class="col-sm-10 col-sm-offset-1 movie-best__rating">MOVIE RANK</div>
+			<div class="col-sm-10 col-sm-offset-1 movie-best__rating">MOVIE
+				RANK</div>
 			<div class="col-sm-12 change--col">
 				<div class="movie-beta__item ">
-					<img alt='' src="<%=ctx%>/resources/images/movierank/doctorstrange.jpg"> <span
-						class="best-rate">4.8</span>
-						
+					<img alt=''
+						src="<%=ctx%>/resources/images/movierank/doctorstrange.jpg">
+					<span class="best-rate">4.8</span>
+
 					<ul class="movie-beta__info">
 						<li><span class="best-voted">389,121명의 평가</span></li>
 						<li>
@@ -367,10 +436,10 @@ Start doing.'><img alt=''
 							class="slide__link">more</a></li>
 					</ul>
 				</div>
-				
+
 				<div class="movie-beta__item second--item">
-					<img alt='' src="<%=ctx%>/resources/images/movierank/lucky.jpg"> <span
-						class="best-rate">4.7</span>
+					<img alt='' src="<%=ctx%>/resources/images/movierank/lucky.jpg">
+					<span class="best-rate">4.7</span>
 
 					<ul class="movie-beta__info">
 						<li><span class="best-voted">89,121명의 평가</span></li>
@@ -384,8 +453,8 @@ Start doing.'><img alt=''
 					</ul>
 				</div>
 				<div class="movie-beta__item third--item">
-					<img alt='' src="<%=ctx%>/resources/images/movierank/honsum.jpg"> <span
-						class="best-rate">4.5</span>
+					<img alt='' src="<%=ctx%>/resources/images/movierank/honsum.jpg">
+					<span class="best-rate">4.5</span>
 
 					<ul class="movie-beta__info">
 						<li><span class="best-voted">79,121명의 평가</span></li>
@@ -399,8 +468,9 @@ Start doing.'><img alt=''
 					</ul>
 				</div>
 				<div class="movie-beta__item hidden-xs">
-					<img alt='' src="<%=ctx%>/resources/images/movierank/powercinemaver.jpg"> <span
-						class="best-rate">3.8</span>
+					<img alt=''
+						src="<%=ctx%>/resources/images/movierank/powercinemaver.jpg">
+					<span class="best-rate">3.8</span>
 
 					<ul class="movie-beta__info">
 						<li><span class="best-voted">9,121명의 평가</span></li>
@@ -414,7 +484,8 @@ Start doing.'><img alt=''
 					</ul>
 				</div>
 				<div class="movie-beta__item hidden-xs hidden-sm">
-					<img alt='' src="<%=ctx%>/resources/images/movierank/lostindust.jpg"> <span
+					<img alt=''
+						src="<%=ctx%>/resources/images/movierank/lostindust.jpg"> <span
 						class="best-rate">3.5</span>
 
 					<ul class="movie-beta__info">
@@ -444,160 +515,15 @@ Start doing.'><img alt=''
 					</ul>
 				</div>
 			</div>
-			<div class="col-sm-10 col-sm-offset-1 movie-best__check"><strong>현재 상영중인 영화 모두 보기</strong></div>
-		</div>
-
-		<div class="col-sm-12">
-			<div class="mega-select-present mega-select-top mega-select--full">
-				<div class="mega-select-marker">
-					<div class="marker-indecator location">
-						<p class="select-marker">
-							<span>movie to watch now</span> <br>in your city
-						</p>
-					</div>
-
-					<div class="marker-indecator cinema">
-						<p class="select-marker">
-							<span>find your </span> <br>cinema
-						</p>
-					</div>
-
-					<div class="marker-indecator film-category">
-						<p class="select-marker">
-							<span>find movie due to </span> <br> your mood
-						</p>
-					</div>
-
-					<div class="marker-indecator actors">
-						<p class="select-marker">
-							<span> like particular stars</span> <br>find them
-						</p>
-					</div>
-
-					<div class="marker-indecator director">
-						<p class="select-marker">
-							<span>admire personalities - find </span> <br>by director
-						</p>
-					</div>
-
-					<div class="marker-indecator country">
-						<p class="select-marker">
-							<span>search for movie from certain </span> <br>country?
-						</p>
-					</div>
-				</div>
-
-				<div class="mega-select pull-right">
-					<span class="mega-select__point">Search by</span>
-					<ul class="mega-select__sort">
-						<li class="filter-wrap"><a href="#"
-							class="mega-select__filter filter--active" data-filter='location'>Location</a></li>
-						<li class="filter-wrap"><a href="#"
-							class="mega-select__filter" data-filter='cinema'>Cinema</a></li>
-						<li class="filter-wrap"><a href="#"
-							class="mega-select__filter" data-filter='film-category'>Category</a></li>
-						<li class="filter-wrap"><a href="#"
-							class="mega-select__filter" data-filter='actors'>Actors</a></li>
-						<li class="filter-wrap"><a href="#"
-							class="mega-select__filter" data-filter='director'>Director</a></li>
-						<li class="filter-wrap"><a href="#"
-							class="mega-select__filter" data-filter='country'>Country</a></li>
-					</ul>
-
-					<input name="search-input" type='text' class="select__field">
-
-					<div class="select__btn">
-						<a href="#" class="btn btn-md btn--danger location">find <span
-							class="hidden-exrtasm">your city</span></a> <a href="#"
-							class="btn btn-md btn--danger cinema">find <span
-							class="hidden-exrtasm">suitable cimema</span></a> <a href="#"
-							class="btn btn-md btn--danger film-category">find <span
-							class="hidden-exrtasm">best category</span></a> <a href="#"
-							class="btn btn-md btn--danger actors">find <span
-							class="hidden-exrtasm">talented actors</span></a> <a href="#"
-							class="btn btn-md btn--danger director">find <span
-							class="hidden-exrtasm">favorite director</span></a> <a href="#"
-							class="btn btn-md btn--danger country">find <span
-							class="hidden-exrtasm">produced country</span></a>
-					</div>
-
-					<div class="select__dropdowns">
-						<ul class="select__group location">
-							<li class="select__variant" data-value='London'>London</li>
-							<li class="select__variant" data-value='New York'>New York</li>
-							<li class="select__variant" data-value='Paris'>Paris</li>
-							<li class="select__variant" data-value='Berlin'>Berlin</li>
-							<li class="select__variant" data-value='Moscow'>Moscow</li>
-							<li class="select__variant" data-value='Minsk'>Minsk</li>
-							<li class="select__variant" data-value='Warsawa'>Warsawa</li>
-						</ul>
-
-						<ul class="select__group cinema">
-							<li class="select__variant" data-value='Cineworld'>Cineworld</li>
-							<li class="select__variant" data-value='Empire'>Empire</li>
-							<li class="select__variant" data-value='Everyman'>Everyman</li>
-							<li class="select__variant" data-value='Odeon'>Odeon</li>
-							<li class="select__variant" data-value='Picturehouse'>Picturehouse</li>
-						</ul>
-
-						<ul class="select__group film-category">
-							<li class="select__variant" data-value="Children's">Children's</li>
-							<li class="select__variant" data-value='Comedy'>Comedy</li>
-							<li class="select__variant" data-value='Drama'>Drama</li>
-							<li class="select__variant" data-value='Fantasy'>Fantasy</li>
-							<li class="select__variant" data-value='Horror'>Horror</li>
-							<li class="select__variant" data-value='Thriller'>Thriller</li>
-						</ul>
-
-						<ul class="select__group actors">
-							<li class="select__variant" data-value='Leonardo DiCaprio'>Leonardo
-								DiCaprio</li>
-							<li class="select__variant" data-value='Johnny Depp'>Johnny
-								Depp</li>
-							<li class="select__variant" data-value='Jack Nicholson'>Jack
-								Nicholson</li>
-							<li class="select__variant" data-value='Robert De Niro'>Robert
-								De Niro</li>
-							<li class="select__variant" data-value='Morgan Freeman'>Morgan
-								Freeman</li>
-							<li class="select__variant" data-value='Jim Carrey'>Jim
-								Carrey</li>
-							<li class="select__variant" data-value='Adam Sandler'>Adam
-								Sandler</li>
-							<li class="select__variant" data-value='Ben Stiller'>Ben
-								Stiller</li>
-						</ul>
-
-						<ul class="select__group director">
-							<li class="select__variant" data-value='Steven Spielberg'>Steven
-								Spielberg</li>
-							<li class="select__variant" data-value='Martin Scorsese'>Martin
-								Scorsese</li>
-							<li class="select__variant" data-value='Guy Ritchie'>Guy
-								Ritchie</li>
-							<li class="select__variant" data-value='Christopher Nolan'>Christopher
-								Nolan</li>
-							<li class="select__variant" data-value='Tim Burton'>Tim
-								Burton</li>
-						</ul>
-
-						<ul class="select__group country">
-							<li class="select__variant" data-value='USA'>USA</li>
-							<li class="select__variant" data-value='Germany'>Germany</li>
-							<li class="select__variant" data-value='Australia'>Australia</li>
-							<li class="select__variant" data-value='UK'>UK</li>
-							<li class="select__variant" data-value='Japan'>Japan</li>
-							<li class="select__variant" data-value='Serbia'>Serbia</li>
-						</ul>
-					</div>
-				</div>
+			<div class="col-sm-10 col-sm-offset-1 movie-best__check">
+				<strong>현재 상영중인 영화 모두 보기</strong>
 			</div>
 		</div>
 
 		<div class="clearfix"></div>
 
-		<h2 id='target' class="page-heading heading--outcontainer">Now
-			in the cinema</h2>
+		<h2 id='target' class="page-heading heading--outcontainer"
+			style='color: #F0C419'>NOW SHOWING</h2>
 
 		<div class="col-sm-12"
 			data-vide-bg="mp4: <%=ctx%>/resources/video/mainvideo, webm: <%=ctx%>/resources/video/mainvideo, ogv: <%=ctx%>/resources/video/mainvideo">
@@ -812,41 +738,7 @@ Start doing.'><img alt=''
 							</div>
 						</div>
 					</div>
-					<!-- Movie variant with time -->
 
-
-					<div class="row">
-						<div class="social-group">
-							<div class="col-sm-6 col-md-4 col-sm-push-6 col-md-push-4">
-								<div class="social-group__head">
-									Join <br>our social groups
-								</div>
-								<div class="social-group__content">
-									A lot of fun, discussions, queezes and contests among members.
-									<br class="hidden-xs"> <br>Always be first to know
-									about best offers from cinemas and our partners
-								</div>
-							</div>
-
-							<div class="col-sm-6 col-md-4 col-sm-pull-6 col-md-pull-4">
-								<div class="facebook-group">
-
-									<iframe class="fgroup"
-										src="http://www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fthemeforest&amp;width=240&amp;height=330&amp;colorscheme=light&amp;show_faces=true&amp;header=false&amp;stream=false&amp;show_border=false"
-										scrolling="no" frameborder="0"
-										style="border: none; overflow: hidden; width: 240px; height: 330px;"
-										allowTransparency="true"></iframe>
-								</div>
-							</div>
-
-							<div class="clearfix visible-sm"></div>
-							<div class="col-sm-6 col-md-4">
-								<div class="twitter-group">
-									<div id="twitter-feed"></div>
-								</div>
-							</div>
-						</div>
-					</div>
 				</div>
 
 				<aside class="col-sm-4 col-md-3">
@@ -862,84 +754,8 @@ Start doing.'><img alt=''
 					<div class="banner-wrap banner-wrap--last">
 						<img alt='banner' src="http://placehold.it/500x500">
 					</div>
-
-					<div class="promo marginb-sm">
-						<div class="promo__head">A.Movie app</div>
-						<div class="promo__describe">
-							for all smartphones<br> and tablets
-						</div>
-						<div class="promo__content">
-							<ul>
-								<li class="store-variant"><a href="#"><img alt=''
-										src="images/apple-store.svg"></a></li>
-								<li class="store-variant"><a href="#"><img alt=''
-										src="images/google-play.svg"></a></li>
-								<li class="store-variant"><a href="#"><img alt=''
-										src="images/windows-store.svg"></a></li>
-							</ul>
-						</div>
-					</div>
-
 				</div>
 				</aside>
-			</div>
-		</div>
-
-		<div class="col-sm-12"
-			data-vide-bg="mp4: <%=ctx%>/resources/video/mainvideo, webm: <%=ctx%>/resources/video/mainvideo, ogv: <%=ctx%>/resources/video/mainvideo">
-			<h2 class="page-heading">Latest news</h2>
-
-			<div class="col-sm-4 similar-wrap col--remove">
-				<div class="post post--preview post--preview--wide">
-					<div class="post__image">
-						<img alt='' src="http://placehold.it/270x330">
-						<div class="social social--position social--hide">
-							<span class="social__name">Share:</span> <a href='#'
-								class="social__variant social--first fa fa-facebook"></a> <a
-								href='#' class="social__variant social--second fa fa-twitter"></a>
-							<a href='#' class="social__variant social--third fa fa-vk"></a>
-						</div>
-					</div>
-					<p class="post__date">22 October 2013</p>
-					<a href="single-page-left.html" class="post__title">"Thor: The
-						Dark World" - World Premiere</a> <a href="single-page-left.html"
-						class="btn read-more post--btn">read more</a>
-				</div>
-			</div>
-			<div class="col-sm-4 similar-wrap col--remove">
-				<div class="post post--preview post--preview--wide">
-					<div class="post__image">
-						<img alt='' src="http://placehold.it/270x330">
-						<div class="social social--position social--hide">
-							<span class="social__name">Share:</span> <a href='#'
-								class="social__variant social--first fa fa-facebook"></a> <a
-								href='#' class="social__variant social--second fa fa-twitter"></a>
-							<a href='#' class="social__variant social--third fa fa-vk"></a>
-						</div>
-					</div>
-					<p class="post__date">22 October 2013</p>
-					<a href="single-page-left.html" class="post__title">30th Annual
-						Night Of Stars Presented By The Fashion Group International</a> <a
-						href="single-page-left.html" class="btn read-more post--btn">read
-						more</a>
-				</div>
-			</div>
-			<div class="col-sm-4 similar-wrap col--remove">
-				<div class="post post--preview post--preview--wide">
-					<div class="post__image">
-						<img alt='' src="http://placehold.it/270x330">
-						<div class="social social--position social--hide">
-							<span class="social__name">Share:</span> <a href='#'
-								class="social__variant social--first fa fa-facebook"></a> <a
-								href='#' class="social__variant social--second fa fa-twitter"></a>
-							<a href='#' class="social__variant social--third fa fa-vk"></a>
-						</div>
-					</div>
-					<p class="post__date">22 October 2013</p>
-					<a href="single-page-left.html" class="post__title">Hollywood
-						Film Awards 2013</a> <a href="single-page-left.html"
-						class="btn read-more post--btn">read more</a>
-				</div>
 			</div>
 		</div>
 		</section>
@@ -976,15 +792,15 @@ Start doing.'><img alt=''
 		</div>
 		<div class="col-xs-12 col-md-6">
 			<div class="footer-info">
-				<p class="heading-special--small">
+				<p class="heading-special--small" style='color: #fff'>
 					CGS<br> <span class="title-edition">in the social media</span>
 				</p>
 
 
 
 				<div class="clearfix"></div>
-				<p class="copy">&copy; CGS, 2013. All rights reserved. Done by
-					Olia Gozha</p>
+				<p class="copy" style='color: #F0C419'>&copy; CGS, 2013. All
+					rights reserved.</p>
 			</div>
 		</div>
 		</section> </footer>
@@ -1034,13 +850,13 @@ Start doing.'><img alt=''
 	</div>
 
 	<!-- JavaScript-->
-	<!-- jQuery 1.9.1-->
+	<!-- jQuery 1.11.1-->
 	<script
-		src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+		src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	<script>
 		window.jQuery
 				|| document
-						.write('<script src="js/external/jquery-1.10.1.min.js"><\/script>')
+						.write('<script src="js/external/jquery-1.11.1.min.js"><\/script>')
 	</script>
 	<!-- Migrate -->
 	<script
@@ -1079,6 +895,29 @@ Start doing.'><img alt=''
 			init_Home();
 		});
 	</script>
+
+	<!-- main jQuery -->
+	<script src="<%=ctx%>/resources/js/external/jquery-1.11.1.min.js"></script>
+	<!-- Bootstrap -->
+	<script src="<%=ctx%>/resources/js/min/bootstrap.min.js"></script>
+	<!-- jquery.nav -->
+	<script src="<%=ctx%>/resources/js/jquery.nav.js"></script>
+	<!-- Portfolio Filtering -->
+	<script src="<%=ctx%>/resources/js/min/jquery.mixitup.min.js"></script>
+	<!-- Fancybox -->
+	<script src="<%=ctx%>/resources/js/jquery.fancybox.pack.js"></script>
+	<!-- Parallax sections -->
+	<script src="<%=ctx%>/resources/js/jquery.parallax-1.1.3.js"></script>
+	<!-- jQuery Appear -->
+	<script src="<%=ctx%>/resources/js/jquery.appear.js"></script>
+	<!-- countTo -->
+	<script src="<%=ctx%>/resources/js/jquery-countTo.js"></script>
+	<!-- owl carousel -->
+	<script src="<%=ctx%>/resources/js/min/owl.carousel.min.js"></script>
+	<!-- WOW script -->
+	<script src="<%=ctx%>/resources/js/min/wow.min.js"></script>
+	<!-- theme custom scripts -->
+	<script src="<%=ctx%>/resources/js/main.js"></script>
 
 </body>
 </html>

@@ -1,37 +1,39 @@
 package kr.co.cgs4.controller;
 
-import org.springframework.jdbc.core.JdbcTemplate;
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import kr.co.cgs4.command.CinemaCommand;
-import kr.co.cgs4.command.Command;
-import kr.co.cgs4.dao.CinemaDAO;
-import kr.co.cgs4.dao.TestDAO;
-import kr.co.cgs4.dto.ScreenDTO;
-import kr.co.cgs4.dto.ScreeningDTO;
-import kr.co.cgs4.dto.SiteDTO;
 
 @Controller
 public class CinemaController {
 	
-	Command command = null;
+	CinemaCommand command = null;
 	
 	@RequestMapping("/cinemas")
-	public String book1(Model model) {
+	public String cinemas1(Model model) {
 	System.out.println("cinemas()");
 	
 	command=new CinemaCommand();
-	command.execute(model);
+	command.execute1(model);
+		
+	return "cinemas";
+	}
 	
-//	CinemaDAO dao=new CinemaDAO();
-//	ScreeningDTO dto1=dao.screening();
-//	model.addAttribute("screening", dto1);
-//	
-//	SiteDTO dto2=dao.site();
-//	model.addAttribute("site", dto2);
+	@RequestMapping("/cinemas/")
+	public String cinemas2(HttpServletRequest request ,Model model) {
+	System.out.println("cinemas2()");
 	
+	System.out.println("Controller sId: "+request.getAttribute("sId"));
+	System.out.println(request.getAttribute("sId"));
+	
+	model.addAttribute("request", request);
+	
+	command=new CinemaCommand();
+	command.execute2(model);
 		
 	return "cinemas";
 	}

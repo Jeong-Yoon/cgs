@@ -67,66 +67,88 @@
 <!--                     <div class="order-step second--step order-step--disable">2. Choose a sit</div> -->
                     <div class="order-step third--step">예매 확인</div>
                 </div>
-                <div class="order-step-area">
-                	<div class="order-step second--step">
-                	선택하신 영화: ${cInfo.film_name},&emsp;상영 일자: ${cInfo.screening_date}, &emsp;상영관: ${cInfo.screen_num}관<br>
-					영화 시작시간: ${cInfo.start_time},&emsp;예매 인원: ,&emsp;구매 금액: 
-                	</div>
-                </div>
-
+	<form action="book4">
             <div class="col-sm-12">
                 <div class="checkout-wrapper">
-                    <h2 class="page-heading">price</h2>
+                    <h2 class="page-heading">예매 정보</h2>
                     <ul class="book-result">
-                        <li class="book-result__item">Tickets: <span class="book-result__count booking-ticket">3</span></li>
-                        <li class="book-result__item">One item price: <span class="book-result__count booking-price">$20</span></li>
-                        <li class="book-result__item">Total: <span class="book-result__count booking-cost">$60</span></li>
+                        <li class="book-result__item">선택하신 영화: <span class="book-result__count">${cInfo.film_name}</span></li>
+                        <li class="book-result__item">상영 일자: <span class="book-result__count"> ${cInfo.screening_date}</span></li>
+                        <li class="book-result__item">영화관: <span class="book-result__count"> ${cInfo.site_name}</span></li>
+                        <li class="book-result__item">상영관: <span class="book-result__count"> ${cInfo.screen_num}관</span></li>
+                        <li class="book-result__item">영화 시작시간: <span class="book-result__count">${cInfo.start_time}</span></li>
+                        <li class="book-result__item">예매 인원: <span class="book-result__count">${cInfo.sale_cnt}명</span></li>
+                        <li class="book-result__item">구매 금액: <span class="book-result__count booking-cost">${cInfo.sale_price}원</span></li>
                     </ul>
 
-                    <h2 class="page-heading">Choose payment method</h2>
+                    <h2 class="page-heading">결제 정보 입력</h2>
                     <div class="payment">
-                        <a href="#" class="payment__item">
-                            <img alt='' src="<%=ctx%>/resources/images/payment/pay1.png">
-                        </a>
-                        <a href="#" class="payment__item">
-                            <img alt='' src="<%=ctx%>/resources/images/payment/pay2.png">
-                        </a>
-                        <a href="#" class="payment__item">
-                            <img alt='' src="<%=ctx%>/resources/images/payment/pay3.png">
-                        </a>
-                        <a href="#" class="payment__item">
-                            <img alt='' src="<%=ctx%>/resources/images/payment/pay4.png">
-                        </a>
-                        <a href="#" class="payment__item">
-                            <img alt='' src="<%=ctx%>/resources/images/payment/pay5.png">
-                        </a>
-                        <a href="#" class="payment__item">
-                            <img alt='' src="<%=ctx%>/resources/images/payment/pay6.png">
-                        </a>
-                        <a href="#" class="payment__item">
-                            <img alt='' src="<%=ctx%>/resources/images/payment/pay7.png">
-                        </a>
+                    <table>
+                    	<tr style="height:35px">
+                    	<td style="width:120px">카드 종류</td>
+                    	<td><select name="select_card" id="select-sort"
+						class="select_card" tabindex="0" required>
+						<option value="01" selected='selected'>삼성카드</option>
+						<option value="02">BC카드</option>
+						<option value="03">신한카드</option>
+						<option value="04">현대카드</option>
+						<option value="05">NH카드</option>
+						<option value="06">하나카드</option>
+						<option value="07">롯데카드</option>
+					</select>
+                    	</td>
+                    	</tr>
+                    	<tr style="height:35px">
+                    	<td>카드 번호</td>
+                    	<td><input type="text" name="card1" class="card" maxlength="4" required>-
+                    	<input type="password" name="card2" class="card" maxlength="4" required autocomplete="off">-
+                    	<input type="password" name="card3" class="card" maxlength="4" required autocomplete="off">-
+                    	<input type="text" name="card4" class="card" maxlength="4" required></td>
+                    	</tr>
+                    	<tr style="height:35px">
+                    	<td>유효기간</td>
+                    	<td><input type="text" name="valid_month" class="valid_date" maxlength="2" max="12" required>월 
+                    	<input type="text" name="valid_year" class="valid_date" maxlength="2" required>년</td>
+                    	</tr>
+                    	<tr style="height:35px">
+                    	<td>비밀번호</td>
+                    	<td><input type="password" name="card_password" class="valid_date" maxlength="2" required> **</td>
+                    	</tr>
+                    	<tr style="height:35px">
+                    	<td>생년월일</td>
+                    	<td><input type="text" name="birth_date" class="birth_date" maxlength="6" required> 생년월일 6자리</td>
+                    	</tr>
+                    </table>
+<!--                         <a href="#" class="payment__item"> -->
+<%--                             <img alt='' src="<%=ctx%>/resources/images/payment/pay1.png"> --%>
+<!--                         </a> -->
+<!--                         <a href="#" class="payment__item"> -->
+<%--                             <img alt='' src="<%=ctx%>/resources/images/payment/pay2.png"> --%>
+<!--                         </a> -->
+<!--                         <a href="#" class="payment__item"> -->
+<%--                             <img alt='' src="<%=ctx%>/resources/images/payment/pay3.png"> --%>
+<!--                         </a> -->
+<!--                         <a href="#" class="payment__item"> -->
+<%--                             <img alt='' src="<%=ctx%>/resources/images/payment/pay4.png"> --%>
+<!--                         </a> -->
+<!--                         <a href="#" class="payment__item"> -->
+<%--                             <img alt='' src="<%=ctx%>/resources/images/payment/pay5.png"> --%>
+<!--                         </a> -->
+<!--                         <a href="#" class="payment__item"> -->
+<%--                             <img alt='' src="<%=ctx%>/resources/images/payment/pay6.png"> --%>
+<!--                         </a> -->
+<!--                         <a href="#" class="payment__item"> -->
+<%--                             <img alt='' src="<%=ctx%>/resources/images/payment/pay7.png"> --%>
+<!--                         </a> -->
                     </div>
-
-                    <h2 class="page-heading">Contact information</h2>
-            
-                    <form id='contact-info' method='post' novalidate="" class="form contact-info">
-                        <div class="contact-info__field contact-info__field-mail">
-                            <input type='email' name='user-mail' placeholder='Your email' class="form__mail">
-                        </div>
-                        <div class="contact-info__field contact-info__field-tel">
-                            <input type='tel' name='user-tel' placeholder='Phone number' class="form__mail">
-                        </div>
-                    </form>
-
-                
                 </div>
                 
                 <div class="order">
-                    <a href="book-final.html" class="btn btn-md btn--warning btn--wide">purchase</a>
+                    <a href="#" class="btn btn-md btn--warning btn--wide" onclick="submit()">구매하기</a>
                 </div>
 
             </div>
+            </form>
 
         </section>
         

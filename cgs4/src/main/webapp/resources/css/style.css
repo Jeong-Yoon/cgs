@@ -5517,7 +5517,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 }
 
 .select .sbToggle:after {
-	/* 	content: '�쁺�솕愿�''; */
+	/* 	content: '占쎌겫占쎌넅�꽴占�''; */
 	font: 13px 'Roboto', Nanum Gothic;
 	font-weight: bold;
 }
@@ -7037,7 +7037,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 	font: 16px 'aleoregular', Nanum Gothic;
 	padding-left: 55px;
 	position: relative;
-	width: 33.2%;
+	width: 70%;
 	display: inline-block;
 }
 
@@ -7551,6 +7551,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 
 .book-result {
 	margin: -9px 0 -7px;
+	width:80%;
 }
 
 .book-result .book-result__item {
@@ -11294,4 +11295,13 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 .film_table{
 	overflow:scroll;
 	height:350px;
+}
+.card{
+    width: 40px;
+}
+.valid_date {
+    width: 25px;
+}
+birth_date {
+    width: 60px;
 }

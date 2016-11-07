@@ -152,7 +152,9 @@
                     <%if(request.getAttribute("pagenum")!=null){
                     	pagenum=Integer.parseInt(request.getAttribute("pagenum").toString());  }%>
                     <a href="javascript:prevChk(<%=pagenum %>)" class="pagination__prev" >prev</a>
+                    <% if(Integer.parseInt(request.getAttribute("pagenum").toString())<3){%>
 					<a href="javascript:nextChk(<%=pagenum %>)" class="pagination__next" >next</a>
+					<%} %>
 <!--                     </form> -->
                     </div>
           

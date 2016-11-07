@@ -21,7 +21,7 @@ public class FilmDAO {
 	}
 	
 	public FilmDTO film(String film_ID){
-		String query = "select * from film where film_ID = " + film_ID;
+		String query = "select * from film where film_ID = '" + film_ID + "'";
 		return (FilmDTO) template.queryForObject(query, new BeanPropertyRowMapper<FilmDTO>(FilmDTO.class));
 	}
 	

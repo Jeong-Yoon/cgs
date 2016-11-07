@@ -296,8 +296,7 @@
 			<h2 class="page-heading">showtime &amp; tickets</h2>
 			<div class="choose-container">
 				<form id='select' class="select" method='get'>
-				
-					<select name="select_item" id="select-sort" class="select__sort" tabindex="0" onmousedown="cityChk()">
+				<select name="select_item" id="select-sort" class="select__sort checkk" tabindex="0" onmouseup="cityChk()">
 						<option value="1" selected='selected'>서울강변</option>
 						<option value="2">인천</option>
 						<option value="3">야탑</option>
@@ -394,7 +393,7 @@
 						<input type='hidden' name="screen_num" class="choosen-cinema" id="screen_num"> 
 						<input type='hidden' name="start_time" class="choosen-time" id="start_time">
 						<%-- 						<input type=hidden name="start_time" value="${test.start_time }"> --%>
-						<%if(request.getAttribute("id")!=null){%>
+						<%if((String)session.getAttribute("id")!=null){%>
 						<center> <a href='book2' class="btn btn-md btn--warning">book a ticket for this movie</a> </center>
 						<%}else{ %>
 						<center> <a href='login' class="btn btn-md btn--warning">book a ticket for this movie</a> </center>

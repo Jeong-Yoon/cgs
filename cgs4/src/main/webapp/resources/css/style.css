@@ -5,9 +5,63 @@ html {
 	-webkit-text-size-adjust: 100%;
 }
 
-body {
+body, div, section, footer, video, article {
 	margin: 0;
+	padding: 0;
+	border: 0;
+	font: inherit;
+	font-size: 100%;
+	vertical-align: baseline;	
 }
+
+/* .tab{} */
+
+/* .hero .video-wrap{ */
+/* 	z-index: 5; */
+/* } */
+
+/* .hero .video-wrap{ */
+/* 	position:absolute; */
+/* } */
+
+/* .video-wrap{ */
+/* 	opacity: 0; */
+/* 	z-index: 7; */
+/* 	position: fixed; */
+/* 	left: 0; */
+/* 	top: 0; */
+/* 	width: 100%; */
+/* 	height: 100%; */
+/* 	background: #000; */
+/* } */
+
+/* .hero.is-video.is-in-view.is-aligned.is-past-bottom{ */
+/* } */
+
+/* .hero-content{ */
+/* 	width:100%; */
+/* 	height: 100%; */
+/* 	position: absolute; */
+/* 	top: 0; */
+/* 	left: 0; */
+/* 	color: #fff; */
+/* 	font-family: "Roboto", Nanum Gothic; */
+/* 	text-shadow: 0 0 16px rbga(0,0,0,0.15); */
+/* } */
+
+/* .hero-content-cta{ */
+/* 	padding: 12px 40px; */
+/* 	border: 2px solid rbga(255, 255, 255, 0.4); */
+/* 	font-size: .875em; */
+/* 	line-height: 1.71429em; */
+/* 	letter-spacing: 0.075em; */
+/* 	text-transform: uppercase; */
+/* 	display: inline-block; */
+/* 	zoom: 1; */
+/* 	vertical-align: top; */
+/* 	cursor: pointer; */
+/* 	transition: all .3s cubic-benzier(0.165, 0.84, 0.44, 1); */
+/* } */
 
 article, aside, details, figcaption, figure, footer, header, hgroup,
 	main, nav, section, summary {
@@ -770,7 +824,7 @@ p {
 
 a {
 	font-size: 13px;
-	color: #222A35;
+	color: #fff;
 	-webkit-transition: 0.3s;
 	transition: 0.3s;
 }
@@ -5607,7 +5661,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 
 .mega-select .mega-select__filter:after {
 	content: '';
-	background-image: url('../images/components/wave-main.svg');
+	background-image: url('../images/components/wave-hover.svg');
 	background-repeat: repeat-x;
 	-webkit-background-size: 40px 4px;
 	background-size: 40px 4px;
@@ -5637,10 +5691,10 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
 	border-radius: 3px;
-	background-color: #fff;
+	background-color: #transparent;
 	border: solid 1px #dbdee1;
 	font-size: 13px;
-	color: #222A35;
+	color: #fff;
 	padding: 8px 20px 9px;
 	margin-top: 7px;
 	float: left;
@@ -8485,7 +8539,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 .mega-select-marker .select-marker {
 	margin-bottom: 0;
 	font-family: 'aleobold', Nanum Gothic;
-	color: #222A35;
+	color: grey;
 	font-size: 50px;
 	text-transform: uppercase;
 	line-height: 34px;
@@ -10468,6 +10522,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 	}
 	.mega-select .mega-select__point {
 		margin-right: 10px;
+		color: #fff;
 	}
 	.mega-select .filter-wrap {
 		margin: 0 5px;

@@ -136,7 +136,7 @@
 						</div>
 					</div>
 
-
+					<div class="film_table">
 					<table>
 						<c:forEach var="dto" items="${flist}">
 							<tr class="rates rates--top">
@@ -149,6 +149,7 @@
 							</tr>
 						</c:forEach>
 					</table>
+					</div>
 				</div>
 
 			</div>

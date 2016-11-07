@@ -73,7 +73,8 @@ public class LoginController {
     		
     		System.out.println((String) session.getAttribute("id"));
     		System.out.println("데이터 있음");
-    		return "contact";
+    		
+    		return "index";
     	
     	//**********************나중에 index로 리턴할것
     	

@@ -136,8 +136,8 @@
 				<div class="movie__info">
 					<div class="col-sm-4 col-md-3 movie-mobile">
 						<div class="movie__images">
-							<span class="movie__rating">5.0</span> 
-							<img alt='' src="http://placehold.it/526x773">
+<!-- 							<span class="movie__rating">5.0</span>  -->
+							<img alt='' src="<%=ctx %>/resources/images/poster/${film.film_ID}.jpg">
 						</div>
 						<div class="movie__rate"> Your vote: <div id="score" class="score"></div>
 						</div>
@@ -218,36 +218,36 @@
 						<div class="swiper-wrapper">
 							<!--First Slide-->
 							<div class="swiper-slide media-video">
-								<a href='https://www.youtube.com/watch?v=Y5AehBA3IsE' class="movie__media-item "> 
-								 <img alt='' src="http://placehold.it/400x240">
+								<a href='https://www.youtube.com/watch?v=ztD7m3ubhVs' class="movie__media-item "> 
+								 <img alt='' src="<%=ctx%>/resources/images/stillcut/${film.film_ID}/0003.png">
 								</a>
 							</div>
 
 							<!--Second Slide-->
 							<div class="swiper-slide media-video">
-								<a href='https://www.youtube.com/watch?v=Kb3ykVYvT4U' class="movie__media-item">
-								 <img alt='' src="http://placehold.it/400x240">
+								<a href='https://www.youtube.com/watch?v=awyG1-xvqFY' class="movie__media-item">
+								 <img alt='' src='<%=ctx%>/resources/images/stillcut/${film.film_ID}/0004.png'>
 								</a>
 							</div>
 
 							<!--Third Slide-->
 							<div class="swiper-slide media-photo">
-								<a href='http://placehold.it/2100x1250' class="movie__media-item">
-								 <img alt='' src="http://placehold.it/400x240">
+								<a href='<%=ctx%>/resources/images/stillcut/${film.film_ID}/0001.jpg' class="movie__media-item">
+								 <img alt='' src="<%=ctx%>/resources/images/stillcut/${film.film_ID}/0001.jpg">
 								</a>
 							</div>
 
 							<!--Four Slide-->
 							<div class="swiper-slide media-photo">
-								<a href='http://placehold.it/2100x1250' class="movie__media-item">
-								 <img alt='' src="http://placehold.it/400x240">
+								<a href='<%=ctx%>/resources/images/stillcut/${film.film_ID}/0002.jpg' class="movie__media-item">
+								 <img alt='' src="<%=ctx%>/resources/images/stillcut/${film.film_ID}/0002.jpg">
 								</a>
 							</div>
 
 							<!--Slide-->
 							<div class="swiper-slide media-photo">
-								<a href='http://placehold.it/2100x1250' class="movie__media-item">
-								 <img alt='' src="http://placehold.it/400x240">
+								<a href='<%=ctx%>/resources/images/stillcut/${film.film_ID}/0005.jpg' class="movie__media-item">
+								 <img alt='' src="<%=ctx%>/resources/images/stillcut/${film.film_ID}/0005.jpg">
 								</a>
 							</div>
 
@@ -296,20 +296,20 @@
 
 			<div class="choose-container choose-container--short">
 				<form id='select' class="select" method='get'>
-					<span class="cinemapicker checkk"><i class="fa fa-rocket"></i>영화관
-						선택</span> <select name="select_item" id="select-sort"
-						class="select__sort checkk" tabindex="0" onmouseup="cityChk()">
-						<option value="001" selected='selected'>강변점</option>
+					<span class="cinemapicker checkk"><i class="fa fa-rocket"></i>영화관 선택</span> 
+						<select name="select_item" id="select-sort" class="select__sort checkk" tabindex="0" onmouseup="cityChk()">
+						<option value="001" selected="selected">강변점</option>
 						<option value="002">인천점</option>
 						<option value="003">야탑점</option>
 						<option value="004">강남점</option>
 						<option value="005">구로점</option>
 					</select>
+					
 				</form>
 
 				<div class="datepicker">
-					<span class="datepicker__marker"><i class="fa fa-calendar"></i>날짜
-						선택</span><br /> 
+					<span class="datepicker__marker"><i class="fa fa-calendar"></i>날짜 선택</span>
+					<br /> 
 						<%if(sdate!=null){ %>
 						<input type="text" id="datepicker" value="<%=sdate%>"
 						class="datepicker__input checkk" onmouseup="dateChk()">
@@ -328,7 +328,9 @@
 				<input type='hidden' name="film_ID" id="film_ID" value="${film.film_ID}">
 				<input type='hidden' name="scrolls" class="scrolls" value="<%=scroll %>">
 				<input type='hidden' name="film_name" class="choosen-movie" id="film_name" value="${film.film_name}">
+				<%if(sname==null){ sname="강변점"; }%>
 				<input type='hidden' name="site_name" class="choosen-city" id="site_name" value="<%=sname%>"> 
+				<%if(sdate==null){ sdate=mTime; } %>
 				<input type='hidden' name="screening_date" class="choosen-date" id="screening_date" value="<%=sdate%>">
 					</form>
 					
@@ -609,7 +611,7 @@
 		$(document).ready(function() {
 			init_MoviePage();
 			init_MoviePageFull();
-			init_BookingOne();
+// 			init_BookingOne();
 		});
 	</script>
 

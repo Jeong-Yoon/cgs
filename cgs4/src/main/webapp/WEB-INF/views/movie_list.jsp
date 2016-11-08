@@ -134,7 +134,7 @@
 							<div class="col-xs-6 col-sm-3 cinema-item">
 								<div class="cinema">
 									<a href="movie?film_ID=${dto.film_ID}" class="cinema__images">
-										<img alt='' src="http://placehold.it/525x525"> 
+										<img alt='' src="<%=ctx %>/resources/images/poster/${dto.film_ID}.jpg"> 
 										<!--  	<span class="cinema-rating">5.0</span> -->
 									</a> <a href="movie?film_ID=${dto.film_ID}" class="cinema-title">${dto.film_name}</a>
 								</div>

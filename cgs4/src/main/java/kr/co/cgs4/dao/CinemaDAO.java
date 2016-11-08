@@ -18,26 +18,36 @@ public class CinemaDAO {
 		this.template = Constant.template;
 	}
 
-//	public ScreeningDTO screening(){
-//		String query = "select * from screening";
-//		return (ScreeningDTO) template.queryForObject(query, new BeanPropertyRowMapper<ScreeningDTO>(ScreeningDTO.class));
-//	}
-//	
-//	public SiteDTO site(){
-//		String query = "select * from site";
-//		return (SiteDTO) template.queryForObject(query, new BeanPropertyRowMapper<SiteDTO>(SiteDTO.class));
-//	}
 	
-	
-	public ArrayList<ScreeningDTO> screening() {
-		String query = "select * from screening";
+public ArrayList<ScreeningDTO> screening() {
+		
+		String query = "select * from screening where site_ID=0001";
 		return (ArrayList<ScreeningDTO>) template.query(query,new BeanPropertyRowMapper<ScreeningDTO>(ScreeningDTO.class));
 	}
 
 	public ArrayList<SiteDTO> site() {
-		String query = "select * from site";
+		String query = "select * from site where site_ID=0001";
 		return (ArrayList<SiteDTO>) template.query(query, new BeanPropertyRowMapper<SiteDTO>(SiteDTO.class));
 	}
+	
+	public ArrayList<ScreeningDTO> screening_2(String sId) {
+		
+		String query = "select * from screening where site_ID="+sId;
+		return (ArrayList<ScreeningDTO>) template.query(query,new BeanPropertyRowMapper<ScreeningDTO>(ScreeningDTO.class));
+	}
+
+	public ArrayList<SiteDTO> site_2(String sId) {
+		String query = "select * from site where site_ID="+sId;
+		return (ArrayList<SiteDTO>) template.query(query, new BeanPropertyRowMapper<SiteDTO>(SiteDTO.class));
+	}
+	
+	
+	
+	public ArrayList<SiteDTO> total_site() {
+		String query = "select site_ID,site_name from site";
+		return (ArrayList<SiteDTO>) template.query(query, new BeanPropertyRowMapper<SiteDTO>(SiteDTO.class));
+	}
+
 	
 	
 }

@@ -1,15 +1,15 @@
 <%@page import="kr.co.cgs4.dao.FilmDAO"%>
 <%@page import="kr.co.cgs4.dto.FilmDTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%!
-	int page = 0;
-    int listsize;
-%>
+
 <%@ page import="java.util.*" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <%String ctx = request.getContextPath(); %>
+<%!
+	int pagenum2;  
+%>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -49,6 +49,25 @@
     	<script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.js"></script> 
 		<script src="http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.3.0/respond.js"></script>		
     <![endif]-->
+    <script type="text/javascript">
+	function prevChk(pagenum) {
+// 		if(pagenum!=0){
+// 			--pagenum;
+// 		} else{
+// 			pagenum = 0;
+// 		}
+		location.href = "movie_list?page="+pagenum;
+		return pagenum;
+// 		out.print(pagenum);
+	}
+	
+	function nextChk(pagenum){
+// 		pagenum++;
+		location.href = "movie_list?page="+pagenum;
+		return pagenum;
+// 		out.print(pagenum);
+	}
+	</script>
 </head>
 <body>
     <div class="wrapper">
@@ -61,21 +80,21 @@
         <jsp:include page="menu.jsp" flush="false"/>
         
         <!-- Search bar -->
-        <div class="search-wrapper">
-            <div class="container container--add">
-                <form id='search-form' method='get' class="search">
-                    <input type="text" class="search__field" placeholder="Search">
-                    <select name="sorting_item" id="search-sort" class="search__sort" tabindex="0">
-                        <option value="1" selected='selected'>By title</option>
-                        <option value="2">By year</option>
-                        <option value="3">By producer</option>
-                        <option value="4">By title</option>
-                        <option value="5">By year</option>
-                    </select>
-                    <button type='submit' class="btn btn-md btn--danger search__button">search a movie</button>
-                </form>
-            </div>
-        </div>
+<!--         <div class="search-wrapper"> -->
+<!--             <div class="container container--add"> -->
+<!--                 <form id='search-form' method='get' class="search"> -->
+<!--                     <input type="text" class="search__field" placeholder="Search"> -->
+<!--                     <select name="sorting_item" id="search-sort" class="search__sort" tabindex="0"> -->
+<!--                         <option value="1" selected='selected'>By title</option> -->
+<!--                         <option value="2">By year</option> -->
+<!--                         <option value="3">By producer</option> -->
+<!--                         <option value="4">By title</option> -->
+<!--                         <option value="5">By year</option> -->
+<!--                     </select> -->
+<!--                     <button type='submit' class="btn btn-md btn--danger search__button">search a movie</button> -->
+<!--                 </form> -->
+<!--             </div> -->
+<!--         </div> -->
         
         <!-- Main content -->
         <section class="container">
@@ -128,19 +147,16 @@
 
 
                     <div class="pagination paginatioon--full">
-                    <form action="movie" method="post">
-                    <input type=hidden name="page" value=<%=page %>>
-                    <% if(page > 0){        	page--;
-                    	%>
-                            <a href='movie_list?page=<%=page %>' class="pagination__prev">prev</a>
-					<%}else{ %>
-					<%
-						page = 0;
-					%>
-					<a href='movie_list?page=0' class="pagination__prev">prev</a>
-					<%} %>
-					<a href='movie_list?page=page' class="pagination__next">next</a>
-                    </form>
+<%--                     <form action="movie_list?page=<%=pagenum %>" method="get"> --%>
+<%--                     <input type='hidden' name="page" value=<%=pagenum %>>  --%>
+                    <%if(request.getAttribute("pagenum")!=null){
+                    	pagenum2=Integer.parseInt(request.getAttribute("pagenum").toString());  }%>
+                    	<%if(Integer.parseInt(request.getAttribute("pagenum").toString()) > 0){ %>
+                    <a href="javascript:prevChk(<%=pagenum2-1 %>)" class="pagination__prev" >prev</a>
+                    <%} %>
+                    <%if(Integer.parseInt(request.getAttribute("size").toString()) == 12){ %>
+					<a href="javascript:nextChk(<%=pagenum2+1 %>)" class="pagination__next" >next</a>
+					<% } %>
                     </div>
           
             </div>

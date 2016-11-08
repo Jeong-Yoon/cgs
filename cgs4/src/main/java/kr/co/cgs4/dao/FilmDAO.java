@@ -21,14 +21,14 @@ public class FilmDAO {
 	}
 	
 	public FilmDTO film(String film_ID){
-		String query = "select * from film where film_ID = " + film_ID;
+		String query = "select * from film where film_ID = '" + film_ID + "'";
 		return (FilmDTO) template.queryForObject(query, new BeanPropertyRowMapper<FilmDTO>(FilmDTO.class));
 	}
 	
 	public ArrayList<FilmDTO> film_list(final int page){
 		int statNum = page*12+1;
 		int endNum = (page+1)*12;
-		String query = "select rownum, a.* from (select * from film order by film_ID desc) a where rownum >= " + statNum + " and rownum <= " + endNum ;
+		String query = "SELECT * FROM (SELECT ROWNUM rnum, a.* FROM (SELECT * FROM film ORDER BY film_ID DESC) a) WHERE rnum between " + statNum + " and " + endNum ;
 		return (ArrayList<FilmDTO>)template.query(query, new BeanPropertyRowMapper<FilmDTO>(FilmDTO.class));
 	}
 	

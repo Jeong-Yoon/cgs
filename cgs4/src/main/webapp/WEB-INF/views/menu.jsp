@@ -5,6 +5,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <%
 	String ctx = request.getContextPath();
+	
 %>
 <html>
 <head>
@@ -13,6 +14,8 @@
 </head>
 <body>
 <header class="header-wrapper">
+
+	
 		<div class="container">
 			<!-- 헤더 로고-->
 			<a href='index' class="logo"> <img style="max-width: 100px"
@@ -28,7 +31,7 @@
 			</span>
 			</a> <!-- 각 메뉴별 서브메뉴창-->
 			<ul id="navigation">
-				<li><span class="sub-nav-toggle plus"></span> <a href="	movie_list">영화</a>
+				<li><span class="sub-nav-toggle plus"></span> <a href="	movie_list?page=0">영화</a>
 					</li>
 				<li><span class="sub-nav-toggle plus"></span> <a
 					href="book1">예매</a>
@@ -53,7 +56,7 @@
 							src="http://placehold.it/31x31">
 						</span>
 					</div>
-					<a href="contact" class="btn btn--sign btn--singin">${name} </a>
+					<a href="contact" class="btn btn--sign btn--singin"><%=(String)session.getAttribute("name") %> </a>
 <!-- 					<ul class="auth__function"> -->
 <!-- 						내정보 버튼 눌렀을 시 뜨는 서브창 -->
 <!-- 						<li><a href="#" class="auth__function-item">내가본영화</a></li> -->

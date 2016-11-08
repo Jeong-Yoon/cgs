@@ -9,7 +9,7 @@
 	String ctx = request.getContextPath();
 %>
 <%
-	SimpleDateFormat mSimpleDateFormat = new SimpleDateFormat("dd/MM/yyyy", Locale.KOREA);
+	SimpleDateFormat mSimpleDateFormat = new SimpleDateFormat("yyyy-MM-dd", Locale.KOREA);
 	Date date = new Date();
 	String mTime = mSimpleDateFormat.format(date);
 %>
@@ -69,19 +69,14 @@
 <script>
 	function movieChk(name) {
 		document.getElementById("choosed_film").innerHTML = name;
-		document.getElementById("film_name")
-				.setAttribute("value", name)
-	}
-	function cityChk() {
-		var name = document.getElementById("select-sort").getAttribute("value");
-		document.getElementById("site_name").setAttribute("value", name)
-		document.getElementById("site_name").setAttribute("screen", dtos)		
+		document.getElementById("film_name").setAttribute("value", name);
 	}
 	function dateChk() {
 		var date = document.getElementById("datepicker").getAttribute("value");
 		if (hasDate(date) != 1) {
 			document.getElementById("screening_date").setAttribute("value",
 					name)
+// 			bookChk();
 		} else {
 			alert("해당 날짜에는 상영 계획이 없습니다.");
 		}
@@ -93,7 +88,7 @@
 			return 0;
 		}
 	}
-	function submit(){
+	function submit() {
 		document.getElementById("film-and-time").submit();
 	}
 </script>
@@ -101,6 +96,11 @@
 </head>
 
 <body>
+		<%
+		String sname = request.getParameter("site_name");
+		String sdate = request.getParameter("screening_date");
+		String scroll = request.getParameter("scrolls");
+		%>
 	<div class="wrapper">
 		<!--         Banner -->
 		<!--         <div class="banner-top"> -->
@@ -111,21 +111,21 @@
         <jsp:include page="menu.jsp" flush="false"/>
 
 		<!-- Search bar -->
-		<div class="search-wrapper">
-			<div class="container container--add">
-				<form id='search-form' method='get' class="search">
-					<input type="text" class="search__field" placeholder="Search">
-					<select name="sorting_item" id="search-sort" class="search__sort" tabindex="0">
-						<option value="1" selected='selected'>By title</option>
-						<option value="2">By year</option>
-						<option value="3">By producer</option>
-						<option value="4">By title</option>
-						<option value="5">By year</option>
-					</select>
-					<button type='submit' class="btn btn-md btn--danger search__button">search a movie</button>
-				</form>
-			</div>
-		</div>
+<!-- 		<div class="search-wrapper"> -->
+<!-- 			<div class="container container--add"> -->
+<!-- 				<form id='search-form' method='get' class="search"> -->
+<!-- 					<input type="text" class="search__field" placeholder="Search"> -->
+<!-- 					<select name="sorting_item" id="search-sort" class="search__sort" tabindex="0"> -->
+<!-- 						<option value="1" selected='selected'>By title</option> -->
+<!-- 						<option value="2">By year</option> -->
+<!-- 						<option value="3">By producer</option> -->
+<!-- 						<option value="4">By title</option> -->
+<!-- 						<option value="5">By year</option> -->
+<!-- 					</select> -->
+<!-- 					<button type='submit' class="btn btn-md btn--danger search__button">search a movie</button> -->
+<!-- 				</form> -->
+<!-- 			</div> -->
+<!-- 		</div> -->
 
 		<!-- Main content -->
 		<section class="container">
@@ -292,206 +292,167 @@
 				</div>
 
 			</div>
+			<h2 class="page-heading">영화관 &amp; 날짜 선택</h2>
 
-			<h2 class="page-heading">showtime &amp; tickets</h2>
-			<div class="choose-container">
+			<div class="choose-container choose-container--short">
 				<form id='select' class="select" method='get'>
-				
-					<select name="select_item" id="select-sort" class="select__sort" tabindex="0" onmousedown="cityChk()">
-						<option value="1" selected='selected'>서울강변</option>
-						<option value="2">인천</option>
-						<option value="3">야탑</option>
-						<option value="4">강남</option>
-						<option value="5">구로</option>
+					<span class="cinemapicker checkk"><i class="fa fa-rocket"></i>영화관
+						선택</span> <select name="select_item" id="select-sort"
+						class="select__sort checkk" tabindex="0" onmouseup="cityChk()">
+						<option value="001" selected='selected'>강변점</option>
+						<option value="002">인천점</option>
+						<option value="003">야탑점</option>
+						<option value="004">강남점</option>
+						<option value="005">구로점</option>
 					</select>
 				</form>
 
 				<div class="datepicker">
-					<span class="datepicker__marker"><i class="fa fa-calendar"></i>Date</span>
-					<input type="text" id="datepicker" value=<%=mTime %> class="datepicker__input" onmousedown="dateChk()">
+					<span class="datepicker__marker"><i class="fa fa-calendar"></i>날짜
+						선택</span><br /> 
+						<%if(sdate!=null){ %>
+						<input type="text" id="datepicker" value="<%=sdate%>"
+						class="datepicker__input checkk" onmouseup="dateChk()">
+						<%}else{ %>
+						<input type="text" id="datepicker" value="<%=mTime%>"
+						 class="datepicker__input checkk" onmouseup="dateChk()">
+						<%} %>
+						
 				</div>
+			</div>
 
-<!-- 				<a href="#" id="map-switch" class="watchlist watchlist--map watchlist--map-full"> -->
-<!-- 				<span class="show-map">Show cinemas on map</span> -->
-<!-- 				<span class="show-time">Show cinema time table</span></a> -->
+			<h2 class="page-heading">시간 선택</h2>
 
-				<div class="clearfix"></div>
-
-				<div class="time-select">
-					<div class="time-select__group group--first">
-						<div class="col-sm-4">
-							<p class="time-select__place">-</p>
-						</div>
-						<ul class="col-sm-8 items-wrap">
-							<li class="time-select__item" data-time='09:40'>09:40</li>
-							<li class="time-select__item" data-time='13:45'>13:45</li>
-							<li class="time-select__item" data-time='15:45'>15:45</li>
-							<li class="time-select__item" data-time='19:50'>19:50</li>
-							<li class="time-select__item" data-time='21:50'>21:50</li>
-						</ul>
+				<div class="time-select time-select--wide">
+				<form class="bookdata" action="movie?film_ID=${film.film_ID}">
+				<input type='hidden' name="film_ID" id="film_ID" value="${film.film_ID}">
+				<input type='hidden' name="scrolls" class="scrolls" value="<%=scroll %>">
+				<input type='hidden' name="film_name" class="choosen-movie" id="film_name" value="${film.film_name}">
+				<input type='hidden' name="site_name" class="choosen-city" id="site_name" value="<%=sname%>"> 
+				<input type='hidden' name="screening_date" class="choosen-date" id="screening_date" value="<%=sdate%>">
+					</form>
+					
+				<c:choose>
+				<c:when test="${scNum ne null }">
+				<c:forEach var="j" items="${scNum}">
+				<div class="time-select__group">
+					<div class="col-sm-2">
+						<p class="time-select__place">${j.screen_num}</p>관
 					</div>
-
-					<div class="time-select__group">
-						<div class="col-sm-4">
-							<p class="time-select__place">2관</p>
-						</div>
-						<ul class="col-sm-8 items-wrap">
-							<li class="time-select__item" data-time='10:45'>10:45</li>
-							<li class="time-select__item" data-time='16:00'>16:00</li>
-							<li class="time-select__item" data-time='19:00'>19:00</li>
-							<li class="time-select__item" data-time='21:15'>21:15</li>
-							<li class="time-select__item" data-time='23:00'>23:00</li>
-						</ul>
-					</div>
-
-					<div class="time-select__group">
-						<div class="col-sm-4">
-							<p class="time-select__place">3관</p>
-						</div>
-						<ul class="col-sm-8 items-wrap">
-							<li class="time-select__item" data-time='09:00'>09:00</li>
-							<li class="time-select__item" data-time='11:00'>11:00</li>
-							<li class="time-select__item" data-time='13:00'>13:00</li>
-							<li class="time-select__item" data-time='15:00'>15:00</li>
-							<li class="time-select__item" data-time='17:00'>17:00</li>
-							<li class="time-select__item" data-time='19:0'>19:00</li>
-							<li class="time-select__item" data-time='21:0'>21:00</li>
-							<li class="time-select__item" data-time='23:0'>23:00</li>
-							<li class="time-select__item" data-time='01:0'>01:00</li>
-						</ul>
-					</div>
-
-					<div class="time-select__group">
-						<div class="col-sm-4">
-							<p class="time-select__place">4관</p>
-						</div>
-						<ul class="col-sm-8 items-wrap">
-							<li class="time-select__item" data-time='10:45'>10:45</li>
-							<li class="time-select__item" data-time='16:00'>16:00</li>
-							<li class="time-select__item" data-time='19:00'>19:00</li>
-							<li class="time-select__item" data-time='21:15'>21:15</li>
-							<li class="time-select__item" data-time='23:00'>23:00</li>
-						</ul>
-					</div>
-
-					<div class="time-select__group group--last">
-						<div class="col-sm-4">
-							<p class="time-select__place">5관</p>
-						</div>
-						<ul class="col-sm-8 items-wrap">
-							<li class="time-select__item" data-time='17:45'>17:45</li>
-							<li class="time-select__item" data-time='21:30'>21:30</li>
-							<li class="time-select__item" data-time='02:20'>02:20</li>
-						</ul>
-					</div>
+					<ul class="col-sm-8 items-wrap">
+						<c:forEach var="i" items="${blist}">
+							<c:if test="${i.screen_num == j.screen_num}">
+								<li class=time-select__set>
+									<div class="time-select__item" data-time='${i.start_time }'>${i.start_time }</div>
+									<div class="time-select__seat">100/100석</div>
+								</li>
+							</c:if>
+						</c:forEach>
+					</ul>
 				</div>
-				<br>
+				</c:forEach>
+				</c:when>
+				<c:otherwise>
+				<div class="time-select__group">
+					<div class="col-sm-2">
+						<p class="time-select__place"></p>
+					</div>
+					<ul class="col-sm-8 items-wrap">
+					<li>영화 정보를 선택해주세요</li>
+					</ul>
+				</div>
+				</c:otherwise>
+				</c:choose>
+				
+
+			</div>
+
+		</section>
+		<!-- 		</form> -->
+		<div class="clearfix"></div>
+<!-- 					<div class="time-select__group group--first"> -->
+<!-- 						<div class="col-sm-4"> -->
+<!-- 							<p class="time-select__place">-</p> -->
+<!-- 						</div> -->
+<!-- 						<ul class="col-sm-8 items-wrap"> -->
+<!-- 							<li class="time-select__item" data-time='09:40'>09:40</li> -->
+<!-- 							<li class="time-select__item" data-time='13:45'>13:45</li> -->
+<!-- 							<li class="time-select__item" data-time='15:45'>15:45</li> -->
+<!-- 							<li class="time-select__item" data-time='19:50'>19:50</li> -->
+<!-- 							<li class="time-select__item" data-time='21:50'>21:50</li> -->
+<!-- 						</ul> -->
+<!-- 					</div> -->
+
+<!-- 					<div class="time-select__group"> -->
+<!-- 						<div class="col-sm-4"> -->
+<!-- 							<p class="time-select__place">2관</p> -->
+<!-- 						</div> -->
+<!-- 						<ul class="col-sm-8 items-wrap"> -->
+<!-- 							<li class="time-select__item" data-time='10:45'>10:45</li> -->
+<!-- 							<li class="time-select__item" data-time='16:00'>16:00</li> -->
+<!-- 							<li class="time-select__item" data-time='19:00'>19:00</li> -->
+<!-- 							<li class="time-select__item" data-time='21:15'>21:15</li> -->
+<!-- 							<li class="time-select__item" data-time='23:00'>23:00</li> -->
+<!-- 						</ul> -->
+<!-- 					</div> -->
+
+<!-- 					<div class="time-select__group"> -->
+<!-- 						<div class="col-sm-4"> -->
+<!-- 							<p class="time-select__place">3관</p> -->
+<!-- 						</div> -->
+<!-- 						<ul class="col-sm-8 items-wrap"> -->
+<!-- 							<li class="time-select__item" data-time='09:00'>09:00</li> -->
+<!-- 							<li class="time-select__item" data-time='11:00'>11:00</li> -->
+<!-- 							<li class="time-select__item" data-time='13:00'>13:00</li> -->
+<!-- 							<li class="time-select__item" data-time='15:00'>15:00</li> -->
+<!-- 							<li class="time-select__item" data-time='17:00'>17:00</li> -->
+<!-- 							<li class="time-select__item" data-time='19:0'>19:00</li> -->
+<!-- 							<li class="time-select__item" data-time='21:0'>21:00</li> -->
+<!-- 							<li class="time-select__item" data-time='23:0'>23:00</li> -->
+<!-- 							<li class="time-select__item" data-time='01:0'>01:00</li> -->
+<!-- 						</ul> -->
+<!-- 					</div> -->
+
+<!-- 					<div class="time-select__group"> -->
+<!-- 						<div class="col-sm-4"> -->
+<!-- 							<p class="time-select__place">4관</p> -->
+<!-- 						</div> -->
+<!-- 						<ul class="col-sm-8 items-wrap"> -->
+<!-- 							<li class="time-select__item" data-time='10:45'>10:45</li> -->
+<!-- 							<li class="time-select__item" data-time='16:00'>16:00</li> -->
+<!-- 							<li class="time-select__item" data-time='19:00'>19:00</li> -->
+<!-- 							<li class="time-select__item" data-time='21:15'>21:15</li> -->
+<!-- 							<li class="time-select__item" data-time='23:00'>23:00</li> -->
+<!-- 						</ul> -->
+<!-- 					</div> -->
+
+<!-- 					<div class="time-select__group group--last"> -->
+<!-- 						<div class="col-sm-4"> -->
+<!-- 							<p class="time-select__place">5관</p> -->
+<!-- 						</div> -->
+<!-- 						<ul class="col-sm-8 items-wrap"> -->
+<!-- 							<li class="time-select__item" data-time='17:45'>17:45</li> -->
+<!-- 							<li class="time-select__item" data-time='21:30'>21:30</li> -->
+<!-- 							<li class="time-select__item" data-time='02:20'>02:20</li> -->
+<!-- 						</ul> -->
+<!-- 					</div> -->
+<!-- 				</div> -->
 				<div class="movie__btns movie__btns--full">
-					<form id='film-and-time' class="booking-form" method='get'>
-						<input type='hidden' name="film_name" class="choosen-movie" id="film_name"> 
-						<input type='hidden' name="site_name" class="choosen-city" id="site_name"> 
-						<input type='hidden' name="screening_date" class="choosen-date" id="screening_date">
+					<form id='film-and-time' class="booking-form" method='get' action='book2'>
+						<input type='hidden' name="film_name" class="choosen-movie" id="film_name" value="${film.film_name}">
+						<input type='hidden' name="site_name" class="choosen-city" id="site_name" value="<%=sname%>"> 
+						<input type='hidden' name="screening_date" class="choosen-date" id="screening_date"  value="<%=sdate%>">
 						<input type='hidden' name="screen_num" class="choosen-cinema" id="screen_num"> 
 						<input type='hidden' name="start_time" class="choosen-time" id="start_time">
 						<%-- 						<input type=hidden name="start_time" value="${test.start_time }"> --%>
-						<%if(request.getAttribute("id")!=null){%>
-						<center> <a href='book2' class="btn btn-md btn--warning">book a ticket for this movie</a> </center>
+						<%if((String)session.getAttribute("id")!=null){%>
+						<center> <a href="#" class="btn btn-md btn--warning" onclick="submit()">book a ticket for this movie</a> </center>
 						<%}else{ %>
 						<center> <a href='login' class="btn btn-md btn--warning">book a ticket for this movie</a> </center>
 						<% } %>
 					</form>
 				</div>
 
-				<!-- hiden maps with multiple locator-->
-<!-- 				<div class="map"> -->
-<!-- 					<div id='cimenas-map'></div> -->
-<!-- 				</div> -->
-
-				<!--                     <h2 class="page-heading">comments (15)</h2> -->
-
-				<!--                     <div class="comment-wrapper"> -->
-				<!--                         <form id="comment-form" class="comment-form" method='post'> -->
-				<!--                             <textarea class="comment-form__text" placeholder='Add you comment here'></textarea> -->
-				<!--                             <label class="comment-form__info">250 characters left</label> -->
-				<!--                             <button type='submit' class="btn btn-md btn--danger comment-form__btn">add comment</button> -->
-				<!--                         </form> -->
-
-				<!--                         <div class="comment-sets"> -->
-
-				<!--                         <div class="comment"> -->
-				<!--                             <div class="comment__images"> -->
-				<!--                                 <img alt='' src="http://placehold.it/50x50"> -->
-				<!--                             </div> -->
-
-				<!--                             <a href='#' class="comment__author"><span class="social-used fa fa-facebook"></span>Roberta Inetti</a> -->
-				<!--                             <p class="comment__date">today | 03:04</p> -->
-				<!--                             <p class="comment__message">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vitae enim sollicitudin, euismod erat id, fringilla lacus. Cras ut rutrum lectus. Etiam ante justo, volutpat at viverra a, mattis in velit. Morbi molestie rhoncus enim, vitae sagittis dolor tristique et.</p> -->
-				<!--                             <a href='#' class="comment__reply">Reply</a> -->
-				<!--                         </div> -->
-
-				<!--                         <div class="comment"> -->
-				<!--                             <div class="comment__images"> -->
-				<!--                                 <img alt='' src="http://placehold.it/50x50"> -->
-				<!--                             </div> -->
-
-				<!--                             <a href='#' class="comment__author"><span class="social-used fa fa-vk"></span>Olia Gozha</a> -->
-				<!--                             <p class="comment__date">22.10.2013 | 14:40</p> -->
-				<!--                             <p class="comment__message">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vitae enim sollicitudin, euismod erat id, fringilla lacus. Cras ut rutrum lectus. Etiam ante justo, volutpat at viverra a, mattis in velit. Morbi molestie rhoncus enim, vitae sagittis dolor tristique et.</p> -->
-				<!--                             <a href='#' class="comment__reply">Reply</a> -->
-				<!--                         </div> -->
-
-				<!--                         <div class="comment comment--answer"> -->
-				<!--                             <div class="comment__images"> -->
-				<!--                                 <img alt='' src="http://placehold.it/50x50"> -->
-				<!--                             </div> -->
-
-				<!--                             <a href='#' class="comment__author"><span class="social-used fa fa-vk"></span>Dmitriy Pustovalov</a> -->
-				<!--                             <p class="comment__date">today | 10:19</p> -->
-				<!--                             <p class="comment__message">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vitae enim sollicitudin, euismod erat id, fringilla lacus. Cras ut rutrum lectus. Etiam ante justo, volutpat at viverra a, mattis in velit. Morbi molestie rhoncus enim, vitae sagittis dolor tristique et.</p> -->
-				<!--                             <a href='#' class="comment__reply">Reply</a> -->
-				<!--                         </div> -->
-
-				<!--                         <div class="comment comment--last"> -->
-				<!--                             <div class="comment__images"> -->
-				<!--                                 <img alt='' src="http://placehold.it/50x50"> -->
-				<!--                             </div> -->
-
-				<!--                             <a href='#' class="comment__author"><span class="social-used fa fa-facebook"></span>Sia Andrews</a> -->
-				<!--                             <p class="comment__date"> 22.10.2013 | 12:31 </p> -->
-				<!--                             <p class="comment__message">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vitae enim sollicitudin, euismod erat id, fringilla lacus. Cras ut rutrum lectus. Etiam ante justo, volutpat at viverra a, mattis in velit. Morbi molestie rhoncus enim, vitae sagittis dolor tristique et.</p> -->
-				<!--                             <a href='#' class="comment__reply">Reply</a> -->
-				<!--                         </div> -->
-
-				<!--                         <div id='hide-comments' class="hide-comments"> -->
-				<!--                             <div class="comment"> -->
-				<!--                                 <div class="comment__images"> -->
-				<!--                                     <img alt='' src="http://placehold.it/50x50"> -->
-				<!--                                 </div> -->
-
-				<!--                                 <a href='#' class="comment__author"><span class="social-used fa fa-facebook"></span>Roberta Inetti</a> -->
-				<!--                                 <p class="comment__date">today | 03:04</p> -->
-				<!--                                 <p class="comment__message">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vitae enim sollicitudin, euismod erat id, fringilla lacus. Cras ut rutrum lectus. Etiam ante justo, volutpat at viverra a, mattis in velit. Morbi molestie rhoncus enim, vitae sagittis dolor tristique et.</p> -->
-				<!--                                 <a href='#' class="comment__reply">Reply</a> -->
-				<!--                             </div> -->
-
-				<!--                             <div class="comment"> -->
-				<!--                                 <div class="comment__images"> -->
-				<!--                                     <img alt='' src="http://placehold.it/50x50"> -->
-				<!--                                 </div> -->
-
-				<!--                                 <a href='#' class="comment__author"><span class="social-used fa fa-vk"></span>Olia Gozha</a> -->
-				<!--                                 <p class="comment__date">22.10.2013 | 14:40</p> -->
-				<!--                                 <p class="comment__message">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vitae enim sollicitudin, euismod erat id, fringilla lacus. Cras ut rutrum lectus. Etiam ante justo, volutpat at viverra a, mattis in velit. Morbi molestie rhoncus enim, vitae sagittis dolor tristique et.</p> -->
-				<!--                                 <a href='#' class="comment__reply">Reply</a> -->
-				<!--                             </div> -->
-				<!--                         </div> -->
-
-				<!--                         <div class="comment-more"> -->
-				<!--                             <a href="#" class="watchlist">Show more comments</a> -->
-				<!--                         </div> -->
-
-				<!--                     </div> -->
-				<!--                     </div> -->
 			</div>
 		</div>
 

@@ -378,6 +378,7 @@ function init_Home() {
     });
 }
 
+
 function init_BookingOne() {
     "use strict";
 
@@ -397,6 +398,8 @@ function init_BookingOne() {
                     date = $('.choosen-date'),
                     cinema = $('.choosen-cinema'),
                     time = $('.choosen-time');
+    var scroll = $('.scrolls').val();
+    			$(document).scrollTop(scroll);
 
     //3. Swiper slider(안씀)
     //init employee sliders
@@ -508,17 +511,18 @@ function init_BookingOne() {
 
 	//6. Choose variant proccess
 				//choose film
-                $('.film-images').click(function (e) {
+                $('.film_button').click(function (e) {
                 	 //visual iteractive for choose
-                     $('.film-images').removeClass('film--choosed');
-                     $(this).addClass('film--choosed');
+//                     $('.film-images').removeClass('film--choosed');
+//                     $(this).addClass('film--choosed');
 
                      //data element init
-                     var chooseFilm = $(this).parent().attr('data-film');
-                     $('.choose-indector--film').find('.choosen-area').text(chooseFilm);
+//                     var chooseFilm = $(this).parent().attr('data-film');
+//                     $('.choose-indector--film').find('.choosen-area').text(chooseFilm);
 
                      //data element set
-                     movie.val(chooseFilm);
+//                     movie.val(chooseFilm);
+                     check(e)
 
                 })
 
@@ -547,12 +551,12 @@ function init_BookingOne() {
                 // choose (change) city and date for film
 
                 //data element init (default)
-                var chooseCity = $('.choosen-city').val();
-                var chooseDate = $('.choosen-date').val();
-
-                //data element set (default)
-                city.val(chooseCity);
-                date.val(chooseDate);
+//                var chooseCity = $('.choosen-city').val();
+//                var chooseDate = $('.choosen-date').val();
+//
+//                //data element set (default)
+//                city.val(chooseCity);
+//                date.val(chooseDate);
 
 
                 $('.select .sbOptions').click(function (e){
@@ -609,16 +613,19 @@ function init_BookingOne() {
                 //8 예매선택 
                 //check라는 펑션을 만들어서 필요 데이터가 있는지 체크
                 function check(e){
+                	  
                 	//문서 내의 choosen 클래스가 있는 곳에서 자료 받아옴
                     var chooseCity = $('.choosen-city').val();
                     var chooseDate = $('.choosen-date').val();
                     var chooseFilm = $('.choosen-movie').val();
+//                	alert(chooseFilm);
+//                	alert(chooseDate);
                     //셋 다 값이 있을때 데이터를 서밋 작업을 수행, 하나라도 비면 패스
-                    if(chooseCity!=""&&chooseFilm!=""&&chooseDate!=""){
+                    if(chooseCity!='null'&&chooseFilm!='null'&&chooseDate!='null'&&chooseDate!=""){
 //                    	${.'items-wrap'}.replace
-                	alert(chooseCity);
-                	alert(chooseDate);
-                	alert(chooseFilm);
+//                	alert(chooseCity);
+                    	scroll=$(document).scrollTop();
+                    	$('.scrolls').attr('value',scroll);
                 	$('.bookdata').submit();
                     }
                 }
@@ -649,7 +656,7 @@ function init_BookingTwo () {
                     cheapTicket = 5000,
                     middleTicket = 6000,
                     expansiveTicket = 7000,
-                    sits = $('.choosen-sits'),
+                    sits = $('.choosen_sits'),
                     pplNum = 0;
     
     // 좌석 4개로 제한하기
@@ -683,10 +690,14 @@ function init_BookingTwo () {
     		}else{$('.checked-people').find('.youg').text(' ')}
     		if(spec!=0){$('.checked-people').find('.spec').text('우대 x '+spec)
     		}else{$('.checked-people').find('.spec').text(' ')}
+    		$('.choosen-number').val(pplNum);
+    		$('.choosen-number--cheap').val(spec);
+    		$('.choosen-number--middle').val(youg);
+    		$('.choosen-number--expansive').val(norm);
     		
 
-        $('.checked-result').text('$'+totprice);
-    
+        $('.checked-result').text(totprice+"원");
+        $('.choosen-cost').val(totprice);
     		
     	})
     //3. Choose sits (and count price for them)
@@ -698,6 +709,7 @@ function init_BookingTwo () {
                 var middle = 0;
                 var expansive = 0;
                 var count = 0;
+                var totSeat="";
 //                cheapTicket = 5000,
 //                middleTicket = 6000,
 //                expansiveTicket = 7000;
@@ -705,16 +717,22 @@ function init_BookingTwo () {
                 $('.sits__place').click(function (e) {
                     e.preventDefault();
                     var place = $(this).attr('data-place');
-                    var ticketPrice = $(this).attr('data-price');
-
+//                    var ticketPrice = $(this).attr('data-price');
+                    
                     if(! $(e.target).hasClass('sits-state--your')){
                     	if(count<pplNum){
 
                         if (! $(this).hasClass('sits-state--not') ) {
                             $(this).addClass('sits-state--your');
                             count+=1;
-
-                            $('.checked-place').prepend('<span class="choosen-place '+place+'">'+ place +'</span>');
+                            
+                            $('.checked-place').append('<span class="choosen-place '+place+'">'+ place +'&nbsp</span>');
+                            
+//                            totSeat=totSeat+place;
+//                            alert(place);
+//                            alert(totSeat);
+//                            $('.choosen_sits').val(place);
+                            
 
                         }
                     }else{
@@ -724,6 +742,12 @@ function init_BookingTwo () {
                         $(this).removeClass('sits-state--your');
                         count-=1;
                         $('.'+place+'').remove();
+                        
+
+//                        totSeat=totSeat;
+//                        alert(place);
+//                        alert(totSeat);
+//                        $('.choosen_sits').val(place);
 
                     }
 
@@ -731,21 +755,23 @@ function init_BookingTwo () {
                     var number = $('.checked-place').children().length;
 
                     //data element set 
-                    numberTicket.val(number);
-                    sumTicket.val(sum);
+//                    numberTicket.val(number);
+//                    sumTicket.val(sum);
 //                    cheapTicket.val(cheap);
 //                    middleTicket.val(middle);
 //                    expansiveTicket.val(expansive );
 
+//                    sits = $('.choosen_sits'),
 
                     //data element init
                     var chooseSits = '';
-                    $('.choosen-place').each( function () {
-                        chooseSits += ', '+ $(this).text();
+                    $('.sits').find('.choosen-place').each( function () {
+//                        alert(chooseSits);
+                        chooseSits += $(this).text()
                     });
 
                     //data element set 
-                    sits.val(chooseSits.substr(2));
+                    sits.val(chooseSits);
                 });
 
 				//--- Step for data  ---//
@@ -947,6 +973,15 @@ function init_CinemaList () {
                             $('.row').css('clear','none');
                         }
                 });
+                
+                //페이지 갯수 체크
+//            	var pCnt=0;
+//                $('.cinema').each( function(){
+//                	pCnt++;
+//                });
+//                if(pCnt<12){
+//                	$('.pagination__next').remove();
+//                }
 }
 
 function init_Contact () {
@@ -1191,6 +1226,13 @@ function init_MoviePage () {
         starOff : 'star-off.svg',
         starOn  : 'star-on.svg' 
     });
+    
+    //2-1. Init vars for order data
+    // var for booking;
+                var city = $('.choosen-city'),
+                    date = $('.choosen-date'),
+                    cinema = $('.choosen-cinema'),
+                    time = $('.choosen-time');
 
     //2. Swiper slider
     //Media slider
@@ -1361,6 +1403,7 @@ function init_MoviePage () {
                     }
 
                 });
+                
 
     
     //5. Datepicker init
@@ -1382,7 +1425,112 @@ function init_MoviePage () {
                        $(".datepicker__input").datepicker("hide");
                      }
                 });
+                
+              //6. Choose variant proccess
+              //choose film
+                $('.film_button').click(function (e) {
+                     check(e)
+                })
+                
+              //choose time
+                $('.time-select__item').click(function (){
+                	//visual iteractive for choose
+                    $('.time-select__item').removeClass('active');
+                    $('.time-select__item').removeAttr("value");
+                    $(this).addClass('active');
+                    $(this).attr("value","time_id");
 
+                    //data element init
+                    var chooseTime = $(this).attr('data-time');
+                     $('.choose-indector--time').find('.choosen-area').text(chooseTime);
+                     $('.booking-form').find('.choosen-time').attr("value",chooseTime);
+
+                    //data element init
+                    var chooseCinema = $(this).parent().parent().parent().find('.time-select__place').text(); 
+                    $('.booking-form').find('.choosen-cinema').attr("value",chooseCinema);
+
+                    //data element set
+                    time.val(chooseTime);
+                    cinema.val(chooseCinema);
+                });
+
+
+
+                $('.select .sbOptions').click(function (e){
+                	//data element change
+                    var chooseCity = $('.select .sbSelector').text();
+                    //data element set change
+                    city.val(chooseCity);
+                    //function에 e라는 arg 추가하고 check를 돌림. 
+                    //e가 왜 있는지는 모름 걍 따라씀....
+                    check(e);
+                    e.preventDefault();
+                });
+
+                $('.datepicker__input').change(function (e) {
+                	//data element change
+                    var chooseDate = $('.datepicker__input').val();
+                    //data element set change
+                    date.val(chooseDate);
+                    //function에 e라는 arg 추가하고 check를 돌림. 
+                    //e가 왜 있는지는 모름 걍 따라씀....
+                    check(e);
+                    e.preventDefault();
+                });
+
+                // --- Step for data - serialize and send to next page---//
+                $('.booking-form').submit( function () {
+                    var bookData = $(this).serialize();
+                    $.get( $(this).attr('action'), bookData );
+                })
+                //7. Visibility block on page control
+    			//control block display on page
+                $('.choose-indector--film').click(function (e) {
+                    e.preventDefault();
+                    $(this).toggleClass('hide-content');
+                    $('.choose-film').slideToggle(400);
+                })
+
+                $('.choose-indector--time').click(function (e) {
+                    e.preventDefault();
+                    $(this).toggleClass('hide-content');
+                    $('.time-select').slideToggle(400);
+                })
+              //2. Sorting buy category
+                // sorting function
+                $('.tags__item').click(function (e) {
+                    //prevent the default behaviour of the link
+                    e.preventDefault();
+
+                        $('.tags__item').removeClass('item-active');
+                        $(this).addClass('item-active');
+
+                });
+                //8 예매선택 
+                //check라는 펑션을 만들어서 필요 데이터가 있는지 체크
+                function check(e){
+                	  
+                	//문서 내의 choosen 클래스가 있는 곳에서 자료 받아옴
+                    var chooseCity = $('.choosen-city').val();
+                    var chooseDate = $('.choosen-date').val();
+                    var chooseFilm = $('.choosen-movie').val();
+//                	alert(chooseFilm);
+//                	alert(chooseDate);
+                    //셋 다 값이 있을때 데이터를 서밋 작업을 수행, 하나라도 비면 패스
+                    if(chooseCity!='null'&&chooseFilm!='null'&&chooseDate!='null'&&chooseDate!=""){
+//                    	${.'items-wrap'}.replace
+//                	alert(chooseCity);
+                    	scroll=$(document).scrollTop();
+                    	$('.scrolls').attr('value',scroll);
+                	$('.bookdata').submit();
+                    }
+                }
+                //영화 선택엔 checkk 클래스를 달아서 펑션 수행. 영화관, 날짜는 jquery에서 수행
+                $('.checkk').click(function(e){
+                	check(e);
+                	e.preventDefault();
+                    
+                });
     //6. Reply comment form
     			// button more comments
                 $('#hide-comments').hide();

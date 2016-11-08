@@ -68,14 +68,14 @@
 	function movieChk(name) {
 		document.getElementById("choosed_film").innerHTML = name;
 		document.getElementById("film_name").setAttribute("value", name);
-		bookChk();
+// 		bookChk();
 	}
 	function dateChk() {
 		var date = document.getElementById("datepicker").getAttribute("value");
 		if (hasDate(date) != 1) {
 			document.getElementById("screening_date").setAttribute("value",
 					name)
-			bookChk();
+// 			bookChk();
 		} else {
 			alert("해당 날짜에는 상영 계획이 없습니다.");
 		}
@@ -90,25 +90,18 @@
 	function submit() {
 		document.getElementById("film-and-time").submit();
 	}
-	function bookChk() {
-// 		document.getElementById
-	}
-<%-- <%film_name = request.getParameter("film_name"); --%>
-// 			site_name = request.getParameter("site_name");
-// 			sc_date = request.getParameter("screening_date");
-// 					System.out.print(film_name);
-// 					System.out.print(site_name);
-// 					System.out.print(sc_date);
-<%-- 			if (film_name != null && site_name != null && sc_date != null) {%> --%>
-// 	alert("선택됨!");
-<%-- <%}%> --%>
-// 	}
 </script>
 
 
 </head>
 
 <body>
+		<%
+		String fname = request.getParameter("film_name");
+		String sname = request.getParameter("site_name");
+		String sdate = request.getParameter("screening_date");
+		String scroll = request.getParameter("scrolls");
+		%>
 	<div class="wrapper">
 		<!-- 메뉴바-->
 		<jsp:include page="../menu.jsp" flush="false" />
@@ -143,7 +136,7 @@
 						</div>
 					</div>
 
-
+					<div class="film_table">
 					<table>
 						<c:forEach var="dto" items="${flist}">
 							<tr class="rates rates--top">
@@ -156,6 +149,7 @@
 							</tr>
 						</c:forEach>
 					</table>
+					</div>
 				</div>
 
 			</div>
@@ -172,7 +166,7 @@
 		<section class="container">
 		<div class="col-sm-12">
 			<div class="choose-indector choose-indector--film">
-				<strong>선택하신 영화: </strong><a id="choosed_film" class="choosed_film"></a>
+				<strong>선택하신 영화: </strong><a id="choosed_film" class="choosed_film"><%if(fname!=null){out.print(fname);} %></a>
 			</div>
 
 			<h2 class="page-heading">영화관 &amp; 날짜 선택</h2>
@@ -192,41 +186,26 @@
 
 				<div class="datepicker">
 					<span class="datepicker__marker"><i class="fa fa-calendar"></i>날짜
-						선택</span><br /> <input type="text" id="datepicker" value="<%=mTime%>"
-						class="datepicker__input checkk" onmousedown="dateChk()">
+						선택</span><br /> 
+						<%if(sdate!=null){ %>
+						<input type="text" id="datepicker" value="<%=sdate%>"
+						class="datepicker__input checkk" onmouseup="dateChk()">
+						<%}else{ %>
+						<input type="text" id="datepicker" value="<%=mTime%>"
+						 class="datepicker__input checkk" onmouseup="dateChk()">
+						<%} %>
+						
 				</div>
 			</div>
 
 			<h2 class="page-heading">시간 선택</h2>
 
-<!-- 			<div> -->
-<!-- 				<table> -->
-				
-<%-- 				<c:forEach var="j" items="${blist }"> --%>
-<%-- 				<c:if test="${j.film_name eq '닥터 스트레인지' and i.screen_num eq '01'}"> --%>
-<!-- 					<tr> -->
-<%-- 						<c:forEach var="i" items="${blist}" varStatus="stat"> --%>
-<%-- 							<c:if --%>
-<%-- 								test="${i.film_name eq '닥터 스트레인지' and i.screen_num eq '01'}"> --%>
-<%-- 								<td>${i.start_time }</td> --%>
-<%-- 								<td>${stat.index }</td> --%>
-<%-- 							</c:if> --%>
-<%-- 						</c:forEach> --%>
-<!-- 					</tr> -->
-<%-- 					</c:if> --%>
-<%-- 					</c:forEach> --%>
-<!-- 				</table> -->
-<!-- 			</div> -->
-
-
-
 			<div class="time-select time-select--wide">
-			<a name="booook"></a>
-			<form class="bookdata" action="book1#booook">
-				<input type='hidden' name="film_name" class="choosen-movie"
-					id="film_name"> <input type='hidden' name="site_name"
-					class="choosen-city" id="site_name"> <input type='hidden'
-					name="screening_date" class="choosen-date" id="screening_date">
+			<form class="bookdata" action="book1">
+				<input type='hidden' name="scrolls" class="scrolls" value="<%=scroll %>">
+				<input type='hidden' name="film_name" class="choosen-movie" id="film_name" value="<%=fname%>">
+				<input type='hidden' name="site_name" class="choosen-city" id="site_name" value="<%=sname%>"> 
+				<input type='hidden' name="screening_date" class="choosen-date" id="screening_date" value="<%=sdate%>">
 					</form>
 					
 				<c:choose>
@@ -234,7 +213,7 @@
 				<c:forEach var="j" items="${scNum}">
 				<div class="time-select__group">
 					<div class="col-sm-2">
-						<p class="time-select__place">${j.screen_num} 관</p>
+						<p class="time-select__place">${j.screen_num}</p>관
 					</div>
 					<ul class="col-sm-8 items-wrap">
 						<c:forEach var="i" items="${blist}">
@@ -271,15 +250,14 @@
 		<!-- 		</form> -->
 		<div class="clearfix"></div>
 
+
 		<form id='film-and-time' class="booking-form" method='get'
 			action='book2'>
-			<input type='hidden' name="film_name" class="choosen-movie"
-				id="film_name"> <input type='hidden' name="site_name"
-				class="choosen-city" id="site_name" value="강변점"> <input type='hidden'
-				name="screening_date" class="choosen-date" id="screening_date" value="2016-11-06">
-			<input type='hidden' name="screen_num" class="choosen-cinema"
-				id="screen_num"> <input type='hidden' name="start_time"
-				class="choosen-time" id="start_time">
+			<input type='hidden' name="film_name" class="choosen-movie" value="<%=fname%>">
+			<input type='hidden' name="site_name" class="choosen-city" value="<%=sname%>">
+			<input type='hidden' name="screening_date" class="choosen-date" value="<%=sdate%>">
+			<input type='hidden' name="screen_num" class="choosen-cinema" id="screen_num">
+			<input type='hidden' name="start_time" class="choosen-time" id="start_time">
 
 			<div class="booking-pagination">
 				<a href="#" class="booking-pagination__prev hide--arrow"> <span

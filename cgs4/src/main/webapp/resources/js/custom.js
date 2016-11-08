@@ -1460,6 +1460,11 @@ function init_MoviePage () {
                     time.val(chooseTime);
                     cinema.val(chooseCinema);
                 });
+                
+                var chooseCity = $('.select .sbSelector').text();
+                city.val(chooseCity);
+                var chooseDate = $('.datepicker__input').val();
+                date.val(chooseDate);
 
 
 

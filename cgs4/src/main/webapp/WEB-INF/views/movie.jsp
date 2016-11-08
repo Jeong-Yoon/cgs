@@ -328,14 +328,14 @@
 				<input type='hidden' name="film_ID" id="film_ID" value="${film.film_ID}">
 				<input type='hidden' name="scrolls" class="scrolls" value="<%=scroll %>">
 				<input type='hidden' name="film_name" class="choosen-movie" id="film_name" value="${film.film_name}">
-				<%if(sname==null){ sname="강변점"; }%>
+<%-- 				<%if(sname==null){ sname="강변점"; }%> --%>
 				<input type='hidden' name="site_name" class="choosen-city" id="site_name" value="<%=sname%>"> 
-				<%if(sdate==null){ sdate=mTime; } %>
+<%-- 				<%if(sdate==null){ sdate=mTime; } %> --%>
 				<input type='hidden' name="screening_date" class="choosen-date" id="screening_date" value="<%=sdate%>">
 					</form>
 					
 				<c:choose>
-				<c:when test="${scNum ne null }">
+				<c:when test="${!empty scNum}">
 				<c:forEach var="j" items="${scNum}">
 				<div class="time-select__group">
 					<div class="col-sm-2">

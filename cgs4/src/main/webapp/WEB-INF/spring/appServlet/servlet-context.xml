@@ -26,7 +26,7 @@
 	<beans:bean name="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 		<beans:property name="driverClassName" value="oracle.jdbc.driver.OracleDriver" />
 		<beans:property name="url" value="jdbc:oracle:thin:@14.63.198.155:2002:xe" />
-		<beans:property name="username" value="test2" />
+		<beans:property name="username" value="cgsdb" />
 		<beans:property name="password" value="gbsb" />
 	</beans:bean>
 

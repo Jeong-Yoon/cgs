@@ -824,7 +824,7 @@ p {
 
 a {
 	font-size: 13px;
-	color: #fff;
+	color: #222A35;
 	-webkit-transition: 0.3s;
 	transition: 0.3s;
 }
@@ -5572,7 +5572,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 }
 
 .select .sbToggle:after {
-	/* 	content: '占쎌겫占쎌넅�꽴占�''; */
+	/* 	content: '�뜝�럩寃ュ뜝�럩�꼨占쎄슈�뜝占�''; */
 	font: 13px 'Roboto', Nanum Gothic;
 	font-weight: bold;
 }

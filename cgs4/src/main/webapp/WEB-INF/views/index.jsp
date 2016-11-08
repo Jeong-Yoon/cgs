@@ -61,8 +61,6 @@
 <link rel="stylesheet" type="text/css"
 	href="<%=ctx%>/resources/rs-plugin/css/settings.css" media="screen" />
 
-<!-- Custom -->
-<link href="<%=ctx%>/resources/css/style.css?v=1" rel="stylesheet" />
 
 <!-- Fontawesome -->
 <link rel="stylesheet"
@@ -145,7 +143,7 @@
 			<%
 				}
 			%>
-<!-- 			<li><span class="sub-nav-toggle plus"></span> -->
+			<!-- 			<li><span class="sub-nav-toggle plus"></span> -->
 		</ul>
 		</nav>
 		<!-- /main nav -->
@@ -470,7 +468,7 @@
 		<!-- 슬라이더 종료 -->
 
 		<!-- Movie content -->
-		
+
 		<section id="portfolio">
 		<div class="section-title text-center wow fadeInDown">
 			<h2 style="color: #1f2021; margin-top: 50px">
@@ -499,17 +497,19 @@
 				alt="movie rank1"> <%--  					<a href="<%=ctx %>/resources/images/portfolio/portfolio-3.jpg" title="Title Three" rel="portfolio" class="fancybox"><span class="plus"></span></a> --%>
 			<figcaption class="mask">
 			<h3>닥터스트레인지</h3>
-			<span>Doctor Strange , 2016</span><br>
+			<span>Doctor Strange , 2016</span>
+			<br>
 			<a href="#" class="btn btn-book">평가하기</a> <a href="#"
 				class="btn btn-book-blue">예매하기</a> </figcaption> </figure>
 
 			<figure class="mix portfolio-item photography"> <img
 				class="img-responsive"
-				src="<%=ctx%>/resources/images/poster/lucky.jpg"
-				alt="movie rank2"> <%--                     <a href="<%=ctx %>/resources/images/portfolio/portfolio-3.jpg" title="Title Three" rel="portfolio" class="fancybox"><span class="plus"></span></a> --%>
+				src="<%=ctx%>/resources/images/poster/lucky.jpg" alt="movie rank2">
+			<%--                     <a href="<%=ctx %>/resources/images/portfolio/portfolio-3.jpg" title="Title Three" rel="portfolio" class="fancybox"><span class="plus"></span></a> --%>
 			<figcaption class="mask">
 			<h3>럭키</h3>
-			<span>LUCK-KEY , 2016</span><br>
+			<span>LUCK-KEY , 2016</span>
+			<br>
 			<a href="#" class="btn btn-book">평가하기</a> <a href="#"
 				class="btn btn-book-blue">예매하기</a> </figcaption> </figure>
 
@@ -519,17 +519,19 @@
 				alt="movie rank3"> <%--                     <a href="<%=ctx %>/resources/images/portfolio/portfolio-3.jpg" title="Title Three" rel="portfolio" class="fancybox"><span class="plus"></span></a> --%>
 			<figcaption class="mask">
 			<h3>로스트인더스트</h3>
-			<span>Hell or High Water, 2016</span><br>
+			<span>Hell or High Water, 2016</span>
+			<br>
 			<a href="#" class="btn btn-book">평가하기</a> <a href="#"
 				class="btn btn-book-blue">예매하기</a> </figcaption> </figure>
 
 			<figure class="mix portfolio-item print"> <img
 				class="img-responsive"
-				src="<%=ctx%>/resources/images/poster/muhyun.jpg"
-				alt="movie rank4"> <%--                     <a href="<%=ctx %>/resources/images/portfolio/portfolio-4.jpg" title="Title Four" rel="portfolio" class="fancybox"><span class="plus"></span></a> --%>
+				src="<%=ctx%>/resources/images/poster/muhyun.jpg" alt="movie rank4">
+			<%--                     <a href="<%=ctx %>/resources/images/portfolio/portfolio-4.jpg" title="Title Four" rel="portfolio" class="fancybox"><span class="plus"></span></a> --%>
 			<figcaption class="mask">
 			<h3>무현, 두 도시 이야기</h3>
-			<span>무현, 두 도시 이야기, 2016</span><br>
+			<span>무현, 두 도시 이야기, 2016</span>
+			<br>
 			<a href="#" class="btn btn-book">평가하기</a> <a href="#"
 				class="btn btn-book-blue">예매하기</a> </figcaption> </figure>
 
@@ -539,17 +541,19 @@
 				alt="movie rank5"> <%--                     <a href="<%=ctx %>/resources/images/portfolio/portfolio-4.jpg" title="Title Four" rel="portfolio" class="fancybox"><span class="plus"></span></a> --%>
 			<figcaption class="mask">
 			<h3>선생님의 일기</h3>
-			<span>The Teacher's Diary, 2014</span><br>
+			<span>The Teacher's Diary, 2014</span>
+			<br>
 			<a href="#" class="btn btn-book">평가하기</a> <a href="#"
 				class="btn btn-book-blue">예매하기</a> </figcaption> </figure>
 
 			<figure class="mix portfolio-item photography"> <img
 				class="img-responsive"
-				src="<%=ctx%>/resources/images/poster/split.jpg"
-				alt="movie rank5"> <%--                     <a href="<%=ctx %>/resources/images/portfolio/portfolio-4.jpg" title="Title Four" rel="portfolio" class="fancybox"><span class="plus"></span></a> --%>
+				src="<%=ctx%>/resources/images/poster/split.jpg" alt="movie rank5">
+			<%--                     <a href="<%=ctx %>/resources/images/portfolio/portfolio-4.jpg" title="Title Four" rel="portfolio" class="fancybox"><span class="plus"></span></a> --%>
 			<figcaption class="mask">
 			<h3>스플릿</h3>
-			<span>Split, 2016</span><br>
+			<span>Split, 2016</span>
+			<br>
 			<a href="#" class="btn btn-book">평가하기</a> <a href="#"
 				class="btn btn-book-blue">예매하기</a> </figcaption> </figure>
 
@@ -559,9 +563,10 @@
 				alt="movie rank5"> <%--                     <a href="<%=ctx %>/resources/images/portfolio/portfolio-4.jpg" title="Title Four" rel="portfolio" class="fancybox"><span class="plus"></span></a> --%>
 			<figcaption class="mask">
 			<h3>세상에서 고양이가 사라진다면</h3>
-			<span>If Cats Disappeared From the World, 2016</span><br>
+			<span>If Cats Disappeared From the World, 2016</span>
+			<br>
 			<a href="#" class="btn btn-book">평가하기</a> <a href="#"
-				class="btn btn-book-blue">예매하기</a> </figcaption>  </figure>
+				class="btn btn-book-blue">예매하기</a> </figcaption> </figure>
 
 			<figure class="mix portfolio-item print web"> <img
 				class="img-responsive"
@@ -569,22 +574,53 @@
 				alt="movie rank5"> <%--                     <a href="<%=ctx %>/resources/images/portfolio/portfolio-4.jpg" title="Title Four" rel="portfolio" class="fancybox"><span class="plus"></span></a> --%>
 			<figcaption class="mask">
 			<h3>무한대를 본 남자</h3>
-			<span>The Man Who Knew Infinity, 2015</span><br>
+			<span>The Man Who Knew Infinity, 2015</span>
+			<br>
 			<a href="#" class="btn btn-book">평가하기</a> <a href="#"
-				class="btn btn-book-blue">예매하기</a> </figcaption>  </figure>
+				class="btn btn-book-blue">예매하기</a> </figcaption> </figure>
 		</div>
 		<!-- end #projects --> </section>
+
+
+
+		<!--
+        #subscribe
+        ========================== -->
+		<section id="subscribe" data-vide-bg="<%=ctx%>/resources/video/mainvideo">
+		<div class="container">
+			<div class="row">
+
+				<div class="col-md-7 wow fadeInLeft">
+					<h3 style='margin: 20px 5px'>CGS 소식지 구독하기</h3>
+					<form action="#" method="post" class="subscription-form">
+						<i class="fa fa-envelope-o fa-lg"></i> <input type="email"
+							name="subscribe" class="subscribe" placeholder="YOUR MAIL"
+							required=""> <input type="submit" value="SUBSCRIBE"
+							id="mail-submit">
+					</form>
+				</div>
+				<div class="col-md-4 text-left wow fadeInRight">
+					<p style="color: white; padding: 1px;">정기적으로 CGS 최신 영화, 이벤트 소식을 전해드립니다 :)</p>
+				</div>
+			</div>
+		</div>
+		</section>
+		<div class="clearfix"></div>
+		<!--
+        End #subscribe
+        ========================== -->
 
 		<!--
         #footer
         ========================== -->
+
 		<footer id="footer" class="text-center">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12">
-
 					<div class="footer-logo wow fadeInDown">
-						<img  class= "footer-logo-img"  src="<%=ctx%>/resources/images/logo.png" alt="logo">
+						<img class="footer-logo-img"
+							src="<%=ctx%>/resources/images/logo.png" alt="logo">
 					</div>
 
 					<div class="footer-social wow fadeInUp">
@@ -612,7 +648,6 @@
 
 
 		<!-- 		<!-- Main content -->
-		-->
 		<!-- 		<section class="container" style="width: 100%; height: 1500px;" -->
 		<%-- 			data-vide-bg="mp4: <%=ctx%>/resources/video/mainvideo, webm: <%=ctx%>/resources/video/mainvideo, ogv: <%=ctx%>/resources/video/mainvideo"> --%>
 		<!-- 		<div class="movie-best"> -->

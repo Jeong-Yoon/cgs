@@ -7672,7 +7672,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 	border: 3px solid #dbdee1;
 	overflow: hidden;
 	float: left;
-	height: 500px;
+	height: 350px;
 	width: 820px;
 }
 
@@ -7681,7 +7681,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 	border: 3px solid #dbdee1;
 	width: 50px;
 	float: left;
-	height: 500px;
+	height: 350px;
 	font-family: 'PT Mono';
 	font-size: 12px;
 	color: #dbdee1;

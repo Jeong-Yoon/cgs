@@ -65,7 +65,7 @@
 					<a href="contact" class="btn btn--sign btn--singin"><%=(String)session.getAttribute("name") %> </a>
 					<ul class="auth__function open-function">
 <!-- 						내정보 버튼 눌렀을 시 뜨는 서브창 -->
-						<li><a href="#" class="auth__function-item">내가본영화</a></li>
+						<li><a href="modify" class="auth__function-item">내 정보 확인</a></li>
 						<li><a href="#" class="auth__function-item">예매 내역</a></li>
 <!-- 						<li><a href="#" class="auth__function-item">내가쓴리뷰</a></li> -->
 <!-- 						<li><a href="#" class="auth__function-item">환경설정</a></li> -->

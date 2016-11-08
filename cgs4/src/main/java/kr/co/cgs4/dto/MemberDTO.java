@@ -22,7 +22,7 @@ public class MemberDTO {
 	//varchar2 30�ڸ�
 	String email;
 	//date Ÿ��
-	Timestamp join_date;
+	Date join_date;
 	//number
 	int accum_point;
 	//number
@@ -97,10 +97,10 @@ public class MemberDTO {
 	}
 	
 	//join_date
-	public Timestamp getJoin_date() {
+	public Date getJoin_date() {
 		return join_date;
 	}
-	public void setJoin_date(Timestamp join_date) {
+	public void setJoin_date(Date join_date) {
 		this.join_date = join_date;
 	}
 	

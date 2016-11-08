@@ -2,6 +2,8 @@ package kr.co.cgs4.controller;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.Date;
+import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.Map;
 
@@ -62,19 +64,44 @@ public class LoginController {
     	
     	//데이터 가져오기
     	MemberDAO dao = new MemberDAO();   	
-    	//id에 해당하는 사람의 정보 전부를 가져온다
+    	
     	try{
     	MemberDTO dtos = dao.member_list(getid, getpw);
     	if(dtos!=null){
+    		
     		session.setAttribute("id", getid);
     		session.setAttribute("pw", getpw);
+    		
+    		//id에 해당하는 사람의 정보 전부를 가져온다
+    		//name
     		String name=dtos.getName();
     		session.setAttribute("name", name);
+    		
+    		//gender
+    		String gender = dtos.getGender();
+    		
+    		//address
+    		String address = dtos.getAddress();
+    		
+    		//brith
+    		Date birth =dtos.getBirth();
+    		
+    		//phone_num
+    		String phone_num = dtos.getPhone_num();
+    		
+    		//email
+    		String email = dtos.getEmail();
+    		
+    		//join_date
+    		Date join_date = dtos.getJoin_date();
+    		
+    		
+    		
     		
     		System.out.println((String) session.getAttribute("id"));
     		System.out.println("데이터 있음");
     		
-    		return "index";
+    		return "redirect:index";
     	
     	//**********************나중에 index로 리턴할것
     	

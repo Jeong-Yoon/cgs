@@ -499,8 +499,7 @@
 				alt="movie rank1"> <%--  					<a href="<%=ctx %>/resources/images/portfolio/portfolio-3.jpg" title="Title Three" rel="portfolio" class="fancybox"><span class="plus"></span></a> --%>
 			<figcaption class="mask">
 			<h3>닥터스트레인지</h3>
-			<span>Doctor Strange , 2016</span>
-			<br>
+			<span>Doctor Strange , 2016</span><br>
 			<a href="#" class="btn btn-book">평가하기</a> <a href="#"
 				class="btn btn-book-blue">예매하기</a> </figcaption> </figure>
 
@@ -510,8 +509,7 @@
 				alt="movie rank2"> <%--                     <a href="<%=ctx %>/resources/images/portfolio/portfolio-3.jpg" title="Title Three" rel="portfolio" class="fancybox"><span class="plus"></span></a> --%>
 			<figcaption class="mask">
 			<h3>럭키</h3>
-			<span>LUCK-KEY , 2016</span>
-			<br>
+			<span>LUCK-KEY , 2016</span><br>
 			<a href="#" class="btn btn-book">평가하기</a> <a href="#"
 				class="btn btn-book-blue">예매하기</a> </figcaption> </figure>
 
@@ -521,8 +519,7 @@
 				alt="movie rank3"> <%--                     <a href="<%=ctx %>/resources/images/portfolio/portfolio-3.jpg" title="Title Three" rel="portfolio" class="fancybox"><span class="plus"></span></a> --%>
 			<figcaption class="mask">
 			<h3>로스트인더스트</h3>
-			<span>Hell or High Water, 2016</span>
-			<br>
+			<span>Hell or High Water, 2016</span><br>
 			<a href="#" class="btn btn-book">평가하기</a> <a href="#"
 				class="btn btn-book-blue">예매하기</a> </figcaption> </figure>
 
@@ -532,8 +529,7 @@
 				alt="movie rank4"> <%--                     <a href="<%=ctx %>/resources/images/portfolio/portfolio-4.jpg" title="Title Four" rel="portfolio" class="fancybox"><span class="plus"></span></a> --%>
 			<figcaption class="mask">
 			<h3>무현, 두 도시 이야기</h3>
-			<span>2016</span>
-			<br>
+			<span>무현, 두 도시 이야기, 2016</span><br>
 			<a href="#" class="btn btn-book">평가하기</a> <a href="#"
 				class="btn btn-book-blue">예매하기</a> </figcaption> </figure>
 
@@ -543,8 +539,7 @@
 				alt="movie rank5"> <%--                     <a href="<%=ctx %>/resources/images/portfolio/portfolio-4.jpg" title="Title Four" rel="portfolio" class="fancybox"><span class="plus"></span></a> --%>
 			<figcaption class="mask">
 			<h3>선생님의 일기</h3>
-			<span>The Teacher's Diary, 2014</span>
-			<br>
+			<span>The Teacher's Diary, 2014</span><br>
 			<a href="#" class="btn btn-book">평가하기</a> <a href="#"
 				class="btn btn-book-blue">예매하기</a> </figcaption> </figure>
 
@@ -554,8 +549,7 @@
 				alt="movie rank5"> <%--                     <a href="<%=ctx %>/resources/images/portfolio/portfolio-4.jpg" title="Title Four" rel="portfolio" class="fancybox"><span class="plus"></span></a> --%>
 			<figcaption class="mask">
 			<h3>스플릿</h3>
-			<span>Split, 2016</span>
-			<br>
+			<span>Split, 2016</span><br>
 			<a href="#" class="btn btn-book">평가하기</a> <a href="#"
 				class="btn btn-book-blue">예매하기</a> </figcaption> </figure>
 
@@ -565,8 +559,7 @@
 				alt="movie rank5"> <%--                     <a href="<%=ctx %>/resources/images/portfolio/portfolio-4.jpg" title="Title Four" rel="portfolio" class="fancybox"><span class="plus"></span></a> --%>
 			<figcaption class="mask">
 			<h3>세상에서 고양이가 사라진다면</h3>
-			<span>If Cats Disappeared From the World, 2016</span>
-			<br>
+			<span>If Cats Disappeared From the World, 2016</span><br>
 			<a href="#" class="btn btn-book">평가하기</a> <a href="#"
 				class="btn btn-book-blue">예매하기</a> </figcaption>  </figure>
 
@@ -576,11 +569,9 @@
 				alt="movie rank5"> <%--                     <a href="<%=ctx %>/resources/images/portfolio/portfolio-4.jpg" title="Title Four" rel="portfolio" class="fancybox"><span class="plus"></span></a> --%>
 			<figcaption class="mask">
 			<h3>무한대를 본 남자</h3>
-			<span>The Man Who Knew Infinity, 2015</span>
-			<br>
+			<span>The Man Who Knew Infinity, 2015</span><br>
 			<a href="#" class="btn btn-book">평가하기</a> <a href="#"
 				class="btn btn-book-blue">예매하기</a> </figcaption>  </figure>
-
 		</div>
 		<!-- end #projects --> </section>
 

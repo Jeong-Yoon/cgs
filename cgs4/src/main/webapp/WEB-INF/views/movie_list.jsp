@@ -154,9 +154,9 @@
                     	<%if(Integer.parseInt(request.getAttribute("pagenum").toString()) > 0){ %>
                     <a href="javascript:prevChk(<%=pagenum2-1 %>)" class="pagination__prev" >prev</a>
                     <%} %>
-                    <%if(Integer.parseInt(request.getAttribute("size").toString()) == 12){ %>
+<%--                     <%if(Integer.parseInt(request.getAttribute("size").toString()) == 12){ %> --%>
 					<a href="javascript:nextChk(<%=pagenum2+1 %>)" class="pagination__next" >next</a>
-					<% } %>
+<%-- 					<% } %> --%>
                     </div>
           
             </div>

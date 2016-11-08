@@ -15,8 +15,7 @@ public class FilmDTO {
 	private int reserve_rate;
 	private String actor;
 	private int film_grade;
-//	private String film_story;
-//	private String poster;
+	private String film_story;
 	
 	public String getFilm_ID() {
 		return film_ID;
@@ -85,17 +84,11 @@ public class FilmDTO {
 		this.film_grade = film_grade;
 	}
 	
-//	public String getFilm_story() {
-//		return film_story;
-//	}
-//	public void setFilm_story(String film_story) {
-//		this.film_story = film_story;
-//	}
-//	public String getPoster() {
-//		return poster;
-//	}
-//	public void setPoster(String poster) {
-//		this.poster = poster;
-//	}
+	public String getFilm_story() {
+		return film_story;
+	}
+	public void setFilm_story(String film_story) {
+		this.film_story = film_story;
+	}
 	
 }

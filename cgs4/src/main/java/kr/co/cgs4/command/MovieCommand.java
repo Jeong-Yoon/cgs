@@ -18,7 +18,6 @@ public class MovieCommand implements Command{
 
 	@Override
 	public void execute(Model model) {
-		System.out.println("22222222");
 		Map<String, Object> map = model.asMap();
 		HttpServletRequest request = (HttpServletRequest) map.get("request");
 		String film_ID = request.getParameter("film_ID");

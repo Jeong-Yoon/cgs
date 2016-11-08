@@ -189,22 +189,7 @@
 
 				<h2 class="page-heading">The plot</h2>
 
-				<p class="movie__describe">Bilbo Baggins is swept into a quest
-					to reclaim the lost Dwarf Kingdom of Erebor from the fearsome
-					dragon Smaug. Approached out of the blue by the wizard Gandalf the
-					Grey, Bilbo finds himself joining a company of thirteen dwarves led
-					by the legendary warrior, Thorin Oakenshield. Their journey will
-					take them into the Wild; through treacherous lands swarming with
-					Goblins and Orcs, deadly Wargs and Giant Spiders, Shapeshifters and
-					Sorcerers. Although their goal lies to the East and the wastelands
-					of the Lonely Mountain first they must escape the goblin tunnels,
-					where Bilbo meets the creature that will change his life forever
-					... Gollum. Here, alone with Gollum, on the shores of an
-					underground lake, the unassuming Bilbo Baggins not only discovers
-					depths of guile and courage that surprise even him, he also gains
-					possession of Gollum's "precious" ring that holds unexpected and
-					useful qualities ... A simple, gold ring that is tied to the fate
-					of all Middle-earth in ways Bilbo cannot begin to ...</p>
+				<p class="movie__describe">${film.film_story}</p>
 
 				<h2 class="page-heading">photos &amp; videos</h2>
 
@@ -217,74 +202,88 @@
 					<div class="swiper-container">
 						<div class="swiper-wrapper">
 							<!--First Slide-->
+<%-- 								<c:forEach var="i" begin="1" end="2" step="1"> --%>
+<!-- 									<div class="swiper-slide media-video"> -->
+<!-- 										<a href='https://www.youtube.com/watch?v=ztD7m3ubhVs' class="movie__media-item ">  -->
+<%-- 										<img alt='' src="<%=ctx%>/resources/images/stillcut/${film.film_ID}/${i }.png"> --%>
+<!-- 										</a> -->
+<!-- 									</div> -->
+<%-- 								</c:forEach> --%>
 							<div class="swiper-slide media-video">
 								<a href='https://www.youtube.com/watch?v=ztD7m3ubhVs' class="movie__media-item "> 
-								 <img alt='' src="<%=ctx%>/resources/images/stillcut/${film.film_ID}/0003.png">
+								 <img alt='' src="<%=ctx%>/resources/images/stillcut/${film.film_ID}/1.png">
 								</a>
 							</div>
 
 							<!--Second Slide-->
 							<div class="swiper-slide media-video">
 								<a href='https://www.youtube.com/watch?v=awyG1-xvqFY' class="movie__media-item">
-								 <img alt='' src='<%=ctx%>/resources/images/stillcut/${film.film_ID}/0004.png'>
+								 <img alt='' src='<%=ctx%>/resources/images/stillcut/${film.film_ID}/2.png'>
 								</a>
 							</div>
 
 							<!--Third Slide-->
-							<div class="swiper-slide media-photo">
-								<a href='<%=ctx%>/resources/images/stillcut/${film.film_ID}/0001.jpg' class="movie__media-item">
-								 <img alt='' src="<%=ctx%>/resources/images/stillcut/${film.film_ID}/0001.jpg">
-								</a>
-							</div>
+							<c:forEach var="i" begin="3" end="5" step="1">
+								<div class="swiper-slide media-photo">
+									<a href='<%=ctx%>/resources/images/stillcut/${film.film_ID}/${i }.jpg' class="movie__media-item">
+									 <img alt='' src="<%=ctx%>/resources/images/stillcut/${film.film_ID}/${i }.jpg">
+									</a>
+								</div>
+							</c:forEach>
+<!-- 							<div class="swiper-slide media-photo"> -->
+<%-- 								<a href='<%=ctx%>/resources/images/stillcut/${film.film_ID}/0001.jpg' class="movie__media-item"> --%>
+<%-- 								 <img alt='' src="<%=ctx%>/resources/images/stillcut/${film.film_ID}/0001.jpg"> --%>
+<!-- 								</a> -->
+<!-- 							</div> -->
 
-							<!--Four Slide-->
-							<div class="swiper-slide media-photo">
-								<a href='<%=ctx%>/resources/images/stillcut/${film.film_ID}/0002.jpg' class="movie__media-item">
-								 <img alt='' src="<%=ctx%>/resources/images/stillcut/${film.film_ID}/0002.jpg">
-								</a>
-							</div>
-
-							<!--Slide-->
-							<div class="swiper-slide media-photo">
-								<a href='<%=ctx%>/resources/images/stillcut/${film.film_ID}/0005.jpg' class="movie__media-item">
-								 <img alt='' src="<%=ctx%>/resources/images/stillcut/${film.film_ID}/0005.jpg">
-								</a>
-							</div>
-
-							<!--Slide-->
-							<div class="swiper-slide media-photo">
-								<a href='http://placehold.it/2100x1250' class="movie__media-item">
-								 <img alt='' src="http://placehold.it/400x240">
-								</a>
-							</div>
-
-							<!--First Slide-->
-							<div class="swiper-slide media-video">
-								<a href='https://www.youtube.com/watch?v=Y5AehBA3IsE' class="movie__media-item ">
-								 <img alt='' src="http://placehold.it/400x240">
-								</a>
-							</div>
-
-							<!--Second Slide-->
-							<div class="swiper-slide media-video">
-								<a href='https://www.youtube.com/watch?v=Kb3ykVYvT4U' class="movie__media-item">
-								 <img alt='' src="http://placehold.it/400x240">
-								</a>
-							</div>
+<!-- 							Four Slide -->
+<!-- 							<div class="swiper-slide media-photo"> -->
+<%-- 								<a href='<%=ctx%>/resources/images/stillcut/${film.film_ID}/0002.jpg' class="movie__media-item"> --%>
+<%-- 								 <img alt='' src="<%=ctx%>/resources/images/stillcut/${film.film_ID}/0002.jpg"> --%>
+<!-- 								</a> -->
+<!-- 							</div> -->
 
 							<!--Slide-->
-							<div class="swiper-slide media-photo">
-								<a href='http://placehold.it/2100x1250' class="movie__media-item">
-								 <img alt='' src="http://placehold.it/400x240">
-								</a>
-							</div>
+<!-- 							<div class="swiper-slide media-photo"> -->
+<%-- 								<a href='<%=ctx%>/resources/images/stillcut/${film.film_ID}/0005.jpg' class="movie__media-item"> --%>
+<%-- 								 <img alt='' src="<%=ctx%>/resources/images/stillcut/${film.film_ID}/0005.jpg"> --%>
+<!-- 								</a> -->
+<!-- 							</div> -->
 
 							<!--Slide-->
-							<div class="swiper-slide media-photo">
-								<a href='http://placehold.it/2100x1250' class="movie__media-item">
-								 <img alt='' src="http://placehold.it/400x240">
-								</a>
-							</div>
+<!-- 							<div class="swiper-slide media-photo"> -->
+<!-- 								<a href='http://placehold.it/2100x1250' class="movie__media-item"> -->
+<!-- 								 <img alt='' src="http://placehold.it/400x240"> -->
+<!-- 								</a> -->
+<!-- 							</div> -->
+
+<!-- 							First Slide -->
+<!-- 							<div class="swiper-slide media-video"> -->
+<!-- 								<a href='https://www.youtube.com/watch?v=Y5AehBA3IsE' class="movie__media-item "> -->
+<!-- 								 <img alt='' src="http://placehold.it/400x240"> -->
+<!-- 								</a> -->
+<!-- 							</div> -->
+
+<!-- 							Second Slide -->
+<!-- 							<div class="swiper-slide media-video"> -->
+<!-- 								<a href='https://www.youtube.com/watch?v=Kb3ykVYvT4U' class="movie__media-item"> -->
+<!-- 								 <img alt='' src="http://placehold.it/400x240"> -->
+<!-- 								</a> -->
+<!-- 							</div> -->
+
+<!-- 							Slide -->
+<!-- 							<div class="swiper-slide media-photo"> -->
+<!-- 								<a href='http://placehold.it/2100x1250' class="movie__media-item"> -->
+<!-- 								 <img alt='' src="http://placehold.it/400x240"> -->
+<!-- 								</a> -->
+<!-- 							</div> -->
+
+<!-- 							Slide -->
+<!-- 							<div class="swiper-slide media-photo"> -->
+<!-- 								<a href='http://placehold.it/2100x1250' class="movie__media-item"> -->
+<!-- 								 <img alt='' src="http://placehold.it/400x240"> -->
+<!-- 								</a> -->
+<!-- 							</div> -->
 
 						</div>
 					</div>
@@ -345,6 +344,7 @@
 						<c:forEach var="i" items="${blist}">
 							<c:if test="${i.screen_num == j.screen_num}">
 								<li class=time-select__set>
+								    <input type='hidden' name="screening_ID" value="${i.screening_ID }"> 
 									<div class="time-select__item" data-time='${i.start_time }'>${i.start_time }</div>
 									<div class="time-select__seat">100/100석</div>
 								</li>
@@ -441,6 +441,7 @@
 <!-- 				</div> -->
 				<div class="movie__btns movie__btns--full">
 					<form id='film-and-time' class="booking-form" method='get' action='book2'>
+					    <input type='hidden' name="screening_ID" class="screening_id">
 						<input type='hidden' name="film_name" class="choosen-movie" id="film_name" value="${film.film_name}">
 						<input type='hidden' name="site_name" class="choosen-city" id="site_name" value="<%=sname%>"> 
 						<input type='hidden' name="screening_date" class="choosen-date" id="screening_date"  value="<%=sdate%>">

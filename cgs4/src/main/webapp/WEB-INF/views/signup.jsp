@@ -74,41 +74,44 @@
 				<table width="150" border="0" >
 				
 				<tr>
-				<td width="80"><center><p>아이디</p></center></td>
-				<td width="150"><input type='text' placeholder='아이디를 입력해주세요' name='user-id'
-				class="login__input" required="required"></td>
-				<td></td>
-<!-- 				<td width="90"><button type='submit' class="btn btn-md btn--warning btn--wider">중복확인</button></td> -->
-				</tr>
-				
-				
-				<tr>
-				<td><center><p>비밀번호</p></center></td><td><input type='password'
-				placeholder='비밀번호를 입력해주세요.' name='user-password' class="login__input" required="required"></td>
-				<td></td>
-				<td><center><p>비밀번호확인</p></center></td>
-				<td></td>
-				<td width="150"><input type='password' placeholder='비밀번호를 한번 더 입력해주세요.' name='user-passwordok' class="login__input" required="required"></td>
+				<td><center><p>아이디</p></center></td>
+				<td colspan="2"><input type='text' placeholder='아이디를 입력해주세요' name='user-id' class="login__input" required="required"></td>
 				</tr>
 				
 				<tr>
-				<td><center><p>이름</p></center></td><td><input type='text' placeholder='이름을 입력해주세요' name='user-name' class="login__input" required="required"></td>
+				<td><center><p>비밀번호</p></center></td>
+				<td colspan="2"><input type='password' placeholder='비밀번호를 입력해주세요' name='user-password' class="login__input" required="required"></td>
 				</tr>
 				
 				<tr>
-				<td><center><p>주민번호</p></center></td><td><input type='text' name='user-birth' class="login__input" maxlength="6" required="required"></td>
+				<td><center><p>비밀번호 확인</p></center></td>
+				<td colspan="2"><input type='password' placeholder='한번 더 입력해주세요' name='user-passwordok' class="login__input" required="required"></td>
+				</tr>
+				
+				<tr>
+				<td><center><p>이름</p></center></td>
+				<td colspan="2"><input type='text' placeholder='이름을 입력해주세요' name='user-name' class="login__input" required="required"></td>
+				</tr>
+				
+				<tr>
+				<td><center><p>주민번호</p></center></td>
+				<td><input type='text' pattern="^\d{6}" name='user-birth' class="login__input" maxlength="6" required="required"></td>
 				<td width="20"><center>-</center></td>
-				<td><input type='text' name='gender' class="login__input" maxlength="1" required="required"></td>
-				<td width="20">******</td>
+
+			
+				<td><input type='text' pattern="[1234]" name='gender' class="login__input" maxlength="1" required="required"></td>
+				<td></td>
+				<td>* * * * * *</td>
 				</tr>
 				
 				
 				<tr>
-				<td><center><p>핸드폰번호</p></center><td><input type='text' name='user-pnum' class="login__input" maxlength="3" required="required"></td>
-				<td><center>-</center></td>
-				<td><input type='text' name='user-pnum2' class="login__input" maxlength="4" required="required"></td>
-				<td><center>-</center></td>
-				<td><input type='text' name='user-pnum3' class="login__input" maxlength="4" required="required"></td>
+				<td><center><p>핸드폰번호</p></center>
+				<td><input type='text' pattern="^\d{3}" name='user-pnum' class="login__input" maxlength="3" required="required"></td>
+				<td width="20"><center>-</center></td>
+				<td><input type='text' pattern="^\d{4}" name='user-pnum2' class="login__input" maxlength="4" required="required"></td>
+				<td width="20"><center>-</center></td>
+				<td><input type='text' pattern="^\d{4}" name='user-pnum3' class="login__input" maxlength="4" required="required"></td>
 				</tr>
 				
 				<tr>

@@ -14,6 +14,7 @@ import kr.co.cgs4.dto.Book_BookInfo;
 import kr.co.cgs4.dto.Book_BuyConfirm;
 import kr.co.cgs4.dto.Book_ScreenNum;
 import kr.co.cgs4.dto.FilmDTO;
+import kr.co.cgs4.dto.SaleDTO;
 import kr.co.cgs4.dto.SeatDTO;
 import kr.co.cgs4.dto.Book_ScreeningInfo;
 import kr.co.cgs4.dto.Book_SeatRow;
@@ -71,5 +72,31 @@ public class BookController {
 	public String book3(@ModelAttribute("cInfo") Book_BuyConfirm buyConfirm,Model model){
 	System.out.println("book3");
 	return "book/book3";	
+	}
+	
+	@RequestMapping("/book4")
+	public String book4(Book_BookInfo bookinfo, SaleDTO sdto,HttpServletRequest hsr,Model model){
+		System.out.println("book4");
+		String choosenSits = hsr.getParameter("choosen_sits");
+		String[] sits= choosenSits.split(" ");
+		BookDAO bdao = new BookDAO();
+		
+		//saleDTO 입력값
+		String screening_ID = sdto.getScreening_ID();//받아옴
+		int sale_price = sdto.getSale_price();//받아옴
+		String paycard_num = sdto.getPaycard_num();//받아옴
+		int sale_cnt = sdto.getSale_cnt();//받아옴
+		int final_price = sdto.getSale_price();//받아옴
+		int common_cnt = sdto.getCommon_cnt(); 
+		int young_cnt = sdto.getYoung_cnt();//받아옴
+		int special_cnt = sdto.getSpecial_cnt();//받아옴
+		//나머지는 디폴트 설정
+		
+		//sale_seat 입력값
+		for (int i = 0; i < sits.length; i++) {
+			
+		}
+		
+		return "book/book4";
 	}
 }

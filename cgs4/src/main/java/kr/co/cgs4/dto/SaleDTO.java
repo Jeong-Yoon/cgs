@@ -4,22 +4,22 @@ import java.sql.Timestamp;
 
 public class SaleDTO {
 	
-	Timestamp sale_date;
-	String sale_ID;
-	String screening_ID;
-	String sale_type;
-	String member_type;
-	int sale_price;
-	String paycard_num;
-	String refund_type;
-	int sale_cnt;
-	int discount_price;
-	String discount_type;
-	int final_price;
-	int use_cnt;
-	int common_cnt;
-	int young_cnt;
-	int special_cnt;
+	Timestamp sale_date;//sysdate
+	String sale_ID;//시퀀스
+	String screening_ID;//받아옴
+	String sale_type;//0-카드
+	String member_type;//0-회원
+	int sale_price;//받아옴
+	String paycard_num;//받아옴
+	String refund_type;//0-비환불
+	int sale_cnt;//받아옴
+	int discount_price;//0-없음
+	String discount_type;//0-없음
+	int final_price;//받아옴
+	int use_cnt;//기본1, 내가본영화로
+	int common_cnt;//받아옴
+	int young_cnt;//받아옴
+	int special_cnt;//받아옴
 	
 	//sale_date
 	public Timestamp getSale_date() {

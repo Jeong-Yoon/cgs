@@ -209,7 +209,7 @@
 					</form>
 					
 				<c:choose>
-				<c:when test="${scNum ne null }">
+				<c:when test="${!empty scNum}">
 				<c:forEach var="j" items="${scNum}">
 				<div class="time-select__group">
 					<div class="col-sm-2">
@@ -219,6 +219,7 @@
 						<c:forEach var="i" items="${blist}">
 							<c:if test="${i.screen_num == j.screen_num}">
 								<li class=time-select__set>
+									<input type='hidden' name="screening_ID" value="${i.screening_ID }"> 
 									<div class="time-select__item" data-time='${i.start_time }'>${i.start_time }</div>
 									<div class="time-select__seat">100/100석</div>
 								</li>
@@ -253,6 +254,7 @@
 
 		<form id='film-and-time' class="booking-form" method='get'
 			action='book2'>
+			<input type='hidden' name="screening_ID" class="screening_id">
 			<input type='hidden' name="film_name" class="choosen-movie" value="<%=fname%>">
 			<input type='hidden' name="site_name" class="choosen-city" value="<%=sname%>">
 			<input type='hidden' name="screening_date" class="choosen-date" value="<%=sdate%>">

@@ -219,11 +219,13 @@ function submit() {
 	<div class="clearfix"></div>
 	<form id='film-and-time' class="booking-form" method='get' action='book3'>
 		
+		
 		<input type='hidden' name="film_name" class="film_name" value="${bInfo.film_name}">
 		<input type='hidden' name="site_name" class="site_name" value="${bInfo.site_name}">
 		<input type='hidden' name="screening_date" class="screening_date" value="${bInfo.screening_date}">
 		<input type='hidden' name="screen_num" class="screen_num" value="${bInfo.screen_num}">
 		<input type='hidden' name="start_time" class="start_time" value="${bInfo.start_time}">
+		<input type='hidden' name="screening_ID" value="${bInfo.screening_ID }"> 
 		
 		<input type='hidden' name='sale_cnt' class="choosen-number">
 		<input type='hidden' name='special_cnt' class="choosen-number--cheap">

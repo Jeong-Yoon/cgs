@@ -7,6 +7,139 @@ Version     : 1.0
 License     : GPL
 ******************************************************************/
 
+/*
+font=Korean2: Godo
+*/
+@font-face {
+  font-family: 'Godo';
+  font-style: normal;
+  font-weight: 400;
+  src: url('//cdn.jsdelivr.net/korean-webfonts/1/corps/godo/Godo/GodoM.woff2') format('woff2'), url('//cdn.jsdelivr.net/korean-webfonts/1/corps/godo/Godo/GodoM.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Godo';
+  font-style: normal;
+  font-weight: 700;
+  src: url('//cdn.jsdelivr.net/korean-webfonts/1/corps/godo/Godo/GodoB.woff2') format('woff2'), url('//cdn.jsdelivr.net/korean-webfonts/1/corps/godo/Godo/GodoB.woff') format('woff');
+}
+
+.godo * {
+ font-family: 'Godo', sans-serif;
+}
+
+/** 이하는 공통 **/
+.normal {
+ font-style: normal;
+}
+
+.w250 {
+ font-weight: 250;
+}
+
+.w300 {
+ font-weight: 300;
+}
+
+.w350 {
+ font-weight: 350;
+}
+
+.w400 {
+ font-weight: 400;
+}
+
+.w500 {
+ font-weight: 500;
+}
+
+.w700 {
+ font-weight: 700;
+}
+
+.w800 {
+ font-weight: 800;
+}
+
+.w900 {
+ font-weight: 900;
+}
+
+li span {
+ line-height: 1.8;
+ font-size: 1.3em;
+}
+
+/*
+font-Korean1: LotteMartDream
+*/
+@font-face {
+  font-family: 'LotteMartDream';
+  font-style: normal;
+  font-weight: 400;
+  src: url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamMedium.woff2') format('woff2'), url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamMedium.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'LotteMartDream';
+  font-style: normal;
+  font-weight: 700;
+  src: url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamBold.woff2') format('woff2'), url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamBold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'LotteMartDream';
+  font-style: normal;
+  font-weight: 300;
+  src: url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamLight.woff2') format('woff2'), url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamLight.woff') format('woff');
+}
+
+.lottemartdream * {
+ font-family: 'LotteMartDream', sans-serif;
+}
+
+.normal {
+ font-style: normal;
+}
+
+.w250 {
+ font-weight: 250;
+}
+
+.w300 {
+ font-weight: 300;
+}
+
+.w350 {
+ font-weight: 350;
+}
+
+.w400 {
+ font-weight: 400;
+}
+
+.w500 {
+ font-weight: 500;
+}
+
+.w700 {
+ font-weight: 700;
+}
+
+.w800 {
+ font-weight: 800;
+}
+
+.w900 {
+ font-weight: 900;
+}
+
+li span {
+ line-height: 1.8;
+ font-size: 1.3em;
+}
+
+
 /* =================================== */
 /*	Basic Style 
 /* =================================== */
@@ -52,7 +185,7 @@ a:focus, a:hover {
 
 h1, h2, h3,
 h4, h5, h6 {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Godo', sans-serif;
 	font-weight: normal;
 	margin: 0;
 }
@@ -157,6 +290,7 @@ width: 11px;
 
 .animated-nav .navbar-brand {
   padding: 15px 0;
+  margin-top: 15px;
 }
 
 .animated-nav .navigation .navbar-nav > li > a {
@@ -220,7 +354,7 @@ width: 11px;
 }
 
 .search-form > #search-sub {
-  background: url("../img/icons/search.png") no-repeat scroll 0 0 transparent;
+  background: url("../resources/images/icons/search.png") no-repeat scroll 0 0 transparent;
   border: 0 ;
   bottom: 11px;
   height: 15px;
@@ -424,7 +558,7 @@ width: 11px;
 }
 
 .service-features ul li {
-  background: url("../img/icons/list-bg.png") no-repeat scroll 0 13px transparent;
+  background: url("../resources/images/icons/list-bg.png") no-repeat scroll 0 13px transparent;
   font-size: 16px;
   line-height: 36px;
   padding-left: 50px;
@@ -448,11 +582,13 @@ width: 11px;
 }
 
 .project-filter ul li a {
-  color: #000;
+  color: darkgray;
   display: block;
   line-height: 18px;
   padding: 10px 20px;
   text-transform: uppercase;
+/*   font-family: LotteMartDream; */
+	font-family: Godo;
 }
 
 .project-filter ul li a:hover,
@@ -473,14 +609,14 @@ width: 11px;
 }
 
 .plus {
-  background: url("../img/icons/plus.png") no-repeat scroll center center #0faed9;
+  background: url("../resources/images/icons/plus.png") no-repeat scroll center center #3C6499;
   border-radius: 50%;
   display: block;
   height: 80px;
   left: 50%;
   margin: -40px 0 0 -40px;
   position: absolute;
-  top: -41px;
+  top: -91px;
   width: 80px;
     
     -webkit-transition: 0.3s ease-out 0s;
@@ -520,7 +656,24 @@ figcaption.mask h3 {
 }
 
 figcaption.mask span {
-  color: #0FAED9;
+  color: #3C6499;
+}
+
+.btn-book {
+  border: 1.5px solid #3C6499;
+  color: #3C6499;
+  margin-top: 15px;
+  margin-left: 10px;
+  font-family: Godo;
+}
+
+.btn-book-blue {
+  background-color: #3C6499;
+  border: 1.5px solid #3C6499;
+  color: #fff;
+  margin-top: 15px;
+  margin-left: 10px;
+  font-family: Godo;
 }
 
 
@@ -807,12 +960,6 @@ figcaption.mask span {
   margin-bottom: 0;
 }
 
-.btn-price {
-  border: 1px solid #3C6499;
-  color: #1f2021;
-  margin-top: 40px;
-  padding: 10px 30px;
-}
 
 .special-plan {
     margin-top: 100px;

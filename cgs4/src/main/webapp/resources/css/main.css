@@ -377,7 +377,9 @@ width: 11px;
 	height: 50px;
 	min-width: 125px;
 	max-height: 100%;
-	margin-top: auto;
+
+	 padding: 5px;
+   margin-top: 13px;
 }
 
 
@@ -617,9 +619,8 @@ width: 11px;
 
 .portfolio-item {
     position: relative;
-    float: left;
     overflow: hidden;
-    width: 25%;
+    width: 24%;
 }
 
 .plus {
@@ -642,7 +643,7 @@ width: 11px;
 
 figcaption.mask {
   background-color: 	#fff;
-  bottom: -35%;
+  bottom: -70%;
   left: 0;
   padding: 30px 0 30px 30px;
   position: absolute;
@@ -679,6 +680,7 @@ figcaption.mask span {
   margin-top: 15px;
   margin-left: 10px;
   font-family: Godo;
+  padding: relative;
 }
 
 .btn-book-blue {
@@ -688,6 +690,7 @@ figcaption.mask span {
   margin-top: 15px;
   margin-left: 10px;
   font-family: Godo;
+    width: auto;
 }
 
 
@@ -1014,6 +1017,7 @@ figcaption.mask span {
   height: 50px;
   text-indent: 60px;
   width: 100%;
+  font-family: 'LotteMartDream'
 }
 
 .subscription-form #mail-submit {
@@ -1024,6 +1028,7 @@ figcaption.mask span {
   position: absolute;
   right: 1px;
   top: 1px;
+  font-family: 'LotteMartDream'
 }
 
 

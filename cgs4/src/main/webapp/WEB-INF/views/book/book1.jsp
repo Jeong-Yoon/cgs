@@ -53,11 +53,32 @@
 <link href="<%=ctx%>/resources/css/external/idangerous.swiper.css"
 	rel="stylesheet" />
 
+<!-- REVOLUTION BANNER CSS SETTINGS -->
+<link rel="stylesheet" type="text/css"
+	href="<%=ctx%>/resources/rs-plugin/css/settings.css" media="screen" />
+
+<!-- Fontawesome -->
+<link rel="stylesheet" href="<%=ctx%>/resources/css/font-awesome.min.css">
+<!-- Bootstrap -->
+<link rel="stylesheet" href="<%=ctx%>/resources/css/bootstrap.min.css">
+<!-- Fancybox -->
+<link rel="stylesheet" href="<%=ctx%>/resources/css/jquery.fancybox.css">
+
 <!-- Custom -->
 <link href="<%=ctx%>/resources/css/style.css?v=1" rel="stylesheet" />
+<!-- owl carousel -->
+<link rel="stylesheet" href="<%=ctx%>/resources/css/owl.carousel.css">
+<!-- Animate -->
+<link rel="stylesheet" href="<%=ctx%>/resources/css/animate.css">
+<!-- Main Stylesheet -->
+<link rel="stylesheet" href="<%=ctx%>/resources/css/main.css">
+<!-- Main Responsive -->
+<link rel="stylesheet" href="<%=ctx%>/resources/css/responsive.css">
 
 <!-- Modernizr -->
 <script src="<%=ctx%>/resources/js/external/modernizr.custom.js"></script>
+<!-- Modernizer Script for old Browsers -->
+<script src="<%=ctx%>/js/external/modernizr-2.6.2.min.js"></script>
 
 <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!--[if lt IE 9]> 
@@ -104,7 +125,39 @@
 		%>
 	<div class="wrapper">
 		<!-- 메뉴바-->
-		<jsp:include page="../menu.jsp" flush="false" />
+		 <jsp:include page="../menu.jsp" flush="false"/>
+        
+<!-- 		<header id="navigation" class="navbar-fixed-top"> -->
+<!--             <div class="container"> -->
+<!--                 <div class="navbar-header"> -->
+<!--                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> -->
+<!--                         <span class="sr-only">Toggle navigation</span> -->
+<!--                         <span class="icon-bar"></span> -->
+<!--                         <span class="icon-bar"></span> -->
+<!--                         <span class="icon-bar"></span> -->
+<!--                     </button> -->
+<!--                         <a href='#home' class="logo"> -->
+<%--                             <img src="<%=ctx%>/resources/images/logo.png" alt="LogoCGS"> --%>
+<!--                         </a> -->
+<!--                     </div> -->
+
+<!--                     <nav class="collapse navigation navbar-collapse navbar-right" role="navigation"> -->
+<!--                         <ul id="nav" class="nav navbar-nav"> -->
+<!--                             <li class="current"><a href="#first-main">Home</a></li> -->
+<!--                             <li><a href="movie_list">Movie</a></li> -->
+<!--                             <li><a href="book1">Ticket</a></li> -->
+<!--                             <li><a href="cinemas">Cinema</a></li> -->
+<!--                             <li><a href="contact">Contact</a></li> -->
+<%-- 						 <%if((String) session.getAttribute("id")==null){%> --%>
+<!-- 						 <li><a href="login">Login</a></li> -->
+<%-- 						<%}else{ %> --%>
+<!-- 						<li><a href="logout">Logout</a></li> -->
+<%-- 						<%} %> --%>
+<!--                             <li><span class="sub-nav-toggle plus"></span> -->
+<!--                         </ul> -->
+<!--                     </nav> -->
+<!--                 </div> -->
+<!--         </header> -->
 		<!-- Main content -->
 
 		<section class="container">

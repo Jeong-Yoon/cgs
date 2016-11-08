@@ -42,6 +42,12 @@
 				<li><span class="sub-nav-toggle plus"></span> <a
 					href="contact">고객센터</a>
 					</li>
+					
+				<%if((String) session.getAttribute("id")!=null){%>
+				 <li><span class="sub-nav-toggle plus"></span> <a
+					href="reserve_list">예매목록</a>
+					</li>
+				<%} %>
 			</ul>
 			</nav>
 			<!-- 메뉴바 끝 -->

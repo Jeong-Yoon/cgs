@@ -11300,8 +11300,8 @@ ul#navigation li.mega-menu__nav-item:hover:before {
     width: 40px;
 }
 .valid_date {
-    width: 25px;
+    width: 30px;
 }
-birth_date {
+.birth_date {
     width: 60px;
 }

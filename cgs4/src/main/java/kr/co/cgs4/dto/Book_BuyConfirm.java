@@ -1,6 +1,7 @@
 package kr.co.cgs4.dto;
 
 public class Book_BuyConfirm {
+	private String screening_ID;
 	private String film_name;
 	private String site_name;
 	private String screening_date;
@@ -12,6 +13,13 @@ public class Book_BuyConfirm {
 	private String common_cnt;
 	private String sale_price;
 	private String choosen_sits;
+	
+	public String getScreening_ID() {
+		return screening_ID;
+	}
+	public void setScreening_ID(String screening_ID) {
+		this.screening_ID = screening_ID;
+	}
 	public String getFilm_name() {
 		return film_name;
 	}

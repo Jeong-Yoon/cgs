@@ -5,7 +5,7 @@ import java.sql.Timestamp;
 public class SaleDTO {
 	
 	Timestamp sale_date;//sysdate
-	String sale_ID;//시퀀스
+	String sale_ID;//랜덤
 	String screening_ID;//받아옴
 	String sale_type;//0-카드
 	String member_type;//0-회원

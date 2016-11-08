@@ -42,6 +42,12 @@
 				<li><span class="sub-nav-toggle plus"></span> <a
 					href="contact">고객센터</a>
 					</li>
+					
+				<%if((String) session.getAttribute("id")!=null){%>
+				 <li><span class="sub-nav-toggle plus"></span> <a
+					href="reserve_list">예매목록</a>
+					</li>
+				<%} %>
 			</ul>
 			</nav>
 			<!-- 메뉴바 끝 -->
@@ -57,13 +63,13 @@
 						</span>
 					</div>
 					<a href="contact" class="btn btn--sign btn--singin"><%=(String)session.getAttribute("name") %> </a>
-<!-- 					<ul class="auth__function"> -->
+					<ul class="auth__function open-function">
 <!-- 						내정보 버튼 눌렀을 시 뜨는 서브창 -->
-<!-- 						<li><a href="#" class="auth__function-item">내가본영화</a></li> -->
-<!-- 						<li><a href="#" class="auth__function-item">예매 내역</a></li> -->
+						<li><a href="modify" class="auth__function-item">내 정보 확인</a></li>
+						<li><a href="#" class="auth__function-item">예매 내역</a></li>
 <!-- 						<li><a href="#" class="auth__function-item">내가쓴리뷰</a></li> -->
 <!-- 						<li><a href="#" class="auth__function-item">환경설정</a></li> -->
-<!-- 					</ul>	 -->
+					</ul>	
 				</div>
 				<%}else{ %>
 				<%} %>

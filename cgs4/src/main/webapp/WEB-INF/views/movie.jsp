@@ -168,7 +168,7 @@
 
 						<div class="movie__btns movie__btns--full">
 							<form action="watchlist" method="get">
-								<input type=hidden name="film_ID" value="${film.film_ID }">
+								<input type=hidden name="film_ID" value="${film.film_ID}">
 <!-- 								<a href="book1" class="btn btn-md btn--warning">book a ticket for this movie</a> -->
 								<a href="#" class="watchlist">Add to watchlist</a>
 							</form>
@@ -225,8 +225,8 @@
 							<!--Third Slide-->
 							<c:forEach var="i" begin="3" end="5" step="1">
 								<div class="swiper-slide media-photo">
-									<a href='<%=ctx%>/resources/images/stillcut/${film.film_ID}/${i }.jpg' class="movie__media-item">
-									 <img alt='' src="<%=ctx%>/resources/images/stillcut/${film.film_ID}/${i }.jpg">
+									<a href='<%=ctx%>/resources/images/stillcut/${film.film_ID}/${i}.jpg' class="movie__media-item">
+									 <img alt='' src="<%=ctx%>/resources/images/stillcut/${film.film_ID}/${i}.jpg">
 									</a>
 								</div>
 							</c:forEach>

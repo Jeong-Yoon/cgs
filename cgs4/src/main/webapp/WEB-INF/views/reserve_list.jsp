@@ -78,7 +78,7 @@
                      <p class="offer-place">Reservation List </p>
 
                      <div class="col-xs-6 col-sm-4 col-md-3 offers-wrap">
-                         <a href='#' class="offer offer--day">
+                         <a href='reserve_check' class="offer offer--day">
                             <div class="offer__head">
                                 <p class="offer__name">2016/11/11<br></p>
                                 <span class="offer__datail"> 닥터스트레인지 </span>
@@ -90,7 +90,7 @@
                      
                      
                       <div class="col-xs-6 col-sm-4 col-md-3 offers-wrap">
-                         <a href='#' class="offer offer--day">
+                         <a href='reserve_check' class="offer offer--day">
                             <div class="offer__head">
                                 <p class="offer__name">2016/11/12<br></p>
                                 <span class="offer__datail">럭키</span>

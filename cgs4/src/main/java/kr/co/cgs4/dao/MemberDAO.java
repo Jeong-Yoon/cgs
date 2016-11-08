@@ -44,7 +44,7 @@ public class MemberDAO {
 		
 		
 		//나중에 email 이후 값은 지우고 db구축할것
-		  String insert = "insert into member(member_ID, password, name, address, birth, phone_num, email,gender,homepage_ID,join_date,accum_point,member_grade,membership,curr_point) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+		  String insert = "insert into member(member_ID, password, name, address, birth, phone_num, email,gender,join_date,accum_point,member_grade,membership,curr_point) values (?,?,?,?,?,?,?,?,?,?,?,?,?)";
 		  this.template.update(insert, new PreparedStatementSetter() {
 			
 			@Override
@@ -59,22 +59,19 @@ public class MemberDAO {
 				//젠더
 				ps.setString(8, gender);
 				//가입일
-				ps.setString(10, join_date);
+				ps.setString(9, join_date);
 				
 				
-				//이밑으로는 나중에 실구현때 지움
-				
-				//홈페이지아이디
-				ps.setString(9, id);
+				//이밑으로는 나중에 차후 구현
 				
 				//누적포인트
-				ps.setInt(11, 300);
+				ps.setInt(10, 300);
 				//멤버등급
-				ps.setInt(12, 0);
+				ps.setInt(11, 0);
 				//맴버십카드번호
-				ps.setString(13, "0000000000000003");
+				ps.setString(12, "0000000000000004");
 				//현재포인트
-				ps.setInt(14, 100);
+				ps.setInt(13, 100);
 				
 				
 				

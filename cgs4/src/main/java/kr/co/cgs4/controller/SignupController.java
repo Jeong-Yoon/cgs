@@ -36,6 +36,9 @@ public class SignupController {
 		String getPW = request.getParameter("user-password");
 		String getPWcheck =request.getParameter("user-passwordok");
 		
+		int pw=Integer.parseInt(getPW);
+		int pwcheck = Integer.parseInt(getPWcheck);
+		
 		//이름
 		String getUserName =request.getParameter("user-name");
 		
@@ -61,6 +64,16 @@ public class SignupController {
 		
 		try{
 		
+			if(pw!=pwcheck){
+	        	//자바에서 경고창띄우는부분
+	        	response.setContentType("text/html; charset=UTF-8");    	
+	        	PrintWriter out =response.getWriter();
+	        	out.println("<script>alert('입력하신 비밀번호와 비밀번호 확인 값이 다릅니다!'); history.go(-1);</script>");
+	        	out.close();
+	        	return "login";
+			}
+			else{
+			
 		//데이터 입력하기
 		MemberDAO dao = new MemberDAO();
 		
@@ -72,6 +85,7 @@ public class SignupController {
     	out.flush();
     	out.close();
     	return "login";
+			}
 		}catch (EmptyResultDataAccessException e) {
     		System.out.println("입력이 올바르지않음");
         	//자바에서 경고창띄우는부분
@@ -82,6 +96,7 @@ public class SignupController {
         	//어차피 위에서 history.go(-1)때문에 return으로안감
         	return "redirect:login";
 		}
+		
 	}
 	
 	

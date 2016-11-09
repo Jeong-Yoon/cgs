@@ -184,7 +184,7 @@
                 </div>
                 <div class="col-xs-12 col-md-6">
                     <div class="footer-info">
-                        <p class="heading-special--small">A.Movie<br><span class="title-edition">in the social media</span></p>
+                        <p class="heading-special--small">CGS<br><span class="title-edition">in the social media</span></p>
 
                         <div class="social">
                             <a href='#' class="social__variant fa fa-facebook"></a>

@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <%
 	String ctx = request.getContextPath();
 %>
@@ -39,10 +39,8 @@
 <link rel="stylesheet" type="text/css"
 	href="<%=ctx%>/resources/rs-plugin/css/settings.css" media="screen" />
 
-
-<!-- Fontawesome -->
-<link rel="stylesheet"
-	href="<%=ctx%>/resources/css/font-awesome.min.css">
+<!-- Fontawesome(아이콘폰트) -->
+<link rel="stylesheet" href="<%=ctx%>/resources/css/font-awesome.min.css">
 <!-- Bootstrap -->
 <link rel="stylesheet" href="<%=ctx%>/resources/css/bootstrap.min.css">
 <!-- Fancybox -->
@@ -95,37 +93,39 @@
 			<!-- /responsive nav button -->
 
 			<!-- logo -->
-			<a href='#home' class="logo img"> <img
-				src="<%=ctx%>/resources/images/logo.png" alt="LogoCGS">
-			</a>
+			<h1 class="navbar-brand">
+				<a href='#home'> <img
+					src="<%=ctx%>/resources/images/logo-header.png" alt="LogoCGS"
+					style="height: 70%; width: 70%">
+				</a>
+			</h1>
 			<!-- /logo -->
-		</div>
 
-		<!-- main nav -->
-		<nav class="collapse navigation navbar-collapse navbar-right"
-			role="navigation">
-		<ul id="nav" class="nav navbar-nav">
-			<li class="current"><a href="#first-main">Home</a></li>
-			<li><a href="movie_list?page=0">Movie</a></li>
-			<li><a href="book1">Ticket</a></li>
-			<li><a href="cinemas">Cinema</a></li>
-			<li><a href="contact">Contact</a></li>
-			<%
-				if ((String) session.getAttribute("id") == null) {
-			%>
-			<li><a href="login">Login</a></li>
-			<%
-				} else {
-			%>
-			<li><a href="logout">Logout</a></li>
-			<%
-				}
-			%>
-			<!-- 			<li><span class="sub-nav-toggle plus"></span> -->
-		</ul>
-		</nav>
-		<!-- /main nav -->
-	</div>
+			<!-- main nav -->
+			<nav class="collapse navigation navbar-collapse navbar-right"
+				role="navigation">
+			<ul id="nav" class="nav navbar-nav">
+				<li class="current"><a href="#first-main">Home</a></li>
+				<li><a href="movie_list?page=0">Movie</a></li>
+				<li><a href="book1">Ticket</a></li>
+				<li><a href="cinemas">Cinema</a></li>
+				<li><a href="contact">Contact</a></li>
+				<%
+					if ((String) session.getAttribute("id") == null) {
+				%>
+				<li><a href="login">Login</a></li>
+				<%
+					} else {
+				%>
+				<li><a href="logout">Logout</a></li>
+				<%
+					}
+				%>
+				<!-- 			<li><span class="sub-nav-toggle plus"></span> -->
+			</ul>
+			</nav>
+			<!-- /main nav -->
+		</div>
 	</header>
 
 	<section id="first-main"
@@ -183,9 +183,9 @@
 		<nav id="nav-arrows"
 			class="nav-arrows hidden-xs hidden-sm visible-md visible-lg"> <a
 			class="sl-prev hidden-xs" href="#home-carousel" data-slide="prev">
-			<i class="fa fa-angle-left fa-3x"></i>
+			<i class="fa fa-angle-left fa-3x" style="margin-top: 4px"></i>
 		</a> <a class="sl-next" href="#home-carousel" data-slide="next"> <i
-			class="fa fa-angle-right fa-3x"></i>
+			class="fa fa-angle-right fa-3x" style="margin-top: 4px"></i>
 		</a> </nav>
 	</div>
 	</section>
@@ -218,10 +218,8 @@
 				alt="movie rank1"> <%--  					<a href="<%=ctx %>/resources/images/portfolio/portfolio-3.jpg" title="Title Three" rel="portfolio" class="fancybox"><span class="plus"></span></a> --%>
 			<figcaption class="mask">
 			<h3>닥터스트레인지</h3>
-			<span>Doctor Strange , 2016</span>
-			<br>
-			<a href="#" class="btn btn-book">평가하기</a> 
-			<a href="#"
+			<span>Doctor Strange , 2016</span> <br>
+			<a href="#" class="btn btn-book">평가하기</a> <a href="#"
 				class="btn btn-book-blue">예매하기</a> </figcaption> </figure>
 
 			<figure class="mix portfolio-item photography"> <img
@@ -230,10 +228,8 @@
 			<%--                     <a href="<%=ctx %>/resources/images/portfolio/portfolio-3.jpg" title="Title Three" rel="portfolio" class="fancybox"><span class="plus"></span></a> --%>
 			<figcaption class="mask">
 			<h3>럭키</h3>
-			<span>LUCK-KEY , 2016</span>
-			<br>
-			<a href="#" class="btn btn-book">평가하기</a>
-			<a href="#"
+			<span>LUCK-KEY , 2016</span> <br>
+			<a href="#" class="btn btn-book">평가하기</a> <a href="#"
 				class="btn btn-book-blue">예매하기</a> </figcaption> </figure>
 
 			<figure class="mix portfolio-item web"> <img
@@ -242,10 +238,8 @@
 				alt="movie rank3"> <%--                     <a href="<%=ctx %>/resources/images/portfolio/portfolio-3.jpg" title="Title Three" rel="portfolio" class="fancybox"><span class="plus"></span></a> --%>
 			<figcaption class="mask">
 			<h3>로스트인더스트</h3>
-			<span>Hell or High Water, 2016</span>
-			<br>
-			<a href="#" class="btn btn-book">평가하기</a>
-			<a href="#"
+			<span>Hell or High Water, 2016</span> <br>
+			<a href="#" class="btn btn-book">평가하기</a> <a href="#"
 				class="btn btn-book-blue">예매하기</a> </figcaption> </figure>
 
 			<figure class="mix portfolio-item print"> <img
@@ -254,12 +248,9 @@
 			<%--                     <a href="<%=ctx %>/resources/images/portfolio/portfolio-4.jpg" title="Title Four" rel="portfolio" class="fancybox"><span class="plus"></span></a> --%>
 			<figcaption class="mask">
 			<h3>무현, 두 도시 이야기</h3>
-			<span>무현, 두 도시 이야기, 2016</span>
-			<br>
-			<a href="#" class="btn btn-book">평가하기</a>
-			<a href="#"
-				class="btn btn-book-blue">예매하기</a> </figcaption>
-			</figure>
+			<span>무현, 두 도시 이야기, 2016</span> <br>
+			<a href="#" class="btn btn-book">평가하기</a> <a href="#"
+				class="btn btn-book-blue">예매하기</a> </figcaption> </figure>
 
 			<figure class="mix portfolio-item print"> <img
 				class="img-responsive"
@@ -267,10 +258,8 @@
 				alt="movie rank5"> <%--                     <a href="<%=ctx %>/resources/images/portfolio/portfolio-4.jpg" title="Title Four" rel="portfolio" class="fancybox"><span class="plus"></span></a> --%>
 			<figcaption class="mask">
 			<h3>선생님의 일기</h3>
-			<span>The Teacher's Diary, 2014</span>
-			<br>
-			<a href="#" class="btn btn-book">평가하기</a>
-			 <a href="#"
+			<span>The Teacher's Diary, 2014</span> <br>
+			<a href="#" class="btn btn-book">평가하기</a> <a href="#"
 				class="btn btn-book-blue">예매하기</a> </figcaption> </figure>
 
 			<figure class="mix portfolio-item photography"> <img
@@ -279,22 +268,18 @@
 			<%--                     <a href="<%=ctx %>/resources/images/portfolio/portfolio-4.jpg" title="Title Four" rel="portfolio" class="fancybox"><span class="plus"></span></a> --%>
 			<figcaption class="mask">
 			<h3>스플릿</h3>
-			<span>Split, 2016</span>
-			<br>
-			<a href="#" class="btn btn-book">평가하기</a>
-			<a href="#"
+			<span>Split, 2016</span> <br>
+			<a href="#" class="btn btn-book">평가하기</a> <a href="#"
 				class="btn btn-book-blue">예매하기</a> </figcaption> </figure>
 
 			<figure class="mix portfolio-item web app"> <img
 				class="img-responsive"
-				src="<%=ctx%>/resources/images/poster/Inferno.jpg"
-				alt="movie rank5"> <%--                     <a href="<%=ctx %>/resources/images/portfolio/portfolio-4.jpg" title="Title Four" rel="portfolio" class="fancybox"><span class="plus"></span></a> --%>
+				src="<%=ctx%>/resources/images/poster/Inferno.jpg" alt="movie rank5">
+			<%--                     <a href="<%=ctx %>/resources/images/portfolio/portfolio-4.jpg" title="Title Four" rel="portfolio" class="fancybox"><span class="plus"></span></a> --%>
 			<figcaption class="mask">
 			<h3>인페르노</h3>
-			<span>Inferno, 2016</span>
-			<br>
-			<a href="#" class="btn btn-book">평가하기</a>
-			<a href="#"
+			<span>Inferno, 2016</span> <br>
+			<a href="#" class="btn btn-book">평가하기</a> <a href="#"
 				class="btn btn-book-blue">예매하기</a> </figcaption> </figure>
 
 			<figure class="mix portfolio-item print web"> <img
@@ -303,14 +288,12 @@
 				alt="movie rank5"> <%--                     <a href="<%=ctx %>/resources/images/portfolio/portfolio-4.jpg" title="Title Four" rel="portfolio" class="fancybox"><span class="plus"></span></a> --%>
 			<figcaption class="mask">
 			<h3>무한대를 본 남자</h3>
-			<span>The Man Who Knew Infinity, 2015</span>
-			<br>
-			<a href="#" class="btn btn-book">평가하기</a>
-			<a href="#"
+			<span>The Man Who Knew Infinity, 2015</span> <br>
+			<a href="#" class="btn btn-book">평가하기</a> <a href="#"
 				class="btn btn-book-blue">예매하기</a> </figcaption> </figure>
 		</div>
-		<a href="movie_list?page=0" title="더보기" rel="portfolio" class="fancybox"><span class="plus"></span></a>
-		</section>
+		<a href="movie_list?page=0" title="더보기" rel="portfolio"
+			class="fancybox"><span class="plus"></span></a> </section>
 		<!-- end #projects -->
 
 
@@ -318,26 +301,28 @@
 		<!--
         #subscribe
         ========================== -->
-		<section id="subscribe" data-vide-bg="<%=ctx%>/resources/video/mainvideo">
+		<section id="subscribe"
+			data-vide-bg="<%=ctx%>/resources/video/mainvideo">
 		<div class="container">
-			<div class="row">
+			<div class="row" style="margin: 40px;">
 
 				<div class="col-md-7 wow fadeInLeft">
 					<h3 style='margin: 20px 5px'>CGS 소식지 구독하기</h3>
 					<form action="#" method="post" class="subscription-form">
-						<i class="fa fa-envelope-o fa-lg"></i> <input type="email"
+						<i class="fa fa-envelope-o fa-lg" style="font-size: 1.5em"></i> <input type="email"
 							name="subscribe" class="subscribe" placeholder="YOUR MAIL"
 							required=""> <input type="submit" value="SUBSCRIBE"
 							id="mail-submit">
 					</form>
 				</div>
 				<div class="col-md-4 text-left wow fadeInRight">
-					<p style="color: white; padding: 1px;">정기적으로 CGS 최신 영화, 이벤트 소식을 전해드립니다 :)</p>
+					<p style="color: white; padding: 1px;">정기적으로 CGS 최신 영화, 이벤트 소식을
+						전해드립니다 :)</p>
 				</div>
 			</div>
 		</div>
 		</section>
-		
+
 		<div class="clearfix"></div>
 		<!--
         End #subscribe

@@ -593,13 +593,14 @@ width: 11px;
 }
 
 .project-filter ul li a {
-  color: darkgray;
+  color: #1f2021;
   display: block;
   line-height: 18px;
   padding: 10px 20px;
   text-transform: uppercase;
-/*   font-family: LotteMartDream; */
-	font-family: Godo;
+  font-family: LotteMartDream;
+/* 	font-family: Godo; */
+	font-size: 17px;
 }
 
 .project-filter ul li a:hover,

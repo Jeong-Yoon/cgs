@@ -88,7 +88,7 @@ color: #fff;
 					<li class="auth__function-item">안녕하세요 <strong><%=name%></strong>님!</li>
 					<br>
 					<li><a href="modify" class="auth__function-item">내 정보 확인</a></li>
-					<li><a href="#" class="auth__function-item">예매 내역 확인</a></li>
+					<li><a href="<%=ctx%>/reserve_list/?mId=<%=(String) session.getAttribute("id") %>" class="auth__function-item">예매 내역 확인</a></li>
 				</ul></li>
 			<li><a href="logout">Logout</a></li>
 			<%

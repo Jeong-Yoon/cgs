@@ -76,20 +76,20 @@
                 
                 <div class="offers-block">
                      <p class="offer-place">Reservation List </p>
-
+					<c:forEach items="${rList}" var="rl">
                      <div class="col-xs-6 col-sm-4 col-md-3 offers-wrap">
-                         <a href='reserve_check' class="offer offer--day">
+                         <a href='<%=ctx%>/reserve_check/?rId=${rl.reserve_ID}' class="offer offer--day">
                             <div class="offer__head">
-                                <p class="offer__name">2016/11/11<br></p>
-                                <span class="offer__datail"> 닥터스트레인지 </span>
+                                <p class="offer__name">${rl.screening_date}<br></p>
+                                <span class="offer__datail"> ${rl.film_name} </span>
                              </div>
-                             <p class="offer__full"> 예매번호: 123456  <br>관람극장 : 강변점   <br> 관람시간: 13:20 <br> 관람인원 : 2
+                             <p class="offer__full"> 예매번호: ${rl.reserve_ID}  <br>관람극장 : ${rl.site_name}   <br> 관람시간: ${rl.start_time} <br> 관람인원 : ${rl.sale_cnt}
                              </p>
                          </a>
                      </div>
+      				 </c:forEach>              
                      
-                     
-                      <div class="col-xs-6 col-sm-4 col-md-3 offers-wrap">
+                   <!--    <div class="col-xs-6 col-sm-4 col-md-3 offers-wrap">
                          <a href='reserve_check' class="offer offer--day">
                             <div class="offer__head">
                                 <p class="offer__name">2016/11/12<br></p>
@@ -99,6 +99,7 @@
                              </p>
                          </a>
                      </div>
+			 -->
 
 
                  </div>

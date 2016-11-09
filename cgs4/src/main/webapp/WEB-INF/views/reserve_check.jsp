@@ -80,15 +80,15 @@
                         <div class="ticket__inner">
 
                             <div class="ticket-secondary">
-                                <span class="ticket__item">예매번호 <strong class="ticket__number">1234567</strong></span>
+                                <span class="ticket__item">예매번호 <strong class="ticket__number">${rCheck.reserve_ID}</strong></span>
                             <!--     <strong class="ticket__cost">2016/10/28</strong>
                                 <strong class="ticket__cost">17:45</strong> -->
-                                <span class="ticket__item ticket__date"><strong class="ticket__cost">2016/10/28</strong></span>
-                                <span class="ticket__item ticket__time"><strong class="ticket__cost">17:45</strong></span>
-                                <span class="ticket__item">관람극장: <strong class="ticket__cost">강변점</strong></span>
-                                <span class="ticket__item">상영관: <strong class="ticket__cost">1관</strong></span>
-                                <span class="ticket__item ticket__price">관람인원 : <strong class="ticket__cost">6명</strong></span>
-                            	<span class="ticket__item">매수 : <strong class="ticket__cost">2매</strong></span>
+                                <span class="ticket__item ticket__date"><strong class="ticket__cost">${rCheck.screening_date}</strong></span>
+                                <span class="ticket__item ticket__time"><strong class="ticket__cost">${rCheck.start_time}</strong></span>
+                                <span class="ticket__item">관람극장: <strong class="ticket__cost">${rCheck.site_name}</strong></span>
+                                <span class="ticket__item">상영관: <strong class="ticket__cost">${rCheck.screen_num}관</strong></span>
+                                <span class="ticket__item ticket__price">관람인원 : <strong class="ticket__cost">${rCheck.sale_cnt}</strong></span>
+                            	<span class="ticket__item">매수 : <strong class="ticket__cost">${rCheck.sale_cnt}</strong></span>
                             	
                              <!--    <span class="ticket__item">Hall: <span class="ticket__hall">Visconti</span></span>
                                 <span class="ticket__item ticket__price">price: <strong class="ticket__cost">$60</strong></span>
@@ -106,19 +106,18 @@
 
                             <div class="ticket-primery">
                                 <span class="ticket__item ticket__item--primery ticket__film">영화명<br>
-                                <strong class="ticket__movie">닥터 스트레인지 (2016)<br></strong>
+                                <strong class="ticket__movie">${rCheck.film_name}<br></strong>
                                
                                 <span class="ticket__item ticket__item--primery">관람 좌석: 
-                                <span class="ticket__place">11F, 12F, 13F</span>
+                                <span class="ticket__place"><c:forEach items="${rSeat}" var="rs">${rs.col_num}${rs.row_num},&nbsp; </c:forEach>   </span>
                                 </span>
                                 </span>
                                 
                             	<span class="ticket__item ticket__item--primery ticket__film">결제날짜 :
-                            	<strong class="ticket__movie">2016/10/27<br></strong>
-                            	결제수단 : <strong class="ticket__movie">카드<br></strong>
-                            	총 결제금액: <strong class="ticket__movie">7000원<br></strong>
+                            	<strong class="ticket__movie">${rCheck.sale_date}<br></strong>
+                            	결제수단 : <strong class="ticket__movie">${rCheck.sale_type}<br></strong>
+                            	총 결제금액: <strong class="ticket__movie">${rCheck.final_price}원<br></strong>
                             	</span>
-                           
                             
                             </div>
 

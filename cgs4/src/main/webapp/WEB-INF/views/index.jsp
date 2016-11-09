@@ -31,9 +31,6 @@
 
 <!-- Mobile menu -->
 <link href="<%=ctx%>/resources/css/gozha-nav.css" rel="stylesheet" />
-<!-- Select -->
-<link href="<%=ctx%>/resources/css/external/jquery.selectbox.css"
-	rel="stylesheet" />
 
 <!-- REVOLUTION BANNER CSS SETTINGS -->
 <link rel="stylesheet" type="text/css"
@@ -94,9 +91,9 @@
 
 			<!-- logo -->
 			<h1 class="navbar-brand">
-				<a href='#body'> <img
+				<a href='#first-main'> <img
 					src="<%=ctx%>/resources/images/logo-header.png" alt="LogoCGS"
-					style="height: 70%; width: 70%">
+					style="height: 75%; width: 75%">
 				</a>
 			</h1>
 			<!-- /logo -->
@@ -126,7 +123,6 @@
 			</nav>
 			<!-- /main nav -->
 		</div>
-	
 	</header>
 
 	<section id="first-main"
@@ -137,47 +133,33 @@
 			<li data-target="#home-carousel" data-slide-to="0" class="active"></li>
 			<li data-target="#home-carousel" data-slide-to="1"></li>
 			<li data-target="#home-carousel" data-slide-to="2"></li>
+						<li data-target="#home-carousel" data-slide-to="3"></li>
 		</ol>
 		<!--/.carousel-indicators-->
-
+		
 		<div class="carousel-inner">
-			<div class="item active"
-				style="background-image: url('<%=ctx%>/resources/images/slider/bg2.jpg')">
+			<div class="item active">
 				<div class="carousel-caption">
 					<div class="animated bounceInRight">
 						<h2>
 							FANTASTIC CINEMA, <br>FANTASIC CGS!
 						</h2>
-						<p style="font-family: nanumsquare">Go on a trip to Wonderland
+						<p style="font-family: Godo">Go on a trip to Wonderland
 							with us.</p>
 					</div>
 				</div>
 			</div>
 
 			<div class="item"
+				style="background-image: url('<%=ctx%>/resources/images/slider/bg1.jpg')">
+			</div>
+
+			<div class="item"
 				style="background-image: url('<%=ctx%>/resources/images/slider/bg2.jpg')">
-				<div class="carousel-caption">
-					<div class="animated bounceInRight">
-						<h2>
-							FANTASTIC CINEMA, <br>FANTASIC CGS!
-						</h2>
-						<p style="font-family: Nanum Gothic">Go on a trip to
-							Wonderland with us.</p>
-					</div>
-				</div>
 			</div>
 
 			<div class="item"
 				style="background-image: url('<%=ctx%>/resources/images/slider/bg3.jpg')">
-				<div class="carousel-caption">
-					<div class="animated bounceInRight">
-						<h2>
-							FANTASTIC CINEMA, <br>FANTASIC CGS!
-						</h2>
-						<p style="font-family: Nanum Gothic">Go on a trip to
-							Wonderland with us.</p>
-					</div>
-				</div>
 			</div>
 		</div>
 		<!--/.carousel-inner-->

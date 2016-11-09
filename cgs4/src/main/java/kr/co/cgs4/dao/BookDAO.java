@@ -14,8 +14,11 @@ import org.springframework.transaction.support.DefaultTransactionDefinition;
 
 import kr.co.cgs4.dto.Book_ScreenNum;
 import kr.co.cgs4.dto.Book_ScreeningInfo;
+import kr.co.cgs4.dto.Book_SeatOccupation;
 import kr.co.cgs4.dto.Book_SeatRow;
 import kr.co.cgs4.dto.FilmDTO;
+import kr.co.cgs4.dto.MemberDTO;
+import kr.co.cgs4.dto.Sale_SeatDTO;
 import kr.co.cgs4.dto.SeatDTO;
 import kr.co.cgs4.util.Constant;
 
@@ -36,7 +39,7 @@ public class BookDAO {
 	}
 	
 
-	
+	//book1에 필요한 상영정보, 상영관 정보
 	public ArrayList<Book_ScreeningInfo> screening_date(String film_name, String site_name, String screening_date){
 		String query = "select sc.SCREENING_ID, film_name, site_name, sc.screening_date, sc.screen_num, start_time, seating_cnt "
 				+ "from SCREENING sc, site,screen where sc.SITE_ID = site.SITE_ID and site.site_id=screen.site_id "
@@ -52,12 +55,22 @@ public class BookDAO {
 				+ "group by film_name, site_name, sc.screening_date, sc.screen_num";
 		return (ArrayList<Book_ScreenNum>) template.query(query, new BeanPropertyRowMapper<Book_ScreenNum>(Book_ScreenNum.class));
 	}
+	//
+	//book2에 필요한 seatDTO, sale_seat정보
 	public ArrayList<SeatDTO> seat(String site_name, String screen_num){
 		String query = "select site_name, b.site_id, seat_status, row_num, col_num, screen_num "
 				+ "from (select ROWNUM rn, e.* from seat e) b, site "
 				+ "where b.site_id=site.site_id and site_name='"+site_name+"' and screen_num='"+screen_num+"' order by rn";
 		return (ArrayList<SeatDTO>) template.query(query, new BeanPropertyRowMapper<SeatDTO>(SeatDTO.class));
 	}
+	public ArrayList<Book_SeatOccupation> saleSeat(String screening_id){
+		String query = "select screening_id, row_num, col_num from SALE_SEAT ss , seat "
+				+ "where ss.SEAT_ID=seat.SEAT_ID and screening_id= '"+screening_id+"'";
+		return (ArrayList<Book_SeatOccupation>) template.query(query, new BeanPropertyRowMapper<Book_SeatOccupation>(Book_SeatOccupation.class));
+	}
+	
+	
+	
 	public ArrayList<Book_SeatRow> sRow(String site_name, String screen_num){
 		String query = "select site_name, row_num, screen_num "
 				+ "from (select ROWNUM rn, e.* from seat e) b, site "
@@ -67,7 +80,7 @@ public class BookDAO {
 		return (ArrayList<Book_SeatRow>) template.query(query, new BeanPropertyRowMapper<Book_SeatRow>(Book_SeatRow.class));
 	}
 
-	public void saleSubmit(final String SALE_ID,final String CURRDATE, final int SALE_PRICE, final String PAYCARD_NUMBER, final String SCREENING_ID, final int SALE_COUNT, final int COMMON_CNT, final int FINAL_PRICE, final int YOUNG_CNT, final int SPECIAL_CNT, final String[] sits, final String id){
+	public void saleSubmit(final String SALE_ID,final String CURRDATE, final int SALE_PRICE, final String PAYCARD_NUMBER, final String SCREENING_ID, final int SALE_COUNT, final int COMMON_CNT, final int FINAL_PRICE, final int YOUNG_CNT, final int SPECIAL_CNT, final String[] sits, final String id, final String reserve_ID){
 		System.out.println(id);
 //		TransactionDefinition definition = new DefaultTransactionDefinition();
 //		TransactionStatus status = transactionManager.getTransaction(definition);
@@ -113,13 +126,29 @@ public class BookDAO {
 			});
 		}
 		//member_sale 넣기
-		String memQuery= "INSERT INTO member_sale VALUES ('0', ?, ?, ?)";
-		template.update(memQuery, new PreparedStatementSetter() {
+		String msQuery= "INSERT INTO member_sale VALUES ('0', ?, ?, ?)";
+		template.update(msQuery, new PreparedStatementSetter() {
 			@Override
 			public void setValues(PreparedStatement ps) throws SQLException {
 				ps.setString(1, id);
 				ps.setString(2, SALE_ID);
 				ps.setString(3, CURRDATE);
+			}
+		}); 
+		//reserve에 넣을 회원의 이름, 전화번호 구해옴.
+		String memQuery= "select name, phone_num from member where member_id='"+id+"'";
+		final MemberDTO mdto = template.queryForObject(memQuery, new BeanPropertyRowMapper<MemberDTO>(MemberDTO.class));
+		
+		//reserve 넣기
+		String resQuery= "INSERT INTO reserve VALUES (?, ?, ?, '0', ?, ?)";
+		template.update(resQuery, new PreparedStatementSetter() {
+			@Override
+			public void setValues(PreparedStatement ps) throws SQLException {
+				ps.setString(1, reserve_ID);
+				ps.setString(2, mdto.getName());
+				ps.setString(3, mdto.getPhone_num());
+				ps.setString(4, SALE_ID);
+				ps.setString(5, CURRDATE);
 			}
 		}); 
 

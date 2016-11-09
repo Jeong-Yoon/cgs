@@ -29,6 +29,7 @@ public class MemberDAO {
 		return (MemberDTO) template.queryForObject(query, new BeanPropertyRowMapper<MemberDTO>(MemberDTO.class));
 	}
 
+	//id와 pw에 맞는 해당 맴버의 데이터를 모두 불러온다!
 	public MemberDTO member_list(String id, String pw) {
 		String query = "select * from member where MEMBER_ID = '" + id + "' and PASSWORD = '" + pw + "'";
 			return (MemberDTO) template.queryForObject(query, new BeanPropertyRowMapper<MemberDTO>(MemberDTO.class));

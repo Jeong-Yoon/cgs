@@ -1,9 +1,11 @@
 package kr.co.cgs4.controller;
 
+import java.awt.font.TransformAttribute;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.Date;
 import java.sql.Timestamp;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Map;
 
@@ -52,7 +54,7 @@ public class LoginController {
     }
 	
     //로그인 프로세스
-    @RequestMapping (value ="loginProcess")
+	@RequestMapping (value ="loginProcess")
     public String loginProcess(Model model ,HttpServletRequest request, HttpServletResponse response, HttpSession session) throws IOException {
     	
     	String getid = request.getParameter("user-email");
@@ -73,27 +75,65 @@ public class LoginController {
     		session.setAttribute("pw", getpw);
     		
     		//id에 해당하는 사람의 정보 전부를 가져온다
-    		//name
+    		
+    		//이름
     		String name=dtos.getName();
     		session.setAttribute("name", name);
     		
-    		//gender
+    		//성별
     		String gender = dtos.getGender();
+    		session.setAttribute("gender", gender);
     		
-    		//address
+    		//주소
     		String address = dtos.getAddress();
+    		session.setAttribute("address", address);
     		
-    		//brith
+    		//생일
     		Date birth =dtos.getBirth();
+    		String jumin = birth.toString();
+    		//2016-10-16타입형태
+    		session.setAttribute("birth", birth);
     		
-    		//phone_num
+    		//161016 형태
+    		String showYear = jumin.substring(2,2);
+    		String showMonth = jumin.substring(5,2);
+    		String showDay = jumin.substring(8,2);
+    		
+    		String showJumin = showYear+ showMonth +  showDay;
+    		
+    		System.out.println(showJumin);
+    		
+    		session.setAttribute("showJumin", showJumin);
+  
+    		
+    		
+    		//폰번호
     		String phone_num = dtos.getPhone_num();
+    		session.setAttribute("phone_num", phone_num);
     		
-    		//email
+    		//이메일
     		String email = dtos.getEmail();
+    		session.setAttribute("email", email);
     		
-    		//join_date
+    		//가입일
     		Date join_date = dtos.getJoin_date();
+    		session.setAttribute("join_date", join_date);
+    		
+    		//누적포인트
+    		int accum_point = dtos.getAccum_point();
+    		session.setAttribute("accum_point", accum_point);
+    		
+    		//현재포인트
+    		int curr_point = dtos.getCurr_point();
+    		session.setAttribute("curr_point", curr_point);
+    		
+    		//회원등급
+    		String memer_grade = dtos.getMember_grade();
+    		session.setAttribute("memer_grade", memer_grade);
+    		
+    		//회원카드번호
+    		String membership = dtos.getMembership();
+    		session.setAttribute("membership", membership);
     		
     		
     		

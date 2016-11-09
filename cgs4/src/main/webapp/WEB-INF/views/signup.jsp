@@ -94,7 +94,7 @@
 				</tr>
 				
 				<tr>
-				<td><center><p>주민번호</p></center></td>
+				<td><center><p>생년월일</p></center></td>
 				<td><input type='text' pattern="^\d{6}" title="공백없이 6자리 모두 입력해주세요" name='user-birth' class="login__input" maxlength="6" required></td>
 				<td width="20"><center>-</center></td>
 

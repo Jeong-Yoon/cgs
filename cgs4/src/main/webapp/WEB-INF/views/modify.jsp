@@ -57,8 +57,7 @@
 
 <body>
 
-
-	<!-- Header section -->
+<!-- Header section -->
 	<jsp:include page="menu.jsp" flush="false" />
 
 
@@ -74,54 +73,57 @@
 				<table width="150" border="0" >
 				
 				<tr>
-				<td><center><p>아이디</p></center></td>
-				<td colspan="2"><input type='text' placeholder='아이디를 입력해주세요' name='user-id' class="login__input" required></td>
+				<td width="120"><center><p>아이디</p></center></td>
+				<td width="160"><p><input type='text' name='user-id' class="login__input" value="<%=session.getAttribute("id") %>" disabled></p></td>
 				</tr>
 				
 				<tr>
 				<td><center><p>비밀번호</p></center></td>
-				<td colspan="2"><input type='password' pattern="^[0-9a-zA-Z]{4,20}" title="영어 또는 숫자로 4자리 이상으로 입력하세요." placeholder='비밀번호를 입력해주세요' name='user-password' class="login__input" required></td>
-				</tr>
-				
-				<tr>
-				<td><center><p>비밀번호 확인</p></center></td>
-				<td colspan="2"><input type='password' pattern="^[0-9a-zA-Z]{4,20}" title="영어 또는 숫자로 4자리 이상으로 입력하세요." placeholder='한번 더 입력해주세요' name='user-passwordok' class="login__input" required></td>
+				<td><p>　* * * * * * * *　</p></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td><p><button type='submit' class="btn btn-md btn--warning">비밀번호 변경</button></p></td>
 				</tr>
 				
 				<tr>
 				<td><center><p>이름</p></center></td>
-				<td colspan="2"><input type='text' placeholder='이름을 입력해주세요' name='user-name' class="login__input" required></td>
+				<td><p><input type='text' name='user-name' class="login__input" value="<%=session.getAttribute("name") %>" disabled></p></td>
 				</tr>
 				
 				<tr>
-				<td><center><p>주민번호</p></center></td>
-				<td><input type='text' pattern="^\d{6}" title="공백없이 6자리 모두 입력해주세요" name='user-birth' class="login__input" maxlength="6" required></td>
-				<td width="20"><center>-</center></td>
+				<td><center><p>생년월일</p></center></td>
+				<td><p><input type='text' name='user-birth' class="login__input" value="<%=session.getAttribute("showJumin") %>" disabled></p></td>
+				<td width="20"><center><p>-</p></center></td>
 
 			
-				<td><input type='text' pattern="[1234]" title="올바른 숫자를 입력해주세요" name='gender' class="login__input" maxlength="1" required></td>
+				<td width ="50"><p><input type='text' name='gender' class="login__input" value="<%=session.getAttribute("gender") %>" disabled></p></td>
 				<td></td>
-				<td>* * * * * *</td>
+				<td><p>* * * * * *</p></td>
 				</tr>
 				
 				
 				<tr>
 				<td><center><p>핸드폰번호</p></center>
-				<td><input type='text' pattern="^\d{3}" title="3자리 모두 입력해주세요" name='user-pnum' class="login__input" maxlength="3" required></td>
-				<td width="20"><center>-</center></td>
-				<td><input type='text' pattern="^\d{4}" title="4자리 모두 입력해주세요" name='user-pnum2' class="login__input" maxlength="4" required></td>
-				<td width="20"><center>-</center></td>
-				<td><input type='text' pattern="^\d{4}" title="4자리 모두 입력해주세요" name='user-pnum3' class="login__input" maxlength="4" required></td>
+				<td><p><input type='text' name='user-pnum' class="login__input" value="<%=session.getAttribute("phone_num") %>" readonly></p></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td><p><button type='submit' class="btn btn-md btn--warning">핸드폰 번호 변경</button></p></td>
 				</tr>
 				
 				<tr>
 				<td><center><p>이메일</p></center></td>
-				<td colspan="3"><input type='email' title="이메일 타입으로 입력해주세요" name='user-email' class="login__input" required></td>
+				<td colspan="3"><p><input type='email' name='user-email' class="login__input" value="<%=session.getAttribute("email") %>" readonly></p></td>
+				<td>　</td>
+				<td><p><button type='submit' class="btn btn-md btn--warning">이메일 변경</button></p></td>
 				</tr>
 				
 				<tr>
 				<td><center><p>주소</p></center></td>
-				<td colspan="3"><input type='text' name='user-address' class="login__input" required></td>
+				<td colspan="3"><p><input type='text' name='user-address' class="login__input" value="<%=session.getAttribute("address") %>" readonly></p></td>
+				<td></td>
+				<td><p><button type='submit' class="btn btn-md btn--warning">주소 변경</button></p></td>
 				</tr>
 				
 				
@@ -172,6 +174,13 @@
 
 	<!-- Custom -->
 	<script src="<%=ctx%>/resources/js/custom.js"></script>
+
+
+
+
+
+
+
 
 
 

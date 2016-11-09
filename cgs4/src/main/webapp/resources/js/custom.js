@@ -1394,7 +1394,8 @@ function init_MoviePage () {
                 $('.movie__media .swiper-slide').on('mousedown', function(e){
                     toggle = true;
                     $(this).on('mousemove', function testMove(){
-                          toggle = false;
+                    	//스틸컷, 트레일러 페이지 이동 막음. (false->true)
+                          toggle = true;
                     });
                 });
 

@@ -68,8 +68,7 @@ color: #fff;
 		</div>
 
 		<!-- main nav -->
-		<nav class="collapse navigation navbar-collapse navbar-right"
-			role="navigation">
+		<nav class="collapse navigation navbar-collapse navbar-right" role="navigation">
 		<ul id="nav" class="nav navbar-nav">
 			<li><a href="index">Home</a></li>
 			<li><a href="movie_list?page=0">Movie</a></li>

@@ -139,8 +139,7 @@
 <!-- 							<span class="movie__rating">5.0</span>  -->
 							<img alt='' src="<%=ctx %>/resources/images/poster/${film.film_ID}.jpg">
 						</div>
-						<div class="movie__rate"> Your vote: <div id="score" class="score"></div>
-						</div>
+						
 					</div>
 
 					<div class="col-sm-8 col-md-9">
@@ -150,7 +149,7 @@
 							<strong>Country: </strong>${film.country}</p>
 						<!--                             <p class="movie__option"><strong>Year: </strong><a href="#">2012</a></p> -->
 						<p class="movie__option">
-							<strong>Category: </strong>${film.genre}</p>
+							<strong>Genre: </strong>${film.genre}</p>
 						<p class="movie__option">
 							<strong>Release date: </strong>${film.release_date}</p>
 						<p class="movie__option">

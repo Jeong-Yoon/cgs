@@ -99,7 +99,7 @@
         <!-- Main content -->
         <section class="container">
             <div class="col-sm-12">
-                <h2 class="page-heading">Movie Chart</h2>
+                <h2 class="page-heading"><strong>Movie Chart</strong></h2>
 
                 <div class="tags-area tags-area--thin">
                 <br>

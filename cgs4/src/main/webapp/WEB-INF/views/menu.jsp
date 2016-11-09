@@ -41,7 +41,7 @@ color: #fff;
 <!-- Bootstrap -->
 <link rel="stylesheet" href="<%=ctx%>/resources/css/bootstrap.min.css">
 <link href="<%=ctx%>/resources/css/style.css?v=1" rel="stylesheet" />
-<link rel="stylesheet" href="<%=ctx%>/resources/css/main.css">
+
 </head>
 <body>
 	<div style="height: 100px"></div>
@@ -62,14 +62,13 @@ color: #fff;
 
 			<!-- logo -->
 			<a href='index' class="navbar-brand"> <img
-				src="<%=ctx%>/resources/images/logo-header.png" alt="LogoCGS" style="height:75%; width:75%;">
+				src="<%=ctx%>/resources/images/logo-header.png" alt="LogoCGS" style="width: 75%; height: 75%;">
 			</a>
 			<!-- /logo -->
 		</div>
 
 		<!-- main nav -->
-		<nav class="collapse navigation navbar-collapse navbar-right"
-			role="navigation">
+		<nav class="collapse navigation navbar-collapse navbar-right" role="navigation">
 		<ul id="nav" class="nav navbar-nav">
 			<li><a href="index">Home</a></li>
 			<li><a href="movie_list?page=0">Movie</a></li>

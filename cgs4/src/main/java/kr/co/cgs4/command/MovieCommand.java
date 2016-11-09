@@ -1,5 +1,6 @@
 package kr.co.cgs4.command;
 
+import java.sql.Date;
 import java.util.ArrayList;
 import java.util.Map;
 
@@ -35,7 +36,8 @@ public class MovieCommand implements Command{
 			System.out.println(film_name);
 			String site_name = request.getParameter("site_name");
 			System.out.println(site_name);
-			String screening_date = request.getParameter("screening_date");
+			String sScreening_date = request.getParameter("screening_date");
+			Date screening_date = java.sql.Date.valueOf(sScreening_date);
 			ArrayList<Book_ScreeningInfo> bdto = bdao.screening_date(film_name, site_name, screening_date);
 			ArrayList<Book_ScreenNum> scdto = bdao.screening_num(film_name, site_name, screening_date);
 			model.addAttribute("blist", bdto);

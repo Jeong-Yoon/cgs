@@ -2,15 +2,13 @@ package kr.co.cgs4.dao;
 
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.sql.Timestamp;
 import java.util.ArrayList;
+import java.util.Date;
 
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.PreparedStatementSetter;
-import org.springframework.transaction.PlatformTransactionManager;
-import org.springframework.transaction.TransactionDefinition;
-import org.springframework.transaction.TransactionStatus;
-import org.springframework.transaction.support.DefaultTransactionDefinition;
 
 import kr.co.cgs4.dto.Book_ScreenNum;
 import kr.co.cgs4.dto.Book_ScreeningInfo;
@@ -18,7 +16,6 @@ import kr.co.cgs4.dto.Book_SeatOccupation;
 import kr.co.cgs4.dto.Book_SeatRow;
 import kr.co.cgs4.dto.FilmDTO;
 import kr.co.cgs4.dto.MemberDTO;
-import kr.co.cgs4.dto.Sale_SeatDTO;
 import kr.co.cgs4.dto.SeatDTO;
 import kr.co.cgs4.util.Constant;
 
@@ -40,14 +37,14 @@ public class BookDAO {
 	
 
 	//book1에 필요한 상영정보, 상영관 정보
-	public ArrayList<Book_ScreeningInfo> screening_date(String film_name, String site_name, String screening_date){
+	public ArrayList<Book_ScreeningInfo> screening_date(String film_name, String site_name, Date screening_date){
 		String query = "select sc.SCREENING_ID, film_name, site_name, sc.screening_date, sc.screen_num, start_time, seating_cnt "
 				+ "from SCREENING sc, site,screen where sc.SITE_ID = site.SITE_ID and site.site_id=screen.site_id "
 				+ "and film_name= '"+film_name+"' and site_name = '"+site_name+"' and screening_date = '"+screening_date+"' "
 				+ "group by sc.SCREENING_ID, film_name, site_name, sc.screening_date, sc.screen_num, start_time, seating_cnt order by sc.SCREENING_ID";
 		return (ArrayList<Book_ScreeningInfo>) template.query(query, new BeanPropertyRowMapper<Book_ScreeningInfo>(Book_ScreeningInfo.class));
 	}
-	public ArrayList<Book_ScreenNum> screening_num(String film_name, String site_name, String screening_date){
+	public ArrayList<Book_ScreenNum> screening_num(String film_name, String site_name, Date screening_date){
 		String query = "select film_name, site_name, sc.screening_date, sc.screen_num "
 				+ "from SCREENING sc, site,screen "
 				+ "where sc.SITE_ID = site.SITE_ID and site.site_id=screen.site_id "
@@ -80,7 +77,7 @@ public class BookDAO {
 		return (ArrayList<Book_SeatRow>) template.query(query, new BeanPropertyRowMapper<Book_SeatRow>(Book_SeatRow.class));
 	}
 
-	public void saleSubmit(final String SALE_ID,final String CURRDATE, final int SALE_PRICE, final String PAYCARD_NUMBER, final String SCREENING_ID, final int SALE_COUNT, final int COMMON_CNT, final int FINAL_PRICE, final int YOUNG_CNT, final int SPECIAL_CNT, final String[] sits, final String id, final String reserve_ID){
+	public void saleSubmit(final String SALE_ID,final java.sql.Date CURRDATE, final int SALE_PRICE, final String PAYCARD_NUMBER, final String SCREENING_ID, final int SALE_COUNT, final int COMMON_CNT, final int FINAL_PRICE, final int YOUNG_CNT, final int SPECIAL_CNT, final String[] sits, final String id, final String reserve_ID){
 		System.out.println(id);
 //		TransactionDefinition definition = new DefaultTransactionDefinition();
 //		TransactionStatus status = transactionManager.getTransaction(definition);
@@ -94,7 +91,7 @@ public class BookDAO {
 			@Override
 			public void setValues(PreparedStatement ps) throws SQLException {
 				ps.setString(1, SALE_ID);
-				ps.setString(2, CURRDATE);
+				ps.setDate(2, CURRDATE);
 				ps.setInt(3, SALE_PRICE);
 				ps.setString(4, PAYCARD_NUMBER);
 				ps.setString(5, SCREENING_ID);
@@ -118,7 +115,7 @@ public class BookDAO {
 			template.update(setQuery, new PreparedStatementSetter() {
 				@Override
 				public void setValues(PreparedStatement ps) throws SQLException {
-					ps.setString(1, CURRDATE);
+					ps.setDate(1, CURRDATE);
 					ps.setString(2, SALE_ID);
 					ps.setString(3, SCREENING_ID);
 					ps.setString(4, seat_ID);
@@ -132,7 +129,7 @@ public class BookDAO {
 			public void setValues(PreparedStatement ps) throws SQLException {
 				ps.setString(1, id);
 				ps.setString(2, SALE_ID);
-				ps.setString(3, CURRDATE);
+				ps.setDate(3, CURRDATE);
 			}
 		}); 
 		//reserve에 넣을 회원의 이름, 전화번호 구해옴.
@@ -148,7 +145,7 @@ public class BookDAO {
 				ps.setString(2, mdto.getName());
 				ps.setString(3, mdto.getPhone_num());
 				ps.setString(4, SALE_ID);
-				ps.setString(5, CURRDATE);
+				ps.setDate(5, CURRDATE);
 			}
 		}); 
 

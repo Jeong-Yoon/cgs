@@ -1,17 +1,16 @@
 package kr.co.cgs4.controller;
 
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.sql.Date;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
-import java.util.Locale;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.transaction.TransactionStatus;
-import org.springframework.transaction.support.TransactionCallbackWithoutResult;
-import org.springframework.transaction.support.TransactionTemplate;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -22,13 +21,12 @@ import kr.co.cgs4.dao.BookDAO;
 import kr.co.cgs4.dto.Book_BookInfo;
 import kr.co.cgs4.dto.Book_BuyConfirm;
 import kr.co.cgs4.dto.Book_ScreenNum;
-import kr.co.cgs4.dto.FilmDTO;
-import kr.co.cgs4.dto.SaleDTO;
-import kr.co.cgs4.dto.Sale_SeatDTO;
-import kr.co.cgs4.dto.SeatDTO;
 import kr.co.cgs4.dto.Book_ScreeningInfo;
 import kr.co.cgs4.dto.Book_SeatOccupation;
 import kr.co.cgs4.dto.Book_SeatRow;
+import kr.co.cgs4.dto.FilmDTO;
+import kr.co.cgs4.dto.SaleDTO;
+import kr.co.cgs4.dto.SeatDTO;
 
 @Controller
 public class BookController {
@@ -36,22 +34,34 @@ public class BookController {
 	
 	
 	@RequestMapping("/book1")
-	public String book1(Model model, HttpServletRequest hsr) {
+	public String book1(Model model, HttpServletRequest hsr, HttpSession session, HttpServletResponse response) throws IOException {
 	System.out.println("book1()");
-	BookDAO bdao = new BookDAO();
-	//리퀘스트 받아온 값이 null이 아닐때만 좌석정보 불러옴.
-	if(hsr.getParameter("film_name")!=null){
-		String film_name = hsr.getParameter("film_name");
-		String site_name = hsr.getParameter("site_name");
-		String screening_date = hsr.getParameter("screening_date");
-		ArrayList<Book_ScreeningInfo> bdto = bdao.screening_date(film_name, site_name, screening_date);
-		ArrayList<Book_ScreenNum> scdto = bdao.screening_num(film_name, site_name, screening_date);
-		model.addAttribute("blist", bdto);
-		model.addAttribute("scNum", scdto);
+	if(session.getAttribute("id")!=null){
+		BookDAO bdao = new BookDAO();
+		//리퀘스트 받아온 값이 null이 아닐때만 좌석정보 불러옴.
+		if(hsr.getParameter("film_name")!=null){
+			String film_name = hsr.getParameter("film_name");
+			String site_name = hsr.getParameter("site_name");
+			String sScreening_date = hsr.getParameter("screening_date");
+			System.out.println(sScreening_date);
+			Date screening_date = java.sql.Date.valueOf(sScreening_date);
+			
+			System.out.println(screening_date);
+			ArrayList<Book_ScreeningInfo> bdto = bdao.screening_date(film_name, site_name, screening_date);
+			ArrayList<Book_ScreenNum> scdto = bdao.screening_num(film_name, site_name, screening_date);
+			model.addAttribute("blist", bdto);
+			model.addAttribute("scNum", scdto);
+		}
+		ArrayList<FilmDTO> fdto = bdao.film_list();
+		model.addAttribute("flist", fdto);
+		return "book/book1";
+	}else{
+		response.setContentType("text/html; charset=UTF-8");    	
+    	PrintWriter out =response.getWriter();
+    	out.println("<script>alert('로그인이 필요합니다.'); history.go(-1);</script>");
+    	out.close();
+		return "index";
 	}
-	ArrayList<FilmDTO> fdto = bdao.film_list();
-	model.addAttribute("flist", fdto);
-	return "book/book1";
 	}
 	
 	@RequestMapping("/book2")

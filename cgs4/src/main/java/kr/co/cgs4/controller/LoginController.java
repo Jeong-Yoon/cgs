@@ -95,15 +95,15 @@ public class LoginController {
     		session.setAttribute("birth", birth);
     		
     		//161016 형태
-    		String showYear = jumin.substring(2,2);
-    		String showMonth = jumin.substring(5,2);
-    		String showDay = jumin.substring(8,2);
-    		
-    		String showJumin = showYear+ showMonth +  showDay;
-    		
-    		System.out.println(showJumin);
-    		
-    		session.setAttribute("showJumin", showJumin);
+//    		String showYear = jumin.substring(2,2);
+//    		String showMonth = jumin.substring(5,2);
+//    		String showDay = jumin.substring(8,2);
+//    		
+//    		String showJumin = showYear+ showMonth +  showDay;
+//    		
+//    		System.out.println(showJumin);
+//    		
+//    		session.setAttribute("showJumin", showJumin);
   
     		
     		

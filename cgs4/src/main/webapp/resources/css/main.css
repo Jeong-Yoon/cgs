@@ -160,6 +160,9 @@ ol, ul {
 
 figure, p {
     margin: 0;
+    font-family: "LotteMartDream";
+    font-weight: 200;
+    font-size:12px;
 }
 
 a {
@@ -324,12 +327,12 @@ width: 11px;
 
 .navigation .navbar-nav > li.current > a {
   color: #3C6499;
-  border-bottom: 1px solid #3C6499;
+  border-bottom: 2spx solid #3C6499;
 }
 
 .animated-nav .navigation .navbar-nav > li.current > a {
   color: #fff;
-  border-bottom: 1px solid #fff;
+  border-bottom: 2px solid #fff;
 }
 
 .navigation .navbar-nav > li > a:focus,
@@ -368,6 +371,17 @@ width: 11px;
 .animated-nav .search-form > #search-sub {
     bottom: 22px;
 }
+
+.logo img {
+	width: 110px;
+	height: 50px;
+	min-width: 125px;
+	max-height: 100%;
+
+	 padding: 5px;
+   margin-top: 13px;
+}
+
 
 /*************************
 *******Main Slider******
@@ -570,7 +584,9 @@ width: 11px;
 ============================================================*/
 
 #projects {
-    width: 100%;
+    width: 90%;
+    margin-left:5%;
+    margin-bottom: 100px;
 }
 
 .project-filter {
@@ -603,9 +619,8 @@ width: 11px;
 
 .portfolio-item {
     position: relative;
-    float: left;
     overflow: hidden;
-    width: 25%;
+    width: 24%;
 }
 
 .plus {
@@ -627,8 +642,8 @@ width: 11px;
 }
 
 figcaption.mask {
-  background-color: #fff;
-  bottom: -101px;
+  background-color: 	#fff;
+  bottom: -70%;
   left: 0;
   padding: 30px 0 30px 30px;
   position: absolute;
@@ -665,6 +680,7 @@ figcaption.mask span {
   margin-top: 15px;
   margin-left: 10px;
   font-family: Godo;
+  padding: relative;
 }
 
 .btn-book-blue {
@@ -674,6 +690,7 @@ figcaption.mask span {
   margin-top: 15px;
   margin-left: 10px;
   font-family: Godo;
+    width: auto;
 }
 
 
@@ -977,7 +994,7 @@ figcaption.mask span {
 ============================================================*/
 
 #subscribe {
-  background-color: #1f2021;
+  background-color: transparent;
   color: #fff;
   line-height: 24px;
 }
@@ -995,21 +1012,23 @@ figcaption.mask span {
 
 .subscription-form .subscribe {
   background-color: transparent;
-  border: 1px solid #fff;
+  border: 1.5px solid #3C6499;
   color: #fff;
-  height: 58px;
+  height: 50px;
   text-indent: 60px;
   width: 100%;
+  font-family: 'LotteMartDream'
 }
 
 .subscription-form #mail-submit {
   background-color: #3C6499;
   border: 0 none;
   color: #fff;
-  padding: 16px 35px;
+  padding: 12.5px 35px;
   position: absolute;
   right: 1px;
   top: 1px;
+  font-family: 'LotteMartDream'
 }
 
 
@@ -1060,11 +1079,19 @@ figcaption.mask span {
 
 #footer {
     background-color: #121116;
-    padding: 115px 0 35px;
+    padding: 80px 0 25px;
 }
 
 .footer-logo {
-    margin-bottom: 45px;
+    margin-bottom: 35px;
+}
+
+.footer-logo-img{
+	width: 200px;
+	height: 80px;
+	min-width: 125px;
+	max-height: 100%;
+	margin-top: 15px;
 }
 
 .footer-social {
@@ -1121,4 +1148,8 @@ figcaption.mask span {
 
 .copyright p:first-child {
     margin-bottom: 15px;
+}
+
+.clearfix {
+	clear: both;
 }

@@ -36,8 +36,8 @@ public class SignupController {
 		String getPW = request.getParameter("user-password");
 		String getPWcheck =request.getParameter("user-passwordok");
 		
-		int pw=Integer.parseInt(getPW);
-		int pwcheck = Integer.parseInt(getPWcheck);
+//		int pw=Integer.parseInt(getPW);
+//		int pwcheck = Integer.parseInt(getPWcheck);
 		
 		//이름
 		String getUserName =request.getParameter("user-name");
@@ -64,7 +64,7 @@ public class SignupController {
 		
 		try{
 		
-			if(pw!=pwcheck){
+			if(!getPW.equals(getPWcheck)){
 	        	//자바에서 경고창띄우는부분
 	        	response.setContentType("text/html; charset=UTF-8");    	
 	        	PrintWriter out =response.getWriter();

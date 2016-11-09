@@ -67,7 +67,7 @@ public class BookDAO {
 		System.out.println(SCREENING_ID);
 		System.out.println(SALE_COUNT);
 		
-		String query= "INSERT INTO SALE VALUES ('?', '0', '0', '?', '?', '?', '0', '?', '?', '0', '0', '?', '1', '?', '?', '?')";
+		String query= "INSERT INTO SALE VALUES (?, '0', '0', ?, ?, ?, '0', ?, ?, '0', '0', ?, '1', ?, ?, ?)";
 		template.update(query, new PreparedStatementSetter() {
 			
 			@Override
@@ -91,11 +91,11 @@ public class BookDAO {
 		String[] rowCol = sit.split("");
 		String rowNum = rowCol[0];
 		String colNum = rowCol[1];
-		String getQuery= "select seat_id from seat where row_num='"+rowNum+"' and col_num='"+colNum+"';";
+		String getQuery= "select seat_id from seat where row_num='"+rowNum+"' and col_num='"+colNum+"'";
 		final String seat_ID = template.queryForObject(getQuery, new BeanPropertyRowMapper<String>());
 		//sale_seat 에 넣기
 		System.out.println("seat입력됨.");
-		String setQuery= "INSERT INTO SALE_SEAT VALUES ('?', '?', '0', '?')";
+		String setQuery= "INSERT INTO SALE_SEAT VALUES (?, ?, '0', ?)";
 		template.update(setQuery, new PreparedStatementSetter() {
 			@Override
 			public void setValues(PreparedStatement ps) throws SQLException {

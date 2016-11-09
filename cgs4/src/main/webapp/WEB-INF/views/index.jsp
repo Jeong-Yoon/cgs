@@ -125,30 +125,33 @@
 		</div>
 	</header>
 
-	<section id="first-main"
-		data-vide-bg="<%=ctx%>/resources/video/mainvideo">
+	<section id="first-main">
 
 	<div id="home-carousel" class="carousel slide" data-interval="false">
 		<ol class="carousel-indicators">
 			<li data-target="#home-carousel" data-slide-to="0" class="active"></li>
 			<li data-target="#home-carousel" data-slide-to="1"></li>
 			<li data-target="#home-carousel" data-slide-to="2"></li>
-						<li data-target="#home-carousel" data-slide-to="3"></li>
+			<li data-target="#home-carousel" data-slide-to="3"></li>
+			<li data-target="#home-carousel" data-slide-to="4"></li>
 		</ol>
 		<!--/.carousel-indicators-->
 		
 		<div class="carousel-inner">
-			<div class="item active">
-				<div class="carousel-caption">
+			<div class="item active" data-vide-bg="<%=ctx%>/resources/video/mainvideo">
+				<div class="carousel-caption" >
 					<div class="animated bounceInRight">
 						<h2>
-							FANTASTIC CINEMA, <br>FANTASIC CGS!
+							FANTASTIC CINEMA, 
+						</h2>
+						<h2 style="color:#F0C419">
+							<strong>FANTASIC CGS</strong>
 						</h2>
 						<p style="font-family: Godo">Go on a trip to Wonderland
 							with us.</p>
 					</div>
 				</div>
-			</div>
+</div>
 
 			<div class="item"
 				style="background-image: url('<%=ctx%>/resources/images/slider/bg1.jpg')">
@@ -161,6 +164,11 @@
 			<div class="item"
 				style="background-image: url('<%=ctx%>/resources/images/slider/bg3.jpg')">
 			</div>
+			
+			<div class="item"
+				style="background-image: url('<%=ctx%>/resources/images/slider/bg4.jpg')">
+			</div>
+			
 		</div>
 		<!--/.carousel-inner-->
 		<nav id="nav-arrows"

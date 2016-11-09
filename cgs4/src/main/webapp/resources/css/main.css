@@ -208,7 +208,7 @@ h4, h5, h6 {
 }
 
 body > section {
-    padding: 80px 0;
+    padding: 0;
 }
 
 .section-title {
@@ -264,7 +264,7 @@ width: 11px;
 }
 
 .btn-blue {
-  background-color: #3C6499;
+  background-color: #F0C419;
   color: #fff;
   font-size: 16px;
   line-height: 24px;
@@ -326,8 +326,8 @@ width: 11px;
 }
 
 .navigation .navbar-nav > li.current > a {
-  color: #3C6499;
-  border-bottom: 2spx solid #3C6499;
+  color: #fff;
+  border-bottom: 2spx solid rgba(0, 0, 3, 0.7);
 }
 
 .animated-nav .navigation .navbar-nav > li.current > a {
@@ -398,7 +398,7 @@ width: 11px;
 }
 
 .carousel-caption > div {
-  background-color: rgba(60,100,153,0.6);
+  background-color: rgba(0,0,3,0.6);
   padding: 60px 50px 80px 20%;
   position: absolute;
   top: 25%;
@@ -451,19 +451,19 @@ width: 11px;
 }
 
 #nav-arrows > a.sl-prev:hover {
-    background-color: #3C6499;
-    border-color: #3C6499;
-    color: #fff;
+    background-color: transparent;
+    border-color: #F0C419;
+    color: #F0C419;
 }
 
 #nav-arrows > a.sl-next:hover {
-    background-color: #3C6499;
-    border-color: #3C6499;
-    color: #fff;
+    background-color: transparent;
+    border-color: #F0C419;
+    color: #F0C419;
 }
 
 .carousel-indicators .active {
-  background-color: #3C6499;
+  background-color: #F0C419;
   border: 0;
 }
 
@@ -477,7 +477,7 @@ width: 11px;
 }
 
 #service .media .media-body h3{
-    color: #3C6499;
+    color: #F0C419;
     font-weight: 400;
     font-size: 20px;
     margin-bottom: 15px;
@@ -511,7 +511,7 @@ width: 11px;
 }
 
 .service-item h3 {
-  color: #3C6499;
+  color: #F0C419;
   font-size: 20px;
   margin-bottom: 28px;
 }
@@ -601,12 +601,13 @@ width: 11px;
   font-family: LotteMartDream;
 /* 	font-family: Godo; */
 	font-size: 17px;
+
 }
 
 .project-filter ul li a:hover,
 .project-filter ul li a.active {
-    background-color: #3C6499;
-    color: #fff;
+    background-color: #F0C419;
+    color: #5D5D5D;
 }
 
 .mix {
@@ -620,7 +621,7 @@ width: 11px;
 }
 
 .plus {
-  background: url("../resources/images/icons/plus.png") no-repeat scroll center center #3C6499;
+  background: url("../resources/images/icons/plus.png") no-repeat scroll center center #F0C419;
   border-radius: 50%;
   display: block;
   height: 80px;
@@ -667,12 +668,12 @@ figcaption.mask h3 {
 }
 
 figcaption.mask span {
-  color: #3C6499;
+  color: #5D5D5D;
 }
 
 .btn-book {
-  border: 1.5px solid #3C6499;
-  color: #3C6499;
+  border: 1.5px solid #F0C419;
+  color: #F0C419;
   margin-top: 15px;
   margin-left: 10px;
   font-family: Godo;
@@ -680,8 +681,8 @@ figcaption.mask span {
 }
 
 .btn-book-blue {
-  background-color: #3C6499;
-  border: 1.5px solid #3C6499;
+  background-color: #F0C419;
+  border: 1.5px solid #F0C419;
   color: #fff;
   margin-top: 15px;
   margin-left: 10px;
@@ -833,8 +834,8 @@ figcaption.mask span {
 
 .owl-controls .owl-page.active span,
 .owl-controls .owl-page:hover span {
-  background-color: #3C6499;
-  border-color: #3C6499;
+  background-color: #F0C419;
+  border-color: #F0C419;
 }
 
 
@@ -857,7 +858,7 @@ figcaption.mask span {
 .progress .bar {
   width: 0;
   height: 25px;
-  background-color: #3C6499;
+  background-color: #F0C419;
 
   -webkit-transition: width 0.6s ease;
      -moz-transition: width 0.6s ease;
@@ -878,7 +879,7 @@ figcaption.mask span {
 }
 
 .progress-success .bar, .progress-green .bar {
-  background-color: #3C6499;
+  background-color: #F0C419;
 
 }
 
@@ -916,7 +917,7 @@ figcaption.mask span {
 }
 
 .pricing-table .price {
-  border-top: 1px solid #3C6499;
+  border-top: 1px solid #F0C419;
   padding: 35px 0 45px;
 }
 
@@ -944,8 +945,8 @@ figcaption.mask span {
 }
 
 .pricing-table ul {
-  border-bottom: 1px solid #3C6499;
-  border-top: 1px solid #3C6499;
+  border-bottom: 1px solid #F0C419;
+  border-top: 1px solid #F0C419;
 }
 
 .pricing-table ul li {
@@ -955,7 +956,7 @@ figcaption.mask span {
 }
 
 .pricing-table ul li:after {
-  border-bottom: 1px solid #3C6499;
+  border-bottom: 1px solid #F0C419;
   bottom: 0;
   content: "";
   display: block;
@@ -1008,7 +1009,7 @@ figcaption.mask span {
 
 .subscription-form .subscribe {
   background-color: transparent;
-  border: 1.5px solid #3C6499;
+  border: 1.5px solid #9B3561;
   color: #fff;
   height: 50px;
   text-indent: 60px;
@@ -1017,7 +1018,7 @@ figcaption.mask span {
 }
 
 .subscription-form #mail-submit {
-  background-color: #3C6499;
+  background-color: #9B3561;
   border: 0 none;
   color: #fff;
   padding: 12.5px 35px;
@@ -1121,7 +1122,7 @@ figcaption.mask span {
 }
 
 .footer-social ul li a:hover {
-  color: #3C6499;
+  color: #F0C419;
 }
 
 .copyright {
@@ -1131,7 +1132,7 @@ figcaption.mask span {
 }
 
 .copyright a {
-    color: #3C6499;
+    color: #F0C419;
 }
 
 .copyright a:hover {

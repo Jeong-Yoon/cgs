@@ -82,15 +82,15 @@ color: #fff;
 		<!-- main nav -->
 		<nav class="collapse navigation navbar-collapse navbar-right" role="navigation">
 		<ul id="nav" class="nav navbar-nav">
-			<li><a href="index">Home</a></li>
-			<li><a href="movie_list?page=0">Movie</a></li>
-			<li><a href="book1">Ticket</a></li>
-			<li><a href="cinemas">Cinema</a></li>
-			<li><a href="contact">Contact</a></li>
+			<li><a href="<%=ctx%>/index">Home</a></li>
+			<li><a href="<%=ctx%>/movie_list?page=0">Movie</a></li>
+			<li><a href="<%=ctx%>/book1">Ticket</a></li>
+			<li><a href="<%=ctx%>/cinemas">Cinema</a></li>
+			<li><a href="<%=ctx%>/contact">Contact</a></li>
 			<%
 				if ((String) session.getAttribute("id") == null) {
 			%>
-			<li><a href="login">Login</a></li>
+			<li><a href="<%=ctx%>/login">Login</a></li>
 			<%
 				} else {
 					String name = (String) session.getAttribute("name");
@@ -99,10 +99,10 @@ color: #fff;
 				<ul class="auth__function">
 					<li class="auth__function-item">안녕하세요 <strong><%=name%></strong>님!</li>
 					<br>
-					<li><a href="modify" class="auth__function-item">내 정보 확인</a></li>
+					<li><a href="<%=ctx%>/modify" class="auth__function-item">내 정보 확인</a></li>
 					<li><a href="<%=ctx%>/reserve_list/?mId=<%=(String) session.getAttribute("id") %>" class="auth__function-item">예매 내역 확인</a></li>
 				</ul></li>
-			<li><a href="logout">Logout</a></li>
+			<li><a href="<%=ctx%>/logout">Logout</a></li>
 			<%
 				}
 			%>

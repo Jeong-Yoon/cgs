@@ -2,33 +2,40 @@ package kr.co.cgs4.dao;
 
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
-import java.sql.Timestamp;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
-import java.util.Locale;
 
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.PreparedStatementSetter;
+import org.springframework.transaction.PlatformTransactionManager;
+import org.springframework.transaction.TransactionDefinition;
+import org.springframework.transaction.TransactionStatus;
+import org.springframework.transaction.support.DefaultTransactionDefinition;
 
-import kr.co.cgs4.dto.FilmDTO;
-import kr.co.cgs4.dto.MemberDTO;
-import kr.co.cgs4.dto.SaleDTO;
-import kr.co.cgs4.dto.SeatDTO;
 import kr.co.cgs4.dto.Book_ScreenNum;
 import kr.co.cgs4.dto.Book_ScreeningInfo;
 import kr.co.cgs4.dto.Book_SeatRow;
+import kr.co.cgs4.dto.FilmDTO;
+import kr.co.cgs4.dto.SeatDTO;
 import kr.co.cgs4.util.Constant;
 
 public class BookDAO {
-
-    JdbcTemplate template =null;
 	
+    JdbcTemplate template =null;
+
+//	PlatformTransactionManager transactionManager;
+	
+	public void setTemplate(JdbcTemplate template) {
+		this.template = template;
+	}
+//	public void setTransactionManager(PlatformTransactionManager transactionManager) {
+//		this.transactionManager = transactionManager;
+//	}
 	public  BookDAO(){
 		this.template = Constant.template;
 	}
+	
+
 	
 	public ArrayList<Book_ScreeningInfo> screening_date(String film_name, String site_name, String screening_date){
 		String query = "select sc.SCREENING_ID, film_name, site_name, sc.screening_date, sc.screen_num, start_time, seating_cnt "
@@ -55,18 +62,19 @@ public class BookDAO {
 		String query = "select site_name, row_num, screen_num "
 				+ "from (select ROWNUM rn, e.* from seat e) b, site "
 				+ "where b.site_id=site.site_id and site_name='"+site_name+"' and screen_num='"+screen_num+"' "
-				+ "group by site_name, row_num,  order by row_num";
+				+ "group by site_name, row_num, screen_num order by row_num";
 
 		return (ArrayList<Book_SeatRow>) template.query(query, new BeanPropertyRowMapper<Book_SeatRow>(Book_SeatRow.class));
 	}
-	public void saleSubmit(final String SALE_ID,final String CURRDATE, final int SALE_PRICE, final String PAYCARD_NUMBER, final String SCREENING_ID, final int SALE_COUNT, final int COMMON_CNT, final int FINAL_PRICE, final int YOUNG_CNT, final int SPECIAL_CNT){
-		System.out.println(SALE_ID);
-		System.out.println(CURRDATE);
-		System.out.println(SALE_PRICE);
-		System.out.println(PAYCARD_NUMBER);
-		System.out.println(SCREENING_ID);
-		System.out.println(SALE_COUNT);
+
+	public void saleSubmit(final String SALE_ID,final String CURRDATE, final int SALE_PRICE, final String PAYCARD_NUMBER, final String SCREENING_ID, final int SALE_COUNT, final int COMMON_CNT, final int FINAL_PRICE, final int YOUNG_CNT, final int SPECIAL_CNT, final String[] sits, final String id){
+		System.out.println(id);
+//		TransactionDefinition definition = new DefaultTransactionDefinition();
+//		TransactionStatus status = transactionManager.getTransaction(definition);
 		
+
+//		try {
+		//sale 넣기
 		String query= "INSERT INTO SALE VALUES (?, '0', '0', ?, ?, ?, '0', ?, ?, '0', '0', ?, '1', ?, ?, ?)";
 		template.update(query, new PreparedStatementSetter() {
 			
@@ -84,38 +92,52 @@ public class BookDAO {
 				ps.setInt(10, SPECIAL_CNT);
 			}
 		});
-	}
-	public void saleSeat(String sit, final String date, final String sale_id, final String screening_id){
-		//seat_id 구하기
-		System.out.println(sit);
-		String[] rowCol = sit.split("");
-		String rowNum = rowCol[0];
-		String colNum = rowCol[1];
-		String getQuery= "select seat_id from seat where row_num='"+rowNum+"' and col_num='"+colNum+"'";
-		final String seat_ID = template.queryForObject(getQuery, new BeanPropertyRowMapper<String>());
-		//sale_seat 에 넣기
-		System.out.println("seat입력됨.");
-		String setQuery= "INSERT INTO SALE_SEAT VALUES (?, ?, '0', ?)";
-		template.update(setQuery, new PreparedStatementSetter() {
+		//sits의 개수만큼 돌면서 seat_sale 넣기
+		for (int i = 0; i < sits.length; i++) {
+			String[] rowCol = sits[i].trim().split("");
+			String rowNum = rowCol[0];
+			String colNum = rowCol[1];
+			String getQuery= "select seat_id from seat where row_num='"+rowNum+"' and col_num='"+colNum+"'";
+			SeatDTO sdto = template.queryForObject(getQuery, new BeanPropertyRowMapper<SeatDTO>(SeatDTO.class));
+			//sale_seat 에 넣기
+			final String seat_ID = sdto.getSeat_ID();
+			String setQuery= "INSERT INTO SALE_SEAT VALUES (?, ?, ?, ?)";
+			template.update(setQuery, new PreparedStatementSetter() {
+				@Override
+				public void setValues(PreparedStatement ps) throws SQLException {
+					ps.setString(1, CURRDATE);
+					ps.setString(2, SALE_ID);
+					ps.setString(3, SCREENING_ID);
+					ps.setString(4, seat_ID);
+				}
+			});
+		}
+		//member_sale 넣기
+		String memQuery= "INSERT INTO member_sale VALUES ('0', ?, ?, ?)";
+		template.update(memQuery, new PreparedStatementSetter() {
 			@Override
 			public void setValues(PreparedStatement ps) throws SQLException {
-				ps.setString(1, date);
-				ps.setString(2, sale_id);
-				ps.setString(3, screening_id);
-				ps.setString(4, seat_ID);
+				ps.setString(1, id);
+				ps.setString(2, SALE_ID);
+				ps.setString(3, CURRDATE);
 			}
-		});
-//		16/10/28	12345678	00001	0101001
+		}); 
+
+//		transactionManager.commit(status);
+		
+//	} catch (Exception e) {
+//		e.printStackTrace();
+		
+//		transactionManager.rollback(status);
+//	}
 	}
-//	select site_name, row_num, screen_num 
-//	from (select ROWNUM rn, e.* from seat e) b, site 
-//	where b.site_id=site.site_id and site_name='강변점' and screen_num='01' 
-//	group by site_name, row_num, screen_num order by row_num;
+	
 	
 	
 	public ArrayList<FilmDTO> film_list(){
 		String query = "select * from film" ;
 		return (ArrayList<FilmDTO>)template.query(query, new BeanPropertyRowMapper<FilmDTO>(FilmDTO.class));
 	}
+
 	
 }

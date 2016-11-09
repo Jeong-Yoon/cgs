@@ -53,32 +53,13 @@
 <link href="<%=ctx%>/resources/css/external/idangerous.swiper.css"
 	rel="stylesheet" />
 
-<!-- REVOLUTION BANNER CSS SETTINGS -->
-<link rel="stylesheet" type="text/css"
-	href="<%=ctx%>/resources/rs-plugin/css/settings.css" media="screen" />
-
-<!-- Fontawesome -->
-<link rel="stylesheet" href="<%=ctx%>/resources/css/font-awesome.min.css">
-<!-- Bootstrap -->
-<link rel="stylesheet" href="<%=ctx%>/resources/css/bootstrap.min.css">
-<!-- Fancybox -->
-<link rel="stylesheet" href="<%=ctx%>/resources/css/jquery.fancybox.css">
 
 <!-- Custom -->
 <link href="<%=ctx%>/resources/css/style.css?v=1" rel="stylesheet" />
-<!-- owl carousel -->
-<link rel="stylesheet" href="<%=ctx%>/resources/css/owl.carousel.css">
-<!-- Animate -->
-<link rel="stylesheet" href="<%=ctx%>/resources/css/animate.css">
-<!-- Main Stylesheet -->
-<link rel="stylesheet" href="<%=ctx%>/resources/css/main.css">
-<!-- Main Responsive -->
-<link rel="stylesheet" href="<%=ctx%>/resources/css/responsive.css">
-
 <!-- Modernizr -->
 <script src="<%=ctx%>/resources/js/external/modernizr.custom.js"></script>
 <!-- Modernizer Script for old Browsers -->
-<script src="<%=ctx%>/js/external/modernizr-2.6.2.min.js"></script>
+<%-- <script src="<%=ctx%>/js/external/modernizr-2.6.2.min.js"></script> --%>
 
 <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!--[if lt IE 9]> 

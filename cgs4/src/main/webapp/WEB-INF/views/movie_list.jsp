@@ -117,14 +117,6 @@
 <!--                         </select> -->
                     </form>
 
-                    <div class="tags tags--unmarked tags--aside">
-                        <span class="tags__label">Sorted by:</span>
-                            <ul>
-                                <li class="item-wrap"><a href="#" class="tags__item item-active" data-filter='reserve_rate'>예매율</a></li>
-                                <li class="item-wrap"><a href="#" class="tags__item" data-filter='grade'>평점</a></li>
-<!--                                 <li class="item-wrap"><a href="#" class="tags__item" data-filter='popularity'>popularity</a></li> -->
-                            </ul>
-                    </div>
                 </div>
 			<form action="movie" method="post">
                     <div class="cinema-wrap">	

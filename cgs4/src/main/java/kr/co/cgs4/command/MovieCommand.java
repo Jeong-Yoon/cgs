@@ -13,6 +13,7 @@ import kr.co.cgs4.dto.Book_ScreenNum;
 import kr.co.cgs4.dto.Book_ScreeningInfo;
 import kr.co.cgs4.dto.FilmDTO;
 import kr.co.cgs4.dto.ScreenDTO;
+import kr.co.cgs4.dto.TrailerDTO;
 
 public class MovieCommand implements Command{
 
@@ -23,7 +24,9 @@ public class MovieCommand implements Command{
 		String film_ID = request.getParameter("film_ID");
 		FilmDAO dao = new FilmDAO();
 		FilmDTO dto = dao.film(film_ID);
+		ArrayList<TrailerDTO> tdto = dao.trailer(film_ID);
 		model.addAttribute("film", dto);
+		model.addAttribute("trailer", tdto);
 		request.setAttribute("film_name", dto.getFilm_name());
 		BookDAO bdao = new BookDAO();
 		//리퀘스트 받아온 값이 null이 아닐때만 좌석정보 불러옴.

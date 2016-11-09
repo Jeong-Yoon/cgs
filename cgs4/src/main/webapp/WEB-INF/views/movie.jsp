@@ -159,9 +159,7 @@
 							<strong>Actors: </strong>${film.actor}</p>
 						<p class="movie__option">
 							<strong>Age restriction: </strong>${film.film_grade}</p>
-						<p class="movie__option">
-							<strong>Box office: </strong><a href="#">$1 017 003 568</a>
-						</p>
+
 
 						<a class="comment-link"><br></a>
 
@@ -208,24 +206,28 @@
 <!-- 										</a> -->
 <!-- 									</div> -->
 <%-- 								</c:forEach> --%>
-							<div class="swiper-slide media-video">
-								<a href='https://www.youtube.com/watch?v=ztD7m3ubhVs' class="movie__media-item "> 
-								 <img alt='' src="<%=ctx%>/resources/images/stillcut/${film.film_ID}/1.png">
-								</a>
-							</div>
+<!-- 							<div class="swiper-slide media-video"> -->
+<!-- 								<a href='https://www.youtube.com/watch?v=ztD7m3ubhVs' class="movie__media-item ">  -->
+<%-- 								 <img alt='' src="<%=ctx%>/resources/images/stillcut/${film.film_ID}/1.png"> --%>
+<!-- 								</a> -->
+<!-- 							</div> -->
 
 							<!--Second Slide-->
+							<c:forEach var="i" begin="0" items="${trailer}" varStatus="status">
+							<c:if test="${i.file_type eq '1'}">
 							<div class="swiper-slide media-video">
-								<a href='https://www.youtube.com/watch?v=awyG1-xvqFY' class="movie__media-item">
-								 <img alt='' src='<%=ctx%>/resources/images/stillcut/${film.film_ID}/2.png'>
+								<a href='${i.file_link}' class="movie__media-item">
+								 <img alt='' src='<%=ctx%>/resources/images/stillcut/${film.film_ID}/0${status.count}.png'>
 								</a>
 							</div>
+							</c:if>
+							</c:forEach>
 
 							<!--Third Slide-->
-							<c:forEach var="i" begin="3" end="5" step="1">
+							<c:forEach var="j" begin="1" end="4">
 								<div class="swiper-slide media-photo">
-									<a href='<%=ctx%>/resources/images/stillcut/${film.film_ID}/${i}.jpg' class="movie__media-item">
-									 <img alt='' src="<%=ctx%>/resources/images/stillcut/${film.film_ID}/${i}.jpg">
+									<a href='<%=ctx%>/resources/images/stillcut/${film.film_ID}/${j}.jpg' class="movie__media-item">
+									 <img alt='' src="<%=ctx%>/resources/images/stillcut/${film.film_ID}/${j}.jpg">
 									</a>
 								</div>
 							</c:forEach>
@@ -326,9 +328,7 @@
 				<input type='hidden' name="film_ID" id="film_ID" value="${film.film_ID}">
 				<input type='hidden' name="scrolls" class="scrolls" value="<%=scroll %>">
 				<input type='hidden' name="film_name" class="choosen-movie" id="film_name" value="${film.film_name}">
-<%-- 				<%if(sname==null){ sname="강변점"; }%> --%>
 				<input type='hidden' name="site_name" class="choosen-city" id="site_name" value="<%=sname%>"> 
-<%-- 				<%if(sdate==null){ sdate=mTime; } %> --%>
 				<input type='hidden' name="screening_date" class="choosen-date" id="screening_date" value="<%=sdate%>">
 					</form>
 					

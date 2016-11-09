@@ -1452,7 +1452,9 @@ function init_MoviePage () {
                     var chooseTime = $(this).attr('data-time');
                      $('.choose-indector--time').find('.choosen-area').text(chooseTime);
                      $('.booking-form').find('.choosen-time').attr("value",chooseTime);
-
+                     
+                     var screeningId = $(this).parent().find('input').val();
+                     $('.screening_id').attr("value",screeningId);
                     //data element init
                     var chooseCinema = $(this).parent().parent().parent().find('.time-select__place').text(); 
                     $('.booking-form').find('.choosen-cinema').attr("value",chooseCinema);

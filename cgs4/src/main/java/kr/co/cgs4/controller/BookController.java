@@ -24,8 +24,10 @@ import kr.co.cgs4.dto.Book_BuyConfirm;
 import kr.co.cgs4.dto.Book_ScreenNum;
 import kr.co.cgs4.dto.FilmDTO;
 import kr.co.cgs4.dto.SaleDTO;
+import kr.co.cgs4.dto.Sale_SeatDTO;
 import kr.co.cgs4.dto.SeatDTO;
 import kr.co.cgs4.dto.Book_ScreeningInfo;
+import kr.co.cgs4.dto.Book_SeatOccupation;
 import kr.co.cgs4.dto.Book_SeatRow;
 
 @Controller
@@ -56,12 +58,15 @@ public class BookController {
 	public String book2(@ModelAttribute("bInfo") Book_BookInfo bookinfo, Model model){
 		System.out.println("book2");
 		BookDAO bdao = new BookDAO();
+		String screening_id = bookinfo.getScreening_ID();
 		String site_name=bookinfo.getSite_name();
 		String screen_num=bookinfo.getScreen_num();
 		ArrayList<SeatDTO> sdto = bdao.seat(site_name, screen_num);
 		ArrayList<Book_SeatRow> srdto = bdao.sRow(site_name, screen_num);
+		ArrayList<Book_SeatOccupation> ssdto = bdao.saleSeat(screening_id);
 		model.addAttribute("seat", sdto);
 		model.addAttribute("sRow", srdto);
+		model.addAttribute("sSeat", ssdto);
 	return "book/book2";
 	}
 	
@@ -87,7 +92,7 @@ public class BookController {
 	
 
 	@RequestMapping("/book4")
-	public String book4(Book_BookInfo bookinfo, @ModelAttribute("sdto") SaleDTO sdto,HttpServletRequest hsr, HttpSession session,Model model){
+	public String book4(@ModelAttribute("bInfo")Book_BookInfo bookinfo, @ModelAttribute("sdto") SaleDTO sdto,HttpServletRequest hsr, HttpSession session,Model model){
 		System.out.println("book4");
 		System.out.println(session.getAttribute("id"));
 		model.addAttribute("request", hsr);

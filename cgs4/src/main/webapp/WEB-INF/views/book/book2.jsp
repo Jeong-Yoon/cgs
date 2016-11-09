@@ -133,7 +133,7 @@ function submit() {
 								</c:choose>
 							<c:forEach var="col" items="${seat}">
 							<c:if test="${row.row_num eq col.row_num}">
-								<span class="sits__place sits-price--cheap" data-place='${col.row_num}${col.col_num}'
+									<span class="sits__place sits-price--cheap" data-place='${col.row_num}${col.col_num}'
 									data-price='10'>${col.row_num}${col.col_num}</span>
 							</c:if>
 							</c:forEach>
@@ -245,6 +245,11 @@ function submit() {
 			</a>
 		</div>
 	</form>
+<!-- 	<div class="findOccup"> -->
+<%-- 	<c:forEach var="na" items="${sSeat}"> --%>
+<%-- 	<span class="occuSeat" data-place='${na.row_num}${na.col_num}'></span> --%>
+<%-- 	</c:forEach> --%>
+<!-- 	</div> -->
 
 	<div class="clearfix"></div>
 
@@ -343,8 +348,7 @@ function submit() {
 
 	<!-- JavaScript-->
 	<!-- jQuery 1.9.1-->
-	<script
-		src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 	<script>
 		window.jQuery
 				|| document
@@ -374,7 +378,14 @@ function submit() {
 	<script type="text/javascript">
             $(document).ready(function() {
                 init_BookingTwo();
+//                 $('.sits__place').each(function(e){
+//                 if($('.occuSeat').attr('data-place')==$('.sits__place').attr('data-place'));
+//                 $(e.target).addClass('sits-state--not');
+//                 alert(e.target);
+//                 });
+//                 $('.findOccup').remove();
             });
+            
 		</script>
 
 </body>

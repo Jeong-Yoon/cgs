@@ -72,16 +72,16 @@
 
                             <div class="ticket-secondary">
                                 <span class="ticket__item">예매 번호 <strong class="ticket__number">${sale_id}</strong></span>
-                                <span class="ticket__item ticket__date">${sdto.screening_date}</span>
-                                <span class="ticket__item ticket__time">${sdto.start_time}</span>
-                                <span class="ticket__item">영화관: <span class="ticket__cinema">${sdto.site_name}</span></span>
-                                <span class="ticket__item">상영관: : <span class="ticket__hall">${sdto.screen_num}관</span></span>
+                                <span class="ticket__item ticket__date">${bInfo.screening_date}</span>
+                                <span class="ticket__item ticket__time">${bInfo.start_time}</span>
+                                <span class="ticket__item">영화관: <span class="ticket__cinema">${bInfo.site_name}</span></span>
+                                <span class="ticket__item">상영관: <span class="ticket__hall">${bInfo.screen_num}관</span></span>
                                 <span class="ticket__item ticket__price">총 가격: <strong class="ticket__cost">${sdto.sale_price}</strong></span>
                             </div>
 
                             <div class="ticket-primery">
-                                <span class="ticket__item ticket__item--primery ticket__film">Film<br><strong class="ticket__movie">The Fifth Estate (2013)</strong></span>
-                                <span class="ticket__item ticket__item--primery">Sits: <span class="ticket__place">11F, 12F, 13F</span></span>
+                                <span class="ticket__item ticket__item--primery ticket__film">영화명<br><strong class="ticket__movie">${bInfo.film_name}</strong></span>
+                                <span class="ticket__item ticket__item--primery">좌석 정보: <span class="ticket__place">${sits}</span></span>
                             </div>
 
 
@@ -91,8 +91,8 @@
                 </div>
 
                 <div class="ticket-control">
-                    <a href="#" class="watchlist list--download">Download</a>
-                    <a href="#" class="watchlist list--print">Print</a>
+                    <a href="index" class="watchlist list--download">메인화면으로</a>
+                    <a href="#" class="watchlist list--print">인쇄하기</a>
                 </div>
 
             </div>
@@ -210,6 +210,10 @@
         <script type="text/javascript">
             $(document).ready(function() {
                 $('.top-scroll').parent().find('.top-scroll').remove();
+            });
+            $('.list--print').click( function(e){
+            	e.preventDefault();
+            	alert("프린터 연결을 확인해주세요.");
             });
         </script>
 

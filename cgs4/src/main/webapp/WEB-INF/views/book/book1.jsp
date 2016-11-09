@@ -89,9 +89,9 @@
 			return 0;
 		}
 	}
-	function submit() {
-		document.getElementById("film-and-time").submit();
-	}
+// 	function submit() {
+// 		document.getElementById("film-and-time").submit();
+// 	}
 </script>
 
 
@@ -440,6 +440,23 @@
 		$(document).ready(function() {
 			init_BookingOne();
 		});
+		$('.booking-pagination__next').click(function(e){
+            var chooseCity = $('.choosen-city').val();
+            var chooseDate = $('.choosen-date').val();
+            var chooseFilm = $('.choosen-movie').val();
+			var chooseScreen = $('.choosen-cinema').val();
+			var chooseTime = $('.choosen-time').val();
+		
+			if(chooseCity!='null'&&chooseFilm!='null'&&chooseDate!='null'&&chooseDate!=""&&chooseScreen!=''&&chooseTime!=''){
+				$('.booking-form').submit();
+			}else{
+				alert("예매정보를 모두 선택해주세요.")
+			}
+			
+		});
+//	 	function submit() {
+// 		document.getElementById("film-and-time").submit();
+// 	}
 	</script>
 
 </body>

@@ -211,11 +211,9 @@
 					<span class="cinemapicker checkk"><i class="fa fa-rocket"></i>영화관
 						선택</span> <select name="select_item" id="select-sort"
 						class="select__sort checkk" tabindex="0" onmouseup="cityChk()">
-						<option value="001" selected='selected'>강변점</option>
-						<option value="002">인천점</option>
-						<option value="003">야탑점</option>
-						<option value="004">강남점</option>
-						<option value="005">구로점</option>
+						<c:forEach var="s" items="${t_site}">
+						<option value="${s.site_name}">${s.site_name}</option>
+						</c:forEach>
 					</select>
 				</form>
 

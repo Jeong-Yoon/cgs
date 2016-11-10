@@ -67,6 +67,7 @@
     <![endif]-->
 
 <script>
+
 	function movieChk(name) {
 		document.getElementById("choosed_film").innerHTML = name;
 		document.getElementById("film_name").setAttribute("value", name);
@@ -163,13 +164,13 @@
 
 						<a class="comment-link"><br></a>
 
-						<div class="movie__btns movie__btns--full">
-							<form action="watchlist" method="get">
-								<input type=hidden name="film_ID" value="${film.film_ID}">
+<!-- 						<div class="movie__btns movie__btns--full"> -->
+<!-- 							<form action="watchlist" method="get"> -->
+<%-- 								<input type=hidden name="film_ID" value="${film.film_ID}"> --%>
 <!-- 								<a href="book1" class="btn btn-md btn--warning">book a ticket for this movie</a> -->
-								<a href="#" class="watchlist">Add to watchlist</a>
-							</form>
-						</div>
+<!-- 								<a href="#" class="watchlist">Add to watchlist</a> -->
+<!-- 							</form> -->
+<!-- 						</div> -->
 
 <!-- 						<div class="share"> -->
 <!-- 							<span class="share__marker">Share: </span> -->
@@ -298,13 +299,10 @@
 				<form id='select' class="select" method='get'>
 					<span class="cinemapicker checkk"><i class="fa fa-rocket"></i>영화관 선택</span> 
 						<select name="select_item" id="select-sort" class="select__sort checkk" tabindex="0" onmouseup="cityChk()">
-						<option value="001" selected="selected">강변점</option>
-						<option value="002">인천점</option>
-						<option value="003">야탑점</option>
-						<option value="004">강남점</option>
-						<option value="005">구로점</option>
+						<c:forEach var="s" items="${t_site}">
+						<option value="${s.site_name}">${s.site_name}</option>
+						</c:forEach>
 					</select>
-					
 				</form>
 
 				<div class="datepicker">
@@ -345,7 +343,11 @@
 								<li class=time-select__set>
 								    <input type='hidden' name="screening_ID" value="${i.screening_ID }"> 
 									<div class="time-select__item" data-time='${i.start_time }'>${i.start_time }</div>
-									<div class="time-select__seat">100/100석</div>
+									<c:forEach var="k" items="${scnt}">
+										<c:if test="${k.screening_ID eq i.screening_ID}">
+											<div class="time-select__seat">${k.sale_cnt }/${i.seating_cnt}석</div>
+										</c:if>
+									</c:forEach>
 								</li>
 							</c:if>
 						</c:forEach>

@@ -19,6 +19,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import kr.co.cgs4.command.BookConfirmCommand;
 import kr.co.cgs4.command.Command;
 import kr.co.cgs4.dao.BookDAO;
+import kr.co.cgs4.dao.CinemaDAO;
 import kr.co.cgs4.dto.Book_BookInfo;
 import kr.co.cgs4.dto.Book_BuyConfirm;
 import kr.co.cgs4.dto.Book_ScreenNum;
@@ -29,6 +30,7 @@ import kr.co.cgs4.dto.Book_SeatRow;
 import kr.co.cgs4.dto.FilmDTO;
 import kr.co.cgs4.dto.SaleDTO;
 import kr.co.cgs4.dto.SeatDTO;
+import kr.co.cgs4.dto.SiteDTO;
 
 @Controller
 public class BookController {
@@ -40,6 +42,9 @@ public class BookController {
 	System.out.println("book1()");
 	if(session.getAttribute("id")!=null){
 		BookDAO bdao = new BookDAO();
+		CinemaDAO cdao = new CinemaDAO();
+		ArrayList<SiteDTO> dtos3=cdao.total_site();
+		model.addAttribute("t_site", dtos3);
 		//리퀘스트 받아온 값이 null이 아닐때만 좌석정보 불러옴.
 		if(hsr.getParameter("film_name")!=null){
 			String film_name = hsr.getParameter("film_name");

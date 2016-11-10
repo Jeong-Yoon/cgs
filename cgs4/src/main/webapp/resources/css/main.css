@@ -301,7 +301,7 @@ width: 11px;
 }
 
 #navigation > .container {
-  border-bottom: 1px solid #636364;
+  border-bottom: 1px solid transparent;
 }
 
 .animated-nav#navigation > .container {
@@ -607,7 +607,7 @@ width: 11px;
 .project-filter ul li a:hover,
 .project-filter ul li a.active {
     background-color: #F0C419;
-    color: #5D5D5D;
+    color: #fff;
 }
 
 .mix {
@@ -665,30 +665,46 @@ figcaption.mask h3 {
   color: #1f2021;
   font-size: 20px;
   line-height: 28px;
+  font-family: Godo;
 }
 
 figcaption.mask span {
   color: #5D5D5D;
+  font-family: Godo;
+    font-size: 14px;
 }
 
 .btn-book {
-  border: 1.5px solid #F0C419;
-  color: #F0C419;
-  margin-top: 15px;
-  margin-left: 10px;
+  border: 1.5px solid #5d5d5d;
+  color: #5d5d5d;
+/*     margin-top: 10px; */
+/*   margin-right: 25%; */
   font-family: Godo;
-  padding: relative;
+  padding: 7px 5px;
+    margin: 7px;
+}
+
+.btn-book:hover {
+    border: 1.5px solid #F0C419;
+    color: #F0C419;
 }
 
 .btn-book-blue {
-  background-color: #F0C419;
-  border: 1.5px solid #F0C419;
+  background-color: #5d5d5d;
+  border: 1.5px solid #5d5d5d;
   color: #fff;
-  margin-top: 15px;
-  margin-left: 10px;
+/*   margin-left: 25%; */
   font-family: Godo;
-    width: auto;
+  padding: 7px 5px;
+    margin: 7px;
 }
+
+.btn-book-blue:hover {
+    background-color: #F0C419;
+    border: 1.5px solid #F0C419;
+    color: white;
+	}
+	
 
 
 /*============================================================
@@ -1009,7 +1025,7 @@ figcaption.mask span {
 
 .subscription-form .subscribe {
   background-color: transparent;
-  border: 1.5px solid #9B3561;
+  border: 1.5px solid #fff;
   color: #fff;
   height: 50px;
   text-indent: 60px;
@@ -1018,14 +1034,14 @@ figcaption.mask span {
 }
 
 .subscription-form #mail-submit {
-  background-color: #9B3561;
+  background-color: transparent;
   border: 0 none;
   color: #fff;
   padding: 12.5px 35px;
   position: absolute;
   right: 1px;
   top: 1px;
-  font-family: 'LotteMartDream'
+  font-family: 'LotteMartDream';
 }
 
 

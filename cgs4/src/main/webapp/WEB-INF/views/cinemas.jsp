@@ -59,7 +59,25 @@
 
 <!-- Modernizr -->
 <script src="<%=ctx%>/resources/js/external/modernizr.custom.js"></script>
-
+<style>
+.cinemaBox {
+    margin: 0% 10%;
+}
+.datepicker {
+	margin-left: 5%;
+}
+.swiper-container {
+    margin: 10px 10%;
+}
+.cine-contents {
+    margin: 30px 10%;
+}
+.tags-area {
+    padding: 0 13%;
+/*     background-color: #636364; */
+    /* color: white; */
+}
+</style>
 
 
 <script>
@@ -89,18 +107,8 @@
 		document.getElementById("film-and-time").submit();
 	}
 	function bookChk() {
-// 		document.getElementById
 	}
-<%-- <%film_name = request.getParameter("film_name"); --%>
-// 			site_name = request.getParameter("site_name");
-// 			sc_date = request.getParameter("screening_date");
-// 					System.out.print(film_name);
-// 					System.out.print(site_name);
-// 					System.out.print(sc_date);
-<%-- 			if (film_name != null && site_name != null && sc_date != null) {%> --%>
-// 	alert("선택됨!");
-<%-- <%}%> --%>
-// 	}
+
 </script>
 
 
@@ -110,33 +118,10 @@
 
 <body>
 	<div class="wrapper">
-		<!--         Banner -->
-		<!--         <div class="banner-top"> -->
-		<!--             <img alt='top banner' src="http://placehold.it/1600x90"> -->
-		<!--         </div> -->
-
 		<!-- Header section -->
 		<jsp:include page="menu.jsp" flush="false"/>
 
-		<!-- Search bar -->
-		<div class="search-wrapper">
-			<div class="container container--add">
-				<form id='search-form' method='get' class="search">
-					<input type="text" class="search__field" placeholder="Search">
-					<select name="sorting_item" id="search-sort" class="search__sort"
-						tabindex="0">
-						<option value="1" selected='selected'>By title</option>
-						<option value="2">By year</option>
-						<option value="3">By producer</option>
-						<option value="4">By title</option>
-						<option value="5">By year</option>
-					</select>
-					<button type='submit' class="btn btn-md btn--danger search__button">search
-						a movie</button>
-				</form>
-			</div>
-		</div>
-
+		
 
 		<!-- Main content -->
 		<!-----------------------------------------////////////////////////////////////////////////////////////  -->
@@ -197,7 +182,7 @@
 						<img alt=''
 							src="<%=ctx%>/resources/images/cinemas/${st.site_ID}.jpg">
 						<!-- </a> -->
-
+						<div class="cine-contents">
 						<h1>${st.site_name}</h1>
 
 						<div class="wave-devider"></div>
@@ -208,6 +193,7 @@
 							상영관 개수: ${st.total_screen}<br>
 
 						</p>
+						</div>
 					</c:forEach>
 		
 
@@ -215,172 +201,6 @@
 			</div>
 		</div>
 
-
-		<div class="col-sm-12">
-                <div class="choose-indector choose-indector--film">
-                    <strong>Choosen: </strong><span class="choosen-area"></span>
-                </div>
-		</div>
-
-			<h2 class="page-heading">Date</h2>
-
-			<div class="choose-container choose-container--short">
-
-				<!-- <div class="datepicker">
-                      <span class="datepicker__marker"><i class="fa fa-calendar"></i>Date</span>
-                      <input type="text" id="datepicker" value='03/10/2014' class="datepicker__input">
-                    </div> -->
-			</div>
-
-
-			<div class="swiper-container">
-				<div class="swiper-wrapper">
-					<div class="swiper-slide">
-						<div class="film-images"></div>
-					</div>
-				</div>
-			</div>
-
-
-			<div class="datepicker">
-				<span class="datepicker__marker"><i class="fa fa-calendar"></i>날짜선택</span><br />
-				<input type="text" id="datepicker" value="<%=mTime%>"
-					class="datepicker__input checkk" onmousedown="dateChk()">
-			</div>
-
-		
-
-
-		<h2 class="page-heading">Pick time</h2>
-
-		<div class="time-select time-select--wide">
-
-
-
-
-			<div class="time-select__group group--first">
-				<div class="col-sm-2">
-					<p class="time-select__place">럭키</p>
-				</div>
-				<div class="col-sm-1">
-					<p class="time-select__place">1관</p>
-				</div>
-				<ul class="col-sm-8 items-wrap">
-					<li class="time-select__item" data-time='09:40'>09:40</li>
-					<li class="time-select__item" data-time='13:45'>13:45</li>
-					<li class="time-select__item" data-time='15:45'>15:45</li>
-					<li class="time-select__item" data-time='19:50'>19:50</li>
-					<li class="time-select__item" data-time='21:50'>21:50</li>
-				</ul>
-			</div>
-			<div class="time-select__group group--first">
-				<div class="col-sm-2">
-					<p class="time-select__place"></p>
-				</div>
-				<div class="col-sm-1">
-					<p class="time-select__place">2관</p>
-				</div>
-				<ul class="col-sm-8 items-wrap">
-					<li class="time-select__item" data-time='09:40'>09:40</li>
-					<li class="time-select__item" data-time='13:45'>13:45</li>
-					<li class="time-select__item" data-time='15:45'>15:45</li>
-					<li class="time-select__item" data-time='19:50'>19:50</li>
-					<li class="time-select__item" data-time='21:50'>21:50</li>
-				</ul>
-			</div>
-
-
-
-			<div class="time-select__group">
-				<div class="col-sm-3">
-					<p class="time-select__place">Empire</p>
-				</div>
-				<ul class="col-sm-8 items-wrap">
-					<li class="time-select__item" data-time='10:45'>10:45</li>
-					<li class="time-select__item" data-time='16:00'>16:00</li>
-					<li class="time-select__item" data-time='19:00'>19:00</li>
-					<li class="time-select__item" data-time='21:15'>21:15</li>
-					<li class="time-select__item" data-time='23:00'>23:00</li>
-				</ul>
-			</div>
-
-
-			<!--                <div class="choose-indector choose-indector--time">
-                    <strong>Choosen: </strong><span class="choosen-area"></span>
-                </div> -->
-		</div>
-		</section>
-
-	</div>
-
-
-		<div class="clearfix"></div>
-
-<!-- 		<form id='film-and-time' class="booking-form" method='get' action='book2'>
-			<input type='text' name='choosen-movie' class="choosen-movie">
-
-			<input type='text' name='choosen-city' class="choosen-city">
-			<input type='text' name='choosen-date' class="choosen-date">
-
-			<input type='text' name='choosen-cinema' class="choosen-cinema">
-			<input type='text' name='choosen-time' class="choosen-time">
-
-
-			<div class="booking-pagination">
-				<a href="#" class="booking-pagination__prev hide--arrow"> <span
-					class="arrow__text arrow--prev"></span> <span class="arrow__info"></span>
-				</a> <a href="book2.html" class="booking-pagination__next"> <span
-					class="arrow__text arrow--next">예매하기</span> <span
-					class="arrow__info">make a reservation</span>
-				</a>
-			</div>
-
-		</form> -->
-
-
-<form id='film-and-time' class="booking-form" method='get' action='book2'>
-			<input type='hidden' name="film_name" class="choosen-movie"	id="film_name"> 
-			<input type='hidden' name="site_name" class="choosen-city" id="site_name" value="강변점">
-		    <input type='hidden' name="screening_date" class="choosen-date" id="screening_date" value="2016-11-06">
-			<input type='hidden' name="screen_num" class="choosen-cinema" id="screen_num"> 
-			<input type='hidden' name="start_time" class="choosen-time" id="start_time">
-
-			<div class="booking-pagination">
-				<a href="#" class="booking-pagination__prev hide--arrow"> 
-				<span class="arrow__text arrow--prev"></span> 
-				<span class="arrow__info"></span>
-				</a> 
-				<a href="#" class="booking-pagination__next" onclick="submit()">
-					<span class="arrow__text arrow--next">다음 페이지로</span>
-					<span class="arrow__info">좌석 고르기</span>
-				</a>
-			</div>
-
-		</form>
-
-
-
-<%-- <c:if test="${sc.screening_date=='2016-11-11'}"> --%>
-
-		<!-- DB connect test -->
-
-		<table>
-			<c:forEach items="${screening}" var="sc">
-			
-				<tr>
-					<td>screen_num</td>
-					<td>${sc.start_time}</td>
-				</tr>
-				<tr>
-				<td>screening_date</td>
-				<td>${sc.screening_date}</td>
-				</tr>
-			</c:forEach>
-		</table>
-
-<c:forEach items="${site}" var="si">
-${si.site_name}
-</c:forEach>
 
 
 <!-- 		<div class="pagination">

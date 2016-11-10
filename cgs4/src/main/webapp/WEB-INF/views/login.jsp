@@ -46,6 +46,13 @@
 		<script src="http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.3.0/respond.js"></script>		
     <![endif]-->
 </head>
+<style>
+
+table.loginbtn {
+    width: 35%;
+    margin: 0 35%;
+}
+</style>
 <body>
 	<div class="wrapper">
 
@@ -65,10 +72,18 @@
 				<label for='#informed' class='login__check-info'>remember me</label>
 			</div>
 			<div class="login__control">
-				<button type="submit" class="btn btn-md btn--warning btn--wider" >LOGIN</button>
-				<a href="signup"><button type="button"
-						class="btn btn-md btn--warning btn--wider">회원가입</button></a> <a
-					href="#" class="login__tracker form__tracker">아이디 / 비밀번호 찾기</a>
+			
+			<table class="loginbtn">
+			<tr>
+				<td width="200"><button type="submit" class="btn btn-md btn--warning btn--wider" >LOGIN</button></td>
+				<td width="200"><a href="signup"><button type="button" class="btn btn-md btn--warning btn--wider">회원가입</button></a></td>
+			</tr>
+			<tr>
+				<td><a href="find_id" class="login__tracker form__tracker">아이디 찾기</a></td>
+			   	<td><a href="find_pw" class="login__tracker form__tracker">비밀번호 찾기</a></td>
+			</tr>
+			</table>
+			
 			</div>
 		</form>
 	</div>

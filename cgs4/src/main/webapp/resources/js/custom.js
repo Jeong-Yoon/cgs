@@ -560,8 +560,9 @@ function init_BookingOne() {
 //                date.val(chooseDate);
                 
                 //기본적으로 디폴트값을 적용시켜줌.
-                var chooseCity = $('.select .sbSelector').text();
+                var chooseCity = $('.choosen-city').val();
                 city.val(chooseCity);
+                $('.sbSelector').text(chooseCity);
                 var chooseDate = $('.datepicker__input').val();
                 date.val(chooseDate);
 

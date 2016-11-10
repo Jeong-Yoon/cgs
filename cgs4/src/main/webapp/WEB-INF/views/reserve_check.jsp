@@ -59,6 +59,14 @@
 <!-- Modernizr -->
 <script src="<%=ctx%>/resources/js/external/modernizr.custom.js"></script>
 
+<script type="text/javascript">
+function print(){
+	alert("프린트 연결을 확인해주세요.");
+}
+
+
+
+</script>
 
 
 </head>
@@ -115,7 +123,19 @@
                                 
                             	<span class="ticket__item ticket__item--primery ticket__film">결제날짜 :
                             	<strong class="ticket__movie">${rCheck.sale_date}<br></strong>
-                            	결제수단 : <strong class="ticket__movie">${rCheck.sale_type}<br></strong>
+                            	결제수단 : <strong class="ticket__movie">
+                            	<c:choose>
+                            	<c:when test="${rCheck.sale_type==0}">
+                            	현금결제
+                            	</c:when>
+                            	<c:when test="${rCheck.sale_type==1}">
+                            	카드결제
+                            	</c:when>
+                            	<c:when test="${rCheck.sale_type==2}">
+                            	모바일결제
+                            	</c:when>
+                            	</c:choose>
+                            	<br></strong>
                             	총 결제금액: <strong class="ticket__movie">${rCheck.final_price}원<br></strong>
                             	</span>
                             
@@ -128,9 +148,11 @@
                 </div>
 
                 <div class="ticket-control">
-                    <a href="#" class="watchlist list--check">예매확인</a>
-                    <a href="#" class="watchlist list--cancel">예매취소</a>
-                    <a href="#" class="watchlist list--print">프린트</a>
+               <!--      <a href="#" class="watchlist list--check">예매확인</a> -->
+                    <a href="<%=ctx%>/reserve_cancel?rId=${rCheck.sale_ID}" class="watchlist list--cancel">예매취소</a>
+                    <a href="#" class="watchlist list--print" onclick="print();">프린트</a>
+                    
+                    
                 </div>
             </div>
         </section>

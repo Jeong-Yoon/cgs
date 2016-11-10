@@ -48,11 +48,6 @@
 <!-- Modernizr -->
 <script src="<%=ctx%>/resources/js/external/modernizr.custom.js"></script>
 
-<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-<!--[if lt IE 9]> 
-    	<script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.js"></script> 
-		<script src="http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.3.0/respond.js"></script>		
-    <![endif]-->
 </head>
 
 <body>
@@ -63,9 +58,11 @@
 
 
 	<!-- Main content -->
-	<form id="login-form" class="login" method='post' action="signupProcess">
+	<form id="login-form" class="login" method='post' action="signupProcess"> 
+<!-- 일단 form, action부분 냅둠 -->
+
 		<p class="login__title">
-			회원가입 <br> <span class="login-edition">welcome to CGS</span>
+			아이디 찾기 <br><span class="login-edition">-Find ID-</span>
 		</p>
 
 	
@@ -73,20 +70,6 @@
 	<div class="container">
 				<table width="150" border="0" >
 				
-				<tr>
-				<td><center><p>아이디</p></center></td>
-				<td colspan="2"><p><input type='text' placeholder='아이디를 입력해주세요' name='user-id' class="login__input" required></p></td>
-				</tr>
-				
-				<tr>
-				<td><center><p>비밀번호</p></center></td>
-				<td colspan="2"><p><input type='password' pattern="^[0-9a-zA-Z]{4,20}" title="영어 또는 숫자로 4자리 이상으로 입력하세요." placeholder='비밀번호를 입력해주세요' name='user-password' class="login__input" required></p></td>
-				</tr>
-				
-				<tr>
-				<td><center><p>비밀번호 확인</p></center></td>
-				<td colspan="2"><p><input type='password' pattern="^[0-9a-zA-Z]{4,20}" title="영어 또는 숫자로 4자리 이상으로 입력하세요." placeholder='한번 더 입력해주세요' name='user-passwordok' class="login__input" required></p></td>
-				</tr>
 				
 				<tr>
 				<td><center><p>이름</p></center></td>
@@ -96,7 +79,7 @@
 				<tr>
 				<td><center><p>생년월일</p></center></td>
 				<td><p><input type='text' pattern="^\d{6}" title="공백없이 6자리 모두 입력해주세요" placeholder="ex)931202" name='user-birth' class="login__input" maxlength="6" required></p></td>
-				<td width="20"> <center><p>-</p></center></td>
+				<td width="10"> <center><p>-</p></center></td>
 
 			
 				<td><p><input type='text' pattern="[1234]" title="올바른 숫자를 입력해주세요" placeholder="ex)1" name='gender' class="login__input" maxlength="1" required></p></td>
@@ -108,29 +91,21 @@
 				<tr>
 				<td><center><p>핸드폰번호</p></center>
 				<td><p><input type='text' pattern="^\d{3}" title="3자리 모두 입력해주세요" placeholder="ex)010"name='user-pnum' class="login__input" maxlength="3" required></p></td>
-				<td width="20"> <center><p>-</p></center> </td>
+				<td width="10"> <center><p>-</p></center> </td>
 				<td><p><input type='text' pattern="^\d{4}" title="4자리 모두 입력해주세요" placeholder="ex)8071" name='user-pnum2' class="login__input" maxlength="4" required></p></td>
-				<td width="20"> <center><p>-</p></center>  </td>
+				<td width="10"> <center><p>-</p></center>  </td>
 				<td><p><input type='text' pattern="^\d{4}" title="4자리 모두 입력해주세요" placeholder="ex)6072"name='user-pnum3' class="login__input" maxlength="4" required></p></td>
 				</tr>
 				
-				<tr>
-				<td><center><p>이메일</p></center></td>
-				<td colspan="3"><p><input type='email' title="이메일 타입으로 입력해주세요" placeholder="ex)inha@naver.com" name='user-email' class="login__input" required></p></td>
-				</tr>
 				
-				<tr>
-				<td><center><p>주소</p></center></td>
-				<td colspan="3"><p><input type='text' name='user-address' placeholder="ex)인천광역시 남구 인하로 100"class="login__input" required></p></td>
-				</tr>
 				
 				
 				</table>
 				<br><br><br>
 </div>
 			<div class="login__control">
-				<button type='submit' class="btn btn-md btn--warning btn--wider">Sign Up</button>&nbsp&nbsp
-				<a href='index'><button type="button" class="btn btn-md btn--warning btn--wider">Cancle</button></a>
+				<button type='submit' class="btn btn-md btn--warning btn--wider">확인</button>&nbsp&nbsp
+				<a href='index'><button type="button" class="btn btn-md btn--warning btn--wider">취소</button></a>
 
 
 

@@ -7,8 +7,9 @@ public class ReserveCheckDTO {
 
 	
 	String reserve_ID;
-	Timestamp sale_date;
+	Date sale_date;
 	String sale_type;
+	String sale_ID;
 	int final_price;
 	int sale_cnt;
 	String screen_num;
@@ -17,17 +18,22 @@ public class ReserveCheckDTO {
 	String start_time;
 	String site_name;
 	
-	
+	public String getSale_ID() {
+		return sale_ID;
+	}
+	public void setSale_ID(String sale_ID) {
+		this.sale_ID = sale_ID;
+	}
 	public String getReserve_ID() {
 		return reserve_ID;
 	}
 	public void setReserve_ID(String reserve_ID) {
 		this.reserve_ID = reserve_ID;
 	}
-	public Timestamp getSale_date() {
+	public Date getSale_date() {
 		return sale_date;
 	}
-	public void setSale_date(Timestamp sale_date) {
+	public void setSale_date(Date sale_date) {
 		this.sale_date = sale_date;
 	}
 	public String getSale_type() {

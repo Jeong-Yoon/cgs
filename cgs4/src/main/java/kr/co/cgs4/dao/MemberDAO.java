@@ -81,5 +81,19 @@ public class MemberDAO {
 		
 	}
 	
+	public void modify(final String id, final String pw,final String pnum, final String email, final String address){
+		String modify ="UPDATE MEMBER SET phone_num= '"+pnum+"',email='"+email+"',address='"+address+"' WHERE member_id='" + id + "' and PASSWORD = '" + pw + "'";
+		this.template.update(modify);
+		  
+	}
+	
+	public void modify_pw(final String id, final String pw, final String Modify_pw){
+		String modify_pw ="UPDATE MEMBER SET password= '"+Modify_pw+"' WHERE member_id='" + id + "' and PASSWORD = '" + pw + "'";
+		this.template.update(modify_pw);
+		  
+	}
+	
+	
+	
 	
 }

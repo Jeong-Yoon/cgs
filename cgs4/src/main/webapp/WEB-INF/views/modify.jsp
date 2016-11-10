@@ -54,7 +54,13 @@
 		<script src="http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.3.0/respond.js"></script>		
     <![endif]-->
 </head>
-
+<style>
+table {
+    width: 60%;
+    margin-left: 25%;
+    margin-top : 5%;
+}
+</style>
 <body>
 
 <!-- Header section -->
@@ -62,15 +68,15 @@
 
 
 	<!-- Main content -->
-	<form id="login-form" class="login" method='post' action="signupProcess">
+	<form id="login-form" class="login" method="get" action="modifyProcess">
 		<p class="login__title">
-			sign in <br> <span class="login-edition">welcome to CGS</span>
+			Modify member Info<br> <span class="login-edition">회원 정보 수정</span>
 		</p>
 
 	
 		
 	<div class="container">
-				<table width="150" border="0" >
+				<table >
 				
 				<tr>
 				<td width="120"><center><p>아이디</p></center></td>
@@ -83,7 +89,7 @@
 				<td></td>
 				<td></td>
 				<td></td>
-				<td><p><button type='submit' class="btn btn-md btn--warning">비밀번호 변경</button></p></td>
+				<td><p><a href="modify_pw"><button type='button' class="btn btn-md btn--warning">비밀번호 변경</button></a></p></td>
 				</tr>
 				
 				<tr>
@@ -102,36 +108,34 @@
 				<td><p>* * * * * *</p></td>
 				</tr>
 				
-				
 				<tr>
 				<td><center><p>핸드폰번호</p></center>
-				<td><p><input type='text' name='user-pnum' class="login__input" value="<%=session.getAttribute("phone_num") %>" readonly></p></td>
+				<td><p><input type='text' name='user-pnum' pattern="^\d{11}" title="핸드폰번호 11자리를 정확히 입력하세요" placeholder="ex)01080716072" maxlength="11" class="login__input" value="<%=session.getAttribute("phone_num") %>" required></p></td>
 				<td></td>
 				<td></td>
 				<td></td>
-				<td><p><button type='submit' class="btn btn-md btn--warning">핸드폰 번호 변경</button></p></td>
+		
+		
+				<td><p><button type='submit' class="btn btn-md btn--warning" >핸드폰 번호 변경</button></p></td>
 				</tr>
 				
 				<tr>
 				<td><center><p>이메일</p></center></td>
-				<td colspan="3"><p><input type='email' name='user-email' class="login__input" value="<%=session.getAttribute("email") %>" readonly></p></td>
+				<td colspan="3"><p><input type='email' title="이메일 타입으로 입력해주세요" placeholder="ex)inha@naver.com" name='user-email' class="login__input" value="<%=session.getAttribute("email") %>" required></p></td>
 				<td>　</td>
 				<td><p><button type='submit' class="btn btn-md btn--warning">이메일 변경</button></p></td>
 				</tr>
 				
 				<tr>
 				<td><center><p>주소</p></center></td>
-				<td colspan="3"><p><input type='text' name='user-address' class="login__input" value="<%=session.getAttribute("address") %>" readonly></p></td>
+				<td colspan="3"><p><input type='text' name='user-address' placeholder="ex)인천광역시 남구 인하로 100" class="login__input" value="<%=session.getAttribute("address") %>" required></p></td>
 				<td></td>
 				<td><p><button type='submit' class="btn btn-md btn--warning">주소 변경</button></p></td>
-				</tr>
-				
-				
+				</tr>		
 				</table>
 				<br><br><br>
 </div>
 			<div class="login__control">
-				<button type='submit' class="btn btn-md btn--warning btn--wider">Sign Up</button>&nbsp&nbsp
 				<a href='index'><button type="button" class="btn btn-md btn--warning btn--wider">Cancle</button></a>
 
 

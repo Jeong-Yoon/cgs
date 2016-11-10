@@ -87,7 +87,8 @@
                         <div class="col-sm-12">
                             <textarea placeholder="Your message" name="user-message" class="form__message"></textarea>
                         </div>
-                        <button type="submit" class='btn btn-md btn--danger'>문의하기</button>
+                        <a href onclick="alert('고객님의 소중한 의견 감사드립니다.');return false;"><button type="submit" class='btn btn-md btn--danger'>문의하기</button>
+                       
                     </form>
                 </div>
             </div>

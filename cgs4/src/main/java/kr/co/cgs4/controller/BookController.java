@@ -5,6 +5,7 @@ import java.io.PrintWriter;
 import java.sql.Date;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -22,6 +23,7 @@ import kr.co.cgs4.dto.Book_BookInfo;
 import kr.co.cgs4.dto.Book_BuyConfirm;
 import kr.co.cgs4.dto.Book_ScreenNum;
 import kr.co.cgs4.dto.Book_ScreeningInfo;
+import kr.co.cgs4.dto.Book_SeatCnt;
 import kr.co.cgs4.dto.Book_SeatOccupation;
 import kr.co.cgs4.dto.Book_SeatRow;
 import kr.co.cgs4.dto.FilmDTO;
@@ -47,8 +49,10 @@ public class BookController {
 			Date screening_date = java.sql.Date.valueOf(sScreening_date);
 			
 			System.out.println(screening_date);
+			List<Book_SeatCnt> sCnt = bdao.saleCnt();
 			ArrayList<Book_ScreeningInfo> bdto = bdao.screening_date(film_name, site_name, screening_date);
 			ArrayList<Book_ScreenNum> scdto = bdao.screening_num(film_name, site_name, screening_date);
+			model.addAttribute("scnt", sCnt);
 			model.addAttribute("blist", bdto);
 			model.addAttribute("scNum", scdto);
 		}
@@ -58,15 +62,21 @@ public class BookController {
 	}else{
 		response.setContentType("text/html; charset=UTF-8");    	
     	PrintWriter out =response.getWriter();
-    	out.println("<script>alert('로그인이 필요합니다.'); history.go(-1);</script>");
+    	out.println("<script>alert('로그인이 필요합니다.'); location.href='login';</script>");
     	out.close();
 		return "index";
 	}
 	}
 	
 	@RequestMapping("/book2")
-	public String book2(@ModelAttribute("bInfo") Book_BookInfo bookinfo, Model model){
+	public String book2(@ModelAttribute("bInfo") Book_BookInfo bookinfo, Model model, HttpSession session, HttpServletResponse response) throws IOException{
 		System.out.println("book2");
+
+		if(session.getAttribute("id")==null){
+		PrintWriter writer=response.getWriter();
+		writer.println("<script>alert('로그인을 확인해주세요.'); location.href='login';</script>");
+		}
+		
 		BookDAO bdao = new BookDAO();
 		String screening_id = bookinfo.getScreening_ID();
 		String site_name=bookinfo.getSite_name();
@@ -94,16 +104,23 @@ public class BookController {
 //	model.addAttribute("bInfo", bInfo);
 	
 	@RequestMapping("/book3")
-	public String book3(@ModelAttribute("cInfo") Book_BuyConfirm buyConfirm,Model model, HttpSession session){
+	public String book3(@ModelAttribute("cInfo") Book_BuyConfirm buyConfirm,Model model, HttpSession session, HttpServletResponse response) throws IOException{
 	System.out.println("book3");
-	System.out.println(session.getAttribute("id"));
+	if(session.getAttribute("id")==null){
+	PrintWriter writer=response.getWriter();
+	writer.println("<script>alert('로그인을 확인해주세요.'); location.href='login';</script>");
+	}
 	return "book/book3";	
 	}
 	
 
 	@RequestMapping("/book4")
-	public String book4(@ModelAttribute("bInfo")Book_BookInfo bookinfo, @ModelAttribute("sdto") SaleDTO sdto,HttpServletRequest hsr, HttpSession session,Model model){
+	public String book4(@ModelAttribute("bInfo")Book_BookInfo bookinfo, @ModelAttribute("sdto") SaleDTO sdto,HttpServletRequest hsr, HttpSession session, HttpServletResponse response,Model model) throws IOException{
 		System.out.println("book4");
+		if(session.getAttribute("id")==null){
+			PrintWriter writer=response.getWriter();
+			writer.println("<script>alert('로그인을 확인해주세요.'); location.href='login';</script>");
+			}
 		System.out.println(session.getAttribute("id"));
 		model.addAttribute("request", hsr);
 		 model.addAttribute("saleDTO", sdto);

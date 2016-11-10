@@ -2,9 +2,9 @@ package kr.co.cgs4.dao;
 
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
-import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -12,6 +12,7 @@ import org.springframework.jdbc.core.PreparedStatementSetter;
 
 import kr.co.cgs4.dto.Book_ScreenNum;
 import kr.co.cgs4.dto.Book_ScreeningInfo;
+import kr.co.cgs4.dto.Book_SeatCnt;
 import kr.co.cgs4.dto.Book_SeatOccupation;
 import kr.co.cgs4.dto.Book_SeatRow;
 import kr.co.cgs4.dto.FilmDTO;
@@ -52,6 +53,11 @@ public class BookDAO {
 				+ "group by film_name, site_name, sc.screening_date, sc.screen_num";
 		return (ArrayList<Book_ScreenNum>) template.query(query, new BeanPropertyRowMapper<Book_ScreenNum>(Book_ScreenNum.class));
 	}
+	public List<Book_SeatCnt> saleCnt(){
+	String query="select a.screening_id, count(seat_id) sale_cnt from screening a left join (select ss.screening_id, seat_id from screening sc, sale_seat ss group by ss.screening_id, seat_id) b on a.screening_id = b.screening_id group by a.screening_id";
+		return template.query(query, new BeanPropertyRowMapper<Book_SeatCnt>(Book_SeatCnt.class));
+	}
+	
 	//
 	//book2에 필요한 seatDTO, sale_seat정보
 	public ArrayList<SeatDTO> seat(String site_name, String screen_num){
@@ -77,7 +83,7 @@ public class BookDAO {
 		return (ArrayList<Book_SeatRow>) template.query(query, new BeanPropertyRowMapper<Book_SeatRow>(Book_SeatRow.class));
 	}
 
-	public void saleSubmit(final String SALE_ID,final java.sql.Date CURRDATE, final int SALE_PRICE, final String PAYCARD_NUMBER, final String SCREENING_ID, final int SALE_COUNT, final int COMMON_CNT, final int FINAL_PRICE, final int YOUNG_CNT, final int SPECIAL_CNT, final String[] sits, final String id, final String reserve_ID){
+	public void saleSubmit(final String SALE_ID,final java.sql.Date CURRDATE, final int SALE_PRICE, final String PAYCARD_NUMBER, final String SCREENING_ID, final int SALE_COUNT, final int FINAL_PRICE, final int COMMON_CNT, final int YOUNG_CNT, final int SPECIAL_CNT, final String[] sits, final String id, final String reserve_ID){
 		System.out.println(id);
 //		TransactionDefinition definition = new DefaultTransactionDefinition();
 //		TransactionStatus status = transactionManager.getTransaction(definition);

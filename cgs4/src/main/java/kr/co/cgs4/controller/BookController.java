@@ -5,6 +5,7 @@ import java.io.PrintWriter;
 import java.sql.Date;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -22,6 +23,7 @@ import kr.co.cgs4.dto.Book_BookInfo;
 import kr.co.cgs4.dto.Book_BuyConfirm;
 import kr.co.cgs4.dto.Book_ScreenNum;
 import kr.co.cgs4.dto.Book_ScreeningInfo;
+import kr.co.cgs4.dto.Book_SeatCnt;
 import kr.co.cgs4.dto.Book_SeatOccupation;
 import kr.co.cgs4.dto.Book_SeatRow;
 import kr.co.cgs4.dto.FilmDTO;
@@ -47,8 +49,10 @@ public class BookController {
 			Date screening_date = java.sql.Date.valueOf(sScreening_date);
 			
 			System.out.println(screening_date);
+			List<Book_SeatCnt> sCnt = bdao.saleCnt();
 			ArrayList<Book_ScreeningInfo> bdto = bdao.screening_date(film_name, site_name, screening_date);
 			ArrayList<Book_ScreenNum> scdto = bdao.screening_num(film_name, site_name, screening_date);
+			model.addAttribute("scnt", sCnt);
 			model.addAttribute("blist", bdto);
 			model.addAttribute("scNum", scdto);
 		}

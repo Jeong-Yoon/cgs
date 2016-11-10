@@ -158,17 +158,18 @@
 		<div class="choose-film">
 			<div class="col-sm-12">
 				<div class="rates-wrapper rates--full film_select">
-					<div class="tags-area">
-						<div class="tags tags--unmarked">
-							<span class="tags__label">sort by</span>
-							<ul>
-								<li class="item-wrap"><a href="#"
-									class="tags__item item-active" data-filter='all'>예매율 순</a></li>
-								<li class="item-wrap"><a href="#" class="tags__item"
-									data-filter='release'>평점 순</a></li>
-							</ul>
-						</div>
-					</div>
+<!-- 				순서 테이블 -->
+<!-- 					<div class="tags-area"> -->
+<!-- 						<div class="tags tags--unmarked"> -->
+<!-- 							<span class="tags__label">sort by</span> -->
+<!-- 							<ul> -->
+<!-- 								<li class="item-wrap"><a href="#" -->
+<!-- 									class="tags__item item-active" data-filter='all'>예매율 순</a></li> -->
+<!-- 								<li class="item-wrap"><a href="#" class="tags__item" -->
+<!-- 									data-filter='release'>평점 순</a></li> -->
+<!-- 							</ul> -->
+<!-- 						</div> -->
+<!-- 					</div> -->
 
 					<div class="film_table">
 					<table>
@@ -247,7 +248,7 @@
 				<c:forEach var="j" items="${scNum}">
 				<div class="time-select__group">
 					<div class="col-sm-2">
-						<p class="time-select__place">${j.screen_num}</p>관
+						<p class="time-select__place" style="padding:0px">${j.screen_num}관</p>
 					</div>
 					<ul class="col-sm-8 items-wrap">
 						<c:forEach var="i" items="${blist}">
@@ -255,7 +256,11 @@
 								<li class=time-select__set>
 									<input type='hidden' name="screening_ID" value="${i.screening_ID }"> 
 									<div class="time-select__item" data-time='${i.start_time }'>${i.start_time }</div>
-									<div class="time-select__seat">100/100석</div>
+									<c:forEach var="k" items="${scnt}">
+										<c:if test="${k.screening_ID eq i.screening_ID}">
+											<div class="time-select__seat">${k.sale_cnt }/${i.seating_cnt}석</div>
+										</c:if>
+									</c:forEach>
 								</li>
 							</c:if>
 						</c:forEach>
@@ -453,8 +458,8 @@
 			}else{
 				alert("예매정보를 모두 선택해주세요.")
 			}
-			
 		});
+		
 //	 	function submit() {
 // 		document.getElementById("film-and-time").submit();
 // 	}

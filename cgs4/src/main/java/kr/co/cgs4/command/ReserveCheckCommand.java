@@ -60,5 +60,24 @@ public class ReserveCheckCommand {
 		
 
 	}
+	
+	public void reserveDelete(Model model) {
+
+		Map<String, Object> map = model.asMap();
+
+		HttpServletRequest request = (HttpServletRequest) map.get("request");
+
+		String rId = request.getParameter("rId");
+
+		System.out.println("saleId=" + rId);
+
+		ReserveCheckDAO dao=new ReserveCheckDAO();
+		dao.deleteMemberSale(rId);
+/*		dao.deleteReserve(rId);
+		dao.deleteSale(rId);
+		dao.deleteSaleSeat(rId);
+		*/
+
+	}
 
 }

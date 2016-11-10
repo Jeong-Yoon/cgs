@@ -7,6 +7,8 @@
 <%
 	String ctx = request.getContextPath();
 %>
+<html>
+<head>
 <style>
 #navigation {
 	background-color: rgba(0, 0, 3, 0.7);
@@ -33,10 +35,9 @@ color: #fff;
     text-transform: uppercase;
 }  
 </style>
-<html>
-<head>
+
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>CGS menubar</title>
 
 
 <!-- Mobile menu -->
@@ -58,7 +59,7 @@ color: #fff;
 <body>
 	<div style="height: 100px"></div>
 	<header id="navigation" class="navbar-fixed-top">
-	<div class="container">
+	<div class="container ">
 		<!--
         Fixed Navigation
         ==================================== -->
@@ -83,12 +84,12 @@ color: #fff;
 
 		<!-- main nav -->
 		<nav class="collapse navigation navbar-collapse navbar-right" role="navigation" >
-		<ul id="nav" class="nav navbar-nav">
-			<li><a href="<%=ctx%>/index">Home</a></li>
-			<li><a href="<%=ctx%>/movie_list?page=0">Movie</a></li>
-			<li><a href="<%=ctx%>/book1">Ticket</a></li>
-			<li><a href="<%=ctx%>/cinemas">Cinema</a></li>
-			<li><a href="<%=ctx%>/contact">Contact</a></li>
+		<ul id="nav" class="nav navbar-nav spoqahansans">
+			<li class="normal w300"><a href="<%=ctx%>/index">Home</a></li>
+			<li class="normal w300"><a href="<%=ctx%>/movie_list?page=0">Movie</a></li>
+			<li class="normal w300"><a href="<%=ctx%>/book1">Ticket</a></li>
+			<li class="normal w300"><a href="<%=ctx%>/cinemas">Cinema</a></li>
+			<li class="normal w300"><a href="<%=ctx%>/contact">Contact</a></li>
 			<%
 				if ((String) session.getAttribute("id") == null) {
 			%>
@@ -97,14 +98,14 @@ color: #fff;
 				} else {
 					String name = (String) session.getAttribute("name");
 			%>
-			<li><a href="#" class="auth__show">My Page</a>
-				<ul class="auth__function">
-					<li class="auth__function-item">안녕하세요 <strong><%=name%></strong>님!</li>
+			<li><a href="#" class="auth__show spoqahansans normal w300">My Page</a>
+				<ul class="auth__function spoqahansans">
+					<li class="auth__function-item normal w300">안녕하세요 <strong><%=name%></strong>님!</li>
 					<br>
-					<li><a href="<%=ctx%>/modify" class="auth__function-item">내 정보 확인</a></li>
-					<li><a href="<%=ctx%>/reserve_list/?mId=<%=(String) session.getAttribute("id") %>" class="auth__function-item">예매 내역 확인</a></li>
+					<li class="normal w300"><a href="<%=ctx%>/modify" class="auth__function-item">내 정보 확인</a></li>
+					<li class="normal w300"><a href="<%=ctx%>/reserve_list/?mId=<%=(String) session.getAttribute("id") %>" class="auth__function-item">예매 내역 확인</a></li>
 				</ul></li>
-			<li><a href="<%=ctx%>/logout">Logout</a></li>
+			<li class="normal w300"><a href="<%=ctx%>/logout">Logout</a></li>
 			<%
 				}
 			%>

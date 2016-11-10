@@ -1046,7 +1046,7 @@ table {
 
 .top-scroll a:hover {
 	background: url("../images/components/arrow.svg") repeat scroll center
-		center rgba(254, 80, 90, 0.8);
+		center rgba(254, 70, 120, 0.8);
 }
 
 .inv-em {
@@ -3281,6 +3281,7 @@ ul#navigation a:hover {
 	margin-top: 56px;
 	margin-bottom: 27px;
 	font: 20px 'aleobold', Spoqa Han Sans;
+	font-weight: 400;
 	color: #222A35;
 	text-transform: uppercase;
 	background-image: url(../images/components/scarf.png);
@@ -3371,14 +3372,15 @@ ul#navigation a:hover {
 
 .btn--warning {
 	color: #222A35;
-	background-color: #F0C419;
-	border: solid 1px #F0C419;
+	background-color: transparent;
+	border: solid 1px #222A35;
+	font-family: Godo;
 }
 
 .btn--warning:hover {
-	color: #222A35;
-	background-color: #ffe08d;
-	border-color: transparent;
+	color: #fff;
+	background-color: F0C419;
+	border-color: F0C419;
 }
 
 .btn--danger {
@@ -6466,7 +6468,8 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 	margin-top: 10px;
 	text-align:center;
 	font-family: Spoqa Han Sans;
-	background-color: rgba(240, 196, 25, 0.6);
+	background-color: rgba(255, 192, 0, 0.7);
+	border: 5px solid #E7E6E6;
 	padding: 10px;
 	color: #5d5d5d;
 }
@@ -11490,3 +11493,4 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 .birth_date {
     width: 60px;
 }
+

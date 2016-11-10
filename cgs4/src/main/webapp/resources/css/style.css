@@ -1,6 +1,139 @@
+
+/*
+font=Korean2: LotteMartDream
+*/
+@font-face {
+  font-family: 'LotteMartDream';
+  font-style: normal;
+  font-weight: 400;
+  src: url('//cdn.jsdelivr.net/korean-webfonts/1/corps/LotteMartDream/LotteMartDream/LotteMartDreamM.woff2') format('woff2'), url('//cdn.jsdelivr.net/korean-webfonts/1/corps/LotteMartDream/LotteMartDream/LotteMartDreamM.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'LotteMartDream';
+  font-style: normal;
+  font-weight: 700;
+  src: url('//cdn.jsdelivr.net/korean-webfonts/1/corps/LotteMartDream/LotteMartDream/LotteMartDreamB.woff2') format('woff2'), url('//cdn.jsdelivr.net/korean-webfonts/1/corps/LotteMartDream/LotteMartDream/LotteMartDreamB.woff') format('woff');
+}
+
+.LotteMartDream * {
+ font-family: 'LotteMartDream', sans-serif;
+}
+
+/** 이하는 공통 **/
+.normal {
+ font-style: normal;
+}
+
+.w250 {
+ font-weight: 250;
+}
+
+.w300 {
+ font-weight: 300;
+}
+
+.w350 {
+ font-weight: 350;
+}
+
+.w400 {
+ font-weight: 400;
+}
+
+.w500 {
+ font-weight: 500;
+}
+
+.w700 {
+ font-weight: 700;
+}
+
+.w800 {
+ font-weight: 800;
+}
+
+.w900 {
+ font-weight: 900;
+}
+
+li span {
+ line-height: 1.8;
+ font-size: 1.3em;
+}
+
+/*
+font-Korean1: LotteMartDream
+*/
+@font-face {
+  font-family: 'LotteMartDream';
+  font-style: normal;
+  font-weight: 400;
+  src: url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamMedium.woff2') format('woff2'), url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamMedium.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'LotteMartDream';
+  font-style: normal;
+  font-weight: 700;
+  src: url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamBold.woff2') format('woff2'), url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamBold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'LotteMartDream';
+  font-style: normal;
+  font-weight: 300;
+  src: url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamLight.woff2') format('woff2'), url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamLight.woff') format('woff');
+}
+
+.lottemartdream * {
+ font-family: 'LotteMartDream', sans-serif;
+}
+
+.normal {
+ font-style: normal;
+}
+
+.w250 {
+ font-weight: 250;
+}
+
+.w300 {
+ font-weight: 300;
+}
+
+.w350 {
+ font-weight: 350;
+}
+
+.w400 {
+ font-weight: 400;
+}
+
+.w500 {
+ font-weight: 500;
+}
+
+.w700 {
+ font-weight: 700;
+}
+
+.w800 {
+ font-weight: 800;
+}
+
+.w900 {
+ font-weight: 900;
+}
+
+li span {
+ line-height: 1.8;
+ font-size: 1.3em;
+}
+
 /*! normalize.css v3.0.0 | MIT License | git.io/normalize */
 html {
-	font-family: Nanum Gothic;
+	font-family: LotteMartDream;
 	-ms-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
 }
@@ -45,7 +178,7 @@ body, div, section, footer, video, article {
 /* 	top: 0; */
 /* 	left: 0; */
 /* 	color: #fff; */
-/* 	font-family: "Roboto", Nanum Gothic; */
+/* 	font-family: "Roboto", LotteMartDream; */
 /* 	text-shadow: 0 0 16px rbga(0,0,0,0.15); */
 /* } */
 
@@ -288,7 +421,7 @@ html {
 }
 
 body {
-	font-family: "Helvetica Neue", Helvetica, Arial, Nanum Gothic;
+	font-family: "Helvetica Neue", Helvetica, Arial, LotteMartDream;
 	font-size: 14px;
 	line-height: 1.428571429;
 	color: #333333;
@@ -746,7 +879,7 @@ html, body {
 }
 
 body {
-	font-family: 'Roboto', Nanum Gothic;
+	font-family: 'Roboto', LotteMartDream;
 }
 
 .wrapper {
@@ -767,7 +900,7 @@ body {
 h1 {
 	color: #222A35;
 	font-size: 30px;
-	font-family: 'aleoregular', Nanum Gothic;
+	font-family: 'aleoregular', LotteMartDream;
 	margin-top: 32px;
 	margin-bottom: 23px;
 }
@@ -775,7 +908,7 @@ h1 {
 h2 {
 	color: #222A35;
 	font-size: 27px;
-	font-family: 'aleoregular', Nanum Gothic;
+	font-family: 'aleoregular', LotteMartDream;
 	margin-top: 70px;
 	margin-bottom: 23px;
 }
@@ -783,7 +916,7 @@ h2 {
 h3 {
 	color: #222A35;
 	font-size: 24px;
-	font-family: 'aleoregular', Nanum Gothic;
+	font-family: 'aleoregular', LotteMartDream;
 	margin-top: 40px;
 	margin-bottom: 24px;
 }
@@ -791,7 +924,7 @@ h3 {
 h4 {
 	color: #222A35;
 	font-size: 21px;
-	font-family: 'aleoregular', Nanum Gothic;
+	font-family: 'aleoregular', LotteMartDream;
 	margin-top: 70px;
 	margin-bottom: 24px;
 }
@@ -799,18 +932,18 @@ h4 {
 h5 {
 	color: #222A35;
 	font-size: 18px;
-	font-family: 'aleoregular', Nanum Gothic;
+	font-family: 'aleoregular', LotteMartDream;
 	margin-top: 70px;
 	margin-bottom: 24px;
 }
 
 .unslyled {
 	font-weight: bold;
-	font-family: 'Roboto', Nanum Gothic;
+	font-family: 'Roboto', LotteMartDream;
 }
 
 p {
-	font-size: 15px;
+	font-size: 16px;
 	line-height: 28px;
 	color: #222A35;
 	margin-bottom: 28px;
@@ -823,7 +956,7 @@ p {
 }
 
 a {
-	font-size: 13px;
+	font-size: 16px;
 	color: #222A35;
 	-webkit-transition: 0.3s;
 	transition: 0.3s;
@@ -890,7 +1023,7 @@ input, textarea {
 }
 
 .list li {
-	font: 18px 'aleobolditalic', Nanum Gothic;
+	font: 18px 'aleobolditalic', LotteMartDream;
 	color: #222A35;
 	margin-bottom: 20px;
 }
@@ -953,7 +1086,7 @@ table {
 
 .login .success {
 	background-color: #F0C419;
-	font: 18px 'aleobold', Nanum Gothic;
+	font: 18px 'aleobold', LotteMartDream;
 	text-transform: uppercase;
 	color: #222A35;
 	text-align: center;
@@ -964,7 +1097,7 @@ table {
 }
 
 .form .success {
-	font: 24px 'aleoitalic', Nanum Gothic;
+	font: 24px 'aleoitalic', LotteMartDream;
 	padding-top: 67px;
 	padding-bottom: 66px;
 }
@@ -3138,7 +3271,7 @@ ul#navigation {
 }
 
 ul#navigation a {
-	font: 13px 'Roboto', Nanum Gothic;
+	font: 13px 'Roboto', LotteMartDream;
 	color: #b4b1b2;
 	-webkit-transition: 0.3s;
 	transition: 0.3s;
@@ -3149,7 +3282,7 @@ ul#navigation a:hover {
 }
 
 .heading {
-	font: 16px 'aleoregular', Nanum Gothic;
+	font: 16px 'aleoregular', LotteMartDream;
 	text-transform: uppercase;
 	color: #222A35;
 	margin: 0 0 16px;
@@ -3166,14 +3299,14 @@ ul#navigation a:hover {
 
 .heading--strong {
 	font-size: 21px;
-	font-family: 'aleobold', Nanum Gothic;
+	font-family: 'aleobold', LotteMartDream;
 }
 
 .page-heading {
 	padding-left: 30px;
 	margin-top: 56px;
 	margin-bottom: 27px;
-	font: 20px 'aleobold', Nanum Gothic;
+	font: 20px 'aleobold', LotteMartDream;
 	color: #222A35;
 	text-transform: uppercase;
 	background-image: url(../images/components/scarf.png);
@@ -3187,7 +3320,7 @@ ul#navigation a:hover {
 	font-size: 22px;
 	line-height: 20px;
 	color: #222A35;
-	font-family: 'aleobold', Nanum Gothic;
+	font-family: 'aleobold', LotteMartDream;
 	text-transform: uppercase;
 	text-align: center;
 	margin: 0;
@@ -3198,7 +3331,7 @@ ul#navigation a:hover {
 .heading-special .heading-edition {
 	font-size: 16px;
 	font-weight: normal;
-	font-family: 'aleoitalic', Nanum Gothic;
+	font-family: 'aleoitalic', LotteMartDream;
 	text-transform: lowercase;
 }
 
@@ -3217,7 +3350,7 @@ ul#navigation a:hover {
 }
 
 .heading-special--small {
-	font-family: 'aleoregular', Nanum Gothic;
+	font-family: 'aleoregular', LotteMartDream;
 	font-size: 16px;
 	line-height: 20px;
 	color: #222A35;
@@ -3225,14 +3358,14 @@ ul#navigation a:hover {
 }
 
 .heading-special--small .title-edition {
-	font-family: 'aleoitalic', Nanum Gothic;
+	font-family: 'aleoitalic', LotteMartDream;
 	text-transform: lowercase;
 	color: #ED2236;
 }
 
 .text-helper {
 	color: #969b9f;
-	font-family: 'aleoitalic', Nanum Gothic;
+	font-family: 'aleoitalic', LotteMartDream;
 	font-size: 16px;
 }
 
@@ -3252,7 +3385,7 @@ ul#navigation a:hover {
 		rgba(255, 255, 255, 0.2);
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.16), inset 0 2px
 		rgba(255, 255, 255, 0.2);
-	font: 12px 'aleobold', Nanum Gothic;
+	font: 12px 'aleobold', LotteMartDream;
 	text-transform: uppercase;
 	-webkit-transition: 0.3s;
 	transition: 0.3s;
@@ -3351,7 +3484,7 @@ ul#navigation a:hover {
 }
 
 .btn--sign {
-	font: 13px 'Roboto', Nanum Gothic;
+	font: 13px 'Roboto', LotteMartDream;
 	font-weight: bold;
 	text-transform: uppercase;
 	color: #F0C419;
@@ -3396,7 +3529,7 @@ ul#navigation a:hover {
 }
 
 .watchlist {
-	font-size: 13px;
+	font-size: 16px;
 	color: #222A35;
 	border: 1px solid #222A35;
 	-webkit-border-radius: 3px;
@@ -3440,7 +3573,7 @@ ul#navigation a:hover {
 }
 
 .read-more {
-	font: 16px 'aleoregular', Nanum Gothic;
+	font: 16px 'aleoregular', LotteMartDream;
 	color: #ED2236;
 	text-transform: uppercase;
 	-webkit-border-radius: 3px;
@@ -3485,7 +3618,7 @@ ul#navigation a:hover {
 }
 
 .link--text {
-	font-size: 15px;
+	font-size: 16px;
 	color: #969b9f;
 	-webkit-transition: 0.3s;
 	transition: 0.3s;
@@ -3527,8 +3660,8 @@ ul#navigation a:hover {
 }
 
 .panel-collapse .panel-body {
-	font-family: 'Roboto', Nanum Gothic;
-	font-size: 13px;
+	font-family: 'Roboto', LotteMartDream;
+	font-size: 16px;
 	line-height: 21px;
 	padding: 13px 15px 10px 35px;
 	color: #222A35;
@@ -3589,7 +3722,7 @@ ul#navigation a:hover {
 
 .accordion-light .panel-title {
 	font-weight: bold;
-	font-family: 'Roboto', Nanum Gothic;
+	font-family: 'Roboto', LotteMartDream;
 }
 
 .accordion-light .marker {
@@ -3632,7 +3765,7 @@ ul#navigation a:hover {
 	padding: 17px 15px 18px 55px;
 	background-color: #222A35;
 	color: #ffffff;
-	font-family: 'Roboto', Nanum Gothic;
+	font-family: 'Roboto', LotteMartDream;
 }
 
 .accordion-dark .panel-title>a .marker, .accordion-dark .panel-title>a.collapsed:hover .marker
@@ -3668,7 +3801,7 @@ ul#navigation a:hover {
 	-moz-border-radius: 0;
 	border-radius: 0;
 	padding-left: 56px;
-	font-size: 13px;
+	font-size: 16px;
 	margin-bottom: 0;
 	margin-top: 10px;
 }
@@ -3676,7 +3809,7 @@ ul#navigation a:hover {
 .alert span {
 	bottom: 0;
 	color: #FFFFFF;
-	font-size: 15px;
+	font-size: 16px;
 	left: 0;
 	padding-left: 12px;
 	padding-top: 13px;
@@ -3729,40 +3862,40 @@ ul#navigation a:hover {
 	content: "\f024";
 	font-family: "FontAwesome";
 	color: #ffffff;
-	font-size: 13px;
+	font-size: 16px;
 }
 
 .icon-bell:before {
 	content: "\f0f3";
 	font-family: "FontAwesome";
 	color: #ffffff;
-	font-size: 13px;
+	font-size: 16px;
 }
 
 .icon-warning:before {
 	content: "\f06a";
 	font-family: "FontAwesome";
 	color: #ffffff;
-	font-size: 13px;
+	font-size: 16px;
 }
 
 .icon-info:before {
 	content: "\f05a";
 	font-family: "FontAwesome";
 	color: #ffffff;
-	font-size: 13px;
+	font-size: 16px;
 }
 
 .alert .close {
 	opacity: 1;
 	float: right;
-	font-size: 13px;
+	font-size: 16px;
 	position: relative;
 }
 
 .alert .close:before {
 	content: "\f00d";
-	font-size: 13px;
+	font-size: 16px;
 	font-family: "FontAwesome";
 }
 
@@ -3807,7 +3940,7 @@ ul#navigation a:hover {
 }
 
 .price .price__package {
-	font: 16px 'aleoregular', Nanum Gothic;
+	font: 16px 'aleoregular', LotteMartDream;
 	color: #ffffff;
 	text-transform: capitalize;
 	padding-top: 16px;
@@ -3816,7 +3949,7 @@ ul#navigation a:hover {
 }
 
 .price .price__value {
-	font: 40px 'aleobold', Nanum Gothic;
+	font: 40px 'aleobold', LotteMartDream;
 	color: #ED2236;
 	background-color: #fafafa;
 	background-image: url(../images/components/price-pattern.jpg);
@@ -3827,7 +3960,7 @@ ul#navigation a:hover {
 }
 
 .price .price__feather {
-	font: 13px 'Roboto', Nanum Gothic;
+	font: 13px 'Roboto', LotteMartDream;
 	color: #b4b1b2;
 	padding-top: 16px;
 	padding-bottom: 15px;
@@ -3871,7 +4004,7 @@ ul#navigation a:hover {
 }
 
 .promo .promo__head {
-	font: 30px 'aleobold', Nanum Gothic;
+	font: 30px 'aleobold', LotteMartDream;
 	color: #ffffff;
 	text-transform: uppercase;
 	margin-bottom: 18px;
@@ -3879,7 +4012,7 @@ ul#navigation a:hover {
 }
 
 .promo .promo__describe {
-	font: 18px 'aleoitalic', Nanum Gothic;
+	font: 18px 'aleoitalic', LotteMartDream;
 	color: #222A35;
 	font-weight: 300;
 	padding-bottom: 45px;
@@ -3935,7 +4068,7 @@ ul#navigation a:hover {
 	-webkit-border-radius: 0;
 	-moz-border-radius: 0;
 	border-radius: 0;
-	font: 16px 'Roboto', Nanum Gothic;
+	font: 16px 'Roboto', LotteMartDream;
 	color: #222A35;
 	text-transform: uppercase;
 	font-weight: bold;
@@ -3963,7 +4096,7 @@ ul#navigation a:hover {
 }
 
 .tab-content p {
-	font-size: 13px;
+	font-size: 16px;
 	line-height: 21px;
 	margin-bottom: 21px;
 }
@@ -4020,12 +4153,12 @@ ul#navigation a:hover {
 }
 
 .testionaial .testionaial__organization {
-	font-size: 13px;
+	font-size: 16px;
 	font-style: italic;
 }
 
 .testionaial .testionaial__text {
-	font: 13px 'Roboto', Nanum Gothic;
+	font: 13px 'Roboto', LotteMartDream;
 	color: #222A35;
 	font-style: italic;
 	margin-top: 30px;
@@ -4077,7 +4210,7 @@ ul#navigation a:hover {
 	border: solid 1px #dbdee1;
 	background-color: #fff;
 	color: #222A35;
-	font-size: 13px;
+	font-size: 16px;
 }
 
 .search .search__sort {
@@ -4107,7 +4240,7 @@ ul#navigation a:hover {
 	margin-top: 4px;
 	margin-left: 5px;
 	color: #222A35;
-	font-size: 13px;
+	font-size: 16px;
 }
 
 .search .sbHolder .sbOptions {
@@ -4211,7 +4344,7 @@ ul#navigation a:hover {
 }
 
 .post .post__title-link {
-	font: 30px 'aleoregular', Nanum Gothic;
+	font: 30px 'aleoregular', LotteMartDream;
 }
 
 .post .post__date {
@@ -4283,14 +4416,14 @@ ul#navigation a:hover {
 	border: none;
 	background-color: #F0C419;
 	color: #222A35;
-	font: 28px 'aleoitalic', Nanum Gothic;
+	font: 28px 'aleoitalic', LotteMartDream;
 	padding: 55px 50px 15px;
 }
 
 .quote .quote__author {
 	font-size: 16px;
 	font-style: normal;
-	font-family: 'aleobold', Nanum Gothic;
+	font-family: 'aleobold', LotteMartDream;
 	color: #ffffff;
 	text-align: right;
 	position: relative;
@@ -4331,7 +4464,7 @@ ul#navigation a:hover {
 }
 
 .tags .tags__label {
-	font-size: 13px;
+	font-size: 16px;
 	color: #222A35;
 	display: inline-block;
 	float: left;
@@ -4373,7 +4506,7 @@ ul#navigation a:hover {
 }
 
 .share .share__marker {
-	font-size: 13px;
+	font-size: 16px;
 	font-weight: bold;
 	display: inline-block;
 	float: left;
@@ -4452,7 +4585,7 @@ ul#navigation a:hover {
 
 .social--hide:before {
 	content: '+';
-	font: 18px 'Roboto', Nanum Gothic;
+	font: 18px 'Roboto', LotteMartDream;
 	color: #222A35;
 	font-weight: bold;
 	position: absolute;
@@ -4464,7 +4597,7 @@ ul#navigation a:hover {
 	padding-left: 27px;
 	padding-top: 5px;
 	display: inline-block;
-	font-size: 13px;
+	font-size: 16px;
 	opacity: 0;
 	-webkit-transition: 0.5s;
 	transition: 0.5s;
@@ -4483,7 +4616,7 @@ ul#navigation a:hover {
 	transition: 0.5s;
 	padding: 0 7px;
 	background-color: transparent;
-	font-size: 13px;
+	font-size: 16px;
 	margin-left: 0;
 }
 
@@ -4565,13 +4698,13 @@ ul#navigation a:hover {
 	border-radius: 3px;
 	background-color: #ffffff;
 	border: solid 1px #dbdee1;
-	font-size: 13px;
+	font-size: 16px;
 	color: #b4b1b2;
 }
 
 .comment-form .comment-form__info {
 	margin-top: 19px;
-	font: 13px 'Roboto', Nanum Gothic;
+	font: 13px 'Roboto', LotteMartDream;
 	color: #969b9f;
 	display: inline-block;
 }
@@ -4604,7 +4737,7 @@ ul#navigation a:hover {
 }
 
 .comment .comment__date {
-	font-size: 13px;
+	font-size: 16px;
 	margin-bottom: 0;
 	color: #969b9f;
 	line-height: 20px;
@@ -4612,7 +4745,7 @@ ul#navigation a:hover {
 
 .comment .comment__message {
 	clear: both;
-	font-size: 13px;
+	font-size: 16px;
 	line-height: 21px;
 	margin-top: 7px;
 }
@@ -4689,13 +4822,13 @@ ul#navigation a:hover {
 	text-align: center;
 	margin: 0;
 	margin-bottom: 28px;
-	font-family: 'aleobold', Nanum Gothic;
+	font-family: 'aleobold', LotteMartDream;
 }
 
 .category .category__title .title-edition {
 	font-size: 16px;
 	font-weight: normal;
-	font-family: 'aleoitalic', Nanum Gothic;
+	font-family: 'aleoitalic', LotteMartDream;
 	text-transform: lowercase;
 }
 
@@ -4742,7 +4875,7 @@ ul#navigation a:hover {
 }
 
 #twitter-feed p {
-	font-family: Arial, Nanum Gothic;
+	font-family: Arial, LotteMartDream;
 	font-size: 12px;
 	line-height: 16px;
 	margin-bottom: 14px;
@@ -4767,7 +4900,7 @@ ul#navigation a:hover {
 .tweetprofilelink a {
 	font-size: 12px;
 	color: #969b9f;
-	font-family: Arial, Nanum Gothic;
+	font-family: Arial, LotteMartDream;
 }
 
 .twitter-text {
@@ -4805,8 +4938,8 @@ ul#navigation a:hover {
 }
 
 .copy {
-	font-family: 'aleoitalic', Nanum Gothic;
-	font-size: 13px;
+	font-family: 'aleoitalic', LotteMartDream;
+	font-size: 16px;
 	padding-bottom: 45px;
 }
 
@@ -4866,7 +4999,7 @@ ul#navigation a:hover {
 	transition: 0.3s;
 	width: 130px;
 	display: none;
-	font: 13px 'aleoitalic', Nanum Gothic;
+	font: 13px 'aleoitalic', LotteMartDream;
 	color: #ffffff;
 	line-height: 21px;
 }
@@ -4926,7 +5059,7 @@ ul#navigation a:hover {
 	-webkit-transition: 0.3s;
 	transition: 0.3s;
 	width: 130px;
-	font: 13px 'aleoitalic', Nanum Gothic;
+	font: 13px 'aleoitalic', LotteMartDream;
 	color: #ffffff;
 	line-height: 21px;
 	position: absolute;
@@ -5080,7 +5213,7 @@ ul#navigation>li>ul.mega-menu {
 }
 
 .mega-menu__heading {
-	font-size: 13px;
+	font-size: 16px;
 	color: #ffffff;
 	margin: 13px 0 17px;
 }
@@ -5263,6 +5396,9 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 }
 
 .datepicker .datepicker__input {
+	border-top:10px;
+	font-family:Godo;
+	font-size: 16px;
 	width: 90px;
 	border: none;
 	cursor: pointer;
@@ -5361,7 +5497,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 
 .ui-datepicker .ui-datepicker-header .ui-datepicker-title {
 	color: #ffffff;
-	font: 14px 'aleoregular', Nanum Gothic;
+	font: 14px 'aleoregular', LotteMartDream;
 	margin-top: 11px;
 	margin-bottom: 13px;
 }
@@ -5503,6 +5639,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 }
 
 .select .sbSelector {
+	font-family:Godo;
 	color: #ED2236;
 	position: relative;
 	text-align: right;
@@ -5573,7 +5710,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 
 .select .sbToggle:after {
 	/* 	content: '�뜝�럩寃ュ뜝�럩�꼨占쎄슈�뜝占�''; */
-	font: 13px 'Roboto', Nanum Gothic;
+	font: 13px 'Roboto', LotteMartDream;
 	font-weight: bold;
 }
 
@@ -5616,6 +5753,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 }
 
 .select .sbOptions a {
+	font-family:Godo;
 	border: none;
 	color: #B4B1B2;
 	display: inline-block;
@@ -5624,7 +5762,8 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 }
 
 .select .sbOptions a:hover {
-	color: #ffffff;
+	color: #F0C419;
+	font-family:Godo;
 }
 
 .select .sbOptions a:before {
@@ -5644,7 +5783,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 
 .mega-select .mega-select__point {
 	font-weight: bold;
-	font-size: 13px;
+	font-size: 16px;
 	float: left;
 	margin-top: 2px;
 	margin-right: 30px;
@@ -5694,7 +5833,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 	border-radius: 3px;
 	background-color: #transparent;
 	border: solid 1px #dbdee1;
-	font-size: 13px;
+	font-size: 16px;
 	color: #fff;
 	padding: 8px 20px 9px;
 	margin-top: 7px;
@@ -5741,7 +5880,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 
 .mega-select .select__group .select__variant {
 	color: #b4b1b2;
-	font-size: 13px;
+	font-size: 16px;
 	padding: 6px 0;
 	cursor: pointer;
 	-webkit-transition: 0.3s;
@@ -5762,7 +5901,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 }
 
 .pagination .pagination__prev {
-	font: 13px 'aleoregular', Nanum Gothic;
+	font: 15px 'aleoregular', Godo;
 	color: #222A35;
 	text-transform: uppercase;
 	display: inline-block;
@@ -5780,10 +5919,10 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 }
 
 .pagination .pagination__next {
-	font: 13px 'aleoregular', Nanum Gothic;
+	font: 15px 'aleoregular', Godo;
 	color: #222A35;
 	text-transform: uppercase;
-	float: right;
+	float: left;
 	display: inline-block;
 	padding: 8px 43px 9px 0;
 	margin-right: -8px;
@@ -5873,7 +6012,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 
 .booking-pagination .arrow__text {
 	position: relative;
-	font: 16px 'aleoregular', Nanum Gothic;
+	font: 16px 'aleoregular', LotteMartDream;
 	color: #ED2236;
 	text-transform: uppercase;
 	border-bottom: 1px solid #dbdee1;
@@ -5907,7 +6046,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 }
 
 .booking-pagination .arrow__info {
-	font: 14px 'aleoitalic', Nanum Gothic;
+	font: 14px 'aleoitalic', LotteMartDream;
 	color: #969b9f;
 	-webkit-transition: 0.4s;
 	transition: 0.4s;
@@ -5942,7 +6081,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 	padding: 20px 17px 19px;
 	border: 3px solid #F0C419;
 	border-top: none;
-	font: 16px 'aleoregular', Nanum Gothic;
+	font: 16px 'aleoregular', LotteMartDream;
 	color: #222A35;
 }
 
@@ -5952,7 +6091,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 }
 
 .movie .movie__rate .movie__rate-number {
-	font: 11px 'Roboto', Nanum Gothic;
+	font: 11px 'Roboto', LotteMartDream;
 	display: block;
 }
 
@@ -5965,7 +6104,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 	border-radius: 24px;
 	background-color: #F0C419;
 	border: solid 3px #fff;
-	font: 16px 'Roboto', Nanum Gothic;
+	font: 16px 'Roboto', LotteMartDream;
 	color: #222A35;
 	text-align: center;
 	font-weight: bold;
@@ -5976,7 +6115,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 
 .movie .movie__time {
 	position: relative;
-	font-size: 13px;
+	font-size: 16px;
 	color: #ED2236;
 	margin-bottom: 20px;
 	padding-left: 20px;
@@ -5992,14 +6131,14 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 }
 
 .movie .movie__option {
-	font-size: 13px;
+	font-size: 16px;
 	margin-bottom: 3px;
 }
 
 .movie .comment-link {
 	position: relative;
 	display: inline-block;
-	font: 16px 'aleoregular', Nanum Gothic;
+	font: 16px 'aleoregular', LotteMartDream;
 	color: #ED2236;
 	margin-top: 30px;
 	margin-bottom: 15px;
@@ -6044,7 +6183,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 }
 
 .movie .movie__describe {
-	font-size: 13px;
+	font-size: 16px;
 }
 
 .movie .movie__media {
@@ -6077,7 +6216,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 
 .movie .movie__media .list--photo:before {
 	content: "\f030";
-	font-size: 13px;
+	font-size: 16px;
 	top: 5px;
 	left: 21px;
 }
@@ -6092,7 +6231,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 
 .movie .movie__media .list--video:before {
 	content: "\f03d";
-	font-size: 13px;
+	font-size: 16px;
 	top: 5px;
 	left: 21px;
 }
@@ -6350,7 +6489,12 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 	font-weight: bold;
 	display: block;
 	margin-bottom: 45px;
-	margin-top: 5px;
+	margin-top: 10px;
+	text-align:center;
+	font-family: LotteMartDream;
+	background-color: rgba(240, 196, 25, 0.6);
+	padding: 10px;
+	color: #5d5d5d;
 }
 
 .cinema .cinema-rating {
@@ -6361,7 +6505,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 	-moz-border-radius: 50px;
 	border-radius: 50px;
 	padding-top: 38px;
-	font: 20px 'aleobold', Nanum Gothic;
+	font: 20px 'aleobold', LotteMartDream;
 	text-align: center;
 	color: #222A35;
 	position: absolute;
@@ -6439,7 +6583,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 }
 
 .trailer .trailer__name {
-	font: 13px 'aleoregular', Nanum Gothic;
+	font: 13px 'aleoregular', LotteMartDream;
 	color: #ffffff;
 	text-align: center;
 	padding-top: 28px;
@@ -6447,7 +6591,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 }
 
 .trailer .trailer__number {
-	font: 13px 'aleoitalic', Nanum Gothic;
+	font: 13px 'aleoitalic', LotteMartDream;
 	color: #ffffff;
 	text-align: center;
 	padding-bottom: 20px;
@@ -6580,12 +6724,12 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 
 .rates .rates__vote {
 	text-align: center;
-	font-size: 13px;
+	font-size: 16px;
 }
 
 .rates .rates__result {
 	text-align: center;
-	font: 20px 'aleobold', Nanum Gothic;
+	font: 20px 'aleobold', LotteMartDream;
 	background-color: #F0C419;
 }
 
@@ -6598,7 +6742,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 }
 
 .rates .rates__done {
-	font-size: 13px;
+	font-size: 16px;
 	color: #222A35;
 	margin-left: -17px;
 }
@@ -6653,7 +6797,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 
 .offer .offer__name {
 	color: #ffffff;
-	font: 30px 'aleobold', Nanum Gothic;
+	font: 30px 'aleobold', LotteMartDream;
 	text-transform: uppercase;
 	margin-top: 44px;
 	margin-bottom: 17px;
@@ -6663,7 +6807,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 
 .offer .offer__datail {
 	color: #ffffff;
-	font: 18px 'aleoitalic', Nanum Gothic;
+	font: 18px 'aleoitalic', LotteMartDream;
 	text-transform: none;
 	font-weight: 300;
 	line-height: 21px;
@@ -6673,7 +6817,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 
 .offer .offer__full {
 	color: #b4b1b2;
-	font-size: 13px;
+	font-size: 16px;
 	-webkit-transition: 0.3s;
 	transition: 0.3s;
 }
@@ -6689,7 +6833,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 
 .offer-place {
 	color: #ED2236;
-	font-family: 'aleoitalic', Nanum Gothic;
+	font-family: 'aleoitalic', LotteMartDream;
 	font-size: 18px;
 	text-align: center;
 	margin-bottom: 23px;
@@ -6814,7 +6958,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 }
 
 .contact .contact__title {
-	font: 30px 'aleobold', Nanum Gothic;
+	font: 30px 'aleobold', LotteMartDream;
 	line-height: 30px;
 	margin-top: 45px;
 	margin-bottom: 23px;
@@ -6823,7 +6967,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 .contact .contact__describe {
 	font-size: 22px;
 	font-weight: normal;
-	font-family: 'aleoitalic', Nanum Gothic;
+	font-family: 'aleoitalic', LotteMartDream;
 }
 
 .contact .contact__mail {
@@ -6865,7 +7009,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 }
 
 .form .form__title {
-	font: 30px 'aleobold', Nanum Gothic;
+	font: 30px 'aleobold', LotteMartDream;
 	line-height: 30px;
 	margin-bottom: 26px;
 }
@@ -6879,7 +7023,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
 	border-radius: 3px;
-	font-size: 13px;
+	font-size: 16px;
 	color: #b4b1b2;
 	padding: 9px 18px 10px;
 }
@@ -6960,7 +7104,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 	text-transform: uppercase;
 	color: #ffffff;
 	font-size: 20px;
-	font-family: 'aleobold', Nanum Gothic;
+	font-family: 'aleobold', LotteMartDream;
 	margin-top: -3px;
 	margin-bottom: 46px;
 }
@@ -6992,7 +7136,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 }
 
 .couter .digits {
-	font: 50px 'Roboto', Nanum Gothic;
+	font: 50px 'Roboto', LotteMartDream;
 	color: #ffffff;
 	font-weight: bold;
 	display: block;
@@ -7004,7 +7148,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 }
 
 .couter .digits-label {
-	font: 20px 'aleoitalic', Nanum Gothic;
+	font: 20px 'aleoitalic', LotteMartDream;
 	color: #ffffff;
 	margin-top: -2px;
 	position: absolute;
@@ -7031,7 +7175,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 }
 
 .order .order__title {
-	font: 30px 'aleobold', Nanum Gothic;
+	font: 30px 'aleobold', LotteMartDream;
 	text-transform: uppercase;
 	line-height: 26px;
 	margin-top: 5px;
@@ -7041,7 +7185,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 	font-size: 16px;
 	text-transform: none;
 	font-weight: normal;
-	font-family: 'aleoitalic', Nanum Gothic;
+	font-family: 'aleoitalic', LotteMartDream;
 }
 
 .order .order__control {
@@ -7052,7 +7196,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 	border: 1px solid #222A35;
 	border-radius: 3px;
 	color: #222A35;
-	font-size: 13px;
+	font-size: 16px;
 	padding: 4px 20px 6px 20px;
 	position: relative;
 	transition: all 0.5s ease 0s;
@@ -7089,7 +7233,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 }
 
 .order-step-area .order-step {
-	font: 16px 'aleoregular', Nanum Gothic;
+	font: 16px 'aleoregular', LotteMartDream;
 	padding-left: 55px;
 	position: relative;
 	width: 70%;
@@ -7184,7 +7328,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 }
 
 .choose-film .choose-film__title {
-	font-size: 13px;
+	font-size: 16px;
 	padding-left: 10px;
 }
 
@@ -7225,7 +7369,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 	width: 100%;
 	background-color: #222A35;
 	color: #ffffff;
-	font-size: 13px;
+	font-size: 16px;
 	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
 	border-radius: 3px;
@@ -7258,7 +7402,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 
 .choose-sits .choose-sits__info {
 	display: inline-block;
-	font-size: 13px;
+	font-size: 16px;
 	padding: 10px 20px 0 40px;
 	margin-bottom: 52px;
 }
@@ -7300,7 +7444,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 .sits-anchor {
 	position: relative;
 	color: #969b9f;
-	font-size: 13px;
+	font-size: 16px;
 	margin-right: 140px;
 }
 
@@ -7326,7 +7470,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 	height: 25px;
 	margin: 5px;
 	border: 1px solid #222A35;
-	font-size: 13px;
+	font-size: 16px;
 	padding-top: 5px;
 }
 
@@ -7380,7 +7524,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 
 .sits .sits__checked .checked-result {
 	color: #ffffff;
-	font-size: 15px;
+	font-size: 16px;
 	font-weight: bold;
 	position: absolute;
 	bottom: 20px;
@@ -7497,7 +7641,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 	margin-top: 4px;
 	margin-left: 5px;
 	color: #222A35;
-	font-size: 13px;
+	font-size: 16px;
 }
 
 .sits-area--mobile .sbHolder .sbOptions {
@@ -7586,7 +7730,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 
 .sits-area--mobile .sits__checked .checked-result {
 	color: #ffffff;
-	font-size: 15px;
+	font-size: 16px;
 	font-weight: bold;
 	position: absolute;
 	bottom: 15px;
@@ -7611,7 +7755,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 
 .book-result .book-result__item {
 	display: inline-block;
-	font-size: 13px;
+	font-size: 16px;
 	color: #222A35;
 	padding-right: 30px;
 }
@@ -7630,7 +7774,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 
 .reservation-message {
 	position: relative;
-	font-size: 13px;
+	font-size: 16px;
 	padding-left: 45px;
 	margin-top: 10px;
 	margin-bottom: 8px;
@@ -7652,7 +7796,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 
 .reservation-message:after {
 	content: 'i';
-	font: 18px 'aleobold', Nanum Gothic;
+	font: 18px 'aleobold', LotteMartDream;
 	color: #222A35;
 	position: absolute;
 	top: 2px;
@@ -7810,7 +7954,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 
 .ticket-control .list--check:before {
 	content: "\f058";
-	font-size: 13px;
+	font-size: 16px;
 	top: 5px;
 }
 
@@ -7821,7 +7965,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 
 .ticket-control .list--cancel:before {
 	content: "\f057";
-	font-size: 13px;
+	font-size: 16px;
 	top: 5px;
 } 
 
@@ -7831,7 +7975,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 
 .ticket-control .list--print:before {
 	content: "\f02f";
-	font-size: 13px;
+	font-size: 16px;
 	top: 5px;
 }
 
@@ -7880,7 +8024,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 	transition: 0.3s;
 	width: 130px;
 	display: none;
-	font: 13px 'aleoitalic', Nanum Gothic;
+	font: 13px 'aleoitalic', LotteMartDream;
 	color: #ffffff;
 	line-height: 21px;
 	text-align: right;
@@ -7890,7 +8034,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 
 .tp-leftarrow.default .slider__info:before {
 	content: 'back';
-	font: 13px 'aleoitalic', Nanum Gothic;
+	font: 13px 'aleoitalic', LotteMartDream;
 	color: #F0C419;
 	position: absolute;
 	bottom: 22px;
@@ -7961,7 +8105,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 	-webkit-transition: 0.3s;
 	transition: 0.3s;
 	width: 130px;
-	font: 13px 'aleoitalic', Nanum Gothic;
+	font: 13px 'aleoitalic', LotteMartDream;
 	color: #ffffff;
 	line-height: 21px;
 	position: absolute;
@@ -7973,7 +8117,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 
 .tp-rightarrow.default .slider__info:before {
 	content: 'next';
-	font: 13px 'aleoitalic', Nanum Gothic;
+	font: 13px 'aleoitalic', LotteMartDream;
 	color: #F0C419;
 	position: absolute;
 	top: 67px;
@@ -8053,7 +8197,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 	transition: 0.3s;
 	width: 130px;
 	display: none;
-	font: 13px 'aleoitalic', Nanum Gothic;
+	font: 13px 'aleoitalic', LotteMartDream;
 	color: #ffffff;
 	line-height: 21px;
 }
@@ -8113,7 +8257,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 	-webkit-transition: 0.3s;
 	transition: 0.3s;
 	width: 130px;
-	font: 13px 'aleoitalic', Nanum Gothic;
+	font: 13px 'aleoitalic', LotteMartDream;
 	color: #ffffff;
 	line-height: 21px;
 	position: absolute;
@@ -8173,7 +8317,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 	font-weight: 800;
 	font-style: italic;
 	color: #ffffff;
-	font-family: 'Open Sans', Nanum Gothic;
+	font-family: 'Open Sans', LotteMartDream;
 }
 
 .slide .slide__name--smaller {
@@ -8190,7 +8334,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 }
 
 .slide .slide__name--specific {
-	font-family: 'aleoregular', Nanum Gothic;
+	font-family: 'aleoregular', LotteMartDream;
 }
 
 .slide .highlight {
@@ -8200,7 +8344,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 .slide .slide__descript {
 	color: #c1c1c1;
 	font-size: 22px;
-	font-family: 'Roboto', Nanum Gothic;
+	font-family: 'Roboto', LotteMartDream;
 	font-weight: 100;
 	width: 100%;
 	text-align: center;
@@ -8209,13 +8353,13 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 }
 
 .slide .slide__time {
-	font: 18px 'Roboto', Nanum Gothic;
+	font: 18px 'Roboto', LotteMartDream;
 	color: #ffffff;
 	z-index: 40;
 }
 
 .slide .slide__date {
-	font: 18px 'Roboto', Nanum Gothic;
+	font: 18px 'Roboto', LotteMartDream;
 	color: #ffffff;
 	font-weight: bold;
 	z-index: 40;
@@ -8244,14 +8388,14 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 }
 
 .slide .slide__text {
-	font: 13px 'Roboto', Nanum Gothic;
+	font: 13px 'Roboto', LotteMartDream;
 	color: #ffffff;
 	text-align: right;
 	line-height: 21px;
 }
 
 .slide .slide__link {
-	font: 16px 'aleoregular', Nanum Gothic;
+	font: 16px 'aleoregular', LotteMartDream;
 	color: #ED2236;
 	text-transform: uppercase;
 	padding-right: 20px;
@@ -8321,7 +8465,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 .movie-best .movie-best__rating {
 	background-color: #F0C419;
 	text-align: center;
-	font: 20px 'aleobold', Nanum Gothic;
+	font: 20px 'aleobold', LotteMartDream;
 	color: #222A35;
 	text-transform: uppercase;
 	padding-bottom: 25px;
@@ -8414,12 +8558,12 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 	margin-bottom: 14px;
 	padding: 0 5px;
 	line-height: 14px;
-	font-size: 13px;
+	font-size: 16px;
 }
 
 .movie-best .movie-beta__info .slide__link {
 	color: #ED2236;
-	font: 16px 'aleoregular', Nanum Gothic;
+	font: 16px 'aleoregular', LotteMartDream;
 	padding-right: 20px;
 	text-transform: uppercase;
 	position: relative;
@@ -8487,7 +8631,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 	background-color: rgba(255, 255, 255, 0.6);
 	border-radius: 50px;
 	color: #222A35;
-	font: bold 20px 'Aleo', Nanum Gothic;
+	font: bold 20px 'Aleo', LotteMartDream;
 	height: 100px;
 	left: 50%;
 	margin-left: -50px;
@@ -8552,7 +8696,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 
 .mega-select-marker .select-marker {
 	margin-bottom: 0;
-	font-family: 'aleobold', Nanum Gothic;
+	font-family: 'aleobold', LotteMartDream;
 	color: grey;
 	font-size: 50px;
 	text-transform: uppercase;
@@ -8629,7 +8773,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 	color: #222A35;
 	position: relative;
 	margin-bottom: 98px;
-	font: 30px 'aleobold', Nanum Gothic;
+	font: 30px 'aleobold', LotteMartDream;
 	line-height: 21px;
 	margin-top: 20px;
 }
@@ -8746,7 +8890,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 
 .table--icons th {
 	background-color: #F0C419;
-	font: 18px 'Roboto', Nanum Gothic;
+	font: 18px 'Roboto', LotteMartDream;
 	padding-top: 20px;
 	padding-bottom: 20px;
 	text-align: left;
@@ -8777,7 +8921,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 
 .login .login__title {
 	font-size: 22px;
-	font-family: 'aleobold', Nanum Gothic;
+	font-family: 'aleobold', LotteMartDream;
 	line-height: 20px;
 	color: #222A35;
 	text-transform: uppercase;
@@ -8789,19 +8933,19 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 .login .login__title .login-edition {
 	font-size: 16px;
 	font-weight: normal;
-	font-family: 'aleoitalic', Nanum Gothic;
+	font-family: 'aleoitalic', LotteMartDream;
 	text-transform: none;
 }
 
 .login .login__tracker {
 	text-align: center;
-	font: 16px 'aleoitalic', Nanum Gothic;
+	font: 16px 'aleoitalic', LotteMartDream;
 	color: #222A35;
 	margin: 33px 0 35px;
 }
 
 .login .form__tracker {
-	font-size: 13px;
+	font-size: 16px;
 	display: block;
 	margin-top: 39px;
 }
@@ -8811,7 +8955,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 }
 
 .login .login__input {
-	font-size: 13px;
+	font-size: 16px;
 	color: #b4b1b2;
 	width: 100%;
 	-webkit-box-shadow: none;
@@ -8826,8 +8970,8 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 }
 
 .login .login__check-info {
-	font-family: 'Roboto', Nanum Gothic;
-	font-size: 13px;
+	font-family: 'Roboto', LotteMartDream;
+	font-size: 16px;
 	color: #b4b1b2;
 	display: block;
 	margin-top: 3px;
@@ -8887,7 +9031,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 
 .overlay .overlay-close:before {
 	content: "\f00d";
-	font-size: 13px;
+	font-size: 16px;
 	font-family: "FontAwesome";
 	color: #222A35;
 	position: absolute;
@@ -8964,13 +9108,13 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 	font-size: 40px;
 	text-align: center;
 	color: #ffffff;
-	font-family: 'aleoitalic', Nanum Gothic;
+	font-family: 'aleoitalic', LotteMartDream;
 	margin-top: 18px;
 }
 
 .copy--light {
 	color: #ffffff;
-	font: 16px 'Roboto', Nanum Gothic;
+	font: 16px 'Roboto', LotteMartDream;
 	font-style: italic;
 }
 
@@ -9237,7 +9381,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 .testionaial--rect .testionaial__author {
 	text-align: right;
 	font-size: 16px;
-	font-family: 'aleoitalic', Nanum Gothic;
+	font-family: 'aleoitalic', LotteMartDream;
 	color: #ffffff;
 	font-weight: normal;
 }
@@ -9288,7 +9432,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 }
 
 .post--preview .post--btn {
-	font-size: 13px;
+	font-size: 16px;
 	padding-left: 7px;
 	padding-right: 7px;
 	margin-left: -7px;
@@ -9309,7 +9453,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 }
 
 .post--news .post__text {
-	font-size: 13px;
+	font-size: 16px;
 	line-height: 21px;
 }
 
@@ -9347,7 +9491,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 
 .comment-more .watchlist:before {
 	content: "\f075";
-	font-size: 13px;
+	font-size: 16px;
 	left: 21px;
 }
 
@@ -9365,7 +9509,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 
 .category--count {
 	color: #ffffff;
-	font-size: 13px;
+	font-size: 16px;
 }
 
 .category--count ol {
@@ -9462,7 +9606,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 }
 
 .tags--unmarked .tags__item {
-	font-size: 13px;
+	font-size: 16px;
 	padding-right: 26px;
 }
 
@@ -9541,7 +9685,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 	background-color: #222A35;
 	display: inline-block;
 	text-align: center;
-	font-size: 13px;
+	font-size: 16px;
 	color: #ffffff;
 	font-weight: bold;
 	padding-top: 20px;
@@ -9861,7 +10005,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 }
 
 .cinema--full .cinema__title {
-	font: 24px 'aleobold', Nanum Gothic;
+	font: 24px 'aleobold', LotteMartDream;
 	text-transform: uppercase;
 }
 
@@ -9869,7 +10013,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 	background-color: #F0C419;
 	width: 750px;
 	margin: 0 auto;
-	font: 16px 'aleobold', Nanum Gothic;
+	font: 16px 'aleobold', LotteMartDream;
 	padding-top: 28px;
 	padding-bottom: 27px;
 	display: block;
@@ -9909,7 +10053,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 }
 
 .cinema--full .cinema__info .cinema__info-item {
-	font-size: 13px;
+	font-size: 16px;
 	margin-bottom: 2px;
 }
 
@@ -11324,7 +11468,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 
 .film_title {
 	font-weight: bold;
-	font: 20px 'aleobold', Nanum Gothic;
+	font: 20px 'aleobold', LotteMartDream;
 }
 
 .film_button {

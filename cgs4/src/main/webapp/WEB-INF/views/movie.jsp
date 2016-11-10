@@ -17,7 +17,7 @@
 <head>
 <!-- Basic Page Needs -->
 <meta charset="utf-8">
-<title>AMovie - Movie page</title>
+<title>CGS-Movie</title>
 <meta name="description" content="A Template by Gozha.net">
 <meta name="keywords" content="HTML, CSS, JavaScript">
 <meta name="author" content="Gozha.net">
@@ -167,7 +167,7 @@
 <!-- 						<div class="movie__btns movie__btns--full"> -->
 <!-- 							<form action="watchlist" method="get"> -->
 <%-- 								<input type=hidden name="film_ID" value="${film.film_ID}"> --%>
-<!-- 								<a href="book1" class="btn btn-md btn--warning">book a ticket for this movie</a> -->
+<!-- 								<a href="book1" class="btn btn-md btn--warning">예매하기</a> -->
 <!-- 								<a href="#" class="watchlist">Add to watchlist</a> -->
 <!-- 							</form> -->
 <!-- 						</div> -->
@@ -450,9 +450,9 @@
 						<input type='hidden' name="start_time" class="choosen-time" id="start_time">
 						<%-- 						<input type=hidden name="start_time" value="${test.start_time }"> --%>
 						<%if((String)session.getAttribute("id")!=null){%>
-						<center> <a href="#" class="btn btn-md btn--warning" onclick="submit()">book a ticket for this movie</a> </center>
+						<center> <a href="#" class="btn btn-md btn--warning" onclick="submit()">예매하기</a> </center>
 						<%}else{ %>
-						<center> <a href='login' class="btn btn-md btn--warning">book a ticket for this movie</a> </center>
+						<center> <a href='login' class="btn btn-md btn--warning">예매하기</a> </center>
 						<% } %>
 					</form>
 				</div>

@@ -42,7 +42,6 @@
     	<script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.js"></script> 
 		<script src="http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.3.0/respond.js"></script>		
     <![endif]-->
-
     <style>
     .pConfirm{
     font-size: 13px;
@@ -57,6 +56,22 @@
 	margin: 5px 0;
 	padding: 9px 5px 8px;
     }
+    .bAlert{
+    font-size: 13px;
+/*     top: -5px; */
+	text-align: left;
+	padding: 5px;
+/*  	padding-bottom: 8px; */
+	margin: 0 5px;
+	height: 30px;
+	width: 170px;
+	border: 1px solid transparent;
+	border-radius: 4px;
+	background-color: #f2dede;
+	border-color: #ebccd1;
+	color: #a94442;
+	display: inline-block;
+	}
     </style>
 </head>
 
@@ -71,7 +86,7 @@
             <div class="order-container">
                 <div class="order">
                     <img class="order__images" alt='' src="<%=ctx%>/resources/images/tickets.png">
-                    <p class="order__title">Book a ticket <br><span class="order__descript">and have fun movie time</span></p>
+<!--                     <p class="order__title">Book a ticket <br><span class="order__descript">and have fun movie time</span></p> -->
 <!--                     <div class="order__control"> -->
 <!--                         <a href="" class="order__control-btn active">Purchase</a> -->
 <!--                         <a href="book3-reserve.html" class="order__control-btn">Reserve</a> -->
@@ -288,6 +303,25 @@
     	var card4 = $('#card4').val();
     	$('.paycard_num').val(card1+card2+card3+card4);
     });
+    $('.birth_date').keyup(function juminChk(){
+		var jumin = $('.birth_date').val();
+		if(jumin.length==6){
+			var month = jumin.substr(2,2);
+			var day = jumin.substr(4,2);
+			if(month>12||day>31){
+// 				alert("생년월일을 확인해주세요");
+				$('.birth_date').val("");
+					$('<p />', {
+						'class':'bAlert',
+						'html':'<span class="icon-warning"></span>&nbsp;&nbsp;<span>생년월일을 확인해주세요</span>',
+					})
+// 					.appendTo($(this).addClass('invalid_field').parent()) 
+					.insertAfter($(this))
+					.delay(2500).animate({'opacity':0},300, function(){ $(this).slideUp(400,function(){ $(this).remove() })});
+			}}
+		});
+    
+
     </script>
 </body>
 </html>

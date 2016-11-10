@@ -3851,7 +3851,7 @@ ul#navigation a:hover {
 .icon-warning:before {
 	content: "\f06a";
 	font-family: "FontAwesome";
-	color: #ffffff;
+	color: red;
 	font-size: 16px;
 }
 
@@ -7244,7 +7244,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 }
 
 .order-step-area .first--step:before {
-	border-color: transparent transparent #F0C419 transparent;
+/* 	border-color: transparent transparent #F0C419 transparent; */
 }
 
 .order-step-area .first--step:after {
@@ -7256,7 +7256,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 }
 
 .order-step-area .second--step:before {
-	border-color: transparent transparent #ED2236 transparent;
+/* 	border-color: transparent transparent #ED2236 transparent; */
 }
 
 .order-step-area .second--step:after {

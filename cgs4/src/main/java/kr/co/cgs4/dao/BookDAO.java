@@ -40,7 +40,7 @@ public class BookDAO {
 	public ArrayList<Book_ScreeningInfo> screening_date(String film_name, String site_name, Date screening_date){
 		String query = "select sc.SCREENING_ID, film_name, site_name, sc.screening_date, sc.screen_num, start_time, seating_cnt "
 				+ "from SCREENING sc, site,screen where sc.SITE_ID = site.SITE_ID and site.site_id=screen.site_id "
-				+ "and film_name= '"+film_name+"' and site_name = '"+site_name+"' and screening_date = '"+screening_date+"' "
+				+ "and film_name= '"+film_name+"' and site_name = '"+site_name+"' and screening_date = to_date('"+screening_date+"', 'yyyy-MM-dd') "
 				+ "group by sc.SCREENING_ID, film_name, site_name, sc.screening_date, sc.screen_num, start_time, seating_cnt order by sc.SCREENING_ID";
 		return (ArrayList<Book_ScreeningInfo>) template.query(query, new BeanPropertyRowMapper<Book_ScreeningInfo>(Book_ScreeningInfo.class));
 	}
@@ -48,7 +48,7 @@ public class BookDAO {
 		String query = "select film_name, site_name, sc.screening_date, sc.screen_num "
 				+ "from SCREENING sc, site,screen "
 				+ "where sc.SITE_ID = site.SITE_ID and site.site_id=screen.site_id "
-				+ "and film_name= '"+film_name+"' and site_name = '"+site_name+"' and screening_date = '"+screening_date+"' "
+				+ "and film_name= '"+film_name+"' and site_name = '"+site_name+"' and screening_date = to_date('"+screening_date+"', 'yyyy-MM-dd') "
 				+ "group by film_name, site_name, sc.screening_date, sc.screen_num";
 		return (ArrayList<Book_ScreenNum>) template.query(query, new BeanPropertyRowMapper<Book_ScreenNum>(Book_ScreenNum.class));
 	}
@@ -85,7 +85,7 @@ public class BookDAO {
 
 //		try {
 		//sale 넣기
-		String query= "INSERT INTO SALE VALUES (?, '0', '0', ?, ?, ?, '0', ?, ?, '0', '0', ?, '1', ?, ?, ?)";
+		String query= "INSERT INTO SALE VALUES (?, '0', '0', to_date(?, 'yyyy-MM-dd'), ?, ?, '0', ?, ?, '0', '0', ?, '1', ?, ?, ?)";
 		template.update(query, new PreparedStatementSetter() {
 			
 			@Override
@@ -111,7 +111,7 @@ public class BookDAO {
 			SeatDTO sdto = template.queryForObject(getQuery, new BeanPropertyRowMapper<SeatDTO>(SeatDTO.class));
 			//sale_seat 에 넣기
 			final String seat_ID = sdto.getSeat_ID();
-			String setQuery= "INSERT INTO SALE_SEAT VALUES (?, ?, ?, ?)";
+			String setQuery= "INSERT INTO SALE_SEAT VALUES (to_date(?, 'yyyy-MM-dd'), ?, ?, ?)";
 			template.update(setQuery, new PreparedStatementSetter() {
 				@Override
 				public void setValues(PreparedStatement ps) throws SQLException {
@@ -123,7 +123,7 @@ public class BookDAO {
 			});
 		}
 		//member_sale 넣기
-		String msQuery= "INSERT INTO member_sale VALUES ('0', ?, ?, ?)";
+		String msQuery= "INSERT INTO member_sale VALUES ('0', ?, ?, to_date(?, 'yyyy-MM-dd'))";
 		template.update(msQuery, new PreparedStatementSetter() {
 			@Override
 			public void setValues(PreparedStatement ps) throws SQLException {
@@ -137,7 +137,7 @@ public class BookDAO {
 		final MemberDTO mdto = template.queryForObject(memQuery, new BeanPropertyRowMapper<MemberDTO>(MemberDTO.class));
 		
 		//reserve 넣기
-		String resQuery= "INSERT INTO reserve VALUES (?, ?, ?, '0', ?, ?)";
+		String resQuery= "INSERT INTO reserve VALUES (?, ?, ?, '0', ?, to_date(?, 'yyyy-MM-dd'))";
 		template.update(resQuery, new PreparedStatementSetter() {
 			@Override
 			public void setValues(PreparedStatement ps) throws SQLException {

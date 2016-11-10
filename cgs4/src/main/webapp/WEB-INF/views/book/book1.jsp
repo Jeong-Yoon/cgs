@@ -96,7 +96,7 @@
 <style>
 .datepicker:before {
     margin-top: 22px;
-    margin-right: 10px;
+    margin-right: 3px;
 }
 .datepicker .datepicker__input {
     margin-top: 11px;
@@ -154,10 +154,11 @@
 			<div class="order">
 				<img class="order__images" alt=''
 					src="<%=ctx%>/resources/images/tickets.png">
-				<p class="order__title">
-					Book a ticket <br> <span class="order__descript">and
-						have fun movie time</span>
-				</p>
+<!-- 				<p class="order__title"> -->
+<!-- 					Book a ticket  -->
+<!-- 					<br> <span class="order__descript">and -->
+<!-- 						have fun movie time</span> -->
+<!-- 				</p> -->
 			</div>
 		</div>
 

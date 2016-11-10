@@ -70,19 +70,20 @@
 			<div class="order-container">
 				<div class="order">
 					<img class="order__images" alt='' src="<%=ctx%>/resources/images/tickets.png">
-					<p class="order__title">
-						Book a ticket <br>
-						<span class="order__descript">and have fun movie time</span>
-					</p>
+<!-- 					<p class="order__title"> -->
+<!-- 						Book a ticket <br> -->
+<!-- 						<span class="order__descript">and have fun movie time</span> -->
+<!-- 					</p> -->
 				</div>
 			</div>
 			<div class="order-step-area">
-				<div class="order-step second--step">선택하신 영화: ${bInfo.film_name}<br>
-				 선택하신 영화관: ${bInfo.site_name}<br>
-				 상영 일자: ${bInfo.screening_date}<br>
-				 상영관 : ${bInfo.screen_num}관<br>
-				 영화 시작시간${bInfo.start_time}</div>
-			</div>
+				<div class="order-step second--step"> <ul class="book-result">
+                        <li class="book-result__item">선택하신 영화: <span class="book-result__count">${bInfo.film_name}</span></li>
+                        <li class="book-result__item">상영 일자: <span class="book-result__count"> ${bInfo.screening_date}</span></li>
+                        <li class="book-result__item">영화관: <span class="book-result__count"> ${bInfo.site_name}</span></li>
+                        <li class="book-result__item">상영관: <span class="book-result__count"> ${bInfo.screen_num}관</span></li>
+                        <li class="book-result__item">영화 시작시간: <span class="book-result__count">${bInfo.start_time}</span></li>
+			</ul></div>
 
 			<div class="choose-sits">
 				<div class="choose-sits__info choose-sits__info--first">

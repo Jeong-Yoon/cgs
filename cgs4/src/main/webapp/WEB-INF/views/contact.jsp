@@ -88,6 +88,7 @@
                             <textarea placeholder="Your message" name="user-message" class="form__message"></textarea>
                         </div>
                         <button type="submit" class='btn btn-md btn--danger'>문의하기</button>
+                       
                     </form>
                 </div>
             </div>

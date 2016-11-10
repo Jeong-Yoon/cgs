@@ -209,8 +209,8 @@
 			<figcaption class="mask">
 			<h3>닥터스트레인지</h3>
 			<span>Doctor Strange , 2016</span> <br>
-			<a href="#" class="btn btn-book">평가하기</a> <a href="#"
-				class="btn btn-book-blue">예매하기</a> </figcaption> </figure>
+			<a href="#" class="btn btn-book">평가하기</a>
+			<a href="book1" class="btn btn-book-blue">예매하기</a> </figcaption> </figure>
 
 			<figure class="mix portfolio-item rank now"> <img
 				class="img-responsive"
@@ -219,7 +219,7 @@
 			<figcaption class="mask">
 			<h3>럭키</h3>
 			<span>LUCK-KEY , 2016</span> <br>
-			<a href="#" class="btn btn-book">평가하기</a> <a href="#"
+			<a href="#" class="btn btn-book">평가하기</a> <a href="book1"
 				class="btn btn-book-blue">예매하기</a> </figcaption> </figure>
 
 			<figure class="mix portfolio-item rank now recerel"> <img
@@ -229,7 +229,7 @@
 			<figcaption class="mask">
 			<h3>로스트인더스트</h3>
 			<span>Hell or High Water, 2016</span> <br>
-			<a href="#" class="btn btn-book">평가하기</a> <a href="#"
+			<a href="#" class="btn btn-book">평가하기</a> <a href="book1"
 				class="btn btn-book-blue">예매하기</a> </figcaption> </figure>
 
 			<figure class="mix portfolio-item rank now"> <img
@@ -239,7 +239,7 @@
 			<figcaption class="mask">
 			<h3>무현, 두 도시 이야기</h3>
 			<span>무현, 두 도시 이야기, 2016</span> <br>
-			<a href="#" class="btn btn-book">평가하기</a> <a href="#"
+			<a href="#" class="btn btn-book">평가하기</a> <a href="book1"
 				class="btn btn-book-blue">예매하기</a> </figcaption> </figure>
 
 			<figure class="mix portfolio-item rank now recerel"> <img
@@ -249,7 +249,7 @@
 			<figcaption class="mask">
 			<h3>선생님의 일기</h3>
 			<span>The Teacher's Diary, 2014</span> <br>
-			<a href="#" class="btn btn-book">평가하기</a> <a href="#"
+			<a href="#" class="btn btn-book">평가하기</a> <a href="book1"
 				class="btn btn-book-blue">예매하기</a> </figcaption> </figure>
 
 			<figure class="mix portfolio-item rank coming pre"> <img
@@ -259,7 +259,7 @@
 			<figcaption class="mask">
 			<h3>스플릿</h3>
 			<span>Split, 2016</span> <br>
-			<a href="#" class="btn btn-book">평가하기</a> <a href="#"
+			<a href="#" class="btn btn-book">평가하기</a> <a href="book1"
 				class="btn btn-book-blue">예매하기</a> </figcaption> </figure>
 
 			<figure class="mix portfolio-item rank now"> <img
@@ -269,7 +269,7 @@
 			<figcaption class="mask">
 			<h3>인페르노</h3>
 			<span>Inferno, 2016</span> <br>
-			<a href="#" class="btn btn-book">평가하기</a> <a href="#"
+			<a href="#" class="btn btn-book">평가하기</a> <a href="book1"
 				class="btn btn-book-blue">예매하기</a> </figcaption> </figure>
 
 			<figure class="mix portfolio-item rank coming"> <img
@@ -279,7 +279,7 @@
 			<figcaption class="mask">
 			<h3>무한대를 본 남자</h3>
 			<span>The Man Who Knew Infinity, 2015</span> <br>
-			<a href="#" class="btn btn-book">평가하기</a> <a href="#"
+			<a href="#" class="btn btn-book">평가하기</a> <a href="book1"
 				class="btn btn-book-blue">예매하기</a> </figcaption> </figure>
 		</div>
 		<a href="movie_list?page=0" title="더보기" rel="portfolio"
@@ -298,7 +298,7 @@
 				<div class="col-md-7 wow fadeInLeft" style="left:20%; padding: 40px 0px 50px 0px">
 					<h3 style='margin: 20px 5px'>CGS 소식지 구독하기</h3>
 					<form action="#" method="post" class="subscription-form">
-						<i class="fa fa-envelope-o fa-lg" style="font-size: 1.5em"></i> <input type="email"
+						<i class="fa fa-envelope-o fa-lg" style="font-size: 1.7em"></i> <input type="email"
 							name="subscribe" class="subscribe" placeholder="YOUR MAIL"
 							required=""> <input type="submit" value="SUBSCRIBE"
 							id="mail-submit">

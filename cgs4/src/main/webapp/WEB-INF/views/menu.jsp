@@ -43,7 +43,6 @@ color: #fff;
 <link href="<%=ctx%>/resources/css/gozha-nav.css" rel="stylesheet" />
 <!-- Bootstrap -->
 <link rel="stylesheet" href="<%=ctx%>/resources/css/bootstrap.min.css">
-<link href="<%=ctx%>/resources/css/style.css?v=1" rel="stylesheet" />
 
 <!-- Animate -->
 <link rel="stylesheet" href="<%=ctx%>/resources/css/animate.css">
@@ -51,6 +50,9 @@ color: #fff;
 <link rel="stylesheet" href="<%=ctx%>/resources/css/main.css">
 <!-- Main Responsive -->
 <link rel="stylesheet" href="<%=ctx%>/resources/css/responsive.css">
+<!-- Mobile menu -->
+<link href="<%=ctx%>/resources/css/gozha-nav.css" rel="stylesheet" >
+
 
 </head>
 <body>
@@ -80,7 +82,7 @@ color: #fff;
 			<!-- /logo -->
 
 		<!-- main nav -->
-		<nav class="collapse navigation navbar-collapse navbar-right" role="navigation">
+		<nav class="collapse navigation navbar-collapse navbar-right" role="navigation" >
 		<ul id="nav" class="nav navbar-nav">
 			<li><a href="<%=ctx%>/index">Home</a></li>
 			<li><a href="<%=ctx%>/movie_list?page=0">Movie</a></li>
@@ -111,8 +113,13 @@ color: #fff;
 	</div>
 	</header>
 
-	<script
-		src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+	<!-- main jQuery -->
+	<script src="<%=ctx%>/resources/js/external/jquery-1.11.1.min.js"></script>
+	<!-- Bootstrap -->
+	<script src="<%=ctx%>/resources/js/min/bootstrap.min.js"></script>
+	<!-- jquery.nav -->
+	<script src="<%=ctx%>/resources/js/jquery.nav.js"></script>
+	
 	<script>
 		jQuery(window).scroll(function() {
 			if (jQuery(window).scrollTop() > 50) {

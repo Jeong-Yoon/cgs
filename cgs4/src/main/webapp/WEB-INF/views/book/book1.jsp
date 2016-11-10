@@ -93,7 +93,15 @@
 // 		document.getElementById("film-and-time").submit();
 // 	}
 </script>
-
+<style>
+.datepicker:before {
+    margin-top: 22px;
+    margin-right: 10px;
+}
+.datepicker .datepicker__input {
+    margin-top: 11px;
+    }
+</style>
 
 </head>
 
@@ -153,7 +161,7 @@
 			</div>
 		</div>
 
-		<h2 class="page-heading heading--outcontainer">영화를 선택해주세요.</h2>
+		<h2 class="page-heading heading--outcontainer"><strong>영화를 선택해주세요.</strong></h2>
 		</section>
 		<div class="choose-film">
 			<div class="col-sm-12">
@@ -204,7 +212,7 @@
 				<strong>선택하신 영화: </strong><a id="choosed_film" class="choosed_film"><%if(fname!=null){out.print(fname);} %></a>
 			</div>
 
-			<h2 class="page-heading">영화관 &amp; 날짜 선택</h2>
+			<h2 class="page-heading"><strong>영화관 &amp; 날짜 선택</strong></h2>
 
 			<div class="choose-container choose-container--short">
 				<form id='select' class="select" method='get'>
@@ -231,7 +239,7 @@
 				</div>
 			</div>
 
-			<h2 class="page-heading">시간 선택</h2>
+			<h2 class="page-heading"><strong>시간 선택</strong></h2>
 
 			<div class="time-select time-select--wide">
 			<form class="bookdata" action="book1">
@@ -246,7 +254,7 @@
 				<c:forEach var="j" items="${scNum}">
 				<div class="time-select__group">
 					<div class="col-sm-2">
-						<p class="time-select__place" style="padding:0px">${j.screen_num}관</p>
+						<p class="time-select__place" style="padding:0px">${j.screen_num}</p><span>&nbsp;관</span>
 					</div>
 					<ul class="col-sm-8 items-wrap">
 						<c:forEach var="i" items="${blist}">

@@ -128,31 +128,31 @@
                     	</tr>
                     	<tr style="height:35px">
                     	<td>카드 번호</td>
-                    	<td><input type="text" id="card1" class="card pConfirm" maxlength="4" pattern="[1-9]{4}" title="4자리의 숫자여야 합니다." required>-
-                    	<input type="password" id="card2" class="card pConfirm" maxlength="4" pattern="[1-9]{4}" title="4자리의 숫자여야 합니다." required>-
-                    	<input type="password" id="card3" class="card pConfirm" maxlength="4" pattern="[1-9]{4}" title="4자리의 숫자여야 합니다." required>-
-                    	<input type="text" id="card4" class="card pConfirm" maxlength="4" pattern="[1-9]{4}" title="4자리의 숫자여야 합니다." required>
+                    	<td><input type="text" id="card1" class="card pConfirm" maxlength="4" pattern="[0-9]{4}" title="4자리의 숫자여야 합니다." required>-
+                    	<input type="password" id="card2" class="card pConfirm" maxlength="4" pattern="[0-9]{4}" title="4자리의 숫자여야 합니다." required>-
+                    	<input type="password" id="card3" class="card pConfirm" maxlength="4" pattern="[0-9]{4}" title="4자리의 숫자여야 합니다." required>-
+                    	<input type="text" id="card4" class="card pConfirm" maxlength="4" pattern="[0-9]{4}" title="4자리의 숫자여야 합니다." required>
                     	<input type="hidden" name="paycard_num" class="paycard_num"></td>
                     	</tr>
                     	<tr style="height:35px">
                     	<td>유효기간</td>
-                    	<td><input type="text" name="valid_month" class="valid_date pConfirm" maxlength="2" max="12" pattern="[1-9]{2}" title="2자리의 숫자여야 합니다." required>월 
-                    	<input type="text" name="valid_year" class="valid_date pConfirm" maxlength="2" pattern="[1-9]{2}" title="2자리의 숫자여야 합니다." required>년</td>
+                    	<td><input type="text" name="valid_month" class="valid_date pConfirm" maxlength="2" max="12" pattern="[0-9]{2}" title="2자리의 숫자여야 합니다." required>월 
+                    	<input type="text" name="valid_year" class="valid_date pConfirm" maxlength="2" pattern="[0-9]{2}" title="2자리의 숫자여야 합니다." required>년</td>
                     	</tr>
                     	<tr style="height:35px">
                     	<td>비밀번호</td>
-                    	<td><input type="password" name="card_password" class="valid_date pConfirm" maxlength="2" pattern="[1-9]{2}" title="비밀번호의 앞 두자리를 입력해주세요." required> **</td>
+                    	<td><input type="password" name="card_password" class="valid_date pConfirm" maxlength="2" pattern="[0-9]{2}" title="비밀번호의 앞 두자리를 입력해주세요." required> **</td>
                     	</tr>
                     	<tr style="height:35px">
                     	<td>생년월일</td>
-                    	<td><input type="text" name="birth_date" class="birth_date pConfirm" maxlength="6" pattern="[1-9]{6}" title="6자리의 숫자를 입력해야 합니다." required> 생년월일 6자리</td>
+                    	<td><input type="text" name="birth_date" class="birth_date pConfirm" maxlength="6" pattern="[0-9]{6}" title="6자리의 숫자를 입력해야 합니다." required> 생년월일 6자리</td>
                     	</tr>
                     </table>
                     </div>
                 </div>
                 
                 <div class="order">
-                    <button type="submit" class="btn btn-md btn--warning btn--wide"">구매하기</button>
+                    <button type="submit" class="btn btn-md btn--warning btn--wide">구매하기</button>
                 </div>
 
             </div>

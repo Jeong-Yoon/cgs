@@ -91,6 +91,7 @@ public class BookDAO {
 
 //		try {
 		//sale 넣기
+		System.out.println("sale 넣기 시작");
 		String query= "INSERT INTO SALE VALUES (?, '0', '0', to_date(?, 'yyyy-MM-dd'), ?, ?, '0', ?, ?, '0', '0', ?, '1', ?, ?, ?)";
 		template.update(query, new PreparedStatementSetter() {
 			
@@ -108,7 +109,9 @@ public class BookDAO {
 				ps.setInt(10, SPECIAL_CNT);
 			}
 		});
+		System.out.println("sale 넣기 완료");
 		//sits의 개수만큼 돌면서 seat_sale 넣기
+		System.out.println("seat_sale 넣기 시작");
 		for (int i = 0; i < sits.length; i++) {
 			String[] rowCol = sits[i].trim().split("");
 			String rowNum = rowCol[0];
@@ -128,7 +131,9 @@ public class BookDAO {
 				}
 			});
 		}
+		System.out.println("seat_sale 수정");
 		//member_sale 넣기
+		System.out.println("member_sale 넣기 시작");
 		String msQuery= "INSERT INTO member_sale VALUES ('0', ?, ?, to_date(?, 'yyyy-MM-dd'))";
 		template.update(msQuery, new PreparedStatementSetter() {
 			@Override
@@ -138,11 +143,13 @@ public class BookDAO {
 				ps.setDate(3, CURRDATE);
 			}
 		}); 
+		System.out.println("member_sale 넣음");
 		//reserve에 넣을 회원의 이름, 전화번호 구해옴.
 		String memQuery= "select name, phone_num from member where member_id='"+id+"'";
 		final MemberDTO mdto = template.queryForObject(memQuery, new BeanPropertyRowMapper<MemberDTO>(MemberDTO.class));
-		
+		System.out.println("회원 정보 불러옴");
 		//reserve 넣기
+		System.out.println("reserve 넣기 시작");
 		String resQuery= "INSERT INTO reserve VALUES (?, ?, ?, '0', ?, to_date(?, 'yyyy-MM-dd'))";
 		template.update(resQuery, new PreparedStatementSetter() {
 			@Override
@@ -154,6 +161,7 @@ public class BookDAO {
 				ps.setDate(5, CURRDATE);
 			}
 		}); 
+		System.out.println("reserve 넣기 완료");
 
 //		transactionManager.commit(status);
 		

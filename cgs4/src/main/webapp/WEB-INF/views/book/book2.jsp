@@ -49,9 +49,7 @@
 <!-- Modernizr -->
 <script src="<%=ctx%>/resources/js/external/modernizr.custom.js"></script>
 <script>
-function submit() {
-	document.getElementById("film-and-time").submit();
-}
+
 </script>
 <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!--[if lt IE 9]> 
@@ -239,17 +237,17 @@ function submit() {
 			<a href="book1" class="booking-pagination__prev"> <span
 				class="arrow__text arrow--prev">이전 화면으로</span> <span
 				class="arrow__info">영화/영화관/날짜 선택</span>
-			</a> <a href="#" class="booking-pagination__next" onclick="submit()"> <span
+			</a> <a href="#" class="booking-pagination__next"> <span
 				class="arrow__text arrow--next">다음 화면으로</span> <span
 				class="arrow__info">결제하기</span>
 			</a>
 		</div>
 	</form>
-<!-- 	<div class="findOccup"> -->
-<%-- 	<c:forEach var="na" items="${sSeat}"> --%>
-<%-- 	<span class="occuSeat" data-place='${na.row_num}${na.col_num}'></span> --%>
-<%-- 	</c:forEach> --%>
-<!-- 	</div> -->
+	<div class="findOccup">
+	<c:forEach var="na" items="${sSeat}">
+	<span class="occuSeat" data-place='${na.row_num}${na.col_num}'>${na.row_num}${na.col_num}</span>
+	</c:forEach>
+	</div>
 
 	<div class="clearfix"></div>
 
@@ -376,16 +374,20 @@ function submit() {
 	<script src="<%=ctx%>/resources/js/custom.js"></script>
 
 	<script type="text/javascript">
-            $(document).ready(function() {
-                init_BookingTwo();
-//                 $('.sits__place').each(function(e){
-//                 if($('.occuSeat').attr('data-place')==$('.sits__place').attr('data-place'));
-//                 $(e.target).addClass('sits-state--not');
-//                 alert(e.target);
-//                 });
-//                 $('.findOccup').remove();
-            });
-            
+    $(document).ready(function() {
+        init_BookingTwo();
+        $('.sits__place').each(function(){
+       		var seat = $(this);
+       		$('.occuSeat').each(function(){
+          		
+       			if(seat.attr('data-place')==$(this).attr('data-place')){
+       	        	$(seat).addClass('sits-state--not');
+       	        	console.log(seat.attr('data-place'));
+       			}
+       		});
+        });
+        $('.findOccup').remove();
+    });
 		</script>
 
 </body>

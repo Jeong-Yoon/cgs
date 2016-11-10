@@ -667,13 +667,25 @@ function init_BookingTwo () {
                     pplNum = 0;
     
     // 좌석 4개로 제한하기
-    	$('.sits-price').click(function check (e){
-    		e.preventDefault();
+    	$('.sits-price').click(function(){
+    		sitCheck();
+    	});
+    	$('.sits-price').keyup(function(){
+    		sitCheck();
+    	});
+    	
+    	function sitCheck(){
     		var norm = parseInt($('.norm').val());
     		var youg = parseInt($('.youg').val());
     		var spec = parseInt($('.spec').val());
 
     		var pSum = norm+youg+spec;
+    		if(pSum>4){
+    			alert("4명 이상 선택할 수 없습니다!")
+    			$('.norm').val(0);
+    			$('.youg').val(0);
+    			$('.spec').val(0);
+    		}
     		pplNum = pSum;
     		if(pSum==4){
     			$('.norm').attr("max",norm)
@@ -706,7 +718,7 @@ function init_BookingTwo () {
         $('.checked-result').text(totprice+"원");
         $('.choosen-cost').val(totprice);
     		
-    	})
+    	}
     //3. Choose sits (and count price for them)
     			//users choose sits
 
@@ -929,6 +941,16 @@ function init_BookingTwo () {
 
             })
         }
+        $('.booking-pagination__next').click( function(e) {
+        	e.preventDefault();
+        	if(pplNum==0){
+        		alert("한명 이상 선택해 주세요!")
+        	}else if(pplNum!=count){
+        		alert("선택 인원 수와 좌석이 맞지 않습니다.")
+        	}else{
+        	document.getElementById("film-and-time").submit();
+        	}
+        })
 
 
 

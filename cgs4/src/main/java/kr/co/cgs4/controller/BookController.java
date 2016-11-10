@@ -58,15 +58,21 @@ public class BookController {
 	}else{
 		response.setContentType("text/html; charset=UTF-8");    	
     	PrintWriter out =response.getWriter();
-    	out.println("<script>alert('로그인이 필요합니다.'); history.go(-1);</script>");
+    	out.println("<script>alert('로그인이 필요합니다.'); location.href='login';</script>");
     	out.close();
 		return "index";
 	}
 	}
 	
 	@RequestMapping("/book2")
-	public String book2(@ModelAttribute("bInfo") Book_BookInfo bookinfo, Model model){
+	public String book2(@ModelAttribute("bInfo") Book_BookInfo bookinfo, Model model, HttpSession session, HttpServletResponse response) throws IOException{
 		System.out.println("book2");
+
+		if(session.getAttribute("id")==null){
+		PrintWriter writer=response.getWriter();
+		writer.println("<script>alert('로그인을 확인해주세요.'); location.href='login';</script>");
+		}
+		
 		BookDAO bdao = new BookDAO();
 		String screening_id = bookinfo.getScreening_ID();
 		String site_name=bookinfo.getSite_name();
@@ -94,16 +100,23 @@ public class BookController {
 //	model.addAttribute("bInfo", bInfo);
 	
 	@RequestMapping("/book3")
-	public String book3(@ModelAttribute("cInfo") Book_BuyConfirm buyConfirm,Model model, HttpSession session){
+	public String book3(@ModelAttribute("cInfo") Book_BuyConfirm buyConfirm,Model model, HttpSession session, HttpServletResponse response) throws IOException{
 	System.out.println("book3");
-	System.out.println(session.getAttribute("id"));
+	if(session.getAttribute("id")==null){
+	PrintWriter writer=response.getWriter();
+	writer.println("<script>alert('로그인을 확인해주세요.'); location.href='login';</script>");
+	}
 	return "book/book3";	
 	}
 	
 
 	@RequestMapping("/book4")
-	public String book4(@ModelAttribute("bInfo")Book_BookInfo bookinfo, @ModelAttribute("sdto") SaleDTO sdto,HttpServletRequest hsr, HttpSession session,Model model){
+	public String book4(@ModelAttribute("bInfo")Book_BookInfo bookinfo, @ModelAttribute("sdto") SaleDTO sdto,HttpServletRequest hsr, HttpSession session, HttpServletResponse response,Model model) throws IOException{
 		System.out.println("book4");
+		if(session.getAttribute("id")==null){
+			PrintWriter writer=response.getWriter();
+			writer.println("<script>alert('로그인을 확인해주세요.'); location.href='login';</script>");
+			}
 		System.out.println(session.getAttribute("id"));
 		model.addAttribute("request", hsr);
 		 model.addAttribute("saleDTO", sdto);

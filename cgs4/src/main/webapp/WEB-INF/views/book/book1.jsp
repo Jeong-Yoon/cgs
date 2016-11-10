@@ -441,6 +441,7 @@
 			init_BookingOne();
 		});
 		$('.booking-pagination__next').click(function(e){
+        	e.preventDefault();
             var chooseCity = $('.choosen-city').val();
             var chooseDate = $('.choosen-date').val();
             var chooseFilm = $('.choosen-movie').val();

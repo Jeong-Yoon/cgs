@@ -83,7 +83,7 @@
 <!--                     <div class="order-step second--step order-step--disable">2. Choose a sit</div> -->
                     <div class="order-step third--step">예매 확인</div>
                 </div>
-	<form action="book4" id="payment">
+	<form action="book4" id="payment" autocomplete="nope">
             <div class="col-sm-12">
                 <div class="checkout-wrapper">
                     <h2 class="page-heading">예매 정보</h2>
@@ -111,7 +111,7 @@
 
                     <h2 class="page-heading">결제 정보 입력</h2>
                     <div class="payment">
-                    <table>
+                    <table >
                     	<tr style="height:35px">
                     	<td style="width:120px">카드 종류</td>
                     	<td><select name="select_card" id="select-sort"

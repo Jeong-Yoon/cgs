@@ -1,69 +1,15 @@
+/*
+fontKorean3: Spoqa Han Sans
+*/
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-jp.css);
+
+.spoqahansans * {
+ font-family: 'Spoqa Han Sans', sans-serif;
+}
 
 /*
 font=Korean2: LotteMartDream
-*/
-@font-face {
-  font-family: 'LotteMartDream';
-  font-style: normal;
-  font-weight: 400;
-  src: url('//cdn.jsdelivr.net/korean-webfonts/1/corps/LotteMartDream/LotteMartDream/LotteMartDreamM.woff2') format('woff2'), url('//cdn.jsdelivr.net/korean-webfonts/1/corps/LotteMartDream/LotteMartDream/LotteMartDreamM.woff') format('woff');
-}
-
-@font-face {
-  font-family: 'LotteMartDream';
-  font-style: normal;
-  font-weight: 700;
-  src: url('//cdn.jsdelivr.net/korean-webfonts/1/corps/LotteMartDream/LotteMartDream/LotteMartDreamB.woff2') format('woff2'), url('//cdn.jsdelivr.net/korean-webfonts/1/corps/LotteMartDream/LotteMartDream/LotteMartDreamB.woff') format('woff');
-}
-
-.LotteMartDream * {
- font-family: 'LotteMartDream', sans-serif;
-}
-
-/** 이하는 공통 **/
-.normal {
- font-style: normal;
-}
-
-.w250 {
- font-weight: 250;
-}
-
-.w300 {
- font-weight: 300;
-}
-
-.w350 {
- font-weight: 350;
-}
-
-.w400 {
- font-weight: 400;
-}
-
-.w500 {
- font-weight: 500;
-}
-
-.w700 {
- font-weight: 700;
-}
-
-.w800 {
- font-weight: 800;
-}
-
-.w900 {
- font-weight: 900;
-}
-
-li span {
- line-height: 1.8;
- font-size: 1.3em;
-}
-
-/*
-font-Korean1: LotteMartDream
 */
 @font-face {
   font-family: 'LotteMartDream';
@@ -88,6 +34,34 @@ font-Korean1: LotteMartDream
 
 .lottemartdream * {
  font-family: 'LotteMartDream', sans-serif;
+}
+
+/*
+font-Korean1: Godo
+*/
+@font-face {
+  font-family: 'Godo';
+  font-style: normal;
+  font-weight: 400;
+  src: url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/Godo/GodoMedium.woff2') format('woff2'), url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/Godo/GodoMedium.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Godo';
+  font-style: normal;
+  font-weight: 700;
+  src: url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/Godo/GodoBold.woff2') format('woff2'), url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/Godo/GodoBold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Godo';
+  font-style: normal;
+  font-weight: 300;
+  src: url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/Godo/GodoLight.woff2') format('woff2'), url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/Godo/GodoLight.woff') format('woff');
+}
+
+.Godo * {
+ font-family: 'Godo', sans-serif;
 }
 
 .normal {
@@ -133,7 +107,7 @@ li span {
 
 /*! normalize.css v3.0.0 | MIT License | git.io/normalize */
 html {
-	font-family: LotteMartDream;
+	font-family: Spoqa Han Sans;
 	-ms-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
 }
@@ -178,7 +152,7 @@ body, div, section, footer, video, article {
 /* 	top: 0; */
 /* 	left: 0; */
 /* 	color: #fff; */
-/* 	font-family: "Roboto", LotteMartDream; */
+/* 	font-family: "Roboto", Spoqa Han Sans; */
 /* 	text-shadow: 0 0 16px rbga(0,0,0,0.15); */
 /* } */
 
@@ -421,7 +395,7 @@ html {
 }
 
 body {
-	font-family: "Helvetica Neue", Helvetica, Arial, LotteMartDream;
+	font-family: "Helvetica Neue", Helvetica, Arial, Spoqa Han Sans;
 	font-size: 14px;
 	line-height: 1.428571429;
 	color: #333333;
@@ -879,7 +853,7 @@ html, body {
 }
 
 body {
-	font-family: 'Roboto', LotteMartDream;
+	font-family: 'Roboto', Spoqa Han Sans;
 }
 
 .wrapper {
@@ -900,7 +874,7 @@ body {
 h1 {
 	color: #222A35;
 	font-size: 30px;
-	font-family: 'aleoregular', LotteMartDream;
+	font-family: 'aleoregular', Spoqa Han Sans;
 	margin-top: 32px;
 	margin-bottom: 23px;
 }
@@ -908,7 +882,7 @@ h1 {
 h2 {
 	color: #222A35;
 	font-size: 27px;
-	font-family: 'aleoregular', LotteMartDream;
+	font-family: 'aleoregular', Spoqa Han Sans;
 	margin-top: 70px;
 	margin-bottom: 23px;
 }
@@ -916,7 +890,7 @@ h2 {
 h3 {
 	color: #222A35;
 	font-size: 24px;
-	font-family: 'aleoregular', LotteMartDream;
+	font-family: 'aleoregular', Spoqa Han Sans;
 	margin-top: 40px;
 	margin-bottom: 24px;
 }
@@ -924,7 +898,7 @@ h3 {
 h4 {
 	color: #222A35;
 	font-size: 21px;
-	font-family: 'aleoregular', LotteMartDream;
+	font-family: 'aleoregular', Spoqa Han Sans;
 	margin-top: 70px;
 	margin-bottom: 24px;
 }
@@ -932,14 +906,14 @@ h4 {
 h5 {
 	color: #222A35;
 	font-size: 18px;
-	font-family: 'aleoregular', LotteMartDream;
+	font-family: 'aleoregular', Spoqa Han Sans;
 	margin-top: 70px;
 	margin-bottom: 24px;
 }
 
 .unslyled {
 	font-weight: bold;
-	font-family: 'Roboto', LotteMartDream;
+	font-family: 'Roboto', Spoqa Han Sans;
 }
 
 p {
@@ -1023,7 +997,7 @@ input, textarea {
 }
 
 .list li {
-	font: 18px 'aleobolditalic', LotteMartDream;
+	font: 18px 'aleobolditalic', Spoqa Han Sans;
 	color: #222A35;
 	margin-bottom: 20px;
 }
@@ -1086,7 +1060,7 @@ table {
 
 .login .success {
 	background-color: #F0C419;
-	font: 18px 'aleobold', LotteMartDream;
+	font: 18px 'aleobold', Spoqa Han Sans;
 	text-transform: uppercase;
 	color: #222A35;
 	text-align: center;
@@ -1097,7 +1071,7 @@ table {
 }
 
 .form .success {
-	font: 24px 'aleoitalic', LotteMartDream;
+	font: 24px 'aleoitalic', Spoqa Han Sans;
 	padding-top: 67px;
 	padding-bottom: 66px;
 }
@@ -3271,7 +3245,7 @@ ul#navigation {
 }
 
 ul#navigation a {
-	font: 13px 'Roboto', LotteMartDream;
+	font: 13px 'Roboto', Spoqa Han Sans;
 	color: #b4b1b2;
 	-webkit-transition: 0.3s;
 	transition: 0.3s;
@@ -3282,7 +3256,7 @@ ul#navigation a:hover {
 }
 
 .heading {
-	font: 16px 'aleoregular', LotteMartDream;
+	font: 16px 'aleoregular', Spoqa Han Sans;
 	text-transform: uppercase;
 	color: #222A35;
 	margin: 0 0 16px;
@@ -3299,14 +3273,14 @@ ul#navigation a:hover {
 
 .heading--strong {
 	font-size: 21px;
-	font-family: 'aleobold', LotteMartDream;
+	font-family: 'aleobold', Spoqa Han Sans;
 }
 
 .page-heading {
 	padding-left: 30px;
 	margin-top: 56px;
 	margin-bottom: 27px;
-	font: 20px 'aleobold', LotteMartDream;
+	font: 20px 'aleobold', Spoqa Han Sans;
 	color: #222A35;
 	text-transform: uppercase;
 	background-image: url(../images/components/scarf.png);
@@ -3320,7 +3294,7 @@ ul#navigation a:hover {
 	font-size: 22px;
 	line-height: 20px;
 	color: #222A35;
-	font-family: 'aleobold', LotteMartDream;
+	font-family: 'aleobold', Spoqa Han Sans;
 	text-transform: uppercase;
 	text-align: center;
 	margin: 0;
@@ -3331,7 +3305,7 @@ ul#navigation a:hover {
 .heading-special .heading-edition {
 	font-size: 16px;
 	font-weight: normal;
-	font-family: 'aleoitalic', LotteMartDream;
+	font-family: 'aleoitalic', Spoqa Han Sans;
 	text-transform: lowercase;
 }
 
@@ -3350,7 +3324,7 @@ ul#navigation a:hover {
 }
 
 .heading-special--small {
-	font-family: 'aleoregular', LotteMartDream;
+	font-family: 'aleoregular', Spoqa Han Sans;
 	font-size: 16px;
 	line-height: 20px;
 	color: #222A35;
@@ -3358,14 +3332,14 @@ ul#navigation a:hover {
 }
 
 .heading-special--small .title-edition {
-	font-family: 'aleoitalic', LotteMartDream;
+	font-family: 'aleoitalic', Spoqa Han Sans;
 	text-transform: lowercase;
 	color: #ED2236;
 }
 
 .text-helper {
 	color: #969b9f;
-	font-family: 'aleoitalic', LotteMartDream;
+	font-family: 'aleoitalic', Spoqa Han Sans;
 	font-size: 16px;
 }
 
@@ -3385,7 +3359,7 @@ ul#navigation a:hover {
 		rgba(255, 255, 255, 0.2);
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.16), inset 0 2px
 		rgba(255, 255, 255, 0.2);
-	font: 12px 'aleobold', LotteMartDream;
+	font: 12px 'aleobold', Spoqa Han Sans;
 	text-transform: uppercase;
 	-webkit-transition: 0.3s;
 	transition: 0.3s;
@@ -3484,7 +3458,7 @@ ul#navigation a:hover {
 }
 
 .btn--sign {
-	font: 13px 'Roboto', LotteMartDream;
+	font: 13px 'Roboto', Spoqa Han Sans;
 	font-weight: bold;
 	text-transform: uppercase;
 	color: #F0C419;
@@ -3573,7 +3547,7 @@ ul#navigation a:hover {
 }
 
 .read-more {
-	font: 16px 'aleoregular', LotteMartDream;
+	font: 16px 'aleoregular', Spoqa Han Sans;
 	color: #ED2236;
 	text-transform: uppercase;
 	-webkit-border-radius: 3px;
@@ -3660,7 +3634,7 @@ ul#navigation a:hover {
 }
 
 .panel-collapse .panel-body {
-	font-family: 'Roboto', LotteMartDream;
+	font-family: 'Roboto', Spoqa Han Sans;
 	font-size: 16px;
 	line-height: 21px;
 	padding: 13px 15px 10px 35px;
@@ -3722,7 +3696,7 @@ ul#navigation a:hover {
 
 .accordion-light .panel-title {
 	font-weight: bold;
-	font-family: 'Roboto', LotteMartDream;
+	font-family: 'Roboto', Spoqa Han Sans;
 }
 
 .accordion-light .marker {
@@ -3765,7 +3739,7 @@ ul#navigation a:hover {
 	padding: 17px 15px 18px 55px;
 	background-color: #222A35;
 	color: #ffffff;
-	font-family: 'Roboto', LotteMartDream;
+	font-family: 'Roboto', Spoqa Han Sans;
 }
 
 .accordion-dark .panel-title>a .marker, .accordion-dark .panel-title>a.collapsed:hover .marker
@@ -3940,7 +3914,7 @@ ul#navigation a:hover {
 }
 
 .price .price__package {
-	font: 16px 'aleoregular', LotteMartDream;
+	font: 16px 'aleoregular', Spoqa Han Sans;
 	color: #ffffff;
 	text-transform: capitalize;
 	padding-top: 16px;
@@ -3949,7 +3923,7 @@ ul#navigation a:hover {
 }
 
 .price .price__value {
-	font: 40px 'aleobold', LotteMartDream;
+	font: 40px 'aleobold', Spoqa Han Sans;
 	color: #ED2236;
 	background-color: #fafafa;
 	background-image: url(../images/components/price-pattern.jpg);
@@ -3960,7 +3934,7 @@ ul#navigation a:hover {
 }
 
 .price .price__feather {
-	font: 13px 'Roboto', LotteMartDream;
+	font: 13px 'Roboto', Spoqa Han Sans;
 	color: #b4b1b2;
 	padding-top: 16px;
 	padding-bottom: 15px;
@@ -4004,7 +3978,7 @@ ul#navigation a:hover {
 }
 
 .promo .promo__head {
-	font: 30px 'aleobold', LotteMartDream;
+	font: 30px 'aleobold', Spoqa Han Sans;
 	color: #ffffff;
 	text-transform: uppercase;
 	margin-bottom: 18px;
@@ -4012,7 +3986,7 @@ ul#navigation a:hover {
 }
 
 .promo .promo__describe {
-	font: 18px 'aleoitalic', LotteMartDream;
+	font: 18px 'aleoitalic', Spoqa Han Sans;
 	color: #222A35;
 	font-weight: 300;
 	padding-bottom: 45px;
@@ -4068,7 +4042,7 @@ ul#navigation a:hover {
 	-webkit-border-radius: 0;
 	-moz-border-radius: 0;
 	border-radius: 0;
-	font: 16px 'Roboto', LotteMartDream;
+	font: 16px 'Roboto', Spoqa Han Sans;
 	color: #222A35;
 	text-transform: uppercase;
 	font-weight: bold;
@@ -4158,7 +4132,7 @@ ul#navigation a:hover {
 }
 
 .testionaial .testionaial__text {
-	font: 13px 'Roboto', LotteMartDream;
+	font: 13px 'Roboto', Spoqa Han Sans;
 	color: #222A35;
 	font-style: italic;
 	margin-top: 30px;
@@ -4344,7 +4318,7 @@ ul#navigation a:hover {
 }
 
 .post .post__title-link {
-	font: 30px 'aleoregular', LotteMartDream;
+	font: 30px 'aleoregular', Spoqa Han Sans;
 }
 
 .post .post__date {
@@ -4416,14 +4390,14 @@ ul#navigation a:hover {
 	border: none;
 	background-color: #F0C419;
 	color: #222A35;
-	font: 28px 'aleoitalic', LotteMartDream;
+	font: 28px 'aleoitalic', Spoqa Han Sans;
 	padding: 55px 50px 15px;
 }
 
 .quote .quote__author {
 	font-size: 16px;
 	font-style: normal;
-	font-family: 'aleobold', LotteMartDream;
+	font-family: 'aleobold', Spoqa Han Sans;
 	color: #ffffff;
 	text-align: right;
 	position: relative;
@@ -4585,7 +4559,7 @@ ul#navigation a:hover {
 
 .social--hide:before {
 	content: '+';
-	font: 18px 'Roboto', LotteMartDream;
+	font: 18px 'Roboto', Spoqa Han Sans;
 	color: #222A35;
 	font-weight: bold;
 	position: absolute;
@@ -4704,7 +4678,7 @@ ul#navigation a:hover {
 
 .comment-form .comment-form__info {
 	margin-top: 19px;
-	font: 13px 'Roboto', LotteMartDream;
+	font: 13px 'Roboto', Spoqa Han Sans;
 	color: #969b9f;
 	display: inline-block;
 }
@@ -4822,13 +4796,13 @@ ul#navigation a:hover {
 	text-align: center;
 	margin: 0;
 	margin-bottom: 28px;
-	font-family: 'aleobold', LotteMartDream;
+	font-family: 'aleobold', Spoqa Han Sans;
 }
 
 .category .category__title .title-edition {
 	font-size: 16px;
 	font-weight: normal;
-	font-family: 'aleoitalic', LotteMartDream;
+	font-family: 'aleoitalic', Spoqa Han Sans;
 	text-transform: lowercase;
 }
 
@@ -4875,7 +4849,7 @@ ul#navigation a:hover {
 }
 
 #twitter-feed p {
-	font-family: Arial, LotteMartDream;
+	font-family: Arial, Spoqa Han Sans;
 	font-size: 12px;
 	line-height: 16px;
 	margin-bottom: 14px;
@@ -4900,7 +4874,7 @@ ul#navigation a:hover {
 .tweetprofilelink a {
 	font-size: 12px;
 	color: #969b9f;
-	font-family: Arial, LotteMartDream;
+	font-family: Arial, Spoqa Han Sans;
 }
 
 .twitter-text {
@@ -4938,7 +4912,7 @@ ul#navigation a:hover {
 }
 
 .copy {
-	font-family: 'aleoitalic', LotteMartDream;
+	font-family: 'aleoitalic', Spoqa Han Sans;
 	font-size: 16px;
 	padding-bottom: 45px;
 }
@@ -4999,7 +4973,7 @@ ul#navigation a:hover {
 	transition: 0.3s;
 	width: 130px;
 	display: none;
-	font: 13px 'aleoitalic', LotteMartDream;
+	font: 13px 'aleoitalic', Spoqa Han Sans;
 	color: #ffffff;
 	line-height: 21px;
 }
@@ -5059,7 +5033,7 @@ ul#navigation a:hover {
 	-webkit-transition: 0.3s;
 	transition: 0.3s;
 	width: 130px;
-	font: 13px 'aleoitalic', LotteMartDream;
+	font: 13px 'aleoitalic', Spoqa Han Sans;
 	color: #ffffff;
 	line-height: 21px;
 	position: absolute;
@@ -5497,7 +5471,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 
 .ui-datepicker .ui-datepicker-header .ui-datepicker-title {
 	color: #ffffff;
-	font: 14px 'aleoregular', LotteMartDream;
+	font: 14px 'aleoregular', Spoqa Han Sans;
 	margin-top: 11px;
 	margin-bottom: 13px;
 }
@@ -5710,7 +5684,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 
 .select .sbToggle:after {
 	/* 	content: '�뜝�럩寃ュ뜝�럩�꼨占쎄슈�뜝占�''; */
-	font: 13px 'Roboto', LotteMartDream;
+	font: 13px 'Roboto', Spoqa Han Sans;
 	font-weight: bold;
 }
 
@@ -6012,7 +5986,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 
 .booking-pagination .arrow__text {
 	position: relative;
-	font: 16px 'aleoregular', LotteMartDream;
+	font: 16px 'aleoregular', Spoqa Han Sans;
 	color: #ED2236;
 	text-transform: uppercase;
 	border-bottom: 1px solid #dbdee1;
@@ -6046,7 +6020,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 }
 
 .booking-pagination .arrow__info {
-	font: 14px 'aleoitalic', LotteMartDream;
+	font: 14px 'aleoitalic', Spoqa Han Sans;
 	color: #969b9f;
 	-webkit-transition: 0.4s;
 	transition: 0.4s;
@@ -6081,7 +6055,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 	padding: 20px 17px 19px;
 	border: 3px solid #F0C419;
 	border-top: none;
-	font: 16px 'aleoregular', LotteMartDream;
+	font: 16px 'aleoregular', Spoqa Han Sans;
 	color: #222A35;
 }
 
@@ -6091,7 +6065,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 }
 
 .movie .movie__rate .movie__rate-number {
-	font: 11px 'Roboto', LotteMartDream;
+	font: 11px 'Roboto', Spoqa Han Sans;
 	display: block;
 }
 
@@ -6104,7 +6078,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 	border-radius: 24px;
 	background-color: #F0C419;
 	border: solid 3px #fff;
-	font: 16px 'Roboto', LotteMartDream;
+	font: 16px 'Roboto', Spoqa Han Sans;
 	color: #222A35;
 	text-align: center;
 	font-weight: bold;
@@ -6138,7 +6112,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 .movie .comment-link {
 	position: relative;
 	display: inline-block;
-	font: 16px 'aleoregular', LotteMartDream;
+	font: 16px 'aleoregular', Spoqa Han Sans;
 	color: #ED2236;
 	margin-top: 30px;
 	margin-bottom: 15px;
@@ -6491,7 +6465,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 	margin-bottom: 45px;
 	margin-top: 10px;
 	text-align:center;
-	font-family: LotteMartDream;
+	font-family: Spoqa Han Sans;
 	background-color: rgba(240, 196, 25, 0.6);
 	padding: 10px;
 	color: #5d5d5d;
@@ -6505,7 +6479,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 	-moz-border-radius: 50px;
 	border-radius: 50px;
 	padding-top: 38px;
-	font: 20px 'aleobold', LotteMartDream;
+	font: 20px 'aleobold', Spoqa Han Sans;
 	text-align: center;
 	color: #222A35;
 	position: absolute;
@@ -6583,7 +6557,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 }
 
 .trailer .trailer__name {
-	font: 13px 'aleoregular', LotteMartDream;
+	font: 13px 'aleoregular', Spoqa Han Sans;
 	color: #ffffff;
 	text-align: center;
 	padding-top: 28px;
@@ -6591,7 +6565,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 }
 
 .trailer .trailer__number {
-	font: 13px 'aleoitalic', LotteMartDream;
+	font: 13px 'aleoitalic', Spoqa Han Sans;
 	color: #ffffff;
 	text-align: center;
 	padding-bottom: 20px;
@@ -6729,7 +6703,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 
 .rates .rates__result {
 	text-align: center;
-	font: 20px 'aleobold', LotteMartDream;
+	font: 20px 'aleobold', Spoqa Han Sans;
 	background-color: #F0C419;
 }
 
@@ -6797,7 +6771,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 
 .offer .offer__name {
 	color: #ffffff;
-	font: 30px 'aleobold', LotteMartDream;
+	font: 30px 'aleobold', Spoqa Han Sans;
 	text-transform: uppercase;
 	margin-top: 44px;
 	margin-bottom: 17px;
@@ -6807,7 +6781,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 
 .offer .offer__datail {
 	color: #ffffff;
-	font: 18px 'aleoitalic', LotteMartDream;
+	font: 18px 'aleoitalic', Spoqa Han Sans;
 	text-transform: none;
 	font-weight: 300;
 	line-height: 21px;
@@ -6833,7 +6807,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 
 .offer-place {
 	color: #ED2236;
-	font-family: 'aleoitalic', LotteMartDream;
+	font-family: 'aleoitalic', Spoqa Han Sans;
 	font-size: 18px;
 	text-align: center;
 	margin-bottom: 23px;
@@ -6958,7 +6932,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 }
 
 .contact .contact__title {
-	font: 30px 'aleobold', LotteMartDream;
+	font: 30px 'aleobold', Spoqa Han Sans;
 	line-height: 30px;
 	margin-top: 45px;
 	margin-bottom: 23px;
@@ -6967,7 +6941,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 .contact .contact__describe {
 	font-size: 22px;
 	font-weight: normal;
-	font-family: 'aleoitalic', LotteMartDream;
+	font-family: 'aleoitalic', Spoqa Han Sans;
 }
 
 .contact .contact__mail {
@@ -7009,7 +6983,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 }
 
 .form .form__title {
-	font: 30px 'aleobold', LotteMartDream;
+	font: 30px 'aleobold', Spoqa Han Sans;
 	line-height: 30px;
 	margin-bottom: 26px;
 }
@@ -7104,7 +7078,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 	text-transform: uppercase;
 	color: #ffffff;
 	font-size: 20px;
-	font-family: 'aleobold', LotteMartDream;
+	font-family: 'aleobold', Spoqa Han Sans;
 	margin-top: -3px;
 	margin-bottom: 46px;
 }
@@ -7136,7 +7110,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 }
 
 .couter .digits {
-	font: 50px 'Roboto', LotteMartDream;
+	font: 50px 'Roboto', Spoqa Han Sans;
 	color: #ffffff;
 	font-weight: bold;
 	display: block;
@@ -7148,7 +7122,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 }
 
 .couter .digits-label {
-	font: 20px 'aleoitalic', LotteMartDream;
+	font: 20px 'aleoitalic', Spoqa Han Sans;
 	color: #ffffff;
 	margin-top: -2px;
 	position: absolute;
@@ -7175,7 +7149,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 }
 
 .order .order__title {
-	font: 30px 'aleobold', LotteMartDream;
+	font: 30px 'aleobold', Spoqa Han Sans;
 	text-transform: uppercase;
 	line-height: 26px;
 	margin-top: 5px;
@@ -7185,7 +7159,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 	font-size: 16px;
 	text-transform: none;
 	font-weight: normal;
-	font-family: 'aleoitalic', LotteMartDream;
+	font-family: 'aleoitalic', Spoqa Han Sans;
 }
 
 .order .order__control {
@@ -7233,7 +7207,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 }
 
 .order-step-area .order-step {
-	font: 16px 'aleoregular', LotteMartDream;
+	font: 16px 'aleoregular', Spoqa Han Sans;
 	padding-left: 55px;
 	position: relative;
 	width: 70%;
@@ -7796,7 +7770,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 
 .reservation-message:after {
 	content: 'i';
-	font: 18px 'aleobold', LotteMartDream;
+	font: 18px 'aleobold', Spoqa Han Sans;
 	color: #222A35;
 	position: absolute;
 	top: 2px;
@@ -8024,7 +7998,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 	transition: 0.3s;
 	width: 130px;
 	display: none;
-	font: 13px 'aleoitalic', LotteMartDream;
+	font: 13px 'aleoitalic', Spoqa Han Sans;
 	color: #ffffff;
 	line-height: 21px;
 	text-align: right;
@@ -8034,7 +8008,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 
 .tp-leftarrow.default .slider__info:before {
 	content: 'back';
-	font: 13px 'aleoitalic', LotteMartDream;
+	font: 13px 'aleoitalic', Spoqa Han Sans;
 	color: #F0C419;
 	position: absolute;
 	bottom: 22px;
@@ -8105,7 +8079,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 	-webkit-transition: 0.3s;
 	transition: 0.3s;
 	width: 130px;
-	font: 13px 'aleoitalic', LotteMartDream;
+	font: 13px 'aleoitalic', Spoqa Han Sans;
 	color: #ffffff;
 	line-height: 21px;
 	position: absolute;
@@ -8117,7 +8091,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 
 .tp-rightarrow.default .slider__info:before {
 	content: 'next';
-	font: 13px 'aleoitalic', LotteMartDream;
+	font: 13px 'aleoitalic', Spoqa Han Sans;
 	color: #F0C419;
 	position: absolute;
 	top: 67px;
@@ -8197,7 +8171,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 	transition: 0.3s;
 	width: 130px;
 	display: none;
-	font: 13px 'aleoitalic', LotteMartDream;
+	font: 13px 'aleoitalic', Spoqa Han Sans;
 	color: #ffffff;
 	line-height: 21px;
 }
@@ -8257,7 +8231,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 	-webkit-transition: 0.3s;
 	transition: 0.3s;
 	width: 130px;
-	font: 13px 'aleoitalic', LotteMartDream;
+	font: 13px 'aleoitalic', Spoqa Han Sans;
 	color: #ffffff;
 	line-height: 21px;
 	position: absolute;
@@ -8317,7 +8291,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 	font-weight: 800;
 	font-style: italic;
 	color: #ffffff;
-	font-family: 'Open Sans', LotteMartDream;
+	font-family: 'Open Sans', Spoqa Han Sans;
 }
 
 .slide .slide__name--smaller {
@@ -8334,7 +8308,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 }
 
 .slide .slide__name--specific {
-	font-family: 'aleoregular', LotteMartDream;
+	font-family: 'aleoregular', Spoqa Han Sans;
 }
 
 .slide .highlight {
@@ -8344,7 +8318,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 .slide .slide__descript {
 	color: #c1c1c1;
 	font-size: 22px;
-	font-family: 'Roboto', LotteMartDream;
+	font-family: 'Roboto', Spoqa Han Sans;
 	font-weight: 100;
 	width: 100%;
 	text-align: center;
@@ -8353,13 +8327,13 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 }
 
 .slide .slide__time {
-	font: 18px 'Roboto', LotteMartDream;
+	font: 18px 'Roboto', Spoqa Han Sans;
 	color: #ffffff;
 	z-index: 40;
 }
 
 .slide .slide__date {
-	font: 18px 'Roboto', LotteMartDream;
+	font: 18px 'Roboto', Spoqa Han Sans;
 	color: #ffffff;
 	font-weight: bold;
 	z-index: 40;
@@ -8388,14 +8362,14 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 }
 
 .slide .slide__text {
-	font: 13px 'Roboto', LotteMartDream;
+	font: 13px 'Roboto', Spoqa Han Sans;
 	color: #ffffff;
 	text-align: right;
 	line-height: 21px;
 }
 
 .slide .slide__link {
-	font: 16px 'aleoregular', LotteMartDream;
+	font: 16px 'aleoregular', Spoqa Han Sans;
 	color: #ED2236;
 	text-transform: uppercase;
 	padding-right: 20px;
@@ -8465,7 +8439,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 .movie-best .movie-best__rating {
 	background-color: #F0C419;
 	text-align: center;
-	font: 20px 'aleobold', LotteMartDream;
+	font: 20px 'aleobold', Spoqa Han Sans;
 	color: #222A35;
 	text-transform: uppercase;
 	padding-bottom: 25px;
@@ -8563,7 +8537,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 
 .movie-best .movie-beta__info .slide__link {
 	color: #ED2236;
-	font: 16px 'aleoregular', LotteMartDream;
+	font: 16px 'aleoregular', Spoqa Han Sans;
 	padding-right: 20px;
 	text-transform: uppercase;
 	position: relative;
@@ -8631,7 +8605,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 	background-color: rgba(255, 255, 255, 0.6);
 	border-radius: 50px;
 	color: #222A35;
-	font: bold 20px 'Aleo', LotteMartDream;
+	font: bold 20px 'Aleo', Spoqa Han Sans;
 	height: 100px;
 	left: 50%;
 	margin-left: -50px;
@@ -8696,7 +8670,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 
 .mega-select-marker .select-marker {
 	margin-bottom: 0;
-	font-family: 'aleobold', LotteMartDream;
+	font-family: 'aleobold', Spoqa Han Sans;
 	color: grey;
 	font-size: 50px;
 	text-transform: uppercase;
@@ -8773,7 +8747,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 	color: #222A35;
 	position: relative;
 	margin-bottom: 98px;
-	font: 30px 'aleobold', LotteMartDream;
+	font: 30px 'aleobold', Spoqa Han Sans;
 	line-height: 21px;
 	margin-top: 20px;
 }
@@ -8890,7 +8864,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 
 .table--icons th {
 	background-color: #F0C419;
-	font: 18px 'Roboto', LotteMartDream;
+	font: 18px 'Roboto', Spoqa Han Sans;
 	padding-top: 20px;
 	padding-bottom: 20px;
 	text-align: left;
@@ -8921,7 +8895,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 
 .login .login__title {
 	font-size: 22px;
-	font-family: 'aleobold', LotteMartDream;
+	font-family: 'aleobold', Spoqa Han Sans;
 	line-height: 20px;
 	color: #222A35;
 	text-transform: uppercase;
@@ -8933,13 +8907,13 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 .login .login__title .login-edition {
 	font-size: 16px;
 	font-weight: normal;
-	font-family: 'aleoitalic', LotteMartDream;
+	font-family: 'aleoitalic', Spoqa Han Sans;
 	text-transform: none;
 }
 
 .login .login__tracker {
 	text-align: center;
-	font: 16px 'aleoitalic', LotteMartDream;
+	font: 16px 'aleoitalic', Spoqa Han Sans;
 	color: #222A35;
 	margin: 33px 0 35px;
 }
@@ -8970,7 +8944,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 }
 
 .login .login__check-info {
-	font-family: 'Roboto', LotteMartDream;
+	font-family: 'Roboto', Spoqa Han Sans;
 	font-size: 16px;
 	color: #b4b1b2;
 	display: block;
@@ -9108,13 +9082,13 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 	font-size: 40px;
 	text-align: center;
 	color: #ffffff;
-	font-family: 'aleoitalic', LotteMartDream;
+	font-family: 'aleoitalic', Spoqa Han Sans;
 	margin-top: 18px;
 }
 
 .copy--light {
 	color: #ffffff;
-	font: 16px 'Roboto', LotteMartDream;
+	font: 16px 'Roboto', Spoqa Han Sans;
 	font-style: italic;
 }
 
@@ -9381,7 +9355,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 .testionaial--rect .testionaial__author {
 	text-align: right;
 	font-size: 16px;
-	font-family: 'aleoitalic', LotteMartDream;
+	font-family: 'aleoitalic', Spoqa Han Sans;
 	color: #ffffff;
 	font-weight: normal;
 }
@@ -10005,7 +9979,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 }
 
 .cinema--full .cinema__title {
-	font: 24px 'aleobold', LotteMartDream;
+	font: 24px 'aleobold', Spoqa Han Sans;
 	text-transform: uppercase;
 }
 
@@ -10013,7 +9987,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 	background-color: #F0C419;
 	width: 750px;
 	margin: 0 auto;
-	font: 16px 'aleobold', LotteMartDream;
+	font: 16px 'aleobold', Spoqa Han Sans;
 	padding-top: 28px;
 	padding-bottom: 27px;
 	display: block;
@@ -11468,7 +11442,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 
 .film_title {
 	font-weight: bold;
-	font: 20px 'aleobold', LotteMartDream;
+	font: 20px 'aleobold', Spoqa Han Sans;
 }
 
 .film_button {

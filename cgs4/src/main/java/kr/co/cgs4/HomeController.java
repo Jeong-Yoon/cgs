@@ -89,17 +89,6 @@ public class HomeController {
 		return "contact";
 	}
 
-	@RequestMapping("/find_id")
-	public String find_id(Model model) {
-		System.out.println("find_id()");
-		return "find_id";
-	}
-
-	@RequestMapping("/find_pw")
-	public String find_pw(Model model) {
-		System.out.println("find_pw()");
-		return "find_pw";
-	}
 
 	// @RequestMapping("/signup")
 	// public String signup(Model model){

@@ -61,7 +61,7 @@
 <!-- 일단 form, action부분 냅둠 -->
 
 		<p class="login__title">
-			아이디 찾기 <br><span class="login-edition">-Find ID-</span>
+			비밀번호 찾기 <br><span class="login-edition">-Find Password-</span>
 		</p>
 
 	

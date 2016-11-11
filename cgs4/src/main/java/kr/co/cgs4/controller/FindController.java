@@ -106,7 +106,7 @@ public class FindController {
 		try {
 			MemberDTO dtos = dao.findPW(id, name, Pnum, email);
 			if (dtos != null) {
-				String pw=dtos.getMember_ID();
+				String pw=dtos.getPassword();
 				
 				
 				model.addAttribute("pw", pw);

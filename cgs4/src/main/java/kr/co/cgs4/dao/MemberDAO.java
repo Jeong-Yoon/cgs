@@ -39,7 +39,7 @@ public class MemberDAO {
 	}
 
 	//회원가입시 사용
-	public void signup(final String id, final String pw, final String name, final String address, String birth, final String phone, final String e_mail, final String gender) throws ParseException{
+	public void signup(final String id, final String pw, final String name, final String address, String birth, final String phone, final String e_mail, final String gender){
 		System.out.println(birth);
 //		final Date iBirth = java.sql.Date.valueOf(birth);
 		//가입일 정의

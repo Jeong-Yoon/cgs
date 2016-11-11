@@ -46,7 +46,7 @@
 
 /* 폼 테이블 */
 .mbskin table {}
-.mbskin caption {padding-top:0;font-size:1.083em}
+.mbskin caption {padding-top:0;font-size:1.583em; font-family:'Godo',sans-serif;}
 .mbskin .tbl_frm01 {margin:0 10px 20px}
 .mbskin .tbl_frm01 table {width:100%;border-collapse:collapse;border-spacing:0}
 .mbskin .tbl_frm01 th {padding:10px 5px;border:1px solid #dfdfdf;color:#383838;text-align:left;font-size:1.083em;}

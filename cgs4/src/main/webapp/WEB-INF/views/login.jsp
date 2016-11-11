@@ -213,55 +213,6 @@ a:active, a:focus, .no-touch a:active, .no-touch a:focus {
 	color: #ccc;
 }
 
-/* IE uses absolute paths to .cur files - YAY!!! :) */
-.ie .sldr-nofade .bottom-dark .hero-item .rsOverflow, .ie .sldr-nofade .top-dark .hero-item .rsOverflow,
-	.ie .sldr-nofade .bottom-dark .grab-cursor, .ie .sldr-nofade .top-dark .grab-cursor
-	{
-	cursor:
-		url(http://airing.kr/theme/modernshop/assets/img/grab-sldr-light.cur),
-		move !important;
-}
-
-.ie .sldr-nofade .bottom-light .hero-item .rsOverflow, .ie .sldr-nofade .top-light .hero-item .rsOverflow,
-	.ie .sldr-nofade .bottom-light .grab-cursor, .ie .sldr-nofade .top-light .grab-cursor
-	{
-	cursor:
-		url(http://airing.kr/theme/modernshop/assets/img/grab-sldr-dark.cur),
-		move !important;
-}
-
-.ie .bottom-dark .hero-item .rsOverflow .rsArrowLeft, .ie .top-dark .hero-item .rsOverflow .rsArrowLeft,
-	.ie .bottom-dark .rsArrowLeft .grab-cursor, .ie .top-dark .rsArrowLeft .grab-cursor,
-	.ie .galleria-container.background--dark .galleria-image-nav-left i {
-	cursor:
-		url(http://airing.kr/theme/modernshop/assets/img/grab-gallery-left-light.cur),
-		move !important;
-}
-
-.ie .bottom-light .hero-item .rsOverflow .rsArrowLeft, .ie .top-light .hero-item .rsOverflow .rsArrowLeft,
-	.ie .bottom-light .rsArrowLeft .grab-cursor, .ie .top-light .rsArrowLeft .grab-cursor,
-	.ie .galleria-container.background--light .galleria-image-nav-left i {
-	cursor:
-		url(http://airing.kr/theme/modernshop/assets/img/grab-gallery-left-dark.cur),
-		move !important;
-}
-
-.ie .bottom-dark .hero-item .rsOverflow .rsArrowRight, .ie .top-dark .hero-item .rsOverflow .rsArrowRight,
-	.ie .bottom-dark .rsArrowRight .grab-cursor, .ie .top-dark .rsArrowRight .grab-cursor,
-	.ie .galleria-container.background--dark .galleria-image-nav-right i {
-	cursor:
-		url(http://airing.kr/theme/modernshop/assets/img/grab-gallery-right-light.cur),
-		move !important;
-}
-
-.ie .bottom-light .hero-item .rsOverflow .rsArrowRight, .ie .top-light .hero-item .rsOverflow .rsArrowRight,
-	.ie .bottom-light .rsArrowRight .grab-cursor, .ie .top-light .rsArrowRight .grab-cursor,
-	.ie .galleria-container.background--light .galleria-image-nav-right i {
-	cursor:
-		url(http://airing.kr/theme/modernshop/assets/img/grab-gallery-right-dark.cur),
-		move !important;
-}
-
 /* CUSTOM CSS */
 
 /*lettering spacing*/

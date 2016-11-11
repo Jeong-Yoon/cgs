@@ -344,27 +344,10 @@ a:active, a:focus, .no-touch a:active, .no-touch a:focus {
 }
 </style>
 
-<body id="body"
-	class="  post-type-archive post-type-archive-product parallax sticky-head compact-menu blog  sldr-noloop sldr-nofade sticky-default force-detect-dark top-light is-active-wc push-back-actions woocommerce woocommerce-page">
-
+<body>
 	<!-- Header section -->
 	<jsp:include page="menu.jsp" flush="false" />
 
-	<!--        <section id="hero-wrapper" class="face-control sticky" data-height-type="percent" data-height-value="30" style="height: 79px;"> -->
-	<!--             <span class="target target-top"></span> -->
-	<!--             <span class="target target-bottom"></span> -->
-	<!--             <div class="hero-intro hero-item clearfix" style="transform: translate3d(0px, -46.1538px, 0px);"> -->
-
-	<!--             <div class="module text-module" data-size="4-2" -->
-	<!-- 				data-bgcolor="#ffffff" -->
-	<%-- 				data-bgimage="url&quot;<%=ctx%>/resources/images/bg-02.png&quot;)" --%>
-	<!-- 				data-color="#444" data-customTransform="center" -->
-	<%-- 				style="height: 169.8px; background-color: rgb(255, 255, 255); --%>
-	<%-- 				background-image: url(&quot;<%=ctx%>/resources/images/bg-02.png&quot;); --%>
-	<%-- 				color: rgb(68, 68, 68); text-align: center;"> --%>
-	<!-- 			</div> -->
-	<!-- 		</div> -->
-	<!-- 		</section>  -->
 
 	<section id="content-wrapper">
 
@@ -384,14 +367,14 @@ a:active, a:focus, .no-touch a:active, .no-touch a:focus {
 					<legend>회원로그인</legend>
 					<p class="form-row form-row-wide">
 						<label for="login_id" class="login_id">회원아이디<strong
-							class="sound_only"> 필수</strong></label> <input id="login_id" name="user-email"
+							class="sound_only"> 필수</strong></label> <input name="user-email"
 							class="form-control" type="text" autofocus="" required="required"
 							placeholder="ID">
 					</p>
 					<p class="form-row form-row-wide">
 						<label for="login_pw" class="login_pw">비밀번호<strong
-							class="sound_only"> 필수</strong></label> <input id="login_pw"
-							name="mb_password" class="form-control" type="password"
+							class="sound_only"> 필수</strong></label> <input 
+							name="user-password" class="form-control" type="password"
 							required="required" placeholder="Password">
 					</p>
 					<button class="btn btn-lg btn-color btn-block" type="submit"
@@ -445,10 +428,12 @@ a:active, a:focus, .no-touch a:active, .no-touch a:focus {
 
 	<!-- main jQuery -->
 	<script src="<%=ctx%>/resources/js/external/jquery-1.11.1.min.js"></script>
+	<script
+		src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 	<script>
 		window.jQuery
 				|| document
-						.write('<script src="js/external/jquery-1.11.1.min.js"><\/script>')
+						.write('<script src="js/external/jquery-1.10.1.min.js"><\/script>')
 	</script>
 	<!-- Migrate -->
 	<script
@@ -459,6 +444,17 @@ a:active, a:focus, .no-touch a:active, .no-touch a:focus {
 	<script src="<%=ctx%>/resources/js/min/bootstrap.min.js"></script>
 	<!-- Mobile menu -->
 	<script src="<%=ctx%>/resources/js/jquery.mobile.menu.js"></script>
+		<!-- Select -->
+	<script
+		src="<%=ctx%>/resources/js/external/jquery.selectbox-0.2.min.js"></script>
+	<!-- Form element -->
+	<script src="<%=ctx%>/resources/js/external/form-element.js"></script>
+	<!-- Form validation -->
+	<script src="<%=ctx%>/resources/js/form.js"></script>
+
+	<!-- Custom -->
+	<script src="<%=ctx%>/resources/js/custom.js"></script>
+	
 
 
 </body>

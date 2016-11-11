@@ -109,7 +109,13 @@ public class MemberDAO {
 	public MemberDTO findPW(final String id, final String name, final String Pnum, final String email){
 		
 		String findPW = "select * from member where member_id = '" + id + "' and name = '" + name + "' and phone_num='"+ Pnum +"' and email= '"+email+"'";
-		return (MemberDTO) template.queryForObject(findPW, new BeanPropertyRowMapper<MemberDTO>(MemberDTO.class));
+		return (MemberDTO) template.queryForObject(findPW, new BeanPropertyRowMapper<MemberDTO>(MemberDTO.class));	
+	}
+	
+	//아이디 중복체크 할떄 사용함
+	public MemberDTO IdCheck(final String id){
+		String checkId = "select* from member where member_id = '"+id+"'";
+		return (MemberDTO) template.queryForObject(checkId, new BeanPropertyRowMapper<MemberDTO>(MemberDTO.class));	
 		
 	}
 	

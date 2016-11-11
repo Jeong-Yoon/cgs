@@ -48,15 +48,12 @@ public class ReserveCheckDAO {
 			return (ArrayList<ReserveSeatDTO>) template.query(query,new BeanPropertyRowMapper<ReserveSeatDTO>(ReserveSeatDTO.class));
 		}
 	 
-	 
-/*	 
+	
 	 public void deleteReserve(final String sId) {
 			// TODO Auto-generated method stub
 			String query = "delete from reserve where sale_ID = ?";
 			
 			this.template.update(query, new PreparedStatementSetter() {
-				
-		
 				public void setValues(PreparedStatement ps) throws SQLException {
 					ps.setInt(1, Integer.parseInt(sId));
 				}
@@ -67,8 +64,7 @@ public class ReserveCheckDAO {
 	 
 	 public void deleteSale(final String sId) {
 			// TODO Auto-generated method stub
-			String query = "delete from sale where sale_ID = ?";
-			
+			String query = "update sale set refund_type='1' where sale_ID = ?";
 			this.template.update(query, new PreparedStatementSetter() {
 				
 		
@@ -85,23 +81,18 @@ public class ReserveCheckDAO {
 			String query = "delete from sale_seat where sale_ID = ?";
 			
 			this.template.update(query, new PreparedStatementSetter() {
-				
-		
 				public void setValues(PreparedStatement ps) throws SQLException {
 					ps.setString(1, sId);
 				}
 			});
 			
 		}
-	 */
 	 
 	 public void deleteMemberSale(final String sId) {
 			// TODO Auto-generated method stub
 			String query = "delete from member_sale where sale_ID = ?";
 			
 			this.template.update(query, new PreparedStatementSetter() {
-				
-		
 				public void setValues(PreparedStatement ps) throws SQLException {
 					ps.setString(1, sId);
 				}

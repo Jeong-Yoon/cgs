@@ -73,10 +73,10 @@ public class ReserveCheckCommand {
 
 		ReserveCheckDAO dao=new ReserveCheckDAO();
 		dao.deleteMemberSale(rId);
-/*		dao.deleteReserve(rId);
-		dao.deleteSale(rId);
+		dao.deleteReserve(rId);
 		dao.deleteSaleSeat(rId);
-		*/
+		dao.deleteSale(rId);
+		
 
 	}
 

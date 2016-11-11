@@ -5,6 +5,7 @@ import java.io.PrintWriter;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -49,13 +50,13 @@ public class ReserveCheckController {
 		
 		
 		@RequestMapping(value="reserve_cancel")
-		public void reserve_cancel(HttpServletResponse response,HttpServletRequest request,Model model) throws IOException{
+		public void reserve_cancel(HttpServletResponse response,HttpServletRequest request,Model model, HttpSession session) throws IOException{
 		System.out.println("reserve_cancel()");
 		
 		model.addAttribute("request", request);
 		command=new ReserveCheckCommand();
 		command.reserveDelete(model);
-		
+		String id=(String) session.getAttribute("id");
 /*		command=new ReserveCheckCommand();
 		command.reserveCheck(model);
 		command.reserveSeat(model);*/
@@ -63,7 +64,7 @@ public class ReserveCheckController {
 		
 		response.setContentType("text/html; charset=UTF-8");    	
     	PrintWriter out =response.getWriter();
-    	out.println("<script>alert('예매취소 되었습니다.'); document.location.href='reserve_list';</script>");
+    	out.println("<script>alert('예매취소 되었습니다.'); document.location.href='reserve_list/?mId="+id+"';</script>");
     	
 		
 		}

@@ -31,7 +31,6 @@ public class FilmListCommand implements Command {
 		}
 		FilmDAO dao = new FilmDAO();
 		ArrayList<FilmDTO> dtos = dao.film_list(page);
-		System.out.println(dtos);
 //		if(dtos.size()>0){
 //			request.setAttribute("pagenum", page);
 //			model.addAttribute("film_list", dtos);

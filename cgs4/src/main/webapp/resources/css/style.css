@@ -5898,7 +5898,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 	font: 15px 'aleoregular', Godo;
 	color: #222A35;
 	text-transform: uppercase;
-	float: right;
+/* 	float: right; */
 	display: inline-block;
 	padding: 8px 43px 9px 0;
 	margin-right: -8px;

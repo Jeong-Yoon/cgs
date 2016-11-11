@@ -30,7 +30,17 @@ public class FilmDAO {
 	public ArrayList<FilmDTO> film_list(final int page){
 		int statNum = page*12+1;
 		int endNum = ((page+1)*12)+1;
-		String query = "SELECT * FROM (SELECT ROWNUM rnum, a.* FROM (SELECT * FROM film ORDER BY film_ID DESC) a) WHERE rnum between " + statNum + " and " + endNum ;
+		String query = "SELECT * FROM (SELECT ROWNUM rnum, a.* FROM (SELECT * FROM film WHERE RELEASE_DATE < SYSDATE ORDER BY film_ID DESC) a) WHERE rnum between " + statNum + " and " + endNum ;
+		return (ArrayList<FilmDTO>)template.query(query, new BeanPropertyRowMapper<FilmDTO>(FilmDTO.class));
+	}
+	
+	public ArrayList<FilmDTO> index_list(){
+		String query = "SELECT * FROM (SELECT ROWNUM rnum, a.* FROM (SELECT * FROM film WHERE RELEASE_DATE < SYSDATE ORDER BY film_ID DESC) a) WHERE rnum between 1 and 8 ";
+		return (ArrayList<FilmDTO>)template.query(query, new BeanPropertyRowMapper<FilmDTO>(FilmDTO.class));
+	}
+	
+	public ArrayList<FilmDTO> coming_list(){
+		String query = "SELECT * FROM (SELECT ROWNUM rnum, a.* FROM (SELECT * FROM film WHERE RELEASE_DATE > SYSDATE ORDER BY film_ID DESC) a) WHERE rnum between 1 and 4 ";
 		return (ArrayList<FilmDTO>)template.query(query, new BeanPropertyRowMapper<FilmDTO>(FilmDTO.class));
 	}
 	

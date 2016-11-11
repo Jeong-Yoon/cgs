@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+	
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <%
 	String ctx = request.getContextPath();
@@ -113,8 +115,16 @@
 				<li><a href="login">Login</a></li>
 				<%
 					} else {
+						String name = (String) session.getAttribute("name");
 				%>
-				<li><a href="logout">Logout</a></li>
+				<li><a href="#" class="auth__show spoqahansans normal w300">My Page</a>
+				<ul class="auth__function spoqahansans">
+					<li class="auth__function-item normal w300">안녕하세요 <strong><%=name%></strong>님!</li>
+					<br>
+					<li class="normal w300"><a href="<%=ctx%>/modify" class="auth__function-item">내 정보 확인</a></li>
+					<li class="normal w300"><a href="<%=ctx%>/reserve_list/?mId=<%=(String) session.getAttribute("id") %>" class="auth__function-item">예매 내역 확인</a></li>
+				</ul></li>
+			<li><a href="logout">Logout</a></li>
 				<%
 					}
 				%>
@@ -202,85 +212,118 @@
 		</nav>
 
 		<div id="projects" class="clearfix">
-			<figure class="mix portfolio-item rank now"> <img
-				class="img-responsive"
-				src="<%=ctx%>/resources/images/poster/doctorstrange.jpg"
-				alt="movie rank1"> <%--  					<a href="<%=ctx %>/resources/images/portfolio/portfolio-3.jpg" title="Title Three" rel="portfolio" class="fancybox"><span class="plus"></span></a> --%>
-			<figcaption class="mask">
-			<h3>닥터스트레인지</h3>
-			<span>Doctor Strange , 2016</span> <br>
-			<a href="#" class="btn btn-book">평가하기</a>
-			<a href="book1" class="btn btn-book-blue">예매하기</a> </figcaption> </figure>
+			<form action="book1" method="post">
+				<c:forEach var="dto" items="${index_list}" varStatus="status">
+					<input type="hidden" name="film_ID" value="${dto.film_ID}">
+					<figure class="mix portfolio-item rank now"> <img
+						class="img-responsive"
+						src="<%=ctx %>/resources/images/poster/${dto.film_ID}.jpg"
+						alt="movie rank${status.count}"> <figcaption class="mask">
+					<h3>${dto.film_name}</h3>
+					<span>Doctor Strange , 2016</span> <br>
+					<a href="#" class="btn btn-book">상세보기</a> <a href="book1"
+						class="btn btn-book-blue">예매하기</a> </figcaption> </figure>
+				</c:forEach>
+				<c:forEach var="dto" items="${index_list}" begin="0" end="3" varStatus="status">
+					<input type="hidden" name="film_ID" value="${dto.film_ID}">
+					<figure class="mix portfolio-item recerel"> <img
+						class="img-responsive"
+						src="<%=ctx %>/resources/images/poster/${dto.film_ID}.jpg"
+						alt="movie rank${status.count}"> <figcaption class="mask">
+					<h3>${dto.film_name}</h3>
+					<span>Doctor Strange , 2016</span> <br>
+					<a href="#" class="btn btn-book">상세보기</a> <a href="book1"
+						class="btn btn-book-blue">예매하기</a> </figcaption> </figure>
+				</c:forEach>
+				<c:forEach var="dto" items="${coming}" begin="0" end="3" varStatus="status">
+					<input type="hidden" name="film_ID" value="${dto.film_ID}">
+					<figure class="mix portfolio-item coming"> <img
+						class="img-responsive"
+						src="<%=ctx %>/resources/images/poster/${dto.film_ID}.jpg"
+						alt="movie rank${status.count}"> <figcaption class="mask">
+					<h3>${dto.film_name}</h3>
+					<span>Doctor Strange , 2016</span> <br>
+					<a href="#" class="btn btn-book">상세보기</a> <a href="book1"
+						class="btn btn-book-blue">예매하기</a> </figcaption> </figure>
+				</c:forEach>
+			</form>
+			
 
-			<figure class="mix portfolio-item rank now"> <img
-				class="img-responsive"
-				src="<%=ctx%>/resources/images/poster/lucky.jpg" alt="movie rank2">
-			<%--                     <a href="<%=ctx %>/resources/images/portfolio/portfolio-3.jpg" title="Title Three" rel="portfolio" class="fancybox"><span class="plus"></span></a> --%>
-			<figcaption class="mask">
-			<h3>럭키</h3>
-			<span>LUCK-KEY , 2016</span> <br>
-			<a href="#" class="btn btn-book">평가하기</a> <a href="book1"
-				class="btn btn-book-blue">예매하기</a> </figcaption> </figure>
+			<!-- 			<figure class="mix portfolio-item rank now"> <img -->
+<!-- 				class="img-responsive" -->
+<%-- 				src="<%=ctx%>/resources/images/poster/doctorstrange.jpg" --%>
+<!-- 				alt="movie rank1">  				 -->
+<!-- 			<figcaption class="mask"> -->
+<!-- 			<h3>닥터스트레인지</h3> -->
+<!-- 			<span>Doctor Strange , 2016</span> <br> -->
+<!-- 			<a href="#" class="btn btn-book">상세보기</a> -->
+<!-- 			<a href="book1" class="btn btn-book-blue">예매하기</a> </figcaption> </figure> -->
 
-			<figure class="mix portfolio-item rank now recerel"> <img
-				class="img-responsive"
-				src="<%=ctx%>/resources/images/poster/lostindust.jpg"
-				alt="movie rank3"> <%--                     <a href="<%=ctx %>/resources/images/portfolio/portfolio-3.jpg" title="Title Three" rel="portfolio" class="fancybox"><span class="plus"></span></a> --%>
-			<figcaption class="mask">
-			<h3>로스트인더스트</h3>
-			<span>Hell or High Water, 2016</span> <br>
-			<a href="#" class="btn btn-book">평가하기</a> <a href="book1"
-				class="btn btn-book-blue">예매하기</a> </figcaption> </figure>
+<!-- 			<figure class="mix portfolio-item rank now"> <img -->
+<!-- 				class="img-responsive" -->
+<%-- 				src="<%=ctx%>/resources/images/poster/lucky.jpg" alt="movie rank2"> --%>
+<!-- 			<figcaption class="mask"> -->
+<!-- 			<h3>럭키</h3> -->
+<!-- 			<span>LUCK-KEY , 2016</span> <br> -->
+<!-- 			<a href="#" class="btn btn-book">평가하기</a> <a href="book1" -->
+<!-- 				class="btn btn-book-blue">예매하기</a> </figcaption> </figure> -->
 
-			<figure class="mix portfolio-item rank now"> <img
-				class="img-responsive"
-				src="<%=ctx%>/resources/images/poster/muhyun.jpg" alt="movie rank4">
-			<%--                     <a href="<%=ctx %>/resources/images/portfolio/portfolio-4.jpg" title="Title Four" rel="portfolio" class="fancybox"><span class="plus"></span></a> --%>
-			<figcaption class="mask">
-			<h3>무현, 두 도시 이야기</h3>
-			<span>무현, 두 도시 이야기, 2016</span> <br>
-			<a href="#" class="btn btn-book">평가하기</a> <a href="book1"
-				class="btn btn-book-blue">예매하기</a> </figcaption> </figure>
+<!-- 			<figure class="mix portfolio-item rank now recerel"> <img -->
+<!-- 				class="img-responsive" -->
+<%-- 				src="<%=ctx%>/resources/images/poster/lostindust.jpg" --%>
+<%-- 				alt="movie rank3">                     <a href="<%=ctx %>/resources/images/portfolio/portfolio-3.jpg" title="Title Three" rel="portfolio" class="fancybox"><span class="plus"></span></a> --%>
+<!-- 			<figcaption class="mask"> -->
+<!-- 			<h3>로스트인더스트</h3> -->
+<!-- 			<span>Hell or High Water, 2016</span> <br> -->
+<!-- 			<a href="#" class="btn btn-book">평가하기</a> <a href="book1" -->
+<!-- 				class="btn btn-book-blue">예매하기</a> </figcaption> </figure> -->
 
-			<figure class="mix portfolio-item rank now recerel"> <img
-				class="img-responsive"
-				src="<%=ctx%>/resources/images/poster/teachers diary.jpg"
-				alt="movie rank5"> <%--                     <a href="<%=ctx %>/resources/images/portfolio/portfolio-4.jpg" title="Title Four" rel="portfolio" class="fancybox"><span class="plus"></span></a> --%>
-			<figcaption class="mask">
-			<h3>선생님의 일기</h3>
-			<span>The Teacher's Diary, 2014</span> <br>
-			<a href="#" class="btn btn-book">평가하기</a> <a href="book1"
-				class="btn btn-book-blue">예매하기</a> </figcaption> </figure>
+<!-- 			<figure class="mix portfolio-item rank now"> <img -->
+<!-- 				class="img-responsive" -->
+<%-- 				src="<%=ctx%>/resources/images/poster/muhyun.jpg" alt="movie rank4"> --%>
+<!-- 			<figcaption class="mask"> -->
+<!-- 			<h3>무현, 두 도시 이야기</h3> -->
+<!-- 			<span>무현, 두 도시 이야기, 2016</span> <br> -->
+<!-- 			<a href="#" class="btn btn-book">평가하기</a> <a href="book1" -->
+<!-- 				class="btn btn-book-blue">예매하기</a> </figcaption> </figure> -->
 
-			<figure class="mix portfolio-item rank coming pre"> <img
-				class="img-responsive"
-				src="<%=ctx%>/resources/images/poster/split.jpg" alt="movie rank5">
-			<%--                     <a href="<%=ctx %>/resources/images/portfolio/portfolio-4.jpg" title="Title Four" rel="portfolio" class="fancybox"><span class="plus"></span></a> --%>
-			<figcaption class="mask">
-			<h3>스플릿</h3>
-			<span>Split, 2016</span> <br>
-			<a href="#" class="btn btn-book">평가하기</a> <a href="book1"
-				class="btn btn-book-blue">예매하기</a> </figcaption> </figure>
+<!-- 			<figure class="mix portfolio-item rank now recerel"> <img -->
+<!-- 				class="img-responsive" -->
+<%-- 				src="<%=ctx%>/resources/images/poster/teachers diary.jpg" --%>
+<%-- 				alt="movie rank5">                     <a href="<%=ctx %>/resources/images/portfolio/portfolio-4.jpg" title="Title Four" rel="portfolio" class="fancybox"><span class="plus"></span></a> --%>
+<!-- 			<figcaption class="mask"> -->
+<!-- 			<h3>선생님의 일기</h3> -->
+<!-- 			<span>The Teacher's Diary, 2014</span> <br> -->
+<!-- 			<a href="#" class="btn btn-book">평가하기</a> <a href="book1" -->
+<!-- 				class="btn btn-book-blue">예매하기</a> </figcaption> </figure> -->
 
-			<figure class="mix portfolio-item rank now"> <img
-				class="img-responsive"
-				src="<%=ctx%>/resources/images/poster/Inferno.jpg" alt="movie rank5">
-			<%--                     <a href="<%=ctx %>/resources/images/portfolio/portfolio-4.jpg" title="Title Four" rel="portfolio" class="fancybox"><span class="plus"></span></a> --%>
-			<figcaption class="mask">
-			<h3>인페르노</h3>
-			<span>Inferno, 2016</span> <br>
-			<a href="#" class="btn btn-book">평가하기</a> <a href="book1"
-				class="btn btn-book-blue">예매하기</a> </figcaption> </figure>
+<!-- 			<figure class="mix portfolio-item rank coming pre"> <img -->
+<!-- 				class="img-responsive" -->
+<%-- 				src="<%=ctx%>/resources/images/poster/split.jpg" alt="movie rank5"> --%>
+<!-- 			<figcaption class="mask"> -->
+<!-- 			<h3>스플릿</h3> -->
+<!-- 			<span>Split, 2016</span> <br> -->
+<!-- 			<a href="#" class="btn btn-book">평가하기</a> <a href="book1" -->
+<!-- 				class="btn btn-book-blue">예매하기</a> </figcaption> </figure> -->
 
-			<figure class="mix portfolio-item rank coming"> <img
-				class="img-responsive"
-				src="<%=ctx%>/resources/images/poster/Infinity.jpg"
-				alt="movie rank5"> <%--                     <a href="<%=ctx %>/resources/images/portfolio/portfolio-4.jpg" title="Title Four" rel="portfolio" class="fancybox"><span class="plus"></span></a> --%>
-			<figcaption class="mask">
-			<h3>무한대를 본 남자</h3>
-			<span>The Man Who Knew Infinity, 2015</span> <br>
-			<a href="#" class="btn btn-book">평가하기</a> <a href="book1"
-				class="btn btn-book-blue">예매하기</a> </figcaption> </figure>
+<!-- 			<figure class="mix portfolio-item rank now"> <img -->
+<!-- 				class="img-responsive" -->
+<%-- 				src="<%=ctx%>/resources/images/poster/Inferno.jpg" alt="movie rank5"> --%>
+<!-- 			<figcaption class="mask"> -->
+<!-- 			<h3>인페르노</h3> -->
+<!-- 			<span>Inferno, 2016</span> <br> -->
+<!-- 			<a href="#" class="btn btn-book">평가하기</a> <a href="book1" -->
+<!-- 				class="btn btn-book-blue">예매하기</a> </figcaption> </figure> -->
+
+<!-- 			<figure class="mix portfolio-item rank coming"> <img -->
+<!-- 				class="img-responsive" -->
+<%-- 				src="<%=ctx%>/resources/images/poster/Infinity.jpg" --%>
+<%-- 				alt="movie rank5">                     <a href="<%=ctx %>/resources/images/portfolio/portfolio-4.jpg" title="Title Four" rel="portfolio" class="fancybox"><span class="plus"></span></a> --%>
+<!-- 			<figcaption class="mask"> -->
+<!-- 			<h3>무한대를 본 남자</h3> -->
+<!-- 			<span>The Man Who Knew Infinity, 2015</span> <br> -->
+<!-- 			<a href="#" class="btn btn-book">평가하기</a> <a href="book1" -->
+<!-- 				class="btn btn-book-blue">예매하기</a> </figcaption> </figure> -->
 		</div>
 		<a href="movie_list?page=0" title="더보기" rel="portfolio"
 			class="fancybox"><span class="plus"></span></a> </section>
@@ -401,6 +444,24 @@
 		});
 	</script>
 
+	<script>
+		jQuery(window).scroll(function() {
+			if (jQuery(window).scrollTop() > 50) {
+				jQuery("#navigation").css("background-color", "rgba(0, 0, 3, 0.7)");
+				jQuery("#navigation").addClass("animated-nav");
+				jQuery('.auth__function').css("top", "66px");
+			} else {
+				jQuery("#navigation").css("background-color", "rgba(0, 0, 3, 0.7)");
+				jQuery("#navigation").removeClass("animated-nav");
+				jQuery('.auth__function').css("top", "80px");
+			}
+		});
+		$('.auth__show').click(function(e) {
+			e.preventDefault();
+			$('.auth__function').toggleClass('open-function')
+		});
+
+	</script>
 	<!-- main jQuery -->
 	<script src="<%=ctx%>/resources/js/external/jquery-1.11.1.min.js"></script>
 	<!-- Bootstrap -->

@@ -316,314 +316,295 @@ a:active, a:focus, .no-touch a:active, .no-touch a:focus {
 
 							<form id="login-form" action="signupProcess" method="post"
 								autocomplete="off">
-								<input type="hidden" name="w" value=""> <input
-									type="hidden" name="url" value="%2Fbbs%2Fregister_form.php">
-								<input type="hidden" name="agree" value="1"> <input
-									type="hidden" name="agree2" value="1"> <input
-									type="hidden" name="cert_type" value=""> <input
-									type="hidden" name="cert_no" value=""> <input
-									type="hidden" name="mb_sex" value="">
-								<div class="tbl_frm01 tbl_wrap">
-									<table>
-										<caption>사이트 이용정보 입력</caption>
-										<tr>
-											<th scope="row"><label for="reg_mb_id">아이디<strong
-													class="sound_only">필수</strong></label></th>
-											<td><span class="frm_info">영문자, 숫자, _ 만 입력 가능. 최소
-													3자이상 입력하세요.</span> <input type="text" name="user-id" value=""
-												id="reg_mb_id" class="form-control required " minlength="3"
-												maxlength="20" required> <span id="msg_mb_id"></span></td>
-										</tr>
-										<tr>
-											<th scope="row"><label for="reg_mb_password">비밀번호<strong
-													class="sound_only">필수</strong></label></th>
-											<td><input type="password" name="mb_password"
-												id="reg_mb_password" class="form-control required"
-												minlength="3" maxlength="20" required></td>
-										</tr>
-										<tr>
-											<th scope="row"><label for="reg_mb_password_re">비밀번호
-													확인<strong class="sound_only">필수</strong>
-											</label></th>
-											<td><input type="password" name="mb_password_re"
-												id="reg_mb_password_re" class="form-control required"
-												minlength="3" maxlength="20" required></td>
-										</tr>
-									</table>
-								</div>
+								<table>
+									<caption>사이트 이용정보 입력</caption>
+									<tr>
+										<th scope="row"><label for="reg_mb_id">아이디<strong
+												class="sound_only">필수</strong></label></th>
+										<td><span class="frm_info">영문자, 숫자, _ 만 입력 가능. 최소
+												3자이상 입력하세요.</span> <input type="text" name="user-id" value=""
+											id="reg_mb_id" class="form-control required " minlength="3"
+											maxlength="20" required> <span id="msg_mb_id"></span></td>
+									</tr>
+									<tr>
+										<th scope="row"><label for="reg_mb_password">비밀번호<strong
+												class="sound_only">필수</strong></label></th>
+										<td><input type="password" name="user_password"
+											id="reg_mb_password" class="form-control required"
+											minlength="3" maxlength="20" required></td>
+									</tr>
+									<tr>
+										<th scope="row"><label for="reg_mb_password_re">비밀번호
+												확인<strong class="sound_only">필수</strong>
+										</label></th>
+										<td><input type="password" name="user_password_re"
+											id="reg_mb_password_re" class="form-control required"
+											minlength="3" maxlength="20" required></td>
+									</tr>
+								</table>
+						</div>
 
-								<div class="tbl_frm01 tbl_wrap">
-									<table>
-										<caption>개인정보 입력</caption>
-										<tr>
-											<th scope="row"><label for="reg_mb_name">이름<strong
-													class="sound_only">필수</strong></label></th>
-											<td><input type="text" id="reg_user_name"
-												name="user_name" value="" required
-												class="form-control required"></td>
-										</tr>
+						<div class="tbl_frm01 tbl_wrap">
+							<table>
+								<caption>개인정보 입력</caption>
+								<tr>
+									<th scope="row"><label for="reg_mb_name">이름<strong
+											class="sound_only">필수</strong></label></th>
+									<td><input type="text" id="reg_user_name" name="user_name"
+										value="" required class="form-control required"></td>
+								</tr>
 
-										<tr>
-											<th scope="row"><label for="reg_mb_name">생년월일<strong
-													class="sound_only">필수</strong></label></th>
+								<tr>
+									<th scope="row"><label for="reg_mb_name">생년월일<strong
+											class="sound_only">필수</strong></label></th>
 
-											<td><span>
-													<input type='text' pattern="^\d{6}"
-														title="공백없이 6자리 모두 입력해주세요" placeholder="ex)931202"
-														name='user-birth' class="form-control required"  style="width: 40% "
-														maxlength="6" required>-
-													<input type='text' pattern="[1234]" title="올바른 숫자를 입력해주세요"
-														placeholder="ex)1" name='gender'
-														class="form-control required" maxlength="1"  style="width: 5% " required>
+									<td><span> <input type='text' pattern="^\d{6}"
+											title="공백없이 6자리 모두 입력해주세요" placeholder="ex)931202"
+											name='user-birth' class="form-control required"
+											style="width: 40%" maxlength="6" required>- <input
+											type='text' pattern="[1234]" title="올바른 숫자를 입력해주세요"
+											placeholder="ex)1" name='gender'
+											class="form-control required" maxlength="1" style="width: 5%"
+											required>
+									</span> <span>* * * * * *</span></td>
+								</tr>
+
+
+								<tr>
+									<th scope="row"><label for="reg_mb_email">E-mail<strong
+											class="sound_only">필수</strong></label></th>
+									<td><input type="email" name="user-email" value=""
+										id="reg_mb_email" required class="form-control email required"
+										size="50" maxlength="100"></td>
+								</tr>
+
+
+
+								<tr>
+									<th scope="row"><label for="reg_mb_hp">휴대폰번호<strong
+											class="sound_only">필수</strong></label></th>
+									<td><span> <input type='text' pattern="^\d{3}"
+											title="3자리 모두 입력해주세요" placeholder="ex)010" name='user-pnum'
+											class="form-control required" maxlength="3"
+											style="width: 25%" required>- <input type='text'
+											pattern="^\d{4}" title="4자리 모두 입력해주세요" placeholder="ex)8071"
+											name='user-pnum2' class="form-control required" maxlength="4"
+											style="width: 25%" required> - <input type='text'
+											pattern="^\d{4}" title="4자리 모두 입력해주세요" placeholder="ex)6072"
+											name='user-pnum3' class="form-control required" maxlength="4"
+											style="width: 25%" required>
+									</span>
+								</tr>
+
+								<tr>
+									<th scope="row"><small>주소</small> <strong
+										class="sound_only">필수</strong></th>
+									<td class="address_label">
+										<div class="form-group">
+											<label for="reg_mb_zip" class="sound_only">우편번호<strong
+												class="sound_only"> 필수</strong></label>
+											<div class="input-group">
+												<input name="user-address1" class="form-control required"
+													id="ozipcode1" size="6" maxlength="6" readonly="1"
+													type="text"> <span class="input-group-btn">
+													<button type="button" class="btn btn-white"
+														style="margin-top: 0px; height: 35px; line-height: 35px; background-color: #ffef96;"
+														onclick="execDaumPostcode()" alt="우편번호">주소 검색</button>
 												</span>
-												<span>* * * * * *</span></td>
-										</tr>
+											</div>
 
+											<label for="reg_mb_addr1">기본주소<strong
+												class="sound_only"> 필수</strong></label> <input name="user-address2"
+												class="form-control required" id="oaddr1" size="50"
+												readonly="1" type="text"> <label for="reg_mb_addr2">상세주소</label>
+											<input type="text" name="user-address3" value="" id="oaddr2"
+												class="form-control frm_address" size="50">
+										</div>
+									</td>
+								</tr>
+							</table>
+						</div>
 
-										<tr>
-											<th scope="row"><label for="reg_mb_email">E-mail<strong
-													class="sound_only">필수</strong></label>
-													</th>
-											<td><input type="email" name="user-email" value=""
-												id="reg_mb_email" required
-												class="form-control email required" size="50"
-												maxlength="100"></td>
-										</tr>
+						<script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
+						<script>
+							function execDaumPostcode() { //execDaumPostcode() 함수 호출
+								new daum.Postcode(
+										{
+											oncomplete : function(data) {
+												// 팝업에서 검색결과 항목을 클릭했을때 실행할 코드를 작성하는 부분.
 
+												// 각 주소의 노출 규칙에 따라 주소를 조합한다.
+												// 내려오는 변수가 값이 없는 경우엔 공백('')값을 가지므로, 이를 참고하여 분기 한다.
+												var fullAddr = ''; // 최종 주소 변수
+												var extraAddr = ''; // 조합형 주소 변수
 
+												// 사용자가 선택한 주소 타입에 따라 해당 주소 값을 가져온다.
+												if (data.userSelectedType === 'R') { // 사용자가 도로명 주소를 선택했을 경우
+													fullAddr = data.roadAddress;
 
-										<tr>
-											<th scope="row"><label for="reg_mb_hp">휴대폰번호<strong
-													class="sound_only">필수</strong></label></th>
-											<td><span>
-													<input type='text' pattern="^\d{3}" title="3자리 모두 입력해주세요"
-														placeholder="ex)010" name='user-pnum'
-														class="form-control required" maxlength="3" style="width: 25% " required>-
-													<input type='text' pattern="^\d{4}" title="4자리 모두 입력해주세요"
-														placeholder="ex)8071" name='user-pnum2'
-														class="form-control required" maxlength="4" style="width: 25%" required>
-												-
-													<input type='text' pattern="^\d{4}" title="4자리 모두 입력해주세요"
-														placeholder="ex)6072" name='user-pnum3'
-														class="form-control required" maxlength="4" style="width: 25%" required>
-												</span>
-										</tr>
+												} else { // 사용자가 지번 주소를 선택했을 경우(J)
+													fullAddr = data.jibunAddress;
+												}
 
-										<tr>
-											<th scope="row"><small>주소</small> <strong
-												class="sound_only">필수</strong></th>
-											<td class="address_label">
-												<div class="form-group">
-													<label for="reg_mb_zip" class="sound_only">우편번호<strong
-														class="sound_only"> 필수</strong></label>
-													<div class="input-group">
-														<input name="user-address" class="form-control required"
-															id="ozipcode1" size="6" maxlength="6" readonly="1"
-															type="text"> <span class="input-group-btn">
-															<button type="button" class="btn btn-white"
-																style="margin-top: 0px; height: 35px; line-height: 35px; background-color:#ffef96;"
-																onclick="execDaumPostcode()" alt="우편번호">주소 검색</button>
-														</span>
-													</div>
-
-													<label for="reg_mb_addr1">기본주소<strong
-														class="sound_only"> 필수</strong></label> <input name="user-address"
-														class="form-control required" id="oaddr1" size="50"
-														readonly="1" type="text"> <label
-														for="reg_mb_addr2">상세주소</label> <input type="text"
-														name="mb_addr2" value="" id="oaddr2"
-														class="form-control frm_address" size="50">
-												</div>
-											</td>
-										</tr>
-									</table>
-								</div>
-								<script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
-								<script>
-									function execDaumPostcode() { //execDaumPostcode() 함수 호출
-										new daum.Postcode(
-												{
-													oncomplete : function(data) {
-														// 팝업에서 검색결과 항목을 클릭했을때 실행할 코드를 작성하는 부분.
-
-														// 각 주소의 노출 규칙에 따라 주소를 조합한다.
-														// 내려오는 변수가 값이 없는 경우엔 공백('')값을 가지므로, 이를 참고하여 분기 한다.
-														var fullAddr = ''; // 최종 주소 변수
-														var extraAddr = ''; // 조합형 주소 변수
-
-														// 사용자가 선택한 주소 타입에 따라 해당 주소 값을 가져온다.
-														if (data.userSelectedType === 'R') { // 사용자가 도로명 주소를 선택했을 경우
-															fullAddr = data.roadAddress;
-
-														} else { // 사용자가 지번 주소를 선택했을 경우(J)
-															fullAddr = data.jibunAddress;
-														}
-
-														// 사용자가 선택한 주소가 도로명 타입일때 조합한다.
-														if (data.userSelectedType === 'R') {
-															//법정동명이 있을 경우 추가한다.
-															if (data.bname !== '') {
-																extraAddr += data.bname;
-															}
-															// 건물명이 있을 경우 추가한다.
-															if (data.buildingName !== '') {
-																extraAddr += (extraAddr !== '' ? ', '
-																		+ data.buildingName
-																		: data.buildingName);
-															}
-															// 조합형주소의 유무에 따라 양쪽에 괄호를 추가하여 최종 주소를 만든다.
-															fullAddr += (extraAddr !== '' ? ' ('
-																	+ extraAddr
-																	+ ')'
-																	: '');
-														}
-
-														// 우편번호와 주소 정보를 해당 필드에 넣는다.
-														document
-																.getElementById('ozipcode1').value = data.zonecode; //5자리 새우편번호 사용
-														document
-																.getElementById('oaddr1').value = fullAddr;
-
-														// 커서를 상세주소 필드로 이동한다.
-														document
-																.getElementById(
-																		'oaddr2')
-																.focus();
+												// 사용자가 선택한 주소가 도로명 타입일때 조합한다.
+												if (data.userSelectedType === 'R') {
+													//법정동명이 있을 경우 추가한다.
+													if (data.bname !== '') {
+														extraAddr += data.bname;
 													}
-												}).open();
+													// 건물명이 있을 경우 추가한다.
+													if (data.buildingName !== '') {
+														extraAddr += (extraAddr !== '' ? ', '
+																+ data.buildingName
+																: data.buildingName);
+													}
+													// 조합형주소의 유무에 따라 양쪽에 괄호를 추가하여 최종 주소를 만든다.
+													fullAddr += (extraAddr !== '' ? ' ('
+															+ extraAddr + ')'
+															: '');
+												}
+
+												// 우편번호와 주소 정보를 해당 필드에 넣는다.
+												document
+														.getElementById('ozipcode1').value = data.zonecode; //5자리 새우편번호 사용
+												document
+														.getElementById('oaddr1').value = fullAddr;
+
+												// 커서를 상세주소 필드로 이동한다.
+												document.getElementById(
+														'oaddr2').focus();
+											}
+										}).open();
+							}
+						</script>
+
+						<div class="tbl_frm01 tbl_wrap">
+							<table class="table">
+								<caption>기타 개인설정</caption>
+
+
+
+								<tr>
+									<th scope="row"><label for="reg_mb_mailling">메일링서비스</label></th>
+									<td><input type="checkbox" name="mb_mailling" value="1"
+										id="reg_mb_mailling" checked> 정보 메일을 받겠습니다.</td>
+								</tr>
+
+								<tr>
+									<th scope="row"><label for="reg_mb_sms">SMS 수신여부</label></th>
+									<td><input type="checkbox" name="mb_sms" value="1"
+										id="reg_mb_sms" checked> 휴대폰 문자메세지를 받겠습니다.</td>
+								</tr>
+
+								<tr>
+									<th scope="row"><label for="reg_mb_open">정보공개</label></th>
+									<td><span class="frm_info"> 정보공개를 바꾸시면 앞으로 0일 이내에는
+											변경이 안됩니다. </span> <input type="hidden" name="mb_open_default"
+										value=""> <input type="checkbox" name="mb_open"
+										value="1" id="reg_mb_open" checked> 다른분들이 나의 정보를 볼 수
+										있도록 합니다.</td>
+								</tr>
+							</table>
+						</div>
+
+						<div class="btn_confirm">
+							<input type="submit" value="회원가입" id="btn_submit"
+								class="btn btn-white" accesskey="s"> <a href="index"
+								class="btn btn-white"
+								style="color: rgb(255, 255, 255); background-color: #404040; margin-top: 20px;"
+								data-btn-txt-color="#fff" data-btn-bg-color="#44f3b8">취소</a>
+						</div>
+						</form>
+
+						<script>
+							$(function() {
+								$("#reg_zip_find").css("display",
+										"inline-block");
+
+							});
+
+							// submit 최종 폼체크
+							function fregisterform_submit(f) {
+								// 회원아이디 검사
+								if (f.w.value == "") {
+									var msg = reg_user_id_check();
+									if (msg) {
+										alert(msg);
+										f.user_id.select();
+										return false;
 									}
-								</script>
+								}
 
-								<div class="tbl_frm01 tbl_wrap">
-									<table class="table">
-										<caption>기타 개인설정</caption>
-
-
-
-										<tr>
-											<th scope="row"><label for="reg_mb_mailling">메일링서비스</label></th>
-											<td><input type="checkbox" name="mb_mailling" value="1"
-												id="reg_mb_mailling" checked> 정보 메일을 받겠습니다.</td>
-										</tr>
-
-										<tr>
-											<th scope="row"><label for="reg_mb_sms">SMS 수신여부</label></th>
-											<td><input type="checkbox" name="mb_sms" value="1"
-												id="reg_mb_sms" checked> 휴대폰 문자메세지를 받겠습니다.</td>
-										</tr>
-
-										<tr>
-											<th scope="row"><label for="reg_mb_open">정보공개</label></th>
-											<td><span class="frm_info"> 정보공개를 바꾸시면 앞으로 0일
-													이내에는 변경이 안됩니다. </span> <input type="hidden" name="mb_open_default"
-												value=""> <input type="checkbox" name="mb_open"
-												value="1" id="reg_mb_open" checked> 다른분들이 나의 정보를 볼 수
-												있도록 합니다.</td>
-										</tr>
-									</table>
-								</div>
-
-								<div class="btn_confirm">
-									<input type="submit" value="회원가입" id="btn_submit"
-										class="btn btn-white" accesskey="s"> <a href="index"
-										class="btn btn-white"
-										style="color: rgb(255, 255, 255); background-color: #404040; margin-top: 20px;"
-										data-btn-txt-color="#fff" data-btn-bg-color="#44f3b8">취소</a>
-								</div>
-							</form>
-
-							<script>
-								$(function() {
-									$("#reg_zip_find").css("display",
-											"inline-block");
-
-								});
-
-								// submit 최종 폼체크
-								function fregisterform_submit(f) {
-									// 회원아이디 검사
-									if (f.w.value == "") {
-										var msg = reg_user_id_check();
-										if (msg) {
-											alert(msg);
-											f.user_id.select();
-											return false;
-										}
+								if (f.w.value == '') {
+									if (f.user_password.value.length < 3) {
+										alert('비밀번호를 3글자 이상 입력하십시오.');
+										f.user_password.focus();
+										return false;
 									}
+								}
 
-									if (f.w.value == '') {
-										if (f.user_password.value.length < 3) {
-											alert('비밀번호를 3글자 이상 입력하십시오.');
-											f.user_password.focus();
-											return false;
-										}
-									}
+								if (f.user_password.value != f.user_password_re.value) {
+									alert('비밀번호가 같지 않습니다.');
+									f.user_password_re.focus();
+									return false;
+								}
 
-									if (f.user_password.value != f.user_password_re.value) {
-										alert('비밀번호가 같지 않습니다.');
+								if (f.user_password.value.length > 0) {
+									if (f.user_password_re.value.length < 3) {
+										alert('비밀번호를 3글자 이상 입력하십시오.');
 										f.user_password_re.focus();
 										return false;
 									}
+								}
 
-									if (f.user_password.value.length > 0) {
-										if (f.user_password_re.value.length < 3) {
-											alert('비밀번호를 3글자 이상 입력하십시오.');
-											f.user_password_re.focus();
-											return false;
-										}
+								// 이름 검사
+								if (f.w.value == '') {
+									if (f.user_name.value.length < 1) {
+										alert('이름을 입력하십시오.');
+										f.user_name.focus();
+										return false;
 									}
+								}
 
-									// 이름 검사
-									if (f.w.value == '') {
-										if (f.user_name.value.length < 1) {
-											alert('이름을 입력하십시오.');
-											f.user_name.focus();
-											return false;
-										}
-									}
-
-									// E-mail 검사
-									if ((f.w.value == "")
-											|| (f.w.value == "u" && f.user_email.defaultValue != f.user_email.value)) {
-										var msg = reg_user_email_check();
-										if (msg) {
-											alert(msg);
-											f.reg_user_email.select();
-											return false;
-										}
-									}
-									// 휴대폰번호 체크
-									var msg = reg_user_hp_check();
+								// E-mail 검사
+								if ((f.w.value == "")
+										|| (f.w.value == "u" && f.user_email.defaultValue != f.user_email.value)) {
+									var msg = reg_user_email_check();
 									if (msg) {
 										alert(msg);
-										f.reg_user_hp.select();
+										f.reg_user_email.select();
 										return false;
 									}
-
-									if (!chk_captcha())
-										return false;
-
-									document.getElementById("btn_submit").disabled = "disabled";
-
-									return true;
 								}
-							</script>
-						</div>
+								// 휴대폰번호 체크
+								var msg = reg_user_hp_check();
+								if (msg) {
+									alert(msg);
+									f.reg_user_hp.select();
+									return false;
+								}
+
+								if (!chk_captcha())
+									return false;
+
+								document.getElementById("btn_submit").disabled = "disabled";
+
+								return true;
+							}
+						</script>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
+
 	<!-- } 회원정보 입력/수정 끝 -->
 	<div class="clearfix"></div>
 	</section>
 
 
 	<!-- Main content -->
-	<!-- 	<form id="login-form" class="login" method='post' action="signupProcess"> -->
-	<!-- 		<p class="login__title"> -->
-	<!-- 			회원가입 -->
-	<!-- 		</p> -->
+
 
 
 

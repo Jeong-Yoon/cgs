@@ -35,8 +35,8 @@ public class SignupController {
 			HttpSession session) throws IOException {
 
 		// 비밀번호
-		String getPW = request.getParameter("user-password");
-		String getPWcheck = request.getParameter("user-passwordok");
+		String getPW = request.getParameter("user_password");
+		String getPWcheck = request.getParameter("user_password_re");
 
 		// int pw=Integer.parseInt(getPW);
 		// int pwcheck = Integer.parseInt(getPWcheck);

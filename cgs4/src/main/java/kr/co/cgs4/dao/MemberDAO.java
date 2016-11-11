@@ -42,12 +42,12 @@ public class MemberDAO {
 		
 		//가입일 정의
 		SimpleDateFormat mSimpleDateFormat = new SimpleDateFormat("yyyy-MM-dd", Locale.KOREA);
-		Date date = new Date();
+		final Date date = new Date();
 		final String join_date = mSimpleDateFormat.format(date);
-		
+		final Date CURRDATE = java.sql.Date.valueOf(join_date); 
 		
 		//나중에 email 이후 값은 지우고 db구축할것
-		  String insert = "insert into member(member_ID, password, name, address, birth, phone_num, email,gender,join_date,accum_point,member_grade,membership,curr_point) values (?,?,?,?,?,?,?,?,?,?,?,?,?)";
+		  String insert = "insert into member(member_ID, password, name, address, birth, phone_num, email,gender,join_date,accum_point,member_grade,membership,curr_point) values (?,?,?,?,?,?,?,?,to_date(?, 'yyyy-MM-dd'),?,?,?,?)";
 		  this.template.update(insert, new PreparedStatementSetter() {
 			
 			@Override
@@ -62,7 +62,7 @@ public class MemberDAO {
 				//젠더
 				ps.setString(8, gender);
 				//가입일
-				ps.setString(9, join_date);
+				ps.setDate(9, (java.sql.Date) CURRDATE);
 				
 				
 				//이밑으로는 나중에 차후 구현

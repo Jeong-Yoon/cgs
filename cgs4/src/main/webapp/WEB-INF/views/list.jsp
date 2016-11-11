@@ -6,6 +6,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
 <title>Insert title here</title>
+
 </head>
 <body>
 <table width="500" cellpadding="0" cellspacing="0" border="1">

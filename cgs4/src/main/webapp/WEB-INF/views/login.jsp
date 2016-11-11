@@ -344,125 +344,96 @@ a:active, a:focus, .no-touch a:active, .no-touch a:focus {
 }
 </style>
 
-<body id="body" class="  post-type-archive post-type-archive-product parallax sticky-head compact-menu blog  sldr-noloop sldr-nofade sticky-default force-detect-dark top-light is-active-wc push-back-actions woocommerce woocommerce-page">
-
-        <!-- Header section -->
-        <jsp:include page="menu.jsp" flush="false"/>
-        
-<!--        <section id="hero-wrapper" class="face-control sticky" data-height-type="percent" data-height-value="30" style="height: 79px;"> -->
-<!--             <span class="target target-top"></span> -->
-<!--             <span class="target target-bottom"></span> -->
-<!--             <div class="hero-intro hero-item clearfix" style="transform: translate3d(0px, -46.1538px, 0px);"> -->
-
-<!--             <div class="module text-module" data-size="4-2" -->
-<!-- 				data-bgcolor="#ffffff" -->
-<%-- 				data-bgimage="url&quot;<%=ctx%>/resources/images/bg-02.png&quot;)" --%>
-<!-- 				data-color="#444" data-customTransform="center" -->
-<%-- 				style="height: 169.8px; background-color: rgb(255, 255, 255); --%>
-<%-- 				background-image: url(&quot;<%=ctx%>/resources/images/bg-02.png&quot;); --%>
-<%-- 				color: rgb(68, 68, 68); text-align: center;"> --%>
-<!-- 			</div> -->
-<!-- 		</div> -->
-<!-- 		</section>  -->
-
-		<section id="content-wrapper"> <!-- 		Header section --> <%-- 				<jsp:include page="menu.jsp" flush="false" /> --%>
-
-		<!-- 		<form id="login-form" class="login" method='post' --> <!-- 			action="loginProcess"> -->
-		<!-- 			<p class="login__title" style="font-famil: 'Open Sans, sans-serif'"> -->
-		<!-- 				LOG IN <br /> <span class="login-edition">welcome to CGS</span> -->
-		<!-- 			</p> --> <!-- 			<div class="field-wrap"> --> <!-- 				<input type='text' placeholder='Member ID' name='user-email' -->
-		<!-- 					class="login__input" required="required"> <input type='password' -->
-		<!-- 					placeholder='Password' name='user-password' class="login__input" required="required"> -->
-		<!-- 				<input type='checkbox' id='#informed' class='login__check styled'> -->
-		<!-- 				<label for='#informed' class='login__check-info'>remember me</label> -->
-		<!-- 			</div> --> <!-- 			<div class="login__control"> --> <!-- 			<table class="loginbtn"> -->
-		<!-- 			<tr> --> <!-- 				<td width="200"><button type="submit" class="btn btn-md btn--warning btn--wider" >LOGIN</button></td> -->
-		<!-- 				<td width="200"><a href="signup"><button type="button" class="btn btn-md btn--warning btn--wider">회원가입</button></a></td> -->
-		<!-- 			</tr> --> <!-- 			<tr> --> <!-- 				<td><a href="find_id" class="login__tracker form__tracker">아이디 찾기</a></td> -->
-		<!-- 			   	<td><a href="find_pw" class="login__tracker form__tracker">비밀번호 찾기</a></td> -->
-		<!-- 			</tr> --> <!-- 			</table> --> <!-- 			</div> --> <!-- 		</form> -->
+<body>
+	<!-- Header section -->
+	<jsp:include page="menu.jsp" flush="false" />
 
 
-		<!-- 로그인 시작 { -->
-		<div class="woo-cheader">
-			<a href="login" title="Login / Register">Login</a> / <a href="signup">Register</a>
-			<nav class="woocommerce-breadcrumb" itemprop="breadcrumb"> <a
-				href="index">Home</a> <span>></span> Login</nav>
-		</div>
-		<div id="mb_login" class="mbskin">
-			<h1 class="form-signin-heading form-signin form-signin hidden">로그인</h1>
-			<div class="contatiner">
-				<form name="flogin" method='post' action="loginProcess" onsubmit="return flogin_submit(this);"
-					class="loginBox_1 form-signin">
-					<!--             <input type="hidden" name="url" value="http%3A%2F%2Fairing.kr"> -->
-					<fieldset id="login_fs" class="woocommerce-billing-fields">
-						<legend>회원로그인</legend>
-						<p class="form-row form-row-wide">
-							<label for="login_id" class="login_id">회원아이디<strong
-								class="sound_only"> 필수</strong></label> <input id="login_id"
-								name="mb_id" class="form-control" type="text" autofocus=""
-								required="" placeholder="ID">
-						</p>
-						<p class="form-row form-row-wide">
-							<label for="login_pw" class="login_pw">비밀번호<strong
-								class="sound_only"> 필수</strong></label> <input id="login_pw"
-								name="mb_password" class="form-control" type="password"
-								required="" placeholder="Password">
-						</p>
-						<button class="btn btn-lg btn-color btn-block" type="submit"
-							value="로그인">로그인</button>
-						<div class="text-right">
-							<input type="checkbox" name="auto_login" id="login_auto_login">
-							<label for="login_auto_login" class="auto_login">자동로그인</label>
-						</div>
-					</fieldset>
+	<section id="content-wrapper">
 
-
-					<aside class="panel panel-default" style="padding: 10px 15px; border-bottom: 1px solid #ddd; border-top-left-radius: 3px; border-top-right-radius: 3px;">
-					<div class="panel-heading text-center">INFORMATION</div>
-					<div class="panel-body">
-						<p style="padding: 15px 15px; line-height: 1.5em; font-size: 0.83em; box-sizing: border-box;">
-							잊으셨다면 아이디/비밀번호 찾기를 이용하세요.<br> 아직 회원이 아니시라면 회원 가입 해주세요.
-						</p>
-
-						<div class="text-center">
-							<a href="find_id" target="_blank" id="login_password_lost" class="btn01 first_btn">아이디 비밀번호 찾기</a> <a
-								href="signup" class="btn01">회원 가입</a>
-						</div>
+	<!-- 로그인 시작 { -->
+	<div class="woo-cheader">
+		<a href="login" title="Login / Register">Login</a> / <a href="signup">Register</a>
+		<nav class="woocommerce-breadcrumb" itemprop="breadcrumb"> <a
+			href="index">Home</a> <span>></span> Login</nav>
+	</div>
+	<div id="mb_login" class="mbskin">
+		<h1 class="form-signin-heading form-signin form-signin hidden">로그인</h1>
+		<div class="contatiner">
+			<form id="login-form" method='post' action="loginProcess"
+				class="loginBox_1 form-signin">
+				<!--             <input type="hidden" name="url" value="http%3A%2F%2Fairing.kr"> -->
+				<fieldset id="login_fs" class="woocommerce-billing-fields">
+					<legend>회원로그인</legend>
+					<p class="form-row form-row-wide">
+						<label for="login_id" class="login_id">회원아이디<strong
+							class="sound_only"> 필수</strong></label> <input name="user-email"
+							class="form-control" type="text" autofocus="" required="required"
+							placeholder="ID">
+					</p>
+					<p class="form-row form-row-wide">
+						<label for="login_pw" class="login_pw">비밀번호<strong
+							class="sound_only"> 필수</strong></label> <input 
+							name="user-password" class="form-control" type="password"
+							required="required" placeholder="Password">
+					</p>
+					<button class="btn btn-lg btn-color btn-block" type="submit"
+						value="로그인">로그인</button>
+					<div class="text-right">
+						<input type="checkbox" name="auto_login" id="login_auto_login">
+						<label for="login_auto_login" class="auto_login">자동로그인</label>
 					</div>
-					</aside>
-				</form>
+				</fieldset>
+
+
+				<aside class="panel panel-default"
+					style="padding: 10px 15px; border-bottom: 1px solid #ddd; border-top-left-radius: 3px; border-top-right-radius: 3px;">
+				<div class="panel-heading text-center">INFORMATION</div>
+				<div class="panel-body">
+					<p
+						style="padding: 15px 15px; line-height: 1.5em; font-size: 0.83em; box-sizing: border-box;">
+						잊으셨다면 아이디/비밀번호 찾기를 이용하세요.<br> 아직 회원이 아니시라면 회원 가입 해주세요.
+					</p>
+
+					<div class="text-center">
+						<a href="find_id" target="_blank" id="login_password_lost"
+							class="btn01 first_btn">아이디 비밀번호 찾기</a> <a href="signup"
+							class="btn01">회원 가입</a>
+					</div>
+				</div>
+				</aside>
+			</form>
 			<!-- 자동로그인 -->
 			<div class="btn_confirm form-signin"></div>
 		</div>
 	</div>
 
 	<script>
-// 		$(function() {
-// 			$("#login_auto_login")
-// 					.click(
-// 							function() {
-// 								if (this.checked) {
-// 									this.checked = confirm("자동로그인을 사용하시면 다음부터 회원아이디와 비밀번호를 입력하실 필요가 없습니다.\n\n공공장소에서는 개인정보가 유출될 수 있으니 사용을 자제하여 주십시오.\n\n자동로그인을 사용하시겠습니까?");
-// 								}
-// 							});
-// 		});
+		// 		$(function() {
+		// 			$("#login_auto_login")
+		// 					.click(
+		// 							function() {
+		// 								if (this.checked) {
+		// 									this.checked = confirm("자동로그인을 사용하시면 다음부터 회원아이디와 비밀번호를 입력하실 필요가 없습니다.\n\n공공장소에서는 개인정보가 유출될 수 있으니 사용을 자제하여 주십시오.\n\n자동로그인을 사용하시겠습니까?");
+		// 								}
+		// 							});
+		// 		});
 
-// 		function flogin_submit(f) {
-// 			return true;
-// 		}
-	</script>
-	<!-- } 로그인 끝 -->
-	</section>
+		// 		function flogin_submit(f) {
+		// 			return true;
+		// 		}
+	</script> <!-- } 로그인 끝 --> </section>
 
 	<div class="clearfix"></div>
 
 	<!-- main jQuery -->
 	<script src="<%=ctx%>/resources/js/external/jquery-1.11.1.min.js"></script>
+	<script
+		src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 	<script>
 		window.jQuery
 				|| document
-						.write('<script src="js/external/jquery-1.11.1.min.js"><\/script>')
+						.write('<script src="js/external/jquery-1.10.1.min.js"><\/script>')
 	</script>
 	<!-- Migrate -->
 	<script
@@ -473,6 +444,17 @@ a:active, a:focus, .no-touch a:active, .no-touch a:focus {
 	<script src="<%=ctx%>/resources/js/min/bootstrap.min.js"></script>
 	<!-- Mobile menu -->
 	<script src="<%=ctx%>/resources/js/jquery.mobile.menu.js"></script>
+		<!-- Select -->
+	<script
+		src="<%=ctx%>/resources/js/external/jquery.selectbox-0.2.min.js"></script>
+	<!-- Form element -->
+	<script src="<%=ctx%>/resources/js/external/form-element.js"></script>
+	<!-- Form validation -->
+	<script src="<%=ctx%>/resources/js/form.js"></script>
+
+	<!-- Custom -->
+	<script src="<%=ctx%>/resources/js/custom.js"></script>
+	
 
 
 </body>

@@ -113,8 +113,16 @@
 				<li><a href="login">Login</a></li>
 				<%
 					} else {
+						String name = (String) session.getAttribute("name");
 				%>
-				<li><a href="logout">Logout</a></li>
+				<li><a href="#" class="auth__show spoqahansans normal w300">My Page</a>
+				<ul class="auth__function spoqahansans">
+					<li class="auth__function-item normal w300">안녕하세요 <strong><%=name%></strong>님!</li>
+					<br>
+					<li class="normal w300"><a href="<%=ctx%>/modify" class="auth__function-item">내 정보 확인</a></li>
+					<li class="normal w300"><a href="<%=ctx%>/reserve_list/?mId=<%=(String) session.getAttribute("id") %>" class="auth__function-item">예매 내역 확인</a></li>
+				</ul></li>
+			<li><a href="logout">Logout</a></li>
 				<%
 					}
 				%>
@@ -401,6 +409,24 @@
 		});
 	</script>
 
+	<script>
+		jQuery(window).scroll(function() {
+			if (jQuery(window).scrollTop() > 50) {
+				jQuery("#navigation").css("background-color", "rgba(0, 0, 3, 0.7)");
+				jQuery("#navigation").addClass("animated-nav");
+				jQuery('.auth__function').css("top", "66px");
+			} else {
+				jQuery("#navigation").css("background-color", "rgba(0, 0, 3, 0.7)");
+				jQuery("#navigation").removeClass("animated-nav");
+				jQuery('.auth__function').css("top", "80px");
+			}
+		});
+		$('.auth__show').click(function(e) {
+			e.preventDefault();
+			$('.auth__function').toggleClass('open-function')
+		});
+
+	</script>
 	<!-- main jQuery -->
 	<script src="<%=ctx%>/resources/js/external/jquery-1.11.1.min.js"></script>
 	<!-- Bootstrap -->

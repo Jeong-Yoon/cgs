@@ -63,8 +63,7 @@ public class ReserveCheckController {
 		
 		response.setContentType("text/html; charset=UTF-8");    	
     	PrintWriter out =response.getWriter();
-    	out.println("<script>alert('예매취소 되었습니다.'); document.location.href='movie_list?page=0';</script>");
-
+    	out.println("<script>alert('예매취소 되었습니다.'); document.location.href='reserve_list';</script>");
     	
 		
 		}

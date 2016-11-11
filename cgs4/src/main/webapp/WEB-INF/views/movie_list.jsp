@@ -78,7 +78,7 @@
 }
 
 .col-sm-3{ 
-width: 21%;
+width: 25%;
 }
 	</style>
 </head>

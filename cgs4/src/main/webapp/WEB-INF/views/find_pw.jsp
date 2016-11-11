@@ -62,7 +62,7 @@
 
 
 	<!-- Main content -->
-	<form id="login-form" class="login" method='post' action="signupProcess"> 
+	<form id="login-form" class="login" method='post' action="findPWProcess"> 
 <!-- 일단 form, action부분 냅둠 -->
 
 		<p class="login__title">

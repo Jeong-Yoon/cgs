@@ -83,5 +83,61 @@ public class FindController {
 		
 
 	}
+	
+	@RequestMapping(value = "findPWProcess")
+	public String findPWProcess(Model model, HttpServletRequest request, HttpServletResponse response,
+			HttpSession session) throws IOException {
+		
+		String id = request.getParameter("user-id");
+		
+		String name = request.getParameter("user-name");
+
+		// 핸드폰번호
+		String getUserPnum1 = request.getParameter("user-pnum");
+		String getUserPnum2 = request.getParameter("user-pnum2");
+		String getUserPnum3 = request.getParameter("user-pnum3");
+		String Pnum = getUserPnum1 + getUserPnum2 + getUserPnum3;
+		
+		String email  = request.getParameter("user-email");
+		
+		
+		MemberDAO dao = new MemberDAO();
+
+		try {
+			MemberDTO dtos = dao.findPW(id, name, Pnum, email);
+			if (dtos != null) {
+				String pw=dtos.getMember_ID();
+				
+				
+				model.addAttribute("pw", pw);
+			
+			
+				return "show_pw";
+			} else {
+				// 널값이면 어차피 catch로 가서 여기로 올경우는 없음
+				System.out.println("일치데이터없음");
+				// 자바에서 경고창띄우는부분
+				response.setContentType("text/html; charset=UTF-8");
+				PrintWriter out = response.getWriter();
+				out.println("<script>alert('입력하신 정보와 일치하는 회원이 없습니다.'); history.go(-1);</script>");
+				out.close();
+				return "redirect:login";
+
+			}
+
+		} catch (EmptyResultDataAccessException e) {
+			//dao.finid의 리턴값이 널값이면 일로옴
+			System.out.println("입력이 올바르지않음");
+			// 자바에서 경고창띄우는부분
+			response.setContentType("text/html; charset=UTF-8");
+			PrintWriter out = response.getWriter();
+			out.println("<script>alert('입력하신 정보와 일치하는 회원이 없습니다.'); history.go(-1);</script>");
+			out.close();
+			// 어차피 위에서 history.go(-1)때문에 return으로안감
+			return "redirect:login";
+		}
+		
+
+	}
 
 }

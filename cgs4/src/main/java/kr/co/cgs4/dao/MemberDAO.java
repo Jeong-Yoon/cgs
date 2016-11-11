@@ -105,6 +105,15 @@ public class MemberDAO {
 		  
 	}
 	
+	//비밀번호 찾을때 사용함
+	public MemberDTO findPW(final String id, final String name, final String Pnum, final String email){
+		
+		String findPW = "select * from member where member_id = '" + id + "' and name = '" + name + "' and phone_num='"+ Pnum +"' and email= '"+email+"'";
+		return (MemberDTO) template.queryForObject(findPW, new BeanPropertyRowMapper<MemberDTO>(MemberDTO.class));
+		
+	}
+	
+	
 	
 	
 	

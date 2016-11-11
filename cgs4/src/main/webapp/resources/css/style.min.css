@@ -201,7 +201,7 @@ input[type=radio] {
 }
 
 input[type=radio]:checked {
-	background-color: #f4dad1;
+	background-color: #ffef96;
 	border-left-color: #666;
 	border-right-color: #666
 }
@@ -13593,13 +13593,15 @@ div.woocommerce.columns-2 ul.content-module.portfolio>li {
 }
 
 .btn-white {
-	background: #f4dad1;
-	color: #333
+	background: #ffef96;
+	color: #333;
+	font-family: 'Godo', sans-serif;
+	font-weight: 250;
 }
 
 .btn-white:hover {
 	background: #333;
-	color: #f4dad1
+	color: #ffef96
 }
 
 .btn-dark {
@@ -13684,5 +13686,5 @@ div.woocommerce.columns-2 ul.content-module.portfolio>li {
 
 #content>.notice ul li a small {
 	font-size: .1em;
-	color: #f4dad1
+	color: #ffef96
 }

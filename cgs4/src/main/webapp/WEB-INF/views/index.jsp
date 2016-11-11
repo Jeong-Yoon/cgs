@@ -230,7 +230,7 @@ color: #fff;
 		<section id="portfolio">
 		<div class="section-title text-center wow fadeInDown">
 			<h2 style="color: #1f2021; margin-top: 50px">
-				<strong>MOVIE INFORMATION</strong>
+				<strong>MOVIE SPACE</strong>
 			</h2>
 		</div>
 

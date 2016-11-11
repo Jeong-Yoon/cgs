@@ -77,9 +77,7 @@
  float:right;
 }
 
-.col-sm-3{ 
-width: 25%;
-}
+
 	</style>
 </head>
 <body>
@@ -128,12 +126,12 @@ width: 25%;
 <!--                             <option value="4">Warsawa</option> -->
 <!--                             <option value="5">Kiev</option> -->
 <!--                         </select> -->
-                    </form>
+<!--                     </form> -->
 
                 </div>
 			<form action="movie" method="post">
-				<div class="row">
 					<div class="cinema-wrap">
+				<div class="row">
 						<c:forEach var="dto" items="${film_list}" begin="0" end="11">
 							<input type="hidden" name="film_ID" value="${dto.film_ID}">
 							<div class="col-xs-6 col-sm-3 cinema-item">

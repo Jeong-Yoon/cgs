@@ -45,7 +45,10 @@ public class SignupController {
 		String getUserName = request.getParameter("user-name");
 
 		// 주소
-		String getUserAddress = request.getParameter("user-address");
+		String getUserAddress1 = request.getParameter("user-address1");
+		String getUserAddress2 = request.getParameter("user-address2");
+		String getUserAddress3 = request.getParameter("user-address3");
+		String getUserAddress = getUserAddress1+getUserAddress2+getUserAddress3;
 
 		// 생년월일
 		String getUserBirth = request.getParameter("user-birth");

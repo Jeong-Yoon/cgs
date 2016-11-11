@@ -51,7 +51,7 @@ public class MemberDAO {
 //		
 //		System.out.println(iBirth);
 		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
-		String birthdate = sdf.format(birth);
+		final java.sql.Date birthdate =(java.sql.Date)sdf.format(birth);
 		System.out.println(birthdate);
 
 		

@@ -404,7 +404,7 @@ a:active, a:focus, .no-touch a:active, .no-touch a:focus {
 											<label for="reg_mb_zip" class="sound_only">우편번호<strong
 												class="sound_only"> 필수</strong></label>
 											<div class="input-group">
-												<input name="user-address" class="form-control required"
+												<input name="user-address1" class="form-control required"
 													id="ozipcode1" size="6" maxlength="6" readonly="1"
 													type="text"> <span class="input-group-btn">
 													<button type="button" class="btn btn-white"
@@ -414,10 +414,10 @@ a:active, a:focus, .no-touch a:active, .no-touch a:focus {
 											</div>
 
 											<label for="reg_mb_addr1">기본주소<strong
-												class="sound_only"> 필수</strong></label> <input name="user-address"
+												class="sound_only"> 필수</strong></label> <input name="user-address2"
 												class="form-control required" id="oaddr1" size="50"
 												readonly="1" type="text"> <label for="reg_mb_addr2">상세주소</label>
-											<input type="text" name="mb_addr2" value="" id="oaddr2"
+											<input type="text" name="user-address3" value="" id="oaddr2"
 												class="form-control frm_address" size="50">
 										</div>
 									</td>

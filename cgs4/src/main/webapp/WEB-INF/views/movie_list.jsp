@@ -78,7 +78,7 @@
 }
 
 .col-sm-3{ 
-width: 24%;
+width: 21%;
 }
 	</style>
 </head>
@@ -132,14 +132,15 @@ width: 24%;
 
                 </div>
 			<form action="movie" method="post">
-                    <div class="cinema-wrap">	
-                        <div class="row">
-						<c:forEach var="dto" items="${film_list}" begin="0" end="11" >
+				<div class="row">
+					<div class="cinema-wrap">
+						<c:forEach var="dto" items="${film_list}" begin="0" end="11">
 							<input type="hidden" name="film_ID" value="${dto.film_ID}">
 							<div class="col-xs-6 col-sm-3 cinema-item">
 								<div class="cinema">
 									<a href="movie?film_ID=${dto.film_ID}" class="cinema__images">
-										<img alt='' src="<%=ctx %>/resources/images/poster/${dto.film_ID}.jpg"> 
+										<img alt=''
+										src="<%=ctx %>/resources/images/poster/${dto.film_ID}.jpg">
 										<!--  	<span class="cinema-rating">5.0</span> -->
 									</a> <a href="movie?film_ID=${dto.film_ID}" class="cinema-title">${dto.film_name}</a>
 								</div>
@@ -147,12 +148,12 @@ width: 24%;
 						</c:forEach>
 					</div>
 
-                    </div>
-                    </form>
+				</div>
+			</form>
 
 
-                    
-<%--                     <form action="movie_list?page=<%=pagenum %>" method="get"> --%>
+
+			<%--                     <form action="movie_list?page=<%=pagenum %>" method="get"> --%>
 <%--                     <input type='hidden' name="page" value=<%=pagenum %>>  --%>
                     <%if(request.getAttribute("pagenum")!=null){
                     	pagenum2=Integer.parseInt(request.getAttribute("pagenum").toString());  }%>

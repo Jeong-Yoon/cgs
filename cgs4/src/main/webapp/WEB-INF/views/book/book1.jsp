@@ -291,7 +291,7 @@
 			</div>
 
 			<div class="choose-indector choose-indector--time">
-				<strong>선택하신 좌석 </strong><span class="choosen-area" id="film_time"></span>
+				<strong>선택하신 시간 </strong><span class="choosen-area" id="film_time"></span>
 			</div>
 		</section>
 		<!-- 		</form> -->

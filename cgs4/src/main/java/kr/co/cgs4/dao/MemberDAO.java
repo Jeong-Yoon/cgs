@@ -30,12 +30,14 @@ public class MemberDAO {
 	}
 
 	//id와 pw에 맞는 해당 맴버의 데이터를 모두 불러온다!
+	//로그인할때 사용함
 	public MemberDTO member_list(String id, String pw) {
 		String query = "select * from member where MEMBER_ID = '" + id + "' and PASSWORD = '" + pw + "'";
 			return (MemberDTO) template.queryForObject(query, new BeanPropertyRowMapper<MemberDTO>(MemberDTO.class));
 		
 	}
 
+	//회원가입시 사용
 	public void signup(final String id, final String pw, final String name, final String address, final String birth, final String phone, final String e_mail, final String gender){
 		
 		//가입일 정의
@@ -81,15 +83,25 @@ public class MemberDAO {
 		
 	}
 	
+	
+	//핸드폰번호, 이메일, 주소 수정할떄 사용함
 	public void modify(final String id, final String pw,final String pnum, final String email, final String address){
 		String modify ="UPDATE MEMBER SET phone_num= '"+pnum+"',email='"+email+"',address='"+address+"' WHERE member_id='" + id + "' and PASSWORD = '" + pw + "'";
 		this.template.update(modify);
 		  
 	}
 	
+	//비밀번호 수정할때 사용함
 	public void modify_pw(final String id, final String pw, final String Modify_pw){
 		String modify_pw ="UPDATE MEMBER SET password= '"+Modify_pw+"' WHERE member_id='" + id + "' and PASSWORD = '" + pw + "'";
 		this.template.update(modify_pw);
+		  
+	}
+	
+	//아이디 찾을때 사용함
+	public MemberDTO findID(final String name, final String birth, final String gender, final String Pnum){
+		String findID ="select * from member where name = '" + name + "' and birth = '" + birth + "' and gender='"+ gender +"' and phone_num= '"+Pnum+"'";
+		return (MemberDTO) template.queryForObject(findID, new BeanPropertyRowMapper<MemberDTO>(MemberDTO.class));
 		  
 	}
 	

@@ -68,6 +68,11 @@
 // 		out.print(pagenum);
 	}
 	</script>
+	<style>
+.page_right{
+ float:right;
+}
+	</style>
 </head>
 <body>
     <div class="wrapper">
@@ -138,18 +143,21 @@
                     </form>
 
 
-                    <div class="pagination paginatioon--full">
+                    
 <%--                     <form action="movie_list?page=<%=pagenum %>" method="get"> --%>
 <%--                     <input type='hidden' name="page" value=<%=pagenum %>>  --%>
                     <%if(request.getAttribute("pagenum")!=null){
                     	pagenum2=Integer.parseInt(request.getAttribute("pagenum").toString());  }%>
                     	<%if(Integer.parseInt(request.getAttribute("pagenum").toString()) > 0){ %>
+                    <div class="pagination paginatioon--full">
                     <a href="javascript:prevChk(<%=pagenum2-1 %>)" class="pagination__prev" >prev</a>
+                    </div>
                     <%} %>
                     <%if(Integer.parseInt(request.getAttribute("size").toString()) > 12){ %>
-					<a href="javascript:nextChk(<%=pagenum2+1 %>)" class="pagination__next" >next</a>
-					<% } %>
+					<div class="pagination paginatioon--full page_right">
+                    <a href="javascript:nextChk(<%=pagenum2+1 %>)" class="pagination__next" >next</a>
                     </div>
+                    <% } %>
           
             </div>
         </section>

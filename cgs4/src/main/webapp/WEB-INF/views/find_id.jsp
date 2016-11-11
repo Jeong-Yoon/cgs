@@ -62,7 +62,7 @@
 
 
 	<!-- Main content -->
-	<form id="login-form" class="login" method='post' action="findProcess"> 
+	<form id="login-form" class="login" method='post' action="findIDProcess"> 
 <!-- 일단 form, action부분 냅둠 -->
 
 		<p class="login__title">

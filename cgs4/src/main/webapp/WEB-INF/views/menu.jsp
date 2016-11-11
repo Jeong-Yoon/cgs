@@ -39,6 +39,10 @@ color: #fff;
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>CGS menubar</title>
 
+<!-- icon -->
+<link rel="shortcut icon" type="image/x-icon"
+	href="<%=ctx%>/resources/css/img/favicon.png" />
+
 
 <!-- Mobile menu -->
 <link href="<%=ctx%>/resources/css/gozha-nav.css" rel="stylesheet" />

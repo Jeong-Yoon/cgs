@@ -39,20 +39,18 @@ public class MemberDAO {
 	}
 
 	//회원가입시 사용
-	public void signup(final String id, final String pw, final String name, final String address, String birth, final String phone, final String e_mail, final String gender){
+	public void signup(final String id, final String pw, final String name, final String address, String birth, final String phone, final String e_mail, final String gender) throws ParseException{
 		System.out.println(birth);
-//		final Date iBirth = java.sql.Date.valueOf(birth);
+		
 		//가입일 정의
 		final java.sql.Date currDate = new java.sql.Date(new java.util.Date().getTime());
 		System.out.println(currDate);
 		
-//		SimpleDateFormat format = new SimpleDateFormat("yyMMdd") ;
-//		final java.sql.Date iBirth = (java.sql.Date) format.parse(birth);
-//		
-//		System.out.println(iBirth);
-		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
-		final java.sql.Date birthdate =(java.sql.Date)sdf.format(birth);
-		System.out.println(birthdate);
+		//birth를  java.sql.Date 타입으로!
+		SimpleDateFormat format = new SimpleDateFormat("yyMMdd") ;
+		final java.sql.Date iBirth = new java.sql.Date(format.parse(birth).getTime());
+		
+		System.out.println(iBirth);
 
 		
 		//나중에 email 이후 값은 지우고 db구축할것

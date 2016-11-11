@@ -2,6 +2,7 @@ package kr.co.cgs4.controller;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.text.ParseException;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -32,7 +33,7 @@ public class SignupController {
 
 	@RequestMapping(value = "signupProcess")
 	public String signupProcess(Model model, HttpServletRequest request, HttpServletResponse response,
-			HttpSession session) throws IOException {
+			HttpSession session) throws IOException, ParseException {
 
 		// 비밀번호
 		String getPW = request.getParameter("user_password");
@@ -42,7 +43,7 @@ public class SignupController {
 		// int pwcheck = Integer.parseInt(getPWcheck);
 
 		// 이름
-		String getUserName = request.getParameter("user-name");
+		String getUserName = request.getParameter("user_name");
 
 		// 주소
 		String getUserAddress1 = request.getParameter("user-address1");
@@ -107,10 +108,10 @@ public class SignupController {
 
 					response.setContentType("text/html; charset=UTF-8");
 					PrintWriter out = response.getWriter();
-					out.println("<script>alert('회원가입이 완료되었습니다'); document.location.href='login'; </script>");
+					out.println("<script>alert('회원가입이 완료되었습니다'); document.location.href='index'; </script>");
 					out.flush();
 					out.close();
-					return "login";
+					return "index";
 				}
 			} catch (EmptyResultDataAccessException e) {
 				System.out.println("입력이 올바르지않음");

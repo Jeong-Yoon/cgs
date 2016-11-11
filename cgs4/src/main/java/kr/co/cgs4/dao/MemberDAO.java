@@ -3,6 +3,7 @@ package kr.co.cgs4.dao;
 import java.io.PrintWriter;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Locale;
@@ -38,31 +39,40 @@ public class MemberDAO {
 	}
 
 	//회원가입시 사용
-	public void signup(final String id, final String pw, final String name, final String address, final String birth, final String phone, final String e_mail, final String gender){
-		
+	public void signup(final String id, final String pw, final String name, final String address, String birth, final String phone, final String e_mail, final String gender) throws ParseException{
+		System.out.println(birth);
+//		final Date iBirth = java.sql.Date.valueOf(birth);
 		//가입일 정의
-		SimpleDateFormat mSimpleDateFormat = new SimpleDateFormat("yyyy-MM-dd", Locale.KOREA);
-		final Date date = new Date();
-		final String join_date = mSimpleDateFormat.format(date);
-		final Date CURRDATE = java.sql.Date.valueOf(join_date); 
+		final java.sql.Date currDate = new java.sql.Date(new java.util.Date().getTime());
+		System.out.println(currDate);
+		
+//		SimpleDateFormat format = new SimpleDateFormat("yyMMdd") ;
+//		final java.sql.Date iBirth = (java.sql.Date) format.parse(birth);
+//		
+//		System.out.println(iBirth);
+		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+		String birthdate = sdf.format(birth);
+		System.out.println(birthdate);
+
 		
 		//나중에 email 이후 값은 지우고 db구축할것
-		  String insert = "insert into member(member_ID, password, name, address, birth, phone_num, email,gender,join_date,accum_point,member_grade,membership,curr_point) values (?,?,?,?,?,?,?,?,to_date(?, 'yyyy-MM-dd'),?,?,?,?)";
+		  String insert = "insert into member(member_ID, password, name, address, birth, phone_num, email,gender,join_date,accum_point,member_grade,membership,curr_point) values (?,?,?,?,to_date(?,'yyyy-MM-dd'),?,?,?,to_date(?, 'yyyy-MM-dd'),?,?,?,?)";
 		  this.template.update(insert, new PreparedStatementSetter() {
-			
 			@Override
 			public void setValues(PreparedStatement ps) throws SQLException {
 				ps.setString(1, id);
 				ps.setString(2, pw);
 				ps.setString(3, name);
 				ps.setString(4, address);
-				ps.setString(5, birth);
+				
+				
+				ps.setDate(5, currDate);
 				ps.setString(6, phone);
 				ps.setString(7, e_mail);
 				//젠더
 				ps.setString(8, gender);
 				//가입일
-				ps.setDate(9, (java.sql.Date) CURRDATE);
+				ps.setDate(9, currDate);
 				
 				
 				//이밑으로는 나중에 차후 구현

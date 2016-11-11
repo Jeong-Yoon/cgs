@@ -72,7 +72,16 @@
 	src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <!-- <script>window.jQuery || document.write('<script src="../libs/jquery/dist/jquery.min.js"><\/script>')</script> -->
 <script src="<%=ctx%>/resources/js/jquery.vide.js"></script>
-
+<script>
+function movieChk(name) {
+	document.getElementById("choosed_film").innerHTML = name;
+	document.getElementById("film_name").setAttribute("value", name);
+	location.href = "book1";
+}
+function submit(){
+		document.getElementById("gobook").submit();
+}
+</script>
 </head>
 
 <body>
@@ -212,21 +221,22 @@
 		</nav>
 
 		<div id="projects" class="clearfix">
-			<form action="book1" method="post">
+			<form action="book1" method="post" class="gobook1" id="gobook">
 				<c:forEach var="dto" items="${index_list}" varStatus="status">
-					<input type="hidden" name="film_ID" value="${dto.film_ID}">
+				<input type='hidden' name="film_name" class="choosen-movie" id="film_name" value="${dto.film_name}">
+<%-- 					<input type="hidden" name="film_name" value="${dto.film_name}"> --%>
 					<figure class="mix portfolio-item rank now"> <img
 						class="img-responsive"
 						src="<%=ctx %>/resources/images/poster/${dto.film_ID}.jpg"
 						alt="movie rank${status.count}"> <figcaption class="mask">
 					<h3>${dto.film_name}</h3>
 					<span>Doctor Strange , 2016</span> <br>
-					<a href="#" class="btn btn-book">상세보기</a> <a href="book1"
-						class="btn btn-book-blue">예매하기</a> </figcaption> </figure>
+					<a href="#" class="btn btn-book">상세보기</a> <a href="#"
+						class="btn btn-book-blue" onclick="submit()">예매하기</a> </figcaption> </figure>
 				</c:forEach>
 				<c:forEach var="dto" items="${index_list}" begin="0" end="3" varStatus="status">
 					<input type="hidden" name="film_ID" value="${dto.film_ID}">
-					<figure class="mix portfolio-item recerel"> <img
+					<figure class="mix portfolio-item recerel" > <img
 						class="img-responsive"
 						src="<%=ctx %>/resources/images/poster/${dto.film_ID}.jpg"
 						alt="movie rank${status.count}"> <figcaption class="mask">

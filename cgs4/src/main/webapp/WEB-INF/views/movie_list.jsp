@@ -76,6 +76,10 @@
 .page_right{
  float:right;
 }
+
+.col-sm-3{ 
+width: 24%;
+}
 	</style>
 </head>
 <body>

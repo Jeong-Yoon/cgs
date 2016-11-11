@@ -306,7 +306,9 @@ function init_Home() {
                         
                         //get the data attribute of the clicked link(which is equal to value filter of our content)
                         var filter = $(this).attr('data-filter');
-
+                        if(filter == null){
+                        	var filter = $(this).attr('.rank');
+                        }
                         //Filter buttons
                         //show all the list items(this is needed to get the hidden ones shown)
                         $(".select__btn a").show();
@@ -1491,8 +1493,13 @@ function init_MoviePage () {
                     cinema.val(chooseCinema);
                 });
                 
-                var chooseCity = $('.select .sbSelector').text();
+                var chooseCity = $('.choosen-city').val();
                 city.val(chooseCity);
+                if(chooseCity=='null'){
+                $('.choosen-city').val($('.sbSelector').text());
+                }else{
+                $('.sbSelector').text(chooseCity);
+                }
                 var chooseDate = $('.datepicker__input').val();
                 date.val(chooseDate);
 

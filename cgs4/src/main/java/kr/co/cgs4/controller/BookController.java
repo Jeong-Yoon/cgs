@@ -46,7 +46,7 @@ public class BookController {
 		ArrayList<SiteDTO> dtos3=cdao.total_site();
 		model.addAttribute("t_site", dtos3);
 		//리퀘스트 받아온 값이 null이 아닐때만 좌석정보 불러옴.
-		if(hsr.getParameter("film_name")!=null){
+		if(hsr.getParameter("site_name")!=null){
 			String film_name = hsr.getParameter("film_name");
 			String site_name = hsr.getParameter("site_name");
 			String sScreening_date = hsr.getParameter("screening_date");
@@ -60,6 +60,7 @@ public class BookController {
 			model.addAttribute("scnt", sCnt);
 			model.addAttribute("blist", bdto);
 			model.addAttribute("scNum", scdto);
+			
 		}
 		ArrayList<FilmDTO> fdto = bdao.film_list();
 		model.addAttribute("flist", fdto);

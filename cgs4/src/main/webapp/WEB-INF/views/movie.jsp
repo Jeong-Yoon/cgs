@@ -158,7 +158,7 @@
 						<p class="movie__option">
 							<strong>Release date: </strong>${film.release_date}</p>
 						<p class="movie__option">
-							<strong>Director: </strong><a href="#">${film.director}</a>
+							<strong>Director: </strong>${film.director}
 						</p>
 						<p class="movie__option">
 							<strong>Actors: </strong>${film.actor}</p>
@@ -166,7 +166,7 @@
 							<strong>Age restriction: </strong>${film.film_grade}</p>
 
 
-						<a class="comment-link"><br></a>
+<!-- 						<a class="comment-link"><br></a> -->
 
 <!-- 						<div class="movie__btns movie__btns--full"> -->
 <!-- 							<form action="watchlist" method="get"> -->
@@ -193,7 +193,7 @@
 
 				<p class="movie__describe">${film.film_story}</p>
 
-				<h2 class="page-heading">photos &amp; videos</h2>
+				<h2 class="page-heading">trailers &amp; still cuts</h2>
 
 				<div class="movie__media">
 					<div class="movie__media-switch">
@@ -458,7 +458,7 @@
 						<%}else{ %>
 						<center> <a href='login' class="btn btn-md btn--warning">예매하기</a> </center>
 						<% } %>
-					</form>
+					</form><br>
 				</div>
 
 			</div>

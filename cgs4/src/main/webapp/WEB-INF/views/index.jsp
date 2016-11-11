@@ -231,7 +231,7 @@ function submit(){
 						alt="movie rank${status.count}"> <figcaption class="mask">
 					<h3>${dto.film_name}</h3>
 					<span>Doctor Strange , 2016</span> <br>
-					<a href="#" class="btn btn-book">상세보기</a> <a href="#"
+					<a href="movie?film_ID=${dto.film_ID}" class="btn btn-book">상세보기</a> <a href="#"
 						class="btn btn-book-blue" onclick="submit()">예매하기</a> </figcaption> </figure>
 				</c:forEach>
 				<c:forEach var="dto" items="${index_list}" begin="0" end="3" varStatus="status">
@@ -242,8 +242,8 @@ function submit(){
 						alt="movie rank${status.count}"> <figcaption class="mask">
 					<h3>${dto.film_name}</h3>
 					<span>Doctor Strange , 2016</span> <br>
-					<a href="#" class="btn btn-book">상세보기</a> <a href="book1"
-						class="btn btn-book-blue">예매하기</a> </figcaption> </figure>
+					<a href="movie?film_ID=${dto.film_ID}" class="btn btn-book">상세보기</a> <a href="#"
+						class="btn btn-book-blue" onclick="submit()">예매하기</a> </figcaption> </figure>
 				</c:forEach>
 				<c:forEach var="dto" items="${coming}" begin="0" end="3" varStatus="status">
 					<input type="hidden" name="film_ID" value="${dto.film_ID}">
@@ -253,8 +253,8 @@ function submit(){
 						alt="movie rank${status.count}"> <figcaption class="mask">
 					<h3>${dto.film_name}</h3>
 					<span>Doctor Strange , 2016</span> <br>
-					<a href="#" class="btn btn-book">상세보기</a> <a href="book1"
-						class="btn btn-book-blue">예매하기</a> </figcaption> </figure>
+					<a href="movie?film_ID=${dto.film_ID}" class="btn btn-book">상세보기</a> <a href="#"
+						class="btn btn-book-blue" onclick="submit()">예매하기</a> </figcaption> </figure>
 				</c:forEach>
 			</form>
 			

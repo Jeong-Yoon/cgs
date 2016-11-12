@@ -312,18 +312,17 @@ a:active, a:focus, .no-touch a:active, .no-touch a:focus {
 			<div class="the-post">
 				<div class="woocommerce">
 					<div class="lobo-tabs clearfix">
-						<div class="contents">
+						<div class="contents col-xs-13" style="padding: 10% 0 5% 20%">
 							<!--         <script src="http://airing.kr/js/jquery.register_form.js"></script> -->
 
 							<form id="login-form" action="signupProcess" method="post"
 								autocomplete="off">
 								<table>
-									<caption></caption>
+									<caption>사이트이용정보입력</caption>
 									<tr>
-										<th scope="row"><label for="reg_mb_id">아이디<strong
+										<th scope="row" style="width: 30%"><label for="reg_mb_id">아이디<strong
 												class="sound_only">필수</strong></label></th>
-										<td><span class="frm_info">영문자, 숫자만 입력 가능. 최소 3자이상
-												입력하세요.</span> <input type="text" name="user-id" value=""
+										<td><span class="frm_info" style="color:#A9A9A9; font-size: 12px;">영문자, 숫자만 입력 가능. </span> <input type="text" name="user-id" value=""
 											id="reg_mb_id" pattern="^[0-9a-zA-Z]{3,20}"
 											title="영어 또는 숫자로 3자리 이상으로 입력하세요."
 											placeholder='영어 또는 숫자로 3자리 이상으로 입력하세요.'
@@ -351,12 +350,12 @@ a:active, a:focus, .no-touch a:active, .no-touch a:focus {
 									</tr>
 								</table>
 						</div>
-						<div class="contents">
+						<div class="contents col-xs-13" style="padding: 0 0 5% 20%">
 							<!-- 						<div class="tbl_frm01 tbl_wrap"> -->
 							<table>
 								<caption>개인정보 입력</caption>
 								<tr>
-									<th scope="row"><label for="reg_mb_name">이름<strong
+									<th scope="row" style="width: 30%"><label for="reg_mb_name">이름<strong
 											class="sound_only">필수</strong></label></th>
 									<td><input type="text" placeholder='이름을 입력해주세요'
 										id="reg_user_name" name="user_name" value="" required
@@ -366,14 +365,13 @@ a:active, a:focus, .no-touch a:active, .no-touch a:focus {
 								<tr>
 									<th scope="row"><label for="reg_mb_name">생년월일<strong
 											class="sound_only">필수</strong></label></th>
-									<td><span>
-											<input type='date' 
-											name='user-birth' class="form-control required"
-											style="width: 40% display: inline-block; " maxlength="6" required>-<input
-											type='text' pattern="[1234]" title="올바른 숫자를 입력해주세요"
-											placeholder="ex)1" name='gender'
-											class="form-control required" style="display: inline-block;" maxlength="1" style="width: 5%"
-											required>
+									<td><span> <input type='date' name='user-birth'
+											class="form-control required"
+											style="width: 140px; display: inline-block;" maxlength="6"
+											required>  -  <input type='text' pattern="[1234]"
+											title="올바른 숫자를 입력해주세요" placeholder="ex)1" name='gender'
+											class="form-control required" 
+											maxlength="1" style="width: 5%; display:inline-block;" required>
 									</span> <span style="display: inline-block;">* * * * * *</span></td>
 								</tr>
 
@@ -395,13 +393,15 @@ a:active, a:focus, .no-touch a:active, .no-touch a:focus {
 									<td><span> <input type='text' pattern="^\d{3}"
 											title="3자리 모두 입력해주세요" placeholder="ex)010" name='user-pnum'
 											class="form-control required" maxlength="3"
-											style="width: 25%" required>- <input type='text'
+											style="width: 25%; display: inline-block;" required> - 
+											<input type='text'
 											pattern="^\d{4}" title="4자리 모두 입력해주세요" placeholder="ex)8071"
 											name='user-pnum2' class="form-control required" maxlength="4"
-											style="width: 25%" required> - <input type='text'
+											style="width: 25%; display: inline-block;" required> - 
+											<input type='text'
 											pattern="^\d{4}" title="4자리 모두 입력해주세요" placeholder="ex)6072"
 											name='user-pnum3' class="form-control required" maxlength="4"
-											style="width: 25%" required>
+											style="width: 25%; display: inline-block;" required>
 									</span>
 								</tr>
 
@@ -412,13 +412,13 @@ a:active, a:focus, .no-touch a:active, .no-touch a:focus {
 										<div class="form-group">
 											<label for="reg_mb_zip" class="sound_only">우편번호<strong
 												class="sound_only"> 필수</strong></label>
-											<div class="input-group">
+											<div class="input-group col-xs-9">
 												<input name="user-address1" class="form-control required"
 													id="ozipcode1" size="6" maxlength="6" readonly="1"
 													type="text"> <span class="input-group-btn">
 													<button type="button" class="btn btn-white"
-														style="margin-top: 0px; height: 35px; line-height: 35px; box-shadow: 0 1px 0 rgba(255, 255, 255, 0.15) inset, 0 1px 1px rgba(0, 0, 0, 0.075); border-radius: 5px; font-family:'Spoqa Han Sans', sans-serif;"
-														onclick="execDaumPostcode()" alt="우편번호">주소 검색</button>
+														style="font-weight: 400; margin-left: 3px; margin-top: 0px; height: 35px; line-height: 35px; box-shadow: 0 1px 0 rgba(255, 255, 255, 0.15) inset, 0 1px 1px rgba(0, 0, 0, 0.075);border-radius: 5px; font-family: 'LotteMartDream', sans-serif;"
+														onclick="execDaumPostcode()" alt="우편번호">주소검색</button>
 												</span>
 											</div>
 
@@ -487,20 +487,20 @@ a:active, a:focus, .no-touch a:active, .no-touch a:focus {
 							}
 						</script>
 
-						<div class="contents">
+						<div class="contents" style="padding: 0 0 5% 20%">
 							<table class="table">
 								<caption>기타 개인설정</caption>
 
 
 
 								<tr>
-									<th scope="row"><label for="reg_mb_mailling">메일링서비스</label></th>
+									<th scope="row" style="width: 20%"><label for="reg_mb_mailling">메일링서비스</label></th>
 									<td><input type="checkbox" name="mb_mailling" value="1"
 										id="reg_mb_mailling" checked> 정보 메일을 받겠습니다.</td>
 								</tr>
 
 								<tr>
-									<th scope="row"><label for="reg_mb_sms">SMS 수신여부</label></th>
+									<th scope="row" style="width: 20%"><label for="reg_mb_sms">SMS 수신여부</label></th>
 									<td><input type="checkbox" name="mb_sms" value="1"
 										id="reg_mb_sms" checked> 휴대폰 문자메세지를 받겠습니다.</td>
 								</tr>
@@ -510,7 +510,7 @@ a:active, a:focus, .no-touch a:active, .no-touch a:focus {
 
 						<div class="btn_confirm" style="margin-letf: 30px">
 							<input type="submit" value="회원가입" id="btn_submit"
-								class="mbskin btn01" accesskey="s"> <a href="index"
+								class="mbskin btn01" accesskey="s" style="display:inline block;"> <a href="index"
 								class="mbskin btn01"
 								style="color: #fff; background-color: #992600; margin-top: 40px;"
 								data-btn-txt-color="#fff" data-btn-bg-color="#44f3b8">취소</a>

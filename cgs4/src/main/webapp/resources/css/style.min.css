@@ -10660,7 +10660,8 @@ table.order_details {
 }
 
 .woocommerce .lobo-tabs .contents {
-	background: rgba(235, 235, 235, .75)
+/* 	background: rgba(235, 235, 235, .75) */
+backgorund-color: transparents;
 }
 
 .woocommerce .lobo-tabs .content {
@@ -10796,7 +10797,7 @@ a.wc-button {
 	background-color:#ffef96;
 	font-weight: 500;
 	text-transform: uppercase;
-	text-align: center;
+	text-align: left;
 }
 
 .p-form {
@@ -13602,7 +13603,7 @@ div.woocommerce.columns-2 ul.content-module.portfolio>li {
 
 .btn-white:hover {
 	background: #333;
-	color: #ffef96
+	color: LemonChiffon;
 }
 
 .btn-dark {

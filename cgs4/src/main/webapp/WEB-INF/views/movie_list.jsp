@@ -114,7 +114,7 @@ height:430px;
             <div class="col-sm-12">
                 <h2 class="page-heading"><strong>Movie Chart</strong></h2>
 
-                <div class="tags-area tags-area--thin">
+<!--                 <div class="tags-area tags-area--thin"> -->
                 <br>
                 <br>
 <!--                     <form id='select' class="select" method='get'> -->
@@ -130,7 +130,7 @@ height:430px;
 <!--                         </select> -->
 <!--                     </form> -->
 
-                </div>
+<!--                 </div> -->
 			<form action="movie" method="post">
 					<div class="cinema-wrap">
 				<div class="row">
@@ -172,6 +172,7 @@ height:430px;
         </section>
 
         <div class="clearfix"></div>
+        <br>
 <jsp:include page="footer.jsp"></jsp:include>
 <!--         <footer class="footer-wrapper"> -->
 <!--             <section class="container"> -->

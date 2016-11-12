@@ -147,7 +147,7 @@
 							</div>
 							
 							<div class="checked-place"></div>
-							<div class="checked-result">$0</div>
+							<div class="checked-result">0원</div>
 							</aside>
 						</div>
 					</div>

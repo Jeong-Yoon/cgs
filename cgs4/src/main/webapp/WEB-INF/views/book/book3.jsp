@@ -181,7 +181,7 @@
         <div class="clearfix"></div>
 
         <div class="booking-pagination">
-                <a href="book2.html" class="booking-pagination__prev">
+                <a href="javascript:history.back()" class="booking-pagination__prev">
                     <p class="arrow__text arrow--prev">이전 화면으로</p>
                     <span class="arrow__info">좌석선택하기</span>
                 </a>

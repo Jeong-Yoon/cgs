@@ -686,6 +686,15 @@ function init_BookingTwo () {
     	});
     	
     	function sitCheck(){
+    		if($('.norm').val()==''){
+    			$('.norm').val('0');
+    		}
+    		if($('.youg').val()==''){
+    			$('.youg').val('0');
+    		}
+    		if($('.spec').val()==''){
+    			$('.spec').val('0');
+    		}
     		var norm = parseInt($('.norm').val());
     		var youg = parseInt($('.youg').val());
     		var spec = parseInt($('.spec').val());

@@ -193,7 +193,7 @@ body .module .copy-highlight, .single-product .product_meta a:hover,
 
 .pagination .next-post a, .comment-list .even, form input[type="submit"],
 	.selector, .current-selector {
-	background-color: rgb(253, 255, 188);
+	background-color: #FFEF96;
 }
 
 .comment-list .odd, .mb_YTPLoaded, .pagination, .video-embedded .vem-overlay:hover .vem-play,
@@ -203,7 +203,7 @@ body .module .copy-highlight, .single-product .product_meta a:hover,
 }
 
 .rating-word {
-	color: rgb(253, 255, 188);
+	color: #FFEF96;
 }
 
 .woocommerce-page .item-hover:hover:before {

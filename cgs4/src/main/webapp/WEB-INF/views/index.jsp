@@ -35,8 +35,8 @@
 <link href="<%=ctx%>/resources/css/gozha-nav.css" rel="stylesheet" />
 
 <!-- REVOLUTION BANNER CSS SETTINGS -->
-<link rel="stylesheet" type="text/css"
-	href="<%=ctx%>/resources/rs-plugin/css/settings.css" media="screen" />
+<!-- <link rel="stylesheet" type="text/css" -->
+<%-- 	href="<%=ctx%>/resources/rs-plugin/css/settings.css" media="screen" /> --%>
 
 <!-- Fontawesome(아이콘폰트) -->
 <link rel="stylesheet" href="<%=ctx%>/resources/css/font-awesome.min.css">
@@ -63,7 +63,7 @@
     <![endif]-->
 
 <!-- Modernizer Script for old Browsers -->
-<script src="<%=ctx%>/js/external/modernizr-2.6.2.min.js"></script>
+<%-- <script src="<%=ctx%>/js/external/modernizr-2.6.2.min.js"></script> --%>
 
 <!-- background mp4-->
 <script
@@ -82,6 +82,31 @@ function submit(){
 		document.getElementById("gobook").submit();
 }
 </script>
+<style>
+.auth__function{
+	display:none;
+    background-color: #rgba(0, 0, 3, 0.701961);
+    width: 220px;
+    padding: 15px 29px 15px;
+    transform-origin: left top;
+    position: absolute;
+/*     top: 97px; */
+    top: 80px;
+    left: 0;
+    z-index: 2;
+    transition: all 0.8s ease;
+}
+.open-function{
+	display:block;
+}
+.auth__function-item{
+color: #fff;
+    font-size: 13px;
+    font-weight: 600;
+/*     padding: 38px 25px; */
+    text-transform: uppercase;
+}  
+</style>
 </head>
 
 <body>
@@ -205,7 +230,7 @@ function submit(){
 		<section id="portfolio">
 		<div class="section-title text-center wow fadeInDown">
 			<h2 style="color: #1f2021; margin-top: 50px">
-				<strong>MOVIE INFORMATION</strong>
+				<strong>MOVIE SPACE</strong>
 			</h2>
 		</div>
 
@@ -236,7 +261,7 @@ function submit(){
 				</c:forEach>
 				<c:forEach var="dto" items="${index_list}" begin="0" end="3" varStatus="status">
 					<input type="hidden" name="film_ID" value="${dto.film_ID}">
-					<figure class="mix portfolio-item recerel" > <img
+					<figure class="mix portfolio-item recerel"> <img
 						class="img-responsive"
 						src="<%=ctx %>/resources/images/poster/${dto.film_ID}.jpg"
 						alt="movie rank${status.count}"> <figcaption class="mask">
@@ -420,14 +445,14 @@ function submit(){
 	<script
 		src="<%=ctx%>/resources/js/external/jquery-migrate-1.2.1.min.js"></script>
 	<!-- Bootstrap 3-->
-	<script
-		src="<%=ctx%>/resources/http://netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+<!-- 	<script -->
+<%-- 		src="<%=ctx%>/resources/http://netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script> --%>
 
 	<!-- jQuery REVOLUTION Slider -->
-	<script type="text/javascript"
-		src="<%=ctx%>/resources/rs-plugin/js/jquery.themepunch.plugins.min.js"></script>
-	<script type="text/javascript"
-		src="<%=ctx%>/resources/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+<!-- 	<script type="text/javascript" -->
+<%-- 		src="<%=ctx%>/resources/rs-plugin/js/jquery.themepunch.plugins.min.js"></script> --%>
+<!-- 	<script type="text/javascript" -->
+<%-- 		src="<%=ctx%>/resources/rs-plugin/js/jquery.themepunch.revolution.min.js"></script> --%>
 
 	<!-- Mobile menu -->
 	<script src="<%=ctx%>/resources/js/jquery.mobile.menu.js"></script>
@@ -456,14 +481,16 @@ function submit(){
 
 	<script>
 		jQuery(window).scroll(function() {
-			if (jQuery(window).scrollTop() > 50) {
-				jQuery("#navigation").css("background-color", "rgba(0, 0, 3, 0.7)");
+			if (jQuery(window).scrollTop() > 400) {
+				jQuery("#navigation").css("background-color", "rgba(0, 0, 3, 0.701961)");
 				jQuery("#navigation").addClass("animated-nav");
-				jQuery('.auth__function').css("top", "66px");
+				jQuery('.auth__function').css("top", "82px");
+				jQuery('.auth__function').css("background-color", "rgba(0, 0, 3, 0.701961)");
 			} else {
-				jQuery("#navigation").css("background-color", "rgba(0, 0, 3, 0.7)");
+				jQuery("#navigation").css("background-color", "rgba(0, 0, 3, 0.701961)");
 				jQuery("#navigation").removeClass("animated-nav");
-				jQuery('.auth__function').css("top", "80px");
+				jQuery('.auth__function').css("top", "103px");
+				jQuery('.auth__function').css("background-color", "transparent");
 			}
 		});
 		$('.auth__show').click(function(e) {
@@ -481,19 +508,23 @@ function submit(){
 	<!-- Portfolio Filtering -->
 	<script src="<%=ctx%>/resources/js/min/jquery.mixitup.min.js"></script>
 	<!-- Fancybox -->
-	<script src="<%=ctx%>/resources/js/jquery.fancybox.pack.js"></script>
+<%-- 	<script src="<%=ctx%>/resources/js/jquery.fancybox.pack.js"></script> --%>
 	<!-- Parallax sections -->
-	<script src="<%=ctx%>/resources/js/jquery.parallax-1.1.3.js"></script>
+<%-- 	<script src="<%=ctx%>/resources/js/jquery.parallax-1.1.3.js"></script> --%>
 	<!-- jQuery Appear -->
-	<script src="<%=ctx%>/resources/js/jquery.appear.js"></script>
+<%-- 	<script src="<%=ctx%>/resources/js/jquery.appear.js"></script> --%>
 	<!-- countTo -->
-	<script src="<%=ctx%>/resources/js/jquery-countTo.js"></script>
+<%-- 	<script src="<%=ctx%>/resources/js/jquery-countTo.js"></script> --%>
 	<!-- owl carousel -->
-	<script src="<%=ctx%>/resources/js/min/owl.carousel.min.js"></script>
+<%-- 	<script src="<%=ctx%>/resources/js/min/owl.carousel.min.js"></script> --%>
 	<!-- WOW script -->
-	<script src="<%=ctx%>/resources/js/min/wow.min.js"></script>
+<%-- 	<script src="<%=ctx%>/resources/js/min/wow.min.js"></script> --%>
 	<!-- theme custom scripts -->
 	<script src="<%=ctx%>/resources/js/main.js"></script>
+	<script>
 
+	$('.recerel').css('display','none');
+	$('.coming').css('display','none');
+	</script>
 </body>
 </html>

@@ -79,7 +79,7 @@ color: #fff;
 
 			<!-- logo -->
 			<h1 class="navbar-brand">
-				<a href='index'> <img
+				<a href="<%=ctx%>/index"> <img
 					src="<%=ctx%>/resources/images/logo-header.png" alt="LogoCGS"
 					style="height: 75%; width: 75%">
 				</a>

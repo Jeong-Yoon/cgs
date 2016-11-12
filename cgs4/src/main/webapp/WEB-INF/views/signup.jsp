@@ -188,12 +188,13 @@ body .module .copy-highlight, .single-product .product_meta a:hover,
 .no-touch .compact-menu .main-d-nav ul li a:hover, .compact-menu .main-d-nav .menu-footer p .copy-highlight,
 	.compact-menu .main-d-nav ul li.current a {
 	color: #ffef96;
-	font-family: 'Spoqa Han Sans', sans-serif;
+	font-family: 'Godo', sans-serif;
+	font-weight: 300;
 }
 
 .pagination .next-post a, .comment-list .even, form input[type="submit"],
 	.selector, .current-selector {
-	background-color: rgb(253, 255, 188);
+	background-color: #ffef96;
 }
 
 .comment-list .odd, .mb_YTPLoaded, .pagination, .video-embedded .vem-overlay:hover .vem-play,
@@ -203,7 +204,7 @@ body .module .copy-highlight, .single-product .product_meta a:hover,
 }
 
 .rating-word {
-	color: rgb(253, 255, 188);
+	color: #ffef96;
 }
 
 .woocommerce-page .item-hover:hover:before {

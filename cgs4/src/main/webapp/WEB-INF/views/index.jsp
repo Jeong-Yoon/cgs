@@ -248,7 +248,6 @@ color: #fff;
 		<div id="projects" class="clearfix">
 			<form action="book1" method="post" class="gobook1" id="gobook">
 				<c:forEach var="dto" items="${index_list}" varStatus="status">
-				<input type='hidden' name="film_name" class="choosen-movie" id="film_name" value="${dto.film_name}">
 <%-- 					<input type="hidden" name="film_name" value="${dto.film_name}"> --%>
 					<figure class="mix portfolio-item rank now"> <img
 						class="img-responsive"
@@ -256,9 +255,10 @@ color: #fff;
 						alt="movie rank${status.count}"> <figcaption class="mask">
 					<h3>${dto.film_name}</h3>
 					<span>Doctor Strange , 2016</span> <br>
-					<a href="movie?film_ID=${dto.film_ID}" class="btn btn-book">상세보기</a> <a href="#"
-						class="btn btn-book-blue" onclick="submit()">예매하기</a> </figcaption> </figure>
+					<a href="movie?film_ID=${dto.film_ID}" class="btn btn-book">상세보기</a> <a href="book1?film_name=${dto.film_name}"
+						class="btn btn-book-blue" >예매하기</a> </figcaption> </figure>
 				</c:forEach>
+			</form>
 <%-- 				<c:forEach var="dto" items="${index_list}" begin="0" end="3" varStatus="status"> --%>
 <%-- 					<input type="hidden" name="film_ID" value="${dto.film_ID}"> --%>
 <!-- 					<figure class="mix portfolio-item recerel"> <img -->
@@ -281,7 +281,6 @@ color: #fff;
 <%-- 					<a href="movie?film_ID=${dto.film_ID}" class="btn btn-book">상세보기</a> <a href="#" --%>
 <!-- 						class="btn btn-book-blue" onclick="submit()">예매하기</a> </figcaption> </figure> -->
 <%-- 				</c:forEach> --%>
-			</form>
 			
 <!-- 		</div> -->
 <!-- 		<a href="movie_list?page=0" title="더보기" rel="portfolio" -->

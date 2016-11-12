@@ -71,7 +71,7 @@
                         <div class="ticket__inner">
 
                             <div class="ticket-secondary">
-                                <span class="ticket__item">예매 번호 <strong class="ticket__number">${sale_id}</strong></span>
+                                <span class="ticket__item">예매 번호 <strong class="ticket__number">${reserve_id}</strong></span>
                                 <span class="ticket__item ticket__date">${bInfo.screening_date}</span>
                                 <span class="ticket__item ticket__time">${bInfo.start_time}</span>
                                 <span class="ticket__item">영화관: <span class="ticket__cinema">${bInfo.site_name}</span></span>

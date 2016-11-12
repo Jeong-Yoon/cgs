@@ -17,7 +17,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import kr.co.cgs4.command.Command;
 import kr.co.cgs4.command.IndexCommand;
-import kr.co.cgs4.dao.TestDAO;
 import kr.co.cgs4.dto.FilmDTO;
 import kr.co.cgs4.dto.ScreenDTO;
 import kr.co.cgs4.util.Constant;

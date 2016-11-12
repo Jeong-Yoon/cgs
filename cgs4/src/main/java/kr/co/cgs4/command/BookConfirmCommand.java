@@ -83,5 +83,6 @@ public class BookConfirmCommand implements Command {
 		//book4화면에서 쓸 데이터를 보냄
 		model.addAttribute("sale_id", sale_ID);
 		model.addAttribute("sits", seat);
+		model.addAttribute("reserve_id", reserve_ID);
 	}
 }

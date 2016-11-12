@@ -345,8 +345,8 @@ a:active, a:focus, .no-touch a:active, .no-touch a:focus {
 					</p>
 
 					<div class="text-left">
-						<a href="signup" class="btn01" >아이디찾기</a>
-						<a href="signup" class="btn01">비밀번호찾기</a>
+						<a href="find_id" class="btn01" >아이디찾기</a>
+						<a href="find_pw" class="btn01">비밀번호찾기</a>
 						<a href="signup" class="btn01">회원가입</a>
 					</div>
 

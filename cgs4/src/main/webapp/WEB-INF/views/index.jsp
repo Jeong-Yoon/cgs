@@ -151,8 +151,8 @@ color: #fff;
 					} else {
 						String name = (String) session.getAttribute("name");
 				%>
-				<li><a href="#" class="auth__show spoqahansans normal w300">My Page</a>
-				<ul class="auth__function spoqahansans">
+				<li><a href="#" class="auth__show">My Page</a>
+				<ul class="auth__function">
 					<li class="auth__function-item normal w300">안녕하세요 <strong><%=name%></strong>님!</li>
 					<br>
 					<li class="normal w300"><a href="<%=ctx%>/modify" class="auth__function-item">내 정보 확인</a></li>
@@ -362,7 +362,12 @@ color: #fff;
 	</script>
 	<!-- Migrate -->
 	<script
-		src="<%=ctx%>/resources/js/external/jquery-migrate-1.2.1.min.js"></script>
+		src="<%=ctx%>/resources/js/external/jquery-migrate-1.2.1.min.js">
+		$('.auth__show').click(function(e) {
+			e.preventDefault();
+			$('.auth__function').toggleClass('open-function')
+		});
+		</script>
 	<!-- Bootstrap 3-->
 <!-- 	<script -->
 <%-- 		src="<%=ctx%>/resources/http://netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script> --%>
@@ -412,10 +417,7 @@ color: #fff;
 				jQuery('.auth__function').css("background-color", "transparent");
 			}
 		});
-		$('.auth__show').click(function(e) {
-			e.preventDefault();
-			$('.auth__function').toggleClass('open-function')
-		});
+
 
 	</script>
 	<!-- main jQuery -->

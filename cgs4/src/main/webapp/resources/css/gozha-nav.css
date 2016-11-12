@@ -43,7 +43,7 @@ font-Korean1: Godo
   font-family: 'Godo';
   font-style: normal;
   font-weight: 400;
-  src: url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/Godo/GodoMedium.woff2') format('woff2'), url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/Godo/GodoMedium.woff') format('woff');
+/*   src: url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/Godo/GodoMedium.woff2') format('woff2'), url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/Godo/GodoMedium.woff') format('woff'); */
 }
 
 @font-face {

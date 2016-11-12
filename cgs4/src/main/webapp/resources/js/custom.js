@@ -758,7 +758,7 @@ function init_BookingTwo () {
                             count+=1;
                             
                             $('.checked-place').append('<span class="choosen-place '+place+'">'+ place +' </span>');
-                            $('.checked-place').append('<input type="hidden" class="seat_IDs" value="'+id+'">')
+                            $('.checked-place').append('<input type="hidden" class="seat_IDs '+id+'" value="'+id+'">')
 //                            totSeat=totSeat+place;
 //                            alert(place);
 //                            alert(totSeat);
@@ -773,7 +773,7 @@ function init_BookingTwo () {
                         $(this).removeClass('sits-state--your');
                         count-=1;
                         $('.'+place+'').remove();
-                        
+                        $('.'+id+'').remove();
 
 //                        totSeat=totSeat;
 //                        alert(place);
@@ -1503,9 +1503,13 @@ function init_MoviePage () {
                     time.val(chooseTime);
                     cinema.val(chooseCinema);
                 });
-                
-                var chooseCity = $('.select .sbSelector').text();
+                var chooseCity = $('.choosen-city').val();
                 city.val(chooseCity);
+                if(chooseCity=='null'){
+                $('.choosen-city').val($('.sbSelector').text());
+                }else{
+                $('.sbSelector').text(chooseCity);
+                }
                 var chooseDate = $('.datepicker__input').val();
                 date.val(chooseDate);
 

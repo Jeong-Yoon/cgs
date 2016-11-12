@@ -300,9 +300,7 @@ a:active, a:focus, .no-touch a:active, .no-touch a:focus {
 	<jsp:include page="menu.jsp" flush="false" />
 
 
-	<section id="content-wrapper">
-
-	<!-- 로그인 시작 { -->
+	<section id="content-wrapper"> <!-- 로그인 시작 { -->
 	<div class="woo-cheader">
 		<a href="login" title="Login / Register">Login</a> / <a href="signup">Register</a>
 		<nav class="woocommerce-breadcrumb" itemprop="breadcrumb"> <a
@@ -320,12 +318,13 @@ a:active, a:focus, .no-touch a:active, .no-touch a:focus {
 							class="sound_only"> 필수</strong></label> <input name="user-email"
 							class="form-control" type="text" autofocus="" required="required"
 							placeholder="ID">
-					</p><br><br>
+					</p>
+					<br> <br>
 					<p class="form-row form-row-wide">
 						<label for="login_pw" class="login_pw">비밀번호<strong
-							class="sound_only"> 필수</strong></label> <input 
-							name="user-password" class="form-control" type="password"
-							required="required" placeholder="Password">
+							class="sound_only"> 필수</strong></label> <input name="user-password"
+							class="form-control" type="password" required="required"
+							placeholder="Password">
 					</p>
 					<button class="btn btn-lg btn-color btn-block" type="submit"
 						value="로그인">로그인</button>
@@ -339,23 +338,24 @@ a:active, a:focus, .no-touch a:active, .no-touch a:focus {
 				<aside class="panel panel-default"
 					style="padding: 10px 15px; border-bottom: 1px solid #ddd; border-top-left-radius: 3px; border-top-right-radius: 3px;">
 				<div class="panel-heading text-center">INFORMATION</div>
-				<div class="panel-body">
+				<div class="panel-body" style="width: 300px; padding: 0 0 10px 5px;">
 					<p
 						style="padding: 15px 15px; line-height: 1.5em; font-size: 0.83em; box-sizing: border-box;">
 						잊으셨다면 아이디/비밀번호 찾기를 이용하세요.<br> 아직 회원이 아니시라면 회원 가입 해주세요.
 					</p>
 
-					<div class="text-center">
-						<a href="find_id" id="login_password_lost"
-							class="btn01 first_btn">아이디 비밀번호 찾기</a> <a href="signup"
-							class="btn01">회원 가입</a>
+					<div class="text-left">
+						<a href="signup" class="btn01" >아이디찾기</a>
+						<a href="signup" class="btn01">비밀번호찾기</a>
+						<a href="signup" class="btn01">회원가입</a>
 					</div>
-				</div>
-				</aside>
-			</form>
-			<!-- 자동로그인 -->
-			<div class="btn_confirm form-signin"></div>
+
 		</div>
+		</aside>
+		</form>
+		<!-- 자동로그인 -->
+		<div class="btn_confirm form-signin"></div>
+	</div>
 	</div>
 
 	<script>
@@ -375,8 +375,8 @@ a:active, a:focus, .no-touch a:active, .no-touch a:focus {
 	</script> <!-- } 로그인 끝 --> </section>
 
 	<div class="clearfix"></div>
-<jsp:include page="footer.jsp"></jsp:include>
-</div>
+	<jsp:include page="footer.jsp"></jsp:include>
+	</div>
 	<!-- main jQuery -->
 	<script src="<%=ctx%>/resources/js/external/jquery-1.11.1.min.js"></script>
 	<script
@@ -395,7 +395,7 @@ a:active, a:focus, .no-touch a:active, .no-touch a:focus {
 	<script src="<%=ctx%>/resources/js/min/bootstrap.min.js"></script>
 	<!-- Mobile menu -->
 	<script src="<%=ctx%>/resources/js/jquery.mobile.menu.js"></script>
-		<!-- Select -->
+	<!-- Select -->
 	<script
 		src="<%=ctx%>/resources/js/external/jquery.selectbox-0.2.min.js"></script>
 	<!-- Form element -->
@@ -405,7 +405,7 @@ a:active, a:focus, .no-touch a:active, .no-touch a:focus {
 
 	<!-- Custom -->
 	<script src="<%=ctx%>/resources/js/custom.js"></script>
-	
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
 
 </body>

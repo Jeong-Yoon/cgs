@@ -42,8 +42,8 @@
 	rel="stylesheet" />
 
 <!-- REVOLUTION BANNER CSS SETTINGS -->
-<link rel="stylesheet" type="text/css"
-	href="<%=ctx%>/resources/rs-plugin/css/settings.css" media="screen" />
+<!-- <link rel="stylesheet" type="text/css" -->
+<%-- 	href="<%=ctx%>/resources/rs-plugin/css/settings.css" media="screen" /> --%>
 
 <!-- Custom -->
 <link href="<%=ctx%>/resources/css/style.css?v=1" rel="stylesheet" />
@@ -57,6 +57,11 @@
     	<script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.js"></script> 
 		<script src="http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.3.0/respond.js"></script>		
     <![endif]-->
+<style>
+section.container {
+    height: 400px;
+}
+</style>
 </head>
 
 	<body>
@@ -91,18 +96,20 @@
                         <div class="col-sm-12">
                             <textarea placeholder="Your message" name="user-message" class="form__message"></textarea>
                         </div>
-                        <a href onclick="alert('고객님의 소중한 의견 감사드립니다.');return false;"><button type="submit" class='btn btn-md btn--danger'>문의하기</button>
+                        <button type="submit" class='btn btn-md btn--danger'>문의하기</button>
                        
                     </form>
                 </div>
             </div>
         </div>
+        
+		<jsp:include page="footer.jsp"></jsp:include>
 
 
     <!-- open/close -->
         <div class="overlay overlay-hugeinc">
             
-            <section class="container">
+            <section class="container" style="height:45%">
 
                 <div class="col-sm-4 col-sm-offset-4">
                     <button type="button" class="overlay-close">Close</button>
@@ -140,27 +147,27 @@
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/external/jquery-1.10.1.min.js"><\/script>')</script>
         <!-- Migrate --> 
-        <script src="js/external/jquery-migrate-1.2.1.min.js"></script>
+        <script src="<%=ctx%>/resources/js/external/jquery-migrate-1.2.1.min.js"></script>
         <!-- Bootstrap 3--> 
         <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
 
         <!-- Mobile menu -->
-        <script src="js/jquery.mobile.menu.js"></script>
+        <script src="<%=ctx%>/resources/js/jquery.mobile.menu.js"></script>
          <!-- Select -->
-        <script src="js/external/jquery.selectbox-0.2.min.js"></script>
+        <script src="<%=ctx%>/resources/js/external/jquery.selectbox-0.2.min.js"></script>
 
         <!--*** Google map  ***-->
         <script src="https://maps.google.com/maps/api/js?sensor=true"></script> 
         <!--*** Google map infobox  ***-->
-        <script src="js/external/infobox.js"></script>
+        <script src="<%=ctx%>/resources/js/external/infobox.js"></script>
 
         <!-- Form element -->
-        <script src="js/external/form-element.js"></script>
+        <script src="<%=ctx%>/resources/js/external/form-element.js"></script>
         <!-- Form validation -->
-        <script src="js/form.js"></script>
+        <script src="<%=ctx%>/resources/js/form.js"></script>
 
         <!-- Custom -->
-        <script src="js/custom.js"></script> 
+        <script src="<%=ctx%>/resources/js/custom.js"></script> 
 		
 		<script type="text/javascript">
             $(document).ready(function() {

@@ -97,7 +97,15 @@
 		document.getElementById("film-and-time").submit();
 	}
 </script>
-
+<style>
+.datepicker:before {
+    margin-top: 22px;
+    margin-right: 3px;
+}
+.datepicker .datepicker__input {
+    margin-top: 11px;
+    }
+</style>
 </head>
 
 <body>

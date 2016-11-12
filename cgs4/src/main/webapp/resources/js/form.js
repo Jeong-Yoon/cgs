@@ -42,7 +42,7 @@ $('#contact-form').submit(function(e) {
 		var emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
 		
   		if(!emailRegex.test($email.val())) {
-			createErrTult('Error! Wrong email!', $email)
+			createErrTult('&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;이메일을 확인해주세요.', $email)
 			error++;	
 		}
 
@@ -50,7 +50,7 @@ $('#contact-form').submit(function(e) {
 			$name.removeClass('invalid_field');			
 		} 
 		else {
-			createErrTult('Error! Write your name!', $name)
+			createErrTult('&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;이름을 확인해주세요.', $name)
 			error++;
 		}
 
@@ -58,7 +58,7 @@ $('#contact-form').submit(function(e) {
 			$message.removeClass('invalid_field');
 		} 
 		else {
-			createErrTult('Error! Write message!', $message)
+			createErrTult('&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;메세지를 작성해주세요.', $message)
 			error++;
 		}
 		
@@ -68,7 +68,7 @@ $('#contact-form').submit(function(e) {
 		self.find('[type=submit]').attr('disabled', 'disabled');
 
 		self.children().fadeOut(300,function(){ $(this).remove() })
-		$('<p class="success"><span class="success-huge">Thank you!</span> <br> your message successfully sent</p>').appendTo(self)
+		$('<p class="success"><span class="success-huge">감사합니다!</span> <br> 메일이 발송되었습니다.</p>').appendTo(self)
 		.hide().delay(300).fadeIn();
 
 

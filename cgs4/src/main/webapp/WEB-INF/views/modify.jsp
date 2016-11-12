@@ -150,7 +150,7 @@ table {
 	</form>
 
 	<div class="clearfix"></div>
-
+<jsp:include page="footer.jsp"></jsp:include>
 
 
 

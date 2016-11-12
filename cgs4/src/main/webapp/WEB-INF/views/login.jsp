@@ -376,7 +376,8 @@ a:active, a:focus, .no-touch a:active, .no-touch a:focus {
 	</script> <!-- } 로그인 끝 --> </section>
 
 	<div class="clearfix"></div>
-
+<jsp:include page="footer.jsp"></jsp:include>
+</div>
 	<!-- main jQuery -->
 	<script src="<%=ctx%>/resources/js/external/jquery-1.11.1.min.js"></script>
 	<script

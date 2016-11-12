@@ -122,7 +122,7 @@
 
 
 
-
+<jsp:include page="footer.jsp"></jsp:include>
 	<!-- JavaScript-->
 	<!-- jQuery 1.9.1-->
 	<script

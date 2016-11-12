@@ -76,7 +76,9 @@
 .page_right{
  float:right;
 }
-
+.col-sm-3{
+height:430px;
+}
 
 	</style>
 </head>

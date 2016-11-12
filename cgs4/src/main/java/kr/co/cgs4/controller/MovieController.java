@@ -39,6 +39,7 @@ public class MovieController {
 		return "movie";
 	}
 	
+	
 	@RequestMapping(value = "/movie_list", method = RequestMethod.GET)
 	public String movie_list(HttpServletRequest request, Model model){
 		System.out.println("movie_list()");
@@ -47,4 +48,12 @@ public class MovieController {
 		command.execute(model);
 		return "movie_list";
 	}
+//	@RequestMapping(value = "/movie_list2", method = RequestMethod.GET)
+//	public String movie_list2(HttpServletRequest request, Model model){
+//		System.out.println("movie_list2()");
+//		model.addAttribute("request", request);
+//		command = new FilmListCommand();
+//		command.execute(model);
+//		return "movie_list2";
+//	}
 }

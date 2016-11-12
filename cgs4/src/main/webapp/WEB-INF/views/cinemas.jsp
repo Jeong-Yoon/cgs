@@ -74,7 +74,7 @@
     margin: 10px 10%;
 }
 .cine-contents {
-    margin: 30px 10%;
+/*     margin: 30px 10%; */
 }
 .tags-area {
     padding: 0 13%;
@@ -82,7 +82,17 @@
     /* color: white; */
 }
 </style>
-
+	<style>
+.post__text{
+ font-size:16px;
+}
+.tags .tags__label{
+font-size:19px;
+}
+a{
+font-size:17px;
+}
+	</style>
 
 <script>
 	function movieChk(name) {
@@ -145,7 +155,8 @@
 		<!-- 영화관목록-->
 		<div class="tags-area">
 			<div class="tags tags--unmarked">
-				<span class="tags__label">영화관 목록:</span>
+			<br>
+				<span class="tags__label"><strong>영화관 목록:</strong></span>
 				<%-- <ul>
                             
                             	<c:forEach items="${t_site}" var="tst">
@@ -163,6 +174,7 @@
 						<a href="<%=ctx%>/cinemas/?sId=${tst.site_ID}">${tst.site_name}&nbsp;&nbsp;&nbsp;&nbsp;</a>
 					</c:forEach>
 				</ul>
+				<br>
 			</div>
 		</div>
 
@@ -222,55 +234,6 @@
 
 		<div class="clearfix"></div>
 
-<!-- 		<footer class="footer-wrapper"> <section class="container"> -->
-<!-- 		<div class="col-xs-4 col-md-2 footer-nav"> -->
-<!-- 			<ul class="nav-link"> -->
-<!-- 				<li><a href="#" class="nav-link__item">Cities</a></li> -->
-<!-- 				<li><a href="movie-list-left.html" class="nav-link__item">Movies</a></li> -->
-<!-- 				<li><a href="trailer.html" class="nav-link__item">Trailers</a></li> -->
-<!-- 				<li><a href="rates-left.html" class="nav-link__item">Rates</a></li> -->
-<!-- 			</ul> -->
-<!-- 		</div> -->
-<!-- 		<div class="col-xs-4 col-md-2 footer-nav"> -->
-<!-- 			<ul class="nav-link"> -->
-<!-- 				<li><a href="coming-soon.html" class="nav-link__item">Coming -->
-<!-- 						soon</a></li> -->
-<!-- 				<li><a href="cinema-list.html" class="nav-link__item">Cinemas</a></li> -->
-<!-- 				<li><a href="offers.html" class="nav-link__item">Best -->
-<!-- 						offers</a></li> -->
-<!-- 				<li><a href="news-left.html" class="nav-link__item">News</a></li> -->
-<!-- 			</ul> -->
-<!-- 		</div> -->
-<!-- 		<div class="col-xs-4 col-md-2 footer-nav"> -->
-<!-- 			<ul class="nav-link"> -->
-<!-- 				<li><a href="#" class="nav-link__item">Terms of use</a></li> -->
-<!-- 				<li><a href="gallery-four.html" class="nav-link__item">Gallery</a></li> -->
-<!-- 				<li><a href="contact.html" class="nav-link__item">Contacts</a></li> -->
-<!-- 				<li><a href="page-elements.html" class="nav-link__item">Shortcodes</a></li> -->
-<!-- 			</ul> -->
-<!-- 		</div> -->
-<!-- 		<div class="col-xs-12 col-md-6"> -->
-<!-- 			<div class="footer-info"> -->
-<!-- 				<p class="heading-special--small"> -->
-<!-- 					A.Movie<br> <span class="title-edition">in the social -->
-<!-- 						media</span> -->
-<!-- 				</p> -->
-
-<!-- 				<div class="social"> -->
-<!-- 					<a href='#' class="social__variant fa fa-facebook"></a> <a href='#' -->
-<!-- 						class="social__variant fa fa-twitter"></a> <a href='#' -->
-<!-- 						class="social__variant fa fa-vk"></a> <a href='#' -->
-<!-- 						class="social__variant fa fa-instagram"></a> <a href='#' -->
-<!-- 						class="social__variant fa fa-tumblr"></a> <a href='#' -->
-<!-- 						class="social__variant fa fa-pinterest"></a> -->
-<!-- 				</div> -->
-
-<!-- 				<div class="clearfix"></div> -->
-<!-- 				<p class="copy">&copy; A.Movie, 2013. All rights reserved. Done -->
-<!-- 					by Olia Gozha</p> -->
-<!-- 			</div> -->
-<!-- 		</div> -->
-<!-- 		</section> </footer> -->
 	</div>
 <jsp:include page="footer.jsp"></jsp:include>
 	<!-- open/close -->
@@ -318,21 +281,21 @@
 
 	<!-- JavaScript-->
 	<!-- jQuery 1.9.1-->
-	<script
-		src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-	<script>
-		window.jQuery
-				|| document
-						.write('<script src="js/external/jquery-1.10.1.min.js"><\/script>')
-	</script>
+<!-- 	<script -->
+<!-- 		src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script> -->
+<!-- 	<script> -->
+<!-- // 		window.jQuery -->
+<!-- // 				|| document -->
+<!-- // 						.write('<script src="js/external/jquery-1.10.1.min.js"><\/script>') -->
+<!-- 	</script> -->
 	<!-- Migrate -->
-	<script
-		src="<%=ctx%>/resources/js/external/jquery-migrate-1.2.1.min.js"></script>
+<!-- 	<script -->
+<%-- 		src="<%=ctx%>/resources/js/external/jquery-migrate-1.2.1.min.js"></script> --%>
 	<!-- jQuery UI -->
-	<script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+<!-- 	<script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script> -->
 	<!-- Bootstrap 3-->
-	<script
-		src="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+<!-- 	<script -->
+<!-- 		src="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script> -->
 
 	<!-- Mobile menu -->
 	<script src="<%=ctx%>/resources/js/jquery.mobile.menu.js"></script>
@@ -340,11 +303,11 @@
 	<script
 		src="<%=ctx%>/resources/js/external/jquery.selectbox-0.2.min.js"></script>
 
-	<!-- Stars rate -->
+<!-- 	Stars rate -->
 	<script src="<%=ctx%>/resources/js/external/jquery.raty.js"></script>
-	<!-- Swiper slider -->
+<!-- 	Swiper slider -->
 	<script src="<%=ctx%>/resources/js/external/idangerous.swiper.min.js"></script>
-	<!-- Magnific-popup -->
+<!-- 	Magnific-popup -->
 	<script
 		src="<%=ctx%>/resources/js/external/jquery.magnific-popup.min.js"></script>
 
@@ -369,7 +332,7 @@
 
 	<!-- Custom -->
 	<script src="<%=ctx%>/resources/js/custom.js"></script>
-
+	
 	<script type="text/javascript">
 		$(document).ready(function() {
 			init_BookingOne();

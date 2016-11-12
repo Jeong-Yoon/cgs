@@ -39,12 +39,16 @@ public class BookDAO {
 
 	//book1에 필요한 상영정보, 상영관 정보
 	public ArrayList<Book_ScreeningInfo> screening_date(String film_name, String site_name, Date screening_date){
-		String query = "select sc.SCREENING_ID, film_name, site_name, sc.screening_date, sc.screen_num, start_time, seating_cnt "
-				+ "from SCREENING sc, site,screen where sc.SITE_ID = site.SITE_ID and site.site_id=screen.site_id "
+		String query = "select sc.screening_id, sc.screen_num, screening_date, start_time, seating_cnt "
+				+ "from screening sc, site, screen where sc.SITE_ID = site.SITE_ID and sc.screen_num = screen.screen_num and sc.site_id = screen.site_id "
 				+ "and film_name= '"+film_name+"' and site_name = '"+site_name+"' and screening_date = to_date('"+screening_date+"', 'yyyy-MM-dd') "
-				+ "group by sc.SCREENING_ID, film_name, site_name, sc.screening_date, sc.screen_num, start_time, seating_cnt order by sc.SCREENING_ID";
+				+ "group by sc.screening_id, sc.screen_num, screening_date, start_time, seating_cnt order by sc.screening_id";
 		return (ArrayList<Book_ScreeningInfo>) template.query(query, new BeanPropertyRowMapper<Book_ScreeningInfo>(Book_ScreeningInfo.class));
 	}
+//	select sc.screening_id, sc.screen_num, screening_date, start_time, seating_cnt  ( film_name, site_name빠짐)
+//	from screening sc, site, screen where sc.SITE_ID = site.SITE_ID and sc.screen_num = screen.screen_num
+//	and film_name= '"+film_name+"' and site_name = '"+site_name+"' and screening_date = to_date('"+screening_date+"', 'yyyy-MM-dd')
+//	group by sc.screening_id, sc.screen_num, screening_date, start_time, seating_cnt;
 	public ArrayList<Book_ScreenNum> screening_num(String film_name, String site_name, Date screening_date){
 		String query = "select film_name, site_name, sc.screening_date, sc.screen_num "
 				+ "from SCREENING sc, site,screen "

@@ -49,7 +49,7 @@ public class SignupController {
 		String getUserAddress1 = request.getParameter("user-address1");
 		String getUserAddress2 = request.getParameter("user-address2");
 		String getUserAddress3 = request.getParameter("user-address3");
-		String getUserAddress = getUserAddress1+getUserAddress2+getUserAddress3;
+		String getUserAddress = getUserAddress1 +getUserAddress2 +getUserAddress3;
 
 		// 생년월일
 		String getUserBirth = request.getParameter("user-birth");

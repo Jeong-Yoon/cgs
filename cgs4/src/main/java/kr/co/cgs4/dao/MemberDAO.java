@@ -42,14 +42,21 @@ public class MemberDAO {
 	public void signup(final String id, final String pw, final String name, final String address, String birth, final String phone, final String e_mail, final String gender) throws ParseException{
 		System.out.println(birth);
 		
-		//가입일 정의
-		final java.sql.Date currDate = new java.sql.Date(new java.util.Date().getTime());
-		System.out.println(currDate);
-		
-		//birth를  java.sql.Date 타입으로!
+		//날짜 입력 포멧 정하기
 		SimpleDateFormat format = new SimpleDateFormat("yyMMdd") ;
-		final java.sql.Date iBirth = new java.sql.Date(format.parse(birth).getTime());
+		//가입일 정의
+		//현재시간
+		long dateNow=new java.util.Date().getTime();
 		
+		//현재 시간을 db에 넣을 형태로 변환
+		final java.sql.Date currDate = new java.sql.Date(dateNow);
+//		final String signDate= format.format(currDate);
+//		final java.sql.Date sSignDate = new java.sql.Date(format.parse(signDate).getTime()); 
+//		System.out.println(sSignDate);
+		
+		
+		//birth를  java.sql.Date 타입으로! // 이건됨
+		final java.sql.Date iBirth = new java.sql.Date(format.parse(birth).getTime());
 		System.out.println(iBirth);
 
 		
@@ -64,7 +71,7 @@ public class MemberDAO {
 				ps.setString(4, address);
 				
 				
-				ps.setDate(5, currDate);
+				ps.setDate(5, iBirth);
 				ps.setString(6, phone);
 				ps.setString(7, e_mail);
 				//젠더
@@ -107,8 +114,11 @@ public class MemberDAO {
 	}
 	
 	//아이디 찾을때 사용함
-	public MemberDTO findID(final String name, final String birth, final String gender, final String Pnum){
-		String findID ="select * from member where name = '" + name + "' and birth = '" + birth + "' and gender='"+ gender +"' and phone_num= '"+Pnum+"'";
+	public MemberDTO findID(final String name, final String birth, final String gender, final String Pnum) throws ParseException{
+		SimpleDateFormat format = new SimpleDateFormat("yyMMdd") ;
+		final java.sql.Date iBirth = new java.sql.Date(format.parse(birth).getTime());
+		
+		String findID ="select * from member where name = '" + name + "' and birth = '" + iBirth + "' and gender='"+ gender +"' and phone_num= '"+Pnum+"'";
 		return (MemberDTO) template.queryForObject(findID, new BeanPropertyRowMapper<MemberDTO>(MemberDTO.class));
 		  
 	}

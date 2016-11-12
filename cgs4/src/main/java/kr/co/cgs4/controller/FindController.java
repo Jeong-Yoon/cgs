@@ -3,6 +3,7 @@ package kr.co.cgs4.controller;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.Date;
+import java.text.ParseException;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -33,7 +34,7 @@ public class FindController {
 
 	@RequestMapping(value = "findIDProcess")
 	public String findIDProcess(Model model, HttpServletRequest request, HttpServletResponse response,
-			HttpSession session) throws IOException {
+			HttpSession session) throws IOException, ParseException {
 
 		String name = request.getParameter("user-name");
 		String birth = request.getParameter("user-birth");

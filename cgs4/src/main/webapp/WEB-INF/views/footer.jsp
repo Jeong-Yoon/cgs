@@ -19,14 +19,6 @@
 							src="<%=ctx%>/resources/images/logo.png" alt="logo">
 					</div>
 
-					<div class="footer-social wow fadeInUp">
-						<h3>We are social</h3>
-						<ul class="text-center list-inline">
-							<li><a href="#"><i class="fa fa-facebook fa-lg"></i></a></li>
-							<li><a href="#"><i class="fa fa-twitter fa-lg"></i></a></li>
-							<li><a href="#"><i class="fa fa-google-plus fa-lg"></i></a></li>
-						</ul>
-					</div>
 
 					<div class="copyright">
 						<p style="color: gray">

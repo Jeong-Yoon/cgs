@@ -80,6 +80,8 @@
                 
                 <div class="offers-block">
                      <p class="offer-place">Reservation List </p>
+                     <c:choose>
+                     <c:when test="${!empty List}"> 
 					<c:forEach items="${rList}" var="rl">
                      <div class="col-xs-6 col-sm-4 col-md-3 offers-wrap">
                          <a href='<%=ctx%>/reserve_check/?rId=${rl.reserve_ID}' class="offer offer--day">
@@ -91,7 +93,13 @@
                              </p>
                          </a>
                      </div>
-      				 </c:forEach>              
+      				 </c:forEach>
+      				 </c:when>
+      				 <c:otherwise>
+      				 <br><br>
+      				 <center><h2>예매 내역이 없습니다.</h2></center>
+      				 </c:otherwise>
+      				 </c:choose>              
                      
                    <!--    <div class="col-xs-6 col-sm-4 col-md-3 offers-wrap">
                          <a href='reserve_check' class="offer offer--day">

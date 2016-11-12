@@ -119,7 +119,7 @@ public class MemberDAO {
 		SimpleDateFormat format = new SimpleDateFormat("yyMMdd") ;
 		final java.sql.Date iBirth = new java.sql.Date(format.parse(birth).getTime());
 		
-		String findID ="select * from member where name = '" + name + "' and birth = '" + iBirth + "' and gender='"+ gender +"' and phone_num= '"+Pnum+"'";
+		String findID ="select * from member where name = '" + name + "' and birth = to_date('"+iBirth+"','yyyy-MM-dd') and gender='"+ gender +"' and phone_num= '"+Pnum+"'";
 		return (MemberDTO) template.queryForObject(findID, new BeanPropertyRowMapper<MemberDTO>(MemberDTO.class));
 		  
 	}

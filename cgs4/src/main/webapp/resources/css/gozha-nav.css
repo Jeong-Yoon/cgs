@@ -50,14 +50,14 @@ font-Korean1: Godo
   font-family: 'Godo';
   font-style: normal;
   font-weight: 700;
-  src: url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/Godo/GodoBold.woff2') format('woff2'), url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/Godo/GodoBold.woff') format('woff');
+/*   src: url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/Godo/GodoBold.woff2') format('woff2'), url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/Godo/GodoBold.woff') format('woff'); */
 }
 
 @font-face {
   font-family: 'Godo';
   font-style: normal;
   font-weight: 300;
-  src: url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/Godo/GodoLight.woff2') format('woff2'), url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/Godo/GodoLight.woff') format('woff');
+/*   src: url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/Godo/GodoLight.woff2') format('woff2'), url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/Godo/GodoLight.woff') format('woff'); */
 }
 
 .Godo * {

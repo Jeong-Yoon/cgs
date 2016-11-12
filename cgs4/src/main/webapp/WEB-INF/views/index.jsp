@@ -236,14 +236,14 @@ color: #fff;
 
 		<nav class="project-filter clearfix text-center wow fadeInLeft"
 			data-wow-delay="0.5s">
-		<ul class="list-inline">
-			<li><a href="javascript:;" class="filter" data-filter=".rank">박스오피스</a></li>
-			<li><a href="javascript:;" class="filter" data-filter=".now">현재상영작</a></li>
-			<li><a href="javascript:;" class="filter" data-filter=".recerel">최신개봉작</a></li>
-			<li><a href="javascript:;" class="filter" data-filter=".coming">상영예정작</a></li>
-			<li><a href="javascript:;" class="filter" data-filter=".pre">시사회</a></li>
-		</ul>
-		</nav>
+<!-- 		<ul class="list-inline"> -->
+<!-- 			<li><a href="javascript:;" class="filter" data-filter=".rank">박스오피스</a></li> -->
+<!-- 			<li><a href="javascript:;" class="filter" data-filter=".now">현재상영작</a></li> -->
+<!-- 			<li><a href="javascript:;" class="filter" data-filter=".recerel">최신개봉작</a></li> -->
+<!-- 			<li><a href="javascript:;" class="filter" data-filter=".coming">상영예정작</a></li> -->
+<!-- 			<li><a href="javascript:;" class="filter" data-filter=".pre">시사회</a></li> -->
+<!-- 		</ul> -->
+<!-- 		</nav> -->
 
 		<div id="projects" class="clearfix">
 			<form action="book1" method="post" class="gobook1" id="gobook">
@@ -259,109 +259,33 @@ color: #fff;
 					<a href="movie?film_ID=${dto.film_ID}" class="btn btn-book">상세보기</a> <a href="#"
 						class="btn btn-book-blue" onclick="submit()">예매하기</a> </figcaption> </figure>
 				</c:forEach>
-				<c:forEach var="dto" items="${index_list}" begin="0" end="3" varStatus="status">
-					<input type="hidden" name="film_ID" value="${dto.film_ID}">
-					<figure class="mix portfolio-item recerel"> <img
-						class="img-responsive"
-						src="<%=ctx %>/resources/images/poster/${dto.film_ID}.jpg"
-						alt="movie rank${status.count}"> <figcaption class="mask">
-					<h3>${dto.film_name}</h3>
-					<span>Doctor Strange , 2016</span> <br>
-					<a href="movie?film_ID=${dto.film_ID}" class="btn btn-book">상세보기</a> <a href="#"
-						class="btn btn-book-blue" onclick="submit()">예매하기</a> </figcaption> </figure>
-				</c:forEach>
-				<c:forEach var="dto" items="${coming}" begin="0" end="3" varStatus="status">
-					<input type="hidden" name="film_ID" value="${dto.film_ID}">
-					<figure class="mix portfolio-item coming"> <img
-						class="img-responsive"
-						src="<%=ctx %>/resources/images/poster/${dto.film_ID}.jpg"
-						alt="movie rank${status.count}"> <figcaption class="mask">
-					<h3>${dto.film_name}</h3>
-					<span>Doctor Strange , 2016</span> <br>
-					<a href="movie?film_ID=${dto.film_ID}" class="btn btn-book">상세보기</a> <a href="#"
-						class="btn btn-book-blue" onclick="submit()">예매하기</a> </figcaption> </figure>
-				</c:forEach>
+<%-- 				<c:forEach var="dto" items="${index_list}" begin="0" end="3" varStatus="status"> --%>
+<%-- 					<input type="hidden" name="film_ID" value="${dto.film_ID}"> --%>
+<!-- 					<figure class="mix portfolio-item recerel"> <img -->
+<!-- 						class="img-responsive" -->
+<%-- 						src="<%=ctx %>/resources/images/poster/${dto.film_ID}.jpg" --%>
+<%-- 						alt="movie rank${status.count}"> <figcaption class="mask"> --%>
+<%-- 					<h3>${dto.film_name}</h3> --%>
+<!-- 					<span>Doctor Strange , 2016</span> <br> -->
+<%-- 					<a href="movie?film_ID=${dto.film_ID}" class="btn btn-book">상세보기</a> <a href="#" --%>
+<!-- 						class="btn btn-book-blue" onclick="submit()">예매하기</a> </figcaption> </figure> -->
+<%-- 				</c:forEach> --%>
+<%-- 				<c:forEach var="dto" items="${coming}" begin="0" end="3" varStatus="status"> --%>
+<%-- 					<input type="hidden" name="film_ID" value="${dto.film_ID}"> --%>
+<!-- 					<figure class="mix portfolio-item coming"> <img -->
+<!-- 						class="img-responsive" -->
+<%-- 						src="<%=ctx %>/resources/images/poster/${dto.film_ID}.jpg" --%>
+<%-- 						alt="movie rank${status.count}"> <figcaption class="mask"> --%>
+<%-- 					<h3>${dto.film_name}</h3> --%>
+<!-- 					<span>Doctor Strange , 2016</span> <br> -->
+<%-- 					<a href="movie?film_ID=${dto.film_ID}" class="btn btn-book">상세보기</a> <a href="#" --%>
+<!-- 						class="btn btn-book-blue" onclick="submit()">예매하기</a> </figcaption> </figure> -->
+<%-- 				</c:forEach> --%>
 			</form>
 			
-
-			<!-- 			<figure class="mix portfolio-item rank now"> <img -->
-<!-- 				class="img-responsive" -->
-<%-- 				src="<%=ctx%>/resources/images/poster/doctorstrange.jpg" --%>
-<!-- 				alt="movie rank1">  				 -->
-<!-- 			<figcaption class="mask"> -->
-<!-- 			<h3>닥터스트레인지</h3> -->
-<!-- 			<span>Doctor Strange , 2016</span> <br> -->
-<!-- 			<a href="#" class="btn btn-book">상세보기</a> -->
-<!-- 			<a href="book1" class="btn btn-book-blue">예매하기</a> </figcaption> </figure> -->
-
-<!-- 			<figure class="mix portfolio-item rank now"> <img -->
-<!-- 				class="img-responsive" -->
-<%-- 				src="<%=ctx%>/resources/images/poster/lucky.jpg" alt="movie rank2"> --%>
-<!-- 			<figcaption class="mask"> -->
-<!-- 			<h3>럭키</h3> -->
-<!-- 			<span>LUCK-KEY , 2016</span> <br> -->
-<!-- 			<a href="#" class="btn btn-book">평가하기</a> <a href="book1" -->
-<!-- 				class="btn btn-book-blue">예매하기</a> </figcaption> </figure> -->
-
-<!-- 			<figure class="mix portfolio-item rank now recerel"> <img -->
-<!-- 				class="img-responsive" -->
-<%-- 				src="<%=ctx%>/resources/images/poster/lostindust.jpg" --%>
-<%-- 				alt="movie rank3">                     <a href="<%=ctx %>/resources/images/portfolio/portfolio-3.jpg" title="Title Three" rel="portfolio" class="fancybox"><span class="plus"></span></a> --%>
-<!-- 			<figcaption class="mask"> -->
-<!-- 			<h3>로스트인더스트</h3> -->
-<!-- 			<span>Hell or High Water, 2016</span> <br> -->
-<!-- 			<a href="#" class="btn btn-book">평가하기</a> <a href="book1" -->
-<!-- 				class="btn btn-book-blue">예매하기</a> </figcaption> </figure> -->
-
-<!-- 			<figure class="mix portfolio-item rank now"> <img -->
-<!-- 				class="img-responsive" -->
-<%-- 				src="<%=ctx%>/resources/images/poster/muhyun.jpg" alt="movie rank4"> --%>
-<!-- 			<figcaption class="mask"> -->
-<!-- 			<h3>무현, 두 도시 이야기</h3> -->
-<!-- 			<span>무현, 두 도시 이야기, 2016</span> <br> -->
-<!-- 			<a href="#" class="btn btn-book">평가하기</a> <a href="book1" -->
-<!-- 				class="btn btn-book-blue">예매하기</a> </figcaption> </figure> -->
-
-<!-- 			<figure class="mix portfolio-item rank now recerel"> <img -->
-<!-- 				class="img-responsive" -->
-<%-- 				src="<%=ctx%>/resources/images/poster/teachers diary.jpg" --%>
-<%-- 				alt="movie rank5">                     <a href="<%=ctx %>/resources/images/portfolio/portfolio-4.jpg" title="Title Four" rel="portfolio" class="fancybox"><span class="plus"></span></a> --%>
-<!-- 			<figcaption class="mask"> -->
-<!-- 			<h3>선생님의 일기</h3> -->
-<!-- 			<span>The Teacher's Diary, 2014</span> <br> -->
-<!-- 			<a href="#" class="btn btn-book">평가하기</a> <a href="book1" -->
-<!-- 				class="btn btn-book-blue">예매하기</a> </figcaption> </figure> -->
-
-<!-- 			<figure class="mix portfolio-item rank coming pre"> <img -->
-<!-- 				class="img-responsive" -->
-<%-- 				src="<%=ctx%>/resources/images/poster/split.jpg" alt="movie rank5"> --%>
-<!-- 			<figcaption class="mask"> -->
-<!-- 			<h3>스플릿</h3> -->
-<!-- 			<span>Split, 2016</span> <br> -->
-<!-- 			<a href="#" class="btn btn-book">평가하기</a> <a href="book1" -->
-<!-- 				class="btn btn-book-blue">예매하기</a> </figcaption> </figure> -->
-
-<!-- 			<figure class="mix portfolio-item rank now"> <img -->
-<!-- 				class="img-responsive" -->
-<%-- 				src="<%=ctx%>/resources/images/poster/Inferno.jpg" alt="movie rank5"> --%>
-<!-- 			<figcaption class="mask"> -->
-<!-- 			<h3>인페르노</h3> -->
-<!-- 			<span>Inferno, 2016</span> <br> -->
-<!-- 			<a href="#" class="btn btn-book">평가하기</a> <a href="book1" -->
-<!-- 				class="btn btn-book-blue">예매하기</a> </figcaption> </figure> -->
-
-<!-- 			<figure class="mix portfolio-item rank coming"> <img -->
-<!-- 				class="img-responsive" -->
-<%-- 				src="<%=ctx%>/resources/images/poster/Infinity.jpg" --%>
-<%-- 				alt="movie rank5">                     <a href="<%=ctx %>/resources/images/portfolio/portfolio-4.jpg" title="Title Four" rel="portfolio" class="fancybox"><span class="plus"></span></a> --%>
-<!-- 			<figcaption class="mask"> -->
-<!-- 			<h3>무한대를 본 남자</h3> -->
-<!-- 			<span>The Man Who Knew Infinity, 2015</span> <br> -->
-<!-- 			<a href="#" class="btn btn-book">평가하기</a> <a href="book1" -->
-<!-- 				class="btn btn-book-blue">예매하기</a> </figcaption> </figure> -->
-		</div>
-		<a href="movie_list?page=0" title="더보기" rel="portfolio"
-			class="fancybox"><span class="plus"></span></a> </section>
+<!-- 		</div> -->
+<!-- 		<a href="movie_list?page=0" title="더보기" rel="portfolio" -->
+<!-- 			class="fancybox"><span class="plus"></span></a> </section> -->
 		<!-- end #projects -->
 
 
@@ -369,19 +293,18 @@ color: #fff;
 		<!--
         #subscribe
         ========================== -->
-		<section id="subscribe"
-			data-vide-bg="<%=ctx%>/resources/video/mainvideo">
+		<section id="subscribe">
 		<div class="container" >
-			<div class="row" >
-				<div class="col-md-7 wow fadeInLeft" style="left:20%; padding: 40px 0px 50px 0px">
-					<h3 style='margin: 20px 5px'>CGS 소식지 구독하기</h3>
-					<form action="#" method="post" class="subscription-form">
-						<i class="fa fa-envelope-o fa-lg" style="font-size: 1.7em"></i> <input type="email"
-							name="subscribe" class="subscribe" placeholder="YOUR MAIL"
-							required=""> <input type="submit" value="SUBSCRIBE"
-							id="mail-submit">
-					</form>
-				</div>
+<!-- 			<div class="row" > -->
+<!-- 				<div class="col-md-7 wow fadeInLeft" style="left:20%; padding: 40px 0px 50px 0px"> -->
+<!-- 					<h3 style='margin: 20px 5px'>CGS 소식지 구독하기</h3> -->
+<!-- 					<form action="#" method="post" class="subscription-form"> -->
+<!-- 						<i class="fa fa-envelope-o fa-lg" style="font-size: 1.7em"></i> <input type="email" -->
+<!-- 							name="subscribe" class="subscribe" placeholder="YOUR MAIL" -->
+<!-- 							required=""> <input type="submit" value="SUBSCRIBE" -->
+<!-- 							id="mail-submit"> -->
+<!-- 					</form> -->
+<!-- 				</div> -->
 <!-- 				<div class="col-md-4 text-left wow fadeInRight"> -->
 <!-- 					<p style="color: white; padding: 1px;">정기적으로 CGS 최신 영화, 이벤트 소식을 -->
 <!-- 						전해드립니다 :)</p> -->
@@ -410,11 +333,7 @@ color: #fff;
 
 					<div class="footer-social wow fadeInUp">
 						<h3>We are social</h3>
-						<ul class="text-center list-inline">
-							<li><a href="#"><i class="fa fa-facebook fa-lg"></i></a></li>
-							<li><a href="#"><i class="fa fa-twitter fa-lg"></i></a></li>
-							<li><a href="#"><i class="fa fa-google-plus fa-lg"></i></a></li>
-						</ul>
+						
 					</div>
 
 					<div class="copyright">
@@ -468,7 +387,7 @@ color: #fff;
 	<script src="<%=ctx%>/resources/js/form.js"></script>
 
 	<!-- Twitter feed -->
-	<script src="<%=ctx%>/resources/js/external/twitterfeed.js"></script>
+<%-- 	<script src="<%=ctx%>/resources/js/external/twitterfeed.js"></script> --%>
 
 	<!-- Custom -->
 	<script src="<%=ctx%>/resources/js/custom.js"></script>

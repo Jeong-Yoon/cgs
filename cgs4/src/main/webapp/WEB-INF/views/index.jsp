@@ -434,8 +434,8 @@ color: #fff;
 
 	<!-- JavaScript-->
 	<!-- jQuery 1.11.1-->
-	<script
-		src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<!-- 	<script -->
+<!-- 		src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> -->
 	<script>
 		window.jQuery
 				|| document

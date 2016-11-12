@@ -109,6 +109,7 @@
                         <li class="book-result__item">상영관: <span class="book-result__count"> ${cInfo.screen_num}관</span></li>
                         <li class="book-result__item">영화 시작시간: <span class="book-result__count">${cInfo.start_time}</span></li>
                         <li class="book-result__item">예매 인원: <span class="book-result__count">${cInfo.sale_cnt}명</span></li>
+                        <li class="book-result__item">선택 좌석: <span class="book-result__count">${cInfo.choosen_sits}</span></li>
                         <li class="book-result__item">구매 금액: <span class="book-result__count booking-cost">${cInfo.sale_price}원</span></li>
                     </ul>
                     <input type='hidden' name="film_name" class="film_name" value="${cInfo.film_name}">
@@ -123,6 +124,7 @@
 		<input type='hidden' name='common_cnt' class="choosen-number--expansive" value="${cInfo.common_cnt }">
 		<input type='hidden' name='sale_price' class="choosen-cost" value="${cInfo.sale_price }">
 		<input type='hidden' name='choosen_sits' class="choosen_sits" value="${cInfo.choosen_sits }">
+		<input type='hidden' name='seat_ID' class="seat_ID" value="${cInfo.seat_ID }">
 
                     <h2 class="page-heading">결제 정보 입력</h2>
                     <div class="payment">

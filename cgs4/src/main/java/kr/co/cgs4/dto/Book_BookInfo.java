@@ -7,7 +7,7 @@ public class Book_BookInfo {
 	private String screening_date;
 	private String screen_num;
 	private String start_time;
-	
+
 	public String getScreening_ID() {
 		return screening_ID;
 	}

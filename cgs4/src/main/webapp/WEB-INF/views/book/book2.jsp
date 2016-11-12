@@ -133,7 +133,7 @@
 							<c:forEach var="col" items="${seat}">
 							<c:if test="${row.row_num eq col.row_num}">
 									<span class="sits__place sits-price--cheap" data-place='${col.row_num}${col.col_num}'
-									data-price='10'>${col.row_num}${col.col_num}</span>
+									data-price='10' id="${col.seat_ID }">${col.row_num}${col.col_num}</span>
 							</c:if>
 							</c:forEach>
 							</div>
@@ -226,6 +226,7 @@
 		<input type='hidden' name="start_time" class="start_time" value="${bInfo.start_time}">
 		<input type='hidden' name="screening_ID" value="${bInfo.screening_ID }"> 
 		
+		<input type='hidden' name='seat_ID' class="seatID">
 		<input type='hidden' name='sale_cnt' class="choosen-number">
 		<input type='hidden' name='special_cnt' class="choosen-number--cheap">
 		<input type='hidden' name='young_cnt' class="choosen-number--middle">

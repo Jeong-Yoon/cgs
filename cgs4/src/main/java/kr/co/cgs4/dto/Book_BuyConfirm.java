@@ -13,7 +13,14 @@ public class Book_BuyConfirm {
 	private String common_cnt;
 	private String sale_price;
 	private String choosen_sits;
+	private String seat_ID;
 	
+	public String getSeat_ID() {
+		return seat_ID;
+	}
+	public void setSeat_ID(String seat_ID) {
+		this.seat_ID = seat_ID;
+	}
 	public String getScreening_ID() {
 		return screening_ID;
 	}

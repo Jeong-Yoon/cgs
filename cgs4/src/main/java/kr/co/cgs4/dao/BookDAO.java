@@ -65,7 +65,7 @@ public class BookDAO {
 	//
 	//book2에 필요한 seatDTO, sale_seat정보
 	public ArrayList<SeatDTO> seat(String site_name, String screen_num){
-		String query = "select site_name, b.site_id, seat_status, row_num, col_num, screen_num "
+		String query = "select site_name, b.site_id, seat_status, row_num, col_num, screen_num, seat_id "
 				+ "from (select ROWNUM rn, e.* from seat e) b, site "
 				+ "where b.site_id=site.site_id and site_name='"+site_name+"' and screen_num='"+screen_num+"' order by rn";
 		return (ArrayList<SeatDTO>) template.query(query, new BeanPropertyRowMapper<SeatDTO>(SeatDTO.class));
@@ -117,13 +117,10 @@ public class BookDAO {
 		//sits의 개수만큼 돌면서 seat_sale 넣기
 		System.out.println("seat_sale 넣기 시작");
 		for (int i = 0; i < sits.length; i++) {
-			String[] rowCol = sits[i].trim().split("");
-			String rowNum = rowCol[0];
-			String colNum = rowCol[1];
-			String getQuery= "select seat_id from seat where row_num='"+rowNum+"' and col_num='"+colNum+"'";
-			SeatDTO sdto = template.queryForObject(getQuery, new BeanPropertyRowMapper<SeatDTO>(SeatDTO.class));
+			System.out.println(sits[i]);
+			final String seat_ID = sits[i];
+			System.out.println(seat_ID);
 			//sale_seat 에 넣기
-			final String seat_ID = sdto.getSeat_ID();
 			String setQuery= "INSERT INTO SALE_SEAT VALUES (to_date(?, 'yyyy-MM-dd'), ?, ?, ?)";
 			template.update(setQuery, new PreparedStatementSetter() {
 				@Override
@@ -146,7 +143,7 @@ public class BookDAO {
 				ps.setString(2, SALE_ID);
 				ps.setDate(3, CURRDATE);
 			}
-		}); 
+		});
 		System.out.println("member_sale 넣음");
 		//reserve에 넣을 회원의 이름, 전화번호 구해옴.
 		String memQuery= "select name, phone_num from member where member_id='"+id+"'";

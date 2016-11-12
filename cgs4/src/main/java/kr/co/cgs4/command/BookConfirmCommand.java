@@ -37,9 +37,10 @@ public class BookConfirmCommand implements Command {
 		BookDAO bdao = new BookDAO();
 		
 		//좌석 받아와서 스플릿
-		String choosenSits = hsr.getParameter("choosen_sits");
+		String seat = hsr.getParameter("choosen_sits");
+		String choosenSits = hsr.getParameter("seat_ID");
 		System.out.println(choosenSits);
-		String[] sits= choosenSits.split(" ");
+		String[] sits= choosenSits.split(" ");
 		
 		//난수로 saleid만들기
 		String sale_ID="", reserve_ID="";
@@ -81,6 +82,6 @@ public class BookConfirmCommand implements Command {
 		
 		//book4화면에서 쓸 데이터를 보냄
 		model.addAttribute("sale_id", sale_ID);
-		model.addAttribute("sits", choosenSits);
+		model.addAttribute("sits", seat);
 	}
 }

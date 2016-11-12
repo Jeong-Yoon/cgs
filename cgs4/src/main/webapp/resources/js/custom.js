@@ -221,66 +221,66 @@ function init_Home() {
     "use strict";
 
 	//1. Init revolution slider and add arrows behaviour
-				var api = $('.banner').revolution({
-                    delay:9000,
-                    startwidth:1170,
-                    startheight:500,
-             
-                     onHoverStop:"on",
-             
-                     hideArrowsOnMobile:"off",
+//				var api = $('.banner').revolution({
+//                    delay:9000,
+//                    startwidth:1170,
+//                    startheight:500,
+//             
+//                     onHoverStop:"on",
+//             
+//                     hideArrowsOnMobile:"off",
+//
+//                     hideTimerBar:"on",
+//                     hideThumbs:'0',
+//             
+//                     keyboardNavigation:"on",
+//             
+//                     navigationType:"none",
+//                     navigationArrows:"solo",
+//             
+//                     soloArrowLeftHalign:"left",
+//                     soloArrowLeftValign:"center",
+//                     soloArrowLeftHOffset:0,
+//                     soloArrowLeftVOffset:0,
+//             
+//                     soloArrowRightHalign:"right",
+//                     soloArrowRightValign:"center",
+//                     soloArrowRightHOffset:0,
+//                     soloArrowRightVOffset:0,
+//             
+//             
+//                     touchenabled:"on",
+//                     swipe_velocity:"0.7",
+//                     swipe_max_touches:"1",
+//                     swipe_min_touches:"1",
+//                     drag_block_vertical:"false",
+//             
+//             
+//                     fullWidth:"off",
+//                     forceFullWidth:"off",
+//                     fullScreen:"off",
+//             
+//                  });
 
-                     hideTimerBar:"on",
-                     hideThumbs:'0',
-             
-                     keyboardNavigation:"on",
-             
-                     navigationType:"none",
-                     navigationArrows:"solo",
-             
-                     soloArrowLeftHalign:"left",
-                     soloArrowLeftValign:"center",
-                     soloArrowLeftHOffset:0,
-                     soloArrowLeftVOffset:0,
-             
-                     soloArrowRightHalign:"right",
-                     soloArrowRightValign:"center",
-                     soloArrowRightHOffset:0,
-                     soloArrowRightVOffset:0,
-             
-             
-                     touchenabled:"on",
-                     swipe_velocity:"0.7",
-                     swipe_max_touches:"1",
-                     swipe_min_touches:"1",
-                     drag_block_vertical:"false",
-             
-             
-                     fullWidth:"off",
-                     forceFullWidth:"off",
-                     fullScreen:"off",
-             
-                  });
-
-                    api.bind("revolution.slide.onchange",function (e,data) {
-                         var slides = $('.banner .slide');
-                         var currentSlide= data.slideIndex;
-
-                         var nextSlide = slides.eq(currentSlide).attr('data-slide');
-                         var prevSlide = slides.eq(currentSlide-2).attr('data-slide');
-
-                         var lastSlide = slides.length;
-
-                         if(currentSlide == lastSlide) {
-                             var nextSlide = slides.eq(0).attr('data-slide');
-                         }
+//                    api.bind("revolution.slide.onchange",function (e,data) {
+//                         var slides = $('.banner .slide');
+//                         var currentSlide= data.slideIndex;
+//
+//                         var nextSlide = slides.eq(currentSlide).attr('data-slide');
+//                         var prevSlide = slides.eq(currentSlide-2).attr('data-slide');
+//
+//                         var lastSlide = slides.length;
+//
+//                         if(currentSlide == lastSlide) {
+//                             var nextSlide = slides.eq(0).attr('data-slide');
+//                         }
 
                          //put onload value for slider navigation
-                        $('.tp-leftarrow').html( '<span class="slider__info">' + prevSlide + '</span>');
-                        $('.tp-rightarrow').html( '<span class="slider__info">' + nextSlide + '</span>');
-
-                    });
-
+//                        $('.tp-leftarrow').html( '<span class="slider__info">' + prevSlide + '</span>');
+//                        $('.tp-rightarrow').html( '<span class="slider__info">' + nextSlide + '</span>');
+//                        
+//                    });
+                    
 	
 	//2. Dropdown for authorize button
     		//user list option
@@ -306,9 +306,7 @@ function init_Home() {
                         
                         //get the data attribute of the clicked link(which is equal to value filter of our content)
                         var filter = $(this).attr('data-filter');
-                        if(filter == null){
-                        	var filter = $(this).attr('.rank');
-                        }
+
                         //Filter buttons
                         //show all the list items(this is needed to get the hidden ones shown)
                         $(".select__btn a").show();
@@ -364,13 +362,13 @@ function init_Home() {
 
     //4. Rating scrore init
     //Rating star
-    $('.score').raty({
-        width:130, 
-        score: 0,
-        path: 'resources/images/rate/',
-        starOff : 'star-off.svg',
-        starOn  : 'star-on.svg' 
-    });
+//    $('.score').raty({
+//        width:130, 
+//        score: 0,
+//        path: 'resources/images/rate/',
+//        starOff : 'star-off.svg',
+//        starOn  : 'star-on.svg' 
+//    });
 
     //5. Scroll down navigation function
     //scroll down
@@ -607,8 +605,13 @@ function init_BookingOne() {
                     e.preventDefault();
                     $(this).toggleClass('hide-content');
                     $('.choose-film').slideToggle(400);
-                })
-
+                });
+//                $('.film_button').each(function(){
+//                	if($(this).val()==$('.choosed_film').text())
+//                        $(this).css("background-color","")
+//                });
+                
+                
                 $('.choose-indector--time').click(function (e) {
                     e.preventDefault();
                     $(this).toggleClass('hide-content');
@@ -671,6 +674,7 @@ function init_BookingTwo () {
                     middleTicket = 6000,
                     expansiveTicket = 7000,
                     sits = $('.choosen_sits'),
+                    sitID = $('.seatID'),
                     pplNum = 0;
     
     // 좌석 4개로 제한하기
@@ -743,6 +747,7 @@ function init_BookingTwo () {
                 $('.sits__place').click(function (e) {
                     e.preventDefault();
                     var place = $(this).attr('data-place');
+                    var id = $(this).attr('id');
 //                    var ticketPrice = $(this).attr('data-price');
                     
                     if(! $(e.target).hasClass('sits-state--your')){
@@ -752,8 +757,8 @@ function init_BookingTwo () {
                             $(this).addClass('sits-state--your');
                             count+=1;
                             
-                            $('.checked-place').append('<span class="choosen-place '+place+'">'+ place +'&nbsp</span>');
-                            
+                            $('.checked-place').append('<span class="choosen-place '+place+'">'+ place +' </span>');
+                            $('.checked-place').append('<input type="hidden" class="seat_IDs" value="'+id+'">')
 //                            totSeat=totSeat+place;
 //                            alert(place);
 //                            alert(totSeat);
@@ -791,13 +796,19 @@ function init_BookingTwo () {
 
                     //data element init
                     var chooseSits = '';
+                    var chooseSitID = '';
                     $('.sits').find('.choosen-place').each( function () {
 //                        alert(chooseSits);
-                        chooseSits += $(this).text()
+                        chooseSits += $(this).text();
+                    });
+                    $('.sits').find('.seat_IDs').each( function () {
+//                    	alert( $(this).val());
+                    	chooseSitID+= $(this).val()+" ";
                     });
 
                     //data element set 
                     sits.val(chooseSits);
+                    sitID.val(chooseSitID);
                 });
 
 				//--- Step for data  ---//
@@ -1025,29 +1036,29 @@ function init_Contact () {
 
 	//1. Fullscreen map init
 				//Init map
-                    var mapOptions = {
-                        scaleControl: true,
-                        center: new google.maps.LatLng(51.509708, -0.130539),
-                        zoom: 15,
-                        navigationControl: false,
-                        streetViewControl: false,
-                        mapTypeControl: false,
-                        mapTypeId: google.maps.MapTypeId.ROADMAP
-                    };
-                    var map = new google.maps.Map(document.getElementById('location-map'),mapOptions);
-                    var marker = new google.maps.Marker({
-                        map: map,
-                        position: map.getCenter() 
-                    });
+//                    var mapOptions = {
+//                        scaleControl: true,
+//                        center: new google.maps.LatLng(51.509708, -0.130539),
+//                        zoom: 15,
+//                        navigationControl: false,
+//                        streetViewControl: false,
+//                        mapTypeControl: false,
+//                        mapTypeId: google.maps.MapTypeId.ROADMAP
+//                    };
+//                    var map = new google.maps.Map(document.getElementById('location-map'),mapOptions);
+//                    var marker = new google.maps.Marker({
+//                        map: map,
+//                        position: map.getCenter() 
+//                    });
 
                     //Custome map style
-                    var map_style = [{stylers:[{saturation:-100},{gamma:3}]},{elementType:"labels.text.stroke",stylers:[{visibility:"off"}]},{featureType:"poi.business",elementType:"labels.text",stylers:[{visibility:"off"}]},{featureType:"poi.business",elementType:"labels.icon",stylers:[{visibility:"off"}]},{featureType:"poi.place_of_worship",elementType:"labels.text",stylers:[{visibility:"off"}]},{featureType:"poi.place_of_worship",elementType:"labels.icon",stylers:[{visibility:"off"}]},{featureType:"road",elementType:"geometry",stylers:[{visibility:"simplified"}]},{featureType:"water",stylers:[{visibility:"on"},{saturation:0},{gamma:2},{hue:"#aaaaaa"}]},{featureType:"administrative.neighborhood",elementType:"labels.text.fill",stylers:[{visibility:"off"}]},{featureType:"road.local",elementType:"labels.text",stylers:[{visibility:"off"}]},{featureType:"transit.station",elementType:"labels.icon",stylers:[{visibility:"off"}]}]
+//                    var map_style = [{stylers:[{saturation:-100},{gamma:3}]},{elementType:"labels.text.stroke",stylers:[{visibility:"off"}]},{featureType:"poi.business",elementType:"labels.text",stylers:[{visibility:"off"}]},{featureType:"poi.business",elementType:"labels.icon",stylers:[{visibility:"off"}]},{featureType:"poi.place_of_worship",elementType:"labels.text",stylers:[{visibility:"off"}]},{featureType:"poi.place_of_worship",elementType:"labels.icon",stylers:[{visibility:"off"}]},{featureType:"road",elementType:"geometry",stylers:[{visibility:"simplified"}]},{featureType:"water",stylers:[{visibility:"on"},{saturation:0},{gamma:2},{hue:"#aaaaaa"}]},{featureType:"administrative.neighborhood",elementType:"labels.text.fill",stylers:[{visibility:"off"}]},{featureType:"road.local",elementType:"labels.text",stylers:[{visibility:"off"}]},{featureType:"transit.station",elementType:"labels.icon",stylers:[{visibility:"off"}]}]
 
                     //Then we use this data to create the styles.
-                    var styled_map = new google.maps.StyledMapType(map_style, {name: "Cusmome style"});
+//                    var styled_map = new google.maps.StyledMapType(map_style, {name: "Cusmome style"});
 
-                    map.mapTypes.set('map_styles', styled_map);
-                    map.setMapTypeId('map_styles');
+//                    map.mapTypes.set('map_styles', styled_map);
+//                    map.setMapTypeId('map_styles');
 
 
                     //=====================================
@@ -1061,40 +1072,40 @@ function init_Contact () {
                     boxTextA.innerHTML = '<span class="pop_up_box_text">Leicester Sq, London, WC2H 7LP</span>';
 
                     //Sets up the configuration options of the pop-up info box.
-                    var infoboxOptionsA = {
-                     content: boxTextA
-                     ,disableAutoPan: false
-                     ,maxWidth: 0
-                     ,pixelOffset: new google.maps.Size(30, -50)
-                     ,zIndex: null
-                     ,boxStyle: {
-                     background: "#4c4145"
-                     ,opacity: 1
-                     ,width: "300px"
-                     ,color: " #b4b1b2"
-                     ,fontSize:"13px"
-                     ,padding:'14px 20px 15px'
-                     }
-                     ,closeBoxMargin: "6px 2px 2px 2px"
-                     ,infoBoxClearance: new google.maps.Size(1, 1)
-                     ,closeBoxURL: "images/components/close.svg"
-                     ,isHidden: false
-                     ,pane: "floatPane"
-                     ,enableEventPropagation: false
-                    };
+//                    var infoboxOptionsA = {
+//                     content: boxTextA
+//                     ,disableAutoPan: false
+//                     ,maxWidth: 0
+//                     ,pixelOffset: new google.maps.Size(30, -50)
+//                     ,zIndex: null
+//                     ,boxStyle: {
+//                     background: "#4c4145"
+//                     ,opacity: 1
+//                     ,width: "300px"
+//                     ,color: " #b4b1b2"
+//                     ,fontSize:"13px"
+//                     ,padding:'14px 20px 15px'
+//                     }
+//                     ,closeBoxMargin: "6px 2px 2px 2px"
+////                     ,infoBoxClearance: new google.maps.Size(1, 1)
+//                     ,closeBoxURL: "images/components/close.svg"
+//                     ,isHidden: false
+//                     ,pane: "floatPane"
+//                     ,enableEventPropagation: false
+//                    };
 
                     
                     //Creates the pop-up infobox for Glastonbury, adding the configuration options set above.
-                    var infoboxA = new InfoBox(infoboxOptionsA);
+//                    var infoboxA = new InfoBox(infoboxOptionsA);
 
 
                     //Add an 'event listener' to the Glastonbury map marker to listen out for when it is clicked.
-                    google.maps.event.addListener(marker, "click", function (e) {
+//                    google.maps.event.addListener(marker, "click", function (e) {
                      //Open the Glastonbury info box.
-                     infoboxA.open(map, this);
+//                     infoboxA.open(map, this);
                      //Sets the Glastonbury marker to be the center of the map.
-                     map.setCenter(marker.getPosition());
-                    });
+//                     map.setCenter(marker.getPosition());
+//                    });
 }
 
 function init_Gallery () {
@@ -1493,13 +1504,8 @@ function init_MoviePage () {
                     cinema.val(chooseCinema);
                 });
                 
-                var chooseCity = $('.choosen-city').val();
+                var chooseCity = $('.select .sbSelector').text();
                 city.val(chooseCity);
-                if(chooseCity=='null'){
-                $('.choosen-city').val($('.sbSelector').text());
-                }else{
-                $('.sbSelector').text(chooseCity);
-                }
                 var chooseDate = $('.datepicker__input').val();
                 date.val(chooseDate);
 
@@ -1627,47 +1633,47 @@ function init_MoviePage () {
 
    	//9. Init map with several markers on.
    					//Map start init
-                    var mapOptions = {
-                        scaleControl: true,
-                        center: new google.maps.LatLng(51.508798, -0.131687),
-                        zoom: 15,
-                        navigationControl: false,
-                        streetViewControl: false,
-                        mapTypeControl: false,
-                        mapTypeId: google.maps.MapTypeId.ROADMAP
-                    };
-                    var map = new google.maps.Map(document.getElementById('cimenas-map'),mapOptions);
-                    var marker = new google.maps.Marker({
-                        map: map,
-                        position: map.getCenter()
-                    });
-
-                    var markerB = new google.maps.Marker({
-                        map: map,
-                        position: new google.maps.LatLng(51.510838, -0.130400)
-                    });
-
-                    var markerC = new google.maps.Marker({
-                        map: map,
-                        position: new google.maps.LatLng(51.512615, -0.130607)
-                    });
-
-                    var markerD = new google.maps.Marker({
-                        map: map,
-                        position: new google.maps.LatLng(51.509859, -0.130213)
-                    });
-
-                    var markerE = new google.maps.Marker({
-                        map: map,
-                        position: new google.maps.LatLng(51.509194, -0.130091)
-                    });
+//                    var mapOptions = {
+//                        scaleControl: true,
+//                        center: new google.maps.LatLng(51.508798, -0.131687),
+//                        zoom: 15,
+//                        navigationControl: false,
+//                        streetViewControl: false,
+//                        mapTypeControl: false,
+//                        mapTypeId: google.maps.MapTypeId.ROADMAP
+//                    };
+//                    var map = new google.maps.Map(document.getElementById('cimenas-map'),mapOptions);
+//                    var marker = new google.maps.Marker({
+//                        map: map,
+//                        position: map.getCenter()
+//                    });
+//
+//                    var markerB = new google.maps.Marker({
+//                        map: map,
+//                        position: new google.maps.LatLng(51.510838, -0.130400)
+//                    });
+//
+//                    var markerC = new google.maps.Marker({
+//                        map: map,
+//                        position: new google.maps.LatLng(51.512615, -0.130607)
+//                    });
+//
+//                    var markerD = new google.maps.Marker({
+//                        map: map,
+//                        position: new google.maps.LatLng(51.509859, -0.130213)
+//                    });
+//
+//                    var markerE = new google.maps.Marker({
+//                        map: map,
+//                        position: new google.maps.LatLng(51.509194, -0.130091)
+//                    });
 
 
                     //Custome map style
-                    var map_style = [{stylers:[{saturation:-100},{gamma:3}]},{elementType:"labels.text.stroke",stylers:[{visibility:"off"}]},{featureType:"poi.business",elementType:"labels.text",stylers:[{visibility:"off"}]},{featureType:"poi.business",elementType:"labels.icon",stylers:[{visibility:"off"}]},{featureType:"poi.place_of_worship",elementType:"labels.text",stylers:[{visibility:"off"}]},{featureType:"poi.place_of_worship",elementType:"labels.icon",stylers:[{visibility:"off"}]},{featureType:"road",elementType:"geometry",stylers:[{visibility:"simplified"}]},{featureType:"water",stylers:[{visibility:"on"},{saturation:0},{gamma:2},{hue:"#aaaaaa"}]},{featureType:"administrative.neighborhood",elementType:"labels.text.fill",stylers:[{visibility:"off"}]},{featureType:"road.local",elementType:"labels.text",stylers:[{visibility:"off"}]},{featureType:"transit.station",elementType:"labels.icon",stylers:[{visibility:"off"}]}]
+//                    var map_style = [{stylers:[{saturation:-100},{gamma:3}]},{elementType:"labels.text.stroke",stylers:[{visibility:"off"}]},{featureType:"poi.business",elementType:"labels.text",stylers:[{visibility:"off"}]},{featureType:"poi.business",elementType:"labels.icon",stylers:[{visibility:"off"}]},{featureType:"poi.place_of_worship",elementType:"labels.text",stylers:[{visibility:"off"}]},{featureType:"poi.place_of_worship",elementType:"labels.icon",stylers:[{visibility:"off"}]},{featureType:"road",elementType:"geometry",stylers:[{visibility:"simplified"}]},{featureType:"water",stylers:[{visibility:"on"},{saturation:0},{gamma:2},{hue:"#aaaaaa"}]},{featureType:"administrative.neighborhood",elementType:"labels.text.fill",stylers:[{visibility:"off"}]},{featureType:"road.local",elementType:"labels.text",stylers:[{visibility:"off"}]},{featureType:"transit.station",elementType:"labels.icon",stylers:[{visibility:"off"}]}]
 
                     //Then we use this data to create the styles.
-                    var styled_map = new google.maps.StyledMapType(map_style, {name: "Cusmome style"});
+//                    var styled_map = new google.maps.StyledMapType(map_style, {name: "Cusmome style"});
 
                     map.mapTypes.set('map_styles', styled_map);
                     map.setMapTypeId('map_styles');

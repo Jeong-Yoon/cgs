@@ -8,7 +8,7 @@
 .mbskin a.btn01:focus, .mbskin .btn01:hover {}
 .mbskin a.btn02 {}
 .mbskin a.btn02:focus, .mbskin .btn02:hover {}
-.mbskin .btn_confirm {} /* 서식단계 진행 */
+.mbskin .btn_confirm { style:padding 20px 0; }
 .mbskin .btn_submit {}
 .mbskin button.btn_submit {}
 .mbskin fieldset .btn_submit {}

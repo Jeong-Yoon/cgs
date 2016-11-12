@@ -316,7 +316,7 @@ a:active, a:focus, .no-touch a:active, .no-touch a:focus {
 							<form id="login-form" action="signupProcess" method="post"
 								autocomplete="off">
 								<table>
-									<caption>사이트이용정보입력</caption>
+									<caption>사이트이용정보</caption>
 									<tr>
 										<th scope="row" style="width: 30%"><label for="reg_mb_id">아이디<strong
 												class="sound_only">필수</strong></label></th>
@@ -351,7 +351,7 @@ a:active, a:focus, .no-touch a:active, .no-touch a:focus {
 						<div class="contents col-xs-13" style="padding: 5% 0 5% 20%">
 							<!-- 						<div class="tbl_frm01 tbl_wrap"> -->
 							<table>
-								<caption>개인정보 입력</caption>
+								<caption>회원정보입력</caption>
 								<tr>
 									<th scope="row" style="width: 30%"><label for="reg_mb_name">이름<strong
 											class="sound_only">필수</strong></label></th>
@@ -487,7 +487,7 @@ a:active, a:focus, .no-touch a:active, .no-touch a:focus {
 
 						<div class="contents" style="padding: 5% 0 5% 25%">
 							<table class="table">
-								<caption>기타 개인설정</caption>
+								<caption>소식받기</caption>
 								<tr>
 									<th scope="row" style="width: 20%; top:0px;"><label for="reg_mb_mailling">메일링서비스</label></th>
 									<td><input type="checkbox" name="mb_mailling" value="1"
@@ -499,95 +499,18 @@ a:active, a:focus, .no-touch a:active, .no-touch a:focus {
 									<td><input type="checkbox" style="margin: 0;" name="mb_sms" value="1"
 										id="reg_mb_sms" checked> 휴대폰 문자메세지를 받겠습니다.</td>
 								</tr>
-
 							</table>
 						</div>
 
-						<div class="btn_confirm" style="margin-letf: 30px">
-							<input type="submit" value="회원가입" id="btn_submit"
-								class="mbskin btn01" accesskey="s" style="display:inline block;"> <a href="index"
-								class="mbskin btn01"
-								style="color: #fff; background-color: #992600; margin-top: 40px;"
-								data-btn-txt-color="#fff" data-btn-bg-color="#44f3b8">취소</a>
+						<div class="btn_confirm" style="text-align: center">
+							<input type="submit" value="가입하기" id="btn_submit"
+								class="btn01" accesskey="s" style="display:inline-block; margin-bottom:30px">
+							<a href="index"
+								class="btn01"
+								style="color: #fff; background-color: #992600;  margin-top: 40px; width:80px; height:180px;"
+								data-btn-txt-color="#fff" data-btn-bg-color="#44f3b8">취소하기</a>
 						</div>
 						</form>
-
-						<script>
-							$(function() {
-								$("#reg_zip_find").css("display",
-										"inline-block");
-
-							});
-
-							// submit 최종 폼체크
-							function fregisterform_submit(f) {
-								// 회원아이디 검사
-								if (f.w.value == "") {
-									var msg = reg_user_id_check();
-									if (msg) {
-										alert(msg);
-										f.user_id.select();
-										return false;
-									}
-								}
-
-								if (f.w.value == '') {
-									if (f.user_password.value.length < 3) {
-										alert('비밀번호를 3글자 이상 입력하십시오.');
-										f.user_password.focus();
-										return false;
-									}
-								}
-
-								if (f.user_password.value != f.user_password_re.value) {
-									alert('비밀번호가 같지 않습니다.');
-									f.user_password_re.focus();
-									return false;
-								}
-
-								if (f.user_password.value.length > 0) {
-									if (f.user_password_re.value.length < 3) {
-										alert('비밀번호를 3글자 이상 입력하십시오.');
-										f.user_password_re.focus();
-										return false;
-									}
-								}
-
-								// 이름 검사
-								if (f.w.value == '') {
-									if (f.user_name.value.length < 1) {
-										alert('이름을 입력하십시오.');
-										f.user_name.focus();
-										return false;
-									}
-								}
-
-								// E-mail 검사
-								if ((f.w.value == "")
-										|| (f.w.value == "u" && f.user_email.defaultValue != f.user_email.value)) {
-									var msg = reg_user_email_check();
-									if (msg) {
-										alert(msg);
-										f.reg_user_email.select();
-										return false;
-									}
-								}
-								// 휴대폰번호 체크
-								var msg = reg_user_hp_check();
-								if (msg) {
-									alert(msg);
-									f.reg_user_hp.select();
-									return false;
-								}
-
-								if (!chk_captcha())
-									return false;
-
-								document.getElementById("btn_submit").disabled = "disabled";
-
-								return true;
-							}
-						</script>
 					</div>
 				</div>
 			</div>
@@ -595,78 +518,7 @@ a:active, a:focus, .no-touch a:active, .no-touch a:focus {
 	</div>
 
 	<!-- } 회원정보 입력/수정 끝 -->
-	<div class="clearfix"></div>
 	</section>
-
-
-	<!-- Main content -->
-
-
-
-
-	<!-- 	<div class="container"> -->
-	<!-- 				<table width="150" border="0" > -->
-
-	<!-- 				<tr> -->
-	<!-- 				<td><center><p>아이디</p></center></td> -->
-	<!-- 				<td colspan="2"><p><input type='text' placeholder='아이디를 입력해주세요' name='user-id' class="login__input" required></p></td> -->
-	<!-- 				</tr> -->
-
-	<!-- 				<tr> -->
-	<!-- 				<td><center><p>비밀번호</p></center></td> -->
-	<!-- 				<td colspan="2"><p><input type='password' pattern="^[0-9a-zA-Z]{4,20}" title="영어 또는 숫자로 4자리 이상으로 입력하세요." placeholder='비밀번호를 입력해주세요' name='user-password' class="login__input" required></p></td> -->
-	<!-- 				</tr> -->
-
-	<!-- 				<tr> -->
-	<!-- 				<td><center><p>비밀번호 확인</p></center></td> -->
-	<!-- 				<td colspan="2"><p><input type='password' pattern="^[0-9a-zA-Z]{4,20}" title="영어 또는 숫자로 4자리 이상으로 입력하세요." placeholder='한번 더 입력해주세요' name='user-passwordok' class="login__input" required></p></td> -->
-	<!-- 				</tr> -->
-
-	<!-- 				<tr> -->
-	<!-- 				<td><center><p>이름</p></center></td> -->
-	<!-- 				<td colspan="2"><p><input type='text' placeholder='이름을 입력해주세요' name='user-name' class="login__input" required></p></td> -->
-	<!-- 				</tr> -->
-
-	<!-- 				<tr> -->
-	<!-- 				<td><center><p>생년월일</p></center></td> -->
-	<!-- 				<td><p><input type='text' pattern="^\d{6}" title="공백없이 6자리 모두 입력해주세요" placeholder="ex)931202" name='user-birth' class="login__input" maxlength="6" required></p></td> -->
-	<!-- 				<td width="20"> <center><p>-</p></center></td> -->
-
-
-	<!-- 				<td><p><input type='text' pattern="[1234]" title="올바른 숫자를 입력해주세요" placeholder="ex)1" name='gender' class="login__input" maxlength="1" required></p></td> -->
-	<!-- 				<td></td> -->
-	<!-- 				<td><p>* * * * * *</p></td> -->
-	<!-- 				</tr> -->
-
-
-	<!-- 				<tr> -->
-	<!--  <th scope="row"><label for="reg_mb_hp">휴대폰번호<strong class="sound_only">필수</strong></label></th> -->
-	<!-- 				<td><p><input type='text' pattern="^\d{3}" title="3자리 모두 입력해주세요" placeholder="ex)010"name='user-pnum' class="form-control required" maxlength="3" required></p></td> -->
-	<!-- 				<td width="20"> <center><p>-</p></center> </td> -->
-	<!-- 				<td><p><input type='text' pattern="^\d{4}" title="4자리 모두 입력해주세요" placeholder="ex)8071" name='user-pnum2' class="form-control required" maxlength="4" required></p></td> -->
-	<!-- 				<td width="20"> <center><p>-</p></center>  </td> -->
-	<!-- 				<td><p><input type='text' pattern="^\d{4}" title="4자리 모두 입력해주세요" placeholder="ex)6072"name='user-pnum3' class="form-control required" maxlength="4" required></p></td> -->
-	<!-- 				</tr> -->
-
-	<!-- 				<tr> -->
-	<!-- 				<td><center><p>이메일</p></center></td> -->
-	<!-- 				<td colspan="3"><p><input type='email' title="이메일 타입으로 입력해주세요" placeholder="ex)inha@naver.com" name='user-email' class="login__input" required></p></td> -->
-	<!-- 				</tr> -->
-
-	<!-- 				<tr> -->
-	<!-- 				<td><center><p>주소</p></center></td> -->
-	<!-- 				<td colspan="3"><p><input type='text' name='user-address' placeholder="ex)인천광역시 남구 인하로 100"class="login__input" required></p></td> -->
-	<!-- 				</tr> -->
-
-
-	<!-- 				</table> -->
-	<!-- 				<br><br><br> -->
-	<!-- </div> -->
-	<!-- 			<div class="login__control"> -->
-	<!-- 				<button type='submit' class="btn btn-md btn--warning btn--wider">Sign Up</button>&nbsp&nbsp -->
-	<!-- 				<a href='index'><button type="button" class="btn btn-md btn--warning btn--wider">Cancle</button></a> -->
-	<!-- 			</div> -->
-	<!-- 	</form> -->
 
 	<div class="clearfix"></div>
 

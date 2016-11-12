@@ -93,6 +93,7 @@ body, .inner-post .post-title, .product-content, .product-content h3,
 	li.product .price del+ins {
 	font-family: 'LotteMartDream', sans serif;
 	font-size: 14px;
+	margin-top: 3px;
 }
 
 .hero-text-intro .hero-intro h1, .hero-text-intro .hero-intro h2,
@@ -313,8 +314,6 @@ a:active, a:focus, .no-touch a:active, .no-touch a:focus {
 				<div class="woocommerce">
 					<div class="lobo-tabs clearfix">
 						<div class="contents col-xs-13" style="padding: 10% 0 5% 20%">
-							<!--         <script src="http://airing.kr/js/jquery.register_form.js"></script> -->
-
 							<form id="login-form" action="signupProcess" method="post"
 								autocomplete="off">
 								<table>
@@ -415,7 +414,7 @@ a:active, a:focus, .no-touch a:active, .no-touch a:focus {
 											<div class="input-group col-xs-9">
 												<input name="user-address1" class="form-control required"
 													id="ozipcode1" size="6" maxlength="6" readonly="1"
-													type="text"> <span class="input-group-btn">
+													type="text" required> <span class="input-group-btn">
 													<button type="button" class="btn btn-white"
 														style="font-weight: 400; margin-left: 3px; margin-top: 0px; height: 35px; line-height: 35px; box-shadow: 0 1px 0 rgba(255, 255, 255, 0.15) inset, 0 1px 1px rgba(0, 0, 0, 0.075);border-radius: 5px; font-family: 'LotteMartDream', sans-serif;"
 														onclick="execDaumPostcode()" alt="우편번호">주소검색</button>
@@ -425,7 +424,7 @@ a:active, a:focus, .no-touch a:active, .no-touch a:focus {
 											<label for="reg_mb_addr1">기본주소<strong
 												class="sound_only"> 필수</strong></label> <input name="user-address2"
 												class="form-control required" id="oaddr1" size="50"
-												readonly="1" type="text"> <label for="reg_mb_addr2">상세주소</label>
+												readonly="1" type="text" required> <label for="reg_mb_addr2">상세주소</label>
 											<input type="text" name="user-address3" value="" id="oaddr2"
 												class="form-control frm_address" size="50">
 										</div>

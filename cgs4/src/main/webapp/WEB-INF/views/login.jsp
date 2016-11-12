@@ -315,13 +315,12 @@ a:active, a:focus, .no-touch a:active, .no-touch a:focus {
 				class="loginBox_1 form-signin">
 				<!--             <input type="hidden" name="url" value="http%3A%2F%2Fairing.kr"> -->
 				<fieldset id="login_fs" class="woocommerce-billing-fields">
-					<legend>회원로그인</legend>
 					<p class="form-row form-row-wide">
 						<label for="login_id" class="login_id">회원아이디<strong
 							class="sound_only"> 필수</strong></label> <input name="user-email"
 							class="form-control" type="text" autofocus="" required="required"
 							placeholder="ID">
-					</p>
+					</p><br><br>
 					<p class="form-row form-row-wide">
 						<label for="login_pw" class="login_pw">비밀번호<strong
 							class="sound_only"> 필수</strong></label> <input 

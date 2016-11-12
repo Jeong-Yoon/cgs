@@ -115,6 +115,7 @@ public class MemberDAO {
 	
 	//아이디 찾을때 사용함
 	public MemberDTO findID(final String name, final String birth, final String gender, final String Pnum) throws ParseException{
+		System.out.println(birth);
 		SimpleDateFormat format = new SimpleDateFormat("yyMMdd") ;
 		final java.sql.Date iBirth = new java.sql.Date(format.parse(birth).getTime());
 		

@@ -347,7 +347,7 @@ a:active, a:focus, .no-touch a:active, .no-touch a:focus {
 					</p>
 
 					<div class="text-center">
-						<a href="find_id" target="_blank" id="login_password_lost"
+						<a href="find_id" id="login_password_lost"
 							class="btn01 first_btn">아이디 비밀번호 찾기</a> <a href="signup"
 							class="btn01">회원 가입</a>
 					</div>

@@ -321,15 +321,15 @@ a:active, a:focus, .no-touch a:active, .no-touch a:focus {
 									<tr>
 										<th scope="row"><label for="reg_mb_id">아이디<strong
 												class="sound_only">필수</strong></label></th>
-										<td><span class="frm_info">영문자, 숫자, _ 만 입력 가능. 최소
+										<td><span class="frm_info">영문자, 숫자만 입력 가능. 최소
 												3자이상 입력하세요.</span> <input type="text" name="user-id" value=""
-											id="reg_mb_id" class="form-control required " minlength="3"
+											id="reg_mb_id" pattern="^[0-9a-zA-Z]{3,20}" title="영어 또는 숫자로 3자리 이상으로 입력하세요." placeholder= '영어 또는 숫자로 3자리 이상으로 입력하세요.' class="form-control required " minlength="3"
 											maxlength="20" required> <span id="msg_mb_id"></span></td>
 									</tr>
 									<tr>
 										<th scope="row"><label for="reg_mb_password">비밀번호<strong
 												class="sound_only">필수</strong></label></th>
-										<td><input type="password" name="user_password"
+										<td><input type="password" pattern="^[0-9a-zA-Z]{4,20}" title="영어 또는 숫자로 4자리 이상으로 입력하세요." placeholder='비밀번호를 입력해주세요' name="user_password"
 											id="reg_mb_password" class="form-control required"
 											minlength="3" maxlength="20" required></td>
 									</tr>
@@ -337,7 +337,7 @@ a:active, a:focus, .no-touch a:active, .no-touch a:focus {
 										<th scope="row"><label for="reg_mb_password_re">비밀번호
 												확인<strong class="sound_only">필수</strong>
 										</label></th>
-										<td><input type="password" name="user_password_re"
+										<td><input type="password" pattern="^[0-9a-zA-Z]{4,20}" title="영어 또는 숫자로 4자리 이상으로 입력하세요." placeholder='비밀번호를 다시 입력해주세요' name="user_password_re"
 											id="reg_mb_password_re" class="form-control required"
 											minlength="3" maxlength="20" required></td>
 									</tr>
@@ -350,7 +350,7 @@ a:active, a:focus, .no-touch a:active, .no-touch a:focus {
 								<tr>
 									<th scope="row"><label for="reg_mb_name">이름<strong
 											class="sound_only">필수</strong></label></th>
-									<td><input type="text" id="reg_user_name" name="user_name"
+									<td><input type="text" placeholder='이름을 입력해주세요' id="reg_user_name" name="user_name"
 										value="" required class="form-control required"></td>
 								</tr>
 
@@ -373,7 +373,7 @@ a:active, a:focus, .no-touch a:active, .no-touch a:focus {
 								<tr>
 									<th scope="row"><label for="reg_mb_email">E-mail<strong
 											class="sound_only">필수</strong></label></th>
-									<td><input type="email" name="user-email" value=""
+									<td><input type="email" name="user-email" title="이메일 타입으로 입력해주세요" placeholder="ex)inha@naver.com"
 										id="reg_mb_email" required class="form-control email required"
 										size="50" maxlength="100"></td>
 								</tr>

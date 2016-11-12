@@ -46,9 +46,9 @@
 
 /* 폼 테이블 */
 .mbskin table {}
-.mbskin caption {padding-top:0;font-size:1.583em; font-family:'Godo',sans-serif;}
+.mbskin caption {padding-top:0;font-size:1.383em; font-family:'Godo',sans-serif; }
 .mbskin .tbl_frm01 {margin:0 10px 20px}
-.mbskin .tbl_frm01 table {width:100%;border-collapse:collapse;border-spacing:0}
+.mbskin .tbl_frm01 table {width:80%;border-collapse:collapse;border-spacing:0; margin-top: 40px;}
 .mbskin .tbl_frm01 th {padding:10px 5px;border:1px solid #dfdfdf;color:#383838;text-align:left;font-size:1.083em;}
 .mbskin .tbl_frm01 td {border-top:1px solid #dfdfdf;border-bottom:1px solid #dfdfdf;font-size:12px;color:#666;}
 .mbskin .tbl_frm01 textarea, .frm_input {border:1px solid #dcdcdc;;color:#000;vertical-align:middle;line-height:2em}
@@ -142,8 +142,8 @@
 .mbskin .loginBox_1{border:1px solid #e2e2e2 !important;border-radius:5px;margin-bottom:20px;text-align:left;}
 .mbskin .mb_id{display:block;font-weight:bold;width:100%;text-align:left;margin-bottom:20px;}
 .mbskin .mb_pw{display:inline-block;text-align:left;float:left;line-height:25px}
-.mbskin .btn01{background-color: #ffef96;padding: 7px 15px; border: 1px solid #ffef96;/*background-image: linear-gradient(to bottom, #fff 0px, #ffef96 5%);background-repeat: repeat-x;*/color: #fff;box-shadow: 0 1px 0 rgba(255, 255, 255, 0.15) inset, 0 1px 1px rgba(0, 0, 0, 0.075);font-size: 0.93em;border-radius: 5px;}
-.mbskin .btn01{background-color:#ffef96 !important; color:#4a4a4a !important;margin-top:20px;}
+.mbskin .btn01{font-family:'LotteMartDream',sans-serif;background-color: #ffef96;padding: 7px 15px; border: 1px solid transparent;/*background-image: linear-gradient(to bottom, #fff 0px, #ffef96 5%);background-repeat: repeat-x;*/color: #4a4a4a;box-shadow: 0 1px 0 rgba(255, 255, 255, 0.15) inset, 0 1px 1px rgba(0, 0, 0, 0.075);font-size: 0.93em;border-radius: 5px;}
+.mbskin .btn01:hover{background-color:#4a4a4a; border:#ffef96 !important; color:#ffef96 !important;margin-top:20px;}
 .mbskin .first_btn{margin-right:5px;}
 .mbskin .btn02{width:100%;background-color:#5bc0de;padding:10px 0;border:1px solid #28a4c9;color:#fff;box-shadow:0 1px 0 rgba(255, 255, 255, 0.15) inset, 0 1px 1px rgba(0, 0, 0, 0.075);background-image: linear-gradient(to bottom, #5bc0de 0px, #28a4c9 100%);cursor: pointer;-webkit-appearance: button;font-size: 0.93em;border-radius:5px !important;}
 .mbskin .btn02:hover{background-color:#28a4c9;}

@@ -71,7 +71,7 @@
 }
 
 .text-hero-title, .text-hero-subtitle {
-	font-family: 'Lato'
+	font-family: 'Lato';
 }
 
 body, .inner-post .post-title, .product-content, .product-content h3,
@@ -91,7 +91,8 @@ body, .inner-post .post-title, .product-content, .product-content h3,
 	.lobo-tabs input, .lobo-tabs select, .lobo-tabs textarea, .lobo-tabs radio,
 	.lobo-tabs checkbox, .lobo-tabs label, .lobo-tabs label abbr, .module .lobo-accordion h3,
 	li.product .price del+ins {
-	font-family: 'Godo', sans serif;
+	font-family: 'LotteMartDream', sans serif;
+	font-size: 14px;
 }
 
 .hero-text-intro .hero-intro h1, .hero-text-intro .hero-intro h2,
@@ -317,63 +318,71 @@ a:active, a:focus, .no-touch a:active, .no-touch a:focus {
 							<form id="login-form" action="signupProcess" method="post"
 								autocomplete="off">
 								<table>
-									<caption>사이트 이용정보 입력</caption>
+									<caption></caption>
 									<tr>
 										<th scope="row"><label for="reg_mb_id">아이디<strong
 												class="sound_only">필수</strong></label></th>
-										<td><span class="frm_info">영문자, 숫자만 입력 가능. 최소
-												3자이상 입력하세요.</span> <input type="text" name="user-id" value=""
-											id="reg_mb_id" pattern="^[0-9a-zA-Z]{3,20}" title="영어 또는 숫자로 3자리 이상으로 입력하세요." placeholder= '영어 또는 숫자로 3자리 이상으로 입력하세요.' class="form-control required " minlength="3"
-											maxlength="20" required> <span id="msg_mb_id"></span></td>
+										<td><span class="frm_info">영문자, 숫자만 입력 가능. 최소 3자이상
+												입력하세요.</span> <input type="text" name="user-id" value=""
+											id="reg_mb_id" pattern="^[0-9a-zA-Z]{3,20}"
+											title="영어 또는 숫자로 3자리 이상으로 입력하세요."
+											placeholder='영어 또는 숫자로 3자리 이상으로 입력하세요.'
+											class="form-control required " minlength="3" maxlength="20"
+											required> <span id="msg_mb_id"></span></td>
 									</tr>
 									<tr>
 										<th scope="row"><label for="reg_mb_password">비밀번호<strong
 												class="sound_only">필수</strong></label></th>
-										<td><input type="password" pattern="^[0-9a-zA-Z]{4,20}" title="영어 또는 숫자로 4자리 이상으로 입력하세요." placeholder='비밀번호를 입력해주세요' name="user_password"
-											id="reg_mb_password" class="form-control required"
-											minlength="3" maxlength="20" required></td>
+										<td><input type="password" pattern="^[0-9a-zA-Z]{4,20}"
+											title="영어 또는 숫자로 4자리 이상으로 입력하세요." placeholder='비밀번호를 입력해주세요'
+											name="user_password" id="reg_mb_password"
+											class="form-control required" minlength="3" maxlength="20"
+											required></td>
 									</tr>
 									<tr>
 										<th scope="row"><label for="reg_mb_password_re">비밀번호
 												확인<strong class="sound_only">필수</strong>
 										</label></th>
-										<td><input type="password" pattern="^[0-9a-zA-Z]{4,20}" title="영어 또는 숫자로 4자리 이상으로 입력하세요." placeholder='비밀번호를 다시 입력해주세요' name="user_password_re"
+										<td><input type="password" pattern="^[0-9a-zA-Z]{4,20}"
+											title="영어 또는 숫자로 4자리 이상으로 입력하세요."
+											placeholder='비밀번호를 다시 입력해주세요' name="user_password_re"
 											id="reg_mb_password_re" class="form-control required"
 											minlength="3" maxlength="20" required></td>
 									</tr>
 								</table>
 						</div>
-
-						<div class="tbl_frm01 tbl_wrap">
+						<div class="contents">
+							<!-- 						<div class="tbl_frm01 tbl_wrap"> -->
 							<table>
 								<caption>개인정보 입력</caption>
 								<tr>
 									<th scope="row"><label for="reg_mb_name">이름<strong
 											class="sound_only">필수</strong></label></th>
-									<td><input type="text" placeholder='이름을 입력해주세요' id="reg_user_name" name="user_name"
-										value="" required class="form-control required"></td>
+									<td><input type="text" placeholder='이름을 입력해주세요'
+										id="reg_user_name" name="user_name" value="" required
+										class="form-control required"></td>
 								</tr>
 
 								<tr>
 									<th scope="row"><label for="reg_mb_name">생년월일<strong
 											class="sound_only">필수</strong></label></th>
-
-									<td><span> <input type='text' pattern="^\d{6}"
-											title="공백없이 6자리 모두 입력해주세요" placeholder="ex)931202"
+									<td><span>
+											<input type='date' 
 											name='user-birth' class="form-control required"
-											style="width: 40%" maxlength="6" required>- <input
+											style="width: 40% display: inline-block; " maxlength="6" required>-<input
 											type='text' pattern="[1234]" title="올바른 숫자를 입력해주세요"
 											placeholder="ex)1" name='gender'
-											class="form-control required" maxlength="1" style="width: 5%"
+											class="form-control required" style="display: inline-block;" maxlength="1" style="width: 5%"
 											required>
-									</span> <span>* * * * * *</span></td>
+									</span> <span style="display: inline-block;">* * * * * *</span></td>
 								</tr>
 
 
 								<tr>
 									<th scope="row"><label for="reg_mb_email">E-mail<strong
 											class="sound_only">필수</strong></label></th>
-									<td><input type="email" name="user-email" title="이메일 타입으로 입력해주세요" placeholder="ex)inha@naver.com"
+									<td><input type="email" name="user-email"
+										title="이메일 타입으로 입력해주세요" placeholder="ex)inha@naver.com"
 										id="reg_mb_email" required class="form-control email required"
 										size="50" maxlength="100"></td>
 								</tr>
@@ -397,8 +406,8 @@ a:active, a:focus, .no-touch a:active, .no-touch a:focus {
 								</tr>
 
 								<tr>
-									<th scope="row"><small>주소</small> <strong
-										class="sound_only">필수</strong></th>
+									<th scope="row"><label for="reg_mb_zip">주소<strong
+											class="sound_only">필수</strong></label></th>
 									<td class="address_label">
 										<div class="form-group">
 											<label for="reg_mb_zip" class="sound_only">우편번호<strong
@@ -408,7 +417,7 @@ a:active, a:focus, .no-touch a:active, .no-touch a:focus {
 													id="ozipcode1" size="6" maxlength="6" readonly="1"
 													type="text"> <span class="input-group-btn">
 													<button type="button" class="btn btn-white"
-														style="margin-top: 0px; height: 35px; line-height: 35px; background-color: #ffef96;"
+														style="margin-top: 0px; height: 35px; line-height: 35px; box-shadow: 0 1px 0 rgba(255, 255, 255, 0.15) inset, 0 1px 1px rgba(0, 0, 0, 0.075); border-radius: 5px; font-family:'Spoqa Han Sans', sans-serif;"
 														onclick="execDaumPostcode()" alt="우편번호">주소 검색</button>
 												</span>
 											</div>
@@ -478,7 +487,7 @@ a:active, a:focus, .no-touch a:active, .no-touch a:focus {
 							}
 						</script>
 
-						<div class="tbl_frm01 tbl_wrap">
+						<div class="contents">
 							<table class="table">
 								<caption>기타 개인설정</caption>
 
@@ -496,22 +505,14 @@ a:active, a:focus, .no-touch a:active, .no-touch a:focus {
 										id="reg_mb_sms" checked> 휴대폰 문자메세지를 받겠습니다.</td>
 								</tr>
 
-								<tr>
-									<th scope="row"><label for="reg_mb_open">정보공개</label></th>
-									<td><span class="frm_info"> 정보공개를 바꾸시면 앞으로 0일 이내에는
-											변경이 안됩니다. </span> <input type="hidden" name="mb_open_default"
-										value=""> <input type="checkbox" name="mb_open"
-										value="1" id="reg_mb_open" checked> 다른분들이 나의 정보를 볼 수
-										있도록 합니다.</td>
-								</tr>
 							</table>
 						</div>
 
-						<div class="btn_confirm">
+						<div class="btn_confirm" style="margin-letf: 30px">
 							<input type="submit" value="회원가입" id="btn_submit"
-								class="btn btn-white" accesskey="s"> <a href="index"
-								class="btn btn-white"
-								style="color: rgb(255, 255, 255); background-color: #404040; margin-top: 20px;"
+								class="mbskin btn01" accesskey="s"> <a href="index"
+								class="mbskin btn01"
+								style="color: #fff; background-color: #992600; margin-top: 40px;"
 								data-btn-txt-color="#fff" data-btn-bg-color="#44f3b8">취소</a>
 						</div>
 						</form>

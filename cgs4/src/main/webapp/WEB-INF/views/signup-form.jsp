@@ -93,7 +93,6 @@ body, .inner-post .post-title, .product-content, .product-content h3,
 	li.product .price del+ins {
 	font-family: 'LotteMartDream', sans serif;
 	font-size: 14px;
-	margin-top: 3px;
 }
 
 .hero-text-intro .hero-intro h1, .hero-text-intro .hero-intro h2,
@@ -313,7 +312,7 @@ a:active, a:focus, .no-touch a:active, .no-touch a:focus {
 			<div class="the-post">
 				<div class="woocommerce">
 					<div class="lobo-tabs clearfix">
-						<div class="contents col-xs-13" style="padding: 10% 0 5% 20%">
+						<div class="contents col-xs-13" style="padding: 8% 0 5% 20%">
 							<form id="login-form" action="signupProcess" method="post"
 								autocomplete="off">
 								<table>
@@ -349,7 +348,7 @@ a:active, a:focus, .no-touch a:active, .no-touch a:focus {
 									</tr>
 								</table>
 						</div>
-						<div class="contents col-xs-13" style="padding: 0 0 5% 20%">
+						<div class="contents col-xs-13" style="padding: 5% 0 5% 20%">
 							<!-- 						<div class="tbl_frm01 tbl_wrap"> -->
 							<table>
 								<caption>개인정보 입력</caption>
@@ -365,8 +364,8 @@ a:active, a:focus, .no-touch a:active, .no-touch a:focus {
 									<th scope="row"><label for="reg_mb_name">생년월일<strong
 											class="sound_only">필수</strong></label></th>
 									<td><span> <input type='date' name='user-birth'
-											class="form-control required"
-											style="width: 140px; display: inline-block;" maxlength="6"
+											class="form-control required" min="1900-01-01" max="2900-12-31"
+											style="width: 140px; display: inline-block;"
 											required>  -  <input type='text' pattern="[1234]"
 											title="올바른 숫자를 입력해주세요" placeholder="ex)1" name='gender'
 											class="form-control required" 
@@ -423,7 +422,7 @@ a:active, a:focus, .no-touch a:active, .no-touch a:focus {
 
 											<label for="reg_mb_addr1">기본주소<strong
 												class="sound_only"> 필수</strong></label> <input name="user-address2"
-												class="form-control required" id="oaddr1" size="50"
+												class="form-control required" id="oaddr1" size="50" style="padding-bottom: 15px;"
 												readonly="1" type="text" required> <label for="reg_mb_addr2">상세주소</label>
 											<input type="text" name="user-address3" value="" id="oaddr2"
 												class="form-control frm_address" size="50">
@@ -486,21 +485,18 @@ a:active, a:focus, .no-touch a:active, .no-touch a:focus {
 							}
 						</script>
 
-						<div class="contents" style="padding: 0 0 5% 20%">
+						<div class="contents" style="padding: 5% 0 5% 25%">
 							<table class="table">
 								<caption>기타 개인설정</caption>
-
-
-
 								<tr>
-									<th scope="row" style="width: 20%"><label for="reg_mb_mailling">메일링서비스</label></th>
+									<th scope="row" style="width: 20%; top:0px;"><label for="reg_mb_mailling">메일링서비스</label></th>
 									<td><input type="checkbox" name="mb_mailling" value="1"
 										id="reg_mb_mailling" checked> 정보 메일을 받겠습니다.</td>
 								</tr>
 
 								<tr>
-									<th scope="row" style="width: 20%"><label for="reg_mb_sms">SMS 수신여부</label></th>
-									<td><input type="checkbox" name="mb_sms" value="1"
+									<th scope="row" style="width: 20%; margin: 0;"><label for="reg_mb_sms">SMS 수신여부</label></th>
+									<td><input type="checkbox" style="margin: 0;" name="mb_sms" value="1"
 										id="reg_mb_sms" checked> 휴대폰 문자메세지를 받겠습니다.</td>
 								</tr>
 

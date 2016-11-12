@@ -10759,7 +10759,7 @@ a.wc-button {
 	display: inline-block;
 	width: auto;
 	height: auto;
-	position: relative;
+/* 	position: relative; */
 	top: 2px
 }
 

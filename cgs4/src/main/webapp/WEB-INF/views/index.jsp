@@ -93,6 +93,15 @@ function movieChk(name) {
 function submit(){
 		document.getElementById("gobook").submit();
 }
+function mailChk(){
+	var answer = confirm("구독하시겠습니까?");
+		if (answer) {
+			alert("이용해주셔서 감사합니다.")
+			location.href = "index";
+		} else {
+			//
+		}
+	}
 </script>
 <style>
 .auth__function{
@@ -195,20 +204,20 @@ color: #fff;
 		<!--/.carousel-indicators-->
 		
 		<div class="carousel-inner">
-			<div class="item active" data-vide-bg="<%=ctx%>/resources/video/mainvideo">
-				<div class="carousel-caption" >
+			<div class="item active"
+				data-vide-bg="<%=ctx%>/resources/video/mainvideo">
+				<div class="carousel-caption">
 					<div class="animated bounceInRight">
-						<h2>
-							FANTASTIC CINEMA, 
-						</h2>
-						<h2 style="color:#F0C419">
+						<h2>FANTASTIC CINEMA,</h2>
+						<h2 style="color: #F0C419">
 							<strong>FANTASIC CGS</strong>
 						</h2>
-						<p style="font-family: Godo">Go on a trip to Wonderland
-							with us.</p>
+						<p style="font-family: Godo">Go on a trip to Wonderland with
+							us.</p>
 					</div>
 				</div>
-</div>
+			</div>
+
 
 			<div class="item"
 				style="background-image: url('<%=ctx%>/resources/images/slider/bg1.jpg')">
@@ -247,77 +256,77 @@ color: #fff;
 			</h2>
 		</div>
 
-		<nav class="project-filter clearfix text-center wow fadeInLeft"
-			data-wow-delay="0.5s">
-<!-- 		<ul class="list-inline"> -->
-<!-- 			<li><a href="javascript:;" class="filter" data-filter=".rank">박스오피스</a></li> -->
-<!-- 			<li><a href="javascript:;" class="filter" data-filter=".now">현재상영작</a></li> -->
-<!-- 			<li><a href="javascript:;" class="filter" data-filter=".recerel">최신개봉작</a></li> -->
-<!-- 			<li><a href="javascript:;" class="filter" data-filter=".coming">상영예정작</a></li> -->
-<!-- 			<li><a href="javascript:;" class="filter" data-filter=".pre">시사회</a></li> -->
-<!-- 		</ul> -->
-<!-- 		</nav> -->
+		<!-- 		<nav class="project-filter clearfix text-center wow fadeInLeft" -->
+		<!-- 			data-wow-delay="0.5s"> --> <!-- 		<ul class="list-inline"> -->
+		<!-- 			<li><a href="javascript:;" class="filter" data-filter=".rank">박스오피스</a></li> -->
+		<!-- 			<li><a href="javascript:;" class="filter" data-filter=".now">현재상영작</a></li> -->
+		<!-- 			<li><a href="javascript:;" class="filter" data-filter=".recerel">최신개봉작</a></li> -->
+		<!-- 			<li><a href="javascript:;" class="filter" data-filter=".coming">상영예정작</a></li> -->
+		<!-- 			<li><a href="javascript:;" class="filter" data-filter=".pre">시사회</a></li> -->
+		<!-- 		</ul> --> <!-- 		</nav> -->
 
 		<div id="projects" class="clearfix">
 			<form action="book1" method="post" class="gobook1" id="gobook">
 				<c:forEach var="dto" items="${index_list}" varStatus="status">
-<%-- 					<input type="hidden" name="film_name" value="${dto.film_name}"> --%>
-					<figure class="mix portfolio-item rank now" style="text-align: left"> <img
-						class="img-responsive"
+					<%-- 					<input type="hidden" name="film_name" value="${dto.film_name}"> --%>
+					<figure class="mix portfolio-item rank now"
+						style="text-align: left"> <img class="img-responsive"
 						src="<%=ctx %>/resources/images/poster/${dto.film_ID}.jpg"
 						alt="movie rank${status.count}"> <figcaption class="mask">
 					<h3>${dto.film_name}</h3>
-<!-- 					<span>Doctor Strange , 2016</span> <br> -->
-					<span> ${dto.genre}</span> <br>
-					<a href="movie?film_ID=${dto.film_ID}" class="btn btn-book">상세보기</a> <a href="book1?film_name=${dto.film_name}"
-						class="btn btn-book-blue" >예매하기</a> </figcaption> </figure>
+					<!-- 					<span>Doctor Strange , 2016</span> <br> --> <span>
+						${dto.genre}</span> <br>
+					<a href="movie?film_ID=${dto.film_ID}" class="btn btn-book">상세보기</a>
+					<a href="book1?film_name=${dto.film_name}"
+						class="btn btn-book-blue">예매하기</a> </figcaption> </figure>
 				</c:forEach>
 			</form>
-<%-- 				<c:forEach var="dto" items="${index_list}" begin="0" end="3" varStatus="status"> --%>
-<%-- 					<input type="hidden" name="film_ID" value="${dto.film_ID}"> --%>
-<!-- 					<figure class="mix portfolio-item recerel"> <img -->
-<!-- 						class="img-responsive" -->
-<%-- 						src="<%=ctx %>/resources/images/poster/${dto.film_ID}.jpg" --%>
-<%-- 						alt="movie rank${status.count}"> <figcaption class="mask"> --%>
-<%-- 					<h3>${dto.film_name}</h3> --%>
-<!-- 					<span>Doctor Strange , 2016</span> <br> -->
-<%-- 					<a href="movie?film_ID=${dto.film_ID}" class="btn btn-book">상세보기</a> <a href="#" --%>
-<!-- 						class="btn btn-book-blue" onclick="submit()">예매하기</a> </figcaption> </figure> -->
-<%-- 				</c:forEach> --%>
-<%-- 				<c:forEach var="dto" items="${coming}" begin="0" end="3" varStatus="status"> --%>
-<%-- 					<input type="hidden" name="film_ID" value="${dto.film_ID}"> --%>
-<!-- 					<figure class="mix portfolio-item coming"> <img -->
-<!-- 						class="img-responsive" -->
-<%-- 						src="<%=ctx %>/resources/images/poster/${dto.film_ID}.jpg" --%>
-<%-- 						alt="movie rank${status.count}"> <figcaption class="mask"> --%>
-<%-- 					<h3>${dto.film_name}</h3> --%>
-<!-- 					<span>Doctor Strange , 2016</span> <br> -->
-<%-- 					<a href="movie?film_ID=${dto.film_ID}" class="btn btn-book">상세보기</a> <a href="#" --%>
-<!-- 						class="btn btn-book-blue" onclick="submit()">예매하기</a> </figcaption> </figure> -->
-<%-- 				</c:forEach> --%>
-			
+			<%-- 				<c:forEach var="dto" items="${index_list}" begin="0" end="3" varStatus="status"> --%>
+			<%-- 					<input type="hidden" name="film_ID" value="${dto.film_ID}"> --%>
+			<!-- 					<figure class="mix portfolio-item recerel"> <img -->
+			<!-- 						class="img-responsive" -->
+			<%-- 						src="<%=ctx %>/resources/images/poster/${dto.film_ID}.jpg" --%>
+			<%-- 						alt="movie rank${status.count}"> <figcaption class="mask"> --%>
+			<%-- 					<h3>${dto.film_name}</h3> --%>
+			<!-- 					<span>Doctor Strange , 2016</span> <br> -->
+			<%-- 					<a href="movie?film_ID=${dto.film_ID}" class="btn btn-book">상세보기</a> <a href="#" --%>
+			<!-- 						class="btn btn-book-blue" onclick="submit()">예매하기</a> </figcaption> </figure> -->
+			<%-- 				</c:forEach> --%>
+			<%-- 				<c:forEach var="dto" items="${coming}" begin="0" end="3" varStatus="status"> --%>
+			<%-- 					<input type="hidden" name="film_ID" value="${dto.film_ID}"> --%>
+			<!-- 					<figure class="mix portfolio-item coming"> <img -->
+			<!-- 						class="img-responsive" -->
+			<%-- 						src="<%=ctx %>/resources/images/poster/${dto.film_ID}.jpg" --%>
+			<%-- 						alt="movie rank${status.count}"> <figcaption class="mask"> --%>
+			<%-- 					<h3>${dto.film_name}</h3> --%>
+			<!-- 					<span>Doctor Strange , 2016</span> <br> -->
+			<%-- 					<a href="movie?film_ID=${dto.film_ID}" class="btn btn-book">상세보기</a> <a href="#" --%>
+			<!-- 						class="btn btn-book-blue" onclick="submit()">예매하기</a> </figcaption> </figure> -->
+			<%-- 				</c:forEach> --%>
+
 		</div>
-		<a href="movie_list?page=0" title="더보기" rel="portfolio"
-			class="fancybox"><span class="plus"></span></a> </section>
-<!-- 		end #projects -->
+<!-- 				<a href="movie_list?page=0" title="더보기" rel="portfolio" 			class="fancybox"><span class="plus"></span></a> -->
+
+		</section>
+	<!-- 		end #projects -->
 
 
 
 		<!--
         #subscribe
         ========================== -->
-		<section id="subscribe">
+		<section id="subscribe" data-vide-bg="<%=ctx%>/resources/video/mainvideo">
 		<div class="container" >
-<!-- 			<div class="row" > -->
-<!-- 				<div class="col-md-7 wow fadeInLeft" style="left:20%; padding: 40px 0px 50px 0px"> -->
-<!-- 					<h3 style='margin: 20px 5px'>CGS 소식지 구독하기</h3> -->
-<!-- 					<form action="#" method="post" class="subscription-form"> -->
-<!-- 						<i class="fa fa-envelope-o fa-lg" style="font-size: 1.7em"></i> <input type="email" -->
-<!-- 							name="subscribe" class="subscribe" placeholder="YOUR MAIL" -->
-<!-- 							required=""> <input type="submit" value="SUBSCRIBE" -->
-<!-- 							id="mail-submit"> -->
-<!-- 					</form> -->
-<!-- 				</div> -->
+			<div class="row" >
+ -				<div class="col-md-7 wow fadeInLeft" style="left:20%; padding: 40px 0px 50px 0px">
+ -					<h3 style='margin: 20px 5px'>CGS 소식지 구독하기</h3>
+ -					<form action="#" method="post" class="subscription-form">
+ -						<i class="fa fa-envelope-o fa-lg" style="font-size: 1.7em; margin-top:23px"></i> <input type="email"
+ -							name="subscribe" class="subscribe" placeholder="YOUR MAIL"
+ -							required=""> <input type="submit" style="margin-top:23px" value="SUBSCRIBE"
+ -							id="mail-submit" onclick="mailChk()">
+ -					</form>
+ -				</div>
 <!-- 				<div class="col-md-4 text-left wow fadeInRight"> -->
 <!-- 					<p style="color: white; padding: 1px;">정기적으로 CGS 최신 영화, 이벤트 소식을 -->
 <!-- 						전해드립니다 :)</p> -->
@@ -362,7 +371,7 @@ color: #fff;
 		<!--
         End #footer
         ========================== -->
-	</div>
+<!-- 	</div> -->
 
 	<!-- JavaScript-->
 	<!-- jQuery 1.11.1-->

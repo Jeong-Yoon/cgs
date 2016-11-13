@@ -44,7 +44,6 @@ public class MemberDAO {
 		
 		//날짜 입력 포멧 정하기
 		SimpleDateFormat format = new SimpleDateFormat("yyMMdd") ;
-		SimpleDateFormat format2 = new SimpleDateFormat("yyyyMMdd") ;
 		//가입일 정의
 		//현재시간
 		long dateNow=new java.util.Date().getTime();
@@ -57,7 +56,7 @@ public class MemberDAO {
 		
 		
 		//birth를  java.sql.Date 타입으로! // 이건됨
-		final java.sql.Date iBirth = new java.sql.Date(format2.parse(birth).getTime());
+		final java.sql.Date iBirth = new java.sql.Date(format.parse(birth).getTime());
 		System.out.println(iBirth);
 
 		

@@ -379,7 +379,7 @@
 								<p class="time-select__place"></p>
 							</div>
 							<ul class="col-sm-8 items-wrap">
-								<li>상영 중인 영화가 없습니다.</li>
+								<li>상영정보가 없습니다. 다른 날짜 혹은 다른 영화관을 선택해 주세요.</li>
 							</ul>
 						</div>
 					</c:when>

@@ -116,16 +116,15 @@
                                 <span class="ticket__item ticket__price">price: <strong class="ticket__cost">$60</strong></span>
                              -->
 					</div>
-						<img alt='' src="<%=ctx %>/resources/images/poster/${rCheck.film_ID}.jpg" width="100px" height="160px" float="left">
 					<div class="ticket-primery">
+						<div><img alt='' src="<%=ctx %>/resources/images/poster/${rCheck.film_ID}.jpg" width="100px" height="140px" align="left"></div>
 						<span class="ticket__item ticket__item--primery ticket__film">
-					
-							<strong class="ticket__movie">${rCheck.film_name}<br></strong>
+							<br><strong class="ticket__movie" style="padding:20px">${rCheck.film_name}<br></strong>
 
-							<span class="ticket__item ticket__item--primery">관람 좌석: <span
+							<span class="ticket__item ticket__item--primery" style="padding:5px">&nbsp;&nbsp;&nbsp;관람 좌석: <span
 								class="ticket__place"><c:forEach items="${rSeat}"
 										var="rs">${rs.row_num}${rs.col_num}&nbsp; </c:forEach> </span>
-						</span>
+										</span>
 						</span>
 						<span class="ticket__item ticket__item--primery ticket__film">
 							결제날짜 : <strong class="ticket__movie">${rCheck.sale_date}<br></strong>

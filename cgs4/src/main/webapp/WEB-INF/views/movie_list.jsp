@@ -117,7 +117,7 @@
 		<section class="container">
 		<div class="col-sm-12">
 			<h2 class="page-heading Godo normal w400">
-				<strong>Movie Chart</strong>
+				<strong>Movie List</strong>
 			</h2>
 
 			<!--                 <div class="tags-area tags-area--thin"> -->

@@ -468,7 +468,7 @@ a:active, a:focus, .no-touch a:active, .no-touch a:focus {
 												class="form-control required" id="oaddr1" size="50" style="padding-bottom: 15px;"
 												readonly="1" type="text" required> <label for="reg_mb_addr2">상세주소</label>
 											<input type="text" name="user-address3" value="" id="oaddr2"
-												class="form-control frm_address" size="50">
+												class="form-control frm_address" size="50" required>
 										</div>
 									</td>
 								</tr>

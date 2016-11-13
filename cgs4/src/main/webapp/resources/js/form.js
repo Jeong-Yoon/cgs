@@ -51,7 +51,7 @@ $('#contact-form').submit(function(e) {
 		} 
 		else {
 			createErrTult('&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;이름을 확인해주세요.', $name)
-			error++;
+			error++; 
 		}
 
 		if($message.val().length>2 && $message.val()!= $message.attr('placeholder')) {

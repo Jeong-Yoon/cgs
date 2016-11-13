@@ -41,7 +41,7 @@ public class BookDAO {
 	public ArrayList<Book_ScreeningInfo> screening_date(String film_name, String site_name, Date screening_date){
 		String query = "select sc.screening_id, sc.screen_num, screening_date, start_time, seating_cnt "
 				+ "from screening sc, site, screen where sc.SITE_ID = site.SITE_ID and sc.screen_num = screen.screen_num and sc.site_id = screen.site_id "
-				+ "and film_name= '"+film_name+"' and site_name = '"+site_name+"' and screening_date = to_date('"+screening_date+"', 'yyyy-MM-dd') and RELEASE_DATE < SYSDATE "
+				+ "and film_name= '"+film_name+"' and site_name = '"+site_name+"' and screening_date = to_date('"+screening_date+"', 'yyyy-MM-dd') "
 				+ "group by sc.screening_id, sc.screen_num, screening_date, start_time, seating_cnt order by sc.screening_id";
 		return (ArrayList<Book_ScreeningInfo>) template.query(query, new BeanPropertyRowMapper<Book_ScreeningInfo>(Book_ScreeningInfo.class));
 	}

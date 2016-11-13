@@ -86,15 +86,15 @@ section.container {
             <div class="container">
                 <div class="col-sm-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
                     <form id='contact-form' class="form row" method='post' novalidate="" action="send.php">
-                        <p class="form__title">연락처를 적어주세요</p>
+                        <p class="form__title">고객님의 말씀을 듣겠습니다.</p>
                         <div class="col-sm-6">
-                            <input type='text' placeholder='Your name' name='user-name' class="form__name">
+                            <input type='text' placeholder='이름을 적어주세요' name='user-name' class="form__name">
                         </div>
                         <div class="col-sm-6">
-                            <input type='email' placeholder='Your email' name='user-email' class="form__mail">
+                            <input type='email' placeholder='메일 주소를 적어주세요' name='user-email' class="form__mail">
                         </div>
                         <div class="col-sm-12">
-                            <textarea placeholder="Your message" name="user-message" class="form__message"></textarea>
+                            <textarea placeholder="문의사항/건싀ㅏ항을 적어주세요" name="user-message" class="form__message"></textarea>
                         </div>
                         <button type="submit" class='btn btn-md btn--danger'>문의하기</button>
                        

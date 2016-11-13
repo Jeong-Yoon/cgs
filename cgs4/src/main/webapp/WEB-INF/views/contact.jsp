@@ -78,7 +78,7 @@ section.container {
             <div class="contact">
                 <p class="contact__title">CGS에 대한 문의사항이 있으면  <br><br>아래 연락처로 연락 주시기 바랍니다<br/></p>
                 <span class="contact__mail">support@cinemags.com</span>
-                <span class="contact__tel">support@cinemags.com</span>
+                <span class="contact__tel">032-808-8080</span>
             </div>
         </section>
 

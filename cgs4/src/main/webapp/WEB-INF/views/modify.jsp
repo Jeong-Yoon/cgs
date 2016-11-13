@@ -57,6 +57,18 @@
     	<script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.js"></script> 
 		<script src="http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.3.0/respond.js"></script>		
     <![endif]-->
+<script>
+function pwGo(){
+	 var answer = confirm("비밀번호 변경페이지로 가시겠습니까?");
+	   if (answer){
+	      location.href = "modify_pw";
+	   }
+	   else{
+		   //
+	   }
+}
+</script>
+
 </head>
 <style>
 table {
@@ -65,6 +77,7 @@ table {
     margin-top : 5%;
 }
 </style>
+
 <body>
 
 <!-- Header section -->
@@ -89,11 +102,11 @@ table {
 				
 				<tr>
 				<td><center><p>비밀번호</p></center></td>
-				<td><p>　* * * * * * * *　</p></td>
+				<td ><p><button style="width:163px; margin:7px;" type='button' class="btn btn-md btn--warning" onclick="pwGo()">비밀번호 변경</button></p></td>
 				<td></td>
 				<td></td>
 				<td></td>
-				<td><p><a href="modify_pw"><button type='button' class="btn btn-md btn--warning">비밀번호 변경</button></a></p></td>
+
 				</tr>
 				
 				<tr>

@@ -8,7 +8,7 @@
 <head>
 <!-- Basic Page Needs -->
 <meta charset="utf-8">
-<title>CGS - Password Check</title>
+<title>CGS - Modify</title>
 <meta name="description" content="A Template by Gozha.net">
 <meta name="keywords" content="HTML, CSS, JavaScript">
 <meta name="author" content="Gozha.net">
@@ -16,6 +16,10 @@
 <!-- Mobile Specific Metas-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta content="telephone=no" name="format-detection">
+
+<!-- icon -->
+<link rel="shortcut icon" type="image/x-icon"
+	href="<%=ctx%>/resources/css/img/favicon.png" />
 
 <!-- Fonts -->
 <!-- Font awesome - icon font -->
@@ -48,49 +52,77 @@
 <!-- Modernizr -->
 <script src="<%=ctx%>/resources/js/external/modernizr.custom.js"></script>
 
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]> 
+    	<script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.js"></script> 
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.3.0/respond.js"></script>		
+    <![endif]-->
+<script>
+function pwGo(){
+	 var answer = confirm("비밀번호 변경페이지로 가시겠습니까?");
+	   if (answer){
+	      location.href = "modify_pw";
+	   }
+	   else{
+		   //
+	   }
+}
+</script>
+
 </head>
+<style>
+table {
+    width: 60%;
+    margin-left: 25%;
+    margin-top : 5%;
+}
+</style>
 
 <body>
 
-
-	<!-- Header section -->
+<!-- Header section -->
 	<jsp:include page="menu.jsp" flush="false" />
 
 
 	<!-- Main content -->
-<!-- 일단 form, action부분 냅둠 -->
-
+	<form id="login-form" class="login" method="get" action="modifyProcess">
 		<p class="login__title">
-			비밀번호 찾기 <br><span class="login-edition">-Find Password-</span>
+			비밀번호 찾기<br> <span class="login-edition">-Find Password-</span>
 		</p>
 
 	
 		
-	<div class="login__control">
-				<table width="150" border="0" >
+	<div class="container">
+				<table >
 				
 				
 				<tr>
 				<td><center><p>회원님의 비밀번호는　</p></center></td>
-				<td colspan="2"><p><input type='text' class="login__input" value="${pw}" readonly></p></td>
+				<td ><p><input type='text' class="login__input" value="${pw}" readonly></p></td>
 				<td><center><p>　입니다.</p></center></td>
 				</tr>
 		
 				
 				</table>
 				<br><br><br>
+				<br><br><br>
 </div>
+			<div class="login__control">
+				<a href="login"><button type="button" class="btn btn-md btn--warning btn--wider">로그인 하기</button></a>
+				<a href='index'><button type="button" class="btn btn-md btn--warning btn--wider">확인</button></a>
+				
 
 
-	<div class="clearfix">
-				<tr>
-				<td><a href="login"><button type="button" class="btn btn-md btn--warning btn--wider">로그인 하기</button></a></td>
-				<td><a href='index'><button type="button" class="btn btn-md btn--warning btn--wider">확인</button></a></td>
-				</tr>
-	</div>
 
 
+			</div>
+
+	</form>
+
+	<div class="clearfix"></div>
 <jsp:include page="footer.jsp"></jsp:include>
+
+
 
 	<!-- JavaScript-->
 	<!-- jQuery 1.9.1-->
@@ -120,6 +152,13 @@
 
 	<!-- Custom -->
 	<script src="<%=ctx%>/resources/js/custom.js"></script>
+
+
+
+
+
+
+
 
 
 

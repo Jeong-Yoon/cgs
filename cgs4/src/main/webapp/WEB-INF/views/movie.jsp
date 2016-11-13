@@ -96,6 +96,11 @@
 	function submit() {
 		document.getElementById("film-and-time").submit();
 	}
+
+	function loginChk() {
+		alert("로그인이 필요합니다.");
+		location.href = "login";
+	}
 </script>
 <style>
 .datepicker:before {
@@ -462,9 +467,9 @@
 						<input type='hidden' name="start_time" class="choosen-time" id="start_time">
 						<%-- 						<input type=hidden name="start_time" value="${test.start_time }"> --%>
 						<%if((String)session.getAttribute("id")!=null){%>
-						<center> <a href="#" class="btn btn-md btn--warning" onclick="submit()">예매하기</a> </center>
+						<center> <a href="login" class="btn btn-md btn--warning" onclick="submit()">예매하기</a> </center>
 						<%}else{ %>
-						<center> <a href='login' class="btn btn-md btn--warning">예매하기</a> </center>
+						<center> <a href='javascript:;' class="btn btn-md btn--warning" onclick="loginChk()">예매하기</a> </center>
 						<% } %>
 					</form><br>
 					
@@ -627,7 +632,6 @@
 		$(document).ready(function() {
 			init_MoviePage();
 			init_MoviePageFull();
-// 			init_BookingOne();
 		});
 	</script>
 

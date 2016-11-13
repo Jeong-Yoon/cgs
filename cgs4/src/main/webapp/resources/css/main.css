@@ -644,34 +644,21 @@ figcaption.mask span {
 }
 
 .btn-book {
-	border: 1.5px solid #5d5d5d;
+	border-radius: 5px;
 	color: #5d5d5d;
+	text-decoration: underline;
 	/*     margin-top: 10px; */
 	/*   margin-right: 25%; */
-	font-family: Godo;
-	padding: 7px 5px;
-	margin: 7px;
+	font-family: LotteMartDream;
+	padding: 4px 6px;
+	margin: auto;
+	display: inline-block;
+	width:auto;
+	font-size:12px;
 }
 
 .btn-book:hover {
-	border: 1.5px solid #F0C419;
-	color: #F0C419;
-}
-
-.btn-book-blue {
-	background-color: #5d5d5d;
-	border: 1.5px solid #5d5d5d;
-	color: #fff;
-	/*   margin-left: 25%; */
-	font-family: Godo;
-	padding: 7px 5px;
-	margin: 7px;
-}
-
-.btn-book-blue:hover {
-	background-color: #F0C419;
-	border: 1.5px solid #F0C419;
-	color: white;
+	color: lemonchiffon;
 }
 
 /*============================================================

@@ -275,10 +275,13 @@ color: #fff;
 						alt="movie rank${status.count}"> <figcaption class="mask">
 					<h3>${dto.film_name}</h3>
 					<!-- 					<span>Doctor Strange , 2016</span> <br> --> <span>
-						${dto.genre}</span> <br>
+						${dto.genre}</span> <br><br>
+					<div style="text-align: center;">
 					<a href="movie?film_ID=${dto.film_ID}" class="btn btn-book">상세보기</a>
 					<a href="book1?film_name=${dto.film_name}"
-						class="btn btn-book-blue">예매하기</a> </figcaption> </figure>
+						class="btn btn-book">예매하기</a> 
+					</div>
+						</figcaption> </figure>
 				</c:forEach>
 			</form>
 			<%-- 				<c:forEach var="dto" items="${index_list}" begin="0" end="3" varStatus="status"> --%>
@@ -360,7 +363,7 @@ color: #fff;
 
 					<div class="copyright">
 						<p style="color: gray">
-							&copy; CGS, 2016. All rights reserved.</a>
+							&copy; CGS, 2016. All rights reserved.
 						</p>
 					</div>
 

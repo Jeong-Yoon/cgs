@@ -11,11 +11,7 @@
 <%
 	String ctx = request.getContextPath();
 %>
-<%
-	SimpleDateFormat mSimpleDateFormat = new SimpleDateFormat("yyyy-MM-dd", Locale.KOREA);
-	Date date = new Date();
-	String mTime = mSimpleDateFormat.format(date);
-%>
+
 <html>
 <head>
 <!-- Basic Page Needs -->
@@ -124,9 +120,8 @@ function print(){
                                 <span class="ticket__place"><c:forEach items="${rSeat}" var="rs">${rs.row_num}${rs.col_num}&nbsp; </c:forEach>   </span>
                                 </span>
                                 </span>
+<!-- -                            	<span class="ticket__item ticket__item--primery ticket__film"> -->
                                 
-<!--                             	결제날짜 : -->
-<%--                             	<strong class="ticket__movie">${rCheck.sale_date}<br></strong> --%>
 <!--                             	결제수단 : <strong class="ticket__movie"> -->
 <%--                             	<c:choose> --%>
 <%--                             	<c:when test="${rCheck.sale_type==0}"> --%>
@@ -141,6 +136,8 @@ function print(){
 <%--                             	</c:choose> --%>
 <!--                             	<br></strong> -->
                             	<span class="ticket__item ticket__item--primery ticket__film">
+                            	결제날짜 :
+                             	<strong class="ticket__movie">${rCheck.sale_date}<br></strong>
                             	총 결제금액: <strong class="ticket__movie">${rCheck.final_price}원<br></strong>
                             	</span>
                             
@@ -156,7 +153,6 @@ function print(){
                <!--      <a href="#" class="watchlist list--check">예매확인</a> -->
                     <a href="<%=ctx%>/reserve_cancel?rId=${rCheck.sale_ID}" class="watchlist list--cancel">예매취소</a>
                     <a href="#" class="watchlist list--print" onclick="print();">프린트</a>
-                    
                     
                 </div>
             </div>

@@ -56,7 +56,8 @@
 <!-- Magnific-popup -->
 <link href="<%=ctx%>/resources/css/external/magnific-popup.css"
 	rel="stylesheet" />
-
+<!-- Main Stylesheet -->
+<link rel="stylesheet" href="<%=ctx%>/resources/css/main.css">
 
 <!-- Custom -->
 <link href="<%=ctx%>/resources/css/style.css?v=1" rel="stylesheet" />

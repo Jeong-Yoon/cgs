@@ -85,6 +85,8 @@ public class BookDAO {
 	}
 
 	public void saleSubmit(final String SALE_ID,final java.sql.Date CURRDATE, final int SALE_PRICE, final String PAYCARD_NUMBER, final String SCREENING_ID, final int SALE_COUNT, final int FINAL_PRICE, final int COMMON_CNT, final int YOUNG_CNT, final int SPECIAL_CNT, final String[] sits, final String id, final String reserve_ID){
+		
+		
 		System.out.println(id);
 //		TransactionDefinition definition = new DefaultTransactionDefinition();
 //		TransactionStatus status = transactionManager.getTransaction(definition);

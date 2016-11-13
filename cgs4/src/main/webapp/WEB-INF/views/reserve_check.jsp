@@ -121,7 +121,7 @@ function print(){
                                 <strong class="ticket__movie">${rCheck.film_name}<br></strong>
                                
                                 <span class="ticket__item ticket__item--primery">관람 좌석: 
-                                <span class="ticket__place"><c:forEach items="${rSeat}" var="rs">${rs.col_num}${rs.row_num},&nbsp; </c:forEach>   </span>
+                                <span class="ticket__place"><c:forEach items="${rSeat}" var="rs">${rs.row_num}${rs.col_num}&nbsp; </c:forEach>   </span>
                                 </span>
                                 </span>
                                 

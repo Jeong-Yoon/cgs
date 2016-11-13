@@ -458,7 +458,7 @@ a:active, a:focus, .no-touch a:active, .no-touch a:focus {
 													id="ozipcode1" size="6" maxlength="6" readonly="1"
 													type="text" required> <span class="input-group-btn">
 													<button type="button" class="btn btn-white"
-														style="	letter-spacing: 0.5px; font-weight: 400; margin-left: 3px; margin-top: 0px; height: 35px; line-height: 35px; box-shadow: 0 1px 0 rgba(255, 255, 255, 0.15) inset, 0 1px 1px rgba(0, 0, 0, 0.075);border-radius: 5px; font-family: 'LotteMartDream', sans-serif;"
+														style="color: lemonchiffon; letter-spacing: 0.5px; font-weight: 400; margin-left: 3px; margin-top: 0px; height: 35px; line-height: 35px; box-shadow: 0 1px 0 rgba(255, 255, 255, 0.15) inset, 0 1px 1px rgba(0, 0, 0, 0.075);border-radius: 5px; font-family: 'LotteMartDream', sans-serif;"
 														onclick="execDaumPostcode()" alt="우편번호">주소검색</button>
 												</span>
 											</div>

@@ -49,6 +49,7 @@
 <link href="<%=ctx%>/resources/css/style.css?v=1" rel="stylesheet" />
 
 
+
 <!-- Modernizr -->
 <script src="<%=ctx%>/resources/js/external/modernizr.custom.js"></script>
 
@@ -96,13 +97,13 @@ table {
 				<table >
 				
 				<tr>
-				<td width="120"><center><p>아이디</p></center></td>
+				<td width="140"><center><p>아이디</p></center></td>
 				<td width="160"><p><input type='text' name='user-id' class="login__input" value="<%=session.getAttribute("id") %>" disabled></p></td>
 				</tr>
 				
 				<tr>
 				<td><center><p>비밀번호</p></center></td>
-				<td ><p><button style="width:163px; margin:7px;" type='button' class="btn btn-md btn--warning" onclick="pwGo()">비밀번호 변경</button></p></td>
+				<td ><p><button style="width:163px; margin:7px;" type='button' class="btn" onclick="pwGo()">비밀번호 변경</button></p></td>
 				<td></td>
 				<td></td>
 				<td></td>
@@ -153,7 +154,7 @@ table {
 				<br><br><br>
 </div>
 			<div class="login__control">
-				<a href='index'><button type="button" class="btn btn-md btn--warning btn--wider">Cancle</button></a>
+				<a href='index'><button type="button" class="btn">취소하기</button></a>
 
 
 

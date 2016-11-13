@@ -106,8 +106,8 @@ color: #fff;
 				<ul class="auth__function spoqahansans">
 					<li class="auth__function-item normal w300">안녕하세요 <strong><%=name%></strong>님!</li>
 					<br>
-					<li class="normal w300"><a href="<%=ctx%>/modify" class="auth__function-item">내 정보 확인</a></li>
-					<li class="normal w300"><a href="<%=ctx%>/reserve_list/?mId=<%=(String) session.getAttribute("id") %>" class="auth__function-item">예매 내역 확인</a></li>
+					<li class="normal w250" style="padding: 3px;"><a href="<%=ctx%>/modify" class="auth__function-item">내 정보 확인</a></li>
+					<li class="normal w250" style="padding: 3px"><a href="<%=ctx%>/reserve_list/?mId=<%=(String) session.getAttribute("id") %>" class="auth__function-item">예매 내역 확인</a></li>
 				</ul></li>
 			<li class="normal w300"><a href="<%=ctx%>/logout">Logout</a></li>
 			<%

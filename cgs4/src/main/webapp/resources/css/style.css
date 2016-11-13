@@ -8968,6 +8968,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 	border-radius: 3px;
 	margin: 5px 0;
 	padding: 9px 20px 8px;
+	border-radius:5px;
 }
 
 .login .login__check-info {

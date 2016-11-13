@@ -175,7 +175,7 @@ h1, h2, h3, h4, h5, h6 {
 	font-family: 'Godo', sans-serif;
 	font-weight: normal;
 	margin: 0;
-	font-size:18px;
+	font-size: 18px;
 }
 
 .clear:before, .clear:after {
@@ -239,7 +239,13 @@ body>section {
 }
 
 .btn {
-	border-radius: 0;
+	border-radius: 5px;
+	background-color: rgba(0, 0, 0, 0.7);
+	padding: 10px 20px;
+	font-family:'LotteMartDream', sans-serif;
+	color: #fff;
+	box-shadow: 0 1px 0 rgba(255, 255, 255, 0.15) inset, 0 1px 1px
+		rgba(0, 0, 0, 0.075);
 }
 
 .btn:hover, .btn:focus {
@@ -635,7 +641,7 @@ figcaption.mask h3 {
 	font-size: 20px;
 	line-height: 28px;
 	font-family: Godo;
-	text-align:left;
+	text-align: left;
 }
 
 figcaption.mask span {
@@ -647,15 +653,17 @@ figcaption.mask span {
 .btn-book {
 	border-radius: 5px;
 	color: #5d5d5d;
-	text-decoration: underline;
+	border: 1px solid #5d5d5d;
+/* 	text-decoration: underline; */
+	background-color: transparent;
 	/*     margin-top: 10px; */
-	/*   margin-right: 25%; */
-	font-family: LotteMartDream;
-	padding: 4px 6px;
+	/*   margin-right: 25%; */ font-family : LotteMartDream;
+/* 	padding: 4px 6px; */
 	margin: auto;
 	display: inline-block;
-	width:auto;
-	font-size:12px;
+	width: auto;
+	font-size: 12px;
+	font-family: LotteMartDream
 }
 
 .btn-book:hover {

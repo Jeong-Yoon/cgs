@@ -35,7 +35,7 @@ public class FilmDAO {
 	}
 	
 	public ArrayList<FilmDTO> index_list(){
-		String query = "SELECT * FROM (SELECT ROWNUM rnum, a.* FROM (SELECT * FROM film WHERE RELEASE_DATE < SYSDATE ORDER BY film_ID DESC) a) WHERE rnum between 1 and 8 ";
+		String query = "SELECT * FROM (SELECT ROWNUM rnum, a.* FROM (SELECT * FROM film WHERE RELEASE_DATE < SYSDATE ORDER BY reserve_rate DESC) a) WHERE rnum between 1 and 8 ";
 		return (ArrayList<FilmDTO>)template.query(query, new BeanPropertyRowMapper<FilmDTO>(FilmDTO.class));
 	}
 	

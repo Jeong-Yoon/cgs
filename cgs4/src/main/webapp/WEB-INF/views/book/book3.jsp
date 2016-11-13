@@ -18,6 +18,10 @@
     	<meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta content="telephone=no" name="format-detection">
     
+    <!-- icon -->
+<link rel="shortcut icon" type="image/x-icon"
+	href="<%=ctx%>/resources/css/img/favicon.png" />
+    
     <!-- Fonts -->
         <!-- Font awesome - icon font -->
         <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">

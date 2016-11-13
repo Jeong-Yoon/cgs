@@ -21,6 +21,10 @@
 <!-- Always force latest IE rendering engine -->
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
+<!-- icon -->
+<link rel="shortcut icon" type="image/x-icon"
+	href="<%=ctx%>/resources/css/img/favicon.png" />
+
 <!-- Fonts -->
 <!-- Open Sans -->
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:800italic'

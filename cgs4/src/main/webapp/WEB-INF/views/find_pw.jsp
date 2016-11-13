@@ -66,7 +66,7 @@
 <!-- 일단 form, action부분 냅둠 -->
 
 		<p class="login__title">
-			비밀번호 찾기 <br><span class="login-edition">-Find PW-</span>
+			비밀번호 찾기 <br><span class="login-edition">-Find Password-</span>
 		</p>
 
 	

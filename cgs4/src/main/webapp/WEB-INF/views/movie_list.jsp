@@ -14,10 +14,9 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
 <!-- Basic Page Needs -->
 <meta charset="utf-8">
-<title>AMovie - Movie list</title>
+<title>CGS - Movie list</title>
 <meta name="description" content="A Template by Gozha.net">
 <meta name="keywords" content="HTML, CSS, JavaScript">
 <meta name="author" content="Gozha.net">

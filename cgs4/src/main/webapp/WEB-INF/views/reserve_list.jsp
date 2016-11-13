@@ -81,7 +81,7 @@
                 <div class="offers-block">
                      <p class="offer-place">Reservation List </p>
                      <c:choose>
-                     <c:when test="${!empty List}"> 
+                     <c:when test="${!empty rList}"> 
 					<c:forEach items="${rList}" var="rl">
                      <div class="col-xs-6 col-sm-4 col-md-3 offers-wrap">
                          <a href='<%=ctx%>/reserve_check/?rId=${rl.reserve_ID}' class="offer offer--day">

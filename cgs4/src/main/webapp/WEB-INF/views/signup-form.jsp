@@ -412,7 +412,7 @@ a:active, a:focus, .no-touch a:active, .no-touch a:focus {
 											required>  -  <input type='text' pattern="[1234]"
 											title="올바른 숫자를 입력해주세요" placeholder="ex)1" name='gender'
 											class="form-control required" 
-											maxlength="1" style="width: 10%; display:inline-block;" required>
+											maxlength="1" style="width: 14%; display:inline-block;" required>
 									</span> <span style="display: inline-block;">* * * * * *</span></td>
 								</tr>
 

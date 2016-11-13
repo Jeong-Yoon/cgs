@@ -173,7 +173,11 @@ public class BookDAO {
 	
 	
 	public ArrayList<FilmDTO> film_list(){
-		String query = "select * from film WHERE RELEASE_DATE < SYSDATE" ;
+		String query = "select * from film WHERE RELEASE_DATE < SYSDATE order by release_date desc" ;
+		return (ArrayList<FilmDTO>)template.query(query, new BeanPropertyRowMapper<FilmDTO>(FilmDTO.class));
+	}
+	public ArrayList<FilmDTO> film_list2(){
+		String query = "select * from film WHERE RELEASE_DATE < SYSDATE order by reserve_rate desc" ;
 		return (ArrayList<FilmDTO>)template.query(query, new BeanPropertyRowMapper<FilmDTO>(FilmDTO.class));
 	}
 

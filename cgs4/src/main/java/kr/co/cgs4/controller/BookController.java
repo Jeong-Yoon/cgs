@@ -62,7 +62,7 @@ public class BookController {
 			model.addAttribute("scNum", scdto);
 			
 		}
-		ArrayList<FilmDTO> fdto = bdao.film_list();
+		ArrayList<FilmDTO> fdto = bdao.film_list2();
 		model.addAttribute("flist", fdto);
 		return "book/book1";
 	}else{

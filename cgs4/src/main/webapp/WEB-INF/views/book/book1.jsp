@@ -120,37 +120,6 @@
 		<!-- 메뉴바-->
 		 <jsp:include page="../menu.jsp" flush="false"/>
         
-<!-- 		<header id="navigation" class="navbar-fixed-top"> -->
-<!--             <div class="container"> -->
-<!--                 <div class="navbar-header"> -->
-<!--                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> -->
-<!--                         <span class="sr-only">Toggle navigation</span> -->
-<!--                         <span class="icon-bar"></span> -->
-<!--                         <span class="icon-bar"></span> -->
-<!--                         <span class="icon-bar"></span> -->
-<!--                     </button> -->
-<!--                         <a href='#home' class="logo"> -->
-<%--                             <img src="<%=ctx%>/resources/images/logo.png" alt="LogoCGS"> --%>
-<!--                         </a> -->
-<!--                     </div> -->
-
-<!--                     <nav class="collapse navigation navbar-collapse navbar-right" role="navigation"> -->
-<!--                         <ul id="nav" class="nav navbar-nav"> -->
-<!--                             <li class="current"><a href="#first-main">Home</a></li> -->
-<!--                             <li><a href="movie_list">Movie</a></li> -->
-<!--                             <li><a href="book1">Ticket</a></li> -->
-<!--                             <li><a href="cinemas">Cinema</a></li> -->
-<!--                             <li><a href="contact">Contact</a></li> -->
-<%-- 						 <%if((String) session.getAttribute("id")==null){%> --%>
-<!-- 						 <li><a href="login">Login</a></li> -->
-<%-- 						<%}else{ %> --%>
-<!-- 						<li><a href="logout">Logout</a></li> -->
-<%-- 						<%} %> --%>
-<!--                             <li><span class="sub-nav-toggle plus"></span> -->
-<!--                         </ul> -->
-<!--                     </nav> -->
-<!--                 </div> -->
-<!--         </header> -->
 		<!-- Main content -->
 
 		<section class="container">
@@ -158,11 +127,6 @@
 			<div class="order">
 				<img class="order__images" alt=''
 					src="<%=ctx%>/resources/images/tickets.png">
-<!-- 				<p class="order__title"> -->
-<!-- 					Book a ticket  -->
-<!-- 					<br> <span class="order__descript">and -->
-<!-- 						have fun movie time</span> -->
-<!-- 				</p> -->
 			</div>
 		</div>
 
@@ -324,56 +288,6 @@
 
 		<div class="clearfix"></div>
 		<jsp:include page="../footer.jsp"></jsp:include>
-<!-- 		<footer class="footer-wrapper"> <section class="container"> -->
-<!-- 		<div class="col-xs-4 col-md-2 footer-nav"> -->
-<!-- 			<ul class="nav-link"> -->
-<!-- 				<li><a href="#" class="nav-link__item">Cities</a></li> -->
-<!-- 				<li><a href="movie-list-left.html" class="nav-link__item">Movies</a></li> -->
-<!-- 				<li><a href="trailer.html" class="nav-link__item">Trailers</a></li> -->
-<!-- 				<li><a href="rates-left.html" class="nav-link__item">Rates</a></li> -->
-<!-- 			</ul> -->
-<!-- 		</div> -->
-<!-- 		<div class="col-xs-4 col-md-2 footer-nav"> -->
-<!-- 			<ul class="nav-link"> -->
-<!-- 				<li><a href="coming-soon.html" class="nav-link__item">Coming -->
-<!-- 						soon</a></li> -->
-<!-- 				<li><a href="cinema-list.html" class="nav-link__item">Cinemas</a></li> -->
-<!-- 				<li><a href="offers.html" class="nav-link__item">Best -->
-<!-- 						offers</a></li> -->
-<!-- 				<li><a href="news-left.html" class="nav-link__item">News</a></li> -->
-<!-- 			</ul> -->
-<!-- 		</div> -->
-<!-- 		<div class="col-xs-4 col-md-2 footer-nav"> -->
-<!-- 			<ul class="nav-link"> -->
-<!-- 				<li><a href="#" class="nav-link__item">Terms of use</a></li> -->
-<!-- 				<li><a href="gallery-four.html" class="nav-link__item">Gallery</a></li> -->
-<!-- 				<li><a href="contact.html" class="nav-link__item">Contacts</a></li> -->
-<!-- 				<li><a href="page-elements.html" class="nav-link__item">Shortcodes</a></li> -->
-<!-- 			</ul> -->
-<!-- 		</div> -->
-<!-- 		<div class="col-xs-12 col-md-6"> -->
-<!-- 			<div class="footer-info"> -->
-<!-- 				<p class="heading-special--small"> -->
-<!-- 					A.Movie<br> <span class="title-edition">in the social -->
-<!-- 						media</span> -->
-<!-- 				</p> -->
-
-<!-- 				<div class="social"> -->
-<!-- 					<a href='#' class="social__variant fa fa-facebook"></a> <a href='#' -->
-<!-- 						class="social__variant fa fa-twitter"></a> <a href='#' -->
-<!-- 						class="social__variant fa fa-vk"></a> <a href='#' -->
-<!-- 						class="social__variant fa fa-instagram"></a> <a href='#' -->
-<!-- 						class="social__variant fa fa-tumblr"></a> <a href='#' -->
-<!-- 						class="social__variant fa fa-pinterest"></a> -->
-<!-- 				</div> -->
-
-<!-- 				<div class="clearfix"></div> -->
-<!-- 				<p class="copy">&copy; A.Movie, 2013. All rights reserved. Done -->
-<!-- 					by Olia Gozha</p> -->
-<!-- 			</div> -->
-<!-- 		</div> -->
-<!-- 		</section> </footer> -->
-<!-- 	</div> -->
 
 	<!-- open/close -->
 	<div class="overlay overlay-hugeinc">

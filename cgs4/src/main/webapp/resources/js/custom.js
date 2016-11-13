@@ -1521,6 +1521,9 @@ function init_MoviePage () {
                 }
                 var chooseDate = $('.datepicker__input').val();
                 date.val(chooseDate);
+                
+                var scroll = $('.scrolls').val();
+    			$(document).scrollTop(scroll);
 
 
 

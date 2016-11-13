@@ -76,10 +76,10 @@
         <!-- Main content -->
         <section class="container">
             <div class="col-sm-12">
-                 <h2 class="page-heading">예매목록</h2>
+                 <h2 class="page-heading">Reservation List </h2>
                 
                 <div class="offers-block">
-                     <p class="offer-place">Reservation List </p>
+                     <p class="offer-place">예매목록</p>
                      <c:choose>
                      <c:when test="${!empty rList}"> 
 					<c:forEach items="${rList}" var="rl">

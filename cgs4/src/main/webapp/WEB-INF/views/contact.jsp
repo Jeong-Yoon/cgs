@@ -94,7 +94,7 @@ section.container {
                             <input type='email' placeholder='메일 주소를 적어주세요' name='user-email' class="form__mail">
                         </div>
                         <div class="col-sm-12">
-                            <textarea placeholder="문의사항/건싀ㅏ항을 적어주세요" name="user-message" class="form__message"></textarea>
+                            <textarea placeholder="문의사항/건의사항을 적어주세요" name="user-message" class="form__message"></textarea>
                         </div>
                         <button type="submit" class='btn btn-md btn--danger'>문의하기</button>
                        

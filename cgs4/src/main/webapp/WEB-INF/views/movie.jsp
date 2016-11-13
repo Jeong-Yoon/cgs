@@ -373,16 +373,26 @@
 				</div>
 				</c:forEach>
 				</c:when>
+				<c:when test="${!empty scnt}">
+						<div class="time-select__group">
+							<div class="col-sm-2">
+								<p class="time-select__place"></p>
+							</div>
+							<ul class="col-sm-8 items-wrap">
+								<li>상영 중인 영화가 없습니다.</li>
+							</ul>
+						</div>
+					</c:when>
 				<c:otherwise>
-				<div class="time-select__group">
-					<div class="col-sm-2">
-						<p class="time-select__place"></p>
-					</div>
-					<ul class="col-sm-8 items-wrap">
-					<li>영화 정보를 선택해주세요</li>
-					</ul>
-				</div>
-				</c:otherwise>
+						<div class="time-select__group">
+							<div class="col-sm-2">
+								<p class="time-select__place"></p>
+							</div>
+							<ul class="col-sm-8 items-wrap">
+								<li>영화 정보를 선택해주세요</li>
+							</ul>
+						</div>
+					</c:otherwise>
 				</c:choose>
 				
 

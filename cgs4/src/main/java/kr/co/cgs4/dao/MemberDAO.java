@@ -40,23 +40,28 @@ public class MemberDAO {
 
 	//회원가입시 사용
 	public void signup(final String id, final String pw, final String name, final String address, String birth, final String phone, final String e_mail, final String gender) throws ParseException{
-		System.out.println(birth);
 		
+		System.out.println(birth);
+		String birth1 = birth.substring(2,4);
+		String birth2 = birth.substring(5,7);
+		String birth3 = birth.substring(8,10);
+		String birthInput = birth1+birth2+birth3;
+		System.out.println(birthInput);
 		//날짜 입력 포멧 정하기
 		SimpleDateFormat format = new SimpleDateFormat("yyMMdd") ;
 		//가입일 정의
 		//현재시간
 		long dateNow=new java.util.Date().getTime();
-		System.out.println(dateNow);
+
 		
 		
 		//현재 시간을 db에 넣을 형태로 변환
 		final java.sql.Date currDate = new java.sql.Date(dateNow);
-
+		System.out.println(currDate);
 		
 		
 		//birth를  java.sql.Date 타입으로! // 이건됨
-		final java.sql.Date iBirth = new java.sql.Date(format.parse(birth).getTime());
+		final java.sql.Date iBirth = new java.sql.Date(format.parse(birthInput).getTime());
 		System.out.println(iBirth);
 
 		

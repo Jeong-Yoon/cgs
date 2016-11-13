@@ -408,7 +408,7 @@ a:active, a:focus, .no-touch a:active, .no-touch a:focus {
 											class="sound_only">필수</strong></label></th>
 									<td><span> <input type='date' name='user-birth'
 											class="form-control required" min="1900-01-01" max="2900-12-31"
-											style="width: 140px; display: inline-block;"
+											style="width: 160px; display: inline-block;"
 											required>  -  <input type='text' pattern="[1234]"
 											title="올바른 숫자를 입력해주세요" placeholder="ex)1" name='gender'
 											class="form-control required" 

@@ -514,7 +514,7 @@ a:active, a:focus, .no-touch a:active, .no-touch a:focus {
 					</section>
 				</div>
 				<div class="btn_confirm" style="border: none; position: static; width: auto; text-align: center; margin-top: 10px">
-					<input type="submit" class="btn btn-white" value="회원가입">
+					<input type="submit" class="btn-white" style="padding: 10px 15px"value="회원가입">
 				</div>
 
 			</form>

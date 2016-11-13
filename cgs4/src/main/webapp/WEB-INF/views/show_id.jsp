@@ -72,8 +72,8 @@ function pwGo(){
 </head>
 <style>
 table {
-    width: 60%;
-    margin-left: 25%;
+    width: 30%;
+    margin-left: 35%;
     margin-top : 5%;
 }
 </style>
@@ -97,9 +97,9 @@ table {
 				
 				
 				<tr>
-				<td><center><p>회원님의 아이디는　</p></center></td>
-				<td><p><input type='text' class="login__input" value="${id}" readonly></p></td>
-				<td><center><p>　입니다.</p></center></td>
+				<td width="70px"><center><p>회원님의 아이디는　</p></center></td>
+				<td width="70px"><p><input type='text' class="login__input" value="${id}" readonly></p></td>
+				<td width="50px"><center><p>　입니다.</p></center></td>
 				</tr>
 		
 				

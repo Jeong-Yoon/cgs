@@ -90,9 +90,9 @@
 				<td><center><p>핸드폰번호</p></center>
 				<td><p><input type='text' pattern="^\d{3}" title="3자리 모두 입력해주세요" placeholder="ex)010"name='user-pnum' class="login__input" maxlength="3" required></p></td>
 				<td width="20"> <center><p>-</p></center> </td>
-				<td><p><input type='text' pattern="^\d{4}" title="4자리 모두 입력해주세요" placeholder="ex)8071" name='user-pnum2' class="login__input" maxlength="4" required></p></td>
+				<td><p><input type='text' pattern="^\d{4}" title="4자리 모두 입력해주세요" placeholder="ex)1234" name='user-pnum2' class="login__input" maxlength="4" required></p></td>
 				<td width="20"> <center><p>-</p></center>  </td>
-				<td><p><input type='text' pattern="^\d{4}" title="4자리 모두 입력해주세요" placeholder="ex)6072"name='user-pnum3' class="login__input" maxlength="4" required></p></td>
+				<td><p><input type='text' pattern="^\d{4}" title="4자리 모두 입력해주세요" placeholder="ex)5678"name='user-pnum3' class="login__input" maxlength="4" required></p></td>
 				</tr>
 				
 				<tr>

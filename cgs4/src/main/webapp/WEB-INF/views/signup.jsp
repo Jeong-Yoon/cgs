@@ -8,7 +8,7 @@
 <head>
 <!-- Basic Page Needs -->
 <meta charset="utf-8">
-<title>CGS - Login</title>
+<title>CGS - SignUp</title>
 <meta name="description" content="A Template by Gozha.net">
 <meta name="keywords" content="HTML, CSS, JavaScript">
 <meta name="author" content="Gozha.net">
@@ -190,11 +190,14 @@ body .module .copy-highlight, .single-product .product_meta a:hover,
 	color: #ffef96;
 	font-family: 'Godo', sans-serif;
 	font-weight: 300;
+	
 }
 
 .pagination .next-post a, .comment-list .even, form input[type="submit"],
 	.selector, .current-selector {
 	background-color: #ffef96;
+	border-radius: 5px;
+	letter-space: 0.5px;
 }
 
 .comment-list .odd, .mb_YTPLoaded, .pagination, .video-embedded .vem-overlay:hover .vem-play,

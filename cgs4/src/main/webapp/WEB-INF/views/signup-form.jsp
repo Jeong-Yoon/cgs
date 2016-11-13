@@ -8,7 +8,7 @@
 <head>
 <!-- Basic Page Needs -->
 <meta charset="utf-8">
-<title>CGS - Login</title>
+<title>CGS - SignUp</title>
 <meta name="description" content="A Template by Gozha.net">
 <meta name="keywords" content="HTML, CSS, JavaScript">
 <meta name="author" content="Gozha.net">

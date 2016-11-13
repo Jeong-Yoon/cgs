@@ -125,21 +125,22 @@ function print(){
                                 </span>
                                 </span>
                                 
-                            	<span class="ticket__item ticket__item--primery ticket__film">결제날짜 :
-                            	<strong class="ticket__movie">${rCheck.sale_date}<br></strong>
-                            	결제수단 : <strong class="ticket__movie">
-                            	<c:choose>
-                            	<c:when test="${rCheck.sale_type==0}">
-                            	현금결제
-                            	</c:when>
-                            	<c:when test="${rCheck.sale_type==1}">
-                            	카드결제
-                            	</c:when>
-                            	<c:when test="${rCheck.sale_type==2}">
-                            	모바일결제
-                            	</c:when>
-                            	</c:choose>
-                            	<br></strong>
+<!--                             	결제날짜 : -->
+<%--                             	<strong class="ticket__movie">${rCheck.sale_date}<br></strong> --%>
+<!--                             	결제수단 : <strong class="ticket__movie"> -->
+<%--                             	<c:choose> --%>
+<%--                             	<c:when test="${rCheck.sale_type==0}"> --%>
+<!--                             	현금결제 -->
+<%--                             	</c:when> --%>
+<%--                             	<c:when test="${rCheck.sale_type==1}"> --%>
+<!--                             	카드결제 -->
+<%--                             	</c:when> --%>
+<%--                             	<c:when test="${rCheck.sale_type==2}"> --%>
+<!--                             	모바일결제 -->
+<%--                             	</c:when> --%>
+<%--                             	</c:choose> --%>
+<!--                             	<br></strong> -->
+                            	<span class="ticket__item ticket__item--primery ticket__film">
                             	총 결제금액: <strong class="ticket__movie">${rCheck.final_price}원<br></strong>
                             	</span>
                             

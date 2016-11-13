@@ -243,15 +243,25 @@
 				</div>
 				</c:forEach>
 				</c:when>
-				<c:otherwise>
-				<div class="time-select__group">
-					<div class="col-sm-2">
-						<p class="time-select__place"></p>
+				<c:when test="${empty scnt}">
+					<div class="time-select__group">
+						<div class="col-sm-2">
+							<p class="time-select__place"></p>
+						</div>
+						<ul class="col-sm-8 items-wrap">
+							<li>영화 정보를 선택해주세요</li>
+						</ul>
 					</div>
-					<ul class="col-sm-8 items-wrap">
-					<li>영화 정보를 선택해주세요</li>
-					</ul>
-				</div>
+				</c:when>
+				<c:otherwise>
+					<div class="time-select__group">
+						<div class="col-sm-2">
+							<p class="time-select__place"></p>
+						</div>
+						<ul class="col-sm-8 items-wrap">
+							<li>해당 시간의 영화가 없습니다, 다른 날짜 혹은 다른 영화관을 선택해 주세요.</li>
+						</ul>
+					</div>
 				</c:otherwise>
 				</c:choose>
 				

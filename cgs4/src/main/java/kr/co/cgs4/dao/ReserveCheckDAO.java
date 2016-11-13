@@ -33,7 +33,7 @@ public class ReserveCheckDAO {
 	 
 	 public ReserveCheckDTO reserveCheck(String rId) {
 			
-			String query = "select r3.sale_ID,r3.reserve_ID,r3.sale_date,r3.sale_type,r3.final_price,r3.sale_cnt,r3.screen_num,r3.screening_date,r3.film_name,r3.start_time,s2.site_name"
+			String query = "select r3.sale_ID,r3.reserve_ID,r3.sale_date,r3.sale_type,r3.final_price,r3.sale_cnt,r3.screen_num,r3.screening_date,r3.film_name,r3.start_time,s2.site_name,r3.film_ID"
 +" from (select r2.*,f.FILM_NAME from (select r1.*,s1.SCREEN_NUM,s1.SCREENING_DATE,s1.FILM_ID,s1.SITE_ID,s1.START_TIME from (select r.RESERVE_ID,r.SALE_DATE,s.SCREENING_ID,s.SALE_TYPE,s.FINAL_PRICE,s.SALE_CNT,s.SALE_ID from reserve r join sale s on r.SALE_ID=s.SALE_ID) r1 join screening s1 on r1.SCREENING_ID=s1.SCREENING_ID) r2 join FILM f on r2.FILM_ID=f.FILM_ID) r3 join site s2 on r3.site_ID=s2.SITE_ID"
 +" where reserve_id='"+rId+"'";
 			return template.queryForObject(query,new BeanPropertyRowMapper<ReserveCheckDTO>(ReserveCheckDTO.class));

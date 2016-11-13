@@ -116,8 +116,10 @@
                                 <span class="ticket__item ticket__price">price: <strong class="ticket__cost">$60</strong></span>
                              -->
 					</div>
+						<img alt='' src="<%=ctx %>/resources/images/poster/${rCheck.film_ID}.jpg" width="100px" height="160px" float="left">
 					<div class="ticket-primery">
-						<span class="ticket__item ticket__item--primery ticket__film">영화명<br>
+						<span class="ticket__item ticket__item--primery ticket__film">
+					
 							<strong class="ticket__movie">${rCheck.film_name}<br></strong>
 
 							<span class="ticket__item ticket__item--primery">관람 좌석: <span

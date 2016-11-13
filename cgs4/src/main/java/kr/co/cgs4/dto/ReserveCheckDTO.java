@@ -17,6 +17,8 @@ public class ReserveCheckDTO {
 	String film_name;
 	String start_time;
 	String site_name;
+	String film_ID;
+	
 	
 	public String getSale_ID() {
 		return sale_ID;
@@ -84,6 +86,11 @@ public class ReserveCheckDTO {
 	public void setSite_name(String site_name) {
 		this.site_name = site_name;
 	}
-	
+	public String getFilm_ID() {
+		return film_ID;
+	}
+	public void setFilm_ID(String film_ID) {
+		this.film_ID = film_ID;
+	}
 	
 }

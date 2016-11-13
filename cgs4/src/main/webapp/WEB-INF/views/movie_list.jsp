@@ -139,7 +139,7 @@
 			<!--                 </div> -->
 			<form action="movie" method="post">
 				<div class="cinema-wrap">
-					<div class="row lottemartdream normal w400">
+					<div class="row">
 						<c:forEach var="dto" items="${film_list}" begin="0" end="11">
 							<input type="hidden" name="film_ID" value="${dto.film_ID}">
 							<div class="col-xs-6 col-sm-3 cinema-item">

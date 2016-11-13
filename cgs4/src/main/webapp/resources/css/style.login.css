@@ -45,7 +45,7 @@
 .mbskin td.empty_table {}
 
 /* 폼 테이블 */
-.mbskin table {}
+.mbskin table {width: 60%; margin-bottom: 20px; }
 .mbskin caption {padding-top:0;font-size:1.383em; font-family:'Godo',sans-serif; }
 .mbskin .tbl_frm01 {margin:0 10px 20px}
 .mbskin .tbl_frm01 table {width:80%;border-collapse:collapse;border-spacing:0; margin-top: 40px;}

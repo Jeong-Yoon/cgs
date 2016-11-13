@@ -47,6 +47,50 @@
     <![endif]-->
 </head>
 <style>
+
+<style>
+
+/* 취소버튼 */
+.btncn {
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.btncn a {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.btncn a:after {
+  content: '»';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.btncn:hover a {
+  padding-right: 25px;
+}
+
+.btncn:hover a:after {
+  opacity: 1;
+  right: 0;
+}
+
+
 /* table.loginbtn { */
 /* 	width: 35%; */
 /* 	margin: 0 35%; */
@@ -61,7 +105,6 @@
 	overflow: hidden !important;
 }
 
-/* CUSTOM FONTS */
 /* CUSTOM FONTS */
 .actions .action, .compact-menu .main-d-nav ul li a, .view-item-btn,
 	.prjct-hvr-title h2, body .module .heading, .blog-action-title,
@@ -312,7 +355,7 @@ a:active, a:focus, .no-touch a:active, .no-touch a:focus {
 			<div class="the-post">
 				<div class="woocommerce">
 					<div class="lobo-tabs clearfix">
-						<div class="contents col-xs-13" style="padding: 8% 0 5% 20%">
+						<div class="contents col-xs-13" style="padding: 8% 0 5% 25%">
 							<form id="login-form" action="signupProcess" method="post"
 								autocomplete="off">
 								<table>
@@ -348,7 +391,7 @@ a:active, a:focus, .no-touch a:active, .no-touch a:focus {
 									</tr>
 								</table>
 						</div>
-						<div class="contents col-xs-13" style="padding: 5% 0 5% 20%">
+						<div class="contents col-xs-13" style="padding: 5% 0 5% 25%">
 							<!-- 						<div class="tbl_frm01 tbl_wrap"> -->
 							<table>
 								<caption>회원정보입력</caption>
@@ -369,7 +412,7 @@ a:active, a:focus, .no-touch a:active, .no-touch a:focus {
 											required>  -  <input type='text' pattern="[1234]"
 											title="올바른 숫자를 입력해주세요" placeholder="ex)1" name='gender'
 											class="form-control required" 
-											maxlength="1" style="width: 5%; display:inline-block;" required>
+											maxlength="1" style="width: 10%; display:inline-block;" required>
 									</span> <span style="display: inline-block;">* * * * * *</span></td>
 								</tr>
 
@@ -391,15 +434,15 @@ a:active, a:focus, .no-touch a:active, .no-touch a:focus {
 									<td><span> <input type='text' pattern="^\d{3}"
 											title="3자리 모두 입력해주세요" placeholder="ex)010" name='user-pnum'
 											class="form-control required" maxlength="3"
-											style="width: 25%; display: inline-block;" required> - 
+											style="width: 27%; display: inline-block;" required> - 
 											<input type='text'
-											pattern="^\d{4}" title="4자리 모두 입력해주세요" placeholder="ex)8071"
+											pattern="^\d{4}" title="4자리 모두 입력해주세요" placeholder="ex)1234"
 											name='user-pnum2' class="form-control required" maxlength="4"
-											style="width: 25%; display: inline-block;" required> - 
+											style="width: 27%; display: inline-block;" required> - 
 											<input type='text'
-											pattern="^\d{4}" title="4자리 모두 입력해주세요" placeholder="ex)6072"
+											pattern="^\d{4}" title="4자리 모두 입력해주세요" placeholder="ex)5678"
 											name='user-pnum3' class="form-control required" maxlength="4"
-											style="width: 25%; display: inline-block;" required>
+											style="width: 27%; display: inline-block;" required>
 									</span>
 								</tr>
 
@@ -415,7 +458,7 @@ a:active, a:focus, .no-touch a:active, .no-touch a:focus {
 													id="ozipcode1" size="6" maxlength="6" readonly="1"
 													type="text" required> <span class="input-group-btn">
 													<button type="button" class="btn btn-white"
-														style="font-weight: 400; margin-left: 3px; margin-top: 0px; height: 35px; line-height: 35px; box-shadow: 0 1px 0 rgba(255, 255, 255, 0.15) inset, 0 1px 1px rgba(0, 0, 0, 0.075);border-radius: 5px; font-family: 'LotteMartDream', sans-serif;"
+														style="	letter-spacing: 0.5px; font-weight: 400; margin-left: 3px; margin-top: 0px; height: 35px; line-height: 35px; box-shadow: 0 1px 0 rgba(255, 255, 255, 0.15) inset, 0 1px 1px rgba(0, 0, 0, 0.075);border-radius: 5px; font-family: 'LotteMartDream', sans-serif;"
 														onclick="execDaumPostcode()" alt="우편번호">주소검색</button>
 												</span>
 											</div>
@@ -485,30 +528,31 @@ a:active, a:focus, .no-touch a:active, .no-touch a:focus {
 							}
 						</script>
 
-						<div class="contents" style="padding: 5% 0 5% 25%">
-							<table class="table">
+						<div class="contents" style="padding: 0% 0 5% 25%">
+							<table class="table" >
 								<caption>소식받기</caption>
 								<tr>
-									<th scope="row" style="width: 20%; top:0px;"><label for="reg_mb_mailling">메일링서비스</label></th>
+									<th scope="row" style="width: 30%; top:0px;"><label for="reg_mb_mailling">메일링서비스</label></th>
 									<td><input type="checkbox" name="mb_mailling" value="1"
 										id="reg_mb_mailling" checked> 정보 메일을 받겠습니다.</td>
 								</tr>
 
 								<tr>
-									<th scope="row" style="width: 20%; margin: 0;"><label for="reg_mb_sms">SMS 수신여부</label></th>
-									<td><input type="checkbox" style="margin: 0;" name="mb_sms" value="1"
+									<th scope="row" style="border-bottom:1px solid #ddd; width: 30%; margin: 0;"><label for="reg_mb_sms">SMS 수신여부</label></th>
+									<td style="border-bottom:1px solid #ddd;"><input type="checkbox" style="margin: 0;" name="mb_sms" value="1"
 										id="reg_mb_sms" checked> 휴대폰 문자메세지를 받겠습니다.</td>
 								</tr>
 							</table>
 						</div>
 
-						<div class="btn_confirm" style="text-align: center">
+						<div class="btn_confirm" style="text-align: center; margin-bottom: 40px;">
 							<input type="submit" value="가입하기" id="btn_submit"
-								class="btn01" accesskey="s" style="display:inline-block; margin-bottom:30px">
-							<a href="index"
-								class="btn01"
-								style="color: #fff; background-color: #992600;  margin-top: 40px; width:80px; height:180px;"
-								data-btn-txt-color="#fff" data-btn-bg-color="#44f3b8">취소하기</a>
+								class="btn01" accesskey="s" style="display:inline-block; margin-bottom:20px">
+								<button class="btncn" style="border-radius: 5px;"><a href="index">취소하기</a></button>
+<!-- 							<a href="index" -->
+<!-- 								class="btn01" -->
+<!-- 								style="color: #fff; background-color: #992600;  margin-top: 40px; width:80px; height:180px;" -->
+<!-- 								data-btn-txt-color="#fff" data-btn-bg-color="#44f3b8">취소하기</a> -->
 						</div>
 						</form>
 					</div>
@@ -522,6 +566,30 @@ a:active, a:focus, .no-touch a:active, .no-touch a:focus {
 
 	<div class="clearfix"></div>
 
+		<footer id="footer" class="text-center">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="footer-logo wow fadeInDown">
+						<img class="footer-logo-img"
+							src="<%=ctx%>/resources/images/logo.png" alt="logo">
+					</div>
+
+<!-- 					<div class="footer-social wow fadeInUp"> -->
+<!-- 						<h3>We are social</h3> -->
+						
+<!-- 					</div> -->
+
+					<div class="copyright">
+						<p style="color: gray">
+							&copy; CGS, 2016. All rights reserved.
+						</p>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		</footer>
 
 	<!-- main jQuery -->
 	<script src="<%=ctx%>/resources/js/external/jquery-1.11.1.min.js"></script>

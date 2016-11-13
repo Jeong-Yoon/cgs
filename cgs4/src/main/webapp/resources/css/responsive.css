@@ -52,12 +52,14 @@ figcaption.mask{
 
 figcaption.mask h3{
   font-size: 13px;
+  text-align:left;
 }
 
 figcaption.mask span{
 	font-family: LotteMartDream;
   font-size: 11px;
    margin-bottom: 10px;
+   text-align:left;
 }
 
 .plus{

@@ -4437,6 +4437,7 @@ ul#navigation a:hover {
 .tags {
 	position: relative;
 	padding-left: 20px;
+	
 }
 
 .tags .tags__label {
@@ -5877,7 +5878,8 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 }
 
 .pagination .pagination__prev {
-	font: 15px 'aleoregular', Godo;
+	font: 15px, LotteMartDream;
+	font-weight: 600;
 	color: #222A35;
 	text-transform: uppercase;
 	display: inline-block;
@@ -5895,7 +5897,8 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 }
 
 .pagination .pagination__next {
-	font: 15px 'aleoregular', Godo;
+	font: 15px, LotteMartDream;
+	font-weight: 600;
 	color: #222A35;
 	text-transform: uppercase;
 /* 	float: right; */
@@ -6461,17 +6464,18 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 }
 
 .cinema .cinema-title {
-	font-size: 16px;
-	font-weight: bold;
+/* 	font-size: 16px; */
 	display: block;
-	margin-bottom: 45px;
-	margin-top: 10px;
+/* 	margin-bottom: 45px; */
+	margin-top: auto;
 	text-align:center;
-	font-family: Spoqa Han Sans;
-	background-color: rgba(255, 192, 0, 0.7);
+	font-family: Godo;
+	 font-weight: 400;
+/* 	background-color: rgba(255, 192, 0, 0.7); */
+	background-color: lemonchiffon;
 	border: 5px solid #E7E6E6;
 	padding: 10px;
-	color: #5d5d5d;
+	color: #555;
 }
 
 .cinema .cinema-rating {

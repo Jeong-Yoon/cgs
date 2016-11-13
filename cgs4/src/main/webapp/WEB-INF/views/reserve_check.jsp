@@ -138,8 +138,8 @@
 		</div>
 		<div class="ticket-control mkskin">
 			<!--      <a href="#" class="watchlist list--check">예매확인</a> -->		
-			<a href="<%=ctx%>/reserve_cancel?rId=${rCheck.sale_ID}" class="btn01" >예매취소</a>
-			<a href="#" onclick="print();" class="btn01" >프린트</a>
+			<a href="<%=ctx%>/reserve_cancel?rId=${rCheck.sale_ID}" class="btn btn-book" style="font-size:18px; color:#a93d43">예매취소</a>
+			<a href="#" onclick="print();" class="btn btn-book" style="font-size:18px" >프린트</a>
 		</div>
 	</div>
 	</section>

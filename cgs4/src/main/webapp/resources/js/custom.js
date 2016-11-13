@@ -1564,6 +1564,11 @@ function init_MoviePage () {
                     $(this).toggleClass('hide-content');
                     $('.time-select').slideToggle(400);
                 })
+                
+                $('.booking-form').submit( function () {
+                    var bookData = $(this).serialize();
+                    $.get( $(this).attr('action'), bookData );
+                })
               //2. Sorting buy category
                 // sorting function
                 $('.tags__item').click(function (e) {

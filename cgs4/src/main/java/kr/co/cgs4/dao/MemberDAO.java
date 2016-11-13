@@ -66,7 +66,7 @@ public class MemberDAO {
 
 		
 		//나중에 email 이후 값은 지우고 db구축할것
-		  String insert = "insert into member(member_ID, password, name, address, birth, phone_num, email,gender,join_date,accum_point,member_grade,membership,curr_point) values (?,?,?,?,to_date(?,'yyyy-MM-dd'),?,?,?,to_date(?, 'yyyy-MM-dd'),?,?,?,?)";
+		  String insert = "insert into member(member_ID, password, name, address, birth, phone_num, email,gender,join_date,accum_point,member_grade,membership,curr_point) values (?,?,?,?,to_date(?,'dd-MM-yyyy'),?,?,?,to_date(?, 'dd-MM-yyyy'),?,?,?,?)";
 		  this.template.update(insert, new PreparedStatementSetter() {
 			@Override
 			public void setValues(PreparedStatement ps) throws SQLException {

@@ -95,7 +95,7 @@ public class BookDAO {
 //		try {
 		//sale 넣기
 		System.out.println("sale 넣기 시작");
-		String query= "INSERT INTO SALE VALUES (?, '0', '0', to_date(?, 'yyyy-MM-dd'), ?, ?, '0', ?, ?, '0', '0', ?, '1', ?, ?, ?)";
+		String query= "INSERT INTO SALE VALUES (?, '0', '0', to_date(?, 'dd-MM-yyyy'), ?, ?, '0', ?, ?, '0', '0', ?, '1', ?, ?, ?)";
 		template.update(query, new PreparedStatementSetter() {
 			
 			@Override
@@ -120,7 +120,7 @@ public class BookDAO {
 			final String seat_ID = sits[i];
 			System.out.println(seat_ID);
 			//sale_seat 에 넣기
-			String setQuery= "INSERT INTO SALE_SEAT VALUES (to_date(?, 'yyyy-MM-dd'), ?, ?, ?)";
+			String setQuery= "INSERT INTO SALE_SEAT VALUES (to_date(?, 'dd-MM-yyyy'), ?, ?, ?)";
 			template.update(setQuery, new PreparedStatementSetter() {
 				@Override
 				public void setValues(PreparedStatement ps) throws SQLException {
@@ -134,7 +134,7 @@ public class BookDAO {
 		System.out.println("seat_sale 수정");
 		//member_sale 넣기
 		System.out.println("member_sale 넣기 시작");
-		String msQuery= "INSERT INTO member_sale VALUES ('0', ?, ?, to_date(?, 'yyyy-MM-dd'))";
+		String msQuery= "INSERT INTO member_sale VALUES ('0', ?, ?, to_date(?, 'dd-MM-yyyy'))";
 		template.update(msQuery, new PreparedStatementSetter() {
 			@Override
 			public void setValues(PreparedStatement ps) throws SQLException {
@@ -150,7 +150,7 @@ public class BookDAO {
 		System.out.println("회원 정보 불러옴");
 		//reserve 넣기
 		System.out.println("reserve 넣기 시작");
-		String resQuery= "INSERT INTO reserve VALUES (?, ?, ?, '0', ?, to_date(?, 'yyyy-MM-dd'))";
+		String resQuery= "INSERT INTO reserve VALUES (?, ?, ?, '0', ?, to_date(?, 'dd-MM-yyyy'))";
 		template.update(resQuery, new PreparedStatementSetter() {
 			@Override
 			public void setValues(PreparedStatement ps) throws SQLException {

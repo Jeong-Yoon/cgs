@@ -1,6 +1,10 @@
 package kr.co.cgs4.command;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
@@ -40,6 +44,19 @@ public class ReserveCheckCommand {
 
 		ReserveCheckDAO dao=new ReserveCheckDAO();
 		ReserveCheckDTO dtos=dao.reserveCheck(rId);
+		SimpleDateFormat format = new SimpleDateFormat("yyyyMMdd");
+		String today = format.format(dtos.getSale_date());
+		String temp = "20"+today.substring(2);
+		Date dToday=null;
+		try {
+			dToday=format.parse(temp);
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		java.sql.Date sDate = new java.sql.Date(dToday.getTime());
+		dtos.setSale_date(sDate);
+		
 		model.addAttribute("rCheck", dtos);
 
 	}

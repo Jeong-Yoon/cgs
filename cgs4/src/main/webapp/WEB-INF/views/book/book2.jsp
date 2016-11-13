@@ -102,8 +102,8 @@
 				</div>
 				<div class="choose-sits__info">
 					<ul>
-						<li class="sits-state sits-state--not">Not available</li>
-						<li class="sits-state sits-state--your">Your choice</li>
+						<li class="sits-state sits-state--not">예매 불가</li>
+						<li class="sits-state sits-state--your">예매 가능</li>
 					</ul>
 				</div>
 			<div class="sits-max"></div>

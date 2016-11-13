@@ -2,107 +2,132 @@
 fontKorean3: Spoqa Han Sans
 */
 @import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
+
 @import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-jp.css);
 
 .spoqahansans * {
- font-family: 'Spoqa Han Sans', sans-serif;
+	font-family: 'Spoqa Han Sans', sans-serif;
 }
 
 /*
 font=Korean2: LotteMartDream
 */
 @font-face {
-  font-family: 'LotteMartDream';
-  font-style: normal;
-  font-weight: 400;
-  src: url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamMedium.woff2') format('woff2'), url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamMedium.woff') format('woff');
+	font-family: 'LotteMartDream';
+	font-style: normal;
+	font-weight: 400;
+	src:
+		url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamMedium.woff2')
+		format('woff2'),
+		url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamMedium.woff')
+		format('woff');
 }
 
 @font-face {
-  font-family: 'LotteMartDream';
-  font-style: normal;
-  font-weight: 700;
-  src: url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamBold.woff2') format('woff2'), url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamBold.woff') format('woff');
+	font-family: 'LotteMartDream';
+	font-style: normal;
+	font-weight: 700;
+	src:
+		url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamBold.woff2')
+		format('woff2'),
+		url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamBold.woff')
+		format('woff');
 }
 
 @font-face {
-  font-family: 'LotteMartDream';
-  font-style: normal;
-  font-weight: 300;
-  src: url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamLight.woff2') format('woff2'), url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamLight.woff') format('woff');
+	font-family: 'LotteMartDream';
+	font-style: normal;
+	font-weight: 300;
+	src:
+		url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamLight.woff2')
+		format('woff2'),
+		url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamLight.woff')
+		format('woff');
 }
 
 .lottemartdream * {
- font-family: 'LotteMartDream', sans-serif;
+	font-family: 'LotteMartDream', sans-serif;
 }
 
 /*
 font-Korean1: Godo
 */
 @font-face {
-  font-family: 'Godo';
-  font-style: normal;
-  font-weight: 400;
-  src: url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/Godo/GodoMedium.woff2') format('woff2'), url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/Godo/GodoMedium.woff') format('woff');
+	font-family: 'Godo';
+	font-style: normal;
+	font-weight: 400;
+	src:
+		url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/Godo/GodoMedium.woff2')
+		format('woff2'),
+		url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/Godo/GodoMedium.woff')
+		format('woff');
 }
 
 @font-face {
-  font-family: 'Godo';
-  font-style: normal;
-  font-weight: 700;
-  src: url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/Godo/GodoBold.woff2') format('woff2'), url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/Godo/GodoBold.woff') format('woff');
+	font-family: 'Godo';
+	font-style: normal;
+	font-weight: 700;
+	src:
+		url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/Godo/GodoBold.woff2')
+		format('woff2'),
+		url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/Godo/GodoBold.woff')
+		format('woff');
 }
 
 @font-face {
-  font-family: 'Godo';
-  font-style: normal;
-  font-weight: 300;
-  src: url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/Godo/GodoLight.woff2') format('woff2'), url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/Godo/GodoLight.woff') format('woff');
+	font-family: 'Godo';
+	font-style: normal;
+	font-weight: 300;
+	src:
+		url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/Godo/GodoLight.woff2')
+		format('woff2'),
+		url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/Godo/GodoLight.woff')
+		format('woff');
 }
 
 .Godo * {
- font-family: 'Godo', sans-serif;
+	font-family: 'Godo', sans-serif;
 }
 
 .normal {
- font-style: normal;
+	font-style: normal;
 }
 
 .w250 {
- font-weight: 250;
+	font-weight: 250;
 }
 
 .w300 {
- font-weight: 300;
+	font-weight: 300;
 }
 
 .w350 {
- font-weight: 350;
+	font-weight: 350;
 }
 
 .w400 {
- font-weight: 400;
+	font-weight: 400;
 }
 
 .w500 {
- font-weight: 500;
+	font-weight: 500;
 }
 
 .w700 {
- font-weight: 700;
+	font-weight: 700;
 }
 
 .w800 {
- font-weight: 800;
+	font-weight: 800;
 }
 
 .w900 {
- font-weight: 900;
+	font-weight: 900;
 }
 
 li span {
- line-height: 1.8;
- font-size: 1.3em;
+	line-height: 1.8;
+	font-size: 1.3em;
 }
 
 /*! normalize.css v3.0.0 | MIT License | git.io/normalize */
@@ -118,7 +143,7 @@ body, div, section, footer, video, article {
 	border: 0;
 	font: inherit;
 	font-size: 100%;
-	vertical-align: baseline;	
+	vertical-align: baseline;
 }
 
 /* .tab{} */
@@ -169,7 +194,6 @@ body, div, section, footer, video, article {
 /* 	cursor: pointer; */
 /* 	transition: all .3s cubic-benzier(0.165, 0.84, 0.44, 1); */
 /* } */
-
 article, aside, details, figcaption, figure, footer, header, hgroup,
 	main, nav, section, summary {
 	display: block;
@@ -181,25 +205,39 @@ audio, canvas, progress, video {
 }
 
 audio
+
+
 :not
+
  
+
 (
 [
 controls
 ]
+
  
+
 )
 {
 display
-:
- 
-none
-;
 
-	
-height
+
 :
+
  
+
+none
+
+
+;
+height
+
+
+:
+
+ 
+
 0;
 }
 [hidden], template {
@@ -260,20 +298,30 @@ img {
 }
 
 svg
+
+
 :not
+
  
+
 (
 :root
+
  
+
 )
 {
 overflow
+
+
 :
+
  
+
 hidden
+
+
 ;
-
-
 }
 figure {
 	margin: 1em 40px;
@@ -1091,7 +1139,7 @@ table {
 	padding-right: 15px;
 	position: relative;
 	height: 100%;
-	background-color:transparent;
+	background-color: transparent;
 }
 
 /* .signupcontainer { */
@@ -3091,7 +3139,7 @@ input[type="submit"].btn-block, input[type="reset"].btn-block, input[type="butto
 }
 
 .search-wrapper {
-/* 	background-color: #dbdee1; */
+	/* 	background-color: #dbdee1; */
 	background-color: transparent;
 	height: 86px;
 }
@@ -3209,8 +3257,7 @@ input[type="submit"].btn-block, input[type="reset"].btn-block, input[type="butto
 }
 
 .order-container {
-	margin-top: 48px;
-	margin-bottom: 78px;
+	margin: auto;
 }
 
 .coloum-wrapper {
@@ -3280,7 +3327,7 @@ ul#navigation a:hover {
 	padding-left: 30px;
 	margin-top: 56px;
 	margin-bottom: 27px;
-	font: 20px 'aleobold', Spoqa Han Sans;
+	font: 18px, 'LotteMartDream', sans-serif;
 	font-weight: 400;
 	color: #222A35;
 	text-transform: uppercase;
@@ -4437,7 +4484,6 @@ ul#navigation a:hover {
 .tags {
 	position: relative;
 	padding-left: 20px;
-	
 }
 
 .tags .tags__label {
@@ -5373,8 +5419,8 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 }
 
 .datepicker .datepicker__input {
-	border-top:10px;
-	font-family:Godo;
+	border-top: 10px;
+	font-family: Godo;
 	font-size: 16px;
 	width: 90px;
 	border: none;
@@ -5616,7 +5662,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 }
 
 .select .sbSelector {
-	font-family:Godo;
+	font-family: Godo;
 	color: #ED2236;
 	position: relative;
 	text-align: right;
@@ -5730,7 +5776,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 }
 
 .select .sbOptions a {
-	font-family:Godo;
+	font-family: Godo;
 	border: none;
 	color: #B4B1B2;
 	display: inline-block;
@@ -5740,7 +5786,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 
 .select .sbOptions a:hover {
 	color: #F0C419;
-	font-family:Godo;
+	font-family: Godo;
 }
 
 .select .sbOptions a:before {
@@ -5901,7 +5947,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 	font-weight: 600;
 	color: #222A35;
 	text-transform: uppercase;
-/* 	float: right; */
+	/* 	float: right; */
 	display: inline-block;
 	padding: 8px 43px 9px 0;
 	margin-right: -8px;
@@ -6264,7 +6310,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 	margin-top: 21px;
 	margin-left: 5px;
 	margin-bottom: 23px;
-    display: inline-block;
+	display: inline-block;
 }
 
 .time-select .time-select__item {
@@ -6464,14 +6510,14 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 }
 
 .cinema .cinema-title {
-/* 	font-size: 16px; */
+	/* 	font-size: 16px; */
 	display: block;
-/* 	margin-bottom: 45px; */
+	/* 	margin-bottom: 45px; */
 	margin-top: auto;
-	text-align:center;
+	text-align: center;
 	font-family: Godo;
-	 font-weight: 400;
-/* 	background-color: rgba(255, 192, 0, 0.7); */
+	font-weight: 400;
+	/* 	background-color: rgba(255, 192, 0, 0.7); */
 	background-color: lemonchiffon;
 	border: 5px solid #E7E6E6;
 	padding: 10px;
@@ -6788,19 +6834,20 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 
 .offer .offer__datail {
 	color: #ffffff;
-	font: 18px 'aleoitalic', Spoqa Han Sans;
+	font: 18px 'aleoitalic', LotteMartDream;
 	text-transform: none;
-	font-weight: 300;
+	font-weight: 500;
 	line-height: 21px;
 	-webkit-transition: 0.3s;
 	transition: 0.3s;
 }
 
 .offer .offer__full {
-	color: #b4b1b2;
+	color: #ffef96;
 	font-size: 16px;
 	-webkit-transition: 0.3s;
 	transition: 0.3s;
+	padding-top: 0;
 }
 
 .offer:hover {
@@ -6814,7 +6861,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 
 .offer-place {
 	color: #ED2236;
-	font-family: 'aleoitalic', Spoqa Han Sans;
+	font-family: LotteMartDream;
 	font-size: 18px;
 	text-align: center;
 	margin-bottom: 23px;
@@ -7156,7 +7203,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 }
 
 .order .order__title {
-	font: 30px 'aleobold', Spoqa Han Sans;
+	font: 30px 'LotteMartDream', sans-serif;
 	text-transform: uppercase;
 	line-height: 26px;
 	margin-top: 5px;
@@ -7248,7 +7295,8 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 }
 
 .order-step-area .first--step:before {
-/* 	border-color: transparent transparent #F0C419 transparent; */
+	/* 	border-color: transparent transparent #F0C419 transparent; */
+	
 }
 
 .order-step-area .first--step:after {
@@ -7260,7 +7308,8 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 }
 
 .order-step-area .second--step:before {
-/* 	border-color: transparent transparent #ED2236 transparent; */
+	/* 	border-color: transparent transparent #ED2236 transparent; */
+	
 }
 
 .order-step-area .second--step:after {
@@ -7731,7 +7780,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 
 .book-result {
 	margin: -9px 0 -7px;
-	width:80%;
+	width: 80%;
 }
 
 .book-result .book-result__item {
@@ -7794,7 +7843,8 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 }
 
 .ticket .ticket__inner {
-	border: 3px solid #dbdee1;
+	background-color: #f4e1d2;
+	border: 3px solid #f4e1d2;
 	overflow: hidden;
 	float: left;
 	height: 350px;
@@ -7803,7 +7853,8 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 
 .ticket .ticket__indecator {
 	position: relative;
-	border: 3px solid #dbdee1;
+	border: 3px solid #50394c;
+	background-color:#50394c;
 	width: 50px;
 	float: left;
 	height: 350px;
@@ -7872,10 +7923,11 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 }
 
 .ticket .ticket__item {
+	padding-left:5px;
 	display: block;
-	margin-bottom: 10px;
-	font-family: 'PT Mono';
-	font-size: 18px;
+	margin: auto;
+	font-family: 'LotteMartDream';
+	font-size: 20px;
 	text-transform: uppercase;
 	text-align: left;
 }
@@ -7895,9 +7947,9 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 }
 
 .ticket .ticket__film {
-	border-bottom: 1px solid #dbdee1;
+	border-bottom: 1px solid #fff;
 	padding-bottom: 44px;
-	margin-bottom: 28px;
+	padding-top: 34px;
 }
 
 .ticket .ticket__movie {
@@ -7906,7 +7958,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 
 .ticket-primery {
 	overflow: hidden;
-	border-left: 3px double #dbdee1;
+	border-left: 3px double #fff;
 	margin-top: 37px;
 	padding: 27px 35px 22px 30px;
 }
@@ -7914,7 +7966,7 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 .ticket-secondary {
 	float: left;
 	text-align: left;
-	padding: 47px 80px 30px 60px;
+	padding: 70px 80px 30px 60px;
 }
 
 .ticket-position {
@@ -7926,38 +7978,6 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 	text-align: center;
 	margin-top: 30px;
 	padding-bottom: 30px;
-}
-
-.ticket-control .list--check {
-	border-radius: 3px 0 0 3px;
-	margin-right: -5px;
-}
-
-.ticket-control .list--check:before {
-	content: "\f058";
-	font-size: 16px;
-	top: 5px;
-}
-
- .ticket-control .list--cancel {
-	border-radius: 3px 0 0 3px;
-	margin-right: -5px;
-}
-
-.ticket-control .list--cancel:before {
-	content: "\f057";
-	font-size: 16px;
-	top: 5px;
-} 
-
-.ticket-control .list--print {
-	border-radius: 0 3px 3px 0;
-}
-
-.ticket-control .list--print:before {
-	content: "\f02f";
-	font-size: 16px;
-	top: 5px;
 }
 
 .booking-form input {
@@ -11478,23 +11498,27 @@ ul#navigation li.mega-menu__nav-item:hover:before {
 	font-size: 12px;
 	color: red;
 }
+
 .choosen-people {
 	display: block;
 	color: #ffffff;
 	font-size: 10px;
 	padding: 8px 0;
 }
-.film_table{
-	overflow:scroll;
-	height:350px;
-}
-.card{
-    width: 40px;
-}
-.valid_date {
-    width: 30px;
-}
-.birth_date {
-    width: 60px;
+
+.film_table {
+	overflow: scroll;
+	height: 350px;
 }
 
+.card {
+	width: 40px;
+}
+
+.valid_date {
+	width: 30px;
+}
+
+.birth_date {
+	width: 60px;
+}

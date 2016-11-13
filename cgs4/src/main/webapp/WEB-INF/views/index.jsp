@@ -1,3 +1,6 @@
+<%@page import="java.util.Locale"%>
+<%@page import="java.text.SimpleDateFormat"%>
+<%@page import="java.util.Date"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
@@ -5,6 +8,11 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <%
 	String ctx = request.getContextPath();
+%>
+<%
+	SimpleDateFormat mSimpleDateFormat = new SimpleDateFormat("yyyy.MM.dd", Locale.KOREA);
+	Date date = new Date();
+	String mTime = mSimpleDateFormat.format(date);
 %>
 <html>
 <head>
@@ -109,7 +117,8 @@ color: #fff;
     font-weight: 600;
 /*     padding: 38px 25px; */
     text-transform: uppercase;
-}  
+}
+
 </style>
 </head>
 
@@ -253,12 +262,13 @@ color: #fff;
 			<form action="book1" method="post" class="gobook1" id="gobook">
 				<c:forEach var="dto" items="${index_list}" varStatus="status">
 <%-- 					<input type="hidden" name="film_name" value="${dto.film_name}"> --%>
-					<figure class="mix portfolio-item rank now"> <img
+					<figure class="mix portfolio-item rank now" style="text-align: left"> <img
 						class="img-responsive"
 						src="<%=ctx %>/resources/images/poster/${dto.film_ID}.jpg"
 						alt="movie rank${status.count}"> <figcaption class="mask">
 					<h3>${dto.film_name}</h3>
-					<span>Doctor Strange , 2016</span> <br>
+<!-- 					<span>Doctor Strange , 2016</span> <br> -->
+					<span> ${dto.genre}</span> <br>
 					<a href="movie?film_ID=${dto.film_ID}" class="btn btn-book">상세보기</a> <a href="book1?film_name=${dto.film_name}"
 						class="btn btn-book-blue" >예매하기</a> </figcaption> </figure>
 				</c:forEach>
@@ -286,10 +296,10 @@ color: #fff;
 <!-- 						class="btn btn-book-blue" onclick="submit()">예매하기</a> </figcaption> </figure> -->
 <%-- 				</c:forEach> --%>
 			
-<!-- 		</div> -->
-<!-- 		<a href="movie_list?page=0" title="더보기" rel="portfolio" -->
-<!-- 			class="fancybox"><span class="plus"></span></a> </section> -->
-		<!-- end #projects -->
+		</div>
+		<a href="movie_list?page=0" title="더보기" rel="portfolio"
+			class="fancybox"><span class="plus"></span></a> </section>
+<!-- 		end #projects -->
 
 
 
@@ -334,10 +344,10 @@ color: #fff;
 							src="<%=ctx%>/resources/images/logo.png" alt="logo">
 					</div>
 
-					<div class="footer-social wow fadeInUp">
-						<h3>We are social</h3>
+<!-- 					<div class="footer-social wow fadeInUp"> -->
+<!-- 						<h3>We are social</h3> -->
 						
-					</div>
+<!-- 					</div> -->
 
 					<div class="copyright">
 						<p style="color: gray">

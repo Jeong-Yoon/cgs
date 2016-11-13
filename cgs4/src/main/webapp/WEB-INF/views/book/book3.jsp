@@ -47,6 +47,10 @@
 		<script src="http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.3.0/respond.js"></script>		
     <![endif]-->
     <style>
+
+    .card{
+    width:50px;
+    }
     .pConfirm{
     font-size: 13px;
 	color: rgb(86, 86, 86);

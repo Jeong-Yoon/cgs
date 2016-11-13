@@ -60,6 +60,14 @@
     	<script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.js"></script> 
 		<script src="http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.3.0/respond.js"></script>		
     <![endif]-->
+    <style>
+        .sits .sits__checked .choosen-place {
+        font-size: 17px;
+    }
+    .choosen-people {
+    font-size: 15px;
+    }
+    </style>
 </head>
 
 <body>
@@ -103,7 +111,7 @@
 				<div class="choose-sits__info">
 					<ul>
 						<li class="sits-state sits-state--not">예매 불가</li>
-						<li class="sits-state sits-state--your">예매 가능</li>
+						<li class="sits-state sits-state--your">선택 좌석</li>
 					</ul>
 				</div>
 			<div class="sits-max"></div>
@@ -258,54 +266,6 @@
 	<div class="clearfix"></div>
 
 		<jsp:include page="../footer.jsp"></jsp:include>
-<!-- 	<footer class="footer-wrapper"> <section class="container"> -->
-<!-- 	<div class="col-xs-4 col-md-2 footer-nav"> -->
-<!-- 		<ul class="nav-link"> -->
-<!-- 			<li><a href="#" class="nav-link__item">Cities</a></li> -->
-<!-- 			<li><a href="movie-list-left.html" class="nav-link__item">Movies</a></li> -->
-<!-- 			<li><a href="trailer.html" class="nav-link__item">Trailers</a></li> -->
-<!-- 			<li><a href="rates-left.html" class="nav-link__item">Rates</a></li> -->
-<!-- 		</ul> -->
-<!-- 	</div> -->
-<!-- 	<div class="col-xs-4 col-md-2 footer-nav"> -->
-<!-- 		<ul class="nav-link"> -->
-<!-- 			<li><a href="coming-soon.html" class="nav-link__item">Coming -->
-<!-- 					soon</a></li> -->
-<!-- 			<li><a href="cinema-list.html" class="nav-link__item">Cinemas</a></li> -->
-<!-- 			<li><a href="offers.html" class="nav-link__item">Best offers</a></li> -->
-<!-- 			<li><a href="news-left.html" class="nav-link__item">News</a></li> -->
-<!-- 		</ul> -->
-<!-- 	</div> -->
-<!-- 	<div class="col-xs-4 col-md-2 footer-nav"> -->
-<!-- 		<ul class="nav-link"> -->
-<!-- 			<li><a href="#" class="nav-link__item">Terms of use</a></li> -->
-<!-- 			<li><a href="gallery-four.html" class="nav-link__item">Gallery</a></li> -->
-<!-- 			<li><a href="contact.html" class="nav-link__item">Contacts</a></li> -->
-<!-- 			<li><a href="page-elements.html" class="nav-link__item">Shortcodes</a></li> -->
-<!-- 		</ul> -->
-<!-- 	</div> -->
-<!-- 	<div class="col-xs-12 col-md-6"> -->
-<!-- 		<div class="footer-info"> -->
-<!-- 			<p class="heading-special--small"> -->
-<!-- 				A.Movie<br> -->
-<!-- 				<span class="title-edition">in the social media</span> -->
-<!-- 			</p> -->
-
-<!-- 			<div class="social"> -->
-<!-- 				<a href='#' class="social__variant fa fa-facebook"></a> <a href='#' -->
-<!-- 					class="social__variant fa fa-twitter"></a> <a href='#' -->
-<!-- 					class="social__variant fa fa-vk"></a> <a href='#' -->
-<!-- 					class="social__variant fa fa-instagram"></a> <a href='#' -->
-<!-- 					class="social__variant fa fa-tumblr"></a> <a href='#' -->
-<!-- 					class="social__variant fa fa-pinterest"></a> -->
-<!-- 			</div> -->
-
-<!-- 			<div class="clearfix"></div> -->
-<!-- 			<p class="copy">&copy; A.Movie, 2013. All rights reserved. Done -->
-<!-- 				by Olia Gozha</p> -->
-<!-- 		</div> -->
-<!-- 	</div> -->
-<!-- 	</section> </footer> -->
 	</div>
 
 	<!-- open/close -->

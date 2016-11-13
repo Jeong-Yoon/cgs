@@ -767,7 +767,7 @@ function init_BookingTwo () {
                             count+=1;
                             
                             $('.checked-place').append('<span class="choosen-place '+place+'">'+ place +' </span>');
-                            $('.checked-place').append('<input type="hidden" class="seat_IDs '+id+'" value="'+id+'">')
+                            $('.checked-place').append('<input type="hidden" class="seat_IDs '+id+'" value="'+id+'">, ')
 //                            totSeat=totSeat+place;
 //                            alert(place);
 //                            alert(totSeat);

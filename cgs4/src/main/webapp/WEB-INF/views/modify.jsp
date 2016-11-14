@@ -45,6 +45,19 @@
     	<script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.js"></script> 
 		<script src="http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.3.0/respond.js"></script>		
     <![endif]-->
+<script>
+ function pwGo(){
+     var answer = confirm("비밀번호 변경페이지로 가시겠습니까?");
+      if (answer){
+        location.href = "modify_pw";
+       }
+       else{
+          //
+       }
+ }
+ </script>
+
+
 </head>
 <style>
 <
@@ -368,11 +381,11 @@ a:active, a:focus, .no-touch a:active, .no-touch a:focus {
 										<td><span class="frm_info"
 											style="color: #A9A9A9; font-size: 12px;">영문자, 숫자만 입력
 												가능. </span> <input type="text" name="user-id"
-											value="<%=session.getAttribute("name")%>" id="reg_mb_id"
+											value="<%=session.getAttribute("id")%>" id="reg_mb_id"
 											pattern="^[0-9a-zA-Z]{3,20}"
 											title="영문 또는 숫자로 3자리 이상으로 입력하세요."
 											placeholder='영문 또는 숫자로 3자리 이상으로 입력하세요.'
-											class="form-control required " minlength="3" maxlength="20"
+											class="form-control required" minlength="3" maxlength="20" style="width: 30%"
 											readonly> <span id="msg_mb_id"></span></td>
 									</tr>
 									<tr>
@@ -380,7 +393,7 @@ a:active, a:focus, .no-touch a:active, .no-touch a:focus {
 												class="sound_only">필수</strong></label></th>
 										<td><button
 												style="width: auto; margin: auto; font-weight: 300; color: lemonchiffon; letter-spacing: 0.5px"
-												type='button' class="btn" onclick="pwGO()">비밀번호변경하기</button></td>
+												type='button' class="btn" onclick="pwGo()">비밀번호변경하기</button></td>
 									</tr>
 								</table>
 						</div>
@@ -393,7 +406,7 @@ a:active, a:focus, .no-touch a:active, .no-touch a:focus {
 										for="reg_mb_name">이름<strong class="sound_only">필수</strong></label></th>
 									<td><input type="text" placeholder='이름을 입력해주세요'
 										id="reg_user_name" name="user_name"
-										value='<%=session.getAttribute("user_name")%>'
+										value='<%=session.getAttribute("name")%>'
 										class="form-control required" readonly></td>
 								</tr>
 
@@ -403,7 +416,7 @@ a:active, a:focus, .no-touch a:active, .no-touch a:focus {
 									<td><span> <input type='text' name='user-birth'
 											class="form-control required"
 											style="width: 160px; display: inline-block;"
-											value="<%=session.getAttribute("user-birth")%>" readonly>
+											value="<%=session.getAttribute("birth")%>" readonly>
 											- <input type='text' pattern="[1234]" title="올바른 숫자를 입력해주세요"
 											placeholder="ex)1" name='gender'
 											class="form-control required" maxlength="1"
@@ -417,12 +430,12 @@ a:active, a:focus, .no-touch a:active, .no-touch a:focus {
 									<th scope="row"><label for="reg_mb_email">E-mail<strong
 											class="sound_only">필수</strong></label></th>
 									<td>
-										<div class="input-group col-xs-9">
+										<div class="input-group col-xs-20">
 											<input type="email" name="user-email" title="이메일 타입으로 입력해주세요"
 												placeholder="ex)inha@naver.com" id="reg_mb_email"
 												class="form-control email required"
 												style="display: inline-block;" size="50" maxlength="100"
-												value="<%=session.getAttribute("user-email")%>" required>
+												value="<%=session.getAttribute("email")%>" required>
 											<span class="input-group-btn"><button type='submit'
 													class="btn white"
 													style="display: inline-block; color: lemonchiffon; letter-spacing: 0.5px; font-weight: 300; margin-left: 3px; margin-top: 0px; height: 35px; line-height: 35px; box-shadow: 0 1px 0 rgba(255, 255, 255, 0.15) inset, 0 1px 1px rgba(0, 0, 0, 0.075); border-radius: 5px; font-family: 'LotteMartDream', sans-serif;">이메일
@@ -441,17 +454,17 @@ a:active, a:focus, .no-touch a:active, .no-touch a:focus {
 												placeholder="ex)010" name='user-pnum'
 												class="form-control required" maxlength="3"
 												style="width: 27%; display: inline-block;"
-												value="<%=session.getAttribute("user-pnum")%>" required>
+												value="<%=session.getAttribute("phone_num1")%>" required>
 											- <input type='text' pattern="^\d{4}" title="4자리 모두 입력해주세요"
 												placeholder="ex)1234" name='user-pnum2'
 												class="form-control required" maxlength="4"
 												style="width: 27%; display: inline-block;"
-												value="<%=session.getAttribute("user-pnum2")%>" required>
+												value="<%=session.getAttribute("phone_num2")%>" required>
 											- <input type='text' pattern="^\d{4}" title="4자리 모두 입력해주세요"
 												placeholder="ex)5678" name='user-pnum3'
 												class="form-control required" maxlength="4"
 												style="width: 27%; display: inline-block;"
-												value="<%=session.getAttribute("user-pnum3")%>" required>
+												value="<%=session.getAttribute("phone_num3")%>" required>
 									</td>
 									<td style="padding: auto; margin:0;"><button type='submit' class="btn btn-md btn--warning"
 												style="display: inline-block; color: lemonchiffon; letter-spacing: 0.5px; font-weight: 300; margin-left: 3px; margin-top: 0px; height: 35px; line-height: 35px; box-shadow: 0 1px 0 rgba(255, 255, 255, 0.15) inset, 0 1px 1px rgba(0, 0, 0, 0.075); border-radius: 5px; font-family: 'LotteMartDream', sans-serif;">수정완료</button>
@@ -466,11 +479,12 @@ a:active, a:focus, .no-touch a:active, .no-touch a:focus {
 										<div class="form-group">
 											<label for="reg_mb_zip" class="sound_only">우편번호<strong
 												class="sound_only"> 필수</strong></label>
-											<div class="input-group col-xs-9">
+											<div class="input-group col-xs-10">
 												<input name="user-address1" class="form-control required"
 													id="ozipcode1" size="6" maxlength="6" readonly="1"
-													type="text"
-													value="<%=session.getAttribute("user-address1")%>" required>
+													type="text" 
+													value="<%=session.getAttribute("address1")%>"
+													 required>
 												<span class="input-group-btn">
 													<button type="button" class="btn btn-white"
 														style="display: inline-block; color: lemonchiffon; letter-spacing: 0.5px; font-weight: 400; margin-left: 3px; margin-top: 0px; height: 35px; line-height: 35px; box-shadow: 0 1px 0 rgba(255, 255, 255, 0.15) inset, 0 1px 1px rgba(0, 0, 0, 0.075); border-radius: 5px; font-family: 'LotteMartDream', sans-serif;"
@@ -482,13 +496,14 @@ a:active, a:focus, .no-touch a:active, .no-touch a:focus {
 
 											<label for="reg_mb_addr1">기본주소<strong
 												class="sound_only"> 필수</strong></label> <input name="user-address2"
-												class="form-control required" id="oaddr1" size="50"
+												class="form-control required col-xs-15" id="oaddr1" size="70"
 												style="padding-bottom: 15px;" readonly="1" type="text"
-												value="<%=session.getAttribute("user-address2")%>" required>
+												value="<%=session.getAttribute("address2")%>"
+												 required>
 											<label for="reg_mb_addr2">상세주소</label> <input type="text"
 												name="user-address3" value="" id="oaddr2"
-												class="form-control frm_address" size="50"
-												value="<%=session.getAttribute("user-address3")%>" required>
+												class="form-control frm_address col-xs-15" size="50"
+												 >
 										</div>
 									</td>
 								</tr>

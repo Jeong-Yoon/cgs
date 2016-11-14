@@ -32,10 +32,20 @@ public class ModifyController {
 	@RequestMapping(value = "modifyProcess")
 	public String modifyProcess(Model model, HttpServletRequest request, HttpServletResponse response,
 			HttpSession session) throws IOException {
-
-		String getPNum = request.getParameter("user-pnum");
+		
+		String getPNum1 = request.getParameter("user-pnum");
+		String getPNum2 = request.getParameter("user-pnum2");
+		String getPNum3 = request.getParameter("user-pnum3");
+		String getPNum = getPNum1+ getPNum2 + getPNum3;
+		
+		
 		String getEmail = request.getParameter("user-email");
-		String getAddress = request.getParameter("user-address");
+		
+		String getAddress1 = request.getParameter("user-address1");
+		String getAddress2 = request.getParameter("user-address2");
+		String getAddress3 = request.getParameter("user-address3");
+		
+		String getAddress = getAddress1+getAddress2+getAddress3;
 		String id = (String) session.getAttribute("id");
 		String pw = (String) session.getAttribute("pw");
 

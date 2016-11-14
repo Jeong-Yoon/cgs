@@ -78,28 +78,28 @@ table {
 	
 		
 	<div class="container">
-				<table>
+				<center><table>
 				<tr>
-				<td width="80" ><center><p>현재 비밀번호</p></center></td>
-				<td width="100"><p><input type='password' pattern="^[0-9a-zA-Z]{4,20}" title="영어 또는 숫자로 4자리 이상으로 입력하세요." placeholder='현재 비밀번호를 입력해주세요' name='password_Now' class="login__input" required></p></td>
+				<td width="80px"><center><p style="font: 16px 'LotteMartDream', sans-serif; letter-spacing: 0.1px; background-color:lemonchiffon; color: #666; font-weight:400">현재 비밀번호</p></center></td>
+				<td class="col-xs-10"><p><input type='password' pattern="^[0-9a-zA-Z]{4,20}" title="영어 또는 숫자로 4자리 이상으로 입력하세요." placeholder='현재 비밀번호를 입력해주세요' name='password_Now' class="login__input col-xs-8" required></p></td>
 				</tr>
 				
 				
-				<tr>
-				<td><center><p>새 비밀번호</p></center></td>
-				<td><p><input type='password' pattern="^[0-9a-zA-Z]{4,20}" title="영어 또는 숫자로 4자리 이상으로 입력하세요." placeholder='변경할 비밀번호를 입력해주세요' name='password_ch' class="login__input" required></p></td>
+				<tr> 
+				<td width="80px"><center><p style="font: 16px 'LotteMartDream', sans-serif; letter-spacing: 0.1px; background-color:lemonchiffon; color: #666; font-weight:400">새 비밀번호</p></center></td>
+				<td class="col-xs-10"><p><input type='password' pattern="^[0-9a-zA-Z]{4,20}" title="영어 또는 숫자로 4자리 이상으로 입력하세요." placeholder='변경할 비밀번호를 입력해주세요' name='password_ch' class="login__input col-xs-8" required></p></td>
 				</tr>
 				
 				<tr>
-				<td><center><p>새 비밀번호 확인</p></center></td>
-				<td ><p><input type='password' pattern="^[0-9a-zA-Z]{4,20}" title="영어 또는 숫자로 4자리 이상으로 입력하세요." placeholder='비밀번호를 다시 입력해주세요' name='password_chOk' class="login__input" required></p></td>
+				<td width="80px"><center><p style="font: 16px 'LotteMartDream', sans-serif; letter-spacing: 0.1px; background-color:lemonchiffon; color: #666; font-weight:400">새 비밀번호 확인</p></center></td>
+				<td class="col-xs-10"><p><input type='password' pattern="^[0-9a-zA-Z]{4,20}" title="영어 또는 숫자로 4자리 이상으로 입력하세요." placeholder='비밀번호를 다시 입력해주세요' name='password_chOk' class="login__input col-xs-8" required></p></td>
 				</tr>
-				</table>
+				</table></center>
 				<br><br><br>
 </div>
 			<div class="login__control">
-			<button type='submit' class="btn btn-md btn--warning btn--wider">Submit</button>&nbsp&nbsp
-				<a href='modify'><button type="button" class="btn btn-md btn--warning btn--wider">Cancle</button></a>
+			<button type='submit' class="btn btn-md btn--warning btn--wider">수정하기</button>&nbsp&nbsp
+				<a href='modify'><button type="button" class="btn btn-md btn--warning btn--wider">취소하기</button></a>
 
 
 

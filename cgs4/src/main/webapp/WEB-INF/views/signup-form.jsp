@@ -47,49 +47,45 @@
     <![endif]-->
 </head>
 <style>
-
-<style>
-
-/* 취소버튼 */
-.btncn {
-  border-radius: 4px;
-  background-color: #f4511e;
-  border: none;
-  color: #FFFFFF;
-  text-align: center;
-  font-size: 28px;
-  padding: 20px;
-  width: 200px;
-  transition: all 0.5s;
-  cursor: pointer;
-  margin: 5px;
+<
+style> /* 취소버튼 */ .btncn {
+	border-radius: 4px;
+	background-color: #f4511e;
+	border: none;
+	color: #FFFFFF;
+	text-align: center;
+	font-size: 28px;
+	padding: 20px;
+	width: 200px;
+	transition: all 0.5s;
+	cursor: pointer;
+	margin: 5px;
 }
 
 .btncn a {
-  cursor: pointer;
-  display: inline-block;
-  position: relative;
-  transition: 0.5s;
+	cursor: pointer;
+	display: inline-block;
+	position: relative;
+	transition: 0.5s;
 }
 
 .btncn a:after {
-  content: '»';
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  right: -20px;
-  transition: 0.5s;
+	content: '»';
+	position: absolute;
+	opacity: 0;
+	top: 0;
+	right: -20px;
+	transition: 0.5s;
 }
 
 .btncn:hover a {
-  padding-right: 25px;
+	padding-right: 25px;
 }
 
 .btncn:hover a:after {
-  opacity: 1;
-  right: 0;
+	opacity: 1;
+	right: 0;
 }
-
 
 /* table.loginbtn { */
 /* 	width: 35%; */
@@ -355,15 +351,17 @@ a:active, a:focus, .no-touch a:active, .no-touch a:focus {
 			<div class="the-post">
 				<div class="woocommerce">
 					<div class="lobo-tabs clearfix">
-						<div class="contents col-xs-13" style="padding: 8% 0 5% 25%">
-							<form id="login-form" action="signupProcess" method="post"
-								autocomplete="off">
+						<form id="login-form" action="signupProcess" method="post"
+							autocomplete="off">
+							<div class="contents col-xs-13" style="padding: 8% 0 5% 25%">
 								<table>
 									<caption>사이트이용정보</caption>
 									<tr>
 										<th scope="row" style="width: 30%"><label for="reg_mb_id">아이디<strong
 												class="sound_only">필수</strong></label></th>
-										<td><span class="frm_info" style="color:#A9A9A9; font-size: 12px;">영문자, 숫자만 입력 가능. </span> <input type="text" name="user-id" value=""
+										<td><span class="frm_info"
+											style="color: #A9A9A9; font-size: 12px;">영문자, 숫자만 입력
+												가능. </span> <input type="text" name="user-id" value=""
 											id="reg_mb_id" pattern="^[0-9a-zA-Z]{3,20}"
 											title="영어 또는 숫자로 3자리 이상으로 입력하세요."
 											placeholder='영어 또는 숫자로 3자리 이상으로 입력하세요.'
@@ -390,170 +388,182 @@ a:active, a:focus, .no-touch a:active, .no-touch a:focus {
 											minlength="3" maxlength="20" required></td>
 									</tr>
 								</table>
-						</div>
-						<div class="contents col-xs-13" style="padding: 5% 0 5% 25%">
-							<!-- 						<div class="tbl_frm01 tbl_wrap"> -->
-							<table>
-								<caption>회원정보입력</caption>
-								<tr>
-									<th scope="row" style="width: 30%"><label for="reg_mb_name">이름<strong
-											class="sound_only">필수</strong></label></th>
-									<td><input type="text" placeholder='이름을 입력해주세요'
-										id="reg_user_name" name="user_name" value="" required
-										class="form-control required"></td>
-								</tr>
+							</div>
+							<div class="contents col-xs-13" style="padding: 5% 0 5% 25%">
+								<!-- 						<div class="tbl_frm01 tbl_wrap"> -->
+								<table>
+									<caption>회원정보입력</caption>
+									<tr>
+										<th scope="row" style="width: 30%"><label
+											for="reg_mb_name">이름<strong class="sound_only">필수</strong></label></th>
+										<td><input type="text" placeholder='이름을 입력해주세요'
+											id="reg_user_name" name="user_name" value="" required
+											class="form-control required"></td>
+									</tr>
 
-								<tr>
-									<th scope="row"><label for="reg_mb_name">생년월일<strong
-											class="sound_only">필수</strong></label></th>
-									<td><span> <input type='date' name='user-birth'
-											class="form-control required" min="1900-01-01" max="2900-12-31"
-											style="width: 160px; display: inline-block;"
-											required>  -  <input type='text' pattern="[1234]"
-											title="올바른 숫자를 입력해주세요" placeholder="ex)1" name='gender'
-											class="form-control required" 
-											maxlength="1" style="width: 14%; display:inline-block;" required>
-									</span> <span style="display: inline-block;">* * * * * *</span></td>
-								</tr>
-
-
-								<tr>
-									<th scope="row"><label for="reg_mb_email">E-mail<strong
-											class="sound_only">필수</strong></label></th>
-									<td><input type="email" name="user-email"
-										title="이메일 타입으로 입력해주세요" placeholder="ex)inha@naver.com"
-										id="reg_mb_email" required class="form-control email required"
-										size="50" maxlength="100"></td>
-								</tr>
+									<tr>
+										<th scope="row"><label for="reg_mb_name">생년월일<strong
+												class="sound_only">필수</strong></label></th>
+										<td><span> <input type='date' name='user-birth'
+												class="form-control required" min="1900-01-01"
+												max="2900-12-31"
+												style="width: 160px; display: inline-block;" required>
+												- <input type='text' pattern="[1234]" title="올바른 숫자를 입력해주세요"
+												placeholder="ex)1" name='gender'
+												class="form-control required" maxlength="1"
+												style="width: 14%; display: inline-block;" required>
+										</span> <span style="display: inline-block;">* * * * * *</span></td>
+									</tr>
 
 
+									<tr>
+										<th scope="row"><label for="reg_mb_email">E-mail<strong
+												class="sound_only">필수</strong></label></th>
+										<td><input type="email" name="user-email"
+											title="이메일 타입으로 입력해주세요" placeholder="ex)inha@naver.com"
+											id="reg_mb_email" required
+											class="form-control email required" size="50" maxlength="100"></td>
+									</tr>
 
-								<tr>
-									<th scope="row"><label for="reg_mb_hp">휴대폰번호<strong
-											class="sound_only">필수</strong></label></th>
-									<td><span> <input type='text' pattern="^\d{3}"
-											title="3자리 모두 입력해주세요" placeholder="ex)010" name='user-pnum'
-											class="form-control required" maxlength="3"
-											style="width: 27%; display: inline-block;" required> - 
-											<input type='text'
-											pattern="^\d{4}" title="4자리 모두 입력해주세요" placeholder="ex)1234"
-											name='user-pnum2' class="form-control required" maxlength="4"
-											style="width: 27%; display: inline-block;" required> - 
-											<input type='text'
-											pattern="^\d{4}" title="4자리 모두 입력해주세요" placeholder="ex)5678"
-											name='user-pnum3' class="form-control required" maxlength="4"
-											style="width: 27%; display: inline-block;" required>
-									</span>
-								</tr>
 
-								<tr>
-									<th scope="row"><label for="reg_mb_zip">주소<strong
-											class="sound_only">필수</strong></label></th>
-									<td class="address_label">
-										<div class="form-group">
-											<label for="reg_mb_zip" class="sound_only">우편번호<strong
-												class="sound_only"> 필수</strong></label>
-											<div class="input-group col-xs-9">
-												<input name="user-address1" class="form-control required"
-													id="ozipcode1" size="6" maxlength="6" readonly="1"
-													type="text" required> <span class="input-group-btn">
-													<button type="button" class="btn btn-white"
-														style="color: lemonchiffon; letter-spacing: 0.5px; font-weight: 400; margin-left: 3px; margin-top: 0px; height: 35px; line-height: 35px; box-shadow: 0 1px 0 rgba(255, 255, 255, 0.15) inset, 0 1px 1px rgba(0, 0, 0, 0.075);border-radius: 5px; font-family: 'LotteMartDream', sans-serif;"
-														onclick="execDaumPostcode()" alt="우편번호">주소검색</button>
-												</span>
+
+									<tr>
+										<th scope="row"><label for="reg_mb_hp">휴대폰번호<strong
+												class="sound_only">필수</strong></label></th>
+										<td><span> <input type='text' pattern="^\d{3}"
+												title="3자리 모두 입력해주세요" placeholder="ex)010" name='user-pnum'
+												class="form-control required" maxlength="3"
+												style="width: 27%; display: inline-block;" required>
+												- <input type='text' pattern="^\d{4}" title="4자리 모두 입력해주세요"
+												placeholder="ex)1234" name='user-pnum2'
+												class="form-control required" maxlength="4"
+												style="width: 27%; display: inline-block;" required>
+												- <input type='text' pattern="^\d{4}" title="4자리 모두 입력해주세요"
+												placeholder="ex)5678" name='user-pnum3'
+												class="form-control required" maxlength="4"
+												style="width: 27%; display: inline-block;" required>
+										</span>
+									</tr>
+
+									<tr>
+										<th scope="row"><label for="reg_mb_zip">주소<strong
+												class="sound_only">필수</strong></label></th>
+										<td class="address_label">
+											<div class="form-group">
+												<label for="reg_mb_zip" class="sound_only">우편번호<strong
+													class="sound_only"> 필수</strong></label>
+												<div class="input-group col-xs-9">
+													<input name="user-address1" class="form-control required"
+														id="ozipcode1" size="6" maxlength="6" readonly="1"
+														type="text" required> <span
+														class="input-group-btn">
+														<button type="button" class="btn btn-white"
+															style="color: lemonchiffon; letter-spacing: 0.5px; font-weight: 400; margin-left: 3px; margin-top: 0px; height: 35px; line-height: 35px; box-shadow: 0 1px 0 rgba(255, 255, 255, 0.15) inset, 0 1px 1px rgba(0, 0, 0, 0.075); border-radius: 5px; font-family: 'LotteMartDream', sans-serif;"
+															onclick="execDaumPostcode()" alt="우편번호">주소검색</button>
+													</span>
+												</div>
+
+												<label for="reg_mb_addr1">기본주소<strong
+													class="sound_only"> 필수</strong></label> <input name="user-address2"
+													class="form-control required" id="oaddr1" size="50"
+													style="padding-bottom: 15px;" readonly="1" type="text"
+													required> <label for="reg_mb_addr2">상세주소</label> <input
+													type="text" name="user-address3" value="" id="oaddr2"
+													class="form-control frm_address" size="50" required>
 											</div>
+										</td>
+									</tr>
+								</table>
+							</div>
 
-											<label for="reg_mb_addr1">기본주소<strong
-												class="sound_only"> 필수</strong></label> <input name="user-address2"
-												class="form-control required" id="oaddr1" size="50" style="padding-bottom: 15px;"
-												readonly="1" type="text" required> <label for="reg_mb_addr2">상세주소</label>
-											<input type="text" name="user-address3" value="" id="oaddr2"
-												class="form-control frm_address" size="50" required>
-										</div>
-									</td>
-								</tr>
-							</table>
-						</div>
+							<script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
+							<script>
+								function execDaumPostcode() { //execDaumPostcode() 함수 호출
+									new daum.Postcode(
+											{
+												oncomplete : function(data) {
+													// 팝업에서 검색결과 항목을 클릭했을때 실행할 코드를 작성하는 부분.
 
-						<script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
-						<script>
-							function execDaumPostcode() { //execDaumPostcode() 함수 호출
-								new daum.Postcode(
-										{
-											oncomplete : function(data) {
-												// 팝업에서 검색결과 항목을 클릭했을때 실행할 코드를 작성하는 부분.
+													// 각 주소의 노출 규칙에 따라 주소를 조합한다.
+													// 내려오는 변수가 값이 없는 경우엔 공백('')값을 가지므로, 이를 참고하여 분기 한다.
+													var fullAddr = ''; // 최종 주소 변수
+													var extraAddr = ''; // 조합형 주소 변수
 
-												// 각 주소의 노출 규칙에 따라 주소를 조합한다.
-												// 내려오는 변수가 값이 없는 경우엔 공백('')값을 가지므로, 이를 참고하여 분기 한다.
-												var fullAddr = ''; // 최종 주소 변수
-												var extraAddr = ''; // 조합형 주소 변수
+													// 사용자가 선택한 주소 타입에 따라 해당 주소 값을 가져온다.
+													if (data.userSelectedType === 'R') { // 사용자가 도로명 주소를 선택했을 경우
+														fullAddr = data.roadAddress;
 
-												// 사용자가 선택한 주소 타입에 따라 해당 주소 값을 가져온다.
-												if (data.userSelectedType === 'R') { // 사용자가 도로명 주소를 선택했을 경우
-													fullAddr = data.roadAddress;
-
-												} else { // 사용자가 지번 주소를 선택했을 경우(J)
-													fullAddr = data.jibunAddress;
-												}
-
-												// 사용자가 선택한 주소가 도로명 타입일때 조합한다.
-												if (data.userSelectedType === 'R') {
-													//법정동명이 있을 경우 추가한다.
-													if (data.bname !== '') {
-														extraAddr += data.bname;
+													} else { // 사용자가 지번 주소를 선택했을 경우(J)
+														fullAddr = data.jibunAddress;
 													}
-													// 건물명이 있을 경우 추가한다.
-													if (data.buildingName !== '') {
-														extraAddr += (extraAddr !== '' ? ', '
-																+ data.buildingName
-																: data.buildingName);
+
+													// 사용자가 선택한 주소가 도로명 타입일때 조합한다.
+													if (data.userSelectedType === 'R') {
+														//법정동명이 있을 경우 추가한다.
+														if (data.bname !== '') {
+															extraAddr += data.bname;
+														}
+														// 건물명이 있을 경우 추가한다.
+														if (data.buildingName !== '') {
+															extraAddr += (extraAddr !== '' ? ', '
+																	+ data.buildingName
+																	: data.buildingName);
+														}
+														// 조합형주소의 유무에 따라 양쪽에 괄호를 추가하여 최종 주소를 만든다.
+														fullAddr += (extraAddr !== '' ? ' ('
+																+ extraAddr
+																+ ')'
+																: '');
 													}
-													// 조합형주소의 유무에 따라 양쪽에 괄호를 추가하여 최종 주소를 만든다.
-													fullAddr += (extraAddr !== '' ? ' ('
-															+ extraAddr + ')'
-															: '');
+
+													// 우편번호와 주소 정보를 해당 필드에 넣는다.
+													document
+															.getElementById('ozipcode1').value = data.zonecode; //5자리 새우편번호 사용
+													document
+															.getElementById('oaddr1').value = fullAddr;
+
+													// 커서를 상세주소 필드로 이동한다.
+													document.getElementById(
+															'oaddr2').focus();
 												}
+											}).open();
+								}
+							</script>
 
-												// 우편번호와 주소 정보를 해당 필드에 넣는다.
-												document
-														.getElementById('ozipcode1').value = data.zonecode; //5자리 새우편번호 사용
-												document
-														.getElementById('oaddr1').value = fullAddr;
+							<div class="contents" style="padding: 0% 0 5% 25%">
+								<table class="table">
+									<caption>소식받기</caption>
+									<tr>
+										<th scope="row" style="width: 30%; top: 0px;"><label
+											for="reg_mb_mailling">메일링서비스</label></th>
+										<td><input type="checkbox" name="mb_mailling" value="1"
+											id="reg_mb_mailling" checked> 정보 메일을 받겠습니다.</td>
+									</tr>
 
-												// 커서를 상세주소 필드로 이동한다.
-												document.getElementById(
-														'oaddr2').focus();
-											}
-										}).open();
-							}
-						</script>
+									<tr>
+										<th scope="row"
+											style="border-bottom: 1px solid #ddd; width: 30%; margin: 0;"><label
+											for="reg_mb_sms">SMS 수신여부</label></th>
+										<td style="border-bottom: 1px solid #ddd;"><input
+											type="checkbox" style="margin: 0;" name="mb_sms" value="1"
+											id="reg_mb_sms" checked> 휴대폰 문자메세지를 받겠습니다.</td>
+									</tr>
+								</table>
+							</div>
 
-						<div class="contents" style="padding: 0% 0 5% 25%">
-							<table class="table" >
-								<caption>소식받기</caption>
-								<tr>
-									<th scope="row" style="width: 30%; top:0px;"><label for="reg_mb_mailling">메일링서비스</label></th>
-									<td><input type="checkbox" name="mb_mailling" value="1"
-										id="reg_mb_mailling" checked> 정보 메일을 받겠습니다.</td>
-								</tr>
-
-								<tr>
-									<th scope="row" style="border-bottom:1px solid #ddd; width: 30%; margin: 0;"><label for="reg_mb_sms">SMS 수신여부</label></th>
-									<td style="border-bottom:1px solid #ddd;"><input type="checkbox" style="margin: 0;" name="mb_sms" value="1"
-										id="reg_mb_sms" checked> 휴대폰 문자메세지를 받겠습니다.</td>
-								</tr>
-							</table>
-						</div>
-
-						<div class="btn_confirm" style="text-align: center; margin-bottom: 40px;">
-							<input type="submit" value="가입하기" id="btn_submit"
-								class="btn01" accesskey="s" style="display:inline-block; margin-bottom:20px">
-								<button class="btncn" style="border-radius: 5px;"><a href="index">취소하기</a></button>
-<!-- 							<a href="index" -->
-<!-- 								class="btn01" -->
-<!-- 								style="color: #fff; background-color: #992600;  margin-top: 40px; width:80px; height:180px;" -->
-<!-- 								data-btn-txt-color="#fff" data-btn-bg-color="#44f3b8">취소하기</a> -->
-						</div>
+							<div class="btn_confirm"
+								style="text-align: center; margin-bottom: 40px;">
+								<input type="submit" value="가입하기" id="btn_submit" class="btn01"
+									accesskey="s"
+									style="display: inline-block; margin-bottom: 20px">
+								<button class="btncn" style="border-radius: 5px;">
+									<a href="index">취소하기</a>
+								</button>
+								<!-- 							<a href="index" -->
+								<!-- 								class="btn01" -->
+								<!-- 								style="color: #fff; background-color: #992600;  margin-top: 40px; width:80px; height:180px;" -->
+								<!-- 								data-btn-txt-color="#fff" data-btn-bg-color="#44f3b8">취소하기</a> -->
+							</div>
 						</form>
 					</div>
 				</div>
@@ -561,35 +571,32 @@ a:active, a:focus, .no-touch a:active, .no-touch a:focus {
 		</div>
 	</div>
 
-	<!-- } 회원정보 입력/수정 끝 -->
-	</section>
+	<!-- } 회원정보 입력/수정 끝 --> </section>
 
 	<div class="clearfix"></div>
 
-		<footer id="footer" class="text-center">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-12">
-					<div class="footer-logo wow fadeInDown">
-						<img class="footer-logo-img"
-							src="<%=ctx%>/resources/images/logo.png" alt="logo">
-					</div>
-
-<!-- 					<div class="footer-social wow fadeInUp"> -->
-<!-- 						<h3>We are social</h3> -->
-						
-<!-- 					</div> -->
-
-					<div class="copyright">
-						<p style="color: gray">
-							&copy; CGS, 2016. All rights reserved.
-						</p>
-					</div>
-
+	<footer id="footer" class="text-center">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="footer-logo wow fadeInDown">
+					<img class="footer-logo-img"
+						src="<%=ctx%>/resources/images/logo.png" alt="logo">
 				</div>
+
+				<!-- 					<div class="footer-social wow fadeInUp"> -->
+				<!-- 						<h3>We are social</h3> -->
+
+				<!-- 					</div> -->
+
+				<div class="copyright">
+					<p style="color: gray">&copy; CGS, 2016. All rights reserved.</p>
+				</div>
+
 			</div>
 		</div>
-		</footer>
+	</div>
+	</footer>
 
 	<!-- main jQuery -->
 	<script src="<%=ctx%>/resources/js/external/jquery-1.11.1.min.js"></script>

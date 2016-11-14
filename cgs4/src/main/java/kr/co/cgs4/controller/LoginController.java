@@ -85,8 +85,14 @@ public class LoginController {
     		session.setAttribute("gender", gender);
     		
     		//주소
+    		
     		String address = dtos.getAddress();
+    		String address1 = address.substring(0,5);
+    		String address2 = address.substring(5,address.length());
+    		
     		session.setAttribute("address", address);
+    		session.setAttribute("address1", address1);
+    		session.setAttribute("address2", address2);
     		
     		//생일
     		Date birth =dtos.getBirth();
@@ -109,7 +115,13 @@ public class LoginController {
     		
     		//폰번호
     		String phone_num = dtos.getPhone_num();
+    		String phone_num1 = phone_num.substring(0,3);
+    		String phone_num2 = phone_num.substring(3,7);
+    		String phone_num3 = phone_num.substring(7,11);
     		session.setAttribute("phone_num", phone_num);
+    		session.setAttribute("phone_num1", phone_num1);
+    		session.setAttribute("phone_num2", phone_num2);
+    		session.setAttribute("phone_num3", phone_num3);
     		
     		//이메일
     		String email = dtos.getEmail();

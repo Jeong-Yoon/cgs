@@ -56,6 +56,9 @@ public class ModifyController {
 			dao.modify(id, pw, getPNum, getEmail, getAddress);
 
 			session.setAttribute("phone_num", getPNum);
+			session.setAttribute("phone_num1", getPNum1);
+			session.setAttribute("phone_num2", getPNum2);
+			session.setAttribute("phone_num3", getPNum3);
 			session.setAttribute("email", getEmail);
 			session.setAttribute("address", getAddress);
 

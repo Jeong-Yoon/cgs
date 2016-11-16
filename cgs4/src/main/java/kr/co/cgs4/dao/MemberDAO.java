@@ -42,7 +42,7 @@ public class MemberDAO {
 	public void signup(final String id, final String pw, final String name, final String address, String birth, final String phone, final String e_mail, final String gender) throws ParseException{
 		
 		System.out.println(birth);
-		String birth1 = birth.substring(2,4);
+		String birth1 = birth.substring(0,4);
 		String birth2 = birth.substring(5,7);
 		String birth3 = birth.substring(8,10);
 		String birthInput = birth1+birth2+birth3;
@@ -122,6 +122,8 @@ public class MemberDAO {
 	public MemberDTO findID(final String name, final String birth, final String gender, final String Pnum) throws ParseException{
 		System.out.println(birth);
 		SimpleDateFormat format = new SimpleDateFormat("yyMMdd") ;
+		
+		//
 		final java.sql.Date iBirth = new java.sql.Date(format.parse(birth).getTime());
 		
 		String findID ="select * from member where name = '" + name + "' and birth = to_date('"+iBirth+"','yyyy-MM-dd') and gender='"+ gender +"' and phone_num= '"+Pnum+"'";

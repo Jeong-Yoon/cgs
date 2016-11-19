@@ -39,34 +39,31 @@ public class MemberDAO {
 	}
 
 	//회원가입시 사용
-	public void signup(final String id, final String pw, final String name, final String address, String birth, final String phone, final String e_mail, final String gender) throws ParseException{
+	public void signup(final String id, final String pw, final String name, final String address, final String birth, final String phone, final String e_mail, final String gender) throws ParseException{
 		
 		System.out.println(birth);
-		String birth1 = birth.substring(0,4);
-		String birth2 = birth.substring(5,7);
-		String birth3 = birth.substring(8,10);
-		String birthInput = birth1+birth2+birth3;
-		System.out.println(birthInput);
+//		String birth1 = birth.substring(0,4);
+//		String birth2 = birth.substring(5,7);
+//		String birth3 = birth.substring(8,10);
+//		String birthInput = birth1+birth2+birth3;
+//		System.out.println(birthInput);
 		//날짜 입력 포멧 정하기
-		SimpleDateFormat format = new SimpleDateFormat("yyMMdd") ;
+//		SimpleDateFormat format = new SimpleDateFormat("yyMMdd") ;
 		//가입일 정의
 		//현재시간
 		long dateNow=new java.util.Date().getTime();
-
-		
-		
 		//현재 시간을 db에 넣을 형태로 변환
 		final java.sql.Date currDate = new java.sql.Date(dateNow);
 		System.out.println(currDate);
 		
 		
 		//birth를  java.sql.Date 타입으로! // 이건됨
-		final java.sql.Date iBirth = new java.sql.Date(format.parse(birthInput).getTime());
-		System.out.println(iBirth);
+//		final java.sql.Date iBirth = new java.sql.Date(format.parse(birthInput).getTime());
+//		System.out.println(iBirth);
 
 		
 		//나중에 email 이후 값은 지우고 db구축할것
-		  String insert = "insert into member(member_ID, password, name, address, birth, phone_num, email,gender,join_date,accum_point,member_grade,membership,curr_point) values (?,?,?,?,to_date(?,'dd-MM-yyyy'),?,?,?,to_date(?, 'dd-MM-yyyy'),?,?,?,?)";
+		  String insert = "insert into member(member_ID, password, name, address, birth, phone_num, email,gender,join_date,accum_point,member_grade,membership,curr_point) values (?,?,?,?,to_date(?,'yyyy-MM-dd'),?,?,?,?,?,?,?,?)";
 		  this.template.update(insert, new PreparedStatementSetter() {
 			@Override
 			public void setValues(PreparedStatement ps) throws SQLException {
@@ -76,7 +73,7 @@ public class MemberDAO {
 				ps.setString(4, address);
 				
 				
-				ps.setDate(5, iBirth);
+				ps.setString(5, birth);
 				ps.setString(6, phone);
 				ps.setString(7, e_mail);
 				//젠더
@@ -125,7 +122,7 @@ public class MemberDAO {
 		
 		//
 		final java.sql.Date iBirth = new java.sql.Date(format.parse(birth).getTime());
-		
+		System.out.println(iBirth);
 		String findID ="select * from member where name = '" + name + "' and birth = to_date('"+iBirth+"','yyyy-MM-dd') and gender='"+ gender +"' and phone_num= '"+Pnum+"'";
 		return (MemberDTO) template.queryForObject(findID, new BeanPropertyRowMapper<MemberDTO>(MemberDTO.class));
 		  

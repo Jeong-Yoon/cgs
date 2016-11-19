@@ -63,19 +63,11 @@ public class BookConfirmCommand implements Command {
 		int special_cnt = sdto.getSpecial_cnt();//받아옴
 		//나머지는 디폴트 설정
 		//현재시간 구하기
-		SimpleDateFormat format = new SimpleDateFormat("yyyyMMdd");
-		Calendar c1 = Calendar.getInstance();
-		String today = format.format(c1.getTime());
-		Date a1=null;
-		try {
-			a1 =  format.parse(today);
-		} catch (ParseException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		java.sql.Date currDate = new java.sql.Date(a1.getTime());
+		long dateNow=new java.util.Date().getTime();
+		//현재 시간을 db에 넣을 형태로 변환
+		final java.sql.Date currDate = new java.sql.Date(dateNow);
+		System.out.println(currDate);
 
-//		java.sql.Date currDate = java.sql.Date.valueOf()
 		//sale, sale_seat, member_sale에 넣음
 		bdao.saleSubmit(sale_ID, currDate, sale_price, paycard_num, screening_ID, sale_cnt,final_price, common_cnt, young_cnt, special_cnt, sits, id, reserve_ID);
 		//sale_id를 다음페이지로 보냄

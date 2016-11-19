@@ -90,12 +90,12 @@ public class BookDAO {
 		System.out.println(id);
 //		TransactionDefinition definition = new DefaultTransactionDefinition();
 //		TransactionStatus status = transactionManager.getTransaction(definition);
-		
+		System.out.println(CURRDATE);
 
 //		try {
 		//sale 넣기
 		System.out.println("sale 넣기 시작");
-		String query= "INSERT INTO SALE VALUES (?, '0', '0', to_date(?, 'dd-MM-yyyy'), ?, ?, '0', ?, ?, '0', '0', ?, '1', ?, ?, ?)";
+		String query= "INSERT INTO SALE VALUES (?, '0', '0', ?, ?, ?, '0', ?, ?, '0', '0', ?, '1', ?, ?, ?)";
 		template.update(query, new PreparedStatementSetter() {
 			
 			@Override
